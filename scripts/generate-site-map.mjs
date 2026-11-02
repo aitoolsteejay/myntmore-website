@@ -36,10 +36,16 @@ const require = createRequire(import.meta.url);
 
 // URLs that must not be published on a publicly reachable page: the private
 // pricing pages and cold emailing overviews (shared only with prospects) and
-// the admin room, plus the internal value proposition reference. The cold emailing
-// prefix covers the -mars and -earth pages and any legacy cold-emailing package paths.
+// the admin room, plus the internal strategy references (value proposition, master ICP).
+// The cold emailing prefix covers the -mars and -earth pages and any legacy cold-emailing
+// package paths.
 const isPrivate = (p) =>
-  p === "/plans" || p.startsWith("/plans/") || p.startsWith("/menti/room") || p.startsWith("/cold-emailing-package") || p === "/value-prop";
+  p === "/plans" ||
+  p.startsWith("/plans/") ||
+  p.startsWith("/menti/room") ||
+  p.startsWith("/cold-emailing-package") ||
+  p === "/value-prop" ||
+  p === "/master-icp";
 // Legacy redirects that point at (or stand in for) a private page.
 const isPrivateRedirect = (r) =>
   isPrivate(r.from) || isPrivate(r.to) || r.from === "/international-pricing" || r.from === "/indian-pricing";
