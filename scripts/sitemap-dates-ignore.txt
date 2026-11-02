@@ -16,3 +16,4 @@ df5ee6b  # Gold text to amber, footer grey, main landmarks, textTone helper (sty
 67f4e6e  # Review fixes: footer hover, landmarks, focus ring, counters, gold text on unreached surfaces (styling/markup only, no copy change)
 98f259f  # textTone for every accent colour, typewriter wrap (styling only, no copy change)
 107c8e0  # Readable accent text colours sitewide (styling only, no copy change)
+72b02ca  components/lp keystatic.config.ts  # Optional case-card link on the shared landing page component; pages that do not use case cards are unchanged

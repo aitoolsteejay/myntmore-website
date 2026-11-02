@@ -23,25 +23,58 @@
   "breadcrumbLabel": "For Accounting & CFO Firms",
   "badge": "For Accounting & CFO Firms",
   "badgeEffect": "",
-  "h1Line1": "Clients beyond your referrals",
+  "h1Line1": "Grow beyond referrals",
   "h1Before": "Win",
-  "h1Underlined": "recurring finance clients",
+  "h1Underlined": "finance clients",
   "h1After": "outside your network",
   "h1BreakAfter": false,
-  "underlineWidth": 400,
+  "underlineWidth": 300,
   "heroSubheading": "We run discreet, partner-approved LinkedIn and cold email outreach for virtual CFO, bookkeeping, payroll and finance-outsourcing firms, so founders and finance heads outside your referral network meet you as an advisor, not another vendor competing on fees.",
   "primaryCta": "Book Free GTM Audit",
   "secondaryCta": "Get a Custom Plan",
   "heroNote": "No commitment. No pitch deck. 30-minute strategy call.",
   "floaterLayout": "four",
   "heroDecoration": "",
-  "floatingIcons": ["📊", "🧾", "💼", "🤝"],
+  "floatingIcons": [
+    "📊",
+    "🧾",
+    "💼",
+    "🤝"
+  ],
   "statsCaption": "Across three published campaigns for finance firms: UK bookkeeping, Singapore outsourced CFO and India payroll",
   "stats": [
-    { "icon": "📅", "prefix": "", "target": 58, "decimals": 0, "suffix": "", "label": "Meetings booked" },
-    { "icon": "💬", "prefix": "", "target": 97, "decimals": 0, "suffix": "", "label": "Positive replies" },
-    { "icon": "👥", "prefix": "", "target": 750, "decimals": 0, "suffix": "", "label": "Decision-makers contacted" },
-    { "icon": "📝", "prefix": "", "target": 9, "decimals": 0, "suffix": "", "label": "Proposals requested or paid pilots agreed" }
+    {
+      "icon": "📅",
+      "prefix": "",
+      "target": 58,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Meetings booked"
+    },
+    {
+      "icon": "💬",
+      "prefix": "",
+      "target": 97,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Positive replies"
+    },
+    {
+      "icon": "👥",
+      "prefix": "",
+      "target": 750,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Decision-makers contacted"
+    },
+    {
+      "icon": "📝",
+      "prefix": "",
+      "target": 9,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Proposals requested or paid pilots agreed"
+    }
   ],
   "painEyebrow": "Sound familiar?",
   "painTitle": "Referrals built the practice. They won't scale it.",
@@ -142,21 +175,33 @@
       "tag": "Bookkeeping · United Kingdom",
       "headline": "Connecting a bookkeeping firm with accounting practices",
       "body": "A bookkeeping services company wanted partnerships with UK accounting practices that needed extra delivery capacity. We contacted managing partners and operations heads with messages about workload and overflow support, not a generic pitch.",
-      "results": ["15 meetings booked", "5 delivery-model reviews requested", "2 paid pilots agreed"],
+      "results": [
+        "15 meetings booked",
+        "5 delivery-model reviews requested",
+        "2 paid pilots agreed"
+      ],
       "href": "/case-studies/financial-services-uk-bookkeeping"
     },
     {
       "tag": "Outsourced CFO · Singapore",
       "headline": "Finding businesses that need outsourced finance support",
       "body": "A Singapore outsourced CFO and accounting firm won most new clients through accountants and founder referrals. We reached founders, managing directors and finance leaders with outreach on specific needs, such as monthly management reports or senior finance support.",
-      "results": ["19 meetings booked", "6 needs assessments requested", "3 proposals requested"],
+      "results": [
+        "19 meetings booked",
+        "6 needs assessments requested",
+        "3 proposals requested"
+      ],
       "href": "/case-studies/financial-services-singapore-outsourced-cfo"
     },
     {
       "tag": "Payroll services · India",
       "headline": "Building an outsourced payroll pipeline",
       "body": "An Indian payroll services firm targeting companies with 100 to 500 employees depended on referrals. We reached HR heads, finance controllers and founders, and follow-ups established workforce size, current processes and vendor review timing.",
-      "results": ["24 meetings booked", "7 detailed service requirements shared", "4 proposals requested"],
+      "results": [
+        "24 meetings booked",
+        "7 detailed service requirements shared",
+        "4 proposals requested"
+      ],
       "href": "/case-studies/financial-services-india-payroll"
     }
   ],
