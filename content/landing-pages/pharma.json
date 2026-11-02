@@ -45,39 +45,39 @@
     "🔬",
     "📦"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for pharma companies",
   "stats": [
     {
-      "icon": "🤝",
+      "icon": "📅",
       "prefix": "",
-      "target": 19,
+      "target": 22,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified buyer meetings / quarter (avg)"
+      "suffix": "",
+      "label": "Qualified meetings in 90 days for a nutraceutical manufacturer"
     },
     {
-      "icon": "📬",
+      "icon": "🇫🇷",
       "prefix": "",
-      "target": 64,
+      "target": 18,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Open rate on cold email campaigns"
+      "suffix": "",
+      "label": "Buyer meetings in France for a tablet and capsule manufacturer"
     },
     {
-      "icon": "🚀",
+      "icon": "🇺🇸",
       "prefix": "",
-      "target": 3.6,
-      "decimals": 1,
-      "suffix": "×",
-      "label": "ROI vs trade show spend"
+      "target": 16,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Sourcing meetings with US buyers for an API manufacturer"
     },
     {
       "icon": "💰",
       "prefix": "₹",
-      "target": 3.1,
-      "decimals": 1,
-      "suffix": "Cr+",
-      "label": "Buyer pipeline generated (domestic + export)"
+      "target": 48,
+      "decimals": 0,
+      "suffix": " lakh",
+      "label": "Potential pipeline for a contract manufacturer"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -188,11 +188,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

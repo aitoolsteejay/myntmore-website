@@ -50,39 +50,39 @@
     "📈",
     "🎯"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for agencies and IT companies",
   "stats": [
     {
       "icon": "📅",
       "prefix": "",
-      "target": 23,
+      "target": 24,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified meetings / month (avg)"
+      "suffix": "",
+      "label": "Meetings booked for a software development firm selling into the US"
     },
     {
-      "icon": "📬",
+      "icon": "🌍",
       "prefix": "",
-      "target": 68,
+      "target": 22,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Open rate on cold email campaigns"
+      "suffix": "",
+      "label": "Qualified international conversations for an IT services company"
     },
     {
-      "icon": "🚀",
+      "icon": "📞",
       "prefix": "",
-      "target": 4.2,
-      "decimals": 1,
-      "suffix": "×",
-      "label": "ROI in first 90 days"
+      "target": 20,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Qualified sales calls for a web development agency"
     },
     {
-      "icon": "💰",
-      "prefix": "₹",
-      "target": 2.4,
-      "decimals": 1,
-      "suffix": "Cr+",
-      "label": "Pipeline generated for agency clients"
+      "icon": "🖥️",
+      "prefix": "",
+      "target": 16,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Meetings booked for a managed IT provider in the UAE"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -193,11 +193,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

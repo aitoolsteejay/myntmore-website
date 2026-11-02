@@ -74,10 +74,10 @@
     {
       "icon": "🚀",
       "prefix": "",
-      "target": 3,
+      "target": 18,
       "decimals": 0,
-      "suffix": " wks",
-      "label": "Avg. time from signed partner to first client live"
+      "suffix": " days",
+      "label": "From onboarding to campaign launch"
     }
   ],
   "painEyebrow": "Sound familiar?",
