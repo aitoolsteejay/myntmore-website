@@ -42,39 +42,39 @@
     "📊",
     "🤝"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies in financial services",
   "stats": [
+    {
+      "icon": "📈",
+      "prefix": "",
+      "target": 150,
+      "decimals": 0,
+      "suffix": "+",
+      "label": "Qualified leads for a SEBI-registered PMS firm"
+    },
+    {
+      "icon": "💬",
+      "prefix": "",
+      "target": 18,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Qualified conversations for a financial advisory practice"
+    },
     {
       "icon": "📅",
       "prefix": "",
-      "target": 19,
+      "target": 13,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified meetings / month (avg)"
+      "suffix": "",
+      "label": "Qualified meetings for a corporate finance consultant"
     },
     {
-      "icon": "📬",
+      "icon": "🤝",
       "prefix": "",
-      "target": 64,
+      "target": 11,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Open rate on cold email campaigns"
-    },
-    {
-      "icon": "🚀",
-      "prefix": "",
-      "target": 3.8,
-      "decimals": 1,
-      "suffix": "×",
-      "label": "ROI in first 90 days"
-    },
-    {
-      "icon": "💰",
-      "prefix": "₹",
-      "target": 1.8,
-      "decimals": 1,
-      "suffix": "Cr+",
-      "label": "Pipeline generated for financial services clients"
+      "suffix": "",
+      "label": "Discovery meetings for a wealth management firm"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -170,42 +170,47 @@
       "body": "Qualified meetings land directly in your calendar with full context on the stakeholder and financing need. You advise; we fill the top of funnel, consistently."
     }
   ],
-  "trackStyle": "counters",
-  "caseCards": [],
-  "trackEyebrow": "Client results",
-  "trackTitle": "Our track record in B2B outbound, the same system we're applying for financial services firms",
-  "trackLinkText": "",
-  "trackLinkHref": "",
-  "track": [
+  "trackStyle": "case-cards",
+  "caseCards": [
     {
-      "icon": "📬",
-      "prefix": "",
-      "target": 12,
-      "suffix": "K+",
-      "label": "Meetings booked for clients across all outbound campaigns"
+      "tag": "Corporate finance",
+      "headline": "13 qualified meetings for a corporate finance consultant",
+      "body": "A corporate finance consultant wanted to reach more business owners and CFOs looking for help with fundraising, strategic finance and financial planning. We positioned the consultant around their transaction and advisory expertise, with content on funding readiness backed by targeted outreach.",
+      "results": [
+        "13 qualified advisory meetings",
+        "4 potential engagement opportunities",
+        "2.2× more LinkedIn profile views"
+      ],
+      "href": "/case-studies/financial-services-corporate-finance-meetings"
     },
     {
-      "icon": "📈",
-      "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "tag": "Wealth management & PMS · India",
+      "headline": "Building a pipeline for a wealth management and PMS firm",
+      "body": "A wealth and investment management firm serving HNI investors needed credibility in a market where decision-makers receive dozens of generic pitches a week. We ran content and outreach as one system, focused on the Indian market, over four months.",
+      "results": [
+        "150+ qualified leads",
+        "52% average response rate",
+        "500% growth in impressions"
+      ],
+      "href": "/case-studies/wealth-management-pms-pipeline"
     },
     {
-      "icon": "💰",
-      "prefix": "$",
-      "target": 120,
-      "suffix": "M+",
-      "label": "Pipeline generated for clients"
-    },
-    {
-      "icon": "⏱️",
-      "prefix": "",
-      "target": 18,
-      "suffix": " days",
-      "label": "Average days to campaign launch"
+      "tag": "Financial advisory",
+      "headline": "18 qualified conversations for a financial advisory practice",
+      "body": "A financial advisory firm wanted a steadier flow of prospective clients beyond referrals and its professional network. We paired educational founder content on financial planning and risk with targeted networking and introductory outreach.",
+      "results": [
+        "18 relevant prospect conversations",
+        "4 high-fit prospects entered the advisory pipeline",
+        "More consistent enquiries"
+      ],
+      "href": "/case-studies/financial-services-advisory-conversations"
     }
   ],
+  "trackEyebrow": "Client results",
+  "trackTitle": "Financial services firms we've built pipeline for",
+  "trackLinkText": "See all financial services case studies",
+  "trackLinkHref": "/case-studies/financial-services",
+  "track": [],
   "scenariosEyebrow": "",
   "scenariosTitle": "",
   "scenariosIntro": "",
