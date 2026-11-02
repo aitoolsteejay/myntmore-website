@@ -27,6 +27,7 @@ const EXCLUDED_PREFIXES = [
   "/site-audit",
   "/myntmore-framework",
   "/plans",
+  "/value-prop",
 ];
 
 const isExcluded = (path: string) => EXCLUDED_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`));
