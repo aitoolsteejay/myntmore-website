@@ -62,6 +62,19 @@ AI-powered tools. Each explains, before sign-up, how your details and input are 
 - [Posting Rhythm Builder](https://www.myntmore.com/tools/posting-rhythm-builder): Plan a sustainable LinkedIn posting cadence.
 - [Founder Presence Analyzer](https://www.myntmore.com/tools/founder-presence-analyzer): Assess a founder's online presence and positioning.
 
+## Industries
+One page per industry Myntmore runs outbound for: who the buyers are, how the campaign is run, and that industry's case studies and questions.
+- [IT Services & Agencies](https://www.myntmore.com/lp/agencies-it): Outbound for IT services, software development and digital agencies, including Indian firms winning clients in the US, UK and UAE.
+- [B2B SaaS](https://www.myntmore.com/lp/saas-founders): Cold email and LinkedIn outbound that books demos for B2B SaaS founders and sales teams.
+- [Recruitment & Staffing Firms](https://www.myntmore.com/lp/recruitment-firms): New client conversations and search mandates for recruitment, staffing and executive search firms.
+- [Manufacturers & Exporters](https://www.myntmore.com/lp/manufacturers-exporters): Reaching overseas procurement teams, importers and distributors for Indian manufacturers and exporters, between trade shows.
+- [Pharma](https://www.myntmore.com/lp/pharma): Outreach to buyers, sourcing teams and distribution partners for API manufacturers, CDMOs and formulation companies.
+- [Accounting & CFO Firms](https://www.myntmore.com/lp/accounting-cfo-firms): Partner-approved outreach for virtual CFO, bookkeeping, payroll and finance-outsourcing firms. Not used for Indian chartered accountancy practices' own services, which ICAI rules restrict from soliciting clients.
+- [Financial Services](https://www.myntmore.com/lp/financial-services): Credibility-led outbound for NBFCs, business lenders and corporate finance firms, with no rate, return or approval claims.
+- [Insurance Brokers](https://www.myntmore.com/lp/insurance): Reaching HR heads and CFOs at companies near their group insurance renewal window.
+- [Founders Raising Capital](https://www.myntmore.com/lp/fundraising): Investor lists and outreach to funds whose thesis matches the startup.
+- [Agency Partner Program](https://www.myntmore.com/lp/agency-partners): White-label outbound that marketing agencies resell to their own clients under their brand.
+
 ## Locations
 Myntmore serves B2B clients across India. City pages cover local market context, not separate offices.
 - [B2B Lead Generation in Mumbai](https://www.myntmore.com/b2b-lead-generation-mumbai)

@@ -247,6 +247,7 @@ export default config({
             headline: fields.text({ label: "Headline", validation: { isRequired: true } }),
             body: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }),
             results: fields.array(fields.text({ label: "Result" }), { label: "Result pills", itemLabel: (props) => props.value }),
+            href: fields.text({ label: "Case study link (optional), e.g. /case-studies/financial-services-uk-bookkeeping" }),
           }),
           { label: "Case-study cards (exactly 3; used when the results style is Case-study cards)", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.tag.value }
         ),

@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.myntmore.com" },
   keywords: [
     "b2b lead generation",
-    "b2b lead generation agency mumbai",
     "b2b lead generation agency india",
     "cold email agency",
     "cold email infrastructure",

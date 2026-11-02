@@ -51,7 +51,8 @@ export interface LandingPageData {
   trackTitle: string;
   // What fills the results slot: "counters" (the 4 track record numbers), "case-cards" (case studies with result pills) or "none".
   trackStyle: string;
-  caseCards: { tag: string; headline: string; body: string; results: string[] }[];
+  // href (optional): the case study page the card links to.
+  caseCards: { tag: string; headline: string; body: string; results: string[]; href?: string }[];
   // Optional link under the track record cards.
   trackLinkText: string;
   trackLinkHref: string;

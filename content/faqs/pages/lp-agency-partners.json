@@ -2,6 +2,10 @@
   "page": "Landing page: Agency Partners (/lp/agency-partners)",
   "items": [
     {
+      "question": "How can a marketing agency offer lead generation to its clients?",
+      "answer": "Through a white-label partner that runs outbound under your brand. You keep the client relationship and set the price; the partner handles ICP research, lists, LinkedIn and cold email infrastructure, copy and reply handling. Your clients get booked meetings as a new service line from you, without you hiring an outbound team."
+    },
+    {
       "question": "How does the white-labeling actually work day to day",
       "answer": "We set up sender domains, email signatures, LinkedIn outreach, and every report or dashboard under your agency's name and branding. Your client only ever sees your team's name. Internally, we run the campaigns, and you receive the same branded materials to pass along or present yourself."
     },

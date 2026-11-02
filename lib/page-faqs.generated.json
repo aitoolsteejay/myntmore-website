@@ -339,7 +339,37 @@
       "answer": "Pay per lead suits you when you only want contacts and will run the outreach yourself. A retainer or per-meeting model suits you when you want the agency to run the whole system, because it rewards them for testing, fixing deliverability and improving copy instead of maximising the number of contacts delivered."
     }
   ],
+  "lp-accounting-cfo-firms": [
+    {
+      "question": "How do virtual CFO firms get clients beyond referrals?",
+      "answer": "By reaching founders and finance heads when they need help, such as after a funding round, before an audit or when management reporting falls behind. We map those triggers, write partner-approved messages that open on the specific need and book consultations, so new clients no longer depend on who already knows you."
+    },
+    {
+      "question": "How can an Indian accounting outsourcing firm win UK clients?",
+      "answer": "Approach UK accounting practices as partners, not individual businesses. In our UK bookkeeping campaign, messages to managing partners and operations heads offered overflow capacity instead of a generic pitch, which led to 15 meetings, 5 delivery-model reviews and 2 paid pilots. The same partner-first approach can be tested with US CPA firms."
+    },
+    {
+      "question": "Can a chartered accountancy firm in India use this?",
+      "answer": "Not to solicit clients. ICAI's Code of Ethics restricts chartered accountants in practice from soliciting professional work, so we do not run outreach for Indian CA practices' own services. We work with virtual CFO, bookkeeping, payroll and finance-outsourcing firms that can market directly, and every firm should confirm its own professional body's rules."
+    },
+    {
+      "question": "Will outreach under a partner's name sound automated?",
+      "answer": "No. One onboarding call captures how your partners describe their work, and a partner approves every message draft before anything is sent. Outreach stays low volume and insight-first, and no client names or engagement details appear in messages without written permission. In a trust-based business, discretion matters more than reach."
+    },
+    {
+      "question": "How long before we see the first consultations?",
+      "answer": "Campaigns usually go live about 18 days after your assets, access and approvals are ready, and first qualified conversations typically follow in weeks 3 to 4. Timing is not guaranteed: it depends on your market, your targeting and how long your buyers take to review a finance provider."
+    },
+    {
+      "question": "What does pricing and commitment look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough outreach to judge results. After that it runs month to month with 30 days' notice, with no annual contract. Proposals, pricing and the advice you give clients always stay with your firm; we book the conversations."
+    }
+  ],
   "lp-agencies-it": [
+    {
+      "question": "How do Indian IT companies get clients abroad?",
+      "answer": "By narrowing to one or two capabilities they have already delivered, choosing one target market and running LinkedIn and cold email to the CTOs and engineering leaders there. For an Indian software development firm targeting US retail and logistics companies, this booked 24 meetings and 4 proposal requests beyond its referrals and project marketplaces."
+    },
     {
       "question": "How is this different from hiring an in-house SDR?",
       "answer": "An in-house SDR costs you a full-time salary, months of ramp-up, and ongoing management. We give you a fully built outbound system, list building, sequences, and deliverability infrastructure, live within about three weeks, at a fraction of the cost and with none of the hiring risk."
@@ -366,6 +396,10 @@
     }
   ],
   "lp-agency-partners": [
+    {
+      "question": "How can a marketing agency offer lead generation to its clients?",
+      "answer": "Through a white-label partner that runs outbound under your brand. You keep the client relationship and set the price; the partner handles ICP research, lists, LinkedIn and cold email infrastructure, copy and reply handling. Your clients get booked meetings as a new service line from you, without you hiring an outbound team."
+    },
     {
       "question": "How does the white-labeling actually work day to day",
       "answer": "We set up sender domains, email signatures, LinkedIn outreach, and every report or dashboard under your agency's name and branding. Your client only ever sees your team's name. Internally, we run the campaigns, and you receive the same branded materials to pass along or present yourself."
@@ -471,6 +505,10 @@
   ],
   "lp-manufacturers-exporters": [
     {
+      "question": "How can Indian manufacturers find international buyers between trade shows?",
+      "answer": "Map the companies in one export market that buy your product category, then contact their procurement and technical heads with your certifications and capacity up front. An Indian precision components maker targeting German machinery companies booked 18 meetings, 6 requests for quotation and 3 sample requests this way, outside the exhibition calendar."
+    },
+    {
       "question": "Do you work with our specific product category?",
       "answer": "We have run campaigns across auto components, textiles, industrial equipment, and other manufacturing categories. During onboarding we map your product to the right buyer profile in your target markets."
     },
@@ -496,6 +534,10 @@
     }
   ],
   "lp-pharma": [
+    {
+      "question": "How do Indian pharma companies find distributors and buyers abroad?",
+      "answer": "By shortlisting partners whose portfolio and customer coverage match your range, then reaching their business development and sourcing heads with your regulatory credentials up front. One formulation company shortlisted 3 UAE distributors from 12 partner meetings, and an API manufacturer held 16 sourcing meetings with US buyers evaluating a second supplier."
+    },
     {
       "question": "Does Myntmore handle regulatory approvals or compliance for us?",
       "answer": "No. Myntmore is a B2B outbound lead generation partner, we find and book meetings with the right buyers. Regulatory approvals, WHO-GMP or USFDA certification processes, and import-export compliance are handled entirely by your own regulatory, quality, and compliance team. We do not advise on or claim expertise in these areas."
@@ -523,6 +565,10 @@
   ],
   "lp-recruitment-firms": [
     {
+      "question": "How do executive search firms win new mandates?",
+      "answer": "By reaching leadership teams while a hiring need is live, with outreach about the roles and sectors you place in rather than a broad recruiting pitch. For an executive search firm this produced 19 qualified conversations and 4 active mandates, and a UK engineering recruiter booked 23 meetings that led to 4 authorised searches."
+    },
+    {
       "question": "How is this different from job boards and referrals?",
       "answer": "Job boards and referrals are reactive, you wait for someone to post a role or a contact to think of you. We run proactive outbound to HR Heads and TA Leads at companies showing real hiring signals, so you are in front of decision-makers before they even post the job."
     },
@@ -548,6 +594,10 @@
     }
   ],
   "lp-saas-founders": [
+    {
+      "question": "Should a SaaS startup hire SDRs or outsource outbound?",
+      "answer": "Outsource first if you have not yet proven which segment and message book meetings: an agency can test that from its existing infrastructure, while a new SDR needs time to ramp and still needs a playbook. Hire in-house once outbound reliably converts and someone can manage the team. Many companies run both side by side."
+    },
     {
       "question": "How is this different from tools like Apollo or Clay that we already use?",
       "answer": "Those tools give you data. We give you a fully managed system, ICP mapping, signal based targeting, copywriting, sequencing, and deliverability, run by a team that adjusts it every week based on what is working."

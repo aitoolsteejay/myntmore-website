@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     "best b2b outbound agency in chennai",
     "how to get b2b leads in chennai",
     "linkedin outreach for it companies chennai",
+    "b2b lead generation company in chennai",
+    "lead generation agency in chennai",
+    "appointment setting services chennai",
+    "outbound sales agency chennai",
   ],
   openGraph: {
     title: "B2B Lead Generation Company in Chennai | Myntmore",

@@ -21,7 +21,14 @@ export const metadata: Metadata = {
     "lead generation for importers and distributors",
     "alternative to trade fairs for export leads",
     "b2b outbound agency for exporters mumbai",
-    "sales outreach for manufacturing exporters"
+    "sales outreach for manufacturing exporters",
+    "lead generation for manufacturers",
+    "export lead generation india",
+    "industrial b2b lead generation",
+    "lead generation for engineering companies",
+    "lead generation for machinery manufacturers",
+    "how to find international buyers for manufacturing company",
+    "how to find buyers between trade shows"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/manufacturers-exporters" },
   openGraph: {

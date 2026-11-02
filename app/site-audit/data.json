@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T11:06:53.314Z",
+  "generatedAt": "2026-11-02T11:35:14.290Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 291,
-    "linked": 258,
+    "total": 292,
+    "linked": 259,
     "orphan": 33,
     "noindex": 37,
     "notInXmlSitemap": 41,
@@ -1755,6 +1755,19 @@
       "inboundCount": 0,
       "noindex": false,
       "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/lp/accounting-cfo-firms",
+      "title": "Lead Generation for Accounting and CFO Firms",
+      "section": "lp",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
       "inHtmlSitemap": false
     },
     {

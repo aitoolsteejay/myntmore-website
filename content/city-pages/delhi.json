@@ -19,7 +19,12 @@
     "linkedin ghostwriting for founders delhi",
     "best b2b outbound agency in delhi ncr",
     "how to get b2b leads in delhi",
-    "cold email agency gurgaon noida"
+    "cold email agency gurgaon noida",
+    "b2b lead generation company in delhi",
+    "lead generation agency in delhi ncr",
+    "lead generation services in delhi",
+    "appointment setting services delhi",
+    "outbound sales agency delhi"
   ],
   "ogTitle": "B2B Lead Generation Agency in Delhi | Myntmore",
   "ogDescription": "AI-powered outbound systems built for Delhi NCR's enterprise, trading, and D2C landscape.",
@@ -45,7 +50,7 @@
     }
   ],
   "servicesTitle": "Every service, one system",
-  "servicesIntro": "Seven productized services, built and managed for you.",
+  "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
     {
       "title": "LinkedIn Outreach & Automation",
@@ -92,10 +97,23 @@
   ],
   "formTitle": "Get a free GTM audit for your Delhi NCR business",
   "formSubtitle": "We'll audit your current outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
-  "segmentsTitle": "",
-  "segmentsIntro": "",
-  "segments": [],
-  "segmentsNote": "",
+  "segmentsTitle": "Who we generate leads for in Delhi NCR",
+  "segmentsIntro": "Our lead generation services in Delhi NCR are built for companies that sell to other businesses, in India or overseas.",
+  "segments": [
+    {
+      "title": "IT services and SaaS in Gurugram and Noida",
+      "desc": "Product engineering firms and software companies selling to enterprises and funded startups in India, the US and the UK, where buyers ignore generic pitches."
+    },
+    {
+      "title": "Exporters and manufacturers across NCR",
+      "desc": "Export houses and industrial companies from Okhla to Manesar that have grown through trade fairs and existing buyers, and need overseas procurement teams to hear from them between shows."
+    },
+    {
+      "title": "Recruitment, staffing and professional services",
+      "desc": "Firms whose new business depends on partner networks and referrals, and who need conversations with hiring managers, founders and finance heads beyond them."
+    }
+  ],
+  "segmentsNote": "For your sector, see lead generation for [IT services companies](/lp/agencies-it), [SaaS founders](/lp/saas-founders), [recruitment firms](/lp/recruitment-firms), [manufacturers and exporters](/lp/manufacturers-exporters) and [accounting and CFO firms](/lp/accounting-cfo-firms).",
   "healthcareTitle": "",
   "healthcareIntro": "",
   "healthcareBuyers": [],

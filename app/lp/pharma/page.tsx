@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     "lead generation for generic drug manufacturers",
     "outbound agency for pharma companies mumbai",
     "global buyer outreach for pharma manufacturers",
-    "b2b lead gen for contract manufacturing pharma"
+    "b2b lead gen for contract manufacturing pharma",
+    "cdmo business development outsourcing",
+    "how to find pharma distributors abroad",
+    "pharma lead generation hyderabad",
+    "pharma lead generation ahmedabad"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/pharma" },
   openGraph: {

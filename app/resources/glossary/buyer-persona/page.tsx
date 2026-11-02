@@ -6,7 +6,7 @@ import { buildDefinedTermSchema, SITE_URL } from "@/lib/schema";
 const SLUG = "buyer-persona";
 const PAGE_URL = `${SITE_URL}/resources/glossary/${SLUG}`;
 const TITLE = "Buyer Persona";
-const DESCRIPTION = "A buyer persona is a semi-fictional profile of a specific job role, describing that role's goals, pain points, and objections, used to shape messaging rather than to decide which companies to target.";
+const DESCRIPTION = "A buyer persona is a research-based profile of a specific job role, describing that role's goals, pain points, and objections, used to shape messaging rather than to decide which companies to target.";
 const META_DESCRIPTION = "What a buyer persona is, how it's used to shape outbound messaging, and how it's different from an ICP.";
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function GlossaryTermPage() {
       accent={"#C2410C"}
       title={TITLE}
       tagline={"A picture of the person on the other end of the message, not the company they work for."}
-      definition={"A semi-fictional profile of a specific job role describing its goals, daily frustrations, and likely objections, used to shape what a message says rather than who it's sent to."}
+      definition={"A research-based profile of a specific job role describing its goals, daily frustrations, and likely objections, used to shape what a message says rather than who it's sent to."}
       body={"An ICP answers which companies and roles to target; a buyer persona answers what to actually say to them once they're on the list, by capturing how that role thinks and what convinces it. The two work together rather than replacing each other."}
       sourceLabel={"Read the related term: ICP (Ideal Customer Profile)"}
       sourceHref={"/resources/glossary/icp"}
