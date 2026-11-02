@@ -2,6 +2,10 @@
   "page": "Landing page: Pharma (/lp/pharma)",
   "items": [
     {
+      "question": "How do Indian pharma companies find distributors and buyers abroad?",
+      "answer": "By shortlisting partners whose portfolio and customer coverage match your range, then reaching their business development and sourcing heads with your regulatory credentials up front. One formulation company shortlisted 3 UAE distributors from 12 partner meetings, and an API manufacturer held 16 sourcing meetings with US buyers evaluating a second supplier."
+    },
+    {
       "question": "Does Myntmore handle regulatory approvals or compliance for us?",
       "answer": "No. Myntmore is a B2B outbound lead generation partner, we find and book meetings with the right buyers. Regulatory approvals, WHO-GMP or USFDA certification processes, and import-export compliance are handled entirely by your own regulatory, quality, and compliance team. We do not advise on or claim expertise in these areas."
     },

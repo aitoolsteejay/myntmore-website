@@ -119,7 +119,7 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
       <section className="px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-3 text-center text-3xl font-black sm:text-5xl">What A Better Hook Looks Like</h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg" style={{ color: "#52525B" }}>An example hook, graded by the same rules the tool uses. It is an illustration, not a client result.</p>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg" style={{ color: "#52525B" }}>A before-and-after hook, graded by the same rules the tool uses.</p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {[
               { label: "Before", text: EXAMPLE_BEFORE, score: before.total, word: before.label, border: "#D6D0C6" },

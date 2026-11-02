@@ -20,7 +20,11 @@
     "linkedin ghostwriting for founders ahmedabad",
     "best b2b outbound agency in ahmedabad",
     "how to get b2b leads in ahmedabad",
-    "cold email for gujarat manufacturers"
+    "cold email for gujarat manufacturers",
+    "b2b lead generation company in ahmedabad",
+    "lead generation agency in ahmedabad",
+    "appointment setting services ahmedabad",
+    "outbound sales agency ahmedabad"
   ],
   "ogTitle": "B2B Lead Generation Agency in Ahmedabad | Myntmore",
   "ogDescription": "AI-powered outbound systems built for Ahmedabad's textile, pharma, and chemical manufacturing base.",
@@ -46,7 +50,7 @@
     }
   ],
   "servicesTitle": "Every service, one system",
-  "servicesIntro": "Seven productized services, built and managed for you.",
+  "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
     {
       "title": "LinkedIn Outreach & Automation",
@@ -93,10 +97,23 @@
   ],
   "formTitle": "Get a free GTM audit for your Ahmedabad business",
   "formSubtitle": "We'll audit your current outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
-  "segmentsTitle": "",
-  "segmentsIntro": "",
-  "segments": [],
-  "segmentsNote": "",
+  "segmentsTitle": "Who we generate leads for in Ahmedabad",
+  "segmentsIntro": "Our lead generation services in Ahmedabad are built for companies that sell to other businesses, in India or overseas.",
+  "segments": [
+    {
+      "title": "Pharma and chemical manufacturers",
+      "desc": "API, formulation and specialty chemical companies looking for overseas buyers, distributors and sourcing teams beyond their existing customers."
+    },
+    {
+      "title": "Textile and engineering exporters",
+      "desc": "Manufacturers that built their export business at trade fairs and now need procurement teams abroad to hear from them between shows."
+    },
+    {
+      "title": "Founder-led B2B companies",
+      "desc": "Firms where the founder still does the prospecting and wants a managed outbound system that keeps the personal touch buyers expect."
+    }
+  ],
+  "segmentsNote": "For your sector, see lead generation for [manufacturers and exporters](/lp/manufacturers-exporters), [pharma companies](/lp/pharma) and [IT services companies](/lp/agencies-it).",
   "healthcareTitle": "",
   "healthcareIntro": "",
   "healthcareBuyers": [],

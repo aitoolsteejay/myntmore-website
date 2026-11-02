@@ -17,7 +17,14 @@
     "lead generation for importers and distributors",
     "alternative to trade fairs for export leads",
     "b2b outbound agency for exporters mumbai",
-    "sales outreach for manufacturing exporters"
+    "sales outreach for manufacturing exporters",
+    "lead generation for manufacturers",
+    "export lead generation india",
+    "industrial b2b lead generation",
+    "lead generation for engineering companies",
+    "lead generation for machinery manufacturers",
+    "how to find international buyers for manufacturing company",
+    "how to find buyers between trade shows"
   ],
   "ogTitle": "B2B Outbound for Manufacturers & Exporters | Myntmore",
   "ogDescription": "Find international buyers without trade fairs, through AI-powered outreach.",
@@ -41,39 +48,39 @@
     "📦",
     "🚢"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for manufacturers and exporters",
   "stats": [
     {
-      "icon": "🤝",
+      "icon": "💬",
       "prefix": "",
-      "target": 14,
-      "decimals": 0,
-      "suffix": "+",
-      "label": "Intl buyer meetings / quarter (avg)"
-    },
-    {
-      "icon": "🌐",
-      "prefix": "",
-      "target": 38,
+      "target": 24,
       "decimals": 0,
       "suffix": "",
-      "label": "Countries our clients have closed deals in"
+      "label": "Qualified sales conversations for an industrial packaging maker"
     },
     {
-      "icon": "📈",
+      "icon": "🇩🇪",
       "prefix": "",
-      "target": 6,
+      "target": 18,
       "decimals": 0,
-      "suffix": "×",
-      "label": "More meetings vs trade show ROI"
+      "suffix": "",
+      "label": "Meetings booked with German buyers for a precision components maker"
     },
     {
-      "icon": "💰",
-      "prefix": "$",
-      "target": 2.4,
-      "decimals": 1,
-      "suffix": "M+",
-      "label": "Export pipeline generated"
+      "icon": "🌍",
+      "prefix": "",
+      "target": 18,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Qualified international buyer conversations for an industrial manufacturer"
+    },
+    {
+      "icon": "🧵",
+      "prefix": "",
+      "target": 15,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Qualified buyer opportunities for a textile exporter"
     }
   ],
   "painEyebrow": "The export challenge",
@@ -184,11 +191,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

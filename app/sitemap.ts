@@ -259,6 +259,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/lp/pharma`, lastModified: lastMod("/lp/pharma"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/lp/insurance`, lastModified: lastMod("/lp/insurance"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/lp/financial-services`, lastModified: lastMod("/lp/financial-services"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/lp/accounting-cfo-firms`, lastModified: lastMod("/lp/accounting-cfo-firms"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/lp/fundraising`, lastModified: lastMod("/lp/fundraising"), changeFrequency: "monthly", priority: 0.6 },
     // Partner program
     { url: `${base}/lp/agency-partners`, lastModified: lastMod("/lp/agency-partners"), changeFrequency: "monthly", priority: 0.6 },

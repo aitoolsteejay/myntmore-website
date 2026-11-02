@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-30T12:16:20.744Z",
+  "generatedAt": "2026-11-02T12:09:15.435Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 290,
-    "linked": 258,
-    "orphan": 32,
-    "noindex": 36,
-    "notInXmlSitemap": 40,
-    "privateHidden": 5
+    "total": 293,
+    "linked": 259,
+    "orphan": 34,
+    "noindex": 38,
+    "notInXmlSitemap": 42,
+    "privateHidden": 7
   },
   "pages": [
     {
@@ -1755,6 +1755,19 @@
       "inboundCount": 0,
       "noindex": false,
       "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/lp/accounting-cfo-firms",
+      "title": "Lead Generation for Accounting and CFO Firms",
+      "section": "lp",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
       "inHtmlSitemap": false
     },
     {
@@ -4058,6 +4071,30 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },

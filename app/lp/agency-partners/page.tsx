@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     "become a lead generation reseller",
     "white label outbound agency india",
     "subcontract cold email services",
-    "b2b lead gen white label partner mumbai"
+    "b2b lead gen white label partner mumbai",
+    "white label lead generation",
+    "lead generation for digital marketing agencies",
+    "how can a marketing agency offer lead generation"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/agency-partners" },
   openGraph: {

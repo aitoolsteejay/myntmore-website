@@ -11,6 +11,7 @@
     "sitemap:check": "node scripts/generate-sitemap-dates.mjs --check",
     "indexnow": "node scripts/indexnow.mjs",
     "audit:links": "node scripts/audit-internal-links.mjs",
+    "keywords:build": "node scripts/generate-keyword-research.mjs",
     "llms:build": "node scripts/generate-llms-full.mjs",
     "llms:check": "node scripts/generate-llms-full.mjs --check",
     "audit:answers": "node scripts/audit-answers.mjs",

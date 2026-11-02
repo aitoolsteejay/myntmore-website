@@ -52,12 +52,12 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "decimals": 0,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served",
+      "decimals": 0
     },
     {
       "icon": "💰",

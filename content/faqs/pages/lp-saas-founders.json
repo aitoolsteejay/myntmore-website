@@ -2,6 +2,10 @@
   "page": "Landing page: Saas Founders (/lp/saas-founders)",
   "items": [
     {
+      "question": "Should a SaaS startup hire SDRs or outsource outbound?",
+      "answer": "Outsource first if you have not yet proven which segment and message book meetings: an agency can test that from its existing infrastructure, while a new SDR needs time to ramp and still needs a playbook. Hire in-house once outbound reliably converts and someone can manage the team. Many companies run both side by side."
+    },
+    {
       "question": "How is this different from tools like Apollo or Clay that we already use?",
       "answer": "Those tools give you data. We give you a fully managed system, ICP mapping, signal based targeting, copywriting, sequencing, and deliverability, run by a team that adjusts it every week based on what is working."
     },

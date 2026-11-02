@@ -17,7 +17,13 @@
     "how to book more sales demos saas",
     "sales development for early stage saas",
     "b2b outbound engine for saas founders",
-    "growth agency for saas founders india"
+    "growth agency for saas founders india",
+    "outsourced sdr for saas",
+    "saas appointment setting",
+    "cold email agency for saas",
+    "linkedin outreach for saas companies",
+    "saas lead generation india",
+    "should saas startup hire sdr or outsource"
   ],
   "ogTitle": "B2B Outbound for SaaS Founders | Myntmore",
   "ogDescription": "Outbound that books demos, not just opens. A predictable outbound engine for B2B SaaS.",
@@ -41,39 +47,39 @@
     "⚡",
     "🎯"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for B2B SaaS companies",
   "stats": [
+    {
+      "icon": "🚀",
+      "prefix": "",
+      "target": 40,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Qualified meetings in 8 weeks for a Series A SaaS company"
+    },
     {
       "icon": "📅",
       "prefix": "",
-      "target": 28,
+      "target": 31,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified demos booked / month (avg)"
+      "suffix": "",
+      "label": "Qualified sales meetings in 3 months for a workflow automation SaaS"
     },
     {
-      "icon": "📬",
+      "icon": "🖥️",
       "prefix": "",
-      "target": 52,
+      "target": 19,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Reply rate on best-performing sequences"
-    },
-    {
-      "icon": "⏱️",
-      "prefix": "",
-      "target": 60,
-      "decimals": 0,
-      "suffix": " days",
-      "label": "To first qualified pipeline"
+      "suffix": "",
+      "label": "Qualified product demos for an HR tech SaaS"
     },
     {
       "icon": "💰",
-      "prefix": "$",
-      "target": 120,
+      "prefix": "₹",
+      "target": 72,
       "decimals": 0,
-      "suffix": "M+",
-      "label": "Pipeline generated across SaaS clients"
+      "suffix": " lakh",
+      "label": "Potential pipeline for a fintech SaaS"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -184,11 +190,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

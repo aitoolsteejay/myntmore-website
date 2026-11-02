@@ -42,39 +42,39 @@
     "🏢",
     "🤝"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for insurance brokers and advisers",
   "stats": [
     {
       "icon": "📅",
       "prefix": "",
-      "target": 19,
+      "target": 21,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified meetings / month (avg)"
+      "suffix": "",
+      "label": "Qualified meetings for a corporate insurance broker"
     },
     {
-      "icon": "📬",
+      "icon": "🏢",
       "prefix": "",
-      "target": 64,
+      "target": 20,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Open rate on cold email campaigns"
+      "suffix": "",
+      "label": "Meetings booked for an employee benefits brokerage in the UAE"
     },
     {
-      "icon": "🚀",
+      "icon": "🤝",
       "prefix": "",
-      "target": 3.8,
-      "decimals": 1,
-      "suffix": "×",
-      "label": "ROI in first 90 days"
+      "target": 15,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Meetings booked for an employee benefits brokerage in India"
     },
     {
-      "icon": "💰",
-      "prefix": "₹",
-      "target": 1.8,
-      "decimals": 1,
-      "suffix": "Cr+",
-      "label": "Pipeline generated for broker clients"
+      "icon": "🚚",
+      "prefix": "",
+      "target": 14,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Meetings booked for a commercial insurance brokerage in Singapore"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -185,11 +185,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

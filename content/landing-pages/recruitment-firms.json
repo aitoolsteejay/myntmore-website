@@ -17,7 +17,13 @@
     "abm for staffing and recruitment firms",
     "new client outreach for recruitment agencies",
     "cold email agency for staffing firms mumbai",
-    "b2b outbound for executive search firms"
+    "b2b outbound for executive search firms",
+    "lead generation for executive search firms",
+    "business development for staffing companies",
+    "client acquisition for recruitment consultancy",
+    "how to get mandates for executive search firm",
+    "linkedin outreach for recruiters to get clients",
+    "lead generation for recruitment agencies in mumbai"
   ],
   "ogTitle": "B2B Outbound for Recruitment & Staffing Firms | Myntmore",
   "ogDescription": "Stop competing on job boards. Start booking client meetings with AI-powered outbound.",
@@ -42,39 +48,39 @@
     "💼",
     "🎯"
   ],
-  "statsCaption": "",
+  "statsCaption": "Results from published Myntmore case studies for recruitment and staffing firms",
   "stats": [
     {
       "icon": "📅",
       "prefix": "",
-      "target": 21,
+      "target": 26,
       "decimals": 0,
-      "suffix": "+",
-      "label": "Qualified meetings / month (avg)"
+      "suffix": "",
+      "label": "Qualified business meetings for an IT staffing agency"
     },
     {
-      "icon": "📬",
+      "icon": "🇬🇧",
       "prefix": "",
-      "target": 64,
+      "target": 23,
       "decimals": 0,
-      "suffix": "%",
-      "label": "Open rate on cold email campaigns"
+      "suffix": "",
+      "label": "Meetings booked for a UK engineering recruiter"
     },
     {
-      "icon": "🚀",
+      "icon": "🇺🇸",
       "prefix": "",
-      "target": 3.8,
-      "decimals": 1,
-      "suffix": "×",
-      "label": "ROI in first 90 days"
+      "target": 20,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Meetings booked for a US tech recruitment firm"
     },
     {
-      "icon": "💰",
-      "prefix": "₹",
-      "target": 1.8,
-      "decimals": 1,
-      "suffix": "Cr+",
-      "label": "Pipeline generated for staffing clients"
+      "icon": "📝",
+      "prefix": "",
+      "target": 4,
+      "decimals": 0,
+      "suffix": "",
+      "label": "Active search mandates for an executive search firm"
     }
   ],
   "painEyebrow": "Sound familiar?",
@@ -185,11 +191,11 @@
       "label": "Meetings booked for clients across all outbound campaigns"
     },
     {
-      "icon": "📈",
+      "icon": "🏢",
       "prefix": "",
-      "target": 38,
-      "suffix": "%",
-      "label": "Average LinkedIn reply rate"
+      "target": 130,
+      "suffix": "+",
+      "label": "B2B companies served"
     },
     {
       "icon": "💰",

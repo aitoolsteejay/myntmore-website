@@ -717,7 +717,6 @@ export default function DoItYourselfClient() {
                               </li>
                             ))}
                           </ul>
-                          <p className="text-xs mb-3" style={{ color: "#71675E" }}>Simulated preview for this demo, not real send data.</p>
                           <button type="button" onClick={resetDemo} className={`inline-flex items-center gap-1.5 min-h-[44px] text-sm font-bold rounded-lg px-1 ${FOCUS}`} style={{ color: ACCENT }}>
                             <RotateCcw className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
                             Restart demo

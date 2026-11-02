@@ -21,7 +21,13 @@ export const metadata: Metadata = {
     "how to book more sales demos saas",
     "sales development for early stage saas",
     "b2b outbound engine for saas founders",
-    "growth agency for saas founders india"
+    "growth agency for saas founders india",
+    "outsourced sdr for saas",
+    "saas appointment setting",
+    "cold email agency for saas",
+    "linkedin outreach for saas companies",
+    "saas lead generation india",
+    "should saas startup hire sdr or outsource"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/saas-founders" },
   openGraph: {

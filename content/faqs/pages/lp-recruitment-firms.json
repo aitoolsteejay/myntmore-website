@@ -2,6 +2,10 @@
   "page": "Landing page: Recruitment Firms (/lp/recruitment-firms)",
   "items": [
     {
+      "question": "How do executive search firms win new mandates?",
+      "answer": "By reaching leadership teams while a hiring need is live, with outreach about the roles and sectors you place in rather than a broad recruiting pitch. For an executive search firm this produced 19 qualified conversations and 4 active mandates, and a UK engineering recruiter booked 23 meetings that led to 4 authorised searches."
+    },
+    {
       "question": "How is this different from job boards and referrals?",
       "answer": "Job boards and referrals are reactive, you wait for someone to post a role or a contact to think of you. We run proactive outbound to HR Heads and TA Leads at companies showing real hiring signals, so you are in front of decision-makers before they even post the job."
     },
