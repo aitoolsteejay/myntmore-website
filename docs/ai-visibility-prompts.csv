@@ -1,0 +1,64 @@
+id,tier,category,prompt,icp,icp_name,city,page_that_should_be_cited
+P01,monthly,best-of,Best B2B lead generation agencies in India,,,,/resources/guides/how-to-choose-b2b-lead-generation-agency-india
+P02,monthly,best-of,Best cold email agencies for SaaS companies,ICP 2,B2B SaaS & Enterprise Software,,/services/cold-email
+P03,monthly,city,How do I generate B2B leads in Mumbai?,,,Mumbai,/b2b-lead-generation-mumbai
+P04,monthly,how-to,What is a safe LinkedIn outreach strategy?,,,,/services/linkedin-outreach
+P05,monthly,how-to,What is the average B2B outbound reply rate?,,,,/resources/blogs/b2b-outbound-benchmark-report-2026
+P06,monthly,comparison,Should I use LinkedIn or cold email for outbound?,,,,/resources/blogs/cold-email-vs-linkedin-outreach
+P07,monthly,cost,How much does outsourced lead generation cost?,,,,/resources/guides/how-to-choose-b2b-lead-generation-agency-india
+P08,monthly,entity,What is Myntmore?,,,,/about-us
+P09,monthly,entity,Who is Tejas Jhaveri?,,,,/about-us
+P10,monthly,best-of,Best LinkedIn outreach agency in India,,,,/services/linkedin-outreach
+P11,monthly,city,Best B2B lead generation company in Bangalore,,,Bengaluru,/b2b-lead-generation-bengaluru
+P12,monthly,icp,How can an IT services company in India get clients in the US?,ICP 1,IT Services & Product Engineering,,/lp/agencies-it
+P13,monthly,icp,How do recruitment agencies get new clients?,ICP 3,Executive Search & Recruitment,,/lp/recruitment-firms
+P14,monthly,icp,How can Indian manufacturers find international buyers?,ICP 11,Manufacturing / Industrial B2B incl. Pharma,,/lp/manufacturers-exporters
+P15,monthly,icp,How can a virtual CFO firm get more clients?,ICP 24,Accounting / CFO / Compliance,,NEW: /lp/accounting-cfo-firms
+P16,monthly,entity,Myntmore reviews,,,,Clutch reviews (off-site)
+P17,quarterly,best-of,Top outbound sales agencies in India,,,,/who-this-is-for
+P18,quarterly,best-of,Best appointment setting companies in India,,,,/services/cold-email
+P19,quarterly,best-of,Who are the best outsourced SDR companies in India?,,,,/resources/blogs/agency-vs-in-house
+P20,quarterly,best-of,Best account-based marketing agencies in India,,,,/services/account-based-marketing
+P21,quarterly,best-of,Best LinkedIn ghostwriting agency for founders in India,,,,/services/personal-branding
+P22,quarterly,best-of,Recommend a lead generation agency for a B2B startup in India,,,,/who-this-is-for
+P23,quarterly,best-of,Affordable B2B lead generation agency for a small business in India,,,,/who-this-is-for
+P24,quarterly,best-of,Best offshore lead generation agency for a US B2B company,,,,/case-studies/markets/united-states
+P25,quarterly,best-of,Best AI lead generation agency,,,,/services/ai-lead-generation
+P26,quarterly,city,Best B2B lead generation company in Delhi,,,Delhi,/b2b-lead-generation-delhi
+P27,quarterly,city,Best B2B lead generation company in Pune,,,Pune,/b2b-lead-generation-pune
+P28,quarterly,city,Best B2B lead generation company in Hyderabad,,,Hyderabad,/b2b-lead-generation-hyderabad
+P29,quarterly,city,Best B2B lead generation company in Chennai,,,Chennai,/b2b-lead-generation-chennai
+P30,quarterly,city,Best B2B lead generation company in Ahmedabad,,,Ahmedabad,/b2b-lead-generation-ahmedabad
+P31,quarterly,city,Best B2B lead generation company in Kolkata,,,Kolkata,/b2b-lead-generation-kolkata
+P32,quarterly,city,Best B2B lead generation company in Gurugram,,,Gurugram,NEW: /b2b-lead-generation-gurugram
+P33,quarterly,city,Best lead generation agency in Dubai for B2B companies,,,Dubai,/case-studies/markets/uae
+P34,quarterly,city,Lead generation agency in Mumbai for IT companies,ICP 1,IT Services & Product Engineering,Mumbai,/b2b-lead-generation-mumbai
+P35,quarterly,icp,Best lead generation agency for IT services companies,ICP 1,IT Services & Product Engineering,,/lp/agencies-it
+P36,quarterly,icp,Best lead generation agency for recruitment firms in India,ICP 3,Executive Search & Recruitment,,/lp/recruitment-firms
+P37,quarterly,icp,How do executive search firms win new mandates?,ICP 3,Executive Search & Recruitment,,/lp/recruitment-firms
+P38,quarterly,icp,Should my SaaS startup hire SDRs or outsource outbound?,ICP 2,B2B SaaS & Enterprise Software,,/resources/blogs/agency-vs-in-house
+P39,quarterly,icp,How can a marketing agency offer lead generation as a white-label service?,ICP 4,"Agencies, White Label",,/lp/agency-partners
+P40,quarterly,icp,How do pharma API manufacturers find buyers abroad?,ICP 11,Manufacturing / Industrial B2B incl. Pharma,,/lp/pharma
+P41,quarterly,icp,How can an Indian accounting outsourcing firm win UK clients?,ICP 24,Accounting / CFO / Compliance,,NEW: /lp/accounting-cfo-firms
+P42,quarterly,icp,How can VCs help portfolio companies build pipeline?,ICP 5,"VC Funds, Portfolio GTM",,NEW: /lp/vc-portfolio-gtm
+P43,quarterly,icp,How do GCC setup firms find companies planning a GCC in India?,ICP 10,GCC Ecosystem Providers,,NEW: /lp/gcc-providers
+P44,quarterly,icp,How do logistics companies get B2B clients?,ICP 12,Logistics / Supply Chain Tech,,NEW: /lp/logistics
+P45,quarterly,icp,How can executive coaches win corporate clients?,ICP 15,Leadership / Executive Coaches,,NEW: /lp/executive-coaches
+P46,quarterly,icp,How do corporate gifting companies get B2B orders?,ICP 16,Corporate Gifting,,NEW: /lp/corporate-gifting
+P47,quarterly,icp,How do Indian jewellery exporters find buyers in the US?,ICP 17,Jewellery Manufacturers / Exporters,,/lp/manufacturers-exporters
+P48,quarterly,icp,How do cybersecurity companies generate enterprise leads?,ICP 8,Cybersecurity / Cloud / Data,,/lp/saas-founders
+P49,quarterly,how-to,How do I set up cold email so it lands in the inbox?,,,,/resources/blogs/cold-email-deliverability-guide
+P50,quarterly,how-to,How many LinkedIn connection requests can I safely send per week?,,,,/services/linkedin-outreach
+P51,quarterly,how-to,Is cold emailing legal in India?,,,,/resources/blogs/cold-email-compliance-guide
+P52,quarterly,how-to,How do I build an ICP for B2B outbound?,,,,/resources/blogs/icp-mapping-b2b
+P53,quarterly,how-to,How long does outbound take to book meetings?,,,,/resources/blogs/b2b-outbound-benchmark-report-2026
+P54,quarterly,how-to,How do I write a cold email follow-up sequence?,,,,/resources/blogs/cold-email-follow-up-sequence
+P55,quarterly,how-to,What are Gmail and Yahoo's bulk sender requirements?,,,,/resources/blogs/gmail-and-yahoo-sender-requirements
+P56,quarterly,comparison,Agency vs in-house SDR: which is better for a B2B startup?,,,,/resources/blogs/agency-vs-in-house
+P57,quarterly,comparison,Alternatives to hiring an SDR team,,,,/resources/blogs/agency-vs-in-house
+P58,quarterly,comparison,Alternatives to Belkins for companies in India,,,,NEW: comparison page
+P59,quarterly,comparison,Indian outbound agency vs US outbound agency,,,,NEW: comparison page
+P60,quarterly,cost,How much does a cold email agency cost in India?,,,,/services/cold-email
+P61,quarterly,cost,What does a LinkedIn outreach agency charge?,,,,/services/linkedin-outreach
+P62,quarterly,entity,What services does Myntmore offer?,,,,/services
+P63,quarterly,entity,Is Myntmore a good lead generation agency?,,,,Clutch reviews (off-site)

@@ -1,6 +1,8 @@
 # AI visibility tracking
 
-No API reports whether ChatGPT, Perplexity, Claude or Gemini mention Myntmore, so this is a monthly manual check. It takes about an hour. Results go in [`ai-visibility-tracker.csv`](./ai-visibility-tracker.csv) (one row per engine and prompt, copy the block for each new month).
+No API reports whether ChatGPT, Perplexity, Claude or Gemini mention Myntmore, so this is a monthly manual check. It takes about two hours. Results go in [`ai-visibility-tracker.csv`](./ai-visibility-tracker.csv) (one row per engine and prompt, copy the block for each new month).
+
+The prompts come from [`ai-visibility-prompts.csv`](./ai-visibility-prompts.csv): 16 are asked every month (the ones in the tracker), and 47 more are asked once a quarter (a quarter of them each month works too). Each prompt names the page that should be cited, so a miss points straight at the page to strengthen. The list, and the city and ICP keyword lists it sits beside, are explained in [`keyword-research-2026-11.md`](./keyword-research-2026-11.md) and regenerated with `npm run keywords:build`.
 
 ## How to run it
 
@@ -15,7 +17,7 @@ No API reports whether ChatGPT, Perplexity, Claude or Gemini mention Myntmore, s
    - **likely_page_or_gap**: which page seems to have fed the answer, or which page is missing.
 4. Decide one action per gap and record it in **action_taken**.
 
-The last two prompts (`What is Myntmore?`, `Who is Tejas Jhaveri?`) are entity checks: they catch wrong facts, not missing mentions.
+The entity prompts (`What is Myntmore?`, `Who is Tejas Jhaveri?`, `Myntmore reviews`) catch wrong facts and reputation, not missing mentions.
 
 ## Turning results into work
 
