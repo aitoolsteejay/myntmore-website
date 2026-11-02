@@ -382,9 +382,21 @@ function CaseCardsSection({ d }: { d: LandingPageData }) {
                   <span key={r} className="lp-pill text-xs font-bold px-3 py-1.5 rounded-full" style={{ backgroundColor: "rgba(245,183,49,0.12)", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>{r}</span>
                 ))}
               </div>
+              {cs.href && (
+                <Link href={cs.href} className="mt-6 text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all" style={{ color: "#A14A08" }}>
+                  Read the case study <span aria-hidden="true">→</span>
+                </Link>
+              )}
             </div>
           ))}
         </div>
+        {d.trackLinkText && d.trackLinkHref && (
+          <div className="mt-8">
+            <Link href={d.trackLinkHref} className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all" style={{ color: "#A14A08" }}>
+              {d.trackLinkText} <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

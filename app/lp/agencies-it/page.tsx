@@ -22,7 +22,14 @@ export const metadata: Metadata = {
     "outbound sales for it staffing companies",
     "lead gen agency alternative to referrals",
     "b2b appointment setting for agencies",
-    "linkedin lead generation for it companies india"
+    "linkedin lead generation for it companies india",
+    "lead generation for it companies",
+    "b2b lead generation for it services companies",
+    "lead generation for software development companies",
+    "appointment setting for it companies",
+    "outbound sales for it outsourcing companies",
+    "how do indian it companies get clients abroad",
+    "how to get us clients for software development company"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/agencies-it" },
   openGraph: {

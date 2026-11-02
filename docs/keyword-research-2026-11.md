@@ -26,11 +26,19 @@ Each row also has a **priority**:
 ## What to do, in order
 
 ### 1. Build `/lp/accounting-cfo-firms` (ICP 24, core, no page today)
+**Done 2026-11-02.** Built on the three published finance-firm case studies (UK bookkeeping, Singapore outsourced CFO, India payroll), linked from the footer, with a "who this is for" section carrying the ICAI note.
+
 This is the biggest hole: 17 P1 keywords and a monthly AI prompt ("How can a virtual CFO firm get more clients?") with nowhere to land. `/lp/financial-services` targets lenders and NBFCs, a different buyer.
 
 **Compliance:** ICAI's Code of Ethics bars chartered accountants in practice from soliciting clients. Do not pitch outreach to Indian CA firms. Position the page for virtual CFO, finance-operations and bookkeeping/accounting outsourcing firms, especially those selling to UK and US clients. ICP 25 has the same issue with law firms: Bar Council of India rules bar advocates from soliciting work.
 
 ### 2. Add the 248 "mapped" keywords to the pages that already exist
+**Done 2026-11-02, as a curated subset rather than all 248** (each page keeps roughly 20 keywords; more is keyword stuffing, which Bing treats as spam):
+- **City pages:** the strongest phrases went into each city page's keywords. The shared services intro now names appointment setting and outbound, which no city page said before. Every city page now links to the industry pages for the ICPs that cluster there; Delhi and Ahmedabad gained a "who we generate leads for" section to hold those links.
+- **Landing pages:** the six landing pages each got their top phrases and one new FAQ answering their ICP's main "how do I" question, with a published case-study result. Those answers are what search snippets and AI engines quote.
+
+The CSVs now show what is still left to add.
+
 This is the cheapest win and needs no new pages. Most go to:
 
 | Page | Mapped keywords |
@@ -49,6 +57,8 @@ Before adding, check `keyword-map.md` so no two pages share a primary keyword. C
 `/lp/agencies-it` serves two ICPs: agencies (ICP 4's cousin) and IT services firms (ICP 1, core). Thirty keywords are mapped onto it, which is more than one page can rank for well. Split it into `/lp/it-services` (ICP 1 and its subsegment ICP 20, R&D offshoring) and keep agencies on their own page.
 
 ### 4. Remove the Mumbai keyword from the homepage
+**Done 2026-11-02** (moved to the Mumbai page).
+
 The homepage's `keywords` include "b2b lead generation agency mumbai", which competes with `/b2b-lead-generation-mumbai`. Leave that one to the Mumbai page.
 
 ### 5. New city pages, only where there is something local to say

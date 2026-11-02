@@ -348,9 +348,9 @@ const ICP_KEYWORDS = {
   22: { page: "", kws: [["b2b lead generation for solar companies", "c"], ["cleantech b2b sales leads", "c"]] },
   23: { page: "", kws: [["corporate training lead generation", "c"], ["how to sell corporate training to companies", "i"]] },
   24: {
-    page: "NEW: /lp/accounting-cfo-firms",
+    page: "/lp/accounting-cfo-firms",
     note:
-      "Core ICP with no page. Compliance: ICAI's Code of Ethics bars chartered accountants in practice from soliciting clients, so do not target CA firms' own outreach; position for virtual CFO, finance-ops and UK/US outsourcing firms that are not bound by it.",
+      "Compliance: ICAI's Code of Ethics bars chartered accountants in practice from soliciting clients, so do not target CA firms' own outreach; position for virtual CFO, finance-ops and UK/US outsourcing firms that are not bound by it.",
     kws: [
       ["lead generation for accounting firms", "c"],
       ["virtual cfo lead generation", "c"],
@@ -413,7 +413,7 @@ const PROMPTS = [
   ["monthly", "icp", "How can an IT services company in India get clients in the US?", "1", "", "/lp/agencies-it"],
   ["monthly", "icp", "How do recruitment agencies get new clients?", "3", "", "/lp/recruitment-firms"],
   ["monthly", "icp", "How can Indian manufacturers find international buyers?", "11", "", "/lp/manufacturers-exporters"],
-  ["monthly", "icp", "How can a virtual CFO firm get more clients?", "24", "", "NEW: /lp/accounting-cfo-firms"],
+  ["monthly", "icp", "How can a virtual CFO firm get more clients?", "24", "", "/lp/accounting-cfo-firms"],
   ["monthly", "entity", "Myntmore reviews", "", "", "Clutch reviews (off-site)"],
   // Quarterly: best-of
   ["quarterly", "best-of", "Top outbound sales agencies in India", "", "", "/who-this-is-for"],
@@ -443,7 +443,7 @@ const PROMPTS = [
   ["quarterly", "icp", "Should my SaaS startup hire SDRs or outsource outbound?", "2", "", "/resources/blogs/agency-vs-in-house"],
   ["quarterly", "icp", "How can a marketing agency offer lead generation as a white-label service?", "4", "", "/lp/agency-partners"],
   ["quarterly", "icp", "How do pharma API manufacturers find buyers abroad?", "11", "", "/lp/pharma"],
-  ["quarterly", "icp", "How can an Indian accounting outsourcing firm win UK clients?", "24", "", "NEW: /lp/accounting-cfo-firms"],
+  ["quarterly", "icp", "How can an Indian accounting outsourcing firm win UK clients?", "24", "", "/lp/accounting-cfo-firms"],
   ["quarterly", "icp", "How can VCs help portfolio companies build pipeline?", "5", "", "NEW: /lp/vc-portfolio-gtm"],
   ["quarterly", "icp", "How do GCC setup firms find companies planning a GCC in India?", "10", "", "NEW: /lp/gcc-providers"],
   ["quarterly", "icp", "How do logistics companies get B2B clients?", "12", "", "NEW: /lp/logistics"],

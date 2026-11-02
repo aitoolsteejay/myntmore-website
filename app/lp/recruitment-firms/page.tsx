@@ -21,7 +21,13 @@ export const metadata: Metadata = {
     "abm for staffing and recruitment firms",
     "new client outreach for recruitment agencies",
     "cold email agency for staffing firms mumbai",
-    "b2b outbound for executive search firms"
+    "b2b outbound for executive search firms",
+    "lead generation for executive search firms",
+    "business development for staffing companies",
+    "client acquisition for recruitment consultancy",
+    "how to get mandates for executive search firm",
+    "linkedin outreach for recruiters to get clients",
+    "lead generation for recruitment agencies in mumbai"
   ],
   alternates: { canonical: "https://www.myntmore.com/lp/recruitment-firms" },
   openGraph: {

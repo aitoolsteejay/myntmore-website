@@ -2,6 +2,10 @@
   "page": "Landing page: Agencies It (/lp/agencies-it)",
   "items": [
     {
+      "question": "How do Indian IT companies get clients abroad?",
+      "answer": "By narrowing to one or two capabilities they have already delivered, choosing one target market and running LinkedIn and cold email to the CTOs and engineering leaders there. For an Indian software development firm targeting US retail and logistics companies, this booked 24 meetings and 4 proposal requests beyond its referrals and project marketplaces."
+    },
+    {
       "question": "How is this different from hiring an in-house SDR?",
       "answer": "An in-house SDR costs you a full-time salary, months of ramp-up, and ongoing management. We give you a fully built outbound system, list building, sequences, and deliverability infrastructure, live within about three weeks, at a fraction of the cost and with none of the hiring risk."
     },

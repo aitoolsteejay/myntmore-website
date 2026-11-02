@@ -109,6 +109,14 @@ Primary keyword is the first entry in each page's `keywords`. The sitewide check
 | `/resources/glossary/spam-complaint-rate` | spam complaint rate |
 | `/resources/blogs/gmail-and-yahoo-sender-requirements` (DRAFT, `published: false`) | gmail and yahoo sender requirements |
 
+## Added 2026-11-02: accounting and CFO firms landing page, keyword expansion
+
+| Page | Primary keyword |
+|---|---|
+| `/lp/accounting-cfo-firms` | lead generation for accounting firms |
+
+Secondary keywords from `docs/keyword-research-2026-11.md` were added to the 8 city pages and 6 landing pages (`agencies-it`, `recruitment-firms`, `manufacturers-exporters`, `saas-founders`, `pharma`, `agency-partners`); no page's primary keyword changed. "b2b lead generation agency mumbai" moved from the homepage to `/b2b-lead-generation-mumbai`, so the two no longer compete for it. Sitewide check after the change: no duplicate primaries.
+
 ## `/lp/*` vs `/services/*` cannibalization check
 
 Programmatically diffed the full keyword arrays (every keyword, not just primary) of all 9 `/lp/*` pages against all 7 `/services/*` pages: **zero exact overlaps**. This holds structurally  -  most `/lp/*` pages target industry verticals (`b2b lead generation for nbfcs`, `lead generation for exporters india`, `lead generation for staffing agencies`, …) while `/services/*` pages target channels/methods or, for the newest one, the strategic layer above them (`cold email agency`, `linkedin outreach agency`, `icp mapping services`, `gtm strategy agency`, …). Different axis of differentiation, no query overlap.
