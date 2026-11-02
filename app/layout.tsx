@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
 import JsonLd from "./components/JsonLd";
 import ReelWidget from "./components/ReelWidget";
@@ -107,6 +108,7 @@ export default function RootLayout({
         <ReelWidget />
         <Toaster />
         <Analytics />
+        <SpeedInsights />
 
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
