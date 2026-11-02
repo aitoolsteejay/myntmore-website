@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import InnerLayout from "../components/InnerLayout";
+import Breadcrumbs from "../components/Breadcrumbs";
+import FadeIn from "../components/FadeIn";
+import AnimatedDisclosure from "@/components/value-prop/AnimatedDisclosure";
 import ValuePropExplorer from "@/components/value-prop/ValuePropExplorer";
 import { DIRECTION, FLOW, ICPS, META, SECTIONS, STATUS_GROUPS, pad } from "@/lib/value-prop";
 
@@ -27,106 +29,87 @@ const NOTES = SECTIONS.flatMap((s) =>
   ].filter((n): n is { section: (typeof SECTIONS)[number]; where: string; text: string } => !!n),
 ).sort((a, b) => (a.section.number === 8 ? -1 : b.section.number === 8 ? 1 : a.section.number - b.section.number));
 
-function Disclosure({ title, meta, children }: { title: string; meta: string; children: React.ReactNode }) {
-  return (
-    <details className="group rounded-2xl border bg-white" style={{ borderColor: LINE }}>
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 sm:px-6 [&::-webkit-details-marker]:hidden">
-        <span>
-          <span className="block text-sm font-bold" style={{ color: INK }}>
-            {title}
-          </span>
-          <span className="block text-xs" style={{ color: MUTED }}>
-            {meta}
-          </span>
-        </span>
-        <span aria-hidden="true" className="text-lg transition-transform group-open:rotate-45" style={{ color: MUTED }}>
-          +
-        </span>
-      </summary>
-      <div className="border-t px-5 pb-6 pt-5 sm:px-6" style={{ borderColor: LINE }}>
-        {children}
-      </div>
-    </details>
-  );
-}
-
 export default function ValuePropPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#F8F6F2" }}>
-      <main id="main-content" className="pb-24">
-        {/* Intro. As the first section in <main> it gets the sitewide hero glow (globals.css). */}
-        <section className="pb-14">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <header className="flex items-center justify-between py-5">
-              <Link href="/" aria-label="Myntmore home">
-                <Image src="/logo.png" alt="Myntmore" width={200} height={56} className="h-9 w-auto object-contain" priority />
-              </Link>
-              <span className="text-xs" style={{ color: MUTED }}>
-                Last edited {META.lastEdited}
-              </span>
-            </header>
-            <div className="pt-8 sm:pt-14">
-              <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "#A14A08" }}>
-                Strategy
-              </p>
-              <h1 className="mt-3 text-4xl font-black leading-[1.05] sm:text-6xl" style={{ color: INK }}>
-                Value Proposition
-              </h1>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed sm:text-lg" style={{ color: BODY }}>
-                Customer pain, solution, benefit, proof and message, mapped for all 29 ICPs, with the provisional 2026 ICP direction.
-              </p>
+    <InnerLayout>
+      {/* Hero section */}
+      <section className="pt-32 pb-14 sm:pb-16 px-4 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <Breadcrumbs items={[{ label: "Value Proposition", href: "/value-prop" }]} />
 
-              <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
-                {[
-                  ["ICPs", META.icps],
-                  ["Sections", META.sections],
-                  ["Fields per ICP", META.fieldsPerIcp],
-                ].map(([k, v]) => (
-                  <div key={k}>
-                    <dt className="text-xs" style={{ color: MUTED }}>
-                      {k}
-                    </dt>
-                    <dd className="text-2xl font-black tabular-nums" style={{ color: INK }}>
-                      {v}
-                    </dd>
-                  </div>
-                ))}
-                <div>
-                  <dt className="text-xs" style={{ color: MUTED }}>
-                    Source
-                  </dt>
-                  <dd className="mt-1.5 text-sm font-semibold" style={{ color: INK }}>
-                    {META.source}
-                  </dd>
-                </div>
-              </dl>
-
-              <div className="mt-10">
-                <p className="text-xs" style={{ color: MUTED }}>
-                  This framework helps translate
-                </p>
-                <ol className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-2">
-                  {FLOW.map((step, i) => (
-                    <li key={step} className="flex items-center gap-2">
-                      <span className="rounded-full border bg-white px-3 py-1 text-sm font-semibold" style={{ borderColor: LINE, color: INK }}>
-                        {step}
-                      </span>
-                      {i < FLOW.length - 1 && (
-                        <span aria-hidden="true" style={{ color: "#C9BFB2" }}>
-                          →
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center gap-3 hero-fade">
+            <span
+              className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.18em]"
+              style={{ borderColor: "rgba(245,183,49,0.3)", backgroundColor: "#FEF9EC", color: "#A14A08" }}
+            >
+              Strategy
+            </span>
+            <span className="text-xs" style={{ color: MUTED }}>
+              Last edited {META.lastEdited}
+            </span>
           </div>
-        </section>
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          {/* 2026 direction */}
-          <section className="mt-8" aria-labelledby="direction-title">
+          <h1 className="mt-4 text-4xl font-black leading-[1.05] sm:text-6xl hero-fade-d1" style={{ color: INK }}>
+            Value Proposition
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: BODY }}>
+            Customer pain, solution, benefit, proof and message, mapped for all 29 ICPs, with the provisional 2026 ICP direction.
+          </p>
+
+          <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 hero-fade-d3">
+            {[
+              ["ICPs", META.icps],
+              ["Sections", META.sections],
+              ["Fields per ICP", META.fieldsPerIcp],
+            ].map(([k, v]) => (
+              <div key={k} className="transition-transform duration-200 hover:-translate-y-0.5">
+                <dt className="text-xs font-medium" style={{ color: MUTED }}>
+                  {k}
+                </dt>
+                <dd className="text-2xl font-black tabular-nums" style={{ color: INK }}>
+                  {v}
+                </dd>
+              </div>
+            ))}
+            <div>
+              <dt className="text-xs font-medium" style={{ color: MUTED }}>
+                Source
+              </dt>
+              <dd className="mt-1.5 text-sm font-semibold" style={{ color: INK }}>
+                {META.source}
+              </dd>
+            </div>
+          </dl>
+
+          <div className="mt-10 hero-fade-d4">
+            <p className="text-xs font-medium" style={{ color: MUTED }}>
+              This framework helps translate
+            </p>
+            <ol className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-2">
+              {FLOW.map((step, i) => (
+                <li key={step} className="flex items-center gap-2">
+                  <span
+                    className="rounded-full border bg-white px-3 py-1 text-sm font-semibold shadow-xs transition-transform duration-200 hover:scale-105"
+                    style={{ borderColor: LINE, color: INK }}
+                  >
+                    {step}
+                  </span>
+                  {i < FLOW.length - 1 && (
+                    <span aria-hidden="true" style={{ color: "#C9BFB2" }}>
+                      →
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        {/* 2026 direction */}
+        <FadeIn>
+          <section className="mt-6 sm:mt-8" aria-labelledby="direction-title">
             <h2 id="direction-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>
               2026 ICP direction
             </h2>
@@ -136,8 +119,15 @@ export default function ValuePropPage() {
 
             <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
               {STATUS_GROUPS.map((g) => (
-                <div key={g.group}>
-                  <p className="flex items-center gap-2 border-b pb-2 text-xs font-bold uppercase tracking-wider" style={{ borderColor: LINE, color: g.text }}>
+                <div
+                  key={g.group}
+                  className="rounded-xl border p-4 bg-white/60 backdrop-blur-xs transition-all duration-200 hover:bg-white hover:shadow-xs"
+                  style={{ borderColor: LINE }}
+                >
+                  <p
+                    className="flex items-center gap-2 border-b pb-2 text-xs font-bold uppercase tracking-wider"
+                    style={{ borderColor: LINE, color: g.text }}
+                  >
                     <span
                       aria-hidden="true"
                       className="inline-block h-2 w-2 rounded-full"
@@ -145,11 +135,15 @@ export default function ValuePropPage() {
                     />
                     {g.title}
                   </p>
-                  <ul className="mt-2 space-y-1">
+                  <ul className="mt-3 space-y-1">
                     {ICPS.filter((i) => i.status.group === g.group).map((i) => (
                       <li key={i.number}>
-                        <a href={`#icp-${pad(i.number)}`} className="group flex items-baseline gap-2 py-0.5 text-[13px] leading-snug" style={{ color: BODY }}>
-                          <span className="tabular-nums text-[11px]" style={{ color: MUTED }}>
+                        <a
+                          href={`#icp-${pad(i.number)}`}
+                          className="group flex items-baseline gap-2 py-0.5 text-[13px] leading-snug transition-colors duration-150 hover:text-black"
+                          style={{ color: BODY }}
+                        >
+                          <span className="tabular-nums text-[11px] font-mono" style={{ color: MUTED }}>
                             {pad(i.number)}
                           </span>
                           <span className="group-hover:underline">
@@ -168,13 +162,13 @@ export default function ValuePropPage() {
               ))}
             </div>
 
-            <div className="mt-8 space-y-3">
-              <Disclosure title="The full direction" meta="Which ICPs to focus, retain, test, fold in or pause, and why">
+            <div className="mt-8 space-y-4">
+              <AnimatedDisclosure title="The full direction" meta="Which ICPs to focus, retain, test, fold in or pause, and why">
                 <p className="max-w-3xl text-[15px] leading-relaxed" style={{ color: BODY }}>
                   {DIRECTION.text}
                 </p>
-              </Disclosure>
-              <Disclosure title="Read before use: notes, terms and safeguards" meta="These apply to every ICP profile below">
+              </AnimatedDisclosure>
+              <AnimatedDisclosure title="Read before use: notes, terms and safeguards" meta="These apply to every ICP profile below">
                 <ul className="space-y-5">
                   {NOTES.map((n) => (
                     <li key={`${n.section.number}-${n.where}`} className="grid gap-1 sm:grid-cols-[220px_minmax(0,1fr)] sm:gap-6">
@@ -190,21 +184,33 @@ export default function ValuePropPage() {
                     </li>
                   ))}
                 </ul>
-              </Disclosure>
+              </AnimatedDisclosure>
             </div>
           </section>
+        </FadeIn>
 
-          {/* Profiles */}
-          <section className="mt-16" aria-labelledby="profiles-title">
-            <h2 id="profiles-title" className="mb-5 text-2xl font-black sm:text-3xl" style={{ color: INK }}>
-              The 29 ICP profiles
-            </h2>
+        {/* Profiles */}
+        <FadeIn delay={60}>
+          <section className="mt-16 sm:mt-20" aria-labelledby="profiles-title">
+            <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
+              <h2 id="profiles-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>
+                The 29 ICP profiles
+              </h2>
+              <span className="text-xs" style={{ color: MUTED }}>
+                Deep-dive into core value propositions, angles, proof, objections, and messaging.
+              </span>
+            </div>
             <ValuePropExplorer />
           </section>
+        </FadeIn>
 
-          {/* Field guide */}
-          <section className="mt-16">
-            <Disclosure title="Field guide: what each field answers" meta={`${META.fieldsPerIcp} fields in ${META.sections} sections`}>
+        {/* Field guide */}
+        <FadeIn delay={90}>
+          <section className="mt-16 sm:mt-20">
+            <AnimatedDisclosure
+              title="Field guide: what each field answers"
+              meta={`${META.fieldsPerIcp} fields in ${META.sections} sections`}
+            >
               <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
                 {SECTIONS.map((s) => (
                   <div key={s.number}>
@@ -229,19 +235,20 @@ export default function ValuePropPage() {
                   </div>
                 ))}
               </div>
-            </Disclosure>
+            </AnimatedDisclosure>
           </section>
-        </div>
-      </main>
+        </FadeIn>
 
-      <footer className="border-t" style={{ borderColor: LINE }}>
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-4 py-6 text-xs sm:px-6" style={{ color: MUTED }}>
-          <span>Myntmore · Value Proposition</span>
-          <span>
-            {META.source} · Last edited {META.lastEdited}
-          </span>
+        {/* Provenance strip */}
+        <div className="mt-16 pb-16">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t pt-6 text-xs" style={{ borderColor: LINE, color: MUTED }}>
+            <span>Myntmore Strategy · Value Proposition Matrix</span>
+            <span>
+              {META.source} · Last edited {META.lastEdited}
+            </span>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </InnerLayout>
   );
 }

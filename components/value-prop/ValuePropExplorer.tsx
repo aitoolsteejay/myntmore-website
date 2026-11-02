@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ALL_FIELDS, ICPS, SECTIONS, STATUS_GROUPS, fieldValue, pad, statusLabel, type FieldKey, type Icp, type StatusGroup } from "@/lib/value-prop";
 
 const INK = "#0A0A0A";
@@ -22,7 +23,7 @@ function StatusDot({ group, className = "" }: { group: StatusGroup; className?: 
   return (
     <span
       aria-hidden="true"
-      className={`inline-block h-2 w-2 shrink-0 rounded-full ${className}`}
+      className={`inline-block h-2 w-2 shrink-0 rounded-full transition-transform duration-200 ${className}`}
       style={group === "deprioritised" ? { border: `1.5px solid ${g.color}` } : { background: g.color }}
     />
   );
@@ -31,7 +32,7 @@ function StatusDot({ group, className = "" }: { group: StatusGroup; className?: 
 function StatusTag({ icp }: { icp: Icp }) {
   const g = groupMeta(icp.status.group);
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs font-semibold" style={{ color: g.text }}>
+    <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-white/80 border" style={{ color: g.text, borderColor: LINE }}>
       <StatusDot group={icp.status.group} />
       {statusLabel(icp)}
     </span>
@@ -54,10 +55,10 @@ function Prose({ text }: { text: string }) {
   const parts = text.split(/;\s+/);
   if (parts.length < 3) return <p>{text}</p>;
   return (
-    <ul className="space-y-1">
+    <ul className="space-y-1.5">
       {parts.map((p, i) => (
         <li key={i} className="flex gap-2.5">
-          <span aria-hidden="true" className="mt-[0.6em] h-1 w-1 shrink-0 rounded-full" style={{ background: "#C9BFB2" }} />
+          <span aria-hidden="true" className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: "#C9BFB2" }} />
           <span>{p}</span>
         </li>
       ))}
@@ -69,17 +70,20 @@ function Value({ fieldKey, text }: { fieldKey: FieldKey; text: string }) {
   if (fieldKey === "howItWorks" && text.includes("→")) {
     const steps = text.split(/\s*→\s*/).filter(Boolean);
     return (
-      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-2">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-2.5">
         {steps.map((s, i) => (
-          <li key={i} className="flex items-center gap-1.5">
-            <span className="rounded-full border px-2.5 py-0.5 text-[13px]" style={{ borderColor: LINE, background: "#fff" }}>
-              <span className="mr-1.5 tabular-nums" style={{ color: MUTED }}>
+          <li key={i} className="flex items-center gap-2">
+            <span
+              className="rounded-full border px-3 py-1 text-[13px] font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
+              style={{ borderColor: LINE, background: "#fff" }}
+            >
+              <span className="mr-1.5 tabular-nums font-bold" style={{ color: "#A14A08" }}>
                 {i + 1}
               </span>
               {s}
             </span>
             {i < steps.length - 1 && (
-              <span aria-hidden="true" style={{ color: "#C9BFB2" }}>
+              <span aria-hidden="true" className="text-xs font-bold" style={{ color: "#C9BFB2" }}>
                 →
               </span>
             )}
@@ -105,7 +109,7 @@ function Value({ fieldKey, text }: { fieldKey: FieldKey; text: string }) {
 
 function Note({ text }: { text: string }) {
   return (
-    <p className="border-l-2 pl-3 text-[13px] leading-relaxed" style={{ borderColor: "#F5B731", color: MUTED }}>
+    <p className="border-l-2 pl-3 text-[13px] leading-relaxed bg-[#FEF9EC]/50 py-1.5 pr-2 rounded-r" style={{ borderColor: "#F5B731", color: MUTED }}>
       {text}
     </p>
   );
@@ -154,7 +158,7 @@ export default function ValuePropExplorer() {
     } catch {
       /* ignore */
     }
-    if (opts.scroll && panelRef.current && panelRef.current.getBoundingClientRect().top < 0) {
+    if (opts.scroll && panelRef.current && panelRef.current.getBoundingClientRect().top < 80) {
       panelRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, []);
@@ -169,42 +173,60 @@ export default function ValuePropExplorer() {
   const activeField = ALL_FIELDS.find((f) => f.key === fieldKey)!;
 
   return (
-    <div ref={rootRef} id="explorer" className="scroll-mt-6">
+    <div ref={rootRef} id="explorer" className="scroll-mt-28">
       {/* Toolbar */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="inline-flex self-start rounded-full border p-1" style={{ borderColor: LINE, background: "#fff" }} role="group" aria-label="View">
+        <div
+          className="relative inline-flex self-start rounded-full border p-1 shadow-xs"
+          style={{ borderColor: LINE, background: "#fff" }}
+          role="group"
+          aria-label="View"
+        >
           {(
             [
               ["icp", "By ICP"],
               ["field", "By field"],
             ] as const
-          ).map(([v, label]) => (
-            <button
-              key={v}
-              type="button"
-              onClick={() => setView(v)}
-              aria-pressed={view === v}
-              className="rounded-full px-4 py-1.5 text-sm font-semibold transition-colors"
-              style={view === v ? { background: INK, color: "#fff" } : { color: BODY }}
-            >
-              {label}
-            </button>
-          ))}
+          ).map(([v, label]) => {
+            const isActive = view === v;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => setView(v)}
+                aria-pressed={isActive}
+                className="relative z-10 rounded-full px-4 py-1.5 text-sm font-semibold transition-colors duration-200"
+                style={{ color: isActive ? "#fff" : BODY }}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="activeViewIndicator"
+                    className="absolute inset-0 rounded-full -z-10"
+                    style={{ background: INK }}
+                    transition={{ type: "spring", stiffness: 450, damping: 35 }}
+                  />
+                )}
+                {label}
+              </button>
+            );
+          })}
         </div>
+
         <label className="relative block sm:w-72">
           <span className="sr-only">Search ICPs</span>
-          <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" style={{ color: MUTED }} />
+          <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transition-colors" style={{ color: MUTED }} />
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search all 29 ICPs"
-            className="w-full rounded-full border bg-white py-2 pl-9 pr-4 text-sm outline-none focus:border-[#F5B731]"
+            placeholder="Search all 29 ICPs..."
+            className="w-full rounded-full border bg-white py-2 pl-9 pr-4 text-sm outline-none transition-all duration-200 focus:border-[#F5B731] focus:ring-2 focus:ring-[#F5B731]/20 shadow-xs"
             style={{ borderColor: LINE, color: INK }}
           />
         </label>
       </div>
 
+      {/* Filter by status */}
       <div className="mt-3 flex flex-wrap items-center gap-1.5" role="group" aria-label="Filter by 2026 status">
         {[{ group: "all" as const, title: "All" }, ...STATUS_GROUPS].map((g) => {
           const on = group === g.group;
@@ -215,12 +237,12 @@ export default function ValuePropExplorer() {
               type="button"
               onClick={() => setGroup(g.group)}
               aria-pressed={on}
-              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold transition-all duration-150 active:scale-95 hover:shadow-xs"
               style={on ? { background: INK, borderColor: INK, color: "#fff" } : { background: "#fff", borderColor: LINE, color: BODY }}
             >
               {g.group !== "all" && <StatusDot group={g.group} />}
               {g.group === "all" ? "All" : g.title.replace(" for active acquisition", "").replace("Retain as distinct motions", "Retain")}
-              <span className="tabular-nums opacity-60">{count}</span>
+              <span className="tabular-nums opacity-60 font-medium">{count}</span>
             </button>
           );
         })}
@@ -233,7 +255,7 @@ export default function ValuePropExplorer() {
 
       {view === "icp" ? (
         <div className="mt-6 grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-10">
-          {/* ICP list: a select on small screens, a grouped list from lg up */}
+          {/* Mobile dropdown */}
           <div className="lg:hidden">
             <label htmlFor="icp-select" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider" style={{ color: MUTED }}>
               ICP
@@ -242,7 +264,7 @@ export default function ValuePropExplorer() {
               id="icp-select"
               value={selected}
               onChange={(e) => select(Number(e.target.value))}
-              className="w-full rounded-xl border bg-white px-3 py-2.5 text-sm font-semibold"
+              className="w-full rounded-xl border bg-white px-3 py-2.5 text-sm font-semibold shadow-xs"
               style={{ borderColor: LINE, color: INK }}
             >
               {STATUS_GROUPS.map((g) => {
@@ -266,8 +288,9 @@ export default function ValuePropExplorer() {
             </select>
           </div>
 
+          {/* Desktop Left Nav */}
           <nav aria-label="ICPs" className="hidden lg:block">
-            <div className="sticky top-6 max-h-[calc(100vh-3rem)] space-y-5 overflow-y-auto pb-4 pr-1">
+            <div className="sticky top-28 max-h-[calc(100vh-8.5rem)] space-y-5 overflow-y-auto pb-4 pr-1">
               {STATUS_GROUPS.map((g) => {
                 const items = visible.filter((i) => i.status.group === g.group);
                 if (!items.length) return null;
@@ -276,7 +299,7 @@ export default function ValuePropExplorer() {
                     <p className="mb-1.5 px-2 text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
                       {g.title}
                     </p>
-                    <ul>
+                    <ul className="space-y-0.5">
                       {items.map((i) => {
                         const on = i.number === selected;
                         return (
@@ -285,13 +308,17 @@ export default function ValuePropExplorer() {
                               type="button"
                               onClick={() => select(i.number, { scroll: true })}
                               aria-current={on ? "true" : undefined}
-                              className="flex w-full items-baseline gap-2.5 rounded-lg px-2 py-1.5 text-left text-[13px] leading-snug transition-colors hover:bg-white"
-                              style={on ? { background: TINT, color: INK, fontWeight: 700 } : { color: BODY }}
+                              className="group flex w-full items-baseline gap-2.5 rounded-lg px-2.5 py-1.5 text-left text-[13px] leading-snug transition-all duration-150 hover:bg-white active:scale-[0.99]"
+                              style={
+                                on
+                                  ? { background: TINT, color: INK, fontWeight: 700, borderLeft: "3px solid #F5B731" }
+                                  : { color: BODY }
+                              }
                             >
-                              <span className="tabular-nums text-[11px]" style={{ color: on ? "#A14A08" : MUTED }}>
+                              <span className="tabular-nums text-[11px] transition-colors" style={{ color: on ? "#A14A08" : MUTED }}>
                                 {pad(i.number)}
                               </span>
-                              <span>{i.name}</span>
+                              <span className="group-hover:translate-x-0.5 transition-transform duration-150">{i.name}</span>
                             </button>
                           </li>
                         );
@@ -302,138 +329,193 @@ export default function ValuePropExplorer() {
               })}
               {!visible.length && (
                 <p className="px-2 text-sm" style={{ color: MUTED }}>
-                  No ICP matches “{query}”.
+                  No ICP matches &ldquo;{query}&rdquo;.
                 </p>
               )}
             </div>
           </nav>
 
-          {/* Selected ICP */}
-          <article ref={panelRef} className="min-w-0 scroll-mt-6" aria-labelledby="icp-title">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: MUTED }}>
-                ICP {pad(icp.number)} of 29
-              </span>
-              <StatusTag icp={icp} />
-            </div>
-            <h2 id="icp-title" className="mt-2 text-2xl font-black leading-tight sm:text-3xl" style={{ color: INK }}>
-              {icp.name}
-            </h2>
-            <p className="mt-1 text-sm" style={{ color: MUTED }}>
-              {icp.buyers}
-            </p>
-
-            <div className="mt-6 rounded-2xl border bg-white p-5 sm:p-7" style={{ borderColor: LINE }}>
-              <p className="text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
-                Headline
-              </p>
-              <p className="mt-2 text-xl font-extrabold leading-snug sm:text-2xl" style={{ color: INK }}>
-                {icp.headline}
-              </p>
-              <div className="my-5 h-px" style={{ background: LINE }} />
-              <p className="text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
-                One-line value prop
-              </p>
-              <p className="mt-2 text-[15px] leading-relaxed" style={{ color: BODY }}>
-                {icp.oneLiner}
-              </p>
-            </div>
-
-            {/* Section tabs */}
-            <div className="mt-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-              <div role="tablist" aria-label="Sections" className="flex min-w-max gap-1 border-b" style={{ borderColor: LINE }}>
-                {SECTIONS.map((s, i) => {
-                  const on = i === tab;
-                  return (
-                    <button
-                      key={s.number}
-                      type="button"
-                      role="tab"
-                      id={`vp-tab-${i}`}
-                      aria-selected={on}
-                      aria-controls="vp-tabpanel"
-                      onClick={() => setTab(i)}
-                      className="-mb-px whitespace-nowrap border-b-2 px-2.5 py-2.5 text-[13px] font-semibold transition-colors"
-                      style={on ? { borderColor: "#F5B731", color: INK } : { borderColor: "transparent", color: MUTED }}
-                    >
-                      <span className="mr-1.5 tabular-nums text-[11px] opacity-60">{pad(s.number)}</span>
-                      {s.short}
-                    </button>
-                  );
-                })}
+          {/* Selected ICP Article */}
+          <AnimatePresence mode="wait">
+            <motion.article
+              key={icp.number}
+              ref={panelRef}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+              className="min-w-0 scroll-mt-28"
+              aria-labelledby="icp-title"
+            >
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: MUTED }}>
+                  ICP {pad(icp.number)} of 29
+                </span>
+                <StatusTag icp={icp} />
               </div>
-            </div>
+              <h2 id="icp-title" className="mt-2 text-2xl font-black leading-tight sm:text-3xl" style={{ color: INK }}>
+                {icp.name}
+              </h2>
+              <p className="mt-1 text-sm font-medium" style={{ color: MUTED }}>
+                {icp.buyers}
+              </p>
 
-            <div id="vp-tabpanel" role="tabpanel" aria-labelledby={`vp-tab-${tab}`} className="pt-6">
-              <h3 className="text-base font-black" style={{ color: INK }}>
-                {section.title}
-              </h3>
-              {section.openingNote && (
-                <div className="mt-3">
-                  <Note text={section.openingNote} />
+              {/* Headline & One-liner Card */}
+              <div
+                className="mt-6 rounded-2xl border bg-white p-5 sm:p-7 shadow-xs transition-all duration-300 hover:shadow-md hover:border-[#F5B731]/40"
+                style={{ borderColor: LINE }}
+              >
+                <p className="text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
+                  Headline
+                </p>
+                <p className="mt-2 text-xl font-extrabold leading-snug sm:text-2xl" style={{ color: INK }}>
+                  {icp.headline}
+                </p>
+                <div className="my-5 h-px" style={{ background: LINE }} />
+                <p className="text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
+                  One-line value prop
+                </p>
+                <p className="mt-2 text-[15px] leading-relaxed" style={{ color: BODY }}>
+                  {icp.oneLiner}
+                </p>
+              </div>
+
+              {/* Section tabs */}
+              <div className="mt-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+                <div role="tablist" aria-label="Sections" className="flex min-w-max gap-1 border-b" style={{ borderColor: LINE }}>
+                  {SECTIONS.map((s, i) => {
+                    const on = i === tab;
+                    return (
+                      <button
+                        key={s.number}
+                        type="button"
+                        role="tab"
+                        id={`vp-tab-${i}`}
+                        aria-selected={on}
+                        aria-controls="vp-tabpanel"
+                        onClick={() => setTab(i)}
+                        className="relative -mb-px whitespace-nowrap px-3 py-2.5 text-[13px] font-semibold transition-colors duration-200"
+                        style={{ color: on ? INK : MUTED }}
+                      >
+                        <span className="mr-1.5 tabular-nums text-[11px] opacity-60">{pad(s.number)}</span>
+                        {s.short}
+                        {on && (
+                          <motion.span
+                            layoutId="activeTabUnderline"
+                            className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
+                            style={{ background: "#F5B731" }}
+                            transition={{ type: "spring", stiffness: 450, damping: 35 }}
+                          />
+                        )}
+                      </button>
+                    );
+                  })}
                 </div>
-              )}
-              <dl className="mt-2">
-                {sectionFields.map((f) => (
-                  <div key={f.key} className="grid gap-1 border-b py-4 sm:grid-cols-[200px_minmax(0,1fr)] sm:gap-6" style={{ borderColor: LINE }}>
-                    <dt className="text-[13px] font-semibold" style={{ color: INK }} title={f.hint}>
-                      {f.label}
-                    </dt>
-                    <dd className="text-[15px] leading-relaxed" style={{ color: BODY }}>
-                      <Value fieldKey={f.key} text={fieldValue(icp, f.key)} />
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-              {section.closingNote && (
-                <div className="mt-4">
-                  <Note text={section.closingNote} />
-                </div>
-              )}
-              {tab < SECTIONS.length - 1 && (
-                <button
-                  type="button"
-                  onClick={() => setTab(tab + 1)}
-                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold"
-                  style={{ color: "#A14A08" }}
+              </div>
+
+              {/* Tab Panel */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={tab}
+                  id="vp-tabpanel"
+                  role="tabpanel"
+                  aria-labelledby={`vp-tab-${tab}`}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="pt-6"
                 >
-                  Next: {SECTIONS[tab + 1].title}
-                  <ChevronRight aria-hidden="true" className="h-4 w-4" />
-                </button>
-              )}
-            </div>
+                  <h3 className="text-base font-black" style={{ color: INK }}>
+                    {section.title}
+                  </h3>
+                  {section.openingNote && (
+                    <div className="mt-3">
+                      <Note text={section.openingNote} />
+                    </div>
+                  )}
+                  <dl className="mt-2">
+                    {sectionFields.map((f) => (
+                      <div
+                        key={f.key}
+                        className="grid gap-1 border-b py-4 sm:grid-cols-[200px_minmax(0,1fr)] sm:gap-6 transition-colors duration-150 hover:bg-white/40 px-2 rounded-lg"
+                        style={{ borderColor: LINE }}
+                      >
+                        <dt className="text-[13px] font-semibold" style={{ color: INK }} title={f.hint}>
+                          {f.label}
+                        </dt>
+                        <dd className="text-[15px] leading-relaxed" style={{ color: BODY }}>
+                          <Value fieldKey={f.key} text={fieldValue(icp, f.key)} />
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  {section.closingNote && (
+                    <div className="mt-4">
+                      <Note text={section.closingNote} />
+                    </div>
+                  )}
+                  {tab < SECTIONS.length - 1 && (
+                    <button
+                      type="button"
+                      onClick={() => setTab(tab + 1)}
+                      className="group mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-transform duration-150 active:scale-95"
+                      style={{ color: "#A14A08" }}
+                    >
+                      Next: {SECTIONS[tab + 1].title}
+                      <ChevronRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </button>
+                  )}
+                </motion.div>
+              </AnimatePresence>
 
-            <div className="mt-10 grid grid-cols-2 gap-3 border-t pt-5" style={{ borderColor: LINE }}>
-              <div>
-                {prev && (
-                  <button type="button" onClick={() => select(prev.number, { scroll: true })} className="group text-left">
-                    <span className="flex items-center gap-1 text-xs" style={{ color: MUTED }}>
-                      <ChevronLeft aria-hidden="true" className="h-3.5 w-3.5" /> Previous
-                    </span>
-                    <span className="mt-0.5 block text-sm font-semibold group-hover:underline" style={{ color: INK }}>
-                      {pad(prev.number)} · {prev.name}
-                    </span>
-                  </button>
-                )}
+              {/* Previous / Next ICP Footer Navigation */}
+              <div className="mt-10 grid grid-cols-2 gap-3 border-t pt-5" style={{ borderColor: LINE }}>
+                <div>
+                  {prev && (
+                    <button
+                      type="button"
+                      onClick={() => select(prev.number, { scroll: true })}
+                      className="group text-left transition-all duration-150 active:scale-95"
+                    >
+                      <span className="flex items-center gap-1 text-xs" style={{ color: MUTED }}>
+                        <ChevronLeft aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" /> Previous
+                      </span>
+                      <span className="mt-0.5 block text-sm font-semibold group-hover:underline" style={{ color: INK }}>
+                        {pad(prev.number)} · {prev.name}
+                      </span>
+                    </button>
+                  )}
+                </div>
+                <div className="text-right">
+                  {next && (
+                    <button
+                      type="button"
+                      onClick={() => select(next.number, { scroll: true })}
+                      className="group text-right transition-all duration-150 active:scale-95"
+                    >
+                      <span className="flex items-center justify-end gap-1 text-xs" style={{ color: MUTED }}>
+                        Next <ChevronRight aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                      </span>
+                      <span className="mt-0.5 block text-sm font-semibold group-hover:underline" style={{ color: INK }}>
+                        {pad(next.number)} · {next.name}
+                      </span>
+                    </button>
+                  )}
+                </div>
               </div>
-              <div className="text-right">
-                {next && (
-                  <button type="button" onClick={() => select(next.number, { scroll: true })} className="group text-right">
-                    <span className="flex items-center justify-end gap-1 text-xs" style={{ color: MUTED }}>
-                      Next <ChevronRight aria-hidden="true" className="h-3.5 w-3.5" />
-                    </span>
-                    <span className="mt-0.5 block text-sm font-semibold group-hover:underline" style={{ color: INK }}>
-                      {pad(next.number)} · {next.name}
-                    </span>
-                  </button>
-                )}
-              </div>
-            </div>
-          </article>
+            </motion.article>
+          </AnimatePresence>
         </div>
       ) : (
-        <div className="mt-6">
-          <div className="rounded-2xl border bg-white p-5 sm:p-6" style={{ borderColor: LINE }}>
+        /* By field view */
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
+          className="mt-6"
+        >
+          <div className="rounded-2xl border bg-white p-5 sm:p-6 shadow-xs" style={{ borderColor: LINE }}>
             <label htmlFor="field-select" className="block text-[11px] font-bold uppercase tracking-wider" style={{ color: MUTED }}>
               Compare one field across ICPs
             </label>
@@ -441,7 +523,7 @@ export default function ValuePropExplorer() {
               id="field-select"
               value={fieldKey}
               onChange={(e) => setFieldKey(e.target.value as FieldKey)}
-              className="mt-2 w-full rounded-xl border bg-white px-3 py-2.5 text-sm font-semibold sm:max-w-md"
+              className="mt-2 w-full rounded-xl border bg-white px-3 py-2.5 text-sm font-semibold sm:max-w-md shadow-xs"
               style={{ borderColor: LINE, color: INK }}
             >
               {SECTIONS.map((s) => (
@@ -459,11 +541,20 @@ export default function ValuePropExplorer() {
             </p>
           </div>
 
-          <ol className="mt-4">
+          <ol className="mt-4 space-y-1">
             {visible.map((i) => (
-              <li key={i.number} className="grid gap-1.5 border-b py-4 sm:grid-cols-[240px_minmax(0,1fr)] sm:gap-6" style={{ borderColor: LINE }}>
+              <li
+                key={i.number}
+                className="grid gap-1.5 border-b py-4 sm:grid-cols-[240px_minmax(0,1fr)] sm:gap-6 px-3 rounded-xl transition-all duration-150 hover:bg-white hover:shadow-xs"
+                style={{ borderColor: LINE }}
+              >
                 <div>
-                  <button type="button" onClick={() => select(i.number)} className="text-left text-sm font-bold hover:underline" style={{ color: INK }}>
+                  <button
+                    type="button"
+                    onClick={() => select(i.number)}
+                    className="text-left text-sm font-bold hover:underline transition-colors"
+                    style={{ color: INK }}
+                  >
                     <span className="mr-2 tabular-nums text-xs font-semibold" style={{ color: MUTED }}>
                       {pad(i.number)}
                     </span>
@@ -480,11 +571,11 @@ export default function ValuePropExplorer() {
             ))}
             {!visible.length && (
               <li className="py-6 text-sm" style={{ color: MUTED }}>
-                No ICP matches “{query}”.
+                No ICP matches &ldquo;{query}&rdquo;.
               </li>
             )}
           </ol>
-        </div>
+        </motion.div>
       )}
     </div>
   );
