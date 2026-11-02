@@ -167,7 +167,7 @@ export const SECTIONS: Section[] = [
       { key: "proofToClose", label: "Proof Needed to Close", hint: "What must they see or hear before they will buy?" },
     ],
     closingNote:
-      "Published results are anonymised on myntmore.com/case-studies. Homepage aggregates: 12K+ meetings booked and $120M+ pipeline generated are verified and can be cited. 130+ B2B companies served and 92% retention are left out until verified.",
+      "Published results are anonymised on myntmore.com/case-studies. Homepage aggregates: 12K+ meetings booked, $120M+ pipeline generated and 130+ B2B companies served are verified and can be cited. 92% retention is left out until verified.",
   },
   {
     number: 7,
