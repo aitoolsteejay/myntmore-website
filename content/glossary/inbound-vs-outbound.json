@@ -1,0 +1,104 @@
+{
+  "slug": "inbound-vs-outbound",
+  "title": "Inbound vs. Outbound",
+  "indexTitle": "",
+  "tag": "Cold Outreach",
+  "accent": "#F59E0B",
+  "tagline": "Waiting for the right people to find you, versus going and finding them yourself.",
+  "excerpt": "Waiting for the right people to find you, versus proactively reaching out to find them.",
+  "alsoKnownAs": [],
+  "indexAliases": [],
+  "definitionLead": "",
+  "definition": "Inbound attracts prospects who come to you through content, search, or referrals; outbound proactively reaches prospects who haven't found you yet, through channels like cold email or LinkedIn.",
+  "body": "Inbound compounds over time but is slow to start and hard to aim at a specific account. Outbound is immediate and precisely targetable but takes ongoing effort to sustain. Most companies past their earliest stage run both together rather than treating it as a choice between the two.",
+  "sections": [
+    {
+      "heading": "Inbound vs. outbound, side by side",
+      "table": {
+        "columns": [
+          "Inbound",
+          "Outbound"
+        ],
+        "rows": [
+          {
+            "label": "Who starts the conversation",
+            "cells": [
+              "The prospect, after finding you through search, content, referrals or events",
+              "You, by cold email, LinkedIn or phone"
+            ]
+          },
+          {
+            "label": "Time to first results",
+            "cells": [
+              "Months: content and search rankings compound slowly",
+              "Weeks: Myntmore campaigns go live within 18 days"
+            ]
+          },
+          {
+            "label": "Targeting",
+            "cells": [
+              "Whoever finds you; hard to aim at specific accounts",
+              "The exact companies and roles you choose"
+            ]
+          },
+          {
+            "label": "Buyer intent at first contact",
+            "cells": [
+              "Higher: they came looking",
+              "Lower: you create the interest"
+            ]
+          },
+          {
+            "label": "How cost behaves",
+            "cells": [
+              "Front-loaded, then cheaper per lead as content compounds",
+              "Ongoing, and scales with sending capacity and team time"
+            ]
+          },
+          {
+            "label": "Works best when",
+            "cells": [
+              "Buyers already search for what you sell",
+              "Buyers don't know you yet, or you need specific accounts"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "heading": "Which should you use?",
+      "paragraphs": [
+        "Use outbound when you need conversations with specific accounts now, and inbound to build demand that keeps paying off. Early-stage B2B companies usually lean on outbound first, because it produces meetings in weeks while inbound takes months to build. As inbound grows, outbound shifts to the named accounts that inbound will never reach on its own."
+      ]
+    }
+  ],
+  "sourceLabel": "See all services",
+  "sourceHref": "/services",
+  "furtherLabel": "What is B2B outbound sales?",
+  "furtherHref": "/resources/blogs/what-is-b2b-outbound-sales",
+  "schemaDescription": "Inbound marketing attracts prospects who come to you through content, search, or referrals, while outbound marketing proactively reaches out to prospects who haven't found you yet, such as through cold email or LinkedIn.",
+  "metaTitleSuffix": "Glossary",
+  "metaTitleOverride": "Inbound vs. Outbound: Key Differences | Glossary",
+  "ogTitleSuffix": "Myntmore Glossary",
+  "metaDescription": "Inbound brings prospects to you through content, search and referrals; outbound contacts them first by cold email or LinkedIn. Side-by-side comparison.",
+  "keywords": [
+    "inbound vs outbound marketing",
+    "inbound vs outbound sales",
+    "difference between inbound and outbound",
+    "b2b inbound outbound"
+  ],
+  "faqs": [
+    {
+      "question": "What does inbound and outbound mean?",
+      "answer": "Inbound and outbound describe who starts the conversation. Inbound means buyers find you first, through search, content, referrals or events, and get in touch. Outbound means you contact chosen prospects first, by cold email, LinkedIn or phone. The terms apply to both sales and marketing, and most B2B companies run both."
+    },
+    {
+      "question": "Is cold email inbound or outbound?",
+      "answer": "Cold email is outbound, because you contact the prospect before they have shown any interest in you. The same goes for LinkedIn connection requests and cold calls. A demo request from your website or a reply to your newsletter is inbound, because the prospect made the first move."
+    },
+    {
+      "question": "Which is better for B2B, inbound or outbound?",
+      "answer": "Neither is better on its own, because they solve different problems. Outbound books meetings within weeks and lets you pick the exact accounts you want, while inbound builds demand that compounds over months. Early-stage B2B companies usually lean on outbound first, then add inbound as content and search rankings grow."
+    }
+  ]
+}

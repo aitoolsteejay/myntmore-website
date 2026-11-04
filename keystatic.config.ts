@@ -40,7 +40,7 @@ import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long
 //    lib/case-study-library.json, then `case-studies:build` writes each page and
 //    its sitemap entry (both run by prebuild).
 //  - Glossary terms: one JSON file per term. `npm run glossary:build` (run by prebuild) writes each
-//    term page, the A-Z index cards and the sitemap entries. Four longer-form terms stay hand-built.
+//    term page, the A-Z index cards and the sitemap entries. All 51 terms are CMS terms; the longer-form ones use "Sections".
 //  - Blog posts: .mdoc files read at build time by lib/cms-posts.ts and
 //    rendered by app/resources/blogs/[slug]/page.tsx (served at /resources/blogs/<slug>).
 //    All blog posts are CMS posts; there are no hand-built blog pages.
@@ -622,13 +622,41 @@ export default config({
         excerpt: fields.text({ label: "A-Z index card text", multiline: true, validation: { isRequired: true } }),
         alsoKnownAs: fields.array(fields.text({ label: "Name" }), { label: "Also known as (shown on the page and in the structured data)", itemLabel: (props) => props.value }),
         indexAliases: fields.array(fields.text({ label: "Name" }), { label: "Synonyms for the A-Z index (\"see X\" pointers)", itemLabel: (props) => props.value }),
+        definitionLead: fields.text({ label: "Bold lead-in before the definition (optional)", description: "E.g. \"The 3-Second Rule:\". Leave empty for most terms." }),
         definition: fields.text({
           label: "Definition",
           description: "The one-or-two-sentence answer shown first. Answer the question outright.",
           multiline: true,
           validation: { isRequired: true },
         }),
-        body: fields.text({ label: "Supporting paragraph", multiline: true, validation: { isRequired: true } }),
+        body: fields.text({ label: "Supporting paragraph", description: "Required for a short term. A longer-form term can leave this empty and use the sections below instead (or use both).", multiline: true }),
+        sections: fields.array(
+          fields.object({
+            heading: fields.text({ label: "Section heading", validation: { isRequired: true } }),
+            paragraphs: fields.array(fields.text({ label: "Paragraph", description: "Wrap words in **double asterisks** for bold.", multiline: true }), { label: "Paragraphs", itemLabel: (props) => props.value.slice(0, 60) }),
+            steps: fields.array(
+              fields.object({
+                lead: fields.text({ label: "Bold lead-in", validation: { isRequired: true } }),
+                text: fields.text({ label: "Text after the lead-in", multiline: true, validation: { isRequired: true } }),
+              }),
+              { label: "Numbered list (optional)", itemLabel: (props) => props.fields.lead.value }
+            ),
+            table: fields.object(
+              {
+                columns: fields.array(fields.text({ label: "Column heading" }), { label: "Comparison table (optional): column headings (the first, row-label column has no heading)", itemLabel: (props) => props.value }),
+                rows: fields.array(
+                  fields.object({
+                    label: fields.text({ label: "Row label", validation: { isRequired: true } }),
+                    cells: fields.array(fields.text({ label: "Cell", multiline: true }), { label: "Cells, one per column heading, in order", itemLabel: (props) => props.value.slice(0, 40) }),
+                  }),
+                  { label: "Comparison table (optional): rows", itemLabel: (props) => props.fields.label.value }
+                ),
+              },
+              { label: "Comparison table (leave empty for none)" }
+            ),
+          }),
+          { label: "Sections (longer-form terms; shown after the supporting paragraph)", itemLabel: (props) => props.fields.heading.value }
+        ),
         sourceLabel: fields.text({ label: "Link under the term: text", validation: { isRequired: true } }),
         sourceHref: fields.text({ label: "Link under the term: address, e.g. /services/account-based-marketing", validation: { isRequired: true } }),
         furtherLabel: fields.text({ label: "Second link: text (optional)" }),
@@ -651,6 +679,7 @@ export default config({
             { label: "B2B Outbound Glossary", value: "B2B Outbound Glossary" },
             { label: "Myntmore Glossary", value: "Myntmore Glossary" },
           ], defaultValue: "Myntmore Glossary" }),
+        metaTitleOverride: fields.text({ label: "Full search title (optional)", description: "Replaces \"term | ending\" when you need a different shape, e.g. \"Inbound vs. Outbound: Key Differences | Glossary\"." }),
         metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
         keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
         faqs: fields.array(

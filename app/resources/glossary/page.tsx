@@ -53,40 +53,8 @@ interface Term {
   aliases?: string[];
 }
 
-// Cards for the four longer-form terms that have hand-built pages. Every other term is a CMS term
-// (content/glossary) and supplies its own card through lib/glossary-index.generated.json.
-const HAND_BUILT_TERMS: Term[] = [
-  {
-    href: "/resources/glossary/total-conversional-market",
-    tag: "Targeting",
-    title: "Total Conversional Market (TCM)",
-    excerpt: "The highly specific, highly motivated subset of prospects actively feeling your problem today, versus the broad, theoretical TAM.",
-    accent: "#D97706",
-  },
-  {
-    href: "/resources/glossary/signal-heavy-structuring",
-    tag: "Content Strategy",
-    title: "Signal-Heavy Structuring",
-    excerpt: "A framework for building content that includes a concrete, usable asset, not generic branding copy, so it earns a reply on its own.",
-    accent: "#7C3AED",
-  },
-  {
-    href: "/resources/glossary/3-second-rule",
-    tag: "Cold Outreach",
-    title: "The 3-Second Rule",
-    excerpt: "You have roughly 3 seconds to earn a prospect's curiosity before an outbound message gets ignored, and pitching in that window loses it.",
-    accent: "#F97316",
-  },
-  {
-    href: "/resources/glossary/inbound-vs-outbound",
-    tag: "Cold Outreach",
-    title: "Inbound vs. Outbound",
-    excerpt: "Waiting for the right people to find you, versus proactively reaching out to find them.",
-    accent: "#F59E0B",
-  },
-];
-
-const TERMS: Term[] = [...HAND_BUILT_TERMS, ...(generatedTerms as Term[])];
+// Every term is a CMS term (content/glossary) and supplies its own card through lib/glossary-index.generated.json.
+const TERMS: Term[] = generatedTerms as Term[];
 
 // Alphabetized like a real reference, not left in ad-hoc authoring order --
 // "The 3-Second Rule" sorts under "3", not "T", and a parenthetical like

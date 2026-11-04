@@ -1,5 +1,12 @@
 [
   {
+    "href": "/resources/glossary/3-second-rule",
+    "tag": "Cold Outreach",
+    "title": "The 3-Second Rule",
+    "excerpt": "You have roughly 3 seconds to earn a prospect's curiosity before an outbound message gets ignored, and pitching in that window loses it.",
+    "accent": "#F97316"
+  },
+  {
     "href": "/resources/glossary/abm",
     "tag": "GTM Strategy",
     "title": "ABM (Account-Based Marketing)",
@@ -196,6 +203,13 @@
     "accent": "#0891B2"
   },
   {
+    "href": "/resources/glossary/inbound-vs-outbound",
+    "tag": "Cold Outreach",
+    "title": "Inbound vs. Outbound",
+    "excerpt": "Waiting for the right people to find you, versus proactively reaching out to find them.",
+    "accent": "#F59E0B"
+  },
+  {
     "href": "/resources/glossary/lead-magnet",
     "tag": "Content Strategy",
     "title": "Lead Magnet",
@@ -327,6 +341,13 @@
     "accent": "#059669"
   },
   {
+    "href": "/resources/glossary/signal-heavy-structuring",
+    "tag": "Content Strategy",
+    "title": "Signal-Heavy Structuring",
+    "excerpt": "A framework for building content that includes a concrete, usable asset, not generic branding copy, so it earns a reply on its own.",
+    "accent": "#7C3AED"
+  },
+  {
     "href": "/resources/glossary/social-selling",
     "tag": "Personal Branding",
     "title": "Social Selling",
@@ -362,6 +383,13 @@
     "aliases": [
       "Strategic Account Targeting"
     ]
+  },
+  {
+    "href": "/resources/glossary/total-conversional-market",
+    "tag": "Targeting",
+    "title": "Total Conversional Market (TCM)",
+    "excerpt": "The highly specific, highly motivated subset of prospects actively feeling your problem today, versus the broad, theoretical TAM.",
+    "accent": "#D97706"
   },
   {
     "href": "/resources/glossary/value-proposition",

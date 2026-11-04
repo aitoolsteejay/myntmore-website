@@ -6,6 +6,24 @@ import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { buildFaqSchema, type FaqItem } from "@/lib/schema";
 
+// One titled block of a longer-form term: paragraphs (use **double asterisks** for bold), an optional numbered list
+// whose items open with a bold lead-in, and an optional comparison table (first column = row label).
+export interface GlossarySection {
+  heading: string;
+  paragraphs?: string[];
+  steps?: { lead: string; text: string }[];
+  table?: { columns: string[]; rows: { label: string; cells: string[] }[] }; // empty rows = no table
+}
+
+// Turns **bold** into <strong>; everything else stays plain text.
+function Rich({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => (part.startsWith("**") && part.endsWith("**") ? <strong key={i}>{part.slice(2, -2)}</strong> : part))}
+    </>
+  );
+}
+
 export interface GlossaryTermProps {
   slug: string;
   tag: string;
@@ -13,8 +31,12 @@ export interface GlossaryTermProps {
   title: string;
   tagline: string;
   alsoKnownAs?: string[];
+  // Optional bold lead-in before the definition, e.g. "The 3-Second Rule:".
+  definitionLead?: string;
   definition: string;
-  body: string;
+  // The one supporting paragraph of a short-form term; longer-form terms use `sections` instead (or as well).
+  body?: string;
+  sections?: GlossarySection[];
   sourceLabel: string;
   sourceHref: string;
   // Optional second link, e.g. a blog post that goes deeper on the term.
@@ -29,11 +51,9 @@ export interface GlossaryTermProps {
   faqs?: FaqItem[];
 }
 
-// Shared layout for every short-form glossary entry (~20-30 word definition,
-// one supporting paragraph, one outbound link). The original 3 terms
-// (Total Conversional Market, Signal-Heavy Structuring, 3-Second Rule) stay
-// as bespoke longer-form pages -- this is for the newer, shorter dictionary
-// style entries so 17+ near-identical pages don't duplicate the same layout.
+// Shared layout for every glossary entry: a ~20-30 word definition, then either one supporting paragraph (the
+// short dictionary-style terms) or titled `sections` (the longer-form terms: paragraphs, a numbered list, a
+// comparison table), then optional FAQs and the source link.
 export default function GlossaryTerm({
   slug,
   tag,
@@ -41,8 +61,10 @@ export default function GlossaryTerm({
   title,
   tagline,
   alsoKnownAs,
+  definitionLead,
   definition,
   body,
+  sections,
   sourceLabel,
   sourceHref,
   furtherLabel,
@@ -81,10 +103,61 @@ export default function GlossaryTerm({
           <FadeIn>
             <div className="rounded-2xl border-l-4 p-6 mb-10" style={{ backgroundColor: `${accent}0d`, borderColor: accent }}>
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: textTone(accent) }}>Definition</p>
-              <p className="text-base leading-relaxed" style={{ color: "#0a0a0a" }}>{definition}</p>
+              <p className="text-base leading-relaxed" style={{ color: "#0a0a0a" }}>
+                {definitionLead ? <><strong>{definitionLead}</strong> {definition}</> : definition}
+              </p>
             </div>
 
-            <p className="text-base leading-relaxed" style={{ color: "#52525B" }}>{body}</p>
+            {body && <p className="text-base leading-relaxed" style={{ color: "#52525B" }}>{body}</p>}
+
+            {sections && sections.length > 0 && (
+              <div className={`space-y-8${body ? " mt-10" : ""}`}>
+                {sections.map((section) => (
+                  <div key={section.heading}>
+                    <h2 className="text-2xl font-black mb-3" style={{ color: "#0a0a0a" }}>{section.heading}</h2>
+                    {(section.paragraphs ?? []).map((para, i, all) => (
+                      <p key={i} className={`text-base leading-relaxed${i < all.length - 1 || (section.steps?.length ?? 0) > 0 ? " mb-4" : ""}`} style={{ color: "#52525B" }}>
+                        <Rich text={para} />
+                      </p>
+                    ))}
+                    {section.steps && section.steps.length > 0 && (
+                      <ul className="space-y-4">
+                        {section.steps.map((step, i) => (
+                          <li key={step.lead} className="flex gap-3">
+                            <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-black" style={{ backgroundColor: `${accent}1a`, color: textTone(accent), border: `1px solid ${accent}4d` }}>{i + 1}</span>
+                            <p className="text-base leading-relaxed" style={{ color: "#52525B" }}><strong>{step.lead}</strong> {step.text}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {section.table && section.table.rows.length > 0 && (
+                      <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: "#E8E2D9" }}>
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr style={{ backgroundColor: "#F8F6F2" }}>
+                              <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>&nbsp;</th>
+                              {section.table.columns.map((c) => (
+                                <th key={c} scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{c}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.table.rows.map((row, i) => (
+                              <tr key={row.label} style={{ borderTop: i > 0 ? "1px solid #E8E2D9" : undefined }}>
+                                <th scope="row" className="text-left p-4 font-bold align-top" style={{ color: "#0a0a0a" }}>{row.label}</th>
+                                {row.cells.map((cell, j) => (
+                                  <td key={j} className="p-4 align-top" style={{ color: "#3D3D3D" }}>{cell}</td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </FadeIn>
 
           {children}

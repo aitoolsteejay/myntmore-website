@@ -177,7 +177,7 @@ const ownerOf = (file) => {
 };
 
 const ORIGIN = String.raw`(?:https?:\/\/(?:www\.)?myntmore\.com)?`;
-const CTX = String.raw`(?:href|to|link|path|route|cta\w*|push|replace|redirect|permanentRedirect|location(?:\.href)?)`;
+const CTX = String.raw`(?:href|(?:source|further)Href|to|link|path|route|cta\w*|push|replace|redirect|permanentRedirect|location(?:\.href)?)`;
 const LINK_RE = new RegExp(CTX + String.raw`\s*[=:(]\s*\{?\s*["'\x60]` + ORIGIN + String.raw`(\/[^"'\x60\s$\{\}<>]*)`, "g");
 const TEMPLATE_RE = new RegExp(CTX + String.raw`\s*[=:(]\s*\{?\s*\x60` + ORIGIN + String.raw`(\/[^"'\x60\s$\{\}<>]*)\$\{`, "g");
 
@@ -225,6 +225,20 @@ for (const f of codeFiles) {
       edges.splice(edges.indexOf(e), 1);
       for (const r of routes) edges.push({ ...e, from: r });
     }
+  }
+}
+
+// Every glossary term page renders through components/glossary/GlossaryTerm.tsx, so a link written there (the
+// breadcrumb, "Back to the glossary") is on every term page: credit it to each of them instead of to "shared".
+{
+  const termRoutes = pageDirs
+    .map((p) => ({ route: dirToRoute(p.dir), file: path.join(p.dir, "page.tsx") }))
+    .filter((p) => /^\/resources\/glossary\/[^/]+$/.test(p.route) && exists(p.file) && /<GlossaryTerm\b/.test(read(p.file)))
+    .map((p) => p.route);
+  for (const e of [...edges]) {
+    if (e.fromFile !== "components/glossary/GlossaryTerm.tsx") continue;
+    edges.splice(edges.indexOf(e), 1);
+    for (const r of termRoutes) edges.push({ ...e, from: r });
   }
 }
 

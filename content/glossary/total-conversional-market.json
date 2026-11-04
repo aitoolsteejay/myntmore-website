@@ -1,0 +1,45 @@
+{
+  "slug": "total-conversional-market",
+  "title": "Total Conversional Market (TCM)",
+  "indexTitle": "",
+  "tag": "Targeting",
+  "accent": "#D97706",
+  "tagline": "The specific, motivated slice of your market that's actually ready to buy right now, as opposed to the much larger group who theoretically could someday.",
+  "excerpt": "The highly specific, highly motivated subset of prospects actively feeling your problem today, versus the broad, theoretical TAM.",
+  "alsoKnownAs": [],
+  "indexAliases": [],
+  "definitionLead": "Total Conversional Market (TCM):",
+  "definition": "the highly specific, highly motivated subset of prospects who are actively feeling the pain point today, are already looking for workarounds, and are ready to act immediately.",
+  "body": "",
+  "sections": [
+    {
+      "heading": "TCM vs. TAM",
+      "paragraphs": [
+        "**Total Addressable Market (TAM)** is the broad, high-level audience that theoretically could buy your product in a perfect world. It's the number that goes in a pitch deck. TCM is the much narrower group who could actually close this quarter: the ones already living with the problem, already searching for a fix.",
+        "Targeting your TAM with generic messaging produces outreach that feels random and depends entirely on luck. Targeting your TCM means every message lands in the middle of a priority the prospect is already trying to solve."
+      ]
+    },
+    {
+      "heading": "Why it matters for outbound",
+      "paragraphs": [
+        "A pipeline full of polite \"maybe later\" replies is usually a sign the targeting is still TAM-shaped, not TCM-shaped. Shrinking the target list to the TCM, and being willing to ignore everyone outside it, is often what turns a stalled outbound motion into a predictable one."
+      ]
+    }
+  ],
+  "sourceLabel": "Read: The TAM Trap: Why Vague Targeting Is Quietly Killing Your Outbound Pipeline",
+  "sourceHref": "/resources/blogs/tam-trap-vague-targeting",
+  "furtherLabel": "",
+  "furtherHref": "",
+  "schemaDescription": "Total Conversional Market (TCM) is the highly specific, highly motivated subset of prospects actively feeling a pain point today, already looking for workarounds, and ready to act immediately, as distinct from the broad, theoretical Total Addressable Market (TAM).",
+  "metaTitleSuffix": "B2B Glossary",
+  "ogTitleSuffix": "Myntmore Glossary",
+  "metaDescription": "Total Conversional Market (TCM): the motivated slice of your TAM feeling the pain today and ready to act. How TCM differs from TAM, and how to target it.",
+  "keywords": [
+    "total conversional market",
+    "tcm vs tam",
+    "total addressable market vs total conversional market",
+    "b2b targeting definition",
+    "how to define your icp"
+  ],
+  "faqs": []
+}
