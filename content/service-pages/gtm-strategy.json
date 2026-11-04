@@ -1,0 +1,166 @@
+{
+  "slug": "gtm-strategy",
+  "metaTitle": "B2B GTM Strategy & Execution",
+  "metaDescription": "We build your GTM strategy, ICP, channel mix, positioning, then run it across channels. Not a slide deck. Book a free GTM audit.",
+  "keywords": [
+    "gtm strategy agency",
+    "go-to-market strategy agency",
+    "b2b gtm strategy consulting",
+    "go to market strategy for b2b saas",
+    "gtm audit service",
+    "channel mix strategy b2b",
+    "b2b positioning and messaging agency",
+    "outbound gtm strategy",
+    "gtm strategy and execution agency",
+    "b2b growth strategy agency mumbai",
+    "gtm consulting for startups",
+    "market entry strategy b2b",
+    "gtm strategy for saas founders",
+    "b2b go to market planning agency"
+  ],
+  "ogTitle": "B2B GTM Strategy & Execution | Myntmore",
+  "ogDescription": "ICP, positioning, channel mix, and sequencing, built and run by the same team. Not a plan that sits in a drive folder.",
+  "schemaName": "GTM Strategy",
+  "schemaDescription": "We build your go-to-market strategy, ICP, positioning, and channel mix, then execute it across the channels you choose, so the plan doesn't sit in a slide deck.",
+  "schemaServiceType": "Go-To-Market Strategy and Execution",
+  "steps": [
+    {
+      "n": "01",
+      "title": "GTM Audit & Market Mapping",
+      "desc": "We audit your current positioning, ICP, and channel performance, then map the competitive landscape to identify the highest-leverage channels for your specific buyer, not a generic best-practices checklist."
+    },
+    {
+      "n": "02",
+      "title": "ICP & Channel Mix Strategy",
+      "desc": "We define your ideal customer profile against real intent signals, then design the exact channel mix, cold email, LinkedIn, ABM, personal branding, and the sequencing that fits your sales motion and stage."
+    },
+    {
+      "n": "03",
+      "title": "Positioning & Messaging Framework",
+      "desc": "We build the core narrative, objection handling, and message-market fit framework every channel's copy is built from, so your LinkedIn posts, cold emails, and content all say the same thing."
+    },
+    {
+      "n": "04",
+      "title": "Execution & Monthly Iteration",
+      "desc": "We run the plan across the channels you choose, track real reply and booking data, and adjust the strategy monthly based on what's actually converting, not a plan set once in January and forgotten."
+    }
+  ],
+  "howToName": "How GTM Strategy Works",
+  "deliverables": [
+    "A documented GTM strategy: ICP, positioning, and channel mix",
+    "Competitive landscape and market mapping analysis",
+    "A messaging framework used consistently across every channel",
+    "Channel prioritisation backed by real intent and reply data",
+    "Monthly strategy review and iteration based on results",
+    "Direct handoff to execution across cold email, LinkedIn, ABM, or personal branding"
+  ],
+  "whoFor": [
+    {
+      "icon": "🚀",
+      "title": "Founders Raising or Scaling",
+      "desc": "Need a clear, defensible GTM plan before committing budget to any one channel, especially heading into a raise or a growth push."
+    },
+    {
+      "icon": "🎯",
+      "title": "Teams Entering a New ICP or Market",
+      "desc": "Expanding into a new vertical, segment, or geography and need the strategy re-mapped, not just more of the same tactics pointed at a new audience."
+    },
+    {
+      "icon": "📈",
+      "title": "Companies with Scattered Outbound",
+      "desc": "Already running cold email or LinkedIn in some form, but with no coordinated strategy tying channels, messaging, and ICP together."
+    }
+  ],
+  "notFor": [
+    "You already have a validated GTM plan and just need more hands executing it.",
+    "You want tactical execution only, with no input on channel mix or positioning.",
+    "You're not ready to commit to one direction and want to keep testing everything at once."
+  ],
+  "benefits": [
+    "ICP Definition",
+    "Channel Mix Strategy",
+    "Positioning & Messaging",
+    "Competitive Mapping",
+    "Launch Sequencing",
+    "Strategy + Execution",
+    "Monthly Iteration",
+    "Buyer Journey Mapping",
+    "Cross-Channel Orchestration",
+    "GTM Audit",
+    "Growth Roadmap",
+    "Message-Market Fit"
+  ],
+  "breadcrumbLabel": "GTM Strategy",
+  "badge": "GTM Strategy",
+  "heroIntro": "We build the plan, ICP, positioning, channel mix, and sequencing, then run it across the channels you choose. Not a slide deck that sits in a drive folder.",
+  "h1": [
+    "A GTM strategy that",
+    "actually gets executed."
+  ],
+  "ctaPrimary": "Get a Free GTM Audit",
+  "ctaSecondary": "See Real Results",
+  "stats": [
+    {
+      "init": "130+",
+      "label": "B2B companies trust Myntmore"
+    },
+    {
+      "init": "18 days",
+      "label": "Average days to campaign launch"
+    },
+    {
+      "init": "3.2x",
+      "label": "Higher reply rate than industry average"
+    }
+  ],
+  "statsNote": "Sitewide figures across our outbound engagements, the same team and system this GTM strategy hands off to.",
+  "problemTitle": "Most GTM plans never leave the slide deck",
+  "problemPoints": [
+    "Generic frameworks copy-pasted from a template, not built around your actual buyer",
+    "Every channel gets a little budget instead of a clear sequencing and priority",
+    "Strategy and execution live with different teams, and the handoff loses everything",
+    "The plan is set once and never revisited, no matter what the data says"
+  ],
+  "solutionTitle": "We build the plan and run it, one team, one system",
+  "solutionPoints": [
+    "ICP and channel mix backed by real intent signals, not a best-practices checklist",
+    "One messaging framework every channel's copy is built from, so nothing contradicts",
+    "The same team builds the strategy and executes it, no handoff gap to lose momentum in",
+    "Strategy reviewed and adjusted monthly against real reply and booking data"
+  ],
+  "processIntro": "Strategy first. Execution second. Iteration every month after that.",
+  "whoForTitle": "Built for teams making a real GTM decision",
+  "resultsBadge": "Client Results",
+  "resultsTitle": "GTM strategy in action",
+  "resultsText": "A bootstrapped B2B founder had deep expertise but no coordinated GTM plan tying their positioning, LinkedIn presence, and outreach together. We built the strategy, ICP, messaging, and channel sequencing, then ran it: a founder personal-brand engine feeding warm inbound alongside targeted LinkedIn outreach.",
+  "results": [
+    {
+      "v": "22K",
+      "l": "LinkedIn followers"
+    },
+    {
+      "v": "8",
+      "l": "Inbound deals"
+    },
+    {
+      "v": "6.2%",
+      "l": "Engagement rate"
+    }
+  ],
+  "resultsHref": "/case-studies/founder-personal-brand-linkedin",
+  "resultsLinkText": "Read how a founder went from 0 to 22K followers and 8 deals",
+  "ctaTitle": [
+    "Get a GTM strategy",
+    "built to be run"
+  ],
+  "ctaIntro": [
+    "We'll audit your current GTM, ICP, positioning, and channels, and show you exactly where the plan is leaking, for free."
+  ],
+  "ctaButton": "Book a Free GTM Audit",
+  "ctaNote": "No commitment. We'll show you the gaps before you decide anything.",
+  "ctaChecks": [
+    "Strategy live in 2-3 weeks",
+    "Same team builds and runs it",
+    "Reviewed and adjusted monthly"
+  ]
+}

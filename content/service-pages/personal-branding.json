@@ -1,0 +1,152 @@
+{
+  "slug": "personal-branding",
+  "metaTitle": "Personal Branding & LinkedIn Ghostwriting",
+  "metaDescription": "We ghostwrite LinkedIn content that builds your authority, 4-8 posts a month from one voice interview. Book a free personal branding audit.",
+  "keywords": [
+    "linkedin ghostwriting services",
+    "personal branding agency for founders",
+    "linkedin content writing for executives",
+    "ghostwriting for b2b founders",
+    "linkedin personal branding agency",
+    "founder led marketing on linkedin",
+    "linkedin thought leadership content agency",
+    "how to build a personal brand on linkedin",
+    "linkedin ghostwriter for ceos",
+    "personal branding vs company page marketing",
+    "linkedin content strategy for b2b founders",
+    "inbound leads through linkedin personal brand",
+    "linkedin ghostwriting agency mumbai",
+    "executive personal branding services",
+    "linkedin post writing service for founders"
+  ],
+  "ogTitle": "Personal Branding & LinkedIn Ghostwriting Services | Myntmore",
+  "ogDescription": "Your buyers are on LinkedIn every day. Most founders are invisible to them. Ghostwritten content that builds authority.",
+  "schemaName": "Personal Branding",
+  "schemaDescription": "We ghostwrite LinkedIn content that positions you as the authority in your space, 4–8 posts a month from a single monthly voice interview, so inbound finds you instead of you chasing it.",
+  "schemaServiceType": "B2B Personal Branding and LinkedIn Content Ghostwriting",
+  "steps": [
+    {
+      "n": "01",
+      "title": "Voice & Positioning Interview",
+      "desc": "A focused 45-minute call to capture how you actually think, the stories only you can tell, and the angle that makes you distinct from every other founder posting generic advice."
+    },
+    {
+      "n": "02",
+      "title": "Content Calendar & Ghostwriting",
+      "desc": "From that single interview, we write 4–8 LinkedIn posts a month in your voice, not a template, built around the angles that build authority with your specific buyers."
+    },
+    {
+      "n": "03",
+      "title": "Review & Publish",
+      "desc": "You review and approve every post before it goes out. Once approved, we handle scheduling and publishing so nothing slips or gets forgotten in a busy week."
+    },
+    {
+      "n": "04",
+      "title": "Engagement & Inbound Tracking",
+      "desc": "We track who's viewing your profile, engaging with your posts, and reaching out, and flag warm inbound signals so you know exactly who's paying attention."
+    }
+  ],
+  "howToName": "How Personal Branding Works",
+  "deliverables": [
+    "One monthly voice interview to capture your authentic perspective",
+    "4–8 ghostwritten LinkedIn posts a month, written in your voice",
+    "Full review and approval before anything goes live",
+    "Content calendar and scheduling handled end to end",
+    "Monthly profile visit and engagement reporting",
+    "Inbound lead flagging from engaged followers and profile views"
+  ],
+  "whoFor": [
+    {
+      "icon": "💼",
+      "title": "Founders & Executives",
+      "desc": "Leaders who know their buyers are watching but don't have the time, or the desire, to write and post consistently themselves."
+    },
+    {
+      "icon": "🎯",
+      "title": "Consultants & Advisors",
+      "desc": "Professionals whose credibility is their product, who need visible proof of expertise before a prospect ever books a call."
+    },
+    {
+      "icon": "📈",
+      "title": "Sales & GTM Leaders",
+      "desc": "Leaders who want inbound interest doing work outbound alone can't, so warm conversations start before the first cold touch."
+    }
+  ],
+  "notFor": [
+    "You (the founder or exec) aren't willing to be the visible face of the content.",
+    "You want purely anonymous, company-page-only visibility.",
+    "You're chasing viral reach rather than a steady, credibility-building presence with your ICP."
+  ],
+  "benefits": [
+    "10x profile visits",
+    "Ghostwritten content",
+    "Your voice, not ours",
+    "4–8 posts/month",
+    "Full review & approval",
+    "Inbound tracking",
+    "Authority positioning",
+    "One interview/month",
+    "No blank page",
+    "Consistent presence",
+    "2x reply rate",
+    "Built for LinkedIn"
+  ],
+  "breadcrumbLabel": "Personal Branding",
+  "badge": "Personal Branding",
+  "heroIntro": "We ghostwrite LinkedIn content that positions you as the authority in your space, 4–8 posts a month from a single monthly voice interview, so inbound finds you instead of you chasing it.",
+  "h1": [
+    "Your buyers are on LinkedIn every day.",
+    "Most founders are invisible to them."
+  ],
+  "ctaPrimary": "Get a Free Content Audit",
+  "ctaSecondary": "See Real Results",
+  "stats": [
+    {
+      "init": "10x",
+      "label": "Average increase in profile visits"
+    },
+    {
+      "init": "2x",
+      "label": "Boost in inbound reply rate"
+    },
+    {
+      "init": "6/mo",
+      "label": "Avg. ghostwritten posts, one interview"
+    }
+  ],
+  "problemTitle": "You know content matters. You still don't post",
+  "problemPoints": [
+    "Staring at a blank cursor every week, then giving up and doing nothing",
+    "Posting generic advice that sounds like every other founder's feed",
+    "No system means content happens in bursts, then disappears for months",
+    "Prospects Google you before a call and find nothing that builds trust"
+  ],
+  "solutionTitle": "One conversation a month. Your voice, every week",
+  "solutionPoints": [
+    "A single 45-minute interview replaces hours of writing every week",
+    "Every post written in your actual voice, not a generic template",
+    "You review and approve before anything goes live, always",
+    "10x profile visits means prospects find real proof before the call"
+  ],
+  "processIntro": "One interview a month. A full content calendar in your voice, out the other side.",
+  "whoForTitle": "Built for people whose credibility is the product",
+  "trackIntro": "Built by the same team running the personal-brand content behind",
+  "trackStrong": "12K+ B2B meetings booked",
+  "trackRest": " and $120M+ in pipeline generated for our clients.",
+  "trackHref": "/case-studies/professional-services-linkedin",
+  "trackLinkText": "Read how a LinkedIn brand drove 3x inbound in 90 days",
+  "ctaTitle": [
+    "Let's make your buyers",
+    "see you as the authority"
+  ],
+  "ctaIntro": [
+    "Book a free content audit and we'll show you exactly what's missing from your current LinkedIn presence, and what a consistent one could look like."
+  ],
+  "ctaButton": "Book a Free Content Audit",
+  "ctaNote": "No commitment. Just a real look at what's possible for your presence.",
+  "ctaChecks": [
+    "Live in 2–3 weeks",
+    "One interview a month",
+    "Results or we make it right"
+  ]
+}

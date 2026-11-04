@@ -10,6 +10,10 @@ import { collection, config, fields } from "@keystatic/core";
 //  - Landing pages (ICP): one JSON file per page. `npm run landing-pages:build`
 //    (run by prebuild) writes app/lp/<slug>/page.tsx; components/lp/LandingPage.tsx
 //    renders it.
+//  - Service pages: one JSON file per /services/<slug> page. `npm run service-pages:build` (run by prebuild)
+//    writes the thin page (literal metadata). The five template services (ABM, AI lead generation, GTM, personal
+//    branding, ICP mapping) read their copy from the JSON; cold email, LinkedIn outreach and the self-serve tool keep
+//    their copy in their components for now and only their search/share metadata is in the JSON.
 //  - City pages: one JSON file per /b2b-lead-generation-<city> page. `npm run city-pages:build` (run by prebuild)
 //    writes the page; components/city/CityPage.tsx renders it. (Chennai has its own layout and is still hand-built.)
 //  - Case studies (detailed): one JSON file per page that uses CaseStudyLayout. `npm run case-study-pages:build`
@@ -308,6 +312,85 @@ export default config({
       },
     }),
 
+    servicePages: collection({
+      label: "Service pages",
+      path: "content/service-pages/*",
+      format: "json",
+      slugField: "slug",
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Service key",
+            description: "The page lives at /services/<service key>. It cannot be changed after the first save. Each service has its own hand-written layout, so do not create a new one here: a new service also needs a component and an entry in scripts/generate-service-pages.mjs.",
+            validation: { isRequired: true },
+          },
+        }),
+        metaTitle: fields.text({ label: "Search title", description: "Aim for 49 characters or fewer (the site adds \" | Myntmore\"); Google cuts long titles.", validation: { isRequired: true, length: { max: 70 } } }),
+        metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
+        ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
+        ogDescription: fields.text({ label: "Share description", multiline: true, validation: { isRequired: true } }),
+        schemaName: fields.text({ label: "Structured data: service name" }),
+        schemaDescription: fields.text({ label: "Structured data: service description (shown to search engines)", multiline: true }),
+        schemaServiceType: fields.text({ label: "Structured data: service type" }),
+        howToName: fields.text({ label: "Structured data: \"how it works\" title" }),
+        breadcrumbLabel: fields.text({ label: "Breadcrumb label" }),
+        badge: fields.text({ label: "Hero badge" }),
+        h1: fields.array(fields.text({ label: "Headline piece", multiline: true }), { label: "Headline (H1), in the pieces the page lays out (underlined word and line break positions are fixed by the layout)", itemLabel: (props) => props.value }),
+        heroIntro: fields.text({ label: "Hero intro", multiline: true }),
+        ctaPrimary: fields.text({ label: "Main button label" }),
+        ctaSecondary: fields.text({ label: "Second button label" }),
+        stats: fields.array(
+          fields.object({ init: fields.text({ label: "Figure, e.g. 6.4x" }), label: fields.text({ label: "Caption" }) }),
+          { label: "Stats strip (exactly 3). Where the figure animates, it counts up to the value built into the layout.", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.init.value }
+        ),
+        statsNote: fields.text({ label: "Note under the stats strip (only some pages show it)" }),
+        benefits: fields.array(fields.text({ label: "Chip" }), { label: "Scrolling benefit chips", itemLabel: (props) => props.value }),
+        problemTitle: fields.text({ label: "\"The Problem\" heading" }),
+        problemPoints: fields.array(fields.text({ label: "Point", multiline: true }), { label: "\"The Problem\" points", itemLabel: (props) => props.value.slice(0, 60) }),
+        solutionTitle: fields.text({ label: "\"The Myntmore Way\" heading" }),
+        solutionPoints: fields.array(fields.text({ label: "Point", multiline: true }), { label: "\"The Myntmore Way\" points", itemLabel: (props) => props.value.slice(0, 60) }),
+        processIntro: fields.text({ label: "\"How it works\" intro (only some pages show it)", multiline: true }),
+        steps: fields.array(
+          fields.object({
+            n: fields.text({ label: "Number, e.g. 01" }),
+            title: fields.text({ label: "Title" }),
+            desc: fields.text({ label: "Text", multiline: true }),
+          }),
+          { label: "Steps", itemLabel: (props) => props.fields.title.value }
+        ),
+        deliverables: fields.array(fields.text({ label: "Item", multiline: true }), { label: "\"Every engagement includes\" list", itemLabel: (props) => props.value.slice(0, 60) }),
+        whoForTitle: fields.text({ label: "\"Who it's for\" heading" }),
+        whoFor: fields.array(
+          fields.object({
+            icon: fields.text({ label: "Emoji" }),
+            title: fields.text({ label: "Title" }),
+            desc: fields.text({ label: "Text", multiline: true }),
+          }),
+          { label: "Who it's for (cards)", itemLabel: (props) => props.fields.title.value }
+        ),
+        notFor: fields.array(fields.text({ label: "Point", multiline: true }), { label: "\"This isn't the right fit if\" list", itemLabel: (props) => props.value.slice(0, 60) }),
+        trackIntro: fields.text({ label: "Track record: sentence before the bold part" }),
+        trackStrong: fields.text({ label: "Track record: bold part" }),
+        trackRest: fields.text({ label: "Track record: sentence after the bold part (keep its leading space)" }),
+        trackHref: fields.text({ label: "Track record: link address, e.g. /case-studies" }),
+        trackLinkText: fields.text({ label: "Track record: link text" }),
+        resultsBadge: fields.text({ label: "Client results block: badge (GTM Strategy only)" }),
+        resultsTitle: fields.text({ label: "Client results block: heading" }),
+        resultsText: fields.text({ label: "Client results block: story", multiline: true }),
+        results: fields.array(
+          fields.object({ v: fields.text({ label: "Figure" }), l: fields.text({ label: "Caption" }) }),
+          { label: "Client results block: figures (exactly 3)", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.v.value }
+        ),
+        resultsHref: fields.text({ label: "Client results block: link address" }),
+        resultsLinkText: fields.text({ label: "Client results block: link text" }),
+        ctaTitle: fields.array(fields.text({ label: "Headline piece" }), { label: "Closing headline: first line, then the coloured second line", itemLabel: (props) => props.value }),
+        ctaIntro: fields.array(fields.text({ label: "Text piece", multiline: true }), { label: "Closing paragraph, in the pieces the page lays out (a piece in bold sits between two others)", itemLabel: (props) => props.value.slice(0, 60) }),
+        ctaButton: fields.text({ label: "Closing button label" }),
+        ctaNote: fields.text({ label: "Small print under the closing button" }),
+        ctaChecks: fields.array(fields.text({ label: "Item" }), { label: "Three ticks under the closing button", itemLabel: (props) => props.value }),
+      },
+    }),
     cityPages: collection({
       label: "City pages",
       path: "content/city-pages/*",

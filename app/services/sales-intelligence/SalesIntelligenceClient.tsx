@@ -10,59 +10,36 @@ import RelatedPath from "../../components/RelatedPath";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-pages/sales-intelligence.json";
 
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "ICP Mapping & Lead Scoring",
-  description: "We monitor 40+ buying signals daily (funding rounds, hiring surges, tech stack changes) so you reach in-market accounts the moment they enter the buying window.",
-  serviceType: "ICP Mapping and Lead Scoring",
+  name: d.schemaName,
+  description: d.schemaDescription,
+  serviceType: d.schemaServiceType,
   url: `${SITE_URL}/services/sales-intelligence`,
 });
 
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
-const STEPS = [
-  { n: "01", title: "ICP & Signal Mapping", desc: "We map your Ideal Customer Profile in precise detail, then identify the 40+ intent signals that indicate an account is actively in-market: funding rounds, hiring patterns, tech stack changes, leadership moves, and more." },
-  { n: "02", title: "Daily List Building & Enrichment", desc: "Our system monitors signal sources daily and surfaces accounts matching your ICP the moment they enter buying mode. Every account is enriched with company data, tech stack, headcount, and decision-maker contacts." },
-  { n: "03", title: "Account Scoring & Prioritisation", desc: "Accounts are scored by signal strength, ICP fit, and engagement indicators. Your team sees a prioritised view: the 10% of accounts worth focusing on this week, not a raw list of thousands to triage manually." },
-  { n: "04", title: "Signal Dashboard & Handoff", desc: "Scored accounts appear in your signal dashboard daily with full context attached, showing you what triggered each account, so your outreach opens with the exact insight that makes it relevant." },
-];
+const STEPS = d.steps;
 
 const HOWTO_SCHEMA = buildHowToSchema(
-  "How ICP Mapping & Lead Scoring Works",
+  d.howToName,
   STEPS.map((s) => ({ name: s.title, text: s.desc }))
 );
 
-const DELIVERABLES = [
-  "40+ intent signal monitoring across your target market",
-  "Daily list refresh with trigger-based account surfacing",
-  "Account scoring by fit, intent, and signal strength",
-  "Exportable account lists with full signal context attached",
-  "ICP mapping and scoring model calibration",
-  "Signal dashboard showing real-time in-market accounts",
-];
+const DELIVERABLES = d.deliverables;
 
-const WHO_FOR = [
-  { icon: "🎯", title: "ABM & Outbound Teams", desc: "Teams running account-based campaigns who need to know which accounts to prioritise this week, not which ones fit the ICP in theory." },
-  { icon: "⚡", title: "High-Velocity Sales Teams", desc: "Sales organisations processing large account universes who need a system that surfaces the right 200 accounts from a TAM of 10,000." },
-  { icon: "🔬", title: "Revenue Operations Leaders", desc: "RevOps professionals building a signal-led pipeline infrastructure that replaces bought lists with continuously refreshed, context-rich account intelligence." },
-];
+const WHO_FOR = d.whoFor;
 
-const NOT_FOR = [
-  "You already have a razor-sharp ICP and just need execution against it, not more research.",
-  "You want a one-time list purchase, not a continuously refreshed targeting model.",
-  "Your addressable market is small enough that you already know every account by name.",
-];
+const NOT_FOR = d.notFor;
 
 
 const FAQ_ITEMS = pageFaqsQA("service-sales-intelligence");
 const FAQ_SCHEMA = buildFaqSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })));
 
-const BENEFITS = [
-  "40+ intent signals", "Daily list refresh", "Trigger-based leads", "Funding signals",
-  "Hiring patterns", "Tech stack changes", "Exportable account lists", "Account scoring",
-  "ICP mapping", "Signal dashboard", "Competitive intel", "Real-time data",
-];
+const BENEFITS = d.benefits;
 
 /* ─── Sub-components ─────────────────────────────────────────── */
 
@@ -258,38 +235,28 @@ export default function SalesIntelligenceClient() {
         <div ref={blob3} aria-hidden style={{ position: "absolute", top: "70%", left: "50%", width: 400, height: 400, marginTop: -200, marginLeft: -200, borderRadius: "50%", background: "radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%)", filter: "blur(50px)", pointerEvents: "none", willChange: "transform" }} />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "ICP Mapping & Lead Scoring", href: "/services/sales-intelligence" }]} />
+          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: d.breadcrumbLabel, href: "/services/sales-intelligence" }]} />
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade"
             style={{ borderColor: "rgba(168,85,247,0.35)", background: "rgba(168,85,247,0.07)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#a855f7" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#7E22CE" }}>ICP Mapping & Lead Scoring</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#7E22CE" }}>{d.badge}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            Know exactly who is{" "}
-            <span className="relative inline-block">
-              ready to buy.
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 330 10" preserveAspectRatio="none" aria-hidden>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>{d.h1[0]}{" "}
+            <span className="relative inline-block">{d.h1[1]}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 330 10" preserveAspectRatio="none" aria-hidden>
                 <path ref={underlineRef} d="M2 7 Q82 2 165 6 Q248 10 328 5" stroke="#a855f7" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>{" "}
-            <br />Before your competitors do.
-          </h1>
+            <br />{d.h1[2]}</h1>
 
-          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>
-            We monitor 40+ buying signals daily (funding rounds, hiring surges, tech stack changes) so you reach in-market accounts the moment they enter the buying window.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>{d.heroIntro}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 hero-fade-d3">
             <a href="/book-a-call"
-              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              See Who&apos;s In-Market Now
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaPrimary}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              See Real Results
-            </Link>
+            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaSecondary}</Link>
           </div>
         </div>
       </section>
@@ -300,9 +267,9 @@ export default function SalesIntelligenceClient() {
       <div ref={statsContainerRef} className="border-y py-10 px-4" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {[
-            { ref: stat1Ref, init: "40+", label: "Intent signals tracked across your market" },
-            { ref: stat2Ref, init: "4.2x", label: "Average pipeline lift vs bought lists" },
-            { ref: stat3Ref, init: "12K+", label: "Meetings booked for clients via signal intelligence" },
+            { ref: stat1Ref, init: d.stats[0].init, label: d.stats[0].label },
+            { ref: stat2Ref, init: d.stats[1].init, label: d.stats[1].label },
+            { ref: stat3Ref, init: d.stats[2].init, label: d.stats[2].label },
           ].map((s, i) => (
             <div key={i} className={`${i < 2 ? "sm:border-r" : ""} px-4`} style={{ borderColor: "#E8E2D9" }}>
               <span ref={s.ref} className="block text-4xl font-black mb-1" style={{ color: "#0a0a0a" }}>{s.init}</span>
@@ -328,16 +295,9 @@ export default function SalesIntelligenceClient() {
                 style={{ backgroundColor: "rgba(239,68,68,0.08)", color: "#B91C1C", border: "1px solid rgba(239,68,68,0.2)" }}>
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                Bought lists are cold names with no context
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.problemTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "Static lists go stale: accounts that were in-market 6 months ago aren't today",
-                  "No signal context means every outreach starts from zero trust",
-                  "You're competing with 10 other vendors all working the same outdated list",
-                  "Your team wastes hours triaging thousands of accounts with no way to prioritise",
-                ].map((p) => (
+                {d.problemPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(239,68,68,0.1)" }}>
@@ -355,16 +315,9 @@ export default function SalesIntelligenceClient() {
                 style={{ backgroundColor: "rgba(168,85,247,0.08)", color: "#7E22CE", border: "1px solid rgba(168,85,247,0.2)" }}>
                 The Myntmore Way
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                Signal-led lists: accounts ready to buy now
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.solutionTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "Daily signal refresh means you always see who just entered the buying window",
-                  "40+ triggers give your reps a reason to reach out that lands every time",
-                  "You reach accounts before competitors because you see the signals first",
-                  "Prioritised scoring means your team focuses on the 10% worth acting on now",
-                ].map((p) => (
+                {d.solutionPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(168,85,247,0.1)" }}>
@@ -390,7 +343,7 @@ export default function SalesIntelligenceClient() {
               The Process
             </span>
             <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>How it works</h2>
-            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>Signal mapping first. Daily intelligence feed second. Your reps armed with context from day one.</p>
+            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>{d.processIntro}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -453,7 +406,7 @@ export default function SalesIntelligenceClient() {
               style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
               Who It&apos;s For
             </span>
-            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Built for teams tired of guessing who to call</h2>
+            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.whoForTitle}</h2>
             <div className="space-y-4">
               {WHO_FOR.map((w) => (
                 <div key={w.title} className="rounded-2xl border p-6 transition-all duration-200"
@@ -495,14 +448,10 @@ export default function SalesIntelligenceClient() {
       {/* ── Track record ─────────────────────────────────────── */}
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>
-            Built by the same team running the signal-driven targeting behind{" "}
-            <span className="font-bold" style={{ color: "#0a0a0a" }}>12K+ B2B meetings booked</span> and $120M+ in pipeline generated for our clients.
-          </p>
-          <Link href="/case-studies/predictable-b2b-lead-gen-engine" className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
-            style={{ color: "#7E22CE" }}>
-            Read how one client built a 15+ meetings/month engine
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>{d.trackIntro}{" "}
+            <span className="font-bold" style={{ color: "#0a0a0a" }}>{d.trackStrong}</span>{d.trackRest}</p>
+          <Link href={d.trackHref} className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+            style={{ color: "#7E22CE" }}>{d.trackLinkText}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -541,27 +490,22 @@ export default function SalesIntelligenceClient() {
             <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Limited spots available</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>
-            See who&apos;s<br /><span style={{ color: "#a855f7" }}>in-market right now</span>
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>{d.ctaTitle[0]}<br /><span style={{ color: "#a855f7" }}>{d.ctaTitle[1]}</span>
           </h2>
 
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>
-            Book a free session and we&apos;ll show you the signals firing in your target market today: accounts your competitors don&apos;t know are in the buying window yet.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>{d.ctaIntro[0]}</p>
 
           <a href="/book-a-call"
-            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">
-            See Your In-Market Accounts
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">{d.ctaButton}<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
 
           <p className="mt-5
-          text-sm" style={{ color: "#71675E" }}>No commitment. Just a live look at the signal data for your market.</p>
+          text-sm" style={{ color: "#71675E" }}>{d.ctaNote}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 pt-8 border-t" style={{ borderColor: "#E8E2D9" }}>
-            {["Daily signal refresh", "40+ intent triggers", "Results or we make it right"].map((item) => (
+            {d.ctaChecks.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <svg className="w-4 h-4 flex-shrink-0" style={{ color: "#A14A08" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

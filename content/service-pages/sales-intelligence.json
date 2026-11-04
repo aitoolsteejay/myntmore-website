@@ -1,0 +1,153 @@
+{
+  "slug": "sales-intelligence",
+  "metaTitle": "ICP Mapping & Lead Scoring Services",
+  "metaDescription": "We monitor 40+ buying signals daily so you reach in-market accounts the moment they enter the buying window. Book a free signals audit.",
+  "keywords": [
+    "icp mapping services",
+    "lead scoring agency for b2b",
+    "b2b buying signal monitoring",
+    "sales intelligence agency",
+    "intent data for b2b sales",
+    "ideal customer profile mapping agency",
+    "trigger based lead lists",
+    "funding and hiring signal tracking for sales",
+    "account intent monitoring service",
+    "how to identify in-market accounts",
+    "b2b lead scoring vs manual prospecting",
+    "sales intelligence agency mumbai",
+    "real-time buying signals for sales teams",
+    "icp mapping for b2b saas companies",
+    "predictive lead scoring for b2b sales"
+  ],
+  "ogTitle": "ICP Mapping & Lead Scoring Services | Myntmore",
+  "ogDescription": "Know exactly who is ready to buy, before your competitors do. 40+ buying signals monitored daily.",
+  "schemaName": "ICP Mapping & Lead Scoring",
+  "schemaDescription": "We monitor 40+ buying signals daily (funding rounds, hiring surges, tech stack changes) so you reach in-market accounts the moment they enter the buying window.",
+  "schemaServiceType": "ICP Mapping and Lead Scoring",
+  "steps": [
+    {
+      "n": "01",
+      "title": "ICP & Signal Mapping",
+      "desc": "We map your Ideal Customer Profile in precise detail, then identify the 40+ intent signals that indicate an account is actively in-market: funding rounds, hiring patterns, tech stack changes, leadership moves, and more."
+    },
+    {
+      "n": "02",
+      "title": "Daily List Building & Enrichment",
+      "desc": "Our system monitors signal sources daily and surfaces accounts matching your ICP the moment they enter buying mode. Every account is enriched with company data, tech stack, headcount, and decision-maker contacts."
+    },
+    {
+      "n": "03",
+      "title": "Account Scoring & Prioritisation",
+      "desc": "Accounts are scored by signal strength, ICP fit, and engagement indicators. Your team sees a prioritised view: the 10% of accounts worth focusing on this week, not a raw list of thousands to triage manually."
+    },
+    {
+      "n": "04",
+      "title": "Signal Dashboard & Handoff",
+      "desc": "Scored accounts appear in your signal dashboard daily with full context attached, showing you what triggered each account, so your outreach opens with the exact insight that makes it relevant."
+    }
+  ],
+  "howToName": "How ICP Mapping & Lead Scoring Works",
+  "deliverables": [
+    "40+ intent signal monitoring across your target market",
+    "Daily list refresh with trigger-based account surfacing",
+    "Account scoring by fit, intent, and signal strength",
+    "Exportable account lists with full signal context attached",
+    "ICP mapping and scoring model calibration",
+    "Signal dashboard showing real-time in-market accounts"
+  ],
+  "whoFor": [
+    {
+      "icon": "🎯",
+      "title": "ABM & Outbound Teams",
+      "desc": "Teams running account-based campaigns who need to know which accounts to prioritise this week, not which ones fit the ICP in theory."
+    },
+    {
+      "icon": "⚡",
+      "title": "High-Velocity Sales Teams",
+      "desc": "Sales organisations processing large account universes who need a system that surfaces the right 200 accounts from a TAM of 10,000."
+    },
+    {
+      "icon": "🔬",
+      "title": "Revenue Operations Leaders",
+      "desc": "RevOps professionals building a signal-led pipeline infrastructure that replaces bought lists with continuously refreshed, context-rich account intelligence."
+    }
+  ],
+  "notFor": [
+    "You already have a razor-sharp ICP and just need execution against it, not more research.",
+    "You want a one-time list purchase, not a continuously refreshed targeting model.",
+    "Your addressable market is small enough that you already know every account by name."
+  ],
+  "benefits": [
+    "40+ intent signals",
+    "Daily list refresh",
+    "Trigger-based leads",
+    "Funding signals",
+    "Hiring patterns",
+    "Tech stack changes",
+    "Exportable account lists",
+    "Account scoring",
+    "ICP mapping",
+    "Signal dashboard",
+    "Competitive intel",
+    "Real-time data"
+  ],
+  "breadcrumbLabel": "ICP Mapping & Lead Scoring",
+  "badge": "ICP Mapping & Lead Scoring",
+  "heroIntro": "We monitor 40+ buying signals daily (funding rounds, hiring surges, tech stack changes) so you reach in-market accounts the moment they enter the buying window.",
+  "h1": [
+    "Know exactly who is",
+    "ready to buy.",
+    "Before your competitors do."
+  ],
+  "ctaPrimary": "See Who's In-Market Now",
+  "ctaSecondary": "See Real Results",
+  "stats": [
+    {
+      "init": "40+",
+      "label": "Intent signals tracked across your market"
+    },
+    {
+      "init": "4.2x",
+      "label": "Average pipeline lift vs bought lists"
+    },
+    {
+      "init": "12K+",
+      "label": "Meetings booked for clients via signal intelligence"
+    }
+  ],
+  "problemTitle": "Bought lists are cold names with no context",
+  "problemPoints": [
+    "Static lists go stale: accounts that were in-market 6 months ago aren't today",
+    "No signal context means every outreach starts from zero trust",
+    "You're competing with 10 other vendors all working the same outdated list",
+    "Your team wastes hours triaging thousands of accounts with no way to prioritise"
+  ],
+  "solutionTitle": "Signal-led lists: accounts ready to buy now",
+  "solutionPoints": [
+    "Daily signal refresh means you always see who just entered the buying window",
+    "40+ triggers give your reps a reason to reach out that lands every time",
+    "You reach accounts before competitors because you see the signals first",
+    "Prioritised scoring means your team focuses on the 10% worth acting on now"
+  ],
+  "processIntro": "Signal mapping first. Daily intelligence feed second. Your reps armed with context from day one.",
+  "whoForTitle": "Built for teams tired of guessing who to call",
+  "trackIntro": "Built by the same team running the signal-driven targeting behind",
+  "trackStrong": "12K+ B2B meetings booked",
+  "trackRest": " and $120M+ in pipeline generated for our clients.",
+  "trackHref": "/case-studies/predictable-b2b-lead-gen-engine",
+  "trackLinkText": "Read how one client built a 15+ meetings/month engine",
+  "ctaTitle": [
+    "See who's",
+    "in-market right now"
+  ],
+  "ctaIntro": [
+    "Book a free session and we'll show you the signals firing in your target market today: accounts your competitors don't know are in the buying window yet."
+  ],
+  "ctaButton": "See Your In-Market Accounts",
+  "ctaNote": "No commitment. Just a live look at the signal data for your market.",
+  "ctaChecks": [
+    "Daily signal refresh",
+    "40+ intent triggers",
+    "Results or we make it right"
+  ]
+}

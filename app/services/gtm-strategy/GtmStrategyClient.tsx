@@ -10,58 +10,35 @@ import RelatedPath from "../../components/RelatedPath";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-pages/gtm-strategy.json";
 
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "GTM Strategy",
-  description: "We build your go-to-market strategy, ICP, positioning, and channel mix, then execute it across the channels you choose, so the plan doesn't sit in a slide deck.",
-  serviceType: "Go-To-Market Strategy and Execution",
+  name: d.schemaName,
+  description: d.schemaDescription,
+  serviceType: d.schemaServiceType,
   url: `${SITE_URL}/services/gtm-strategy`,
 });
 
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
-const STEPS = [
-  { n: "01", title: "GTM Audit & Market Mapping", desc: "We audit your current positioning, ICP, and channel performance, then map the competitive landscape to identify the highest-leverage channels for your specific buyer, not a generic best-practices checklist." },
-  { n: "02", title: "ICP & Channel Mix Strategy", desc: "We define your ideal customer profile against real intent signals, then design the exact channel mix, cold email, LinkedIn, ABM, personal branding, and the sequencing that fits your sales motion and stage." },
-  { n: "03", title: "Positioning & Messaging Framework", desc: "We build the core narrative, objection handling, and message-market fit framework every channel's copy is built from, so your LinkedIn posts, cold emails, and content all say the same thing." },
-  { n: "04", title: "Execution & Monthly Iteration", desc: "We run the plan across the channels you choose, track real reply and booking data, and adjust the strategy monthly based on what's actually converting, not a plan set once in January and forgotten." },
-];
+const STEPS = d.steps;
 
 const HOWTO_SCHEMA = buildHowToSchema(
-  "How GTM Strategy Works",
+  d.howToName,
   STEPS.map((s) => ({ name: s.title, text: s.desc }))
 );
 
-const DELIVERABLES = [
-  "A documented GTM strategy: ICP, positioning, and channel mix",
-  "Competitive landscape and market mapping analysis",
-  "A messaging framework used consistently across every channel",
-  "Channel prioritisation backed by real intent and reply data",
-  "Monthly strategy review and iteration based on results",
-  "Direct handoff to execution across cold email, LinkedIn, ABM, or personal branding",
-];
+const DELIVERABLES = d.deliverables;
 
-const WHO_FOR = [
-  { icon: "🚀", title: "Founders Raising or Scaling", desc: "Need a clear, defensible GTM plan before committing budget to any one channel, especially heading into a raise or a growth push." },
-  { icon: "🎯", title: "Teams Entering a New ICP or Market", desc: "Expanding into a new vertical, segment, or geography and need the strategy re-mapped, not just more of the same tactics pointed at a new audience." },
-  { icon: "📈", title: "Companies with Scattered Outbound", desc: "Already running cold email or LinkedIn in some form, but with no coordinated strategy tying channels, messaging, and ICP together." },
-];
+const WHO_FOR = d.whoFor;
 
-const NOT_FOR = [
-  "You already have a validated GTM plan and just need more hands executing it.",
-  "You want tactical execution only, with no input on channel mix or positioning.",
-  "You're not ready to commit to one direction and want to keep testing everything at once.",
-];
+const NOT_FOR = d.notFor;
 
 const FAQ_ITEMS = pageFaqsQA("service-gtm-strategy");
 const FAQ_SCHEMA = buildFaqSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })));
 
-const BENEFITS = [
-  "ICP Definition", "Channel Mix Strategy", "Positioning & Messaging", "Competitive Mapping",
-  "Launch Sequencing", "Strategy + Execution", "Monthly Iteration", "Buyer Journey Mapping",
-  "Cross-Channel Orchestration", "GTM Audit", "Growth Roadmap", "Message-Market Fit",
-];
+const BENEFITS = d.benefits;
 
 /* ─── Sub-components ─────────────────────────────────────────── */
 
@@ -212,37 +189,28 @@ export default function GtmStrategyClient() {
         <div ref={blob3} aria-hidden style={{ position: "absolute", top: "70%", left: "50%", width: 400, height: 400, marginTop: -200, marginLeft: -200, borderRadius: "50%", background: "radial-gradient(circle, rgba(8,145,178,0.12) 0%, transparent 70%)", filter: "blur(50px)", pointerEvents: "none", willChange: "transform" }} />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "GTM Strategy", href: "/services/gtm-strategy" }]} />
+          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: d.breadcrumbLabel, href: "/services/gtm-strategy" }]} />
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade"
             style={{ borderColor: "rgba(8,145,178,0.35)", background: "rgba(8,145,178,0.07)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#0891b2" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#155E75" }}>GTM Strategy</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#155E75" }}>{d.badge}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            A GTM strategy that{" "}
-            <span className="relative inline-block">
-              actually gets executed.
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 620 10" preserveAspectRatio="none" aria-hidden>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>{d.h1[0]}{" "}
+            <span className="relative inline-block">{d.h1[1]}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 620 10" preserveAspectRatio="none" aria-hidden>
                 <path ref={underlineRef} d="M2 7 Q150 2 310 6 Q470 10 618 5" stroke="#0891b2" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>
-            We build the plan, ICP, positioning, channel mix, and sequencing, then run it across the channels you choose. Not a slide deck that sits in a drive folder.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>{d.heroIntro}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 hero-fade-d3">
             <a href="/book-a-call"
-              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Get a Free GTM Audit
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaPrimary}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              See Real Results
-            </Link>
+            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaSecondary}</Link>
           </div>
         </div>
       </section>
@@ -253,9 +221,9 @@ export default function GtmStrategyClient() {
       <div className="border-y py-10 px-4" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {[
-            { init: "130+", label: "B2B companies trust Myntmore" },
-            { init: "18 days", label: "Average days to campaign launch" },
-            { init: "3.2x", label: "Higher reply rate than industry average" },
+            { init: d.stats[0].init, label: d.stats[0].label },
+            { init: d.stats[1].init, label: d.stats[1].label },
+            { init: d.stats[2].init, label: d.stats[2].label },
           ].map((s, i) => (
             <div key={i} className={`${i < 2 ? "sm:border-r" : ""} px-4`} style={{ borderColor: "#E8E2D9" }}>
               <span className="block text-4xl font-black mb-1" style={{ color: "#0a0a0a" }}>{s.init}</span>
@@ -263,7 +231,7 @@ export default function GtmStrategyClient() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-center mt-6" style={{ color: "#71675E" }}>Sitewide figures across our outbound engagements, the same team and system this GTM strategy hands off to.</p>
+        <p className="text-xs text-center mt-6" style={{ color: "#71675E" }}>{d.statsNote}</p>
       </div>
 
       {/* ── Benefits marquee ─────────────────────────────────── */}
@@ -282,16 +250,9 @@ export default function GtmStrategyClient() {
                 style={{ backgroundColor: "rgba(239,68,68,0.08)", color: "#B91C1C", border: "1px solid rgba(239,68,68,0.2)" }}>
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                Most GTM plans never leave the slide deck
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.problemTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "Generic frameworks copy-pasted from a template, not built around your actual buyer",
-                  "Every channel gets a little budget instead of a clear sequencing and priority",
-                  "Strategy and execution live with different teams, and the handoff loses everything",
-                  "The plan is set once and never revisited, no matter what the data says",
-                ].map((p) => (
+                {d.problemPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(239,68,68,0.1)" }}>
@@ -309,16 +270,9 @@ export default function GtmStrategyClient() {
                 style={{ backgroundColor: "rgba(8,145,178,0.08)", color: "#155E75", border: "1px solid rgba(8,145,178,0.2)" }}>
                 The Myntmore Way
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                We build the plan and run it, one team, one system
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.solutionTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "ICP and channel mix backed by real intent signals, not a best-practices checklist",
-                  "One messaging framework every channel's copy is built from, so nothing contradicts",
-                  "The same team builds the strategy and executes it, no handoff gap to lose momentum in",
-                  "Strategy reviewed and adjusted monthly against real reply and booking data",
-                ].map((p) => (
+                {d.solutionPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(8,145,178,0.1)" }}>
@@ -344,7 +298,7 @@ export default function GtmStrategyClient() {
               The Process
             </span>
             <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>How it works</h2>
-            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>Strategy first. Execution second. Iteration every month after that.</p>
+            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>{d.processIntro}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -407,7 +361,7 @@ export default function GtmStrategyClient() {
               style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
               Who It&apos;s For
             </span>
-            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Built for teams making a real GTM decision</h2>
+            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.whoForTitle}</h2>
             <div className="space-y-4">
               {WHO_FOR.map((w) => (
                 <div key={w.title} className="rounded-2xl border p-6 transition-all duration-200"
@@ -451,27 +405,21 @@ export default function GtmStrategyClient() {
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4"
-              style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
-              Client Results
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>GTM strategy in action</h2>
+              style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>{d.resultsBadge}</span>
+            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>{d.resultsTitle}</h2>
           </div>
           <div className="rounded-2xl border p-8" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>
-              A bootstrapped B2B founder had deep expertise but no coordinated GTM plan tying their positioning, LinkedIn presence, and outreach together. We built the strategy, ICP, messaging, and channel sequencing, then ran it: a founder personal-brand engine feeding warm inbound alongside targeted LinkedIn outreach.
-            </p>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>{d.resultsText}</p>
             <div className="grid grid-cols-3 gap-6 mb-6">
-              {[{ v: "22K", l: "LinkedIn followers" }, { v: "8", l: "Inbound deals" }, { v: "6.2%", l: "Engagement rate" }].map((s) => (
+              {[{ v: d.results[0].v, l: d.results[0].l }, { v: d.results[1].v, l: d.results[1].l }, { v: d.results[2].v, l: d.results[2].l }].map((s) => (
                 <div key={s.l} className="text-center">
                   <div className="text-2xl font-black" style={{ color: "#0891b2" }}>{s.v}</div>
                   <div className="text-xs mt-1" style={{ color: "#71675E" }}>{s.l}</div>
                 </div>
               ))}
             </div>
-            <Link href="/case-studies/founder-personal-brand-linkedin" className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
-              style={{ color: "#155E75" }}>
-              Read how a founder went from 0 to 22K followers and 8 deals
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <Link href={d.resultsHref} className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+              style={{ color: "#155E75" }}>{d.resultsLinkText}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -511,26 +459,21 @@ export default function GtmStrategyClient() {
             <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Limited spots available</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>
-            Get a GTM strategy<br /><span style={{ color: "#0891b2" }}>built to be run</span>
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>{d.ctaTitle[0]}<br /><span style={{ color: "#0891b2" }}>{d.ctaTitle[1]}</span>
           </h2>
 
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>
-            We&apos;ll audit your current GTM, ICP, positioning, and channels, and show you exactly where the plan is leaking, for free.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>{d.ctaIntro[0]}</p>
 
           <a href="/book-a-call"
-            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">
-            Book a Free GTM Audit
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">{d.ctaButton}<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
 
-          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>No commitment. We&apos;ll show you the gaps before you decide anything.</p>
+          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>{d.ctaNote}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 pt-8 border-t" style={{ borderColor: "#E8E2D9" }}>
-            {["Strategy live in 2-3 weeks", "Same team builds and runs it", "Reviewed and adjusted monthly"].map((item) => (
+            {d.ctaChecks.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <svg className="w-4 h-4 flex-shrink-0" style={{ color: "#A14A08" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

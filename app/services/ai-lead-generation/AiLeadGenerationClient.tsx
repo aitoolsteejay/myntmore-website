@@ -10,57 +10,34 @@ import RelatedPath from "../../components/RelatedPath";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-pages/ai-lead-generation.json";
 
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "AI Lead Generation",
-  description: "Custom AI agents research, qualify, and prioritise leads at scale, so your sales team only talks to people worth their time.",
-  serviceType: "AI-Powered B2B Lead Generation",
+  name: d.schemaName,
+  description: d.schemaDescription,
+  serviceType: d.schemaServiceType,
   url: `${SITE_URL}/services/ai-lead-generation`,
 });
 
 
-const STEPS = [
-  { n: "01", title: "ICP & Agent Setup", desc: "We map your Ideal Customer Profile in detail, then configure custom AI agents with your specific qualification criteria, triggers, and scoring weights." },
-  { n: "02", title: "Data Sourcing & Enrichment", desc: "Agents pull from LinkedIn, company websites, news signals, and financial reports to build a full intelligence picture on every account." },
-  { n: "03", title: "Lead Scoring & Prioritisation", desc: "Leads are ranked by fit and intent. Your team only ever sees the top tier: accounts worth their time, not raw lists." },
-  { n: "04", title: "Delivery & Handoff", desc: "Scored leads and full research summaries are delivered straight to your team, clean and organised. No manual reformatting. No lost context." },
-];
+const STEPS = d.steps;
 
 const HOWTO_SCHEMA = buildHowToSchema(
-  "How AI Lead Generation Works",
+  d.howToName,
   STEPS.map((s) => ({ name: s.title, text: s.desc }))
 );
 
-const DELIVERABLES = [
-  "AI-scored lead lists with deep qualification",
-  "Research summaries on every prospect",
-  "Clean, structured lead exports mapped to your fields",
-  "Weekly pipeline health and volume reports",
-  "Automated lead routing and prioritisation",
-  "Custom AI agent infrastructure for your team",
-];
+const DELIVERABLES = d.deliverables;
 
-const WHO_FOR = [
-  { icon: "⚡", title: "High Volume GTM Teams", desc: "Teams processing thousands of accounts per month who can't sacrifice quality or personalisation for speed." },
-  { icon: "🚀", title: "Growth Stage Companies", desc: "Businesses moving from founder-led sales to a repeatable system that runs without constant manual input." },
-  { icon: "🎯", title: "ABM Teams", desc: "Account-based teams that need deep account-level research at scale to power high-impact outbound campaigns." },
-];
+const WHO_FOR = d.whoFor;
 
-const NOT_FOR = [
-  "You want every message personally, manually written with no automation involved at all.",
-  "Your current volume is low enough that a small manual process already works fine.",
-  "You're in a category where any automated outreach carries real compliance risk.",
-];
+const NOT_FOR = d.notFor;
 
 
 const FAQ_ITEMS = pageFaqsQA("service-ai-lead-generation");
 const FAQ_SCHEMA = buildFaqSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })));
 
-const BENEFITS = [
-  "AI-scored leads", "24/7 agent operation", "Research summaries", "Clean lead exports",
-  "Intent signal tracking", "Account enrichment", "ICP refinement", "Pipeline velocity",
-  "No manual research", "Qualify at scale", "Reduce cost per lead", "Boost reply rates",
-];
+const BENEFITS = d.benefits;
 
 function AccordionItem({ q, a, open, onToggle, index }: { q: string; a: string; open: boolean; onToggle: () => void; index: number }) {
   return (
@@ -228,28 +205,21 @@ export default function AiLeadGenerationClient() {
         <div ref={blob2} aria-hidden style={{ position: "absolute", top: "40%", left: "75%", width: 500, height: 500, marginTop: -250, marginLeft: -250, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.2) 0%, rgba(255,130,0,0.08) 40%, transparent 70%)", filter: "blur(55px)", pointerEvents: "none", willChange: "transform" }} />
         <div ref={blob3} aria-hidden style={{ position: "absolute", top: "70%", left: "50%", width: 400, height: 400, marginTop: -200, marginLeft: -200, borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)", filter: "blur(50px)", pointerEvents: "none", willChange: "transform" }} />
         <div className="relative z-10 max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "AI Lead Generation", href: "/services/ai-lead-generation" }]} />
+          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: d.breadcrumbLabel, href: "/services/ai-lead-generation" }]} />
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade" style={{ borderColor: "rgba(59,130,246,0.35)", background: "rgba(59,130,246,0.07)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#3b82f6" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#1D4ED8" }}>AI Lead Generation</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#1D4ED8" }}>{d.badge}</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            Your pipeline shouldn&apos;t depend<br />
-            <span className="relative inline-block">
-              on how much time
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 400 10" preserveAspectRatio="none" aria-hidden>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>{d.h1[0]}<br />
+            <span className="relative inline-block">{d.h1[1]}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 400 10" preserveAspectRatio="none" aria-hidden>
                 <path ref={underlineRef} d="M2 7 Q100 2 200 6 Q300 10 398 5" stroke="#3b82f6" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
-            </span>{" "}
-            your team has.
-          </h1>
-          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>Custom AI agents research, qualify, and prioritise leads at scale, so your sales team only talks to people worth their time.</p>
+            </span>{" "}{d.h1[2]}</h1>
+          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>{d.heroIntro}</p>
           <div className="flex flex-col sm:flex-row gap-4 hero-fade-d3">
-            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Get a Free GTM Audit
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaPrimary}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">See Real Results</Link>
+            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaSecondary}</Link>
           </div>
         </div>
       </section>
@@ -259,9 +229,9 @@ export default function AiLeadGenerationClient() {
       <div ref={statsContainerRef} className="border-y py-10 px-4" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {[
-            { ref: stat1Ref, init: "1500+", label: "Scored leads delivered per month" },
-            { ref: stat2Ref, init: "80%", label: "Reduction in manual research time" },
-            { ref: stat3Ref, init: "35%", label: "Average LinkedIn reply rate" },
+            { ref: stat1Ref, init: d.stats[0].init, label: d.stats[0].label },
+            { ref: stat2Ref, init: d.stats[1].init, label: d.stats[1].label },
+            { ref: stat3Ref, init: d.stats[2].init, label: d.stats[2].label },
           ].map((s, i) => (
             <div key={i} className={`${i < 2 ? "sm:border-r" : ""} px-4`} style={{ borderColor: "#E8E2D9" }}>
               <span ref={s.ref} className="block text-4xl font-black mb-1" style={{ color: "#0a0a0a" }}>{s.init}</span>
@@ -282,9 +252,9 @@ export default function AiLeadGenerationClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5" style={{ backgroundColor: "rgba(239,68,68,0.08)", color: "#B91C1C", border: "1px solid rgba(239,68,68,0.2)" }}>The Problem</span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>Traditional lead gen is a time tax on your best people</h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.problemTitle}</h2>
               <div className="space-y-4">
-                {["Your AE spends 3–4 hours a day manually searching LinkedIn","Lists are stale by the time they get to outreach","No context means cold, generic messages that get ignored","You scale headcount instead of output"].map((p) => (
+                {d.problemPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "rgba(239,68,68,0.1)" }}>
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="#dc2626" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -296,9 +266,9 @@ export default function AiLeadGenerationClient() {
             </div>
             <div>
               <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5" style={{ backgroundColor: "rgba(59,130,246,0.08)", color: "#1D4ED8", border: "1px solid rgba(59,130,246,0.2)" }}>The Myntmore Way</span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>AI agents handle the intelligence layer, your team handles the deals</h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.solutionTitle}</h2>
               <div className="space-y-4">
-                {["Custom agents research and enrich 1,000+ accounts per month","Real-time signals: funding news, hiring patterns, job posts","Every lead arrives with a full research summary attached","Scale output without scaling headcount"].map((p) => (
+                {d.solutionPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: "rgba(59,130,246,0.1)" }}>
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="#3b82f6" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -361,7 +331,7 @@ export default function AiLeadGenerationClient() {
           </div>
           <div>
             <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6" style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>Who It&apos;s For</span>
-            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Built for teams like yours</h2>
+            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.whoForTitle}</h2>
             <div className="space-y-4">
               {WHO_FOR.map((w) => (
                 <div key={w.title} className="rounded-2xl border p-6 transition-all duration-200" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}
@@ -401,13 +371,9 @@ export default function AiLeadGenerationClient() {
 
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>
-            Built by the same team running the AI-powered lead generation behind{" "}
-            <span className="font-bold" style={{ color: "#0a0a0a" }}>12K+ B2B meetings booked</span> and $120M+ in pipeline generated for our clients.
-          </p>
-          <Link href="/case-studies/saas-series-a" className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all" style={{ color: "#1D4ED8" }}>
-            Read how a SaaS company got 40 meetings in 8 weeks
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>{d.trackIntro}{" "}
+            <span className="font-bold" style={{ color: "#0a0a0a" }}>{d.trackStrong}</span>{d.trackRest}</p>
+          <Link href={d.trackHref} className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all" style={{ color: "#1D4ED8" }}>{d.trackLinkText}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
           </Link>
         </div>
       </section>
@@ -436,17 +402,14 @@ export default function AiLeadGenerationClient() {
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#F5B731" }} />
             <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Limited spots available</span>
           </div>
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>
-            Let AI<br /><span style={{ color: "#3b82f6" }}>fill your pipeline</span>
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>{d.ctaTitle[0]}<br /><span style={{ color: "#3b82f6" }}>{d.ctaTitle[1]}</span>
           </h2>
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>We&apos;ll configure a custom AI lead generation setup for your ICP in <span className="font-semibold" style={{ color: "#0a0a0a" }}>7 days</span>. No generic lists. No wasted budget.</p>
-          <a href="/book-a-call" className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">
-            Book Your Free GTM Audit
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>{d.ctaIntro[0]}<span className="font-semibold" style={{ color: "#0a0a0a" }}>{d.ctaIntro[1]}</span>{d.ctaIntro[2]}</p>
+          <a href="/book-a-call" className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">{d.ctaButton}<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
-          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>No commitment. No fluff. Just a real conversation about your growth.</p>
+          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>{d.ctaNote}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 pt-8 border-t" style={{ borderColor: "#E8E2D9" }}>
-            {["Setup in 7 days", "Custom AI agents for your ICP", "Results or we make it right"].map((item) => (
+            {d.ctaChecks.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <svg className="w-4 h-4 flex-shrink-0" style={{ color: "#A14A08" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                 <span className="text-sm" style={{ color: "#52525B" }}>{item}</span>

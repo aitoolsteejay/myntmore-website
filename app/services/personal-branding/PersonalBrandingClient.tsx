@@ -10,59 +10,36 @@ import RelatedPath from "../../components/RelatedPath";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-pages/personal-branding.json";
 
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "Personal Branding",
-  description: "We ghostwrite LinkedIn content that positions you as the authority in your space, 4–8 posts a month from a single monthly voice interview, so inbound finds you instead of you chasing it.",
-  serviceType: "B2B Personal Branding and LinkedIn Content Ghostwriting",
+  name: d.schemaName,
+  description: d.schemaDescription,
+  serviceType: d.schemaServiceType,
   url: `${SITE_URL}/services/personal-branding`,
 });
 
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
-const STEPS = [
-  { n: "01", title: "Voice & Positioning Interview", desc: "A focused 45-minute call to capture how you actually think, the stories only you can tell, and the angle that makes you distinct from every other founder posting generic advice." },
-  { n: "02", title: "Content Calendar & Ghostwriting", desc: "From that single interview, we write 4–8 LinkedIn posts a month in your voice, not a template, built around the angles that build authority with your specific buyers." },
-  { n: "03", title: "Review & Publish", desc: "You review and approve every post before it goes out. Once approved, we handle scheduling and publishing so nothing slips or gets forgotten in a busy week." },
-  { n: "04", title: "Engagement & Inbound Tracking", desc: "We track who's viewing your profile, engaging with your posts, and reaching out, and flag warm inbound signals so you know exactly who's paying attention." },
-];
+const STEPS = d.steps;
 
 const HOWTO_SCHEMA = buildHowToSchema(
-  "How Personal Branding Works",
+  d.howToName,
   STEPS.map((s) => ({ name: s.title, text: s.desc }))
 );
 
-const DELIVERABLES = [
-  "One monthly voice interview to capture your authentic perspective",
-  "4–8 ghostwritten LinkedIn posts a month, written in your voice",
-  "Full review and approval before anything goes live",
-  "Content calendar and scheduling handled end to end",
-  "Monthly profile visit and engagement reporting",
-  "Inbound lead flagging from engaged followers and profile views",
-];
+const DELIVERABLES = d.deliverables;
 
-const WHO_FOR = [
-  { icon: "💼", title: "Founders & Executives", desc: "Leaders who know their buyers are watching but don't have the time, or the desire, to write and post consistently themselves." },
-  { icon: "🎯", title: "Consultants & Advisors", desc: "Professionals whose credibility is their product, who need visible proof of expertise before a prospect ever books a call." },
-  { icon: "📈", title: "Sales & GTM Leaders", desc: "Leaders who want inbound interest doing work outbound alone can't, so warm conversations start before the first cold touch." },
-];
+const WHO_FOR = d.whoFor;
 
-const NOT_FOR = [
-  "You (the founder or exec) aren't willing to be the visible face of the content.",
-  "You want purely anonymous, company-page-only visibility.",
-  "You're chasing viral reach rather than a steady, credibility-building presence with your ICP.",
-];
+const NOT_FOR = d.notFor;
 
 
 const FAQ_ITEMS = pageFaqsQA("service-personal-branding");
 const FAQ_SCHEMA = buildFaqSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })));
 
-const BENEFITS = [
-  "10x profile visits", "Ghostwritten content", "Your voice, not ours", "4–8 posts/month",
-  "Full review & approval", "Inbound tracking", "Authority positioning", "One interview/month",
-  "No blank page", "Consistent presence", "2x reply rate", "Built for LinkedIn",
-];
+const BENEFITS = d.benefits;
 
 /* ─── Sub-components ─────────────────────────────────────────── */
 
@@ -252,37 +229,28 @@ export default function PersonalBrandingClient() {
         <div ref={blob3} aria-hidden style={{ position: "absolute", top: "70%", left: "50%", width: 400, height: 400, marginTop: -200, marginLeft: -200, borderRadius: "50%", background: "radial-gradient(circle, rgba(217,119,6,0.12) 0%, transparent 70%)", filter: "blur(50px)", pointerEvents: "none", willChange: "transform" }} />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Personal Branding", href: "/services/personal-branding" }]} />
+          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: d.breadcrumbLabel, href: "/services/personal-branding" }]} />
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade"
             style={{ borderColor: "rgba(217,119,6,0.35)", background: "rgba(217,119,6,0.07)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#D97706" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Personal Branding</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>{d.badge}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            Your buyers are on LinkedIn every day.{" "}
-            <span className="relative inline-block">
-              Most founders are invisible to them.
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>{d.h1[0]}{" "}
+            <span className="relative inline-block">{d.h1[1]}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                 <path ref={underlineRef} d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#D97706" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>
-            We ghostwrite LinkedIn content that positions you as the authority in your space, 4–8 posts a month from a single monthly voice interview, so inbound finds you instead of you chasing it.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>{d.heroIntro}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 hero-fade-d3">
             <a href="/book-a-call"
-              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Get a Free Content Audit
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaPrimary}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              See Real Results
-            </Link>
+            <Link href="/case-studies" className="btn-ghost px-8 py-4 text-base font-bold inline-flex items-center gap-2">{d.ctaSecondary}</Link>
           </div>
         </div>
       </section>
@@ -293,9 +261,9 @@ export default function PersonalBrandingClient() {
       <div ref={statsContainerRef} className="border-y py-10 px-4" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {[
-            { ref: stat1Ref, init: "10x", label: "Average increase in profile visits" },
-            { ref: stat2Ref, init: "2x", label: "Boost in inbound reply rate" },
-            { ref: stat3Ref, init: "6/mo", label: "Avg. ghostwritten posts, one interview" },
+            { ref: stat1Ref, init: d.stats[0].init, label: d.stats[0].label },
+            { ref: stat2Ref, init: d.stats[1].init, label: d.stats[1].label },
+            { ref: stat3Ref, init: d.stats[2].init, label: d.stats[2].label },
           ].map((s, i) => (
             <div key={i} className={`${i < 2 ? "sm:border-r" : ""} px-4`} style={{ borderColor: "#E8E2D9" }}>
               <span ref={s.ref} className="block text-4xl font-black mb-1" style={{ color: "#0a0a0a" }}>{s.init}</span>
@@ -321,16 +289,9 @@ export default function PersonalBrandingClient() {
                 style={{ backgroundColor: "rgba(239,68,68,0.08)", color: "#B91C1C", border: "1px solid rgba(239,68,68,0.2)" }}>
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                You know content matters. You still don&apos;t post
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.problemTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "Staring at a blank cursor every week, then giving up and doing nothing",
-                  "Posting generic advice that sounds like every other founder's feed",
-                  "No system means content happens in bursts, then disappears for months",
-                  "Prospects Google you before a call and find nothing that builds trust",
-                ].map((p) => (
+                {d.problemPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(239,68,68,0.1)" }}>
@@ -348,16 +309,9 @@ export default function PersonalBrandingClient() {
                 style={{ backgroundColor: "rgba(217,119,6,0.08)", color: "#A14A08", border: "1px solid rgba(217,119,6,0.2)" }}>
                 The Myntmore Way
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-                One conversation a month. Your voice, every week
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{d.solutionTitle}</h2>
               <div className="space-y-4">
-                {[
-                  "A single 45-minute interview replaces hours of writing every week",
-                  "Every post written in your actual voice, not a generic template",
-                  "You review and approve before anything goes live, always",
-                  "10x profile visits means prospects find real proof before the call",
-                ].map((p) => (
+                {d.solutionPoints.map((p) => (
                   <div key={p} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ backgroundColor: "rgba(217,119,6,0.1)" }}>
@@ -383,7 +337,7 @@ export default function PersonalBrandingClient() {
               The Process
             </span>
             <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>How it works</h2>
-            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>One interview a month. A full content calendar in your voice, out the other side.</p>
+            <p className="text-base mt-3 max-w-xl" style={{ color: "#52525B" }}>{d.processIntro}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -446,7 +400,7 @@ export default function PersonalBrandingClient() {
               style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
               Who It&apos;s For
             </span>
-            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Built for people whose credibility is the product</h2>
+            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.whoForTitle}</h2>
             <div className="space-y-4">
               {WHO_FOR.map((w) => (
                 <div key={w.title} className="rounded-2xl border p-6 transition-all duration-200"
@@ -488,14 +442,10 @@ export default function PersonalBrandingClient() {
       {/* ── Track record ─────────────────────────────────────── */}
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>
-            Built by the same team running the personal-brand content behind{" "}
-            <span className="font-bold" style={{ color: "#0a0a0a" }}>12K+ B2B meetings booked</span> and $120M+ in pipeline generated for our clients.
-          </p>
-          <Link href="/case-studies/professional-services-linkedin" className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
-            style={{ color: "#A14A08" }}>
-            Read how a LinkedIn brand drove 3x inbound in 90 days
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <p className="text-lg leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>{d.trackIntro}{" "}
+            <span className="font-bold" style={{ color: "#0a0a0a" }}>{d.trackStrong}</span>{d.trackRest}</p>
+          <Link href={d.trackHref} className="text-sm font-bold inline-flex items-center gap-1.5 hover:gap-2.5 transition-all"
+            style={{ color: "#A14A08" }}>{d.trackLinkText}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -534,26 +484,21 @@ export default function PersonalBrandingClient() {
             <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Limited spots available</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>
-            Let&apos;s make your buyers<br /><span style={{ color: "#A14A08" }}>see you as the authority</span>
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>{d.ctaTitle[0]}<br /><span style={{ color: "#A14A08" }}>{d.ctaTitle[1]}</span>
           </h2>
 
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>
-            Book a free content audit and we&apos;ll show you exactly what&apos;s missing from your current LinkedIn presence, and what a consistent one could look like.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>{d.ctaIntro[0]}</p>
 
           <a href="/book-a-call"
-            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">
-            Book a Free Content Audit
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark">{d.ctaButton}<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
 
-          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>No commitment. Just a real look at what&apos;s possible for your presence.</p>
+          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>{d.ctaNote}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 pt-8 border-t" style={{ borderColor: "#E8E2D9" }}>
-            {["Live in 2–3 weeks", "One interview a month", "Results or we make it right"].map((item) => (
+            {d.ctaChecks.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <svg className="w-4 h-4 flex-shrink-0" style={{ color: "#A14A08" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

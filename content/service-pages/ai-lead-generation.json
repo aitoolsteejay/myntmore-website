@@ -1,0 +1,154 @@
+{
+  "slug": "ai-lead-generation",
+  "metaTitle": "AI Lead Generation Services for B2B",
+  "metaDescription": "Custom AI agents research, qualify, and prioritise leads at scale. 80% less manual research. Book a free AI lead gen audit.",
+  "keywords": [
+    "ai lead generation agency",
+    "ai lead generation services for b2b",
+    "ai agents for lead research",
+    "ai powered lead qualification",
+    "automated lead research and enrichment",
+    "ai lead scoring for sales teams",
+    "ai lead generation vs manual prospecting",
+    "how to use ai for b2b lead generation",
+    "ai sales lead generation company",
+    "reduce manual prospecting with ai",
+    "ai enriched lead lists",
+    "b2b lead generation with ai agents",
+    "ai lead gen agency mumbai",
+    "custom ai agents for sales prospecting",
+    "ai lead generation for saas companies"
+  ],
+  "ogTitle": "AI Lead Generation Services for B2B | Myntmore",
+  "ogDescription": "Your pipeline shouldn't depend on how much time your team has. Custom AI agents that research, qualify, and prioritise leads at scale.",
+  "schemaName": "AI Lead Generation",
+  "schemaDescription": "Custom AI agents research, qualify, and prioritise leads at scale, so your sales team only talks to people worth their time.",
+  "schemaServiceType": "AI-Powered B2B Lead Generation",
+  "steps": [
+    {
+      "n": "01",
+      "title": "ICP & Agent Setup",
+      "desc": "We map your Ideal Customer Profile in detail, then configure custom AI agents with your specific qualification criteria, triggers, and scoring weights."
+    },
+    {
+      "n": "02",
+      "title": "Data Sourcing & Enrichment",
+      "desc": "Agents pull from LinkedIn, company websites, news signals, and financial reports to build a full intelligence picture on every account."
+    },
+    {
+      "n": "03",
+      "title": "Lead Scoring & Prioritisation",
+      "desc": "Leads are ranked by fit and intent. Your team only ever sees the top tier: accounts worth their time, not raw lists."
+    },
+    {
+      "n": "04",
+      "title": "Delivery & Handoff",
+      "desc": "Scored leads and full research summaries are delivered straight to your team, clean and organised. No manual reformatting. No lost context."
+    }
+  ],
+  "howToName": "How AI Lead Generation Works",
+  "deliverables": [
+    "AI-scored lead lists with deep qualification",
+    "Research summaries on every prospect",
+    "Clean, structured lead exports mapped to your fields",
+    "Weekly pipeline health and volume reports",
+    "Automated lead routing and prioritisation",
+    "Custom AI agent infrastructure for your team"
+  ],
+  "whoFor": [
+    {
+      "icon": "⚡",
+      "title": "High Volume GTM Teams",
+      "desc": "Teams processing thousands of accounts per month who can't sacrifice quality or personalisation for speed."
+    },
+    {
+      "icon": "🚀",
+      "title": "Growth Stage Companies",
+      "desc": "Businesses moving from founder-led sales to a repeatable system that runs without constant manual input."
+    },
+    {
+      "icon": "🎯",
+      "title": "ABM Teams",
+      "desc": "Account-based teams that need deep account-level research at scale to power high-impact outbound campaigns."
+    }
+  ],
+  "notFor": [
+    "You want every message personally, manually written with no automation involved at all.",
+    "Your current volume is low enough that a small manual process already works fine.",
+    "You're in a category where any automated outreach carries real compliance risk."
+  ],
+  "benefits": [
+    "AI-scored leads",
+    "24/7 agent operation",
+    "Research summaries",
+    "Clean lead exports",
+    "Intent signal tracking",
+    "Account enrichment",
+    "ICP refinement",
+    "Pipeline velocity",
+    "No manual research",
+    "Qualify at scale",
+    "Reduce cost per lead",
+    "Boost reply rates"
+  ],
+  "breadcrumbLabel": "AI Lead Generation",
+  "badge": "AI Lead Generation",
+  "heroIntro": "Custom AI agents research, qualify, and prioritise leads at scale, so your sales team only talks to people worth their time.",
+  "h1": [
+    "Your pipeline shouldn't depend",
+    "on how much time",
+    "your team has."
+  ],
+  "ctaPrimary": "Get a Free GTM Audit",
+  "ctaSecondary": "See Real Results",
+  "stats": [
+    {
+      "init": "1500+",
+      "label": "Scored leads delivered per month"
+    },
+    {
+      "init": "80%",
+      "label": "Reduction in manual research time"
+    },
+    {
+      "init": "35%",
+      "label": "Average LinkedIn reply rate"
+    }
+  ],
+  "problemTitle": "Traditional lead gen is a time tax on your best people",
+  "problemPoints": [
+    "Your AE spends 3–4 hours a day manually searching LinkedIn",
+    "Lists are stale by the time they get to outreach",
+    "No context means cold, generic messages that get ignored",
+    "You scale headcount instead of output"
+  ],
+  "solutionTitle": "AI agents handle the intelligence layer, your team handles the deals",
+  "solutionPoints": [
+    "Custom agents research and enrich 1,000+ accounts per month",
+    "Real-time signals: funding news, hiring patterns, job posts",
+    "Every lead arrives with a full research summary attached",
+    "Scale output without scaling headcount"
+  ],
+  "whoForTitle": "Built for teams like yours",
+  "trackIntro": "Built by the same team running the AI-powered lead generation behind",
+  "trackStrong": "12K+ B2B meetings booked",
+  "trackRest": " and $120M+ in pipeline generated for our clients.",
+  "trackHref": "/case-studies/saas-series-a",
+  "trackLinkText": "Read how a SaaS company got 40 meetings in 8 weeks",
+  "ctaTitle": [
+    "Let AI",
+    "fill your pipeline"
+  ],
+  "ctaIntro": [
+    "We'll configure a custom AI lead generation setup for your ICP in ",
+    "7 days",
+    ". No generic lists. No wasted budget."
+  ],
+  "ctaButton": "Book Your Free GTM Audit",
+  "ctaNote": "No commitment. No fluff. Just a real conversation about your growth.",
+  "ctaChecks": [
+    "Setup in 7 days",
+    "Custom AI agents for your ICP",
+    "Results or we make it right"
+  ]
+}

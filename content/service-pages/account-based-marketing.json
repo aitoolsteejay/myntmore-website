@@ -1,0 +1,150 @@
+{
+  "slug": "account-based-marketing",
+  "metaTitle": "Account-Based Marketing Services for B2B",
+  "metaDescription": "Coordinated multi-channel campaigns across email and LinkedIn to engage your highest-value target accounts. Book a free ABM strategy call.",
+  "keywords": [
+    "account-based marketing agency",
+    "b2b abm services",
+    "abm agency india",
+    "account based marketing for b2b saas",
+    "target account marketing strategy",
+    "buying committee engagement",
+    "multi-channel abm campaigns",
+    "abm vs demand generation",
+    "how to run account-based marketing for enterprise accounts",
+    "abm agency mumbai",
+    "coordinated email and linkedin campaigns",
+    "target account selection framework",
+    "abm for high-value accounts",
+    "account-based marketing vs inbound marketing",
+    "b2b abm agency for saas companies",
+    "increase average deal size b2b"
+  ],
+  "ogTitle": "Account-Based Marketing Services for B2B | Myntmore",
+  "ogDescription": "Stop marketing to everyone. Go all-in on the accounts that actually move revenue.",
+  "schemaName": "Account-Based Marketing",
+  "schemaDescription": "Coordinated multi-channel campaigns across email and LinkedIn that engage the entire buying committee at your highest-value target accounts, so your AE isn't the first name they've seen.",
+  "schemaServiceType": "Account-Based Marketing",
+  "steps": [
+    {
+      "n": "01",
+      "title": "Target Account Selection",
+      "desc": "We build a tiered list of your highest-value target accounts, scored against your ICP, deal size, and buying-intent signals. Tier 1 gets the most coordinated attention; Tier 3 stays on a lighter-touch cadence."
+    },
+    {
+      "n": "02",
+      "title": "Multi-Channel Campaign Design",
+      "desc": "LinkedIn outreach, email sequences, and (where relevant) retargeting are planned around the same account list, timed to reinforce each other instead of running as separate, uncoordinated efforts."
+    },
+    {
+      "n": "03",
+      "title": "Buying Committee Engagement",
+      "desc": "We identify and message multiple stakeholders per account, not just one contact, so by the time your AE reaches out, several people at the account already recognise your name."
+    },
+    {
+      "n": "04",
+      "title": "Sales Handoff & Reporting",
+      "desc": "Engagement data (who opened, replied, clicked, or accepted) rolls up into account-level reporting delivered to your team, so your sales team walks into every conversation with full context."
+    }
+  ],
+  "howToName": "How Account-Based Marketing Works",
+  "deliverables": [
+    "Tiered target account list built from your ICP and deal-size criteria",
+    "Coordinated LinkedIn + email campaigns run against the same account list",
+    "Multi-threaded messaging to reach multiple stakeholders per account",
+    "Account-level engagement reporting and attribution",
+    "Structured sales handoff so your AEs open with full context",
+    "Monthly account tiering review and list refresh"
+  ],
+  "whoFor": [
+    {
+      "icon": "🏢",
+      "title": "Enterprise & Complex-Sale Teams",
+      "desc": "Long sales cycles with multiple stakeholders per deal, where reaching one contact isn't enough to move an account forward."
+    },
+    {
+      "icon": "🎯",
+      "title": "Finite Target-Account Teams",
+      "desc": "A defined universe of accounts worth going deep on, not a broad-market volume play. Quality of engagement per account matters more than raw contact count."
+    },
+    {
+      "icon": "🤝",
+      "title": "RevOps & Marketing Leaders",
+      "desc": "Teams that want sales and marketing coordinated around the same named accounts, instead of running two disconnected motions that never reinforce each other."
+    }
+  ],
+  "notFor": [
+    "You don't have a definable, finite list of named target accounts.",
+    "Your average deal size doesn't justify the cost of deep, account-level personalisation.",
+    "You're running a broad-market volume play, not a focused push on specific accounts."
+  ],
+  "benefits": [
+    "Tiered account lists",
+    "Multi-channel campaigns",
+    "Buying committee reach",
+    "Account-level reporting",
+    "Sales handoff",
+    "LinkedIn + email",
+    "Intent-based targeting",
+    "Named account focus"
+  ],
+  "breadcrumbLabel": "Account-Based Marketing",
+  "badge": "Account-Based Marketing",
+  "heroIntro": "Coordinated multi-channel campaigns across email and LinkedIn engage the entire buying committee at your highest-value target accounts, so your AE isn't the first name they've seen.",
+  "h1": [
+    "Stop marketing to",
+    "everyone.",
+    "Go all-in on the accounts that matter."
+  ],
+  "ctaPrimary": "Build Your Target Account List",
+  "ctaSecondary": "See Real Results",
+  "stats": [
+    {
+      "init": "6.4x",
+      "label": "Higher average deal size on engaged accounts"
+    },
+    {
+      "init": "3+",
+      "label": "Channels orchestrated per account"
+    },
+    {
+      "init": "12K+",
+      "label": "Meetings booked for clients across all services"
+    }
+  ],
+  "problemTitle": "One contact at an account isn't a strategy",
+  "problemPoints": [
+    "Your best-fit accounts have 5-8 stakeholders in the buying decision, not one",
+    "Broad-market outreach treats a $500K enterprise deal the same as a $2K self-serve signup",
+    "Sales and marketing run separate motions on the same accounts with no shared context",
+    "By the time an AE calls, the account has never heard of you, or worse, only heard from a bot"
+  ],
+  "solutionTitle": "Coordinated campaigns, built around named accounts",
+  "solutionPoints": [
+    "Every target account gets a tier, and a plan matched to how much it's worth winning",
+    "LinkedIn and email work together against the same account, not as separate campaigns",
+    "Multiple stakeholders per account see consistent messaging before your AE ever calls",
+    "Sales sees exactly who's engaged and why, before the first conversation happens"
+  ],
+  "processIntro": "Account tiering first. Coordinated multi-channel campaigns second. Your sales team armed with full context by the first call.",
+  "whoForTitle": "Built for teams going deep on a defined list",
+  "trackIntro": "Built by the same team running the account-based programs behind",
+  "trackStrong": "12K+ B2B meetings booked",
+  "trackRest": " and $120M+ in pipeline generated for our clients.",
+  "trackHref": "/case-studies",
+  "trackLinkText": "Read the full case studies",
+  "ctaTitle": [
+    "Go deep on the",
+    "accounts that matter"
+  ],
+  "ctaIntro": [
+    "Book a free session and we'll map out how a target-account campaign would run against your actual highest-value accounts."
+  ],
+  "ctaButton": "Map Your Target Accounts",
+  "ctaNote": "No commitment. Just a live look at what a coordinated campaign looks like for your accounts.",
+  "ctaChecks": [
+    "Tiered account targeting",
+    "Multi-channel coordination",
+    "Results or we make it right"
+  ]
+}
