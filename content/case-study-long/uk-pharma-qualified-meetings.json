@@ -1,0 +1,85 @@
+{
+  "metaTitle": "20+ Qualified Meetings/Month for UK Pharma",
+  "metaDescription": "How Myntmore helped a UK pharma company grow from 3 to 20+ qualified meetings per month and generate £200K+ in potential pipeline.",
+  "keywords": [
+    "pharma lead generation case study",
+    "uk pharmaceutical lead generation",
+    "b2b pharma outbound",
+    "pharma appointment setting",
+    "pharma icp mapping",
+    "linkedin outreach pharma",
+    "b2b lead generation uk",
+    "account based marketing pharma"
+  ],
+  "ogTitle": "20+ Qualified Meetings per Month | UK Pharma Case Study | Myntmore",
+  "ogDescription": "20+ qualified meetings per month · 35% positive response rate · £200K+ potential pipeline",
+  "schemaHeadline": "20+ Qualified Meetings per Month | UK Pharma Case Study | Myntmore",
+  "schemaDescription": "20+ qualified meetings per month · 35% positive response rate · £200K+ potential pipeline",
+  "datePublished": "2026-08-24T10:55:56+05:30",
+  "dateModified": "2026-08-24T10:55:56+05:30",
+  "hero": {
+    "breadcrumbLabel": "Pharma · United Kingdom",
+    "badge": "Pharma · United Kingdom",
+    "headline": "20+ qualified meetings per month for a UK pharma company",
+    "intro": "A UK-based pharmaceutical company needed a more predictable way to reach the right B2B decision-makers in a specialised market without relying on broad, volume-heavy outreach.",
+    "stats": [
+      { "value": "20+", "label": "Qualified meetings / month" },
+      { "value": "35%", "label": "Positive response rate" },
+      { "value": "£200K+", "label": "Potential pipeline generated" }
+    ]
+  },
+  "problem": {
+    "eyebrow": "01 · The problem",
+    "heading": "Precision mattered more than volume",
+    "paragraphs": [
+      "The client was operating in a specialised pharma market where the number of genuinely relevant accounts was limited. Their existing outbound was generating just 3 meetings per month, with a 5% positive response rate and only 1 qualified opportunity.",
+      "Simply increasing outreach volume was not the answer. They needed a way to identify the highest-fit accounts, reach the actual decision-makers within them, and create messaging relevant enough to start meaningful sales conversations."
+    ]
+  },
+  "solution": {
+    "eyebrow": "02 · The solution",
+    "heading": "We rebuilt outbound from the buyer backwards",
+    "paragraphs": [
+      "Instead of maximising the size of the prospect database, we narrowed the ICP, mapped high-fit accounts and decision-makers, and segmented outreach around the specific priorities of each buyer group.",
+      "We then used live campaign data to continuously refine targeting, messaging and follow-ups based on which segments and personas were actually converting."
+    ],
+    "areas": [
+      {
+        "title": "ICP Mapping & Account Selection",
+        "body": "Narrowed the market to high-fit pharma accounts based on commercial relevance, company profile, buyer fit and likelihood to convert."
+      },
+      {
+        "title": "Decision-Maker Outreach",
+        "body": "Mapped the relevant stakeholders within each account and built segment-specific messaging around the problems and outcomes that mattered to each persona."
+      },
+      {
+        "title": "Campaign Optimisation",
+        "body": "Tracked responses, objections and conversion patterns to continuously improve targeting, messaging and follow-up sequences throughout the engagement."
+      }
+    ]
+  },
+  "results": {
+    "eyebrow": "03 · The results",
+    "heading": "A repeatable source of qualified opportunities",
+    "intro": "Within 4 months, the outbound system went from inconsistent prospecting to a repeatable source of qualified B2B opportunities.",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "table": [
+      { "before": "3", "after": "20+", "label": "Qualified meetings / month" },
+      { "before": "5%", "after": "35%", "label": "Positive response rate" },
+      { "before": "1", "after": "11+", "label": "Qualified opportunities" },
+      { "before": "£18K", "after": "£200K+", "label": "Potential pipeline generated" }
+    ],
+    "calloutHeadline": "Nearly 7X more meetings, 7X the positive response rate, 11X the qualified opportunities and 11X+ the potential pipeline.",
+    "calloutBody": "More importantly, the growth did not come from simply contacting more people. It came from building a more precise system for identifying, reaching and converting the companies that actually mattered."
+  },
+  "services": {
+    "heading": "Services used in this engagement",
+    "items": [
+      { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
+      { "name": "B2B Lead Generation", "href": "/services/ai-lead-generation" },
+      { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" },
+      { "name": "Outbound Strategy", "href": "/services" }
+    ]
+  }
+}

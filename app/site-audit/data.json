@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:43:56.197Z",
+  "generatedAt": "2026-11-04T07:13:24.417Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 293,
@@ -158,13 +158,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/wealth-management-pms-pipeline",
         "/",
         "/contact-us",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/services",
         "/services/cold-email",
-        "/services/linkedin-outreach"
+        "/services/linkedin-outreach",
+        "/case-studies/wealth-management-pms-pipeline"
       ],
       "inboundCount": 8,
       "noindex": false,
@@ -194,11 +194,11 @@
         "/1-on-1-consultation",
         "/about-us",
         "/case-studies",
-        "/case-studies/heritage-jewellery-valuation-pipeline",
-        "/case-studies/leadership-development-messaging-shift",
-        "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/professional-services-linkedin",
-        "/case-studies/retail-strategy-design-pipeline"
+        "/",
+        "/contact-us",
+        "/events",
+        "/founder-meeting",
+        "/marketing-automation"
       ],
       "inboundCount": 82,
       "noindex": true,
@@ -480,14 +480,14 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
-        "/case-studies/ecommerce-conversion-playbook",
-        "/case-studies/founder-personal-brand-linkedin",
-        "/case-studies/heritage-jewellery-valuation-pipeline",
-        "/case-studies/leadership-development-messaging-shift",
-        "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/predictable-b2b-lead-gen-engine",
-        "/case-studies/professional-services-linkedin",
-        "/case-studies/retail-strategy-design-pipeline"
+        "/",
+        "/editorial-policy",
+        "/resources/guides/ai-tech-stack-jewellery",
+        "/resources/guides/how-to-choose-an-outbound-agency",
+        "/services/account-based-marketing",
+        "/services/ai-lead-generation",
+        "/services/gtm-strategy",
+        "/services/personal-branding"
       ],
       "inboundCount": 27,
       "noindex": false,
@@ -512,9 +512,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -526,9 +528,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -540,9 +544,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -554,9 +560,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -607,9 +615,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -621,9 +631,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -635,9 +647,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -649,9 +663,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -663,9 +679,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -677,9 +695,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -705,9 +725,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -719,9 +741,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -733,9 +757,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -747,9 +773,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -761,9 +789,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -775,9 +805,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -789,9 +821,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -816,9 +850,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -830,9 +866,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -870,9 +908,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -912,9 +952,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -926,9 +968,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -940,9 +984,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -967,9 +1013,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -981,9 +1029,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1034,9 +1084,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1048,9 +1100,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1088,9 +1142,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1102,9 +1158,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1116,9 +1174,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1167,9 +1227,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1181,9 +1243,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1195,9 +1259,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1235,9 +1301,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1249,9 +1317,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1318,9 +1388,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1332,9 +1404,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1346,9 +1420,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1360,9 +1436,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1390,9 +1468,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1417,9 +1497,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1431,9 +1513,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1445,9 +1529,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1459,9 +1545,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1473,9 +1561,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1526,9 +1616,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1540,9 +1632,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1554,9 +1648,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1568,9 +1664,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1598,9 +1696,11 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "case-studies/CaseStudyLayout.tsx"
+        "case-studies/CaseStudyLayout.tsx",
+        "case-studies/long/CaseStudyStoryCta.tsx",
+        "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1888,13 +1988,13 @@
       "section": "lp",
       "status": "linked",
       "linkedFrom": [
-        "/case-studies/specialist-recruitment-linkedin-leads",
         "/",
         "/resources/blogs/agency-vs-in-house",
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/linkedin-outreach-sequences",
         "/resources/blogs/stop-selling-features-cold-outreach",
-        "/resources/blogs/what-is-b2b-outbound-sales"
+        "/resources/blogs/what-is-b2b-outbound-sales",
+        "/case-studies/specialist-recruitment-linkedin-leads"
       ],
       "inboundCount": 7,
       "noindex": false,
@@ -3631,13 +3731,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/uk-pharma-qualified-meetings",
         "/",
         "/marketing-automation",
         "/resources/guides/ai-tech-stack-jewellery",
         "/seo",
         "/services/account-based-marketing",
-        "/services/ai-lead-generation"
+        "/services/ai-lead-generation",
+        "/services/do-it-yourself"
       ],
       "inboundCount": 15,
       "noindex": false,
@@ -3669,13 +3769,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/ecommerce-conversion-playbook",
-        "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/predictable-b2b-lead-gen-engine",
-        "/case-studies/saas-series-a",
-        "/case-studies/uk-pharma-qualified-meetings",
         "/",
-        "/marketing-automation"
+        "/marketing-automation",
+        "/services",
+        "/resources/blogs/ai-personalization-cold-outreach",
+        "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/resources/blogs/predictable-b2b-lead-gen-engine",
+        "/case-studies/ecommerce-conversion-playbook"
       ],
       "inboundCount": 12,
       "noindex": false,
@@ -3689,13 +3789,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/ecommerce-conversion-playbook",
-        "/case-studies/predictable-b2b-lead-gen-engine",
-        "/case-studies/saas-series-a",
-        "/case-studies/specialist-recruitment-linkedin-leads",
         "/",
         "/marketing-automation",
-        "/resources/guides/cold-email-tech-stack"
+        "/resources/guides/cold-email-tech-stack",
+        "/resources/guides/golden-icp-framework",
+        "/services",
+        "cold-emailing/ColdEmailingPackage.tsx",
+        "/resources/blogs/ai-personalization-cold-outreach"
       ],
       "inboundCount": 18,
       "noindex": false,
@@ -3728,14 +3828,14 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/case-studies/founder-personal-brand-linkedin",
-        "/case-studies/retail-strategy-design-pipeline",
-        "/case-studies/wealth-management-pms-pipeline",
         "/",
         "/services",
         "/resources/blogs/founder-led-sales-before-scaling",
         "/resources/blogs/icp-mapping-b2b",
-        "/resources/blogs/multi-threading-b2b-buying-committee"
+        "/resources/blogs/multi-threading-b2b-buying-committee",
+        "/case-studies/founder-personal-brand-linkedin",
+        "/case-studies/retail-strategy-design-pipeline",
+        "/case-studies/wealth-management-pms-pipeline"
       ],
       "inboundCount": 8,
       "noindex": false,
@@ -3749,13 +3849,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/founder-personal-brand-linkedin",
-        "/case-studies/heritage-jewellery-valuation-pipeline",
-        "/case-studies/leadership-development-messaging-shift",
-        "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/professional-services-linkedin",
-        "/case-studies/retail-strategy-design-pipeline",
-        "/case-studies/saas-series-a"
+        "/",
+        "/marketing-automation",
+        "/myntmore-framework",
+        "/resources/guides/58-meetings-600-linkedin-connections",
+        "/services",
+        "linkedin-outreach/LinkedinOutreachPage.tsx",
+        "lib/case-study-library.ts"
       ],
       "inboundCount": 24,
       "noindex": false,
@@ -3769,13 +3869,13 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/case-studies/founder-personal-brand-linkedin",
-        "/case-studies/heritage-jewellery-valuation-pipeline",
-        "/case-studies/leadership-development-messaging-shift",
-        "/case-studies/professional-services-linkedin",
-        "/case-studies/wealth-management-pms-pipeline",
         "/",
-        "/resources/guides/claude-sales-call-prompts"
+        "/resources/guides/claude-sales-call-prompts",
+        "/resources/guides/leads-on-autopilot-guide",
+        "/services",
+        "lib/case-study-library.ts",
+        "/resources/blogs/founder-led-sales-before-scaling",
+        "/resources/blogs/founder-personal-brand-linkedin"
       ],
       "inboundCount": 16,
       "noindex": false,
@@ -3788,14 +3888,14 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/case-studies/ecommerce-conversion-playbook",
-        "/case-studies/heritage-jewellery-valuation-pipeline",
-        "/case-studies/leadership-development-messaging-shift",
-        "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/predictable-b2b-lead-gen-engine",
-        "/case-studies/retail-strategy-design-pipeline",
-        "/case-studies/saas-series-a",
-        "/case-studies/specialist-recruitment-linkedin-leads"
+        "/",
+        "/marketing-automation",
+        "/services",
+        "lib/case-study-library.ts",
+        "/resources/blogs/icp-mapping-b2b",
+        "/resources/blogs/outbound-funnel-math-not-guesswork",
+        "/resources/blogs/relevance-beats-reach-b2b-outbound",
+        "/resources/blogs/tam-trap-vague-targeting"
       ],
       "inboundCount": 17,
       "noindex": false,

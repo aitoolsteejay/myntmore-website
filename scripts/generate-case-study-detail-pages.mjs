@@ -4,7 +4,7 @@
 //   - lib/case-study-detail-cards.generated.json the cards the /case-studies listing reads
 //   - the entries in app/sitemap.ts              between two marker comments
 // (The 50 library case studies are built by generate-case-study-pages.mjs from lib/case-study-library.json;
-// twelve long-form case studies are still hand-built pages.)
+// the twelve long-form case studies, each with its own layout, are built by generate-case-study-long-pages.mjs.)
 //
 //   node scripts/generate-case-study-detail-pages.mjs           write everything
 //   node scripts/generate-case-study-detail-pages.mjs --check   exit 1 if anything is out of date

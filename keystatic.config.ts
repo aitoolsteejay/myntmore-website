@@ -2,6 +2,18 @@ import { collection, config, fields, singleton } from "@keystatic/core";
 import { coldEmailCopySchema } from "./content/service-copy/schemas/cold-email";
 import { linkedinOutreachCopySchema } from "./content/service-copy/schemas/linkedin-outreach";
 import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-yourself";
+import { ecommerceConversionPlaybookCaseSchema } from "./content/case-study-long/schemas/ecommerce-conversion-playbook";
+import { predictableB2BLeadGenEngineCaseSchema } from "./content/case-study-long/schemas/predictable-b2b-lead-gen-engine";
+import { founderPersonalBrandLinkedinCaseSchema } from "./content/case-study-long/schemas/founder-personal-brand-linkedin";
+import { professionalServicesLinkedinCaseSchema } from "./content/case-study-long/schemas/professional-services-linkedin";
+import { saasSeriesACaseSchema } from "./content/case-study-long/schemas/saas-series-a";
+import { ukPharmaQualifiedMeetingsCaseSchema } from "./content/case-study-long/schemas/uk-pharma-qualified-meetings";
+import { specialistRecruitmentLinkedinLeadsCaseSchema } from "./content/case-study-long/schemas/specialist-recruitment-linkedin-leads";
+import { medicalTourismPlatformPipelineCaseSchema } from "./content/case-study-long/schemas/medical-tourism-platform-pipeline";
+import { heritageJewelleryValuationPipelineCaseSchema } from "./content/case-study-long/schemas/heritage-jewellery-valuation-pipeline";
+import { leadershipDevelopmentMessagingShiftCaseSchema } from "./content/case-study-long/schemas/leadership-development-messaging-shift";
+import { retailStrategyDesignPipelineCaseSchema } from "./content/case-study-long/schemas/retail-strategy-design-pipeline";
+import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long/schemas/wealth-management-pms-pipeline";
 
 // Content lives as files in the repo.
 //  - Homepage FAQs: JSON files. `npm run faqs:build` (run by prebuild) turns
@@ -20,7 +32,10 @@ import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-you
 //  - City pages: one JSON file per /b2b-lead-generation-<city> page. `npm run city-pages:build` (run by prebuild)
 //    writes the page; components/city/CityPage.tsx renders it. All eight cities use it.
 //  - Case studies (detailed): one JSON file per page that uses CaseStudyLayout. `npm run case-study-pages:build`
-//    (run by prebuild) writes the page, the listing card and the sitemap entry. Twelve long-form ones stay hand-built.
+//    (run by prebuild) writes the page, the listing card and the sitemap entry.
+//  - Long-form case studies: the other twelve case study pages, each with its own layout. One JSON file each in
+//    content/case-study-long/; `npm run case-study-long:build` (run by prebuild) writes the thin page and
+//    components/case-studies/long/<slug>.tsx renders the copy. Each is a singleton in the admin.
 //  - Case studies: JSON files. `npm run case-studies:content` rebuilds
 //    lib/case-study-library.json, then `case-studies:build` writes each page and
 //    its sitemap entry (both run by prebuild).
@@ -813,6 +828,80 @@ export default config({
       path: "content/service-copy/do-it-yourself",
       format: "json",
       schema: doItYourselfCopySchema,
+    }),
+    // The twelve long-form case studies each have their own layout, so each has its own entry (search and share
+    // text, structured-data fields and the full page copy). Their pages are written by `npm run case-study-long:build`.
+    caseLongEcommerceConversionPlaybook: singleton({
+      label: "Long-form case study: E-commerce conversion playbook",
+      path: "content/case-study-long/ecommerce-conversion-playbook",
+      format: "json",
+      schema: ecommerceConversionPlaybookCaseSchema,
+    }),
+    caseLongPredictableB2bLeadGenEngine: singleton({
+      label: "Long-form case study: Predictable B2B lead gen engine",
+      path: "content/case-study-long/predictable-b2b-lead-gen-engine",
+      format: "json",
+      schema: predictableB2BLeadGenEngineCaseSchema,
+    }),
+    caseLongFounderPersonalBrandLinkedin: singleton({
+      label: "Long-form case study: Founder personal brand on LinkedIn",
+      path: "content/case-study-long/founder-personal-brand-linkedin",
+      format: "json",
+      schema: founderPersonalBrandLinkedinCaseSchema,
+    }),
+    caseLongProfessionalServicesLinkedin: singleton({
+      label: "Long-form case study: Professional services on LinkedIn",
+      path: "content/case-study-long/professional-services-linkedin",
+      format: "json",
+      schema: professionalServicesLinkedinCaseSchema,
+    }),
+    caseLongSaasSeriesA: singleton({
+      label: "Long-form case study: SaaS Series A",
+      path: "content/case-study-long/saas-series-a",
+      format: "json",
+      schema: saasSeriesACaseSchema,
+    }),
+    caseLongUkPharmaQualifiedMeetings: singleton({
+      label: "Long-form case study: UK pharma qualified meetings",
+      path: "content/case-study-long/uk-pharma-qualified-meetings",
+      format: "json",
+      schema: ukPharmaQualifiedMeetingsCaseSchema,
+    }),
+    caseLongSpecialistRecruitmentLinkedinLeads: singleton({
+      label: "Long-form case study: Specialist recruitment LinkedIn leads",
+      path: "content/case-study-long/specialist-recruitment-linkedin-leads",
+      format: "json",
+      schema: specialistRecruitmentLinkedinLeadsCaseSchema,
+    }),
+    caseLongMedicalTourismPlatformPipeline: singleton({
+      label: "Long-form case study: Medical tourism platform pipeline",
+      path: "content/case-study-long/medical-tourism-platform-pipeline",
+      format: "json",
+      schema: medicalTourismPlatformPipelineCaseSchema,
+    }),
+    caseLongHeritageJewelleryValuationPipeline: singleton({
+      label: "Long-form case study: Heritage jewellery valuation pipeline",
+      path: "content/case-study-long/heritage-jewellery-valuation-pipeline",
+      format: "json",
+      schema: heritageJewelleryValuationPipelineCaseSchema,
+    }),
+    caseLongLeadershipDevelopmentMessagingShift: singleton({
+      label: "Long-form case study: Leadership development messaging shift",
+      path: "content/case-study-long/leadership-development-messaging-shift",
+      format: "json",
+      schema: leadershipDevelopmentMessagingShiftCaseSchema,
+    }),
+    caseLongRetailStrategyDesignPipeline: singleton({
+      label: "Long-form case study: Retail strategy and design pipeline",
+      path: "content/case-study-long/retail-strategy-design-pipeline",
+      format: "json",
+      schema: retailStrategyDesignPipelineCaseSchema,
+    }),
+    caseLongWealthManagementPmsPipeline: singleton({
+      label: "Long-form case study: Wealth management and PMS pipeline",
+      path: "content/case-study-long/wealth-management-pms-pipeline",
+      format: "json",
+      schema: wealthManagementPmsPipelineCaseSchema,
     }),
   },
 });

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
+    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-case-study-long-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
     "faqs:build": "node scripts/generate-faq-content.mjs",
     "faqs:check": "node scripts/generate-faq-content.mjs --check",
     "sitemap:dates": "node scripts/generate-sitemap-dates.mjs",
@@ -21,6 +21,8 @@
     "city-pages:check": "node scripts/generate-city-pages.mjs --check",
     "case-study-pages:build": "node scripts/generate-case-study-detail-pages.mjs",
     "case-study-pages:check": "node scripts/generate-case-study-detail-pages.mjs --check",
+    "case-study-long:build": "node scripts/generate-case-study-long-pages.mjs",
+    "case-study-long:check": "node scripts/generate-case-study-long-pages.mjs --check",
     "glossary:build": "node scripts/generate-glossary-pages.mjs",
     "glossary:check": "node scripts/generate-glossary-pages.mjs --check",
     "landing-pages:build": "node scripts/generate-landing-pages.mjs",

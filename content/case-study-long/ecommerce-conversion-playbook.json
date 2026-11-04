@@ -1,0 +1,74 @@
+{
+  "metaTitle": "Cold Email Added $400K Pipeline in 6 Weeks",
+  "metaDescription": "How Myntmore built a cold email engine for an eCommerce SaaS: 28 meetings, 41% open rate, $400K pipeline in 6 weeks. See the full case study.",
+  "keywords": [
+    "ecommerce saas lead generation",
+    "b2b lead generation case study",
+    "cold email case study",
+    "cold email results b2b saas",
+    "b2b pipeline generation case study",
+    "shopify saas outbound case study",
+    "dtc brand outreach case study",
+    "cold email open rate results",
+    "seed stage saas lead generation",
+    "b2b cold email agency results",
+    "ai lead generation case study",
+    "icp mapping case study",
+    "myntmore case study",
+    "cold email pipeline growth"
+  ],
+  "ogTitle": "$400K Pipeline in 6 Weeks | eCommerce SaaS Case Study | Myntmore",
+  "ogDescription": "28 meetings · 41% open rate · $400K pipeline",
+  "schemaHeadline": "$400K Pipeline in 6 Weeks | eCommerce SaaS Case Study | Myntmore",
+  "schemaDescription": "28 meetings · 41% open rate · $400K pipeline",
+  "datePublished": "2026-06-11T11:39:57+05:30",
+  "dateModified": "2026-09-03T23:48:49+05:30",
+  "hero": {
+    "breadcrumbLabel": "eCommerce Tech",
+    "badge": "eCommerce Tech · Seed",
+    "headline": "Cold email added $400K pipeline for an eCommerce SaaS in 6 weeks",
+    "intro": "An eCommerce SaaS tool had a strong product but no repeatable way to reach DTC brand owners. Manual outreach was inconsistent and burning the team's time.",
+    "stats": [
+      { "value": "28", "label": "Meetings booked" },
+      { "value": "41%", "label": "Open rate" },
+      { "value": "$400K", "label": "Pipeline generated" }
+    ]
+  },
+  "colors": {
+    "badgeBackground": "rgba(16,185,129,0.08)",
+    "badgeText": "#047857",
+    "badgeBorder": "rgba(16,185,129,0.2)",
+    "resultFigureText": "#047857",
+    "quoteBackground": "#F0FDF4",
+    "quoteBorder": "#10b981",
+    "quoteAuthorText": "#047857"
+  },
+  "problem": {
+    "body": "The client had built a solid Shopify-integrated analytics tool but had zero outbound motion. Their growth team was relying on paid ads and the occasional warm intro. There was no ICP definition beyond \"eCommerce brands,\" no outreach infrastructure, and no consistent pipeline. The founder was manually DMing prospects on LinkedIn, 5–10 a day, with near-zero conversion."
+  },
+  "solution": {
+    "body": "We narrowed the ICP to DTC brands doing $1M–$20M in annual revenue on Shopify, using intent signals like recent funding, new hires in performance marketing, and active job posts for data analysts. We built a three-step cold email sequence with highly personalised first lines referencing each brand's ad spend patterns and product catalogue size.",
+    "highlights": [
+      "ICP narrowed to 3 sub-segments",
+      "Intent-triggered send timing",
+      "Personalised first lines at scale"
+    ]
+  },
+  "results": {
+    "figures": [
+      { "value": "28", "label": "Qualified meetings in 6 weeks" },
+      { "value": "41%", "label": "Average email open rate" },
+      { "value": "$400K", "label": "Pipeline generated" }
+    ],
+    "summary": "Within 6 weeks, the client had 28 qualified demos on the calendar, a 41% average open rate across sequences, and $400K in tracked pipeline. Two of those deals closed within the first quarter, directly attributable to the outbound system we built."
+  },
+  "quote": {
+    "text": "We'd tried cold email before and it never worked. Myntmore showed us the problem wasn't the channel. It was the targeting. The list quality and personalisation changed everything.",
+    "attribution": "Co-founder, eCommerce SaaS (Seed stage)"
+  },
+  "services": [
+    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
+    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
+    { "name": "ICP Mapping", "href": "/services/sales-intelligence" }
+  ]
+}

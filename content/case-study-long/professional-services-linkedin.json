@@ -1,0 +1,71 @@
+{
+  "metaTitle": "LinkedIn Brand Drove 3x Inbound in 90 Days",
+  "metaDescription": "How Myntmore turned a referral-dependent founder into an inbound engine: 3x inbound, 18K followers, 4.8% engagement. See the case study.",
+  "keywords": [
+    "professional services inbound leads",
+    "linkedin personal branding case study",
+    "consulting founder linkedin growth",
+    "linkedin ghostwriting case study",
+    "linkedin content case study",
+    "b2b consulting lead generation",
+    "inbound leads linkedin case study",
+    "personal branding case study",
+    "linkedin engagement rate results",
+    "referral to inbound case study",
+    "linkedin outreach automation case study",
+    "myntmore case study",
+    "professional services growth case study",
+    "linkedin profile optimisation case study"
+  ],
+  "ogTitle": "LinkedIn Brand → 3x Inbound in 90 Days | Myntmore",
+  "ogDescription": "3x inbound · 18K new followers · 4.8% engagement rate",
+  "schemaHeadline": "LinkedIn Brand → 3x Inbound in 90 Days | Myntmore",
+  "schemaDescription": "3x inbound · 18K new followers · 4.8% engagement rate",
+  "datePublished": "2026-05-29T18:55:36+05:30",
+  "dateModified": "2026-09-03T23:48:49+05:30",
+  "hero": {
+    "breadcrumbLabel": "Professional Services",
+    "badge": "Professional Services · Bootstrapped",
+    "headline": "LinkedIn brand drove 3x inbound in 90 days",
+    "intro": "A successful consulting founder was entirely dependent on word-of-mouth referrals. Growth was highly volatile month-to-month with no predictable inbound funnel.",
+    "stats": [
+      { "value": "3x", "label": "Inbound lead volume" },
+      { "value": "18K", "label": "New followers" },
+      { "value": "4.8%", "label": "Post engagement rate" }
+    ]
+  },
+  "colors": {
+    "badgeBackground": "rgba(168,85,247,0.08)",
+    "badgeText": "#7E22CE",
+    "badgeBorder": "rgba(168,85,247,0.2)"
+  },
+  "problem": {
+    "body": "A successful consulting founder had built a strong business entirely on word-of-mouth referrals. The work was excellent, but the pipeline was completely unpredictable. Some months would be overflowing with enquiries, others would be silent. There was no system for generating inbound."
+  },
+  "solution": {
+    "body": "We took over the founder's LinkedIn presence completely. Through weekly 30-minute interviews, we extracted their expertise and ghostwrote 3–4 native posts per week discussing highly technical teardowns of their industry. We rewrote their profile to act as an inbound conversion page.",
+    "cards": [
+      { "title": "Voice Extraction", "description": "Monthly 30-min interviews capturing unique opinions, client experiences, and industry insights" },
+      { "title": "Content Strategy", "description": "Strategic mix of opinion posts, industry teardowns, and client success stories published 3–4x per week" },
+      { "title": "Profile Optimisation", "description": "Complete profile rewrite positioning the founder as the go-to authority in their niche" },
+      { "title": "Engagement Strategy", "description": "Targeted engagement with ideal prospects to expand reach into the right audience" }
+    ]
+  },
+  "results": {
+    "summary": "Within 90 days, the founder's inbound enquiry volume tripled. DMs from ideal prospects became a daily occurrence. The follower base grew by 18K with a highly engaged audience of the exact buyers they wanted to work with.",
+    "figures": [
+      { "value": "3x", "label": "Inbound lead volume", "note": "In 90 days" },
+      { "value": "18K", "label": "New LinkedIn followers", "note": "Target ICP audience" },
+      { "value": "4.8%", "label": "Post engagement rate", "note": "vs ~1% platform average" }
+    ]
+  },
+  "services": [
+    { "name": "Personal Branding", "href": "/services/personal-branding" },
+    { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" }
+  ],
+  "closingCta": {
+    "heading": "Get predictable inbound from LinkedIn",
+    "body": "Book a free call and we'll show you exactly how to build the same system for your business.",
+    "buttonLabel": "Book a Free Strategy Call"
+  }
+}

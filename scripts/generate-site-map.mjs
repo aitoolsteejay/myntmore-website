@@ -163,6 +163,9 @@ const codeFiles = [APP, path.join(ROOT, "components"), path.join(ROOT, "lib")]
   .filter((f) => !ignored(f));
 
 const ownerOf = (file) => {
+  // A long-form case study's body lives in components/case-studies/long/<slug>.tsx; its page is /case-studies/<slug>.
+  const long = rel(file).match(/^components\/case-studies\/long\/([^/]+)\.tsx$/);
+  if (long && pageDirs.some((p) => dirToRoute(p.dir) === `/case-studies/${long[1]}`)) return `/case-studies/${long[1]}`;
   // Nearest ancestor directory (under app/) that holds a page.
   let d = path.dirname(file);
   while (d.startsWith(APP) && d !== path.dirname(APP)) {
@@ -200,6 +203,31 @@ for (const f of codeFiles) {
   }
 }
 
+// Some long-form case studies share a layout component (components/case-studies/long/CaseStudyStory*.tsx), and each
+// page is a thin wrapper (components/case-studies/long/<slug>.tsx) around it. A link written in the shared layout is
+// on every page that uses it, so credit it to each of those pages instead of to "shared".
+{
+  const longDir = path.join(ROOT, "components/case-studies/long");
+  if (exists(longDir)) {
+    const usedBy = new Map(); // shared layout file -> routes of the pages that use it
+    for (const f of fs.readdirSync(longDir).filter((f) => f.endsWith(".tsx") && !f.startsWith("CaseStudyStory"))) {
+      const slug = f.replace(/\.tsx$/, "");
+      const route = `/case-studies/${slug}`;
+      if (!pageDirs.some((p) => dirToRoute(p.dir) === route)) continue;
+      for (const m of read(path.join(longDir, f)).matchAll(/from\s+["']\.\/(CaseStudyStory\w+)["']/g)) {
+        const key = `components/case-studies/long/${m[1]}.tsx`;
+        usedBy.set(key, [...(usedBy.get(key) ?? []), route]);
+      }
+    }
+    for (const e of [...edges]) {
+      const routes = usedBy.get(e.fromFile);
+      if (!routes) continue;
+      edges.splice(edges.indexOf(e), 1);
+      for (const r of routes) edges.push({ ...e, from: r });
+    }
+  }
+}
+
 // Links inside CMS posts (markdown links, related reading, the call-to-action box, tool callouts), and the
 // blog index, which lists every published post.
 for (const post of cmsPosts) {
@@ -217,21 +245,25 @@ for (const post of cmsPosts) {
 // Links inside the service page JSON: content/service-pages holds the copy of the five template services,
 // content/service-copy the copy of cold email, LinkedIn outreach and the self-serve tool. A string value that is
 // a bare site path (e.g. "/case-studies/saas-series-a") is a link from that service's page.
-for (const dir of ["content/service-pages", "content/service-copy"]) {
+// content/case-study-long holds the copy of the long-form case studies (same rule, links from /case-studies/<slug>).
+for (const [dir, routePrefix] of [["content/service-pages", "/services"], ["content/service-copy", "/services"], ["content/case-study-long", "/case-studies"]]) {
   const abs = path.join(ROOT, dir);
   if (!exists(abs)) continue;
   for (const f of fs.readdirSync(abs).filter((f) => f.endsWith(".json")).sort()) {
     const slug = f.replace(/\.json$/, "");
     const targets = new Set();
     const collect = (v) => {
-      if (typeof v === "string") { if (/^\/[A-Za-z0-9\-_/]*$/.test(v)) targets.add(v); }
+      if (typeof v === "string") {
+        if (/^\/[A-Za-z0-9\-_/]*$/.test(v)) targets.add(v);
+        for (const m of v.matchAll(/\]\((\/[A-Za-z0-9\-_/]*)\)/g)) targets.add(m[1]); // [text](/path) inside a paragraph
+      }
       else if (Array.isArray(v)) v.forEach(collect);
       else if (v && typeof v === "object") Object.values(v).forEach(collect);
     };
     collect(JSON.parse(read(path.join(abs, f))));
     for (const t of targets) {
       const to = normalize(t);
-      edges.push({ from: `/services/${slug}`, fromFile: `${dir}/${f}`, to: redirectMap.get(to) ?? to });
+      edges.push({ from: `${routePrefix}/${slug}`, fromFile: `${dir}/${f}`, to: redirectMap.get(to) ?? to });
     }
   }
 }

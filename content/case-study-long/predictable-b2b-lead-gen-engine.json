@@ -1,0 +1,74 @@
+{
+  "metaTitle": "Outbound Engine That Books 15+ Meetings a Month",
+  "metaDescription": "How Myntmore rebuilt a B2B firm's outbound motion: 15+ meetings/month, 29% reply rate, 4x pipeline growth. See the full case study.",
+  "keywords": [
+    "predictable pipeline case study",
+    "b2b lead generation case study",
+    "outbound engine case study",
+    "professional services lead generation",
+    "cold email deliverability case study",
+    "b2b services firm outbound results",
+    "meetings booked per month case study",
+    "b2b outbound agency results",
+    "icp mapping case study",
+    "cold email infrastructure case study",
+    "ai lead generation case study",
+    "b2b sales pipeline growth case study",
+    "myntmore case study",
+    "growth stage b2b lead generation"
+  ],
+  "ogTitle": "15+ Meetings/Month on Autopilot | B2B Outbound Case Study | Myntmore",
+  "ogDescription": "15+ meetings/month · 29% reply rate · 4x pipeline vs prior quarter",
+  "schemaHeadline": "15+ Meetings/Month on Autopilot | B2B Outbound Case Study | Myntmore",
+  "schemaDescription": "15+ meetings/month · 29% reply rate · 4x pipeline vs prior quarter",
+  "datePublished": "2026-06-11T11:39:57+05:30",
+  "dateModified": "2026-09-03T23:48:49+05:30",
+  "hero": {
+    "breadcrumbLabel": "Professional Services",
+    "badge": "Professional Services · Growth Stage",
+    "headline": "Built a full outbound engine that books 15+ meetings/month on autopilot",
+    "intro": "A mid-size B2B services firm had tried outbound before and failed: bad lists, generic copy, zero personalisation. We rebuilt everything from scratch and made outbound their #1 channel.",
+    "stats": [
+      { "value": "15+", "label": "Meetings/month" },
+      { "value": "29%", "label": "Reply rate" },
+      { "value": "4x", "label": "Pipeline vs prior quarter" }
+    ]
+  },
+  "colors": {
+    "badgeBackground": "rgba(239,68,68,0.08)",
+    "badgeText": "#B91C1C",
+    "badgeBorder": "rgba(239,68,68,0.2)",
+    "resultFigureText": "#ef4444",
+    "quoteBackground": "#FEF2F2",
+    "quoteBorder": "#ef4444",
+    "quoteAuthorText": "#B91C1C"
+  },
+  "problem": {
+    "body": "The client was a 30-person B2B services firm that had run cold email campaigns in-house twice and gotten almost no results. They'd bought a list, blasted generic emails, and seen reply rates under 1%. They had given up on outbound entirely and were relying on inbound and referrals, neither of which was scaling. The core issue wasn't the channel; it was the execution. Wrong lists, wrong messaging, and no follow-up logic."
+  },
+  "solution": {
+    "body": "We started from zero: redefined the ICP across three distinct buyer personas, built fresh prospect lists using intent data and technographic filters, and rewrote every sequence from scratch. We also rebuilt their sending infrastructure across multiple domains with proper warm-up, SPF, DKIM, and DMARC in place. The result was a fully automated outbound engine that ran without manual prospecting.",
+    "highlights": [
+      "ICP rebuilt across 3 personas",
+      "Domain infra + deliverability fix",
+      "5-touch multi-channel sequences"
+    ]
+  },
+  "results": {
+    "figures": [
+      { "value": "15+", "label": "Qualified meetings/month" },
+      { "value": "29%", "label": "Average reply rate" },
+      { "value": "4x", "label": "Pipeline vs prior quarter" }
+    ],
+    "summary": "Within 10 weeks the engine was fully live and booking 15+ qualified meetings every month without any manual prospecting from the sales team. Pipeline grew 4x compared to the prior quarter. The client's head of sales described it as “finally having a system that actually works.”"
+  },
+  "quote": {
+    "text": "We'd tried outbound twice before and failed both times. Myntmore rebuilt everything: the list, the copy, the infrastructure. Now it just runs. We haven't touched a spreadsheet to find leads in months.",
+    "attribution": "Head of Sales, B2B Professional Services (Growth Stage)"
+  },
+  "services": [
+    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
+    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
+    { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" }
+  ]
+}

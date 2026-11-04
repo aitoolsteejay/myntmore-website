@@ -1,0 +1,74 @@
+{
+  "metaTitle": "Bootstrapped Founder: 0 to 22K Followers, 8 Deals",
+  "metaDescription": "How Myntmore built a founder's LinkedIn brand from scratch: 22K followers, 6.2% engagement, 8 inbound deals in 6 months. See the case study.",
+  "keywords": [
+    "founder personal brand results",
+    "linkedin personal branding case study",
+    "linkedin ghostwriting case study",
+    "b2b founder linkedin growth",
+    "personal branding inbound leads",
+    "linkedin content strategy case study",
+    "bootstrapped founder linkedin growth",
+    "linkedin engagement rate case study",
+    "linkedin ghostwriting agency results",
+    "b2b consulting linkedin case study",
+    "linkedin follower growth case study",
+    "inbound deals from linkedin",
+    "myntmore case study",
+    "personal branding roi case study"
+  ],
+  "ogTitle": "0 → 22K Followers & 8 Inbound Deals | Founder Brand Case Study | Myntmore",
+  "ogDescription": "22K followers · 8 inbound deals · 6.2% engagement rate",
+  "schemaHeadline": "0 → 22K Followers & 8 Inbound Deals | Founder Brand Case Study | Myntmore",
+  "schemaDescription": "22K followers · 8 inbound deals · 6.2% engagement rate",
+  "datePublished": "2026-06-11T11:39:57+05:30",
+  "dateModified": "2026-09-03T23:48:49+05:30",
+  "hero": {
+    "breadcrumbLabel": "B2B Founder",
+    "badge": "B2B Founder · Bootstrapped",
+    "headline": "Bootstrapped founder went from 0 to 22K followers and 8 inbound deals",
+    "intro": "A bootstrapped B2B founder had expert-level knowledge but zero online presence. Word of mouth was maxed out. We built their personal brand from scratch on LinkedIn.",
+    "stats": [
+      { "value": "22K", "label": "LinkedIn followers" },
+      { "value": "8", "label": "Inbound deals" },
+      { "value": "6.2%", "label": "Engagement rate" }
+    ]
+  },
+  "colors": {
+    "badgeBackground": "rgba(249,115,22,0.08)",
+    "badgeText": "#9A3412",
+    "badgeBorder": "rgba(249,115,22,0.2)",
+    "resultFigureText": "#9A3412",
+    "quoteBackground": "#FFF7ED",
+    "quoteBorder": "#f97316",
+    "quoteAuthorText": "#9A3412"
+  },
+  "problem": {
+    "body": "The founder ran a profitable B2B consulting firm but had grown almost entirely through referrals. Growth had plateaued. Referrals can only scale so far. They had deep expertise in operations and supply chain but no way to communicate that to a wider audience. Their LinkedIn profile had 400 connections and hadn't been posted on in two years."
+  },
+  "solution": {
+    "body": "We ran a full brand strategy session to extract their core POV and identify the content pillars that would resonate with their ideal clients: mid-market ops leaders and supply chain directors. We ghostwrote 3 posts per week, built a commenting strategy to grow reach organically, and paired it with a targeted LinkedIn DM sequence to warm up their ideal buyers.",
+    "highlights": [
+      "3 posts/week ghostwritten",
+      "Targeted commenting strategy",
+      "Warm DM sequence to ICPs"
+    ]
+  },
+  "results": {
+    "figures": [
+      { "value": "22K", "label": "LinkedIn followers gained" },
+      { "value": "8", "label": "Inbound deals in 6 months" },
+      { "value": "6.2%", "label": "Average engagement rate" }
+    ],
+    "summary": "In 6 months the founder grew from under 500 to 22K followers, with a 6.2% average engagement rate, well above the 1–2% LinkedIn average. More importantly, 8 inbound deals came directly through LinkedIn DMs from people who had been following the content."
+  },
+  "quote": {
+    "text": "I was sceptical that LinkedIn could actually drive revenue. Six months later it's our number one source of new business. The content doesn't just get likes. It brings in clients.",
+    "attribution": "Founder, B2B Operations Consulting"
+  },
+  "services": [
+    { "name": "Personal Branding", "href": "/services/personal-branding" },
+    { "name": "LinkedIn Outreach", "href": "/services/linkedin-outreach" },
+    { "name": "GTM Strategy", "href": "/services/gtm-strategy" }
+  ]
+}

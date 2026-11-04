@@ -1,0 +1,72 @@
+{
+  "metaTitle": "40 Qualified Meetings in 8 Weeks | SaaS Series A",
+  "metaDescription": "How Myntmore built an outbound engine for a SaaS Series A: 40 meetings, 34% reply rate, $1.2M pipeline in 8 weeks. See the case study.",
+  "keywords": [
+    "saas series a lead generation results",
+    "b2b saas outbound case study",
+    "cold email and linkedin case study",
+    "multi-channel outbound case study",
+    "saas pipeline generation case study",
+    "b2b saas case study",
+    "cold start outbound case study",
+    "ai lead generation case study",
+    "icp mapping and lead scoring case study",
+    "series a growth marketing case study",
+    "saas qualified meetings case study",
+    "myntmore case study",
+    "b2b saas pipeline results",
+    "cold email reply rate case study"
+  ],
+  "ogTitle": "40 Qualified Meetings in 8 Weeks | SaaS Series A | Myntmore",
+  "ogDescription": "Cold start → 40 meetings · 34% reply rate · $1.2M pipeline",
+  "schemaHeadline": "40 Qualified Meetings in 8 Weeks | SaaS Series A | Myntmore",
+  "schemaDescription": "Cold start → 40 meetings · 34% reply rate · $1.2M pipeline",
+  "datePublished": "2026-05-29T18:55:36+05:30",
+  "dateModified": "2026-08-21T15:18:01+05:30",
+  "hero": {
+    "breadcrumbLabel": "SaaS Series A",
+    "badge": "SaaS · Series A",
+    "headline": "40 qualified meetings in 8 weeks from a cold start",
+    "intro": "A B2B SaaS company entering a new vertical had zero outbound infrastructure. Their AE was spending 60% of their day manually finding leads on LinkedIn instead of closing deals.",
+    "stats": [
+      { "value": "40", "label": "Meetings in 8 weeks" },
+      { "value": "34%", "label": "Reply rate" },
+      { "value": "$1.2M", "label": "Pipeline generated" }
+    ]
+  },
+  "colors": {
+    "badgeBackground": "rgba(59,130,246,0.08)",
+    "badgeText": "#1D4ED8",
+    "badgeBorder": "rgba(59,130,246,0.2)"
+  },
+  "problem": {
+    "body": "A B2B SaaS company entering a new vertical had zero outbound infrastructure. Their account executive was spending 60% of their working day manually finding leads on LinkedIn instead of closing deals. There was no ICP definition, no sequences, and no way to predict where the next qualified meeting was coming from."
+  },
+  "solution": {
+    "body": "We built a multi-channel engine running cold email and LinkedIn automation in parallel. We scraped active intent data, specifically companies currently hiring for roles that signalled readiness to buy, to trigger perfectly timed outreach sequences.",
+    "cards": [
+      { "title": "ICP Mapping & Lead Scoring", "description": "ICP built around hiring signals and funding triggers specific to the target vertical" },
+      { "title": "Cold Email", "description": "3-step personalised sequences with intent-based first lines. A/B tested subject lines and CTAs" },
+      { "title": "LinkedIn Outreach", "description": "Parallel LinkedIn sequences reinforcing the cold email touch on the same prospects" }
+    ]
+  },
+  "results": {
+    "summary": "Within 8 weeks from a complete cold start, the system was generating 5+ qualified meetings per week. The AE was freed from manual prospecting entirely, spending 100% of their time on demos and follow-ups.",
+    "figures": [
+      { "value": "40", "label": "Qualified meetings booked", "note": "In 8 weeks from zero" },
+      { "value": "34%", "label": "Email reply rate", "note": "vs 2–5% industry average" },
+      { "value": "$1.2M", "label": "Pipeline generated", "note": "Qualified opportunities created" }
+    ]
+  },
+  "services": [
+    { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
+    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
+    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
+    { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" }
+  ],
+  "closingCta": {
+    "heading": "Get results like this for your pipeline",
+    "body": "Book a free 30-minute strategy call and we'll map out exactly how to build this system for your business.",
+    "buttonLabel": "Book a Free Strategy Call"
+  }
+}
