@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T12:09:15.435Z",
+  "generatedAt": "2026-11-04T06:40:01.271Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 293,
@@ -163,8 +163,8 @@
         "/contact-us",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/services",
-        "cold-emailing/ColdEmailingPackage.tsx",
-        "linkedin-outreach/LinkedinOutreachPage.tsx"
+        "/services/cold-email",
+        "/services/linkedin-outreach"
       ],
       "inboundCount": 8,
       "noindex": false,
@@ -200,7 +200,7 @@
         "/case-studies/medical-tourism-platform-pipeline",
         "/case-studies/professional-services-linkedin"
       ],
-      "inboundCount": 82,
+      "inboundCount": 83,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -883,8 +883,8 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
-        "/services/gtm-strategy",
         "lib/internal-paths.ts",
+        "/services/gtm-strategy",
         "/case-studies"
       ],
       "inboundCount": 3,
@@ -1301,9 +1301,9 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
-        "/services/sales-intelligence",
         "lib/internal-paths.ts",
         "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/services/sales-intelligence",
         "/case-studies"
       ],
       "inboundCount": 4,
@@ -1373,9 +1373,9 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
-        "/services/personal-branding",
         "lib/internal-paths.ts",
         "/resources/blogs/personal-branding-agency-vs-content-freelancer",
+        "/services/personal-branding",
         "/case-studies"
       ],
       "inboundCount": 4,
@@ -1582,9 +1582,9 @@
       "status": "linked",
       "linkedFrom": [
         "/case-studies",
-        "/services/ai-lead-generation",
         "lib/internal-paths.ts",
-        "/resources/blogs/cold-email-vs-linkedin-outreach"
+        "/resources/blogs/cold-email-vs-linkedin-outreach",
+        "/services/ai-lead-generation"
       ],
       "inboundCount": 4,
       "noindex": false,
@@ -1653,7 +1653,7 @@
       "linkedFrom": [
         "/careers",
         "/",
-        "linkedin-outreach/LinkedinOutreachPage.tsx"
+        "/services/linkedin-outreach"
       ],
       "inboundCount": 3,
       "noindex": false,
@@ -1949,7 +1949,7 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "linkedin-outreach/LinkedinOutreachPage.tsx"
+        "/services/linkedin-outreach"
       ],
       "inboundCount": 2,
       "noindex": false,
@@ -3352,9 +3352,9 @@
         "/resources/guides/leads-on-autopilot-guide",
         "/resources/guides/linkedin-content-to-calls-starter-kit",
         "/resources/guides",
-        "linkedin-outreach/LinkedinOutreachPage.tsx",
         "lib/internal-paths.ts",
-        "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting"
+        "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting",
+        "/services/linkedin-outreach"
       ],
       "inboundCount": 7,
       "noindex": false,
@@ -3904,11 +3904,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/tools",
-        "cold-emailing/ColdEmailingPackage.tsx",
         "lib/tools-registry.ts",
         "/resources/blogs/cold-email-follow-up-sequence",
         "/resources/blogs/handling-cold-email-replies",
-        "/resources/blogs/positive-reply-to-booked-meeting"
+        "/resources/blogs/positive-reply-to-booked-meeting",
+        "/services/cold-email"
       ],
       "inboundCount": 6,
       "noindex": false,

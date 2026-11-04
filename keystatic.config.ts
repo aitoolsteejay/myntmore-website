@@ -1,4 +1,7 @@
-import { collection, config, fields } from "@keystatic/core";
+import { collection, config, fields, singleton } from "@keystatic/core";
+import { coldEmailCopySchema } from "./content/service-copy/schemas/cold-email";
+import { linkedinOutreachCopySchema } from "./content/service-copy/schemas/linkedin-outreach";
+import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-yourself";
 
 // Content lives as files in the repo.
 //  - Homepage FAQs: JSON files. `npm run faqs:build` (run by prebuild) turns
@@ -788,6 +791,28 @@ export default config({
           { label: "Free-tool callouts (optional)", itemLabel: (props) => props.fields.name.value }
         ),
       },
+    }),
+  },
+  // The three bespoke service pages keep their own layouts, so each has its own page-copy file
+  // (the search and share metadata for all eight services is in the Service pages collection).
+  singletons: {
+    serviceCopyColdEmail: singleton({
+      label: "Service copy: Cold email",
+      path: "content/service-copy/cold-email",
+      format: "json",
+      schema: coldEmailCopySchema,
+    }),
+    serviceCopyLinkedinOutreach: singleton({
+      label: "Service copy: LinkedIn outreach",
+      path: "content/service-copy/linkedin-outreach",
+      format: "json",
+      schema: linkedinOutreachCopySchema,
+    }),
+    serviceCopyDoItYourself: singleton({
+      label: "Service copy: Self-serve LinkedIn tool",
+      path: "content/service-copy/do-it-yourself",
+      format: "json",
+      schema: doItYourselfCopySchema,
     }),
   },
 });

@@ -1,0 +1,247 @@
+{
+  "schema": {
+    "howToName": "How LinkedIn Outreach Works",
+    "serviceName": "LinkedIn Outreach & Automation",
+    "serviceDescription": "AI-agent-led LinkedIn personal branding and lead generation for founders, CXOs and B2B teams.",
+    "serviceType": "LinkedIn Outreach and Personal Branding"
+  },
+  "hero": {
+    "breadcrumbServices": "Services",
+    "breadcrumbPage": "LinkedIn Outreach",
+    "badge": "LinkedIn outreach · AI agent-led",
+    "headlineStart": "Your personal brand matters,",
+    "headlineBeforeEm": "but your",
+    "headlineEm": "pipeline",
+    "headlineAfterEm": "matters more",
+    "subhead": "Custom-trained AI agents power LinkedIn outreach that starts real conversations, so the right buyers find you and your calendar fills with qualified B2B meetings.",
+    "primaryCtaLabel": "Book a free strategy call",
+    "secondaryCtaLabel": "Meet the AI agents"
+  },
+  "flowVisual": {
+    "nodes": [
+      { "label": "Right buyers", "caption": "Ranked by who is likely to engage" },
+      { "label": "Personal touch", "caption": "Connection notes that sound like you" },
+      { "label": "Conversations", "caption": "Comments, InMails and follow-ups" },
+      { "label": "Booked meetings", "caption": "Straight to your calendar" }
+    ],
+    "aiBadge": "AI agents, 24/7",
+    "safetyBadge": "Within LinkedIn's limits"
+  },
+  "numbers": {
+    "stats": [
+      { "value": "45%", "label": "of a company's market value ties back to leadership reputation" },
+      { "value": "561%", "label": "more reach for personal brands than company pages" },
+      { "value": "13.57x", "label": "more paid to people buyers see as experts" },
+      { "value": "90 min", "label": "of your time a month. We handle the rest." }
+    ],
+    "pills": ["Account-safe execution", "AI agent-led prospecting", "Messages that sound like you"]
+  },
+  "reputation": {
+    "eyebrow": "An unfair advantage",
+    "headlineStart": "A strong brand opens the door.",
+    "headlineEm": "A strong pipeline takes you inside.",
+    "subhead": "We help you build both.",
+    "cards": [
+      {
+        "number": "01",
+        "eyebrow": "Reputation",
+        "title": "Opens the door",
+        "text": "Credibility fuels conversion. Buyers pay more to the people they see as experts."
+      },
+      {
+        "number": "02",
+        "eyebrow": "Pipeline",
+        "title": "Takes you inside",
+        "text": "Outreach that starts real conversations and fills your calendar with qualified meetings."
+      }
+    ],
+    "closingStart": "We don't just make you look credible.",
+    "closingEm": "We make your calendar busier."
+  },
+  "comparison": {
+    "eyebrow": "Why Myntmore",
+    "headlineStart": "Others stop at the profile.",
+    "headlineEm": "We build the pipeline.",
+    "columnWhatYouGet": "What you get",
+    "columnMyntmore": "Myntmore",
+    "columnOthers": "Other agencies",
+    "basicsGroupLabel": "The basics",
+    "skippedGroupLabel": "What most agencies skip",
+    "rows": [
+      { "label": "Profile optimisation", "othersDoIt": true },
+      { "label": "Content creation", "othersDoIt": true },
+      { "label": "Monthly reporting", "othersDoIt": true },
+      { "label": "ICP research & positioning", "othersDoIt": false },
+      { "label": "Lead generation (LinkedIn + InMail)", "othersDoIt": false },
+      { "label": "Multi-channel outreach sequences", "othersDoIt": false },
+      { "label": "Personalised connection requests", "othersDoIt": false },
+      { "label": "Competitor & buyer intelligence", "othersDoIt": false },
+      { "label": "AI agent-led prospecting", "othersDoIt": false },
+      { "label": "Weekly pipeline updates", "othersDoIt": false },
+      { "label": "Monthly strategy reviews", "othersDoIt": false }
+    ]
+  },
+  "agents": {
+    "eyebrow": "Powered by AI agents",
+    "headlineStart": "Your 24/7",
+    "headlineEm": "outbound team.",
+    "subhead": "These aren't tools. They're a silent growth team that analyses, identifies and acts with precision.",
+    "footerText": "The result: faster execution, razor-sharp accuracy, and positioning that feels personal but performs like a machine.",
+    "footerLinkLabel": "See the agents in action",
+    "footerLinkHref": "/myntmore-framework",
+    "agentLabel": "Agent",
+    "resultLabel": "The result",
+    "playLabel": "Play auto-advance",
+    "pauseLabel": "Pause auto-advance",
+    "items": [
+      {
+        "title": "Smarter targeting",
+        "summary": "They break down your ideal customer profile using firmographic, psychographic and behavioural signals.",
+        "points": ["Firmographic signals", "Psychographic signals", "Behavioural signals"],
+        "result": "We know exactly who to go after."
+      },
+      {
+        "title": "Prioritised outreach",
+        "summary": "Based on real-time LinkedIn data, they rank who is most likely to engage. No random shots.",
+        "points": ["Real-time LinkedIn data", "Ranked by likelihood to engage"],
+        "result": "Only the right people, in the right order."
+      },
+      {
+        "title": "Data-rich prospecting",
+        "summary": "They crawl LinkedIn for names, designations and company URLs, then enrich each lead with relevant insight.",
+        "points": ["Names, designations, company URLs", "Enriched with context"],
+        "result": "Context before we ever connect."
+      },
+      {
+        "title": "Competitor intelligence",
+        "summary": "They track how often your competitors post, what works for them and where they fall short.",
+        "points": ["Posting cadence tracked", "What works, and what doesn't"],
+        "result": "Your brand stays one step ahead."
+      },
+      {
+        "title": "Human-sounding engagement",
+        "summary": "With a deep understanding of context, they draft thoughtful comments, replies and follow-ups that sound like you.",
+        "points": ["Comments and replies", "Relevant follow-ups"],
+        "result": "Sounds like you, not a bot."
+      },
+      {
+        "title": "Personalised at scale",
+        "summary": "Connection requests, InMails and nurture messages are customised to the individual, at a volume no human team can match.",
+        "points": ["Connection requests", "InMails and nurture messages"],
+        "result": "Personal to each person, at team-level volume."
+      }
+    ],
+    "illustrations": {
+      "targetingChips": ["Firmographic", "Psychographic", "Behavioural"],
+      "targetingCaption": "Best-fit buyers light up",
+      "priorityTags": ["Top pick", "Warm", "Warming", "Later"],
+      "prospectingFields": ["Name", "Designation", "Company URL", "Insight"],
+      "competitorRivalA": "Rival A",
+      "competitorRivalB": "Rival B",
+      "competitorYou": "You",
+      "competitorChip": "One step ahead",
+      "engagementBadge": "Drafted in your voice",
+      "scaleGreeting": "Hi",
+      "scaleTokens": ["first name", "company", "recent post"]
+    }
+  },
+  "included": {
+    "eyebrow": "What you get",
+    "headlineStart": "Your whole growth team,",
+    "headlineEm": "included.",
+    "subhead": "Everything runs for you, from the first profile tweak to the monthly report.",
+    "items": [
+      { "label": "Dedicated growth team", "text": "A lead gen expert, content writer and account manager" },
+      { "label": "ICP & value-prop frameworks", "text": "Define your audience and sharpen your message" },
+      { "label": "Weekly check-ins with Tejas", "text": "Strategy and positioning, every single week" },
+      { "label": "LinkedIn makeover", "text": "Profile optimisation plus competitor analysis" },
+      { "label": "Authority-building content", "text": "Monthly strategy, writing and a video interview" },
+      { "label": "Lead generation, done for you", "text": "Connection requests, follow-ups, InMails and daily engagement" },
+      { "label": "Reputation management", "text": "Thoughtful replies to every comment on your posts" },
+      { "label": "Monthly growth reports", "text": "Content, audience growth and pipeline movement" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How we run it",
+    "headlineStart": "Four moves.",
+    "headlineEm": "One engine.",
+    "steps": [
+      { "number": "01", "title": "Position", "text": "ICP and value-proposition frameworks define who you serve and why they should care." },
+      { "number": "02", "title": "Build authority", "text": "A LinkedIn makeover and a monthly content engine make you credible at a glance." },
+      { "number": "03", "title": "Start conversations", "text": "AI agents and our team run personalised outreach to the right buyers." },
+      { "number": "04", "title": "Review and refine", "text": "Weekly check-ins and monthly reports keep every campaign sharper." }
+    ],
+    "playbookIntro": "Want the playbook behind it?",
+    "playbookLinkLabel": "Read the free 5-step framework behind 58 meetings from 600 connections",
+    "playbookLinkHref": "/resources/guides/58-meetings-600-linkedin-connections"
+  },
+  "beforeWeStart": {
+    "eyebrow": "Before we start",
+    "headlineStart": "A few things",
+    "headlineEm": "to know.",
+    "notes": [
+      { "title": "Your account is safe", "text": "Everything stays within LinkedIn's limits. No bans, no risks, just smarter execution." },
+      { "title": "AI agents are our unfair advantage", "text": "From finding your ICP to writing follow-ups that feel personal, they work quietly behind the scenes." },
+      { "title": "Your ICP isn't set in stone", "text": "Your business evolves, and so does your ideal customer. We adjust targeting as you grow." },
+      { "title": "Company pages grow differently", "text": "They serve a different purpose. We keep yours sharp, but real traction happens on your personal profile." },
+      { "title": "Sustainable, high-impact growth", "text": "No fake followers, no gimmicks. Just real, strategic positioning that gets results." }
+    ],
+    "yourPart": {
+      "label": "Your part",
+      "value": "90",
+      "unit": "min",
+      "text": "of your time in a month. That's all we need.",
+      "youLabel": "You",
+      "usLabel": "Us: research, content, outreach, replies and reporting"
+    }
+  },
+  "proof": {
+    "eyebrow": "See the proof",
+    "headline": "Want to see the results before you decide?",
+    "disclaimer": "Due to NDAs and confidentiality agreements, we can't reveal client names or show their LinkedIn accounts. All results and data in our case studies are real and come from clients across the industries we've worked with.",
+    "ctaLabel": "See case studies",
+    "ctaHref": "/case-studies"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions, answered"
+  },
+  "relatedPath": {
+    "heading": "See it in action",
+    "intro": "A case study, the thinking behind it, and the next step."
+  },
+  "outcomes": {
+    "eyebrow": "What changes",
+    "headlineStart": "Let us run your",
+    "headlineEm": "growth engine.",
+    "items": [
+      { "title": "Consistent pipeline", "text": "A steady flow of replies and qualified meetings, every week." },
+      { "title": "Visibility that converts", "text": "Prospects recognise your name before you ever reach out." },
+      { "title": "Sharper positioning", "text": "Messaging your ideal buyers can't ignore." },
+      { "title": "Effortless execution", "text": "A full team running content and outreach, even on your busiest days." },
+      { "title": "High-quality leads", "text": "High-intent, high-relevance prospects only. No noise." },
+      { "title": "Real business outcomes", "text": "More conversations and deals, without hours on LinkedIn every day." }
+    ]
+  },
+  "founder": {
+    "eyebrow": "Meet the founder",
+    "imageAlt": "Tejas Jhaveri, Founder of Myntmore",
+    "name": "Tejas Jhaveri",
+    "profileHref": "https://linkedin.com/in/tejasjhaveri",
+    "role": "Founder, Myntmore",
+    "bioBeforeLink": "Tejas has built outbound engines for founders, CXOs and B2B teams, combining AI agents, competitive intelligence, personalisation and multi-channel outreach to generate qualified pipeline. See how we run",
+    "bioLinkLabel": "LinkedIn outreach for Mumbai B2B teams",
+    "bioLinkHref": "/b2b-lead-generation-mumbai",
+    "bioAfterLink": "and companies across India.",
+    "stats": ["4x entrepreneur", "Scaled Flintstop to $6M ARR", "TEDx speaker", "Growth marketing professor", "130+ B2B companies"]
+  },
+  "finalCta": {
+    "eyebrow": "Try before you commit",
+    "headlineStart": "Ready to turn LinkedIn into",
+    "headlineEm": "booked meetings?",
+    "subhead": "Book a call, or send us your details and we'll take it from here.",
+    "primaryLabel": "Book a free strategy call",
+    "secondaryLabel": "Send us your details",
+    "secondaryHref": "/contact-us"
+  }
+}

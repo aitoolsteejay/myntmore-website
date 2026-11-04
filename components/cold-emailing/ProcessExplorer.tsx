@@ -20,6 +20,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { PROCESS_STEPS } from "./process-steps";
+import d from "@/content/service-copy/cold-email.json";
 import { useAutoAdvance } from "@/lib/use-auto-advance";
 import { GOLD_TEXT, textTone } from "@/lib/colors";
 
@@ -212,7 +213,7 @@ export default function ProcessExplorer() {
               <TrendingUp className="h-3.5 w-3.5" strokeWidth={3} aria-hidden="true" />
             </span>
             <p className="text-sm font-black" style={{ color: "#7c3a06" }}>
-              Result
+              {d.process.resultLabel}
               <span className="block font-semibold" style={{ color: "#3D2B14" }}>{step.result}</span>
             </p>
           </div>
@@ -228,7 +229,7 @@ export default function ProcessExplorer() {
           className="inline-flex items-center gap-2 rounded-full border bg-white px-5 py-2.5 text-sm font-bold transition-colors hover:border-[#EA580C] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-[#E8E2D9]"
           style={{ borderColor: "#E8E2D9", color: INK }}
         >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Previous
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" /> {d.process.previousButtonLabel}
         </button>
         <div className="flex items-center gap-3">
           {ready && (
@@ -254,7 +255,7 @@ export default function ProcessExplorer() {
           className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition-transform hover:-translate-y-0.5"
           style={{ backgroundColor: "#F5B731", color: "#0A0A0A" }}
         >
-          {active === last ? "Start over" : "Next"} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          {active === last ? d.process.restartButtonLabel : d.process.nextButtonLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </button>
       </div>
     </div>

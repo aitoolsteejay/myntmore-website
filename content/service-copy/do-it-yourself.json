@@ -1,0 +1,166 @@
+{
+  "schema": {
+    "name": "Do It Yourself LinkedIn Outreach Tool",
+    "description": "A self-serve LinkedIn outreach tool. Log in with your own LinkedIn account, build a campaign, upload your leads, and let it send connection requests and follow-ups on your behalf, with human-like sending behaviour and a full metrics dashboard.",
+    "serviceType": "Self-Serve LinkedIn Outreach Software"
+  },
+  "hero": {
+    "badge": "Do It Yourself",
+    "headlineLead": "Run your own LinkedIn outreach.",
+    "headlineHighlight": "On your account.",
+    "intro": "Log in with your own LinkedIn account, build a campaign, upload your leads, and set your connection note and follow-ups. Our tool sends it all out with human-like behaviour, while your dashboard tracks every lead.",
+    "primaryCtaLabel": "Book a Demo",
+    "secondaryCtaLabel": "See the Done-for-You Service",
+    "secondaryCtaHref": "/services/linkedin-outreach",
+    "annotations": {
+      "right": {
+        "line1": "100% yours.",
+        "line2": "no hand-holding"
+      },
+      "left": {
+        "line1": "5 minutes",
+        "line2": "to your first campaign"
+      }
+    }
+  },
+  "capabilityMarquee": {
+    "ariaLabel": "Included capabilities",
+    "chips": [
+      "Your Own LinkedIn Login",
+      "Custom Connection Notes",
+      "Configurable Follow-Ups",
+      "Human-Like Sending",
+      "Lead-by-Lead Status",
+      "Acceptance Rate Tracking",
+      "Reply Rate Tracking",
+      "Lifetime Metrics",
+      "Multiple Campaigns",
+      "Full Dashboard Access"
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Try It Yourself",
+    "heading": "Build a campaign, right here",
+    "intro": "Click through the six steps. Every field actually works, this is exactly what your dashboard looks like.",
+    "calloutNote": "it's actually clickable!",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Your LinkedIn",
+        "description": "Log in with your own LinkedIn account. It stays yours: the tool runs your outreach from your profile, nothing is handed over to us."
+      },
+      {
+        "number": "02",
+        "title": "Create a Campaign",
+        "description": "Start a new campaign for whichever list or segment you're targeting next. Every campaign runs independently, with its own leads, message, and schedule."
+      },
+      {
+        "number": "03",
+        "title": "Upload Your Leads",
+        "description": "Upload the list of leads you want to reach for this campaign."
+      },
+      {
+        "number": "04",
+        "title": "Write Your Connection Note",
+        "description": "Set the connection request note that goes out with your invite."
+      },
+      {
+        "number": "05",
+        "title": "Configure Your Follow-Ups",
+        "description": "Decide how many follow-up messages to send, what each one says, and the time delay before each one goes out."
+      },
+      {
+        "number": "06",
+        "title": "Launch the Campaign",
+        "description": "Hit launch. The tool mimics human behaviour to send out connection requests and follow-ups on your configured schedule."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Built for Self-Serve",
+    "heading": "Everything you need to run it yourself",
+    "items": [
+      {
+        "title": "Runs On Your LinkedIn",
+        "description": "You log in with your own account and stay in control of it. We don't manage or touch your profile, the tool just automates the sending."
+      },
+      {
+        "title": "Full Campaign Builder",
+        "description": "Upload leads, write your connection note, and build a follow-up sequence, with as many campaigns running as you need."
+      },
+      {
+        "title": "Human-Like Sending",
+        "description": "Connection requests and follow-ups go out mimicking human behaviour, on the schedule and delays you configure."
+      },
+      {
+        "title": "A Dashboard For Every Lead",
+        "description": "See campaign-level and lifetime metrics, acceptance rate, reply rate, and the live status of every single lead."
+      }
+    ]
+  },
+  "dashboard": {
+    "eyebrow": "Your Dashboard",
+    "heading": "See every campaign, every lead",
+    "intro": "Once a campaign is live, your dashboard tracks it in real time, at the campaign level and across your account.",
+    "metrics": [
+      {
+        "title": "Acceptance Rate",
+        "description": "Per campaign and lifetime, across your account."
+      },
+      {
+        "title": "Reply Rate",
+        "description": "How many of your accepted connections reply."
+      },
+      {
+        "title": "Lead Status",
+        "description": "Where every single lead stands, at a glance."
+      }
+    ]
+  },
+  "deliverables": {
+    "eyebrow": "What You Get",
+    "heading": "Every campaign includes",
+    "items": [
+      "A campaign builder for leads, connection notes, and follow-up sequences",
+      "Configurable number of follow-ups, message content, and time delay for each",
+      "Human-mimicking send behaviour for connection requests and follow-ups",
+      "A live dashboard with per-campaign metrics and lifetime metrics",
+      "Acceptance rate and reply rate tracking",
+      "Status tracking for every individual lead in every campaign"
+    ]
+  },
+  "whoFor": {
+    "eyebrow": "Who It's For",
+    "heading": "Built for people who'd rather run it themselves",
+    "items": [
+      {
+        "title": "Founders & Small Teams",
+        "description": "Run your own LinkedIn outreach without hiring an agency or an SDR, from a dashboard built for exactly this job."
+      },
+      {
+        "title": "Sales Reps Who Want Control",
+        "description": "Set up your own campaigns, write your own notes and follow-ups, and keep full visibility into every lead yourself."
+      },
+      {
+        "title": "Agencies & Consultants",
+        "description": "Run outreach across your own or your clients' LinkedIn accounts, with a separate campaign and dashboard for each."
+      }
+    ]
+  },
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "heading": "Frequently asked questions"
+  },
+  "finalCta": {
+    "headingLine1": "Run outreach on",
+    "headingLine2": "your own terms",
+    "intro": "Book a demo and we'll walk you through building your first campaign.",
+    "buttonLabel": "Book a Demo",
+    "footnoteLead": "Prefer we run it for you?",
+    "doneForYouLinkLabel": "See the Done-for-You service",
+    "doneForYouLinkHref": "/services/linkedin-outreach",
+    "footnoteMiddle": "or book a",
+    "consultationLinkLabel": "1-on-1 consultation",
+    "consultationLinkHref": "/1-on-1-consultation"
+  }
+}

@@ -3,67 +3,18 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { BarChart3, FlaskConical, Info, Layers, Mail, PenLine, Repeat, Send, Server, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import FadeIn from "@/app/components/FadeIn";
+import d from "@/content/service-copy/cold-email.json";
 
 const ORANGE = "#EA580C";
 const GOLD = "#F5B731";
 const INK = "#0A0A0A";
 
 // What is in the done-for-you package, with a plain-English line on what each item
-// does. The explanations only restate what the process section on the same page
-// already says (domains, DNS, warm-up, sequences, testing, reporting), written for
-// someone who has never run cold email.
-const ITEMS: { icon: LucideIcon; label: string; info: string }[] = [
-  {
-    icon: Server,
-    label: "10 domains + 40 inboxes",
-    info: "The sending addresses your emails come from: 10 domains with 4 inboxes on each. Spreading sending across many inboxes keeps each one's daily volume low, which protects your deliverability.",
-  },
-  {
-    icon: ShieldCheck,
-    label: "DNS setup & IP rotation",
-    info: "We configure the technical records on every domain (such as SPF, DKIM and DMARC) that prove your emails are legitimate, and rotate sending IPs so no single address carries all the volume or risks being blacklisted.",
-  },
-  {
-    icon: Mail,
-    label: "1,200 emails a day",
-    info: "The most the system sends in a day across all 40 inboxes, about 30 per inbox. Volume ramps up through inbox warm-up first, so inbox providers learn to trust the new addresses.",
-  },
-  {
-    icon: Users,
-    label: "5,000 prospects a month",
-    info: "Each month we source around 5,000 new prospects who match your ideal customer profile, segmented into specific lists, so every campaign has fresh people to reach.",
-  },
-  {
-    icon: PenLine,
-    label: "Copy & strategy",
-    info: "We write the emails and decide the approach: subject lines that earn the open, a value-first soft-sell message and a clear call to action, such as scheduling a call or replying.",
-  },
-  {
-    icon: Repeat,
-    label: "3-4 follow-ups & nurturing",
-    info: "Each prospect gets a short sequence of 3 to 4 follow-ups rather than a single email. When someone replies, we nurture the conversation, scoring leads and focusing on the most promising, until it becomes a booked call.",
-  },
-  {
-    icon: FlaskConical,
-    label: "A/B testing & optimisation",
-    info: "We test different subject lines, copy and calls to action against each other and keep what wins on replies, meetings and conversions, so results improve with every round.",
-  },
-  {
-    icon: BarChart3,
-    label: "Real-time reporting",
-    info: "A live view of how the campaign is performing, including opens, replies, meetings booked and email health, with clear reports on what is working and what to do next.",
-  },
-  {
-    icon: Layers,
-    label: "Complete backend setup",
-    info: "Everything behind the scenes that makes sending work: domains, inboxes, authentication, warm-up and monitoring, set up and kept healthy for you so you never touch the technical side.",
-  },
-  {
-    icon: Send,
-    label: "Sending tool included",
-    info: "The software that actually sends and tracks the emails is part of the package, so you do not need to buy or manage a separate cold email tool.",
-  },
-];
+// does. The copy lives in content/service-copy/cold-email.json (package.items);
+// icons are fixed by position.
+const ITEM_ICONS: LucideIcon[] = [Server, ShieldCheck, Mail, Users, PenLine, Repeat, FlaskConical, BarChart3, Layers, Send];
+
+const ITEMS: { icon: LucideIcon; label: string; info: string }[] = d.package.items.map((item, i) => ({ ...item, icon: ITEM_ICONS[i] }));
 
 // Where the popover sits so it never runs off the screen: the grid is 2 columns on
 // phones, 3 on tablets and 5 on desktop, and the cards in the right-hand columns

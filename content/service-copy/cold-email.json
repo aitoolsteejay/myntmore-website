@@ -1,0 +1,260 @@
+{
+  "structuredData": {
+    "serviceName": "Cold Email Infrastructure & Deliverability",
+    "serviceDescription": "Done-for-you B2B cold email: domain and inbox setup, deliverability, targeting, copy, follow-ups and reporting, run end to end to book qualified calls.",
+    "serviceType": "Cold Email Management and Deliverability",
+    "howToName": "How Done-for-You Cold Email Works"
+  },
+  "hero": {
+    "breadcrumbServicesLabel": "Services",
+    "breadcrumbPageLabel": "Cold Email",
+    "badge": "Cold emailing · Done for you",
+    "headlineLine1": "Cold email,",
+    "headlineAccent": "done for you",
+    "subheadline": "Targeting, deliverability, copy and optimisation, run end to end to book you calls.",
+    "primaryButtonLabel": "Get a free deliverability audit",
+    "secondaryButtonLabel": "See how it works",
+    "flow": {
+      "nodes": [
+        { "label": "Lead list", "caption": "5,000 fresh prospects a month" },
+        { "label": "Segmented", "caption": "Personalised for each audience" },
+        { "label": "Inbox-ready", "caption": "10 domains, 40 inboxes" },
+        { "label": "Booked calls", "caption": "Straight to your calendar" }
+      ],
+      "emailsChip": "1,200 emails a day",
+      "launchChip": "Live in 18 days"
+    }
+  },
+  "numbers": {
+    "stats": [
+      { "value": "1,200", "label": "emails a day" },
+      { "value": "40", "label": "inboxes on 10 domains" },
+      { "value": "5,000", "label": "fresh prospects a month" },
+      { "value": "18", "label": "days to launch" }
+    ],
+    "targetsLabel": "Our targets",
+    "targets": ["90%+ email health", "1%+ reply rate", "20%+ positive replies"]
+  },
+  "pillars": {
+    "eyebrow": "Why it works",
+    "headlineLead": "Three pillars.",
+    "headlineAccent": "One system.",
+    "items": [
+      { "title": "High deliverability", "line": "Land in the inbox, not in spam." },
+      { "title": "Smart targeting", "line": "A laser-sharp ICP list. The right people only." },
+      { "title": "Effective copy", "line": "Soft-sell messages that start real conversations." }
+    ],
+    "results": ["Real engagement", "More meetings", "Higher conversions", "Always optimising"]
+  },
+  "package": {
+    "eyebrow": "The package",
+    "headlineLead": "Fully",
+    "headlineAccent": "done for you.",
+    "intro": "A hands-off system that runs end to end.",
+    "items": [
+      {
+        "label": "10 domains + 40 inboxes",
+        "info": "The sending addresses your emails come from: 10 domains with 4 inboxes on each. Spreading sending across many inboxes keeps each one's daily volume low, which protects your deliverability."
+      },
+      {
+        "label": "DNS setup & IP rotation",
+        "info": "We configure the technical records on every domain (such as SPF, DKIM and DMARC) that prove your emails are legitimate, and rotate sending IPs so no single address carries all the volume or risks being blacklisted."
+      },
+      {
+        "label": "1,200 emails a day",
+        "info": "The most the system sends in a day across all 40 inboxes, about 30 per inbox. Volume ramps up through inbox warm-up first, so inbox providers learn to trust the new addresses."
+      },
+      {
+        "label": "5,000 prospects a month",
+        "info": "Each month we source around 5,000 new prospects who match your ideal customer profile, segmented into specific lists, so every campaign has fresh people to reach."
+      },
+      {
+        "label": "Copy & strategy",
+        "info": "We write the emails and decide the approach: subject lines that earn the open, a value-first soft-sell message and a clear call to action, such as scheduling a call or replying."
+      },
+      {
+        "label": "3-4 follow-ups & nurturing",
+        "info": "Each prospect gets a short sequence of 3 to 4 follow-ups rather than a single email. When someone replies, we nurture the conversation, scoring leads and focusing on the most promising, until it becomes a booked call."
+      },
+      {
+        "label": "A/B testing & optimisation",
+        "info": "We test different subject lines, copy and calls to action against each other and keep what wins on replies, meetings and conversions, so results improve with every round."
+      },
+      {
+        "label": "Real-time reporting",
+        "info": "A live view of how the campaign is performing, including opens, replies, meetings booked and email health, with clear reports on what is working and what to do next."
+      },
+      {
+        "label": "Complete backend setup",
+        "info": "Everything behind the scenes that makes sending work: domains, inboxes, authentication, warm-up and monitoring, set up and kept healthy for you so you never touch the technical side."
+      },
+      {
+        "label": "Sending tool included",
+        "info": "The software that actually sends and tracks the emails is part of the package, so you do not need to buy or manage a separate cold email tool."
+      }
+    ],
+    "responsibilities": [
+      { "label": "You provide", "value": "Domains & inbox accounts" },
+      { "label": "We cover", "value": "All sending & lead-sourcing software" },
+      { "label": "We handle", "value": "Setup, sourcing, copy, optimisation, reporting" }
+    ]
+  },
+  "process": {
+    "eyebrow": "The process",
+    "headlineLead": "Ten steps.",
+    "headlineAccent": "One system.",
+    "intro": "Tap a step to see what happens.",
+    "resultLabel": "Result",
+    "previousButtonLabel": "Previous",
+    "nextButtonLabel": "Next",
+    "restartButtonLabel": "Start over",
+    "steps": [
+      {
+        "short": "ICP",
+        "title": "Understand your business & ICP",
+        "summary": "Before a single email goes out, we map exactly who your best-fit leads are.",
+        "points": [
+          { "label": "ICP mapping", "text": "Pinpoint the most relevant leads" },
+          { "label": "Research", "text": "Go deep on your business and industry" }
+        ],
+        "result": "Every email goes to someone who's already a great fit."
+      },
+      {
+        "short": "Lead list",
+        "title": "Build a quality lead list",
+        "summary": "Quality over quantity: a targeted list of prospects most likely to convert.",
+        "points": [
+          { "label": "Smart lead tools", "text": "Pull the freshest leads possible" },
+          { "label": "Segmentation", "text": "Specific lists for personalised outreach" }
+        ],
+        "result": "Each email reaches someone who can actually respond."
+      },
+      {
+        "short": "Copy",
+        "title": "Craft compelling email copy",
+        "summary": "Personal, relevant and clear. A soft sell with a real value proposition.",
+        "points": [
+          { "label": "Subject lines", "text": "That earn the open" },
+          { "label": "Value first", "text": "Insights or solutions up front" },
+          { "label": "Clear CTA", "text": "Schedule a call or reply" }
+        ],
+        "result": "Better open rates, engagement and conversions."
+      },
+      {
+        "short": "Deliverability",
+        "title": "Land in the inbox",
+        "summary": "A robust sending system that keeps you out of spam and in front of buyers.",
+        "points": [
+          { "label": "DNS setup", "text": "Domains configured for deliverability" },
+          { "label": "IP rotation", "text": "Prevents blacklisting" },
+          { "label": "Monitoring", "text": "Email health tracked and fixed" }
+        ],
+        "result": "Your emails get seen, consistently."
+      },
+      {
+        "short": "Launch",
+        "title": "Launch the campaign",
+        "summary": "The list is ready and the emails are optimised, so we hit send and start tracking.",
+        "points": [
+          { "label": "Monitor", "text": "Deliverability, opens, first replies" },
+          { "label": "Optimise", "text": "Refine whatever isn't resonating" }
+        ],
+        "result": "Leads and appointments start coming in."
+      },
+      {
+        "short": "Nurture",
+        "title": "Active lead nurturing",
+        "summary": "Replies are where the magic begins. We nurture them into meetings.",
+        "points": [
+          { "label": "Follow-ups", "text": "Personal and relevant" },
+          { "label": "Lead scoring", "text": "Focus on the most promising" }
+        ],
+        "result": "More meetings and longer-term relationships."
+      },
+      {
+        "short": "Testing",
+        "title": "A/B testing & optimisation",
+        "summary": "We keep testing subject lines, copy and CTAs to find what wins.",
+        "points": [
+          { "label": "A/B testing", "text": "Subject lines, copy, CTAs" },
+          { "label": "Metrics", "text": "Replies, meetings, conversions" }
+        ],
+        "result": "Results improve with every iteration."
+      },
+      {
+        "short": "Reporting",
+        "title": "Reporting & analytics",
+        "summary": "Real-time metrics and clear performance reports, so you always know where you stand.",
+        "points": [
+          { "label": "Performance", "text": "Opens, replies, meetings booked" },
+          { "label": "Engagement", "text": "How leads interact" },
+          { "label": "Insights", "text": "What to do next" }
+        ],
+        "result": "Full transparency on how the campaign performs."
+      },
+      {
+        "short": "Scale",
+        "title": "Scale & expand",
+        "summary": "Once we find the winning formula, we scale it.",
+        "points": [
+          { "label": "Volume", "text": "Up to 1,200 emails a day" },
+          { "label": "New markets", "text": "Tap into new niches" }
+        ],
+        "result": "Your outreach grows with your business."
+      },
+      {
+        "short": "Celebrate",
+        "title": "Celebrate success",
+        "summary": "We celebrate the wins and reflect on what worked, so we can repeat it.",
+        "points": [
+          { "label": "Continuous improvement", "text": "Every win feeds the next campaign" }
+        ],
+        "result": "More leads, more meetings, more opportunities."
+      }
+    ]
+  },
+  "whyMyntmore": {
+    "eyebrow": "Why Myntmore",
+    "headlineLead": "Built for the",
+    "headlineAccent": "inbox.",
+    "items": [
+      { "title": "Inbox-first", "line": "No spam. No bounces." },
+      { "title": "Hyper-targeted", "line": "Every prospect handpicked." },
+      { "title": "Proven", "line": "Thousands of meetings booked." },
+      { "title": "Transparent", "line": "Full campaign visibility." }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions, answered"
+  },
+  "relatedPath": {
+    "heading": "See it in action",
+    "intro": "A case study, the thinking behind it, and the next step."
+  },
+  "founder": {
+    "eyebrow": "Meet the founder",
+    "imageAlt": "Tejas Jhaveri, Founder of Myntmore",
+    "name": "Tejas Jhaveri",
+    "linkedinUrl": "https://linkedin.com/in/tejasjhaveri",
+    "role": "Founder, Myntmore",
+    "bioBeforeLink": "Based in BKC, our team designs cold email infrastructure and outbound systems for high-growth companies. Explore our",
+    "bioLinkText": "B2B lead generation company in Mumbai",
+    "bioLinkHref": "/b2b-lead-generation-mumbai",
+    "bioAfterLink": "hub for regional campaigns.",
+    "credentials": ["4x entrepreneur", "Flintstop: $6M a year", "130+ B2B companies", "12K+ meetings booked", "$120M+ pipeline", "TEDx speaker"]
+  },
+  "closingCta": {
+    "eyebrow": "You're in the right place",
+    "headlineLead": "Let's turn cold emails into",
+    "headlineAccent": "booked calls.",
+    "subtext": "You've got the business. We've got the system.",
+    "primaryButtonLabel": "Book a free audit",
+    "primaryButtonHref": "/book-a-call",
+    "secondaryButtonLabel": "See real results",
+    "secondaryButtonHref": "/case-studies",
+    "calculatorPrompt": "Want numbers first?",
+    "calculatorLinkText": "Estimate your return with the Cold Email ROI Calculator",
+    "calculatorLinkHref": "/tools/cold-email-roi-calculator"
+  }
+}

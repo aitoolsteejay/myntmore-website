@@ -15,6 +15,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import { LinkedInIcon } from "../../components/ContactIcons";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-copy/do-it-yourself.json";
 
 // This page books a product demo with the DIY tool's owner, not the founder
 // call at /book-a-call that every other service page uses.
@@ -28,22 +29,15 @@ const GOLD_TEXT = "#A14A08";
 const FOCUS = "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
 
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "Do It Yourself LinkedIn Outreach Tool",
-  description: "A self-serve LinkedIn outreach tool. Log in with your own LinkedIn account, build a campaign, upload your leads, and let it send connection requests and follow-ups on your behalf, with human-like sending behaviour and a full metrics dashboard.",
-  serviceType: "Self-Serve LinkedIn Outreach Software",
+  name: d.schema.name,
+  description: d.schema.description,
+  serviceType: d.schema.serviceType,
   url: `${SITE_URL}/services/do-it-yourself`,
 });
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
-const STEPS = [
-  { n: "01", title: "Connect Your LinkedIn", desc: "Log in with your own LinkedIn account. It stays yours: the tool runs your outreach from your profile, nothing is handed over to us." },
-  { n: "02", title: "Create a Campaign", desc: "Start a new campaign for whichever list or segment you're targeting next. Every campaign runs independently, with its own leads, message, and schedule." },
-  { n: "03", title: "Upload Your Leads", desc: "Upload the list of leads you want to reach for this campaign." },
-  { n: "04", title: "Write Your Connection Note", desc: "Set the connection request note that goes out with your invite." },
-  { n: "05", title: "Configure Your Follow-Ups", desc: "Decide how many follow-up messages to send, what each one says, and the time delay before each one goes out." },
-  { n: "06", title: "Launch the Campaign", desc: "Hit launch. The tool mimics human behaviour to send out connection requests and follow-ups on your configured schedule." },
-];
+const STEPS = d.howItWorks.steps.map((s) => ({ n: s.number, title: s.title, desc: s.description }));
 
 const HOWTO_SCHEMA = buildHowToSchema(
   "How the Do It Yourself LinkedIn Outreach Tool Works",
@@ -73,43 +67,23 @@ const STATUS_STYLE: Record<LeadStatus, { label: string; bg: string; color: strin
   replied: { label: "Replied", bg: "#F0FDF4", color: "#15803D" },
 };
 
-const FEATURES: { icon: LucideIcon; title: string; desc: string }[] = [
-  { icon: Lock, title: "Runs On Your LinkedIn", desc: "You log in with your own account and stay in control of it. We don't manage or touch your profile, the tool just automates the sending." },
-  { icon: Blocks, title: "Full Campaign Builder", desc: "Upload leads, write your connection note, and build a follow-up sequence, with as many campaigns running as you need." },
-  { icon: Bot, title: "Human-Like Sending", desc: "Connection requests and follow-ups go out mimicking human behaviour, on the schedule and delays you configure." },
-  { icon: ChartColumn, title: "A Dashboard For Every Lead", desc: "See campaign-level and lifetime metrics, acceptance rate, reply rate, and the live status of every single lead." },
-];
+const FEATURE_ICONS: LucideIcon[] = [Lock, Blocks, Bot, ChartColumn];
 
-const DELIVERABLES = [
-  "A campaign builder for leads, connection notes, and follow-up sequences",
-  "Configurable number of follow-ups, message content, and time delay for each",
-  "Human-mimicking send behaviour for connection requests and follow-ups",
-  "A live dashboard with per-campaign metrics and lifetime metrics",
-  "Acceptance rate and reply rate tracking",
-  "Status tracking for every individual lead in every campaign",
-];
+const FEATURES: { icon: LucideIcon; title: string; desc: string }[] = d.features.items.map((f, i) => ({ icon: FEATURE_ICONS[i], title: f.title, desc: f.description }));
 
-const WHO_FOR: { icon: LucideIcon; title: string; desc: string }[] = [
-  { icon: Rocket, title: "Founders & Small Teams", desc: "Run your own LinkedIn outreach without hiring an agency or an SDR, from a dashboard built for exactly this job." },
-  { icon: UserCog, title: "Sales Reps Who Want Control", desc: "Set up your own campaigns, write your own notes and follow-ups, and keep full visibility into every lead yourself." },
-  { icon: Handshake, title: "Agencies & Consultants", desc: "Run outreach across your own or your clients' LinkedIn accounts, with a separate campaign and dashboard for each." },
-];
+const DELIVERABLES = d.deliverables.items;
 
-const DASHBOARD_METRICS = [
-  { title: "Acceptance Rate", desc: "Per campaign and lifetime, across your account." },
-  { title: "Reply Rate", desc: "How many of your accepted connections reply." },
-  { title: "Lead Status", desc: "Where every single lead stands, at a glance." },
-];
+const WHO_FOR_ICONS: LucideIcon[] = [Rocket, UserCog, Handshake];
+
+const WHO_FOR: { icon: LucideIcon; title: string; desc: string }[] = d.whoFor.items.map((w, i) => ({ icon: WHO_FOR_ICONS[i], title: w.title, desc: w.description }));
+
+const DASHBOARD_METRICS = d.dashboard.metrics.map((m) => ({ title: m.title, desc: m.description }));
 
 const FAQ_ITEMS = pageFaqsQA("service-do-it-yourself");
 
 const FAQ_SCHEMA = buildFaqSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })));
 
-const CAPABILITY_CHIPS = [
-  "Your Own LinkedIn Login", "Custom Connection Notes", "Configurable Follow-Ups",
-  "Human-Like Sending", "Lead-by-Lead Status", "Acceptance Rate Tracking",
-  "Reply Rate Tracking", "Lifetime Metrics", "Multiple Campaigns", "Full Dashboard Access",
-];
+const CAPABILITY_CHIPS = d.capabilityMarquee.chips;
 
 type DriftPath = (t: number) => [number, number];
 
@@ -411,8 +385,8 @@ export default function DoItYourselfClient() {
         {/* Handwritten annotation right side */}
         <div aria-hidden="true" className="hidden lg:flex flex-col items-center gap-1 absolute z-20" style={{ right: "2%", top: "30%", animation: "handwrite-float-r 5.5s ease-in-out 2.5s infinite" }}>
           <div className="card-fade-up flex flex-col items-center text-center leading-snug" style={{ fontFamily: "var(--font-caveat)", fontSize: "20px", fontWeight: 700, color: ACCENT, lineHeight: 1.25, animationDelay: "1s" }}>
-            <span>100% yours.</span>
-            <span style={{ fontSize: "13px", letterSpacing: "0.08em", fontWeight: 600, color: "#7E22CE" }}>no hand-holding</span>
+            <span>{d.hero.annotations.right.line1}</span>
+            <span style={{ fontSize: "13px", letterSpacing: "0.08em", fontWeight: 600, color: "#7E22CE" }}>{d.hero.annotations.right.line2}</span>
           </div>
           <svg width="48" height="40" viewBox="0 0 48 40" fill="none" style={{ transform: "scaleX(-1) rotate(-15deg)", marginBottom: "-4px", alignSelf: "flex-end", marginRight: "6px" }}>
             <path d="M4 6 C10 8, 26 2, 40 16 C46 22, 46 28, 42 34" stroke={ACCENT} strokeWidth="2.2" strokeLinecap="round" fill="none" strokeDasharray="90" strokeDashoffset="90" style={{ animation: "doodle-draw 0.6s ease forwards 1.6s" }} />
@@ -423,8 +397,8 @@ export default function DoItYourselfClient() {
         {/* Handwritten annotation left side */}
         <div aria-hidden="true" className="hidden lg:flex flex-col items-start gap-1 absolute z-20" style={{ left: "1%", top: "60%", animation: "handwrite-float-l 7s ease-in-out 3s infinite" }}>
           <div className="card-fade-up flex flex-col leading-snug" style={{ fontFamily: "var(--font-caveat)", fontSize: "19px", fontWeight: 700, color: "#A14A08", lineHeight: 1.3, animationDelay: "1.3s" }}>
-            <span>5 minutes</span>
-            <span>to your first campaign</span>
+            <span>{d.hero.annotations.left.line1}</span>
+            <span>{d.hero.annotations.left.line2}</span>
           </div>
           <svg width="46" height="28" viewBox="0 0 46 28" fill="none" style={{ marginTop: "2px", alignSelf: "flex-end" }}>
             <path d="M4 5 C13 3, 30 7, 40 18" stroke="#D97706" strokeWidth="2.2" strokeLinecap="round" fill="none" strokeDasharray="60" strokeDashoffset="60" style={{ animation: "doodle-draw 0.55s ease forwards 1.9s" }} />
@@ -438,13 +412,13 @@ export default function DoItYourselfClient() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade"
             style={{ borderColor: "rgba(124,58,237,0.35)", background: "rgba(124,58,237,0.07)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" aria-hidden="true" style={{ backgroundColor: ACCENT }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: ACCENT }}>Do It Yourself</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: ACCENT }}>{d.hero.badge}</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            Run your own LinkedIn outreach.{" "}
+            {d.hero.headlineLead}{" "}
             <span className="relative inline-block" style={{ color: ACCENT }}>
-              On your account.
+              {d.hero.headlineHighlight}
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 260 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 6 Q60 2 120 5 Q180 9 258 4" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" strokeDasharray="300" strokeDashoffset="300" style={{ animation: "doodle-draw 0.9s ease forwards 0.9s" }} />
               </svg>
@@ -452,23 +426,23 @@ export default function DoItYourselfClient() {
           </h1>
 
           <p className="text-lg sm:text-xl max-w-2xl mb-10 hero-fade-d2" style={{ color: "#52525B" }}>
-            Log in with your own LinkedIn account, build a campaign, upload your leads, and set your connection note and follow-ups. Our tool sends it all out with human-like behaviour, while your dashboard tracks every lead.
+            {d.hero.intro}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 hero-fade-d3">
             <a href={CALENDLY_URL} className={`btn-dark px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2 ${FOCUS}`}>
-              Book a Demo
+              {d.hero.primaryCtaLabel}
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </a>
-            <Link href="/services/linkedin-outreach" className={`btn-ghost px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2 ${FOCUS}`}>
-              See the Done-for-You Service
+            <Link href={d.hero.secondaryCtaHref} className={`btn-ghost px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2 ${FOCUS}`}>
+              {d.hero.secondaryCtaLabel}
             </Link>
           </div>
         </div>
       </section>
 
       {/* ── Capability marquee ───────────────────────────────── */}
-      <div className="py-8 border-y marquee-container" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }} aria-label="Included capabilities">
+      <div className="py-8 border-y marquee-container" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }} aria-label={d.capabilityMarquee.ariaLabel}>
         <div className="marquee-track gap-4">
           {doubled.map((label, i) => <CapabilityChip key={i} label={label} i={i} />)}
         </div>
@@ -479,7 +453,7 @@ export default function DoItYourselfClient() {
         {/* Handwritten callout pointing at the live demo */}
         <div aria-hidden="true" className="hidden lg:flex flex-col items-end absolute z-20" style={{ top: "3%", right: "6%", animation: "handwrite-float-l 6.5s ease-in-out 1s infinite" }}>
           <div className="card-fade-up" style={{ fontFamily: "var(--font-caveat)", fontSize: "21px", fontWeight: 700, color: ACCENT, transform: "rotate(-5deg)", animationDelay: "0.4s" }}>
-            it&apos;s actually clickable!
+            {d.howItWorks.calloutNote}
           </div>
           <svg width="40" height="36" viewBox="0 0 40 36" fill="none" style={{ marginRight: "10px" }}>
             <path d="M6 4 C10 14, 18 22, 30 30" stroke={ACCENT} strokeWidth="2.2" strokeLinecap="round" fill="none" strokeDasharray="50" strokeDashoffset="50" style={{ animation: "doodle-draw 0.5s ease forwards 1s" }} />
@@ -489,9 +463,9 @@ export default function DoItYourselfClient() {
 
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 text-center">
-            <Eyebrow>Try It Yourself</Eyebrow>
-            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>Build a campaign, right here</h2>
-            <p className="text-base mt-3 max-w-xl mx-auto" style={{ color: "#52525B" }}>Click through the six steps. Every field actually works, this is exactly what your dashboard looks like.</p>
+            <Eyebrow>{d.howItWorks.eyebrow}</Eyebrow>
+            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>{d.howItWorks.heading}</h2>
+            <p className="text-base mt-3 max-w-xl mx-auto" style={{ color: "#52525B" }}>{d.howItWorks.intro}</p>
           </div>
 
           <div ref={demoRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -758,8 +732,8 @@ export default function DoItYourselfClient() {
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 text-center">
-            <Eyebrow>Built for Self-Serve</Eyebrow>
-            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>Everything you need to run it yourself</h2>
+            <Eyebrow>{d.features.eyebrow}</Eyebrow>
+            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>{d.features.heading}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {FEATURES.map((f, i) => (
@@ -780,10 +754,10 @@ export default function DoItYourselfClient() {
       {/* ── Dashboard ─────────────────────────────────────────── */}
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <Eyebrow>Your Dashboard</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl font-black mb-4" style={{ color: "#0a0a0a" }}>See every campaign, every lead</h2>
+          <Eyebrow>{d.dashboard.eyebrow}</Eyebrow>
+          <h2 className="text-3xl sm:text-4xl font-black mb-4" style={{ color: "#0a0a0a" }}>{d.dashboard.heading}</h2>
           <p className="text-base max-w-xl mx-auto mb-10" style={{ color: "#52525B" }}>
-            Once a campaign is live, your dashboard tracks it in real time, at the campaign level and across your account.
+            {d.dashboard.intro}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {DASHBOARD_METRICS.map((d, i) => (
@@ -803,8 +777,8 @@ export default function DoItYourselfClient() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           <FadeIn>
             <div className="rounded-2xl border p-8 h-full" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
-              <Eyebrow>What You Get</Eyebrow>
-              <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Every campaign includes</h2>
+              <Eyebrow>{d.deliverables.eyebrow}</Eyebrow>
+              <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.deliverables.heading}</h2>
               <ul className="space-y-4">
                 {DELIVERABLES.map((d, i) => (
                   <li key={d} className="card-fade-up flex items-start gap-3" style={{ animationDelay: `${i * 70}ms` }}>
@@ -819,8 +793,8 @@ export default function DoItYourselfClient() {
           </FadeIn>
 
           <div>
-            <Eyebrow tone="gold">Who It&apos;s For</Eyebrow>
-            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>Built for people who&apos;d rather run it themselves</h2>
+            <Eyebrow tone="gold">{d.whoFor.eyebrow}</Eyebrow>
+            <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{d.whoFor.heading}</h2>
             <div className="space-y-4">
               {WHO_FOR.map((w, i) => (
                 <FadeIn key={w.title} delay={i * 110}>
@@ -842,8 +816,8 @@ export default function DoItYourselfClient() {
       <section className="py-20 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto">
           <div className="mb-10">
-            <Eyebrow>FAQ</Eyebrow>
-            <h2 className="text-3xl font-black" style={{ color: "#0a0a0a" }}>Frequently asked questions</h2>
+            <Eyebrow>{d.faqSection.eyebrow}</Eyebrow>
+            <h2 className="text-3xl font-black" style={{ color: "#0a0a0a" }}>{d.faqSection.heading}</h2>
           </div>
           <div className="space-y-3">
             {FAQ_ITEMS.map((item, i) => (
@@ -860,19 +834,19 @@ export default function DoItYourselfClient() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-6xl font-black tracking-tight mb-6 leading-[0.95]" style={{ color: "#0a0a0a" }}>
-            Run outreach on<br /><span style={{ color: ACCENT }}>your own terms</span>
+            {d.finalCta.headingLine1}<br /><span style={{ color: ACCENT }}>{d.finalCta.headingLine2}</span>
           </h2>
 
           <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10" style={{ color: "#52525B" }}>
-            Book a demo and we&apos;ll walk you through building your first campaign.
+            {d.finalCta.intro}
           </p>
 
           <a href={CALENDLY_URL} className={`inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg btn-dark ${FOCUS}`}>
-            Book a Demo
+            {d.finalCta.buttonLabel}
             <ArrowRight className="w-5 h-5" strokeWidth={2.5} aria-hidden="true" />
           </a>
 
-          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>Prefer we run it for you? <Link href="/services/linkedin-outreach" className={`font-semibold underline rounded ${FOCUS}`} style={{ color: ACCENT }}>See the Done-for-You service</Link> or book a <Link href="/1-on-1-consultation" className={`font-semibold underline rounded ${FOCUS}`} style={{ color: ACCENT }}>1-on-1 consultation</Link>.</p>
+          <p className="mt-5 text-sm" style={{ color: "#71675E" }}>{d.finalCta.footnoteLead} <Link href={d.finalCta.doneForYouLinkHref} className={`font-semibold underline rounded ${FOCUS}`} style={{ color: ACCENT }}>{d.finalCta.doneForYouLinkLabel}</Link> {d.finalCta.footnoteMiddle} <Link href={d.finalCta.consultationLinkHref} className={`font-semibold underline rounded ${FOCUS}`} style={{ color: ACCENT }}>{d.finalCta.consultationLinkLabel}</Link>.</p>
         </div>
       </section>
     </InnerLayout>

@@ -214,6 +214,28 @@ for (const post of cmsPosts) {
   edges.push({ from: "/resources/blogs", fromFile: "app/resources/blogs/page.tsx", to: post.route });
 }
 
+// Links inside the service page JSON: content/service-pages holds the copy of the five template services,
+// content/service-copy the copy of cold email, LinkedIn outreach and the self-serve tool. A string value that is
+// a bare site path (e.g. "/case-studies/saas-series-a") is a link from that service's page.
+for (const dir of ["content/service-pages", "content/service-copy"]) {
+  const abs = path.join(ROOT, dir);
+  if (!exists(abs)) continue;
+  for (const f of fs.readdirSync(abs).filter((f) => f.endsWith(".json")).sort()) {
+    const slug = f.replace(/\.json$/, "");
+    const targets = new Set();
+    const collect = (v) => {
+      if (typeof v === "string") { if (/^\/[A-Za-z0-9\-_/]*$/.test(v)) targets.add(v); }
+      else if (Array.isArray(v)) v.forEach(collect);
+      else if (v && typeof v === "object") Object.values(v).forEach(collect);
+    };
+    collect(JSON.parse(read(path.join(abs, f))));
+    for (const t of targets) {
+      const to = normalize(t);
+      edges.push({ from: `/services/${slug}`, fromFile: `${dir}/${f}`, to: redirectMap.get(to) ?? to });
+    }
+  }
+}
+
 // The glossary index links to every term from lib/glossary-index.generated.json (built from content/glossary).
 const glossaryCards = path.join(ROOT, "lib", "glossary-index.generated.json");
 if (exists(glossaryCards)) {

@@ -1,4 +1,5 @@
 import { CalendarCheck, Clock, Filter, Mail, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import d from "@/content/service-copy/cold-email.json";
 
 const ORANGE = "#EA580C";
 const GOLD = "#F5B731";
@@ -18,12 +19,16 @@ interface FlowNode {
   caption: string;
 }
 
-const NODES: FlowNode[] = [
-  { n: 1, x: 130, y: 90, icon: Users, label: "Lead list", caption: "5,000 fresh prospects a month" },
-  { n: 2, x: 350, y: 230, icon: Filter, label: "Segmented", caption: "Personalised for each audience" },
-  { n: 3, x: 130, y: 370, icon: ShieldCheck, label: "Inbox-ready", caption: "10 domains, 40 inboxes" },
-  { n: 4, x: 350, y: 480, icon: CalendarCheck, label: "Booked calls", caption: "Straight to your calendar" },
+// Positions and icons are layout; the label and caption of each node live in
+// content/service-copy/cold-email.json (hero.flow.nodes).
+const NODE_LAYOUT: { x: number; y: number; icon: LucideIcon }[] = [
+  { x: 130, y: 90, icon: Users },
+  { x: 350, y: 230, icon: Filter },
+  { x: 130, y: 370, icon: ShieldCheck },
+  { x: 350, y: 480, icon: CalendarCheck },
 ];
+
+const NODES: FlowNode[] = NODE_LAYOUT.map((layout, i) => ({ n: i + 1, ...layout, ...d.hero.flow.nodes[i] }));
 
 const pct = (v: number, total: number) => `${(v / total) * 100}%`;
 
@@ -94,11 +99,11 @@ export default function FlowVisual() {
 
       <div className="ce-float absolute flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 text-xs font-black" style={{ left: pct(305, W), top: pct(118, H), borderColor: "#F0E4D6", color: "#0A0A0A", boxShadow: "0 12px 28px rgba(15,15,20,0.08)" }}>
         <Mail className="h-3.5 w-3.5" style={{ color: ORANGE }} strokeWidth={2.4} />
-        1,200 emails a day
+        {d.hero.flow.emailsChip}
       </div>
       <div className="ce-float absolute flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 text-xs font-black" style={{ left: pct(112, W), top: pct(492, H), borderColor: "#F0E4D6", color: "#0A0A0A", boxShadow: "0 12px 28px rgba(15,15,20,0.08)", animationDelay: "-2.5s" }}>
         <Clock className="h-3.5 w-3.5" style={{ color: ORANGE }} strokeWidth={2.4} />
-        Live in 18 days
+        {d.hero.flow.launchChip}
       </div>
     </div>
   );

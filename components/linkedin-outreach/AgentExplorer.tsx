@@ -4,6 +4,9 @@ import { useEffect, useRef, type CSSProperties, type KeyboardEvent, type ReactNo
 import { Check, Crosshair, Layers, ListOrdered, MessageCircle, Pause, Play, Radar, ScanSearch, Sparkles, type LucideIcon } from "lucide-react";
 import { BLUE, BLUE_LIGHT, BLUE_PALE, GOLD, INK, MUTED } from "./theme";
 import { useAutoAdvance } from "@/lib/use-auto-advance";
+import d from "@/content/service-copy/linkedin-outreach.json";
+
+const ILL = d.agents.illustrations;
 
 const EDGE = "#DCE8F5";
 
@@ -17,7 +20,7 @@ function VisualTargeting() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-5 p-6">
       <div className="flex flex-wrap justify-center gap-2">
-        {["Firmographic", "Psychographic", "Behavioural"].map((c, i) => (
+        {ILL.targetingChips.map((c, i) => (
           <span key={c} className="ax-chip rounded-full border bg-white px-3 py-1 text-xs font-black" style={{ borderColor: EDGE, color: BLUE, animationDelay: `${0.15 + i * 0.45}s` }}>
             {c}
           </span>
@@ -31,16 +34,16 @@ function VisualTargeting() {
         })}
         <rect className="ax-scan" x="0" y="0" width="2.5" height="118" rx="1.25" fill={BLUE} opacity="0" />
       </svg>
-      <p className="text-xs font-black uppercase tracking-[0.2em]" style={{ color: MUTED }}>Best-fit buyers light up</p>
+      <p className="text-xs font-black uppercase tracking-[0.2em]" style={{ color: MUTED }}>{ILL.targetingCaption}</p>
     </div>
   );
 }
 
 const PRIORITY = [
-  { w: 94, tag: "Top pick", bg: `linear-gradient(135deg, ${BLUE}, ${BLUE_LIGHT})` },
-  { w: 72, tag: "Warm", bg: "linear-gradient(135deg, #F5B731, #f59e0b)" },
-  { w: 48, tag: "Warming", bg: "linear-gradient(135deg, #a78bfa, #7c3aed)" },
-  { w: 26, tag: "Later", bg: "linear-gradient(135deg, #94a3b8, #64748b)" },
+  { w: 94, tag: ILL.priorityTags[0], bg: `linear-gradient(135deg, ${BLUE}, ${BLUE_LIGHT})` },
+  { w: 72, tag: ILL.priorityTags[1], bg: "linear-gradient(135deg, #F5B731, #f59e0b)" },
+  { w: 48, tag: ILL.priorityTags[2], bg: "linear-gradient(135deg, #a78bfa, #7c3aed)" },
+  { w: 26, tag: ILL.priorityTags[3], bg: "linear-gradient(135deg, #94a3b8, #64748b)" },
 ];
 
 function VisualPriority() {
@@ -68,10 +71,10 @@ function VisualPriority() {
 }
 
 const FIELDS = [
-  { label: "Name", w: 58 },
-  { label: "Designation", w: 76 },
-  { label: "Company URL", w: 68 },
-  { label: "Insight", w: 92 },
+  { label: ILL.prospectingFields[0], w: 58 },
+  { label: ILL.prospectingFields[1], w: 76 },
+  { label: ILL.prospectingFields[2], w: 68 },
+  { label: ILL.prospectingFields[3], w: 92 },
 ];
 
 function VisualProspecting() {
@@ -106,9 +109,9 @@ function VisualProspecting() {
 }
 
 const RIVALS = [
-  { label: "Rival A", h: 52, color: "#C3CFDC" },
-  { label: "Rival B", h: 38, color: "#C3CFDC" },
-  { label: "You", h: 86, color: BLUE },
+  { label: ILL.competitorRivalA, h: 52, color: "#C3CFDC", isYou: false },
+  { label: ILL.competitorRivalB, h: 38, color: "#C3CFDC", isYou: false },
+  { label: ILL.competitorYou, h: 86, color: BLUE, isYou: true },
 ];
 
 function VisualCompetitors() {
@@ -117,17 +120,17 @@ function VisualCompetitors() {
       <div className="flex h-[150px] items-end gap-7">
         {RIVALS.map((r, i) => (
           <div key={r.label} className="flex h-full flex-col items-center justify-end gap-2">
-            <div className={`${r.label === "You" ? "ax-lead" : "ax-sway"} w-12 rounded-t-xl`} style={{ height: `${r.h}%`, animationDelay: `${1.2 + i * 0.4}s`, animationDuration: r.label === "You" ? undefined : `${3.4 + i * 0.7}s` }}>
+            <div className={`${r.isYou ? "ax-lead" : "ax-sway"} w-12 rounded-t-xl`} style={{ height: `${r.h}%`, animationDelay: `${1.2 + i * 0.4}s`, animationDuration: r.isYou ? undefined : `${3.4 + i * 0.7}s` }}>
               <div className="ax-col h-full w-full rounded-t-xl" style={{ backgroundColor: r.color, animationDelay: `${0.2 + i * 0.25}s` }} />
             </div>
-            <span className="text-xs font-black" style={{ color: r.label === "You" ? BLUE : MUTED }}>{r.label}</span>
+            <span className="text-xs font-black" style={{ color: r.isYou ? BLUE : MUTED }}>{r.label}</span>
           </div>
         ))}
       </div>
       <span className="ax-float inline-flex">
         <span className="ax-chip inline-flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 text-xs font-black" style={{ borderColor: EDGE, color: INK, animationDelay: "1.3s" }}>
           <Radar className="h-3.5 w-3.5" style={{ color: BLUE }} strokeWidth={2.4} />
-          One step ahead
+          {ILL.competitorChip}
         </span>
       </span>
     </div>
@@ -165,7 +168,7 @@ function VisualEngagement() {
             </div>
             <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-xs font-black" style={{ color: BLUE }}>
               <Sparkles className="h-3 w-3" strokeWidth={2.6} />
-              Drafted in your voice
+              {ILL.engagementBadge}
             </span>
           </div>
         </div>
@@ -174,7 +177,7 @@ function VisualEngagement() {
   );
 }
 
-const TOKENS = ["first name", "company", "recent post"];
+const TOKENS = ILL.scaleTokens;
 
 function VisualScale() {
   return (
@@ -189,7 +192,7 @@ function VisualScale() {
             {i === 2 ? (
               <>
                 <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="text-xs font-black uppercase tracking-[0.14em]" style={{ color: MUTED }}>Hi</span>
+                  <span className="text-xs font-black uppercase tracking-[0.14em]" style={{ color: MUTED }}>{ILL.scaleGreeting}</span>
                   {TOKENS.map((t, k) => (
                     <span key={t} className="ax-token rounded-md px-2 py-0.5 text-xs font-black" style={{ color: INK, animationDelay: `${k * 0.6}s` }}>
                       {t}
@@ -217,7 +220,6 @@ function VisualScale() {
 // ---- The six agents.
 
 interface Agent {
-  short: string;
   title: string;
   icon: LucideIcon;
   summary: string;
@@ -226,62 +228,16 @@ interface Agent {
   Visual: () => ReactNode;
 }
 
-const AGENTS: Agent[] = [
-  {
-    short: "Targeting",
-    title: "Smarter targeting",
-    icon: Crosshair,
-    summary: "They break down your ideal customer profile using firmographic, psychographic and behavioural signals.",
-    points: ["Firmographic signals", "Psychographic signals", "Behavioural signals"],
-    result: "We know exactly who to go after.",
-    Visual: VisualTargeting,
-  },
-  {
-    short: "Prioritising",
-    title: "Prioritised outreach",
-    icon: ListOrdered,
-    summary: "Based on real-time LinkedIn data, they rank who is most likely to engage. No random shots.",
-    points: ["Real-time LinkedIn data", "Ranked by likelihood to engage"],
-    result: "Only the right people, in the right order.",
-    Visual: VisualPriority,
-  },
-  {
-    short: "Prospecting",
-    title: "Data-rich prospecting",
-    icon: ScanSearch,
-    summary: "They crawl LinkedIn for names, designations and company URLs, then enrich each lead with relevant insight.",
-    points: ["Names, designations, company URLs", "Enriched with context"],
-    result: "Context before we ever connect.",
-    Visual: VisualProspecting,
-  },
-  {
-    short: "Competitors",
-    title: "Competitor intelligence",
-    icon: Radar,
-    summary: "They track how often your competitors post, what works for them and where they fall short.",
-    points: ["Posting cadence tracked", "What works, and what doesn't"],
-    result: "Your brand stays one step ahead.",
-    Visual: VisualCompetitors,
-  },
-  {
-    short: "Engagement",
-    title: "Human-sounding engagement",
-    icon: MessageCircle,
-    summary: "With a deep understanding of context, they draft thoughtful comments, replies and follow-ups that sound like you.",
-    points: ["Comments and replies", "Relevant follow-ups"],
-    result: "Sounds like you, not a bot.",
-    Visual: VisualEngagement,
-  },
-  {
-    short: "At scale",
-    title: "Personalised at scale",
-    icon: Layers,
-    summary: "Connection requests, InMails and nurture messages are customised to the individual, at a volume no human team can match.",
-    points: ["Connection requests", "InMails and nurture messages"],
-    result: "Personal to each person, at team-level volume.",
-    Visual: VisualScale,
-  },
+const AGENT_VISUALS: { icon: LucideIcon; Visual: () => ReactNode }[] = [
+  { icon: Crosshair, Visual: VisualTargeting },
+  { icon: ListOrdered, Visual: VisualPriority },
+  { icon: ScanSearch, Visual: VisualProspecting },
+  { icon: Radar, Visual: VisualCompetitors },
+  { icon: MessageCircle, Visual: VisualEngagement },
+  { icon: Layers, Visual: VisualScale },
 ];
+
+const AGENTS: Agent[] = d.agents.items.map((item, i) => ({ ...item, ...AGENT_VISUALS[i] }));
 
 export default function AgentExplorer() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -440,7 +396,7 @@ export default function AgentExplorer() {
                   <TabIcon className="h-5 w-5" strokeWidth={2.2} aria-hidden="true" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-xs font-black uppercase tracking-[0.2em]" style={{ color: isActive ? BLUE : MUTED }}>{`Agent ${i + 1}`}</span>
+                  <span className="block text-xs font-black uppercase tracking-[0.2em]" style={{ color: isActive ? BLUE : MUTED }}>{`${d.agents.agentLabel} ${i + 1}`}</span>
                   <span className="block text-sm font-black leading-tight" style={{ color: INK }}>{a.title}</span>
                 </span>
                 {isActive && playing && (
@@ -471,7 +427,7 @@ export default function AgentExplorer() {
             style={{ borderColor: EDGE, color: INK }}
           >
             {paused ? <Play className="h-3.5 w-3.5" strokeWidth={2.6} aria-hidden="true" /> : <Pause className="h-3.5 w-3.5" strokeWidth={2.6} aria-hidden="true" />}
-            {paused ? "Play auto-advance" : "Pause auto-advance"}
+            {paused ? d.agents.playLabel : d.agents.pauseLabel}
           </button>
         )}
       </div>
@@ -491,7 +447,7 @@ export default function AgentExplorer() {
             <span className="mb-4 grid h-12 w-12 place-items-center rounded-2xl text-white" style={{ background: `linear-gradient(135deg, ${BLUE}, ${BLUE_LIGHT})`, boxShadow: "0 14px 30px rgba(10,102,194,0.28)" }}>
               <Icon className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
             </span>
-            <p className="text-xs font-black uppercase tracking-[0.28em]" style={{ color: BLUE }}>{`Agent ${active + 1} of ${AGENTS.length}`}</p>
+            <p className="text-xs font-black uppercase tracking-[0.28em]" style={{ color: BLUE }}>{`${d.agents.agentLabel} ${active + 1} of ${AGENTS.length}`}</p>
             <h3 className="mt-2 text-2xl font-black leading-tight" style={{ color: INK, letterSpacing: "-0.03em" }}>{agent.title}</h3>
             <p className="mt-3 text-base leading-relaxed" style={{ color: "#52525B" }}>{agent.summary}</p>
             <ul className="mt-5 space-y-2.5">
@@ -509,7 +465,7 @@ export default function AgentExplorer() {
                 <Sparkles className="h-3.5 w-3.5" strokeWidth={2.6} aria-hidden="true" />
               </span>
               <p className="text-sm font-black" style={{ color: "#7c3a06" }}>
-                The result
+                {d.agents.resultLabel}
                 <span className="block font-semibold" style={{ color: "#3D2B14" }}>{agent.result}</span>
               </p>
             </div>

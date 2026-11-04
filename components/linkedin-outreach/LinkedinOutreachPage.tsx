@@ -42,85 +42,45 @@ import AgentExplorer from "./AgentExplorer";
 import InView from "./InView";
 import { BLUE, BLUE_LIGHT, BLUE_PALE, BODY, CREAM, GOLD, INK, LINE, MUTED, SOFT_LINE } from "./theme";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import d from "@/content/service-copy/linkedin-outreach.json";
 
 // LinkedIn outreach service page: the same design language as the cold email
 // page, with LinkedIn blue as the accent. It carries no pricing or plans.
 
 const CALENDAR = "/book-a-call";
 
-const STATS = [
-  { value: "45%", label: "of a company's market value ties back to leadership reputation" },
-  { value: "561%", label: "more reach for personal brands than company pages" },
-  { value: "13.57x", label: "more paid to people buyers see as experts" },
-  { value: "90 min", label: "of your time a month. We handle the rest." },
-];
+const STATS = d.numbers.stats;
 
-const PILLS = ["Account-safe execution", "AI agent-led prospecting", "Messages that sound like you"];
+const PILLS = d.numbers.pills;
 
-const COMPARE: { label: string; others: boolean }[] = [
-  { label: "Profile optimisation", others: true },
-  { label: "Content creation", others: true },
-  { label: "Monthly reporting", others: true },
-  { label: "ICP research & positioning", others: false },
-  { label: "Lead generation (LinkedIn + InMail)", others: false },
-  { label: "Multi-channel outreach sequences", others: false },
-  { label: "Personalised connection requests", others: false },
-  { label: "Competitor & buyer intelligence", others: false },
-  { label: "AI agent-led prospecting", others: false },
-  { label: "Weekly pipeline updates", others: false },
-  { label: "Monthly strategy reviews", others: false },
-];
+const COMPARE = d.comparison.rows;
 
-const INCLUDED: { icon: LucideIcon; label: string; text: string }[] = [
-  { icon: Users, label: "Dedicated growth team", text: "A lead gen expert, content writer and account manager" },
-  { icon: Target, label: "ICP & value-prop frameworks", text: "Define your audience and sharpen your message" },
-  { icon: CalendarClock, label: "Weekly check-ins with Tejas", text: "Strategy and positioning, every single week" },
-  { icon: UserCheck, label: "LinkedIn makeover", text: "Profile optimisation plus competitor analysis" },
-  { icon: PenLine, label: "Authority-building content", text: "Monthly strategy, writing and a video interview" },
-  { icon: Send, label: "Lead generation, done for you", text: "Connection requests, follow-ups, InMails and daily engagement" },
-  { icon: MessagesSquare, label: "Reputation management", text: "Thoughtful replies to every comment on your posts" },
-  { icon: BarChart3, label: "Monthly growth reports", text: "Content, audience growth and pipeline movement" },
-];
+const INCLUDED_ICONS: LucideIcon[] = [Users, Target, CalendarClock, UserCheck, PenLine, Send, MessagesSquare, BarChart3];
+const INCLUDED = d.included.items.map((item, i) => ({ ...item, icon: INCLUDED_ICONS[i] }));
 
-const STEPS = [
-  { n: "01", title: "Position", text: "ICP and value-proposition frameworks define who you serve and why they should care." },
-  { n: "02", title: "Build authority", text: "A LinkedIn makeover and a monthly content engine make you credible at a glance." },
-  { n: "03", title: "Start conversations", text: "AI agents and our team run personalised outreach to the right buyers." },
-  { n: "04", title: "Review and refine", text: "Weekly check-ins and monthly reports keep every campaign sharper." },
-];
+const STEPS = d.process.steps.map((s) => ({ n: s.number, title: s.title, text: s.text }));
 
-const NOTES: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: ShieldCheck, title: "Your account is safe", text: "Everything stays within LinkedIn's limits. No bans, no risks, just smarter execution." },
-  { icon: Sparkles, title: "AI agents are our unfair advantage", text: "From finding your ICP to writing follow-ups that feel personal, they work quietly behind the scenes." },
-  { icon: RefreshCw, title: "Your ICP isn't set in stone", text: "Your business evolves, and so does your ideal customer. We adjust targeting as you grow." },
-  { icon: Building2, title: "Company pages grow differently", text: "They serve a different purpose. We keep yours sharp, but real traction happens on your personal profile." },
-  { icon: TrendingUp, title: "Sustainable, high-impact growth", text: "No fake followers, no gimmicks. Just real, strategic positioning that gets results." },
-];
+const NOTE_ICONS: LucideIcon[] = [ShieldCheck, Sparkles, RefreshCw, Building2, TrendingUp];
+const NOTES = d.beforeWeStart.notes.map((n, i) => ({ ...n, icon: NOTE_ICONS[i] }));
 
-const OUTCOMES: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: Zap, title: "Consistent pipeline", text: "A steady flow of replies and qualified meetings, every week." },
-  { icon: Eye, title: "Visibility that converts", text: "Prospects recognise your name before you ever reach out." },
-  { icon: Target, title: "Sharper positioning", text: "Messaging your ideal buyers can't ignore." },
-  { icon: Handshake, title: "Effortless execution", text: "A full team running content and outreach, even on your busiest days." },
-  { icon: BadgeCheck, title: "High-quality leads", text: "High-intent, high-relevance prospects only. No noise." },
-  { icon: TrendingUp, title: "Real business outcomes", text: "More conversations and deals, without hours on LinkedIn every day." },
-];
+const OUTCOME_ICONS: LucideIcon[] = [Zap, Eye, Target, Handshake, BadgeCheck, TrendingUp];
+const OUTCOMES = d.outcomes.items.map((o, i) => ({ ...o, icon: OUTCOME_ICONS[i] }));
 
 const FAQS = pageFaqsQA("service-linkedin-outreach");
 
-const FOUNDER_STATS = ["4x entrepreneur", "Scaled Flintstop to $6M ARR", "TEDx speaker", "Growth marketing professor", "130+ B2B companies"];
+const FOUNDER_STATS = d.founder.stats;
 
 // The four steps below are the visible "How it works" timeline on this page,
 // so the schema describes content the visitor can actually read.
 const HOWTO_SCHEMA = buildHowToSchema(
-  "How LinkedIn Outreach Works",
+  d.schema.howToName,
   STEPS.map((s) => ({ name: s.title, text: s.text }))
 );
 const FAQ_SCHEMA = buildFaqSchema(FAQS.map(({ q, a }) => ({ question: q, answer: a })));
 const SERVICE_SCHEMA = buildServiceSchema({
-  name: "LinkedIn Outreach & Automation",
-  description: "AI-agent-led LinkedIn personal branding and lead generation for founders, CXOs and B2B teams.",
-  serviceType: "LinkedIn Outreach and Personal Branding",
+  name: d.schema.serviceName,
+  description: d.schema.serviceDescription,
+  serviceType: d.schema.serviceType,
   url: `${SITE_URL}/services/linkedin-outreach`,
 });
 
@@ -180,32 +140,32 @@ export default function LinkedinOutreachPage() {
         <div aria-hidden="true" style={{ position: "absolute", top: "-120px", right: "-180px", width: 620, height: 620, borderRadius: "50%", background: "radial-gradient(circle,rgba(245,183,49,0.24),rgba(167,139,250,0.08) 45%,transparent 70%)", filter: "blur(55px)" }} />
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="hero-fade">
-            <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "LinkedIn Outreach", href: "/services/linkedin-outreach" }]} />
+            <Breadcrumbs items={[{ label: d.hero.breadcrumbServices, href: "/services" }, { label: d.hero.breadcrumbPage, href: "/services/linkedin-outreach" }]} />
           </div>
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <div className="hero-fade mb-7 inline-flex items-center gap-2.5 rounded-full border bg-white/70 px-5 py-2 backdrop-blur" style={{ borderColor: "rgba(10,102,194,0.35)" }}>
                 <span className="h-2 w-2 animate-pulse rounded-full" style={{ backgroundColor: BLUE }} />
-                <span className="whitespace-nowrap text-xs font-bold uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.3em]" style={{ color: INK }}>LinkedIn outreach · AI agent-led</span>
+                <span className="whitespace-nowrap text-xs font-bold uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.3em]" style={{ color: INK }}>{d.hero.badge}</span>
               </div>
               <h1 className="hero-fade-d1 font-black" style={{ color: INK, fontSize: "clamp(2.5rem, 6.1vw, 4.3rem)", lineHeight: 0.98, letterSpacing: "-0.045em" }}>
-                Your personal brand matters,
-                <br className="hidden sm:block" /> but your{" "}
+                {d.hero.headlineStart}
+                <br className="hidden sm:block" />{` ${d.hero.headlineBeforeEm}`}{" "}
                 <span className="relative inline-block italic" style={{ color: BLUE }}>
-                  pipeline
+                  {d.hero.headlineEm}
                   <Underline color={GOLD} />
                 </span>{" "}
-                matters more<span style={{ color: GOLD }}>.</span>
+                {d.hero.headlineAfterEm}<span style={{ color: GOLD }}>.</span>
               </h1>
               <p className="hero-fade-d2 mt-7 max-w-lg text-lg font-medium sm:text-xl" style={{ color: "#3b3b45", lineHeight: 1.4 }}>
-                Custom-trained AI agents power LinkedIn outreach that starts real conversations, so the right buyers find you and your calendar fills with qualified B2B meetings.
+                {d.hero.subhead}
               </p>
               <div className="hero-fade-d2 mt-9 flex flex-wrap gap-3">
                 <Link href={CALENDAR} className="btn-dark inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold">
-                  Book a free strategy call <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  {`${d.hero.primaryCtaLabel} `}<ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <a href="#agents" className="inline-flex items-center gap-2 rounded-full border bg-white/70 px-7 py-3.5 text-sm font-bold backdrop-blur transition-colors hover:border-[#0A66C2]" style={{ borderColor: "#E8E2D9", color: INK }}>
-                  Meet the AI agents
+                  {d.hero.secondaryCtaLabel}
                 </a>
               </div>
             </div>
@@ -247,23 +207,23 @@ export default function LinkedinOutreachPage() {
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="mb-12 max-w-2xl">
-              <Eyebrow>An unfair advantage</Eyebrow>
+              <Eyebrow>{d.reputation.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                A strong brand opens the door. <span className="italic" style={{ color: BLUE }}>A strong pipeline takes you inside.</span>
+                {`${d.reputation.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.reputation.headlineEm}</span>
               </h2>
-              <p className="mt-4 text-lg" style={{ color: BODY }}>We help you build both.</p>
+              <p className="mt-4 text-lg" style={{ color: BODY }}>{d.reputation.subhead}</p>
             </div>
           </FadeIn>
           <div className="grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
             <FadeIn className="h-full">
               <div className="relative h-full overflow-hidden rounded-[26px] border bg-white p-8" style={{ borderColor: SOFT_LINE, boxShadow: "0 18px 50px rgba(15,15,20,0.05)" }}>
-                <span aria-hidden="true" className="pointer-events-none absolute right-7 top-6 select-none text-[4.5rem] font-black leading-none" style={{ color: "rgba(10,102,194,0.1)", letterSpacing: "-0.06em" }}>01</span>
+                <span aria-hidden="true" className="pointer-events-none absolute right-7 top-6 select-none text-[4.5rem] font-black leading-none" style={{ color: "rgba(10,102,194,0.1)", letterSpacing: "-0.06em" }}>{d.reputation.cards[0].number}</span>
                 <span className="relative mb-6 grid h-14 w-14 place-items-center rounded-2xl text-white" style={{ background: `linear-gradient(135deg, ${BLUE}, ${BLUE_LIGHT})`, boxShadow: "0 14px 30px rgba(10,102,194,0.28)" }}>
                   <DoorOpen className="h-7 w-7" strokeWidth={2} aria-hidden="true" />
                 </span>
-                <p className="relative text-xs font-black uppercase tracking-[0.24em]" style={{ color: BLUE }}>Reputation</p>
-                <h3 className="relative mt-1 text-2xl font-black" style={{ color: INK, letterSpacing: "-0.03em" }}>Opens the door</h3>
-                <p className="relative mt-2 text-base leading-relaxed" style={{ color: BODY }}>Credibility fuels conversion. Buyers pay more to the people they see as experts.</p>
+                <p className="relative text-xs font-black uppercase tracking-[0.24em]" style={{ color: BLUE }}>{d.reputation.cards[0].eyebrow}</p>
+                <h3 className="relative mt-1 text-2xl font-black" style={{ color: INK, letterSpacing: "-0.03em" }}>{d.reputation.cards[0].title}</h3>
+                <p className="relative mt-2 text-base leading-relaxed" style={{ color: BODY }}>{d.reputation.cards[0].text}</p>
               </div>
             </FadeIn>
             <div className="hidden items-center justify-center md:flex" aria-hidden="true">
@@ -274,19 +234,19 @@ export default function LinkedinOutreachPage() {
             </div>
             <FadeIn delay={120} className="h-full">
               <div className="relative h-full overflow-hidden rounded-[26px] border bg-white p-8" style={{ borderColor: SOFT_LINE, boxShadow: "0 18px 50px rgba(15,15,20,0.05)" }}>
-                <span aria-hidden="true" className="pointer-events-none absolute right-7 top-6 select-none text-[4.5rem] font-black leading-none" style={{ color: "rgba(245,183,49,0.2)", letterSpacing: "-0.06em" }}>02</span>
+                <span aria-hidden="true" className="pointer-events-none absolute right-7 top-6 select-none text-[4.5rem] font-black leading-none" style={{ color: "rgba(245,183,49,0.2)", letterSpacing: "-0.06em" }}>{d.reputation.cards[1].number}</span>
                 <span className="relative mb-6 grid h-14 w-14 place-items-center rounded-2xl" style={{ background: `linear-gradient(135deg, ${GOLD}, #f59e0b)`, color: INK, boxShadow: "0 14px 30px rgba(245,183,49,0.35)" }}>
                   <KeyRound className="h-7 w-7" strokeWidth={2} aria-hidden="true" />
                 </span>
-                <p className="relative text-xs font-black uppercase tracking-[0.24em]" style={{ color: "#A14A08" }}>Pipeline</p>
-                <h3 className="relative mt-1 text-2xl font-black" style={{ color: INK, letterSpacing: "-0.03em" }}>Takes you inside</h3>
-                <p className="relative mt-2 text-base leading-relaxed" style={{ color: BODY }}>Outreach that starts real conversations and fills your calendar with qualified meetings.</p>
+                <p className="relative text-xs font-black uppercase tracking-[0.24em]" style={{ color: "#A14A08" }}>{d.reputation.cards[1].eyebrow}</p>
+                <h3 className="relative mt-1 text-2xl font-black" style={{ color: INK, letterSpacing: "-0.03em" }}>{d.reputation.cards[1].title}</h3>
+                <p className="relative mt-2 text-base leading-relaxed" style={{ color: BODY }}>{d.reputation.cards[1].text}</p>
               </div>
             </FadeIn>
           </div>
           <FadeIn>
             <p className="mt-12 text-center text-xl font-black sm:text-2xl" style={{ color: INK, letterSpacing: "-0.02em" }}>
-              We don&apos;t just make you look credible. <span className="italic" style={{ color: BLUE }}>We make your calendar busier.</span>
+              {`${d.reputation.closingStart} `}<span className="italic" style={{ color: BLUE }}>{d.reputation.closingEm}</span>
             </p>
           </FadeIn>
         </div>
@@ -297,26 +257,26 @@ export default function LinkedinOutreachPage() {
         <div className="mx-auto max-w-4xl">
           <FadeIn>
             <div className="mb-10 max-w-2xl">
-              <Eyebrow>Why Myntmore</Eyebrow>
+              <Eyebrow>{d.comparison.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                Others stop at the profile. <span className="italic" style={{ color: BLUE }}>We build the pipeline.</span>
+                {`${d.comparison.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.comparison.headlineEm}</span>
               </h2>
             </div>
           </FadeIn>
           <FadeIn>
             <div className="overflow-hidden rounded-[28px] border" style={{ borderColor: SOFT_LINE, boxShadow: "0 24px 70px rgba(15,15,20,0.06)" }}>
               <div className="grid grid-cols-[1fr_84px_84px] items-center sm:grid-cols-[1fr_150px_150px]" style={{ backgroundColor: "#FAF8F4" }}>
-                <p className="px-4 py-4 text-xs font-black uppercase tracking-[0.22em] sm:px-6" style={{ color: MUTED }}>What you get</p>
+                <p className="px-4 py-4 text-xs font-black uppercase tracking-[0.22em] sm:px-6" style={{ color: MUTED }}>{d.comparison.columnWhatYouGet}</p>
                 <div className="flex justify-center py-3" style={{ backgroundColor: "rgba(10,102,194,0.08)" }}>
-                  <span className="rounded-full px-3 py-1 text-xs font-black text-white" style={{ background: `linear-gradient(135deg, ${BLUE}, #1D6FD4)` }}>Myntmore</span>
+                  <span className="rounded-full px-3 py-1 text-xs font-black text-white" style={{ background: `linear-gradient(135deg, ${BLUE}, #1D6FD4)` }}>{d.comparison.columnMyntmore}</span>
                 </div>
-                <p className="px-1 py-4 text-center text-xs font-black uppercase leading-tight tracking-[0.12em]" style={{ color: MUTED }}>Other agencies</p>
+                <p className="px-1 py-4 text-center text-xs font-black uppercase leading-tight tracking-[0.12em]" style={{ color: MUTED }}>{d.comparison.columnOthers}</p>
               </div>
               {COMPARE.map((row, i) => (
                 <div key={row.label}>
                   {(i === 0 || i === 3) && (
                     <div className="border-t px-4 py-2 text-xs font-black uppercase tracking-[0.22em] sm:px-6" style={{ backgroundColor: i === 0 ? "#fff" : BLUE_PALE, borderColor: SOFT_LINE, color: i === 0 ? MUTED : BLUE }}>
-                      {i === 0 ? "The basics" : "What most agencies skip"}
+                      {i === 0 ? d.comparison.basicsGroupLabel : d.comparison.skippedGroupLabel}
                     </div>
                   )}
                   <FadeIn delay={(i % 8) * 40}>
@@ -325,7 +285,7 @@ export default function LinkedinOutreachPage() {
                       <div className="flex justify-center self-stretch py-4" style={{ backgroundColor: "rgba(10,102,194,0.05)" }}>
                         <Tick />
                       </div>
-                      <div className="flex justify-center py-4">{row.others ? <Tick muted /> : <Cross />}</div>
+                      <div className="flex justify-center py-4">{row.othersDoIt ? <Tick muted /> : <Cross />}</div>
                     </div>
                   </FadeIn>
                 </div>
@@ -340,21 +300,21 @@ export default function LinkedinOutreachPage() {
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="mb-10 max-w-2xl">
-              <Eyebrow>Powered by AI agents</Eyebrow>
+              <Eyebrow>{d.agents.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                Your 24/7 <span className="italic" style={{ color: BLUE }}>outbound team.</span>
+                {`${d.agents.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.agents.headlineEm}</span>
               </h2>
-              <p className="mt-4 text-lg" style={{ color: BODY }}>These aren&apos;t tools. They&apos;re a silent growth team that analyses, identifies and acts with precision.</p>
+              <p className="mt-4 text-lg" style={{ color: BODY }}>{d.agents.subhead}</p>
             </div>
           </FadeIn>
           <AgentExplorer />
           <FadeIn>
             <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border bg-white px-6 py-5 sm:flex-row sm:items-center" style={{ borderColor: SOFT_LINE }}>
               <p className="max-w-xl text-sm font-semibold leading-relaxed" style={{ color: BODY }}>
-                The result: faster execution, razor-sharp accuracy, and positioning that feels personal but performs like a machine.
+                {d.agents.footerText}
               </p>
-              <Link href="/myntmore-framework" className="inline-flex min-h-[44px] shrink-0 items-center gap-2 text-sm font-black underline decoration-2 underline-offset-4 transition-colors hover:text-[#0A66C2]" style={{ color: INK, textDecorationColor: GOLD }}>
-                See the agents in action <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <Link href={d.agents.footerLinkHref} className="inline-flex min-h-[44px] shrink-0 items-center gap-2 text-sm font-black underline decoration-2 underline-offset-4 transition-colors hover:text-[#0A66C2]" style={{ color: INK, textDecorationColor: GOLD }}>
+                {`${d.agents.footerLinkLabel} `}<ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
           </FadeIn>
@@ -366,11 +326,11 @@ export default function LinkedinOutreachPage() {
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="mb-12 max-w-2xl">
-              <Eyebrow>What you get</Eyebrow>
+              <Eyebrow>{d.included.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                Your whole growth team, <span className="italic" style={{ color: BLUE }}>included.</span>
+                {`${d.included.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.included.headlineEm}</span>
               </h2>
-              <p className="mt-4 text-lg" style={{ color: BODY }}>Everything runs for you, from the first profile tweak to the monthly report.</p>
+              <p className="mt-4 text-lg" style={{ color: BODY }}>{d.included.subhead}</p>
             </div>
           </FadeIn>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -399,9 +359,9 @@ export default function LinkedinOutreachPage() {
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="mb-14 max-w-2xl">
-              <Eyebrow>How we run it</Eyebrow>
+              <Eyebrow>{d.process.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                Four moves. <span className="italic" style={{ color: BLUE }}>One engine.</span>
+                {`${d.process.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.process.headlineEm}</span>
               </h2>
             </div>
           </FadeIn>
@@ -423,9 +383,9 @@ export default function LinkedinOutreachPage() {
           </InView>
           <FadeIn>
             <p className="mt-10 text-center text-sm font-semibold" style={{ color: BODY }}>
-              Want the playbook behind it?{" "}
-              <Link href="/resources/guides/58-meetings-600-linkedin-connections" className="font-black underline decoration-2 underline-offset-4 transition-colors hover:text-[#0A66C2]" style={{ color: INK, textDecorationColor: GOLD }}>
-                Read the free 5-step framework behind 58 meetings from 600 connections
+              {d.process.playbookIntro}{" "}
+              <Link href={d.process.playbookLinkHref} className="font-black underline decoration-2 underline-offset-4 transition-colors hover:text-[#0A66C2]" style={{ color: INK, textDecorationColor: GOLD }}>
+                {d.process.playbookLinkLabel}
               </Link>
             </p>
           </FadeIn>
@@ -437,9 +397,9 @@ export default function LinkedinOutreachPage() {
         <div aria-hidden="true" className="absolute -bottom-32 -left-24 h-96 w-96 rounded-full" style={{ background: "radial-gradient(circle, rgba(245,183,49,0.14), transparent 70%)", filter: "blur(50px)" }} />
         <div className="relative mx-auto max-w-6xl">
           <FadeIn>
-            <Eyebrow light>Before we start</Eyebrow>
+            <Eyebrow light>{d.beforeWeStart.eyebrow}</Eyebrow>
             <h2 className="max-w-xl text-4xl font-black sm:text-5xl" style={{ ...h2Style, color: INK }}>
-              A few things <span className="italic" style={{ color: "#A14A08" }}>to know.</span>
+              {`${d.beforeWeStart.headlineStart} `}<span className="italic" style={{ color: "#A14A08" }}>{d.beforeWeStart.headlineEm}</span>
             </h2>
           </FadeIn>
           <FadeIn>
@@ -458,20 +418,20 @@ export default function LinkedinOutreachPage() {
               })}
               <InView className="flex flex-col justify-between p-8" style={{ background: `linear-gradient(135deg, ${GOLD}, #f59e0b)` }}>
                 <div>
-                  <p className="text-xs font-black uppercase tracking-[0.24em]" style={{ color: "rgba(15,15,20,0.65)" }}>Your part</p>
+                  <p className="text-xs font-black uppercase tracking-[0.24em]" style={{ color: "rgba(15,15,20,0.65)" }}>{d.beforeWeStart.yourPart.label}</p>
                   <p className="mt-3 text-6xl font-black" style={{ color: INK, letterSpacing: "-0.05em" }}>
-                    <StatTicker value="90" />
-                    <span className="ml-2 text-2xl tracking-normal">min</span>
+                    <StatTicker value={d.beforeWeStart.yourPart.value} />
+                    <span className="ml-2 text-2xl tracking-normal">{d.beforeWeStart.yourPart.unit}</span>
                   </p>
-                  <p className="mt-1 text-sm font-bold" style={{ color: INK }}>of your time in a month. That&apos;s all we need.</p>
+                  <p className="mt-1 text-sm font-bold" style={{ color: INK }}>{d.beforeWeStart.yourPart.text}</p>
                 </div>
                 <div className="mt-7">
                   <div className="h-3 overflow-hidden rounded-full" style={{ backgroundColor: "rgba(15,15,20,0.16)" }}>
                     <div className="li-bar-fill h-3 w-[9%] rounded-full" style={{ backgroundColor: INK }} />
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4 text-xs font-black leading-tight" style={{ color: INK }}>
-                    <span>You</span>
-                    <span className="text-right">Us: research, content, outreach, replies and reporting</span>
+                    <span>{d.beforeWeStart.yourPart.youLabel}</span>
+                    <span className="text-right">{d.beforeWeStart.yourPart.usLabel}</span>
                   </div>
                 </div>
               </InView>
@@ -486,14 +446,14 @@ export default function LinkedinOutreachPage() {
           <FadeIn>
             <div className="flex flex-col items-start justify-between gap-6 rounded-[28px] border bg-white p-8 sm:p-10 md:flex-row md:items-center" style={{ borderColor: SOFT_LINE, boxShadow: "0 24px 70px rgba(15,15,20,0.06)" }}>
               <div className="max-w-xl">
-                <Eyebrow>See the proof</Eyebrow>
-                <h2 className="text-3xl font-black sm:text-4xl" style={{ color: INK, ...h2Style }}>Want to see the results before you decide?</h2>
+                <Eyebrow>{d.proof.eyebrow}</Eyebrow>
+                <h2 className="text-3xl font-black sm:text-4xl" style={{ color: INK, ...h2Style }}>{d.proof.headline}</h2>
                 <p className="mt-3 text-sm leading-relaxed" style={{ color: MUTED }}>
-                  Due to NDAs and confidentiality agreements, we can&apos;t reveal client names or show their LinkedIn accounts. All results and data in our case studies are real and come from clients across the industries we&apos;ve worked with.
+                  {d.proof.disclaimer}
                 </p>
               </div>
-              <Link href="/case-studies" className="btn-dark inline-flex shrink-0 items-center gap-2 px-7 py-3.5 text-sm font-bold">
-                See case studies <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <Link href={d.proof.ctaHref} className="btn-dark inline-flex shrink-0 items-center gap-2 px-7 py-3.5 text-sm font-bold">
+                {`${d.proof.ctaLabel} `}<ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
           </FadeIn>
@@ -501,19 +461,19 @@ export default function LinkedinOutreachPage() {
       </section>
 
       <div className="mt-24">
-        <Faq badge="FAQ" title="Questions, answered" items={FAQS} />
+        <Faq badge={d.faq.badge} title={d.faq.title} items={FAQS} />
       </div>
 
-      <RelatedPath heading="See it in action" intro="A case study, the thinking behind it, and the next step." items={SERVICE_PATHS["linkedin-outreach"]} accent={BLUE} />
+      <RelatedPath heading={d.relatedPath.heading} intro={d.relatedPath.intro} items={SERVICE_PATHS["linkedin-outreach"]} accent={BLUE} />
 
       {/* Outcomes, founder + CTA */}
       <section className="px-4 py-24" style={{ backgroundColor: CREAM }}>
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="mb-12 max-w-2xl">
-              <Eyebrow>What changes</Eyebrow>
+              <Eyebrow>{d.outcomes.eyebrow}</Eyebrow>
               <h2 className="text-4xl font-black sm:text-5xl" style={{ color: INK, ...h2Style }}>
-                Let us run your <span className="italic" style={{ color: BLUE }}>growth engine.</span>
+                {`${d.outcomes.headlineStart} `}<span className="italic" style={{ color: BLUE }}>{d.outcomes.headlineEm}</span>
               </h2>
             </div>
           </FadeIn>
@@ -537,19 +497,19 @@ export default function LinkedinOutreachPage() {
           <div className="mx-auto mt-20 max-w-5xl space-y-10">
             <FadeIn>
               <div className="grid items-center gap-6 rounded-[28px] border bg-white p-6 sm:p-8 md:grid-cols-[auto_1fr]" style={{ borderColor: SOFT_LINE, boxShadow: "0 24px 70px rgba(15,15,20,0.06)" }}>
-                <Image src="/tejas.png" alt="Tejas Jhaveri, Founder of Myntmore" width={128} height={128} className="h-28 w-28 rounded-3xl object-cover sm:h-32 sm:w-32" />
+                <Image src="/tejas.png" alt={d.founder.imageAlt} width={128} height={128} className="h-28 w-28 rounded-3xl object-cover sm:h-32 sm:w-32" />
                 <div>
-                  <Eyebrow>Meet the founder</Eyebrow>
+                  <Eyebrow>{d.founder.eyebrow}</Eyebrow>
                   <h3 className="text-2xl font-black" style={{ color: INK, letterSpacing: "-0.03em" }}>
-                    <a href="https://linkedin.com/in/tejasjhaveri" target="_blank" rel="noopener noreferrer" className="hover:underline">Tejas Jhaveri</a>
+                    <a href={d.founder.profileHref} target="_blank" rel="noopener noreferrer" className="hover:underline">{d.founder.name}</a>
                   </h3>
-                  <p className="text-sm font-medium" style={{ color: "#6b655e" }}>Founder, Myntmore</p>
+                  <p className="text-sm font-medium" style={{ color: "#6b655e" }}>{d.founder.role}</p>
                   <p className="mt-3 text-sm leading-relaxed" style={{ color: BODY }}>
-                    Tejas has built outbound engines for founders, CXOs and B2B teams, combining AI agents, competitive intelligence, personalisation and multi-channel outreach to generate qualified pipeline. See how we run{" "}
-                    <Link href="/b2b-lead-generation-mumbai" className="underline font-semibold hover:text-[#0A66C2]">
-                      LinkedIn outreach for Mumbai B2B teams
+                    {d.founder.bioBeforeLink}{" "}
+                    <Link href={d.founder.bioLinkHref} className="underline font-semibold hover:text-[#0A66C2]">
+                      {d.founder.bioLinkLabel}
                     </Link>{" "}
-                    and companies across India.
+                    {d.founder.bioAfterLink}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {FOUNDER_STATS.map((s) => (
@@ -564,17 +524,17 @@ export default function LinkedinOutreachPage() {
               <div className="relative overflow-hidden rounded-[32px] border p-10 text-center sm:p-14" style={{ background: "linear-gradient(135deg,#FEF9EC 0%,#FFFFFF 100%)", borderColor: "rgba(245,183,49,0.35)", boxShadow: "0 24px 70px rgba(15,15,20,0.06)" }}>
                 <div aria-hidden="true" className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full" style={{ background: "radial-gradient(circle, rgba(245,183,49,0.18), transparent 70%)", filter: "blur(40px)" }} />
                 <div className="relative">
-                  <Eyebrow light>Try before you commit</Eyebrow>
+                  <Eyebrow light>{d.finalCta.eyebrow}</Eyebrow>
                   <h2 className="mx-auto max-w-2xl text-4xl font-black sm:text-5xl" style={{ ...h2Style, color: INK }}>
-                    Ready to turn LinkedIn into <span className="italic" style={{ color: "#A14A08" }}>booked meetings?</span>
+                    {`${d.finalCta.headlineStart} `}<span className="italic" style={{ color: "#A14A08" }}>{d.finalCta.headlineEm}</span>
                   </h2>
-                  <p className="mx-auto mt-5 max-w-md text-base" style={{ color: BODY }}>Book a call, or send us your details and we&apos;ll take it from here.</p>
+                  <p className="mx-auto mt-5 max-w-md text-base" style={{ color: BODY }}>{d.finalCta.subhead}</p>
                   <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
                     <Link href={CALENDAR} className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-bold transition-transform hover:-translate-y-0.5" style={{ backgroundColor: GOLD, color: INK }}>
-                      Book a free strategy call <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      {`${d.finalCta.primaryLabel} `}<ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
-                    <Link href="/contact-us" className="rounded-full border px-8 py-4 text-sm font-bold transition-colors hover:bg-[#F8F6F2]" style={{ color: INK, borderColor: "#D0C9BF", backgroundColor: "#FFFFFF" }}>
-                      Send us your details
+                    <Link href={d.finalCta.secondaryHref} className="rounded-full border px-8 py-4 text-sm font-bold transition-colors hover:bg-[#F8F6F2]" style={{ color: INK, borderColor: "#D0C9BF", backgroundColor: "#FFFFFF" }}>
+                      {d.finalCta.secondaryLabel}
                     </Link>
                   </div>
                 </div>
