@@ -62,3 +62,103 @@ P60,quarterly,cost,How much does a cold email agency cost in India?,,,,/services
 P61,quarterly,cost,What does a LinkedIn outreach agency charge?,,,,/services/linkedin-outreach
 P62,quarterly,entity,What services does Myntmore offer?,,,,/services
 P63,quarterly,entity,Is Myntmore a good lead generation agency?,,,,Clutch reviews (off-site)
+P64,quarterly,definition,What is a cold email?,,,,/resources/glossary/cold-email
+P65,quarterly,definition,What is an ideal customer profile (ICP)?,,,,/resources/glossary/icp
+P66,quarterly,definition,What is account-based marketing (ABM)?,,,,/resources/glossary/abm
+P67,quarterly,definition,What is a buying signal in B2B sales?,,,,/resources/glossary/buying-signal
+P68,quarterly,definition,What is multi-threading in B2B sales?,,,,/resources/glossary/multi-threading
+P69,quarterly,definition,What is domain warmup for cold email?,,,,/resources/glossary/domain-warmup
+P70,quarterly,definition,"What do SPF, DKIM and DMARC do for cold email?",,,,/resources/glossary/spf-dkim-dmarc
+P71,quarterly,definition,What is sender reputation?,,,,/resources/glossary/sender-reputation
+P72,quarterly,definition,What is a good spam complaint rate for cold email?,,,,/resources/glossary/spam-complaint-rate
+P73,quarterly,definition,What is lead scoring in B2B?,,,,/resources/glossary/lead-scoring
+P74,quarterly,definition,What is the difference between a warm lead and a cold lead?,,,,/resources/glossary/warm-lead
+P75,quarterly,definition,What is founder-led sales?,,,,/resources/glossary/founder-led-sales
+P76,quarterly,definition,What is social selling on LinkedIn?,,,,/resources/glossary/social-selling
+P77,quarterly,definition,What is a re-engagement campaign?,,,,/resources/glossary/re-engagement-campaign
+P78,quarterly,definition,What is lead qualification?,,,,/resources/glossary/lead-qualification
+P79,quarterly,definition,What is a meeting booked rate in outbound?,,,,/resources/glossary/meeting-booked-rate
+P80,quarterly,definition,What are vanity metrics in outbound sales?,,,,/resources/glossary/vanity-metrics
+P81,quarterly,definition,What is pipeline generation?,,,,/resources/glossary/pipeline-generation
+P82,quarterly,definition,What is multi-channel outreach?,,,,/resources/glossary/multi-channel-outreach
+P83,quarterly,definition,What does an SDR do?,,,,/resources/glossary/sdr
+P84,quarterly,definition,What is appointment setting?,,,,/resources/glossary/appointment-setting
+P85,quarterly,definition,What is a go-to-market (GTM) strategy?,,,,/resources/glossary/gtm-strategy
+P86,quarterly,definition,What is CAN-SPAM and does it apply to cold email?,,,,/resources/glossary/can-spam-act
+P87,quarterly,how-to,How do I warm up a new domain for cold email?,,,,/resources/blogs/cold-email-deliverability-guide
+P88,quarterly,how-to,How many cold emails can I send per day per inbox?,,,,/resources/blogs/cold-email-deliverability-guide
+P89,quarterly,how-to,How do I avoid the spam folder with cold email?,,,,/resources/blogs/cold-email-deliverability-guide
+P90,quarterly,how-to,How do I reply to a positive cold email response and book the meeting?,,,,/resources/blogs/positive-reply-to-booked-meeting
+P91,quarterly,how-to,How do I handle objections and replies to cold emails?,,,,/resources/blogs/handling-cold-email-replies
+P92,quarterly,how-to,What are good cold email templates for B2B?,,,,/resources/blogs/cold-email-sequence-templates
+P93,quarterly,how-to,How many follow-ups should a cold email sequence have?,,,,/resources/blogs/cold-email-follow-up-sequence
+P94,quarterly,how-to,Is cold email still effective in 2026?,,,,/resources/blogs/b2b-outbound-benchmark-report-2026
+P95,quarterly,how-to,What is a good cold email reply rate?,,,,/resources/blogs/b2b-outbound-benchmark-report-2026
+P96,quarterly,how-to,Does cold email comply with GDPR and India's DPDP Act?,,,,/resources/blogs/cold-email-compliance-guide
+P97,quarterly,how-to,What tech stack do I need to run cold email?,,,,/resources/guides/cold-email-tech-stack
+P98,quarterly,how-to,How do I personalise cold emails with AI at scale?,,,,/resources/blogs/ai-personalization-cold-outreach
+P99,quarterly,how-to,How do I write a LinkedIn hook that gets read?,,,,/resources/blogs/how-to-write-a-linkedin-hook
+P100,quarterly,how-to,What does a good LinkedIn outreach message sequence look like?,,,,/resources/blogs/linkedin-outreach-sequences
+P101,quarterly,how-to,Is LinkedIn automation safe for my account?,,,,/services/linkedin-outreach
+P102,quarterly,how-to,How do I turn my LinkedIn profile into an inbound lead machine?,,,,/resources/blogs/linkedin-profile-inbound-lead-machine
+P103,quarterly,how-to,How can a founder build a LinkedIn personal brand that brings in clients?,,,,/resources/blogs/founder-personal-brand-linkedin
+P104,quarterly,comparison,Personal branding agency vs content freelancer: which should a founder hire?,,,,/resources/blogs/personal-branding-agency-vs-content-freelancer
+P105,quarterly,comparison,LinkedIn outreach agency vs manual prospecting,,,,/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting
+P106,quarterly,how-to,How do I get meetings booked from LinkedIn connections?,,,,/resources/guides/58-meetings-600-linkedin-connections
+P107,quarterly,how-to,How do I turn LinkedIn content into sales calls?,,,,/resources/guides/linkedin-content-to-calls-starter-kit
+P108,quarterly,tool,Free tool to score a LinkedIn post hook,,,,/tools/linkedin-hook-grader
+P109,quarterly,tool,Free tool to audit and improve a LinkedIn profile for sales,,,,/tools/linkedin-optimizer
+P110,quarterly,how-to,Which LinkedIn metrics are vanity metrics for a founder?,,,,/resources/blogs/vanity-metrics-personal-brand-pipeline
+P111,quarterly,how-to,How do I define an ICP for B2B outbound step by step?,,,,/resources/guides/golden-icp-framework
+P112,quarterly,how-to,Why does vague targeting hurt B2B outbound?,,,,/resources/blogs/tam-trap-vague-targeting
+P113,quarterly,how-to,Why do my cold emails get no replies even with good targeting?,,,,/resources/blogs/outbound-offer-problem
+P114,quarterly,how-to,Why should cold outreach not lead with product features?,,,,/resources/blogs/stop-selling-features-cold-outreach
+P115,quarterly,how-to,How do I position against competitors in cold outreach?,,,,/resources/blogs/pitching-trap-competitor-positioning
+P116,quarterly,how-to,How do I calculate outbound funnel math?,,,,/resources/blogs/outbound-funnel-math-not-guesswork
+P117,quarterly,how-to,Which metrics should I track for B2B lead generation?,,,,/resources/blogs/b2b-lead-gen-metrics
+P118,quarterly,how-to,How do I build a predictable B2B lead generation engine?,,,,/resources/blogs/predictable-b2b-lead-gen-engine
+P119,quarterly,how-to,How do I sell to a whole B2B buying committee?,,,,/resources/blogs/multi-threading-b2b-buying-committee
+P120,quarterly,how-to,How do I revive closed-lost leads?,,,,/resources/blogs/reviving-closed-lost-leads
+P121,quarterly,how-to,Should a founder do the selling before building an outbound team?,,,,/resources/blogs/founder-led-sales-before-scaling
+P122,quarterly,how-to,Is relevance or reach more important in B2B outbound?,,,,/resources/blogs/relevance-beats-reach-b2b-outbound
+P123,quarterly,how-to,Why measure outbound by conversations instead of impressions?,,,,/resources/blogs/conversations-not-impressions-outbound
+P124,quarterly,comparison,AI lead generation vs traditional lead generation,,,,/resources/blogs/ai-vs-traditional-lead-generation
+P125,quarterly,how-to,What makes a lead magnet worth the contact details?,,,,/resources/blogs/value-premium-lead-magnets
+P126,quarterly,how-to,What is B2B outbound sales and how does it work?,,,,/resources/blogs/what-is-b2b-outbound-sales
+P127,quarterly,tool,Free ROI calculator for an outbound programme,,,,/tools/roi-calculator
+P128,quarterly,tool,Free cold email ROI calculator,,,,/tools/cold-email-roi-calculator
+P129,quarterly,tool,Free ICP builder tool,,,,/tools/icp-builder
+P130,quarterly,tool,Free sales battle card generator,,,,/tools/battle-card-generator
+P131,quarterly,tool,Free B2B case study generator,,,,/tools/case-study-generator
+P132,quarterly,tool,Free lead magnet ideas generator,,,,/tools/lead-magnet-ideas
+P133,quarterly,tool,Free LinkedIn DM opening line generator,,,,/tools/dm-angle-generator
+P134,quarterly,tool,Free tool to check a founder's LinkedIn presence,,,,/tools/founder-presence-analyzer
+P135,quarterly,service,What is ICP mapping and lead scoring as a service?,,,,/services/sales-intelligence
+P136,quarterly,service,How does AI lead generation work with human review?,,,,/services/ai-lead-generation
+P137,quarterly,service,What does an account-based marketing agency do for enterprise sales?,,,,/services/account-based-marketing
+P138,quarterly,service,What does a GTM strategy engagement include?,,,,/services/gtm-strategy
+P139,quarterly,service,What does a done-for-you cold email service include?,,,,/services/cold-email
+P140,quarterly,service,Is there a self-serve LinkedIn outreach tool?,,,,/services/do-it-yourself
+P141,quarterly,entity,Who is Myntmore not for?,,,,/who-this-is-for
+P142,quarterly,entity,What is the Myntmore Framework for outbound?,,,,/myntmore-framework
+P143,quarterly,entity,Where does Myntmore's data and benchmark information come from?,,,,/editorial-policy
+P144,quarterly,entity,What results has Myntmore produced for B2B SaaS companies?,ICP 2,B2B SaaS & Enterprise Software,,/case-studies/saas-series-a
+P145,quarterly,how-to,How do I choose a B2B outbound agency?,,,,/resources/guides/how-to-choose-an-outbound-agency
+P146,quarterly,icp,How can a SaaS founder get the first customers through outbound?,ICP 2,B2B SaaS & Enterprise Software,,/lp/saas-founders
+P147,quarterly,icp,How can a software development agency win clients in the US and UK?,ICP 1,IT Services & Product Engineering,,/lp/agencies-it
+P148,quarterly,icp,How do contract manufacturers and CDMOs find new customers?,ICP 11,Manufacturing / Industrial B2B incl. Pharma,,/lp/pharma
+P149,quarterly,icp,How do textile and engineering exporters find importers abroad?,ICP 11,Manufacturing / Industrial B2B incl. Pharma,,/lp/manufacturers-exporters
+P150,quarterly,icp,How do staffing firms find new client companies?,ICP 3,Executive Search & Recruitment,,/lp/recruitment-firms
+P151,quarterly,icp,How can a bookkeeping or payroll firm get new clients?,ICP 24,Accounting / CFO / Compliance,,/lp/accounting-cfo-firms
+P152,quarterly,icp,How can an NBFC or business lender generate B2B leads?,,,,/lp/financial-services
+P153,quarterly,icp,How do insurance brokers find corporate group insurance clients?,,,,/lp/insurance
+P154,quarterly,icp,How can a startup founder reach the right investors?,,,,/lp/fundraising
+P155,quarterly,icp,How can my agency resell lead generation under our own brand?,ICP 4,"Agencies, White Label",,/lp/agency-partners
+P156,quarterly,city,B2B lead generation agency in Delhi NCR,,,Delhi,/b2b-lead-generation-delhi
+P157,quarterly,city,Outbound agency in Hyderabad for SaaS and IT companies,,,Hyderabad,/b2b-lead-generation-hyderabad
+P158,quarterly,city,LinkedIn lead generation agency in Chennai,,,Chennai,/b2b-lead-generation-chennai
+P159,quarterly,city,Cold email agency in Kolkata,,,Kolkata,/b2b-lead-generation-kolkata
+P160,quarterly,city,B2B marketing agency in Ahmedabad,,,Ahmedabad,/b2b-lead-generation-ahmedabad
+P161,quarterly,city,B2B lead generation for SaaS companies in Bangalore,ICP 2,B2B SaaS & Enterprise Software,Bengaluru,/b2b-lead-generation-bengaluru
+P162,quarterly,city,B2B marketing agency in Mumbai,,,Mumbai,/b2b-lead-generation-mumbai
+P163,quarterly,city,Lead generation services in Pune for manufacturers,ICP 11,Manufacturing / Industrial B2B incl. Pharma,Pune,/b2b-lead-generation-pune
