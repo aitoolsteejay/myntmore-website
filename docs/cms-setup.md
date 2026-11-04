@@ -19,7 +19,7 @@ Landing pages: edit the text, numbers, steps and button labels in the admin unde
 
 Glossary: edit a term's definition, supporting paragraph, links, FAQs and index card in the admin under **Glossary terms**. A new term needs only its entry: the page, the A-Z index card, the sitemap line and the sitemap-page link are all generated at the next deploy. Four longer-form terms (total-conversional-market, signal-heavy-structuring, 3-second-rule, inbound-vs-outbound) are still hand-built pages.
 
-City pages: edit the hero, the "why this city" cards, the optional segments, healthcare and steps blocks (with their closing notes; write links as `[text](/address)`), the services, the differentiators and the form text under **City pages**. The page's FAQs are under **Page FAQs** (`city-<slug>`). Chennai has its own layout and is still a hand-built page. A new city also needs one line in `app/sitemap.ts`; the build warns if it is missing.
+City pages: edit the hero, the "why this city" cards, the optional segments, healthcare and steps blocks (with their closing notes; write links as `[text](/address)`), the services, the differentiators and the form text under **City pages**. The page's FAQs are under **Page FAQs** (`city-<slug>`). All eight city pages use this one template. A new city also needs one line in `app/sitemap.ts`; the build warns if it is missing.
 
 Detailed case studies: edit the title, intro, numbers, challenge, approach, results table, services and search/share text under **Case studies (detailed)**. A new one gets its page, listing card and sitemap entry at the next deploy. Twelve long-form case studies with their own layouts (e.g. the jewellery, medical-tourism and retail ones) are still hand-built pages.
 

@@ -18,7 +18,7 @@ import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-you
 //    branding, ICP mapping) read their copy from the JSON; cold email, LinkedIn outreach and the self-serve tool keep
 //    their copy in their components for now and only their search/share metadata is in the JSON.
 //  - City pages: one JSON file per /b2b-lead-generation-<city> page. `npm run city-pages:build` (run by prebuild)
-//    writes the page; components/city/CityPage.tsx renders it. (Chennai has its own layout and is still hand-built.)
+//    writes the page; components/city/CityPage.tsx renders it. All eight cities use it.
 //  - Case studies (detailed): one JSON file per page that uses CaseStudyLayout. `npm run case-study-pages:build`
 //    (run by prebuild) writes the page, the listing card and the sitemap entry. Twelve long-form ones stay hand-built.
 //  - Case studies: JSON files. `npm run case-studies:content` rebuilds

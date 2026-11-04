@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:40:01.271Z",
+  "generatedAt": "2026-11-04T06:43:56.197Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 293,
@@ -193,14 +193,14 @@
       "linkedFrom": [
         "/1-on-1-consultation",
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies",
         "/case-studies/heritage-jewellery-valuation-pipeline",
         "/case-studies/leadership-development-messaging-shift",
         "/case-studies/medical-tourism-platform-pipeline",
-        "/case-studies/professional-services-linkedin"
+        "/case-studies/professional-services-linkedin",
+        "/case-studies/retail-strategy-design-pipeline"
       ],
-      "inboundCount": 83,
+      "inboundCount": 82,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -3631,15 +3631,15 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies/uk-pharma-qualified-meetings",
         "/",
         "/marketing-automation",
         "/resources/guides/ai-tech-stack-jewellery",
         "/seo",
-        "/services/account-based-marketing"
+        "/services/account-based-marketing",
+        "/services/ai-lead-generation"
       ],
-      "inboundCount": 16,
+      "inboundCount": 15,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3650,7 +3650,6 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/b2b-lead-generation-chennai",
         "/",
         "/services",
         "/resources/blogs/icp-mapping-b2b",
@@ -3658,7 +3657,7 @@
         "/resources/blogs/tam-trap-vague-targeting",
         "/resources/blogs/what-is-b2b-outbound-sales"
       ],
-      "inboundCount": 7,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3670,15 +3669,15 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies/ecommerce-conversion-playbook",
         "/case-studies/medical-tourism-platform-pipeline",
         "/case-studies/predictable-b2b-lead-gen-engine",
         "/case-studies/saas-series-a",
         "/case-studies/uk-pharma-qualified-meetings",
-        "/"
+        "/",
+        "/marketing-automation"
       ],
-      "inboundCount": 13,
+      "inboundCount": 12,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3690,15 +3689,15 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies/ecommerce-conversion-playbook",
         "/case-studies/predictable-b2b-lead-gen-engine",
         "/case-studies/saas-series-a",
         "/case-studies/specialist-recruitment-linkedin-leads",
         "/",
-        "/marketing-automation"
+        "/marketing-automation",
+        "/resources/guides/cold-email-tech-stack"
       ],
-      "inboundCount": 19,
+      "inboundCount": 18,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3750,15 +3749,15 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies/founder-personal-brand-linkedin",
         "/case-studies/heritage-jewellery-valuation-pipeline",
         "/case-studies/leadership-development-messaging-shift",
         "/case-studies/medical-tourism-platform-pipeline",
         "/case-studies/professional-services-linkedin",
-        "/case-studies/retail-strategy-design-pipeline"
+        "/case-studies/retail-strategy-design-pipeline",
+        "/case-studies/saas-series-a"
       ],
-      "inboundCount": 25,
+      "inboundCount": 24,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3770,15 +3769,15 @@
       "status": "linked",
       "linkedFrom": [
         "/about-us",
-        "/b2b-lead-generation-chennai",
         "/case-studies/founder-personal-brand-linkedin",
         "/case-studies/heritage-jewellery-valuation-pipeline",
         "/case-studies/leadership-development-messaging-shift",
         "/case-studies/professional-services-linkedin",
         "/case-studies/wealth-management-pms-pipeline",
-        "/"
+        "/",
+        "/resources/guides/claude-sales-call-prompts"
       ],
-      "inboundCount": 17,
+      "inboundCount": 16,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3789,16 +3788,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/b2b-lead-generation-chennai",
         "/case-studies/ecommerce-conversion-playbook",
         "/case-studies/heritage-jewellery-valuation-pipeline",
         "/case-studies/leadership-development-messaging-shift",
         "/case-studies/medical-tourism-platform-pipeline",
         "/case-studies/predictable-b2b-lead-gen-engine",
         "/case-studies/retail-strategy-design-pipeline",
-        "/case-studies/saas-series-a"
+        "/case-studies/saas-series-a",
+        "/case-studies/specialist-recruitment-linkedin-leads"
       ],
-      "inboundCount": 18,
+      "inboundCount": 17,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
