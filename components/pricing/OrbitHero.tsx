@@ -108,20 +108,20 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
         </div>
 
         {/* Planet */}
-        <div className="hero-fade-d2 relative hidden md:block w-full max-w-[560px] justify-self-end aspect-square" aria-hidden="true">
+        <div className="hero-fade-d2 relative hidden md:block w-full max-w-[560px] justify-self-end aspect-square" style={{ containerType: "inline-size" }} aria-hidden="true">
           <svg viewBox="0 0 600 600" className="absolute inset-0 w-full h-full overflow-visible">
             <defs>
               <radialGradient id="orbit-sphere" cx="34%" cy="28%" r="85%">
                 <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="42%" stopColor="#f7f2ff" />
-                <stop offset="78%" stopColor="#e5d9fb" />
-                <stop offset="100%" stopColor="#d3bff6" />
+                <stop offset="42%" stopColor="#fdf6e6" />
+                <stop offset="78%" stopColor="#f7e3b4" />
+                <stop offset="100%" stopColor="#ecc977" />
               </radialGradient>
               {/* light falling across the surface: bright upper left, shaded lower right */}
               <radialGradient id="orbit-shade" cx="34%" cy="28%" r="85%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0.35" />
                 <stop offset="55%" stopColor="#ffffff" stopOpacity="0" />
-                <stop offset="100%" stopColor="#7a5ccf" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#b07d1c" stopOpacity="0.38" />
               </radialGradient>
               {/* soft white wash behind the caption so it stays readable */}
               <radialGradient id="orbit-caption" cx="50%" cy="50%" r="50%">
@@ -137,7 +137,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               {/* soft procedural textures (tinted with the page's lavender and gold) */}
               <filter id="tex-patches" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.0055" numOctaves="2" seed="11" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.58  0 0 0 0 0.46  0 0 0 0 0.88  3 0 0 0 -1.15" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.93  0 0 0 0 0.74  0 0 0 0 0.36  3 0 0 0 -1.25" />
               </filter>
               <filter id="tex-dust" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="2" seed="29" />
@@ -151,7 +151,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               </filter>
               <filter id="tex-land" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="3" seed="8" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.43  0 0 0 0 0.86  6 0 0 0 -2.55" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.90  0 0 0 0 0.68  0 0 0 0 0.26  6 0 0 0 -2.55" />
               </filter>
               <filter id="tex-clouds" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.004 0.016" numOctaves="3" seed="21" />
@@ -159,7 +159,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               </filter>
               <filter id="tex-bands" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.001 0.02" numOctaves="2" seed="4" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.58  0 0 0 0 0.46  0 0 0 0 0.88  2.6 0 0 0 -0.9" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.72  0 0 0 0 0.32  2.6 0 0 0 -0.9" />
               </filter>
               <filter id="planet-soft" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="3" />
@@ -170,46 +170,48 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </radialGradient>
               <radialGradient id="storm" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#8f74dc" stopOpacity="0.6" />
-                <stop offset="70%" stopColor="#a98fe6" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#a98fe6" stopOpacity="0" />
+                <stop offset="0%" stopColor="#d9a032" stopOpacity="0.6" />
+                <stop offset="70%" stopColor="#e6bb63" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#e6bb63" stopOpacity="0" />
               </radialGradient>
               <linearGradient id="crater-bowl" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#7d5fd0" stopOpacity="0.4" />
-                <stop offset="55%" stopColor="#9d84e3" stopOpacity="0.15" />
+                <stop offset="0%" stopColor="#b07d1c" stopOpacity="0.4" />
+                <stop offset="55%" stopColor="#d6b068" stopOpacity="0.15" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0.55" />
               </linearGradient>
             </defs>
 
             {/* soft planet shadow, then the sphere with its surface */}
-            <circle cx={CX + 18} cy={CY + 52} r={SPHERE_R - 14} fill="#a78bfa" opacity="0.28" filter="url(#orbit-shadow)" />
+            <circle cx={CX + 18} cy={CY + 52} r={SPHERE_R - 14} fill="#e0ac3c" opacity="0.28" filter="url(#orbit-shadow)" />
             <circle cx={CX} cy={CY} r={SPHERE_R} fill="url(#orbit-sphere)" />
             <g clipPath="url(#orbit-clip)">
               <Surface kind={planet} />
-              <circle cx="410" cy="330" r="140" fill="url(#orbit-caption)" />
+              <circle cx={CX} cy={CY} r="150" fill="url(#orbit-caption)" />
               <circle cx={CX} cy={CY} r={SPHERE_R} fill="url(#orbit-shade)" />
             </g>
 
           </svg>
 
-          <div className="absolute" style={{ left: "46%", top: "38%", width: "50%" }}>
-            <p className="text-xs font-bold uppercase leading-[1.9] tracking-[0.3em]" style={{ color: INK }}>
-              LinkedIn GTM
-              <br />
-              Growth ecosystem
-            </p>
-            <div className="my-3.5 h-[3px] w-12 rounded-full" style={{ backgroundColor: GOLD }} />
-            <p className="text-xs font-semibold uppercase leading-[1.9] tracking-[0.26em]" style={{ color: "#4a4a55" }}>
-              Consistent presence.
-              <br />
-              Real opportunities.
-            </p>
+          <div className="absolute inset-0 flex items-center justify-center text-center">
+            <div style={{ width: "58%" }}>
+              <p className="font-extrabold uppercase" style={{ color: INK, fontSize: "clamp(1rem, 2.5cqw, 1.5rem)", lineHeight: 1.25, letterSpacing: "0.06em" }}>
+                LinkedIn GTM
+                <br />
+                Growth ecosystem
+              </p>
+              <div className="mx-auto my-4 h-[3px] w-12 rounded-full" style={{ backgroundColor: GOLD }} />
+              <p className="font-semibold" style={{ color: "#4a4238", fontSize: "clamp(0.9rem, 2.1cqw, 1.2rem)", lineHeight: 1.4, letterSpacing: "0.01em" }}>
+                Consistent presence.
+                <br />
+                Real opportunities.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Price card */}
-      <div className="hero-fade-d2 mt-10 rounded-[28px] border bg-white/80 backdrop-blur-sm px-6 py-6 sm:px-10 sm:py-8 grid sm:grid-cols-[1fr_auto] gap-6 items-center" style={{ borderColor: "#EDE7DD", boxShadow: "0 20px 60px rgba(124,58,237,0.08)" }}>
+      <div className="hero-fade-d2 mt-10 rounded-[28px] border bg-white/80 backdrop-blur-sm px-6 py-6 sm:px-10 sm:py-8 grid sm:grid-cols-[1fr_auto] gap-6 items-center" style={{ borderColor: "#EDE7DD", boxShadow: "0 20px 60px rgba(245,183,49,0.14)" }}>
         <p className="text-base sm:text-lg leading-relaxed max-w-xl" style={{ color: "#3b3b45" }}>
           {summary}
         </p>

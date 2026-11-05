@@ -342,7 +342,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
   return (
     <InnerLayout>
       <section className="relative pt-32 pb-24 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>
-        {/* Soft gold-to-lavender wash behind the hero, matching the planet
+        {/* Soft gold wash behind the hero, matching the planet
             artwork -- fades out via mask before the cards so the table and
             cards below sit back on plain cream. */}
         <div
@@ -355,8 +355,8 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
             height: "820px",
             background:
               "radial-gradient(ellipse 60% 62% at 8% 22%, rgba(245,183,49,0.34) 0%, rgba(245,183,49,0.10) 48%, transparent 74%)," +
-              "radial-gradient(ellipse 52% 60% at 92% 30%, rgba(167,139,250,0.34) 0%, rgba(167,139,250,0.10) 48%, transparent 74%)," +
-              "radial-gradient(ellipse 46% 40% at 86% 72%, rgba(167,139,250,0.26) 0%, transparent 70%)," +
+              "radial-gradient(ellipse 52% 60% at 92% 30%, rgba(245,183,49,0.24) 0%, rgba(245,183,49,0.07) 48%, transparent 74%)," +
+              "radial-gradient(ellipse 46% 40% at 86% 72%, rgba(245,183,49,0.16) 0%, transparent 70%)," +
               "radial-gradient(ellipse 40% 36% at 10% 66%, rgba(245,183,49,0.18) 0%, transparent 70%)",
             WebkitMaskImage: "linear-gradient(to bottom, black 62%, transparent 100%)",
             maskImage: "linear-gradient(to bottom, black 62%, transparent 100%)",
@@ -365,7 +365,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
         />
         {/* Subtle blobs, same treatment as Services.tsx / CTABanner.tsx, now drifting like Hero.tsx's */}
         <div ref={blobGoldRef} aria-hidden="true" style={{ position: "absolute", top: "-80px", right: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.20) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
-        <div ref={blobPurpleRef} aria-hidden="true" style={{ position: "absolute", bottom: "-80px", left: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.14) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
+        <div ref={blobPurpleRef} aria-hidden="true" style={{ position: "absolute", bottom: "-80px", left: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.14) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
 
         <OrbitHero
           leadWords={leadWords}
