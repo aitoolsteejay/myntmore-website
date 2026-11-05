@@ -341,7 +341,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
 
   return (
     <InnerLayout>
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>
+      <section className="relative pt-32 pb-24 px-4 overflow-clip" style={{ backgroundColor: "#F8F6F2" }}>
         {/* Soft gold-to-lavender wash behind the hero, matching the planet
             artwork -- fades out via mask before the cards so the table and
             cards below sit back on plain cream. */}
@@ -487,22 +487,24 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
 
           {/* Full comparison table */}
           <FadeIn delay={200}>
-            <div id="plan-comparison" className="rounded-2xl overflow-hidden bg-white scroll-mt-28" style={{ border: `1px solid ${BORDER}` }}>
+            <div id="plan-comparison" className="rounded-2xl overflow-clip bg-white scroll-mt-28" style={{ border: `1px solid ${BORDER}` }}>
               <div className="px-6 py-4" style={{ borderBottom: `1px solid ${BORDER}` }}>
                 <h2 className="text-sm font-black uppercase tracking-widest" style={{ color: TEXT_DARK }}>Overview</h2>
               </div>
-              <div className="overflow-x-auto">
+              {/* The header row stays pinned while the table scrolls. On desktop it pins under the site header (the page scrolls, so no
+                  ancestor may be a scroll container); on phones the table scrolls inside its own box so it can also scroll sideways. */}
+              <div className="max-sm:max-h-[70vh] max-sm:overflow-auto">
                 <table className="w-full" style={{ minWidth: 560 }}>
                   <thead>
                     <tr style={{ borderBottom: `1px solid ${BORDER}` }}>
-                      <th className="px-4 sm:px-6 py-3 text-left text-xs font-black uppercase tracking-widest sticky left-0 bg-white" style={{ color: TEXT_MUTED, minWidth: 220 }}>
+                      <th className="px-4 sm:px-6 py-3 text-left text-xs font-black uppercase tracking-widest sticky left-0 top-0 sm:top-[81px] z-30 bg-white" style={{ color: TEXT_MUTED, minWidth: 220, boxShadow: `0 1px 0 ${BORDER}` }}>
                         Feature
                       </th>
                       {tiers.map((tier) => (
                         <th
                           key={tier.name}
-                          className="px-4 py-3 text-center text-xs font-black"
-                          style={{ color: textTone(tier.accent), backgroundColor: `${tier.accent}0d`, width: 130 }}
+                          className="px-4 py-3 text-center text-xs font-black sticky top-0 sm:top-[81px] z-20"
+                          style={{ color: textTone(tier.accent), backgroundColor: "#ffffff", backgroundImage: `linear-gradient(${tier.accent}0d, ${tier.accent}0d)`, width: 130, boxShadow: `0 1px 0 ${BORDER}` }}
                         >
                           {tier.name}
                         </th>

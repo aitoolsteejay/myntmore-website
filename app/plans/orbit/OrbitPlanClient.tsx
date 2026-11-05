@@ -355,7 +355,7 @@ export default function OrbitPlanClient() {
                 style={{ right: "4%", top: "34%", maxWidth: "230px" }}
               >
                 <p
-                  className="text-[10px] sm:text-[11px] font-bold uppercase leading-[1.8] tracking-[0.28em]"
+                  className="text-xs sm:text-sm font-extrabold uppercase leading-[1.5] tracking-[0.06em]"
                   style={{ color: INK }}
                 >
                   LinkedIn GTM
@@ -367,7 +367,7 @@ export default function OrbitPlanClient() {
                   style={{ backgroundColor: GOLD }}
                 />
                 <p
-                  className="text-[10px] sm:text-[11px] font-semibold uppercase leading-[1.8] tracking-[0.24em]"
+                  className="text-xs sm:text-sm font-semibold leading-[1.5] tracking-[0.01em]"
                   style={{ color: "#4B4B55" }}
                 >
                   Consistent presence.
