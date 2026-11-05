@@ -177,13 +177,13 @@ export default function ReelWidget() {
         )}
       </div>
       <a
-        href="https://instagram.com/myntmore"
+        href="https://www.instagram.com/tejas_jhaveri/"
         target="_blank"
         rel="noopener noreferrer"
         className="block text-center mt-2 text-xs font-bold"
         style={{ color: "#71675E" }}
       >
-        Follow @myntmore
+        Follow @tejas_jhaveri
       </a>
     </div>
   );

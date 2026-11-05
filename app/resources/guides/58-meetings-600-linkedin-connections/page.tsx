@@ -431,7 +431,7 @@ export default function LinkedinFiftyEightMeetingsGuide() {
               <h2 className="text-2xl sm:text-3xl font-black mb-2 text-[#0A0A0A] text-center">Want More Like This?</h2>
               <p className="text-sm sm:text-base text-center mb-7" style={{ color: "#52525B" }}>
                 Follow{" "}
-                <a href="https://www.instagram.com/tejasjhaveri" target="_blank" rel="noopener noreferrer" className="font-bold underline underline-offset-4" style={{ color: "#A14A08" }}>@tejasjhaveri</a>{" "}
+                <a href="https://www.instagram.com/tejas_jhaveri/" target="_blank" rel="noopener noreferrer" className="font-bold underline underline-offset-4" style={{ color: "#A14A08" }}>@tejas_jhaveri</a>{" "}
                 on Instagram for:
               </p>
               <ul className="space-y-2.5 max-w-md mx-auto mb-9">

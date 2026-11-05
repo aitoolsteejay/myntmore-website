@@ -460,7 +460,7 @@ export default function AiAgentsMeetingsBlueprint() {
               <h2 className="text-2xl sm:text-3xl font-black mb-6 text-[#0A0A0A]">More playbooks like this</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
                 <a
-                  href="https://www.instagram.com/tejasjhaveri"
+                  href="https://www.instagram.com/tejas_jhaveri/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-xl p-5 text-center transition-all duration-300 hover:bg-[#F8F6F2] hover:-translate-y-1"
@@ -468,7 +468,7 @@ export default function AiAgentsMeetingsBlueprint() {
                 >
                   <span className="flex justify-center mb-2" style={{ color: "#A14A08" }}><Camera className="w-6 h-6" aria-hidden="true" /></span>
                   <span className="block text-sm font-bold text-[#0A0A0A] mb-1">Follow along</span>
-                  <span className="block text-xs" style={{ color: "#71675E" }}>@tejasjhaveri</span>
+                  <span className="block text-xs" style={{ color: "#71675E" }}>@tejas_jhaveri</span>
                 </a>
                 <a
                   href="/book-a-call"

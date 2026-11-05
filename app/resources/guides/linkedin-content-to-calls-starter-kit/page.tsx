@@ -306,7 +306,7 @@ export default function LinkedInContentToCallsStarterKit() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/book-a-call" className="btn-dark px-8 py-4 text-sm font-bold">Book a Complimentary Strategy Call</a>
-                <a href="https://www.instagram.com/tejasjhaveri" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-sm font-bold rounded-full border transition-colors hover:bg-[#F8F6F2]" style={{ color: "#0A0A0A", borderColor: "#D0C9BF", backgroundColor: "#FFFFFF" }}>Follow @tejasjhaveri</a>
+                <a href="https://www.instagram.com/tejas_jhaveri/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-sm font-bold rounded-full border transition-colors hover:bg-[#F8F6F2]" style={{ color: "#0A0A0A", borderColor: "#D0C9BF", backgroundColor: "#FFFFFF" }}>Follow @tejas_jhaveri</a>
               </div>
               <a href="mailto:founder@myntmore.com" className="inline-flex min-h-[44px] items-center mt-6 text-sm font-semibold" style={{ color: "#A14A08" }}>founder@myntmore.com</a>
             </section>
