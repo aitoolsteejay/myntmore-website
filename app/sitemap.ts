@@ -245,6 +245,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Careers
     { url: `${base}/careers`, lastModified: lastMod("/careers"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/careers/lead-gen-strategist`, lastModified: lastMod("/careers/lead-gen-strategist"), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/careers/lead-gen-intern`, lastModified: lastMod("/careers/lead-gen-intern"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/gtm-strategist`, lastModified: lastMod("/careers/gtm-strategist"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/hr-operations-intern`, lastModified: lastMod("/careers/hr-operations-intern"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/content-marketing-strategist-intern`, lastModified: lastMod("/careers/content-marketing-strategist-intern"), changeFrequency: "monthly", priority: 0.5 },

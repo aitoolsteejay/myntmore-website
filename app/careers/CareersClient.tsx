@@ -96,6 +96,13 @@ const ROLES = [
     bullets: ["Clear grasp of outbound funnels", "Hands-on with Clay, Apollo, or similar", "Data-driven and systems-minded"],
   },
   {
+    slug: "lead-gen-intern", accent: "#3b82f6", tag: "Outbound & GTM",
+    title: "Lead Generation Intern",
+    type: "Full-time Internship · BKC, Mumbai", location: "India",
+    desc: "You'll learn B2B lead generation hands-on, supporting live LinkedIn and cold email campaigns across multiple client industries.",
+    bullets: ["Freshers welcome, no experience needed", "Rs 10,000–15,000 a month", "Curious, careful, and quick to learn"],
+  },
+  {
     slug: "gtm-strategist", accent: "#10b981", tag: "Growth Marketing",
     title: "GTM Strategist",
     type: "Full-time · BKC, Mumbai", location: "India",
