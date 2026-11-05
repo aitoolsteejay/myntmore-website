@@ -128,7 +128,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               </radialGradient>
               {/* soft white wash behind the caption so it stays readable */}
               <radialGradient id="orbit-caption" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8" />
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.92" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </radialGradient>
               <clipPath id="orbit-clip">
@@ -198,7 +198,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
             <circle cx={CX} cy={CY} r={SPHERE_R} fill="url(#orbit-sphere)" />
             <g clipPath="url(#orbit-clip)">
               <Surface kind={planet} />
-              <circle cx={CX} cy={CY} r="150" fill="url(#orbit-caption)" />
+              <circle cx={CX} cy={CY} r="165" fill="url(#orbit-caption)" />
               <circle cx={CX} cy={CY} r={SPHERE_R} fill="url(#orbit-shade)" />
             </g>
 
