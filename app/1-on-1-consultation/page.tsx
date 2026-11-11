@@ -70,12 +70,11 @@ export default function OneOnOneConsultation() {
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <FadeIn><div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl font-black mb-8" style={{ color: "#0a0a0a" }}>Choose your session</h2>
+            <h2 className="text-2xl font-black mb-8" style={{ color: "#0a0a0a" }}>Your session</h2>
             <div className="space-y-6">
               <div className="rounded-2xl border p-6" style={{ backgroundColor: "#ffffff", borderColor: "rgba(245,183,49,0.4)", boxShadow: "0 4px 16px rgba(245,183,49,0.1)" }}>
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <span className="inline-flex text-xs font-bold px-2 py-0.5 rounded-full mb-2" style={{ backgroundColor: "#FEF9EC", color: "#A14A08" }}>Most Popular</span>
                     <h3 className="text-lg font-black" style={{ color: "#0a0a0a" }}>Free 30-min GTM Audit</h3>
                   </div>
                   <span className="text-lg font-black" style={{ color: "#A14A08" }}>Free</span>
@@ -90,23 +89,6 @@ export default function OneOnOneConsultation() {
                 </ul>
                 <a href="/book-a-call" className="btn-dark w-full py-3 text-sm font-bold text-center block">
                   Book Free 30-Min Audit
-                </a>
-              </div>
-
-              <div className="rounded-2xl border p-6" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-black" style={{ color: "#0a0a0a" }}>Extended 1-Hour Strategy Session</h3>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {["Full GTM strategy workshop", "ICP + messaging deep dive", "Channel prioritisation", "90-day pipeline roadmap", "Full recording provided"].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm" style={{ color: "#52525B" }}>
-                      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <a href="/book-a-call" className="btn-ghost w-full py-3 text-sm font-bold text-center block">
-                  Book 1-Hour Session
                 </a>
               </div>
             </div>

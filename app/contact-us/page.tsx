@@ -6,6 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import SubmitButton from "../components/SubmitButton";
 import { buildLocalBusinessSchema } from "@/lib/schema";
+import { LeadSourceField } from "../components/LeadSource";
 
 export const metadata: Metadata = {
   title: "Contact Myntmore | Book a Free B2B GTM Audit",
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
 
 const CONTACT_CARDS = [
   { icon: "📅", title: "Free GTM Audit", value: "30-minute strategy call", href: "/book-a-call", cta: "Book free call" },
-  { icon: "⏱", title: "Extended Session", value: "1-hour strategy meeting", href: "/book-a-call", cta: "Book 1-hour session" },
   { icon: "✉️", title: "Email Directly", value: "growth@myntmore.com", href: "mailto:growth@myntmore.com", cta: "Send email" },
   { icon: "📞", title: "Call Us", value: "+91 81693 18951", href: "tel:+918169318951", cta: "Call now" },
 ];
@@ -61,7 +61,7 @@ export default function ContactUs() {
 
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <FadeIn><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <FadeIn><div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
             {CONTACT_CARDS.map((c) => (
               <a key={c.title} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined} className="block rounded-2xl border p-6 card-hover-warm" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
                 <div className="text-2xl mb-3">{c.icon}</div>
@@ -80,7 +80,7 @@ export default function ContactUs() {
                 <form className="space-y-4"
                   action="https://forms.zohopublic.com/flintstop/form/MyntmoreWebsiteform/formperma/3F8IpEgLtb2RnoXcr_yUsp56_-WdQdO2-sM6eaCOKi0/htmlRecords/submit"
                   name="form" id="form" method="POST" acceptCharset="UTF-8" encType="multipart/form-data">
-                  <input type="hidden" name="zf_referrer_name" value="" />
+                  <LeadSourceField />
                   <input type="hidden" name="zf_redirect_url" value="https://www.myntmore.com/thank-you" />
                   <input type="hidden" name="zc_gad" value="" />
                   <div>
