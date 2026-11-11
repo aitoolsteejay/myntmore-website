@@ -4,6 +4,7 @@ import InnerLayout from "../../components/InnerLayout";
 import FadeIn from "../../components/FadeIn";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/tools" },
   openGraph: {
+    ...OG_BASE,
     title: "Free B2B Lead Generation Tools | Myntmore",
     description: "AI-powered tools for B2B outreach, free to use, no sign-up required.",
     url: "https://www.myntmore.com/resources/tools",

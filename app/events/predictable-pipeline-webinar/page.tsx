@@ -4,6 +4,7 @@ import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildEventSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const RECORDING_URL = "https://zfrmz.com/viRIcOyB23MftpLVyX4f";
 const PAGE_URL = `${SITE_URL}/events/predictable-pipeline-webinar`;
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    ...OG_BASE,
     title: "We Create 200+ Meetings a Month Through Cold Outreach | Myntmore Webinar",
     description: "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings every month. Sep 19, 2026 · 11:30 AM – 1:00 PM IST.",
     url: PAGE_URL,

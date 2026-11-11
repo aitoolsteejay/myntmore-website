@@ -3,11 +3,12 @@ import InnerLayout from "../components/InnerLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildWebPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/privacy-policy`;
 const WEBPAGE_SCHEMA = buildWebPageSchema({
   name: "Privacy Policy",
-  description: "How Myntmore collects, uses, and protects your information.",
+  description: "How Myntmore collects, uses and protects your information: the data we collect, cookies, third-party services, retention, security and your rights.",
   url: PAGE_URL,
   breadcrumb: [
     { name: "Home", url: SITE_URL },
@@ -16,12 +17,13 @@ const WEBPAGE_SCHEMA = buildWebPageSchema({
 });
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How Myntmore collects, uses, and protects your information.",
+  title: "Privacy Policy: How We Handle Your Data",
+  description: "How Myntmore collects, uses and protects your information: the data we collect, cookies, third-party services, retention, security and your rights.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    ...OG_BASE,
     title: "Privacy Policy | Myntmore",
-    description: "How Myntmore collects, uses, and protects your information.",
+    description: "How Myntmore collects, uses and protects your information: the data we collect, cookies, third-party services, retention, security and your rights.",
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },

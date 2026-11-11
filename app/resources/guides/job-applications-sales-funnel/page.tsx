@@ -7,6 +7,7 @@ import FadeIn from "../../../components/FadeIn";
 import JsonLd from "../../../components/JsonLd";
 import { buildArticleSchema } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/job-applications-sales-funnel";
 const ACCENT = "#7C3AED";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: ["job search funnel", "job application strategy", "how to reach hiring managers", "LinkedIn job search", "get more interviews", "job search outreach"],
   alternates: { canonical: URL },
-  openGraph: { title: `${TITLE} | Myntmore`, description: DESCRIPTION, url: URL, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }] },
+  openGraph: { ...OG_BASE, title: `${TITLE} | Myntmore`, description: DESCRIPTION, url: URL, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }] },
 };
 
 const ARTICLE_SCHEMA = buildArticleSchema({

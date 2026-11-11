@@ -15,8 +15,9 @@ scorecard so week-over-week numbers stay comparable:
                  title <=60 chars, description <=160 chars, valid JSON-LD.
   Schema       = % of sitemap URLs with page-specific JSON-LD (anything beyond
                  the sitewide Organization + BreadcrumbList).
-WARN checks (description 156-160, thin pages, missing og:image, ...) don't
-affect those percentages or the exit code.
+WARN checks (description 156-160 or under 120, thin pages, missing og:image or
+other Open Graph tags, og:title over 70, ...) don't affect those percentages or
+the exit code.
 """
 import argparse, concurrent.futures as cf, html, json, re, sys, urllib.error, urllib.request
 from collections import defaultdict
@@ -112,6 +113,13 @@ def analyse(path):
     imgs = re.findall(r"<img\b[^>]*>", main)
     if any(attr(i, "alt") in (None, "") for i in imgs): r["warns"].append("image(s) without alt text")
     if not meta("og:image", "property"): r["warns"].append("no og:image")
+    # Social-card tags. A page that sets its own openGraph replaces the root layout's, so these
+    # only stay present while each page spreads OG_BASE (lib/og.ts).
+    for k in ("title", "description", "url", "type", "site_name", "locale"):
+        if not meta("og:" + k, "property"): r["warns"].append(f"no og:{k}")
+    og_title = meta("og:title", "property") or ""
+    if len(og_title) > 70: r["warns"].append(f"og:title {len(og_title)} chars (>70, X cuts card titles there)")
+    if desc and len(desc) < 120: r["warns"].append(f"description {len(desc)} chars (<120)")
     main_m = re.search(r"<main\b.*?</main>", main, re.S)  # page content only, not nav/footer
     words = len(html.unescape(re.sub(r"<[^>]+>", " ", main_m.group(0) if main_m else main)).split())
     # Content standard: new blog posts 800+ words of body copy, glossary 300+ (checklist tasks C-B1, C-B2)

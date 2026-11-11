@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import EventPopup from "./components/EventPopup";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   // Names Mumbai because GSC shows this page ranking top-3 for ~15
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     "myntmore",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "Myntmore | AI-Powered B2B Lead Generation Agency, Mumbai",
     description:
       "We build and run your outbound engine using AI agents and human intelligence. Cold email, LinkedIn outreach, and ABM that books qualified meetings at scale.",

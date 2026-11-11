@@ -22,9 +22,15 @@ export interface LibraryCase {
   challenge: string;
   solution: string[];
   results: string[];
+  // Derived by scripts/generate-case-study-content.mjs from the fields above.
+  metaDescription: string;
+  keywords: string[];
 }
 
 export const LIBRARY: LibraryCase[] = data.cases;
+
+// "pharma companies", "b2b founders", ...: how each industry reads inside a keyword phrase.
+export const INDUSTRY_AUDIENCE: Record<string, string> = data.audiences;
 
 export function libraryCase(slug: string): LibraryCase {
   const found = LIBRARY.find((c) => c.slug === slug);
@@ -114,4 +120,4 @@ export function libraryCards() {
 // What the generated page's <title> and description say. Kept here so the generator
 // script and any check use one definition.
 export const libraryMetaTitle = (c: LibraryCase) => `${c.segment} Case Study`;
-export const libraryMetaDescription = (c: LibraryCase) => `${c.title}. A Myntmore case study from ${c.industry}.`;
+export const libraryMetaDescription = (c: LibraryCase) => c.metaDescription;

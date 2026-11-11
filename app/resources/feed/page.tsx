@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import FeedClient from "./FeedClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "The Feed: B2B Outbound Reels",
-  description: "Short, practical Instagram Reels on B2B outbound, LinkedIn, and AI lead generation from Myntmore. Watch the reels.",
+  description: "Short, practical Instagram Reels on B2B outbound, cold email, LinkedIn and AI lead generation from the Myntmore team. Watch the latest reels.",
   keywords: [
     "b2b instagram reels",
     "short-form video marketing b2b",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/feed" },
   openGraph: {
+    ...OG_BASE,
     title: "The Feed | Myntmore",
     description: "Short, practical Reels on B2B outbound, LinkedIn, and AI-powered lead generation.",
     url: "https://www.myntmore.com/resources/feed",

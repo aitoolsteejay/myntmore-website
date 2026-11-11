@@ -36,6 +36,7 @@ import Underline from "../how-to-set-up-vibe-prospecting/Underline";
 import { buildArticleSchema } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/58-meetings-600-linkedin-connections";
 const BLUE = "#0077b5";
@@ -63,6 +64,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: "58 Meetings Booked from 600 LinkedIn Connections in 1 Month",
     description: "600 LinkedIn connections → 58 meetings in 1 month. The full 5-step framework: ICP, positioning, warm-up, 5-message sequence, follow-ups.",
     url: URL,

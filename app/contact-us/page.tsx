@@ -7,9 +7,10 @@ import JsonLd from "../components/JsonLd";
 import SubmitButton from "../components/SubmitButton";
 import { buildLocalBusinessSchema } from "@/lib/schema";
 import { LeadSourceField } from "../components/LeadSource";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title: "Contact Myntmore | Book a Free B2B GTM Audit",
+  title: { absolute: "Contact Myntmore | Book a Free B2B GTM Audit" },
   description: "Book a free 30-minute B2B GTM audit with Myntmore. We'll map your ICP and find what's holding your pipeline back. No pitch, no pressure.",
   alternates: { canonical: "https://www.myntmore.com/contact-us" },
   keywords: [
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "b2b agency mumbai contact",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "Contact Myntmore | Book a Free B2B GTM Audit",
     description: "Book a free 30-minute strategy call. No pitch, no pressure. Just clarity on your pipeline.",
     url: "https://www.myntmore.com/contact-us",

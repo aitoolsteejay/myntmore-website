@@ -8,6 +8,7 @@ import JsonLd from "./components/JsonLd";
 import ReelWidget from "./components/ReelWidget";
 import { LeadSourceCapture } from "./components/LeadSource";
 import { organizationSchema } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 import "./globals.css";
 
 // Inter is self-hosted (app/fonts, SIL Open Font License) instead of fetched
@@ -37,15 +38,13 @@ export const metadata: Metadata = {
     template: "%s | Myntmore",
   },
   description:
-    "Myntmore is Mumbai's leading AI-powered B2B outbound agency. We build and run cold email, LinkedIn outreach, and ABM systems that book qualified meetings. 12K+ meetings booked. $120M+ pipeline generated.",
+    "Myntmore is an AI-powered B2B outbound agency in Mumbai running cold email, LinkedIn and ABM campaigns that book qualified meetings. 12K+ meetings booked.",
   authors: [{ name: "Tejas Jhaveri", url: "https://linkedin.com/in/tejasjhaveri" }],
   creator: "Myntmore",
   publisher: "Myntmore",
   metadataBase: new URL("https://www.myntmore.com"),
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Myntmore",
+    ...OG_BASE,
     images: [
       {
         url: "/og-image.png",

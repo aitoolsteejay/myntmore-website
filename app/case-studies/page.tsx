@@ -3,6 +3,7 @@ import CaseStudiesClient from "./CaseStudiesClient";
 import { libraryCards } from "@/lib/case-study-library";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const SCHEMA = [
   buildBreadcrumbSchema([
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
   keywords: ["b2b lead generation case studies", "myntmore client results", "cold email case studies", "linkedin outreach case studies", "b2b outbound agency results", "abm case studies", "b2b sales pipeline case studies", "lead generation agency proof", "b2b growth agency case studies", "myntmore case studies", "saas lead generation case studies", "linkedin personal branding case studies", "b2b demand generation results", "outbound agency client success stories"],
   alternates: { canonical: "https://www.myntmore.com/case-studies" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Case Studies & Client Results | Myntmore",
     description: "Real client results from Myntmore's cold email, LinkedIn outreach, and ABM systems.",
     url: "https://www.myntmore.com/case-studies",

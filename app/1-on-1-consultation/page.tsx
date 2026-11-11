@@ -4,6 +4,7 @@ import FadeIn from "../components/FadeIn";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const CONSULTATION_SCHEMA = [
   buildBreadcrumbSchema([
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     "b2b growth expert call",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "1-on-1 B2B Growth Consultation | Myntmore",
     description: "Free 30-minute GTM audit with Tejas Jhaveri. No pitch, no pressure.",
     url: "https://www.myntmore.com/1-on-1-consultation",

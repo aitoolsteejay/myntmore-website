@@ -6,6 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "../how-to-set-up-vibe-prospecting/Underline";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/golden-icp-framework";
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: "The Golden ICP Framework | Myntmore",
     description: "Stop building lists around job titles. Find buyers under pressure to solve the problem you solve.",
     url: URL,

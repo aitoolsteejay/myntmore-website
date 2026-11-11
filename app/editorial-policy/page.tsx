@@ -4,6 +4,7 @@ import InnerLayout from "../components/InnerLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildWebPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/editorial-policy`;
 const WEBPAGE_SCHEMA = buildWebPageSchema({
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   description: "How Myntmore sources numbers, describes its case studies, handles AI tool data and corrects errors across its guides, benchmarks and tools.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    ...OG_BASE,
     title: "Editorial Policy & Methodology | Myntmore",
     description: "How Myntmore sources numbers, describes its case studies, handles AI tool data and corrects errors.",
     url: PAGE_URL,

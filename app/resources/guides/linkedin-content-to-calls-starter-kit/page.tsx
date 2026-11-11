@@ -11,6 +11,7 @@ import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { ReadingProgress, RangeStat, RoutineTimeline, StaggerList } from "./KitMotion";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/linkedin-content-to-calls-starter-kit";
 const ACCENT = "#EA580C";
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: URL,

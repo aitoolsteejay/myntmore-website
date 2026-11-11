@@ -9,6 +9,7 @@ import JsonLd from "../components/JsonLd";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { SITE_URL, buildLocalBusinessSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: { absolute: "About Myntmore | Founded by Tejas Jhaveri, Mumbai" },
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     "mumbai b2b agency founder",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "About Myntmore | Founded by Tejas Jhaveri, Mumbai",
     description: "Myntmore is a Mumbai B2B outbound agency founded in 2019 by Tejas Jhaveri, TEDx speaker and growth educator at IIT and IIM. 12K+ meetings booked, $120M+ pipeline.",
     url: "https://www.myntmore.com/about-us",

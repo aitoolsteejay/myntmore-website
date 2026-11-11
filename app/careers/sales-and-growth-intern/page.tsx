@@ -3,6 +3,7 @@ import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Sales & Growth Intern, Mumbai | Rs 10-20K/mo",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   keywords: ["sales and growth internship mumbai", "sales internship mumbai with stipend", "growth internship mumbai", "business development internship mumbai", "b2b sales internship mumbai", "full time sales internship bkc", "crm sales intern", "sales intern jobs personal branding agency", "internship with incentives mumbai", "linkedin personal branding sales internship"],
   alternates: { canonical: "https://www.myntmore.com/careers/sales-and-growth-intern" },
   openGraph: {
+    ...OG_BASE,
     title: "Sales and Growth Intern | Myntmore Careers",
     description: "Prospect, build relationships, and help close deals for a personal-branding and outbound growth agency. Full-time internship, BKC Mumbai, stipend plus incentives.",
     url: "https://www.myntmore.com/careers/sales-and-growth-intern",

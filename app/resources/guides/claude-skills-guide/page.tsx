@@ -7,6 +7,7 @@ import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "The 6 Claude Skills Guide",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/guides/claude-skills-guide" },
   openGraph: {
+    ...OG_BASE,
     title: "The 6 Claude Skills Guide",
     description: "Six ready-to-use Claude skills for founders and marketers, complete with copy-paste prompts.",
     url: "https://www.myntmore.com/resources/guides/claude-skills-guide",

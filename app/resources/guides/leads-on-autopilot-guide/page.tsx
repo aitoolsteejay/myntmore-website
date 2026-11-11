@@ -6,6 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "../how-to-set-up-vibe-prospecting/Underline";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/leads-on-autopilot-guide";
 
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: "Leads on Autopilot: A LinkedIn Framework | Myntmore",
     description: "Generate high-quality B2B leads on LinkedIn without cold pitching. Audience clarity, content authority, outreach, nurturing, and follow-ups, in one system.",
     url: URL,

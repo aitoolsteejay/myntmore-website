@@ -4,6 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "AI Automation Intern, Mumbai | Rs 7-20K/mo",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   keywords: ["ai automation internship mumbai", "systems intern mumbai", "n8n internship india", "ai agents internship", "automation internship with ppo", "clay apollo internship", "seo aeo geo internship", "vibe coding internship", "python automation internship mumbai", "myntmore careers", "ai automation intern jobs mumbai"],
   alternates: { canonical: "https://www.myntmore.com/careers/systems-ai-automation-intern" },
   openGraph: {
+    ...OG_BASE,
     title: "Systems & AI Automation Intern | Myntmore Careers",
     description: "Build the AI agents and automations that run Myntmore. Internship, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/systems-ai-automation-intern",

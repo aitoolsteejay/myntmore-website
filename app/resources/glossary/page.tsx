@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import generatedTerms from "@/lib/glossary-index.generated.json";
+import { OG_BASE } from "@/lib/og";
 
 const GLOSSARY_PAGE_SCHEMA = [
   buildBreadcrumbSchema([
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/glossary" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Outbound Glossary | Myntmore",
     description: "Plain-English definitions of the terms and frameworks behind Myntmore's outbound systems.",
     url: "https://www.myntmore.com/resources/glossary",

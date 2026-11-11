@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
 import DosAndDontsClient from "./DosAndDontsClient";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/dos-and-donts-of-outreach`;
 // Shortened from the page's full name so the title tag plus the "| Myntmore"
 // template stays inside Google's ~60-character cutoff; the H1 keeps the
 // long form.
 const TITLE = "Pattern Disruption: Cold Outreach Do's & Don'ts";
-const DESCRIPTION = "Why most outreach gets deleted unread, how pattern disruption works, and what to send on LinkedIn vs. cold email.";
+const DESCRIPTION = "Why most cold outreach gets deleted unread, how pattern disruption earns a reply, and what to send on LinkedIn vs. cold email. Free Myntmore guide.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     "outbound message examples that work",
   ],
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,

@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import BookACallClient from "./BookACallClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Book a Strategy Call | Free B2B Growth Audit",
-  description: "Pick a time for a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team. Audit your ICP, messaging, and outbound systems. No pitch, no pressure.",
+  description: "Book a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team: your ICP, messaging and outbound systems. No pitch.",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://www.myntmore.com/book-a-call" },
   openGraph: {
+    ...OG_BASE,
     title: "Book a Strategy Call | Free B2B Growth Audit | Myntmore",
-    description: "Pick a time for a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team. Audit your ICP, messaging, and outbound systems. No pitch, no pressure.",
+    description: "Book a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team: your ICP, messaging and outbound systems. No pitch.",
     url: "https://www.myntmore.com/book-a-call",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },

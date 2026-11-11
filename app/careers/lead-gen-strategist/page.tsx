@@ -5,6 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "B2B Lead Gen Strategist, Mumbai | Rs 4-7 LPA",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   keywords: ["lead generation strategist jobs mumbai", "b2b lead generation jobs", "lead gen jobs bkc mumbai", "linkedin outreach jobs mumbai", "cold email jobs mumbai", "b2b marketing jobs mumbai", "sales development jobs mumbai", "lead generation executive jobs", "b2b growth jobs india", "outbound marketing jobs mumbai", "entry level lead generation jobs", "growth marketing jobs bkc", "myntmore careers", "b2b lead gen strategist job openings"],
   alternates: { canonical: "https://www.myntmore.com/careers/lead-gen-strategist" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Lead Generation Strategist | Myntmore Careers",
     description: "Build predictable B2B pipelines across multiple industries. Full-time, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/lead-gen-strategist",
