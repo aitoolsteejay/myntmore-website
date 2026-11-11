@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { LeadSourceField } from "./LeadSource";
 
 interface LeadCaptureFormProps {
   title?: string;
@@ -39,7 +40,7 @@ export default function LeadCaptureForm({
             className="space-y-4"
             onSubmit={() => setSubmitting(true)}
           >
-            <input type="hidden" name="zf_referrer_name" value="" />
+            <LeadSourceField />
             <input type="hidden" name="zf_redirect_url" value="https://www.myntmore.com/thank-you" />
             <input type="hidden" name="zc_gad" value="" />
 

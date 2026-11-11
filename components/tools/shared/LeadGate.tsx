@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { z } from "zod";
+import { LeadSourceField } from "@/app/components/LeadSource";
 
 export interface LeadData {
   id?: string;
@@ -201,7 +202,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
           target={ZOHO_IFRAME_NAME}
           className="space-y-5"
         >
-          <input type="hidden" name="zf_referrer_name" value="" />
+          <LeadSourceField />
           <input type="hidden" name="zf_redirect_url" value="" />
           <input type="hidden" name="zc_gad" value="" />
 

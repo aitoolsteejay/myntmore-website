@@ -11,6 +11,7 @@ import FlowDiagram from "@/app/lp/FlowDiagram";
 import Faq from "@/app/lp/Faq";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import type { LandingPageData } from "./landing-page-data";
+import { LeadSourceField } from "@/app/components/LeadSource";
 
 // One template for every ICP landing page (/lp/<slug>). The text comes from
 // content/landing-pages/<slug>.json; the markup below is what each page used to carry.
@@ -502,7 +503,7 @@ function FormSection({ d }: { d: LandingPageData }) {
           <form className="space-y-4"
             action="https://forms.zohopublic.com/flintstop/form/MyntmoreWebsiteform/formperma/3F8IpEgLtb2RnoXcr_yUsp56_-WdQdO2-sM6eaCOKi0/htmlRecords/submit"
             name="form" id="form" method="POST" acceptCharset="UTF-8" encType="multipart/form-data">
-            <input type="hidden" name="zf_referrer_name" value="" />
+            <LeadSourceField />
             <input type="hidden" name="zf_redirect_url" value="https://www.myntmore.com/thank-you" />
             <input type="hidden" name="zc_gad" value="" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

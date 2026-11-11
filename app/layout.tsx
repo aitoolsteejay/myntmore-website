@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
 import JsonLd from "./components/JsonLd";
 import ReelWidget from "./components/ReelWidget";
+import { LeadSourceCapture } from "./components/LeadSource";
 import { organizationSchema } from "@/lib/schema";
 import "./globals.css";
 
@@ -109,6 +110,7 @@ export default function RootLayout({
         <Toaster />
         <Analytics />
         <SpeedInsights />
+        <LeadSourceCapture />
 
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
