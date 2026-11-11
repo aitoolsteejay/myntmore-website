@@ -9,10 +9,10 @@ import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
 
 export const metadata: Metadata = {
-  title: "Vibe Prospecting on Claude: 7-Step Setup Guide",
-  description: "Connect Vibe Prospecting to Claude in 7 steps, then copy 10 prompts that pull verified B2B leads. Read the setup guide.",
+  title: "Vibe Prospecting on Claude: What It Is + Setup",
+  description: "Vibe Prospecting is a Claude connector that pulls verified B2B leads into your chat. See how it works, the 7-step setup and 10 prompts to copy.",
   keywords: [
-    "vibe prospecting setup guide",
+    "vibe prospecting", "what is vibe prospecting", "vibe prospecting claude", "vibe prospecting setup guide",
     "claude connectors for lead generation",
     "ai lead sourcing tool",
     "b2b prospecting by funding stage",
@@ -158,6 +158,21 @@ export default function VibeProspectingGuide() {
             isn&apos;t your average marketer. He&apos;s a 4x entrepreneur who built Flintstop, a D2C eCommerce brand, into a $6M-a-year machine, shipping out 8,000 orders a day before selling the business in 2020. At{" "}
             <a href="https://www.myntmore.com/" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>Myntmore</a>, his B2B outbound agency, he&apos;s helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He&apos;s a TEDx speaker, angel investor, and has taught B2B growth methodologies at IIT and IIM. Now, he&apos;s here to do it for you.
           </p>
+        </div>
+      </section>
+
+      {/* What it is: answers the head query "vibe prospecting" before the setup steps */}
+      <section className="py-12 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>What is Vibe Prospecting?</h2>
+            <p className="text-base leading-relaxed mb-3" style={{ color: "#52525B" }}>
+              Vibe Prospecting is a Claude connector for B2B lead sourcing. Once it is switched on, you describe the companies and people you want in plain English and Claude returns verified names, emails and LinkedIn profiles in the same chat, with no separate tool to log into.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: "#52525B" }}>
+              The setup takes about 2 minutes and the steps are below. After that, the prompts further down show how to ask for lead lists by funding stage, tech stack or hiring signal.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
