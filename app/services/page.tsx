@@ -8,6 +8,7 @@ import JsonLd from "../components/JsonLd";
 import { buildFaqSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "AI-Powered B2B Lead Generation Services",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.myntmore.com/services" },
   keywords: ["b2b lead generation agency", "b2b lead generation services", "outbound marketing agency", "b2b lead generation agency mumbai", "ai lead generation company", "linkedin outreach and cold email agency", "account based marketing agency", "icp mapping and lead scoring services", "b2b growth agency", "b2b demand generation agency", "outbound sales agency for saas", "lead generation agency vs in-house sdr team", "how to generate b2b leads without cold calling", "b2b sales pipeline agency", "personal branding and linkedin ghostwriting agency", "productized b2b lead generation services", "gtm strategy agency"],
   openGraph: {
+    ...OG_BASE,
     title: "B2B Lead Generation Services | AI-Powered Outbound | Myntmore",
     description: "Seven productized B2B growth services. We build the architecture, you close the deals.",
     url: "https://www.myntmore.com/services",

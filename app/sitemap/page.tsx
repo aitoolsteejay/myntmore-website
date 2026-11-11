@@ -8,13 +8,15 @@ import { buildBreadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
 import glossaryCards from "@/lib/glossary-index.generated.json";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title: "Site Map",
-  description: "Every page on Myntmore, organised by section: services, case studies, blog, guides, free tools, careers, and more.",
+  title: { absolute: "Site Map: Every Page on Myntmore" },
+  description: "Every page on Myntmore, organised by section: services, case studies, blog posts, guides, the glossary, free tools, careers and more.",
   alternates: { canonical: "https://www.myntmore.com/sitemap" },
   openGraph: {
-    title: "Site Map | Myntmore",
+    ...OG_BASE,
+    title: "Site Map: Every Page on Myntmore",
     description: "Every page on Myntmore, organised by services, case studies, resources, free tools, careers, and more.",
     url: "https://www.myntmore.com/sitemap",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],

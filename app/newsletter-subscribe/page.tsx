@@ -5,6 +5,7 @@ import FadeIn from "../components/FadeIn";
 import NewsletterForm from "../components/NewsletterForm";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildWebPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const URL = `${SITE_URL}/newsletter-subscribe`;
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   keywords: ["b2b outbound newsletter", "cold email newsletter", "ai outbound insights", "lead generation newsletter", "the outbound operator"],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: "The Outbound Operator Newsletter | Myntmore",
     description: "One practical B2B growth playbook every week. Built from real campaigns, not recycled theory.",
     url: URL,

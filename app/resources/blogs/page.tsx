@@ -8,6 +8,7 @@ import NewsletterForm from "../../components/NewsletterForm";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
+import { OG_BASE } from "@/lib/og";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/blogs" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Lead Generation Blog | Myntmore",
     description: "Practical lead gen guides from the team behind 12K+ B2B meetings booked.",
     url: "https://www.myntmore.com/resources/blogs",

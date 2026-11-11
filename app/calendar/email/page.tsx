@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "../th/CalendarPageClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Cold Email Infrastructure Audit with Tejas Jhaveri",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.myntmore.com/calendar/cold-emailing" },
   openGraph: {
+    ...OG_BASE,
     title: "Cold Email Infrastructure Audit | Tejas Jhaveri",
     description:
       "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your email deliverability, secondary domain setup, warming rhythm, and high-converting copy angles.",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "./CalendarPageClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Founder Strategy Session with Tejas Jhaveri",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.myntmore.com/calendar/th" },
   openGraph: {
+    ...OG_BASE,
     title: "Founder Strategy Session | Tejas Jhaveri",
     description:
       "Pick a 30-minute 1-on-1 slot with Tejas Jhaveri, Founder of Myntmore. An honest diagnostic of your B2B outbound systems, ICP, and pipeline bottlenecks. Zero sales pitch.",

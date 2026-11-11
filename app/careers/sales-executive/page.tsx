@@ -3,6 +3,7 @@ import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Sales Executive, Mumbai | Rs 4–7 LPA",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   keywords: ["sales executive jobs mumbai", "b2b sales executive job", "personal branding sales jobs", "full time sales jobs mumbai", "sales executive jobs bkc", "crm sales executive job", "client facing sales jobs mumbai", "business development executive jobs", "sales jobs personal branding agency", "myntmore careers", "sales executive job b2b growth agency", "linkedin personal branding sales jobs"],
   alternates: { canonical: "https://www.myntmore.com/careers/sales-executive" },
   openGraph: {
+    ...OG_BASE,
     title: "Sales Executive | Myntmore Careers",
     description: "Prospect, build relationships, and close deals for a personal-branding and outbound growth agency. Full-time, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/sales-executive",

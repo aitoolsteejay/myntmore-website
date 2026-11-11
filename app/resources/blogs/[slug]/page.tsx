@@ -13,6 +13,7 @@ import Faq from "@/app/lp/Faq";
 import { buildArticleSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPost, getCmsPostSummaries } from "@/lib/cms-posts";
+import { OG_BASE } from "@/lib/og";
 
 // Every blog post is written in the Keystatic admin (content/posts/*.mdoc) and rendered
 // here. Anything that is not a published post is a 404.
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     keywords: post.keywords,
     alternates: { canonical: url },
     openGraph: {
+      ...OG_BASE,
       title: post.ogTitle,
       description: post.ogDescription,
       url,

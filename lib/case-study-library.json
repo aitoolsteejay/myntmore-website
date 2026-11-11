@@ -1,4 +1,16 @@
 {
+ "audiences": {
+  "Pharma": "pharma companies",
+  "SaaS": "saas companies",
+  "Professional Services": "professional services firms",
+  "eCommerce Tech": "ecommerce tech companies",
+  "B2B Founder": "b2b founders",
+  "Agencies & IT": "agencies and it services firms",
+  "Financial Services": "financial services firms",
+  "Insurance": "insurance companies",
+  "Manufacturers & Exporters": "manufacturers and exporters",
+  "Recruitment & Staffing": "recruitment and staffing firms"
+ },
  "cases": [
   {
    "n": 1,
@@ -19,6 +31,14 @@
     "3 serious partnership discussions initiated.",
     "35% connection acceptance rate.",
     "A repeatable pipeline of potential distribution and private-label partners."
+   ],
+   "metaDescription": "22 Qualified Meetings in 90 Days for a Nutraceutical Manufacturer: 3 serious partnership discussions initiated. A Myntmore Pharma case study.",
+   "keywords": [
+    "nutraceutical manufacturer lead generation",
+    "nutraceutical manufacturer case study",
+    "b2b lead generation for pharma companies",
+    "pharma outbound case study",
+    "linkedin outreach for pharma companies"
    ]
   },
   {
@@ -36,6 +56,13 @@
     "₹48 lakh in potential business pipeline.",
     "19 qualified buyer conversations.",
     "6 opportunities progressing to commercial evaluation."
+   ],
+   "metaDescription": "Building a ₹48 Lakh Pipeline for a Contract Pharma Manufacturer: 180% increase in LinkedIn profile visibility. A Myntmore Pharma case study.",
+   "keywords": [
+    "contract manufacturer lead generation",
+    "contract manufacturer case study",
+    "b2b lead generation for pharma companies",
+    "pharma outbound case study"
    ]
   },
   {
@@ -53,6 +80,14 @@
     "2 active commercial negotiations.",
     "38% connection acceptance rate.",
     "7 requests for product or technical documentation."
+   ],
+   "metaDescription": "Opening New Commercial Conversations for an API Supplier: 17 qualified sourcing conversations. A Myntmore Pharma case study.",
+   "keywords": [
+    "api supplier lead generation",
+    "api supplier case study",
+    "b2b lead generation for pharma companies",
+    "pharma outbound case study",
+    "linkedin outreach for pharma companies"
    ]
   },
   {
@@ -70,6 +105,14 @@
     "5 opportunities progressed to proposal discussions.",
     "21% positive response rate among engaged prospects.",
     "New conversations with pharmaceutical procurement and operations leaders."
+   ],
+   "metaDescription": "Generating 26 Warm Leads for a Pharma Packaging Manufacturer: 5 opportunities progressed to proposal discussions. A Myntmore Pharma case study.",
+   "keywords": [
+    "pharma packaging lead generation",
+    "pharma packaging case study",
+    "b2b lead generation for pharma companies",
+    "pharma outbound case study",
+    "linkedin outreach for pharma companies"
    ]
   },
   {
@@ -87,6 +130,13 @@
     "1 enterprise pilot under discussion.",
     "4 opportunities requiring formal capability presentations.",
     "Improved engagement from relevant research decision-makers."
+   ],
+   "metaDescription": "14 High-Intent Meetings for a Clinical Research Services Firm: 1 enterprise pilot under discussion. A Myntmore Pharma case study.",
+   "keywords": [
+    "clinical research services lead generation",
+    "clinical research services case study",
+    "b2b lead generation for pharma companies",
+    "pharma outbound case study"
    ]
   },
   {
@@ -104,6 +154,14 @@
     "37% connection acceptance rate.",
     "9 enterprise opportunities identified.",
     "More consistent demo bookings."
+   ],
+   "metaDescription": "31 Enterprise Sales Meetings for a Workflow Automation SaaS: 37% connection acceptance rate. A Myntmore SaaS case study.",
+   "keywords": [
+    "workflow automation saas lead generation",
+    "workflow automation saas case study",
+    "b2b lead generation for saas companies",
+    "saas outbound case study",
+    "linkedin outreach for saas companies"
    ]
   },
   {
@@ -121,6 +179,14 @@
     "19 qualified product demos booked.",
     "42% connection acceptance rate.",
     "5 opportunities moved into product evaluation."
+   ],
+   "metaDescription": "Doubling Reply Rates for an HR Tech SaaS Platform: 19 qualified product demos booked and 42% connection acceptance rate. A Myntmore SaaS case study.",
+   "keywords": [
+    "hr tech saas lead generation",
+    "hr tech saas case study",
+    "b2b lead generation for saas companies",
+    "saas outbound case study",
+    "linkedin outreach for saas companies"
    ]
   },
   {
@@ -138,6 +204,14 @@
     "4 enterprise opportunities identified.",
     "16 qualified stakeholder conversations.",
     "Stronger visibility within target financial institutions."
+   ],
+   "metaDescription": "Creating a ₹72 Lakh Pipeline for a Fintech SaaS Company: 4 enterprise opportunities identified. A Myntmore SaaS case study.",
+   "keywords": [
+    "fintech saas lead generation",
+    "fintech saas case study",
+    "b2b lead generation for saas companies",
+    "saas outbound case study",
+    "linkedin outreach for saas companies"
    ]
   },
   {
@@ -155,6 +229,13 @@
     "12 potential integration or distribution partnerships.",
     "3x increase in LinkedIn profile engagement.",
     "A defined outbound process for future scaling."
+   ],
+   "metaDescription": "24 Sales Calls for an AI Productivity Platform: 12 potential integration or distribution partnerships. A Myntmore SaaS case study.",
+   "keywords": [
+    "ai productivity platform lead generation",
+    "ai productivity platform case study",
+    "b2b lead generation for saas companies",
+    "saas outbound case study"
    ]
   },
   {
@@ -172,6 +253,13 @@
     "3x increase in LinkedIn engagement.",
     "6 active product evaluation opportunities.",
     "Higher engagement from mid-market CX teams."
+   ],
+   "metaDescription": "21 Sales Conversations for a Customer Support SaaS: 3x increase in LinkedIn engagement. The challenge, approach and results from a Myntmore SaaS case study.",
+   "keywords": [
+    "customer support saas lead generation",
+    "customer support saas case study",
+    "b2b lead generation for saas companies",
+    "saas outbound case study"
    ]
   },
   {
@@ -189,6 +277,13 @@
     "4 potential retained consulting engagements.",
     "170% increase in profile visibility.",
     "Improved access to mid-market decision-makers."
+   ],
+   "metaDescription": "Turning Expertise Into 16 Qualified Conversations for a Consulting Firm. The challenge, approach and results from a Myntmore Professional Services case study.",
+   "keywords": [
+    "management consulting firm lead generation",
+    "management consulting firm case study",
+    "b2b lead generation for professional services firms",
+    "professional services outbound case study"
    ]
   },
   {
@@ -206,6 +301,14 @@
     "7 discovery calls.",
     "2 potential ongoing advisory engagements.",
     "Stronger engagement from startup founders."
+   ],
+   "metaDescription": "Generating 11 Inbound Enquiries for a Legal Advisory Practice: 7 discovery calls. A Myntmore Professional Services case study.",
+   "keywords": [
+    "legal advisory practice lead generation",
+    "legal advisory practice case study",
+    "b2b lead generation for professional services firms",
+    "professional services outbound case study",
+    "linkedin outreach for professional services firms"
    ]
   },
   {
@@ -223,6 +326,13 @@
     "9 consultation meetings.",
     "3 potential retainer opportunities.",
     "Higher engagement with finance-related content."
+   ],
+   "metaDescription": "23 Qualified Leads for a Tax Advisory Firm: 9 consultation meetings and 3 potential retainer opportunities. A Myntmore Professional Services case study.",
+   "keywords": [
+    "tax advisory firm lead generation",
+    "tax advisory firm case study",
+    "b2b lead generation for professional services firms",
+    "professional services outbound case study"
    ]
   },
   {
@@ -240,6 +350,14 @@
     "9 paid consultation discussions.",
     "2.5x improvement in LinkedIn engagement.",
     "Increased visibility among business owners."
+   ],
+   "metaDescription": "4 Workshop Opportunities for a Business Coaching Practice: 9 paid consultation discussions. A Myntmore Professional Services case study.",
+   "keywords": [
+    "business coaching practice lead generation",
+    "business coaching practice case study",
+    "b2b lead generation for professional services firms",
+    "professional services outbound case study",
+    "linkedin outreach for professional services firms"
    ]
   },
   {
@@ -257,6 +375,13 @@
     "3 consulting mandates converted.",
     "35% connection acceptance rate.",
     "More consistent opportunities within target industries."
+   ],
+   "metaDescription": "3 New Mandates for an HR Consulting Company: 18 qualified meetings and 35% connection acceptance rate. A Myntmore Professional Services case study.",
+   "keywords": [
+    "hr consulting company lead generation",
+    "hr consulting company case study",
+    "b2b lead generation for professional services firms",
+    "professional services outbound case study"
    ]
   },
   {
@@ -274,6 +399,13 @@
     "8 high-fit product evaluation conversations.",
     "39% connection acceptance rate.",
     "Better-qualified merchants entering the sales funnel."
+   ],
+   "metaDescription": "27 Product Demos for a Shopify App Company: 8 high-fit product evaluation conversations. A Myntmore eCommerce Tech case study.",
+   "keywords": [
+    "shopify app company lead generation",
+    "shopify app company case study",
+    "b2b lead generation for ecommerce tech companies",
+    "ecommerce tech outbound case study"
    ]
   },
   {
@@ -291,6 +423,13 @@
     "21 qualified sales calls.",
     "5 opportunities progressing to solution evaluation.",
     "Improved engagement with eCommerce decision-makers."
+   ],
+   "metaDescription": "2.4x Higher Reply Rates for an eCommerce Retention Platform: 21 qualified sales calls. A Myntmore eCommerce Tech case study.",
+   "keywords": [
+    "retention platform lead generation",
+    "retention platform case study",
+    "b2b lead generation for ecommerce tech companies",
+    "ecommerce tech outbound case study"
    ]
   },
   {
@@ -308,6 +447,13 @@
     "3 late-stage product opportunities.",
     "190% growth in profile impressions.",
     "Increased conversations with revenue leaders."
+   ],
+   "metaDescription": "Building Demand for an eCommerce Analytics Platform: 15 qualified sales meetings and 3 late-stage product opportunities. A Myntmore eCommerce Tech case study.",
+   "keywords": [
+    "ecommerce analytics lead generation",
+    "ecommerce analytics case study",
+    "b2b lead generation for ecommerce tech companies",
+    "ecommerce tech outbound case study"
    ]
   },
   {
@@ -325,6 +471,13 @@
     "19 qualified discussions.",
     "4 commercial proposals.",
     "Stronger access to D2C operations leadership."
+   ],
+   "metaDescription": "₹38 Lakh Pipeline for a D2C Logistics Tech Company: 19 qualified discussions and 4 commercial proposals. A Myntmore eCommerce Tech case study.",
+   "keywords": [
+    "d2c logistics tech lead generation",
+    "d2c logistics tech case study",
+    "b2b lead generation for ecommerce tech companies",
+    "ecommerce tech outbound case study"
    ]
   },
   {
@@ -342,6 +495,13 @@
     "18 qualified conversations.",
     "3 potential enterprise accounts.",
     "Better visibility among growing marketplace sellers."
+   ],
+   "metaDescription": "13 High-Intent Opportunities for a Marketplace Enablement Platform: 18 qualified conversations. A Myntmore eCommerce Tech case study.",
+   "keywords": [
+    "marketplace enablement lead generation",
+    "marketplace enablement case study",
+    "b2b lead generation for ecommerce tech companies",
+    "ecommerce tech outbound case study"
    ]
   },
   {
@@ -359,6 +519,14 @@
     "40% connection acceptance rate.",
     "3x improvement in profile visibility.",
     "A more structured and repeatable lead generation process."
+   ],
+   "metaDescription": "Building a 30+ Meetings-per-Month Pipeline for a B2B Founder: 40% connection acceptance rate. A Myntmore B2B Founder case study.",
+   "keywords": [
+    "services founder lead generation",
+    "services founder case study",
+    "b2b lead generation for b2b founders",
+    "b2b founder outbound case study",
+    "linkedin outreach for b2b founders"
    ]
   },
   {
@@ -376,6 +544,13 @@
     "16 qualified consulting discussions.",
     "2x improvement in positive replies.",
     "Reduced reliance on referrals."
+   ],
+   "metaDescription": "5 New Retainers for a Niche B2B Consultant: 16 qualified consulting discussions and 2x improvement in positive replies. A Myntmore B2B Founder case study.",
+   "keywords": [
+    "niche b2b consultant lead generation",
+    "niche b2b consultant case study",
+    "b2b lead generation for b2b founders",
+    "b2b founder outbound case study"
    ]
   },
   {
@@ -393,6 +568,14 @@
     "6 opportunities moved to product evaluation.",
     "Higher engagement from target accounts.",
     "Clearer differentiation in outbound messaging."
+   ],
+   "metaDescription": "18 Decision-Maker Meetings for a Tech Founder: 6 opportunities moved to product evaluation. A Myntmore B2B Founder case study.",
+   "keywords": [
+    "tech founder lead generation",
+    "tech founder case study",
+    "b2b lead generation for b2b founders",
+    "b2b founder outbound case study",
+    "linkedin outreach for b2b founders"
    ]
   },
   {
@@ -410,6 +593,13 @@
     "14 qualified business conversations.",
     "5 proposal-stage opportunities.",
     "Stronger engagement from industry decision-makers."
+   ],
+   "metaDescription": "Tripling LinkedIn Visibility for a B2B Service Founder: 14 qualified business conversations. A Myntmore B2B Founder case study.",
+   "keywords": [
+    "service business founder lead generation",
+    "service business founder case study",
+    "b2b lead generation for b2b founders",
+    "b2b founder outbound case study"
    ]
   },
   {
@@ -427,6 +617,14 @@
     "20 relevant business conversations.",
     "37% connection acceptance rate.",
     "A lower-dependency acquisition channel outside paid advertising."
+   ],
+   "metaDescription": "Creating 14 Warm Opportunities for a Bootstrapped Founder: 20 relevant business conversations. A Myntmore B2B Founder case study.",
+   "keywords": [
+    "bootstrapped founder lead generation",
+    "bootstrapped founder case study",
+    "b2b lead generation for b2b founders",
+    "b2b founder outbound case study",
+    "linkedin outreach for b2b founders"
    ]
   },
   {
@@ -444,6 +642,13 @@
     "3 retained client engagements.",
     "6 proposal opportunities.",
     "Reduced dependence on third-party marketplaces."
+   ],
+   "metaDescription": "3 New Retainers for a Web Development Agency: 20 qualified sales calls and 6 proposal opportunities. A Myntmore Agencies & IT case study.",
+   "keywords": [
+    "web development agency lead generation",
+    "web development agency case study",
+    "b2b lead generation for agencies and it services firms",
+    "agencies and it outbound case study"
    ]
   },
   {
@@ -461,6 +666,13 @@
     "5 enterprise opportunities.",
     "2 opportunities moved to technical scoping.",
     "Better engagement from technology decision-makers."
+   ],
+   "metaDescription": "17 Sales Conversations for a Software Development Firm: 5 enterprise opportunities. A Myntmore Agencies & IT case study.",
+   "keywords": [
+    "software development firm lead generation",
+    "software development firm case study",
+    "b2b lead generation for agencies and it services firms",
+    "agencies and it outbound case study"
    ]
   },
   {
@@ -478,6 +690,14 @@
     "12 qualified pitch calls.",
     "3 potential retained engagements.",
     "Higher engagement with founder-led content."
+   ],
+   "metaDescription": "Doubling Inbound Interest for a Performance Marketing Agency: 12 qualified pitch calls. A Myntmore Agencies & IT case study.",
+   "keywords": [
+    "performance marketing lead generation",
+    "performance marketing case study",
+    "b2b lead generation for agencies and it services firms",
+    "agencies and it outbound case study",
+    "linkedin outreach for agencies and it services firms"
    ]
   },
   {
@@ -495,6 +715,13 @@
     "22 qualified international conversations.",
     "4 target markets actively engaged.",
     "Improved consistency in international outbound."
+   ],
+   "metaDescription": "9 Proposal-Stage Opportunities for an IT Services Company: 22 qualified international conversations. A Myntmore Agencies & IT case study.",
+   "keywords": [
+    "it services company lead generation",
+    "it services company case study",
+    "b2b lead generation for agencies and it services firms",
+    "agencies and it outbound case study"
    ]
   },
   {
@@ -512,6 +739,14 @@
     "4 branding proposals.",
     "180% growth in profile impressions.",
     "Improved access to founder-led businesses."
+   ],
+   "metaDescription": "15 Qualified Meetings for a Branding Agency: 4 branding proposals and 180% growth in profile impressions. A Myntmore Agencies & IT case study.",
+   "keywords": [
+    "branding agency lead generation",
+    "branding agency case study",
+    "b2b lead generation for agencies and it services firms",
+    "agencies and it outbound case study",
+    "linkedin outreach for agencies and it services firms"
    ]
   },
   {
@@ -529,6 +764,14 @@
     "170% increase in profile visibility.",
     "5 prospects progressed to suitability discussions.",
     "Stronger professional engagement among target audiences."
+   ],
+   "metaDescription": "11 High-Value Discovery Meetings for a Wealth Management Firm: 170% increase in profile visibility. A Myntmore Financial Services case study.",
+   "keywords": [
+    "wealth management firm lead generation",
+    "wealth management firm case study",
+    "b2b lead generation for financial services firms",
+    "financial services outbound case study",
+    "linkedin outreach for financial services firms"
    ]
   },
   {
@@ -546,6 +789,13 @@
     "4 high-fit prospects entered the advisory pipeline.",
     "Higher profile engagement from senior professionals.",
     "Improved consistency in enquiries."
+   ],
+   "metaDescription": "18 Qualified Conversations for a Financial Advisory Practice: 4 high-fit prospects entered the advisory pipeline. A Myntmore Financial Services case study.",
+   "keywords": [
+    "financial advisory practice lead generation",
+    "financial advisory practice case study",
+    "b2b lead generation for financial services firms",
+    "financial services outbound case study"
    ]
   },
   {
@@ -563,6 +813,13 @@
     "4 potential engagement opportunities.",
     "2.2x increase in LinkedIn profile views.",
     "Stronger visibility among founders and finance leaders."
+   ],
+   "metaDescription": "13 Qualified Meetings for a Corporate Finance Consultant: 4 potential engagement opportunities. A Myntmore Financial Services case study.",
+   "keywords": [
+    "corporate finance lead generation",
+    "corporate finance case study",
+    "b2b lead generation for financial services firms",
+    "financial services outbound case study"
    ]
   },
   {
@@ -580,6 +837,13 @@
     "6 prospective advisory relationships.",
     "Higher engagement with educational content.",
     "Increased awareness among business-owner audiences."
+   ],
+   "metaDescription": "16 Consultative Conversations for an Insurance Advisory Business: 6 prospective advisory relationships. A Myntmore Financial Services case study.",
+   "keywords": [
+    "insurance advisory lead generation",
+    "insurance advisory case study",
+    "b2b lead generation for financial services firms",
+    "financial services outbound case study"
    ]
   },
   {
@@ -597,6 +861,14 @@
     "3x increase in profile engagement.",
     "Stronger visibility among relevant investor communities.",
     "More informed conversations with potential clients."
+   ],
+   "metaDescription": "Building Founder Authority for a PMS and Investment Advisory Brand: 10 meaningful prospect discussions. A Myntmore Financial Services case study.",
+   "keywords": [
+    "pms & investment advisory lead generation",
+    "pms & investment advisory case study",
+    "b2b lead generation for financial services firms",
+    "financial services outbound case study",
+    "linkedin outreach for financial services firms"
    ]
   },
   {
@@ -614,6 +886,13 @@
     "7 requests for policy or coverage reviews.",
     "4 potential corporate accounts.",
     "Higher engagement with relevant business stakeholders."
+   ],
+   "metaDescription": "21 Meetings for a Corporate Insurance Brokerage: 7 requests for policy or coverage reviews and 4 potential corporate accounts. A Myntmore Insurance case study.",
+   "keywords": [
+    "corporate insurance broker lead generation",
+    "corporate insurance broker case study",
+    "b2b lead generation for insurance companies",
+    "insurance outbound case study"
    ]
   },
   {
@@ -631,6 +910,13 @@
     "3 serious buying discussions.",
     "2 potential pilot opportunities.",
     "Improved access to claims operations leaders."
+   ],
+   "metaDescription": "14 Qualified Conversations for a Claims Support Company: 3 serious buying discussions and 2 potential pilot opportunities. A Myntmore Insurance case study.",
+   "keywords": [
+    "claims support company lead generation",
+    "claims support company case study",
+    "b2b lead generation for insurance companies",
+    "insurance outbound case study"
    ]
   },
   {
@@ -648,6 +934,13 @@
     "4 enterprise evaluation opportunities.",
     "2 pilot discussions.",
     "Improved positive response rates from relevant insurance buyers."
+   ],
+   "metaDescription": "16 Product Demos for an Insurtech Platform: 4 enterprise evaluation opportunities and 2 pilot discussions. A Myntmore Insurance case study.",
+   "keywords": [
+    "insurtech platform lead generation",
+    "insurtech platform case study",
+    "b2b lead generation for insurance companies",
+    "insurance outbound case study"
    ]
   },
   {
@@ -665,6 +958,13 @@
     "18 qualified sales conversations.",
     "5 enterprise accounts showing active interest.",
     "A more predictable business development process."
+   ],
+   "metaDescription": "9 Proposal Opportunities for a Risk Consulting Firm: 18 qualified sales conversations. The challenge, approach and results from a Myntmore Insurance case study.",
+   "keywords": [
+    "risk consulting firm lead generation",
+    "risk consulting firm case study",
+    "b2b lead generation for insurance companies",
+    "insurance outbound case study"
    ]
   },
   {
@@ -682,6 +982,14 @@
     "5 prospective client relationships.",
     "Higher engagement with educational content.",
     "Improved quality of initial enquiries."
+   ],
+   "metaDescription": "12 Consultations for a Health Insurance Advisory Business: 5 prospective client relationships. A Myntmore Insurance case study.",
+   "keywords": [
+    "health insurance advisory lead generation",
+    "health insurance advisory case study",
+    "b2b lead generation for insurance companies",
+    "insurance outbound case study",
+    "linkedin outreach for insurance companies"
    ]
   },
   {
@@ -699,6 +1007,13 @@
     "2 sample-stage commercial opportunities.",
     "6 requests for technical specifications.",
     "Greater visibility in selected export markets."
+   ],
+   "metaDescription": "18 International Buyer Conversations for an Industrial Manufacturer: 2 sample-stage commercial opportunities. A Myntmore Manufacturers & Exporters case study.",
+   "keywords": [
+    "industrial manufacturer lead generation",
+    "industrial manufacturer case study",
+    "b2b lead generation for manufacturers and exporters",
+    "manufacturers and exporters outbound case study"
    ]
   },
   {
@@ -716,6 +1031,13 @@
     "5 product catalogue requests.",
     "3 sampling discussions.",
     "Stronger visibility among international sourcing professionals."
+   ],
+   "metaDescription": "15 Buyer Opportunities for a Textile Exporter: 5 product catalogue requests and 3 sampling discussions. A Myntmore Manufacturers & Exporters case study.",
+   "keywords": [
+    "textile exporter lead generation",
+    "textile exporter case study",
+    "b2b lead generation for manufacturers and exporters",
+    "manufacturers and exporters outbound case study"
    ]
   },
   {
@@ -733,6 +1055,13 @@
     "7 requests for quotations.",
     "4 ongoing commercial evaluations.",
     "Improved visibility among target procurement teams."
+   ],
+   "metaDescription": "24 Sales Conversations for an Industrial Packaging Manufacturer: 7 requests for quotations. A Myntmore Manufacturers & Exporters case study.",
+   "keywords": [
+    "industrial packaging lead generation",
+    "industrial packaging case study",
+    "b2b lead generation for manufacturers and exporters",
+    "manufacturers and exporters outbound case study"
    ]
   },
   {
@@ -750,6 +1079,13 @@
     "11 active commercial opportunities.",
     "5 technical discussions.",
     "Improved engagement from international buyers."
+   ],
+   "metaDescription": "2.1x Higher Positive Replies for an Engineering Goods Exporter: 11 active commercial opportunities. A Myntmore Manufacturers & Exporters case study.",
+   "keywords": [
+    "engineering goods exporter lead generation",
+    "engineering goods exporter case study",
+    "b2b lead generation for manufacturers and exporters",
+    "manufacturers and exporters outbound case study"
    ]
   },
   {
@@ -767,6 +1103,13 @@
     "5 requests for manufacturing capability details.",
     "3 partnership opportunities under evaluation.",
     "Stronger visibility among relevant food industry buyers."
+   ],
+   "metaDescription": "17 Qualified Partner Discussions for a Food Processing Manufacturer. The challenge, approach and results from a Myntmore Manufacturers & Exporters case study.",
+   "keywords": [
+    "food processing lead generation",
+    "food processing case study",
+    "b2b lead generation for manufacturers and exporters",
+    "manufacturers and exporters outbound case study"
    ]
   },
   {
@@ -784,6 +1127,13 @@
     "4 active recruitment mandates.",
     "6 additional hiring requirement discussions.",
     "More consistent engagement with leadership teams."
+   ],
+   "metaDescription": "4 Recruitment Mandates for an Executive Search Firm: 19 qualified business conversations. A Myntmore Recruitment & Staffing case study.",
+   "keywords": [
+    "executive search firm lead generation",
+    "executive search firm case study",
+    "b2b lead generation for recruitment and staffing firms",
+    "recruitment and staffing outbound case study"
    ]
   },
   {
@@ -801,6 +1151,13 @@
     "8 active staffing requirement discussions.",
     "3 new client opportunities.",
     "Improved consistency in lead flow."
+   ],
+   "metaDescription": "26 Meetings for an IT Staffing Agency: 8 active staffing requirement discussions and 3 new client opportunities. A Myntmore Recruitment & Staffing case study.",
+   "keywords": [
+    "it staffing agency lead generation",
+    "it staffing agency case study",
+    "b2b lead generation for recruitment and staffing firms",
+    "recruitment and staffing outbound case study"
    ]
   },
   {
@@ -818,6 +1175,14 @@
     "4 active hiring requirement discussions.",
     "2 potential recruitment mandates.",
     "Stronger presence among the GCC talent ecosystem."
+   ],
+   "metaDescription": "13 Qualified Meetings for a GCC Recruitment Specialist: 4 active hiring requirement discussions. A Myntmore Recruitment & Staffing case study.",
+   "keywords": [
+    "gcc recruitment lead generation",
+    "gcc recruitment case study",
+    "b2b lead generation for recruitment and staffing firms",
+    "recruitment and staffing outbound case study",
+    "linkedin outreach for recruitment and staffing firms"
    ]
   },
   {
@@ -835,6 +1200,14 @@
     "16 qualified business conversations.",
     "3x increase in LinkedIn profile visibility.",
     "Improved engagement among hiring leaders."
+   ],
+   "metaDescription": "Building Founder Visibility for a Recruitment Consulting Firm: 8 serious retainer discussions. A Myntmore Recruitment & Staffing case study.",
+   "keywords": [
+    "recruitment consulting lead generation",
+    "recruitment consulting case study",
+    "b2b lead generation for recruitment and staffing firms",
+    "recruitment and staffing outbound case study",
+    "linkedin outreach for recruitment and staffing firms"
    ]
   },
   {
@@ -852,6 +1225,13 @@
     "3 new mandate discussions.",
     "6 companies sharing active workforce requirements.",
     "More targeted access to manufacturing decision-makers."
+   ],
+   "metaDescription": "3 New Mandate Discussions for a Manufacturing Staffing Firm: 16 qualified business calls. A Myntmore Recruitment & Staffing case study.",
+   "keywords": [
+    "manufacturing staffing lead generation",
+    "manufacturing staffing case study",
+    "b2b lead generation for recruitment and staffing firms",
+    "recruitment and staffing outbound case study"
    ]
   }
  ]

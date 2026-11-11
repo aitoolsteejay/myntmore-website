@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CaseStudiesClient from "../CaseStudiesClient";
-import { libraryCards } from "@/lib/case-study-library";
+import { INDUSTRY_AUDIENCE, libraryCards } from "@/lib/case-study-library";
 import { CASE_STUDY_FILTERS, caseStudyFilterFromSlug } from "@/lib/case-study-filters";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 type Props = { params: { filter: string } };
 
@@ -16,13 +17,21 @@ export function generateMetadata({ params }: Props): Metadata {
   const filter = caseStudyFilterFromSlug(params.filter);
   if (!filter || filter === "All") return {};
   const title = `${filter} Case Studies`;
-  const description = `Explore ${filter} case studies and clearly labelled campaign examples from Myntmore.`;
+  const description = `${filter} case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran.`;
   const url = `https://www.myntmore.com/case-studies/${params.filter}`;
+  const audience = INDUSTRY_AUDIENCE[filter];
   return {
     title,
     description,
+    keywords: [
+      `${filter.toLowerCase()} case studies`,
+      `b2b lead generation for ${audience}`,
+      `outbound lead generation for ${audience}`,
+      `cold email for ${audience}`,
+      `linkedin outreach for ${audience}`,
+    ],
     alternates: { canonical: url },
-    openGraph: { title: `${title} | Myntmore`, description, url, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore case studies" }] },
+    openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore case studies" }] },
   };
 }
 

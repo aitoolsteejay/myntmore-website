@@ -10,6 +10,7 @@ import Underline from "../how-to-set-up-vibe-prospecting/Underline";
 import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
+import { OG_BASE } from "@/lib/og";
 
 const URL = "https://www.myntmore.com/resources/guides/claude-sales-call-prompts";
 const ACCENT = "#0891B2";
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: URL,

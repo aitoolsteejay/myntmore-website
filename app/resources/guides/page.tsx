@@ -6,6 +6,7 @@ import FadeIn from "../../components/FadeIn";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 const GUIDES_PAGE_SCHEMA = [
   buildBreadcrumbSchema([
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/guides" },
   openGraph: {
+    ...OG_BASE,
     title: "Free B2B Growth Guides | Myntmore",
     description: "Step-by-step AI and outbound guides, built by the team behind 12K+ B2B meetings booked.",
     url: "https://www.myntmore.com/resources/guides",

@@ -6,6 +6,7 @@ import FadeIn from "../components/FadeIn";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Growth Resources: Blogs & Free Tools | Myntmore",
     description: "Free playbooks, tools, and real client results for B2B founders who want predictable pipeline.",
     url: "https://www.myntmore.com/resources",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EnwilCalendarClient from "../enwil-li/EnwilCalendarClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Outbound Strategy Session with Enwil Fernandes",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.myntmore.com/calendar/enwil-wa" },
   openGraph: {
+    ...OG_BASE,
     title: "Outbound Strategy Session | Enwil Fernandes | Myntmore",
     description:
       "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Senior Sales Head at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks.",

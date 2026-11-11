@@ -8,6 +8,7 @@ import FadeIn from "@/app/components/FadeIn";
 import StatTicker from "@/app/components/StatTicker";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "80+ US Meetings Booked in 1 Month with AI Agents",
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents" },
   openGraph: {
+    ...OG_BASE,
     title: "80+ US Meetings Booked in 1 Month with AI Agents",
     description: "800 connections/month → 80+ US meetings/month → 4 new clients/month. The full AI-agent blueprint.",
     url: "https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents",

@@ -7,6 +7,7 @@ import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Vibe Prospecting on Claude: What It Is + Setup",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting" },
   openGraph: {
+    ...OG_BASE,
     title: "How to Set Up Vibe Prospecting on Claude for B2B Leads",
     description: "Connect Vibe Prospecting to Claude in 7 steps, then run 10 ready-to-copy prompts for verified B2B leads.",
     url: "https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting",

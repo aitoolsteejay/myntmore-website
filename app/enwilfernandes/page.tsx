@@ -3,6 +3,7 @@ import VisitingCard from "../components/VisitingCard";
 import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PHONE = "+918169318951";
 const WHATSAPP_URL = "https://wa.me/918169318951";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/enwilfernandes` },
   robots: { index: false, follow: false },
   openGraph: {
+    ...OG_BASE,
     title: "Enwil Fernandes | Senior Sales Head, Myntmore",
     description: "Enwil Fernandes, Senior Sales Head at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
     url: `${SITE_URL}/enwilfernandes`,

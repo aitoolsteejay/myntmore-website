@@ -5,6 +5,7 @@ import LeadCaptureForm from "../components/LeadCaptureForm";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/marketing-automation`;
 const BREADCRUMBS = buildBreadcrumbSchema([
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
     "automated lead nurturing",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "Marketing Automation Services | Myntmore",
     description: "AI-powered marketing automation that builds your pipeline while you sleep.",
     url: PAGE_URL,

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "../th/CalendarPageClient";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Multi-Channel Outbound Strategy with Tejas Jhaveri",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.myntmore.com/calendar/whatsapp" },
   openGraph: {
+    ...OG_BASE,
     title: "Multi-Channel Outbound Strategy | Tejas Jhaveri",
     description:
       "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your multi-channel pipeline, WhatsApp cadences, and prospect follow-up workflows.",

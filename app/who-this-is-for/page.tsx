@@ -6,13 +6,14 @@ import FadeIn from "../components/FadeIn";
 import JsonLd from "../components/JsonLd";
 import AskYourAI from "../components/AskYourAI";
 import { buildArticleSchema, SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/who-this-is-for`;
 const TITLE = "Who Is Myntmore For? Who We Work With (and Don't)";
 const DESCRIPTION = "Myntmore runs B2B cold email, LinkedIn and ABM as one system. See which B2B teams it fits, who it doesn't, and whether to book a call.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   keywords: [
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     "when to hire a b2b outbound agency",
   ],
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,

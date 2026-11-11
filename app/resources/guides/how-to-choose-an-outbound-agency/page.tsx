@@ -9,6 +9,7 @@ import Faq from "@/app/lp/Faq";
 import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-an-outbound-agency`;
 const TITLE = "How to Choose a B2B Outbound Agency";
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     "cold email agency evaluation criteria",
   ],
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,

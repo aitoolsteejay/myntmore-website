@@ -8,7 +8,7 @@ import PostingRhythmClient from "./PostingRhythmClient";
 
 export const metadata: Metadata = {
   title: "Posting Rhythm Builder",
-  description: "Free tool to plan a consistent LinkedIn posting rhythm and content cadence for your ICP. Try it free.",
+  description: "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.",
   keywords: [
     "linkedin posting rhythm builder",
     "content calendar generator linkedin",
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     "linkedin posting cadence generator",
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/posting-rhythm-builder" },
-  ...buildToolSocialMetadata("Posting Rhythm Builder", "Free tool to plan a consistent LinkedIn posting rhythm and content cadence for your ICP. Try it free.", "/tools/posting-rhythm-builder"),
+  ...buildToolSocialMetadata("Posting Rhythm Builder", "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.", "/tools/posting-rhythm-builder"),
 };
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Posting Rhythm Builder",
-  description: "Free tool to plan a consistent LinkedIn posting rhythm and content cadence for your ICP. Try it free.",
+  description: "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.",
   url: "https://www.myntmore.com/tools/posting-rhythm-builder",
 });
 

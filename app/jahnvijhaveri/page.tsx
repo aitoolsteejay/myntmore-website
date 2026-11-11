@@ -3,6 +3,7 @@ import VisitingCard from "../components/VisitingCard";
 import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const PHONE = "+919821008589";
 const WHATSAPP_URL = "https://wa.me/919821008589";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/jahnvijhaveri` },
   robots: { index: false, follow: false },
   openGraph: {
+    ...OG_BASE,
     title: "Jahnvi Jhaveri | Co-Founder, Myntmore",
     description: "Jahnvi Jhaveri, Co-Founder of Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
     url: `${SITE_URL}/jahnvijhaveri`,

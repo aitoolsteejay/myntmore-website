@@ -3,6 +3,7 @@ import VisitingCard from "../components/VisitingCard";
 import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, InstagramIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
+import { OG_BASE } from "@/lib/og";
 
 const WHATSAPP_URL = "https://wa.me/919867180379";
 const LINKEDIN_URL = "https://www.linkedin.com/in/tejasjhaveri/";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/tejasjhaveri` },
   robots: { index: false, follow: false },
   openGraph: {
+    ...OG_BASE,
     title: "Tejas Jhaveri | Founder, Myntmore",
     description: "Tejas Jhaveri, Founder of Myntmore. Connect on WhatsApp, LinkedIn, or Instagram.",
     url: `${SITE_URL}/tejasjhaveri`,

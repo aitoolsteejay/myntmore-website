@@ -5,6 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "B2B Lead Gen Intern, Mumbai | Rs 10-15K/mo",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   keywords: ["lead generation internship mumbai", "lead gen intern mumbai", "b2b lead generation internship", "lead generation internship for freshers", "linkedin outreach internship mumbai", "cold email internship mumbai", "b2b marketing internship mumbai", "growth marketing internship bkc", "fresher lead generation jobs mumbai", "outbound marketing internship", "internship with stipend mumbai", "full time internship bkc", "myntmore careers", "lead gen intern job openings"],
   alternates: { canonical: "https://www.myntmore.com/careers/lead-gen-intern" },
   openGraph: {
+    ...OG_BASE,
     title: "B2B Lead Generation Intern | Myntmore Careers",
     description: "Learn to build B2B pipelines across multiple industries. Open to freshers. Full-time internship, BKC Mumbai, Rs 10,000–15,000 a month.",
     url: "https://www.myntmore.com/careers/lead-gen-intern",

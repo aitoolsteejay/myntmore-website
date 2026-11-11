@@ -3,6 +3,7 @@ import Link from "next/link";
 import InnerLayout from "../components/InnerLayout";
 import LeadCaptureForm from "../components/LeadCaptureForm";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "SEO Services Mumbai | B2B Content SEO",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     "pipeline focused seo",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "SEO Services | Myntmore",
     description: "B2B SEO that drives qualified pipeline, not just traffic.",
     url: "https://www.myntmore.com/seo",

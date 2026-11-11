@@ -6,6 +6,7 @@ import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { EVENTS, isUpcoming, type EventItem } from "@/lib/events-data";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     "linkedin growth webinar",
   ],
   openGraph: {
+    ...OG_BASE,
     title: "Events & Webinars | Myntmore",
     description: "Live sessions on cold email, LinkedIn outreach, and B2B pipeline building from the Myntmore team.",
     url: "https://www.myntmore.com/events",

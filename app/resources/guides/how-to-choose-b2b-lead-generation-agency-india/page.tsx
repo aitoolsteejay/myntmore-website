@@ -9,6 +9,7 @@ import Faq from "@/app/lp/Faq";
 import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
+import { OG_BASE } from "@/lib/og";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-b2b-lead-generation-agency-india`;
 const TITLE = "How to Choose a B2B Lead Generation Agency in India";
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
     "b2b appointment setting agency india",
   ],
   openGraph: {
+    ...OG_BASE,
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,

@@ -5,6 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "GTM Strategist, Mumbai | Rs 6–15 LPA",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   keywords: ["gtm strategist jobs mumbai", "growth marketing jobs mumbai", "b2b growth strategist job", "growth marketing strategist jobs india", "gtm jobs mumbai", "b2b marketing jobs bkc", "growth marketing career mumbai", "lead generation strategist jobs", "linkedin marketing jobs mumbai", "growth strategist job b2b agency", "demand generation jobs mumbai", "marketing jobs bkc mumbai", "b2b growth marketing career", "myntmore careers", "gtm strategist job openings"],
   alternates: { canonical: "https://www.myntmore.com/careers/gtm-strategist" },
   openGraph: {
+    ...OG_BASE,
     title: "GTM Strategist | Myntmore Careers",
     description: "Own growth for multiple B2B brands: build predictable pipelines, not just campaigns. Full-time, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/gtm-strategist",

@@ -5,6 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import { OG_BASE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "HR & Operations Intern, Mumbai | Rs 7-15K/mo",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   keywords: ["hr internship mumbai", "hr operations intern jobs", "hr intern jobs bkc mumbai", "people operations internship", "hr internship india", "talent acquisition internship mumbai", "hr and ops intern jobs", "startup hr internship", "hr internship with ppo", "chief of staff internship mumbai", "hr generalist internship", "recruitment internship mumbai", "myntmore careers", "hr internship jobs mumbai"],
   alternates: { canonical: "https://www.myntmore.com/careers/hr-operations-intern" },
   openGraph: {
+    ...OG_BASE,
     title: "HR and Operations Intern | Myntmore Careers",
     description: "Build real hiring pipelines and HR systems for a fast-growing agency. Internship, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/hr-operations-intern",

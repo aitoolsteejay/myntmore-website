@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-04T08:55:33.412Z",
+  "generatedAt": "2026-11-11T07:05:18.323Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 293,
-    "linked": 259,
+    "total": 294,
+    "linked": 260,
     "orphan": 34,
     "noindex": 38,
     "notInXmlSitemap": 42,
@@ -372,13 +372,13 @@
         "/careers/content-marketing-strategist-intern",
         "/careers/gtm-strategist",
         "/careers/hr-operations-intern",
+        "/careers/lead-gen-intern",
         "/careers/lead-gen-strategist",
         "/careers/sales-and-growth-intern",
         "/careers/sales-executive",
-        "/careers/systems-ai-automation-intern",
-        "/"
+        "/careers/systems-ai-automation-intern"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -412,6 +412,19 @@
     {
       "path": "/careers/hr-operations-intern",
       "title": "HR & Operations Intern, Mumbai | Rs 7-15K/mo",
+      "section": "careers",
+      "status": "linked",
+      "linkedFrom": [
+        "/careers"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/careers/lead-gen-intern",
+      "title": "B2B Lead Gen Intern, Mumbai | Rs 10-15K/mo",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -1814,7 +1827,7 @@
     },
     {
       "path": "/feedback",
-      "title": "Feedback",
+      "title": "AI Marketing Workshop Feedback",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -2044,7 +2057,7 @@
     },
     {
       "path": "/myntmore-framework",
-      "title": "Myntmore Framework: How Our Outbound Works",
+      "title": "The Myntmore Framework: How Our B2B Outbound Works",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2074,7 +2087,7 @@
     },
     {
       "path": "/privacy-policy",
-      "title": "Privacy Policy",
+      "title": "Privacy Policy: How We Handle Your Data",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2269,7 +2282,7 @@
         "/resources/blogs/cold-email-sequence-templates",
         "/resources/blogs/cold-email-vs-linkedin-outreach"
       ],
-      "inboundCount": 10,
+      "inboundCount": 11,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2952,9 +2965,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/handling-cold-email-replies",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3280,9 +3294,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/handling-cold-email-replies",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3678,7 +3693,7 @@
     },
     {
       "path": "/resources/guides/how-to-set-up-vibe-prospecting",
-      "title": "Vibe Prospecting on Claude: 7-Step Setup Guide",
+      "title": "Vibe Prospecting on Claude: What It Is + Setup",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3976,7 +3991,7 @@
     },
     {
       "path": "/sitemap",
-      "title": "Site Map",
+      "title": "Site Map: Every Page on Myntmore",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
