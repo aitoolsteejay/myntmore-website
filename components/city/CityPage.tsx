@@ -3,7 +3,7 @@ import InnerLayout from "@/app/components/InnerLayout";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import JsonLd from "@/app/components/JsonLd";
-import { buildFaqSchema, buildLocalBusinessSchema } from "@/lib/schema";
+import { buildFaqSchema, buildCityServiceSchema } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import type { CityPageData } from "./city-page-data";
 
@@ -33,7 +33,7 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
   return (
     <InnerLayout>
       <JsonLd data={buildFaqSchema(FAQ.map((f) => ({ question: f.q, answer: f.a })))} />
-      <JsonLd data={buildLocalBusinessSchema(`https://www.myntmore.com/b2b-lead-generation-${d.slug}`)} />
+      <JsonLd data={buildCityServiceSchema({ name: d.h1, description: d.metaDescription, url: `https://www.myntmore.com/b2b-lead-generation-${d.slug}`, city: d.breadcrumbLabel })} />
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: d.breadcrumbLabel, href: `/b2b-lead-generation-${d.slug}` }]} />

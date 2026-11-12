@@ -1337,7 +1337,7 @@ All routes live in `app/api/`. The tool routes are in A.4.4.
 
 | File | What it is for |
 | --- | --- |
-| `schema.ts` | Structured-data (JSON-LD) builders: `organizationSchema`, `buildLocalBusinessSchema`, `buildFaqSchema`, `buildServiceSchema`, `buildWebApplicationSchema`, `buildDefinedTermSchema`, `buildBreadcrumbSchema`, `buildWebsiteSchema`, `buildHowToSchema`, `buildArticleSchema`, `buildEventSchema`, `buildJobPostingSchema`, `buildCollectionPageSchema`, `buildWebPageSchema`. Also exports `SITE_URL` (`https://www.myntmore.com`). Every address in schema uses the `www` host |
+| `schema.ts` | Structured-data (JSON-LD) builders: `organizationSchema`, `buildLocalBusinessSchema`, `buildFaqSchema`, `buildServiceSchema`, `buildCityServiceSchema` (city pages: a service in that city, never a local business), `buildWebApplicationSchema`, `buildDefinedTermSchema`, `buildBreadcrumbSchema`, `buildWebsiteSchema`, `buildHowToSchema`, `buildArticleSchema`, `buildEventSchema`, `buildJobPostingSchema`, `buildCollectionPageSchema`, `buildWebPageSchema`. Also exports `SITE_URL` (`https://www.myntmore.com`). Every address in schema uses the `www` host |
 | `entity-facts.json` | The company facts that must match everywhere (name, founding, address, contacts, proof points, the "never state" list) |
 | `colors.ts` | `GOLD_TEXT`, `TEXT_SHADES`, `textTone()` (A.2.1) |
 | `tools-registry.ts` | Name, URL and tagline for the 11 tools (`TOOLS_REGISTRY`) and which two or three tools each one points to (`RELATED_TOOLS`). Feeds the "Try this next" section only |
