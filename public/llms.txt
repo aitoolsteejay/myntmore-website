@@ -132,6 +132,16 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is CAN-SPAM and does it apply to cold email?](https://www.myntmore.com/resources/glossary/can-spam-act)
 - [What does "cold reply" mean in sales?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
 - [What is the difference between inbound and outbound marketing?](https://www.myntmore.com/resources/glossary/inbound-vs-outbound)
+- [What is buyer engagement in B2B sales?](https://www.myntmore.com/resources/glossary/buyer-engagement)
+- [What is a hot lead in B2B outbound?](https://www.myntmore.com/resources/glossary/hot-lead)
+- [What makes a good target account?](https://www.myntmore.com/resources/glossary/target-account-strategy)
+- [What is sales outreach, and how is it different from cold outreach?](https://www.myntmore.com/resources/glossary/sales-outreach)
+
+### Myntmore's own terms
+Frameworks Myntmore named and defines; these pages are their original source.
+- [What is the Total Conversional Market (TCM), and how is it different from TAM?](https://www.myntmore.com/resources/glossary/total-conversional-market)
+- [What is Signal-Heavy Structuring?](https://www.myntmore.com/resources/glossary/signal-heavy-structuring)
+- [What is the 3-Second Rule in outbound messaging?](https://www.myntmore.com/resources/glossary/3-second-rule)
 
 ### How-to and strategy
 - [How do I warm up a new domain for cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
@@ -177,6 +187,11 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is Vibe Prospecting in Claude and how do I set it up?](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting)
 - [Which Claude prompts help prepare for a sales call?](https://www.myntmore.com/resources/guides/claude-sales-call-prompts)
 - [Which Claude skills can a founder use for content and lead generation?](https://www.myntmore.com/resources/guides/claude-skills-guide)
+- [How can AI agents book meetings with US B2B buyers?](https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents)
+- [How do I generate B2B leads on LinkedIn without cold pitching?](https://www.myntmore.com/resources/guides/leads-on-autopilot-guide)
+- [What are the do's and don'ts of cold outreach?](https://www.myntmore.com/resources/guides/dos-and-donts-of-outreach)
+- [How do Bangalore SaaS companies get B2B leads?](https://www.myntmore.com/resources/blogs/how-bangalore-saas-companies-get-b2b-leads)
+- [How do I test whether my B2B homepage explains itself in five seconds?](https://www.myntmore.com/resources/blogs/5-second-hero-section-test)
 
 ### Free tools
 - [Free tool to score a LinkedIn post hook](https://www.myntmore.com/tools/linkedin-hook-grader)
@@ -189,6 +204,7 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [Free lead magnet ideas generator](https://www.myntmore.com/tools/lead-magnet-ideas)
 - [Free LinkedIn DM opening line generator](https://www.myntmore.com/tools/dm-angle-generator)
 - [Free tool to check a founder's LinkedIn presence](https://www.myntmore.com/tools/founder-presence-analyzer)
+- [Free tool to plan a LinkedIn posting rhythm](https://www.myntmore.com/tools/posting-rhythm-builder)
 
 ### Services and about Myntmore
 - [What is ICP mapping and lead scoring as a service?](https://www.myntmore.com/services/sales-intelligence)
@@ -214,6 +230,22 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [How do insurance brokers find corporate group insurance clients?](https://www.myntmore.com/lp/insurance)
 - [How can a startup founder reach the right investors?](https://www.myntmore.com/lp/fundraising)
 - [How can my agency resell lead generation under our own brand?](https://www.myntmore.com/lp/agency-partners)
+
+### Results by industry and market
+Case study collections. Client names are withheld under confidentiality agreements.
+- [What results has Myntmore produced for recruitment and staffing firms?](https://www.myntmore.com/case-studies/recruitment-staffing)
+- [What results has Myntmore produced for financial services firms?](https://www.myntmore.com/case-studies/financial-services)
+- [What results has Myntmore produced for insurance businesses?](https://www.myntmore.com/case-studies/insurance)
+- [What results has Myntmore produced for IT services companies and digital agencies?](https://www.myntmore.com/case-studies/agencies-it)
+- [What results has Myntmore produced for manufacturers and exporters?](https://www.myntmore.com/case-studies/manufacturers-exporters)
+- [What results has Myntmore produced for professional services firms?](https://www.myntmore.com/case-studies/professional-services)
+- [What results has Myntmore produced for eCommerce technology companies?](https://www.myntmore.com/case-studies/ecommerce-tech)
+- [What B2B outbound results has Myntmore had in the UAE?](https://www.myntmore.com/case-studies/markets/uae)
+- [What B2B outbound results has Myntmore had in the United States?](https://www.myntmore.com/case-studies/markets/united-states)
+- [What B2B outbound results has Myntmore had in the United Kingdom?](https://www.myntmore.com/case-studies/markets/united-kingdom)
+- [What B2B outbound results has Myntmore had in Singapore?](https://www.myntmore.com/case-studies/markets/singapore)
+- [What B2B outbound results has Myntmore had in France?](https://www.myntmore.com/case-studies/markets/france)
+- [What B2B outbound results has Myntmore had in India?](https://www.myntmore.com/case-studies/markets/india)
 
 ### Cities
 - [B2B lead generation agency in Delhi NCR](https://www.myntmore.com/b2b-lead-generation-delhi)

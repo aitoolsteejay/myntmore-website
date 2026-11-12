@@ -589,6 +589,42 @@ const PROMPTS = [
   ["quarterly", "how-to", "Which Claude prompts help prepare for a sales call?", "", "", "/resources/guides/claude-sales-call-prompts"],
   ["quarterly", "how-to", "Which Claude skills can a founder use for content and lead generation?", "", "", "/resources/guides/claude-skills-guide"],
   ["quarterly", "service", "What does a LinkedIn ghostwriting service for founders include?", "", "", "/services/personal-branding"],
+  // Pages in public/llms.txt that had no question yet, and buyer prompts copied from Search Console queries (12 Nov 2026).
+  // Glossary terms with search impressions
+  ["quarterly", "definition", "What is buyer engagement in B2B sales?", "", "", "/resources/glossary/buyer-engagement"],
+  ["quarterly", "definition", "What is a hot lead in B2B outbound?", "", "", "/resources/glossary/hot-lead"],
+  ["quarterly", "definition", "What makes a good target account?", "", "", "/resources/glossary/target-account-strategy"],
+  ["quarterly", "definition", "What is sales outreach, and how is it different from cold outreach?", "", "", "/resources/glossary/sales-outreach"],
+  // Myntmore's own terms: no other site can be the source, so a miss means the engine has not picked them up
+  ["quarterly", "definition", "What is the Total Conversional Market (TCM), and how is it different from TAM?", "", "", "/resources/glossary/total-conversional-market"],
+  ["quarterly", "definition", "What is Signal-Heavy Structuring?", "", "", "/resources/glossary/signal-heavy-structuring"],
+  ["quarterly", "definition", "What is the 3-Second Rule in outbound messaging?", "", "", "/resources/glossary/3-second-rule"],
+  // Results by industry and market
+  ["quarterly", "entity", "What results has Myntmore produced for recruitment and staffing firms?", "3", "", "/case-studies/recruitment-staffing"],
+  ["quarterly", "entity", "What results has Myntmore produced for financial services firms?", "", "", "/case-studies/financial-services"],
+  ["quarterly", "entity", "What results has Myntmore produced for insurance businesses?", "", "", "/case-studies/insurance"],
+  ["quarterly", "entity", "What results has Myntmore produced for IT services companies and digital agencies?", "1", "", "/case-studies/agencies-it"],
+  ["quarterly", "entity", "What results has Myntmore produced for manufacturers and exporters?", "11", "", "/case-studies/manufacturers-exporters"],
+  ["quarterly", "entity", "What results has Myntmore produced for professional services firms?", "25", "", "/case-studies/professional-services"],
+  ["quarterly", "entity", "What results has Myntmore produced for eCommerce technology companies?", "", "", "/case-studies/ecommerce-tech"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the UAE?", "", "", "/case-studies/markets/uae"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the United States?", "", "", "/case-studies/markets/united-states"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the United Kingdom?", "", "", "/case-studies/markets/united-kingdom"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in Singapore?", "", "", "/case-studies/markets/singapore"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in France?", "", "", "/case-studies/markets/france"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in India?", "", "", "/case-studies/markets/india"],
+  // Guides and a tool with no question
+  ["quarterly", "how-to", "How can AI agents book meetings with US B2B buyers?", "", "", "/resources/guides/80-us-meetings-ai-agents"],
+  ["quarterly", "how-to", "How do I generate B2B leads on LinkedIn without cold pitching?", "", "", "/resources/guides/leads-on-autopilot-guide"],
+  ["quarterly", "how-to", "What are the do's and don'ts of cold outreach?", "", "", "/resources/guides/dos-and-donts-of-outreach"],
+  ["quarterly", "how-to", "How do Bangalore SaaS companies get B2B leads?", "2", "Bengaluru", "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"],
+  ["quarterly", "how-to", "How do I test whether my B2B homepage explains itself in five seconds?", "", "", "/resources/blogs/5-second-hero-section-test"],
+  ["quarterly", "tool", "Free tool to plan a LinkedIn posting rhythm", "", "", "/tools/posting-rhythm-builder"],
+  // Tracking only (not in llms.txt): buyer prompts as people typed them into Google
+  ["quarterly", "best-of", "Which agencies excel at LinkedIn ghostwriting for fintech founders?", "7", "", "/services/personal-branding"],
+  ["quarterly", "best-of", "Which India-based lead generation agency offers global-standard quality at a lower cost?", "", "", "/resources/guides/how-to-choose-b2b-lead-generation-agency-india"],
+  ["quarterly", "how-to", "When should a Series A founder formalise their lead management process?", "2", "", "/resources/blogs/founder-led-sales-before-scaling"],
+  ["quarterly", "comparison", "What beats manual LinkedIn outbound for high-volume hiring?", "", "", "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting"],
 ];
 
 // ── Build rows ────────────────────────────────────────────────────────────
