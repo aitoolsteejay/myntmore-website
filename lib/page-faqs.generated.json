@@ -225,6 +225,14 @@
   ],
   "city-kolkata": [
     {
+      "question": "Do you offer healthcare lead generation services in Kolkata?",
+      "answer": "Yes, for B2B sellers. If you sell medical devices, diagnostics, healthcare software or pharma products, we run outreach to procurement heads at hospital groups, lab and operations heads at diagnostic chains, distributors and hospital administrators. We do not run patient lead generation for hospitals or clinics."
+    },
+    {
+      "question": "Do you generate patient leads for hospitals in Kolkata?",
+      "answer": "No. Myntmore runs B2B lead generation: we help companies that sell to hospitals, diagnostic chains and pharma distributors reach procurement and clinical decision-makers. Patient acquisition for hospitals and clinics needs local search, ads and booking systems, which a healthcare marketing agency is better placed to run."
+    },
+    {
       "question": "Do we need to be based in Kolkata to work with you?",
       "answer": "No. The entire engagement runs remotely, so it doesn't matter where in West Bengal, or beyond, your team is based."
     },
@@ -241,16 +249,12 @@
       "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
     },
     {
-      "question": "Do you generate patient leads for hospitals in Kolkata?",
-      "answer": "No. Myntmore runs B2B lead generation: we help companies that sell to hospitals, diagnostic chains and pharma distributors reach procurement and clinical decision-makers. Patient acquisition for hospitals and clinics needs local search, ads and booking systems, which a healthcare marketing agency is better placed to run."
-    },
-    {
       "question": "Which Kolkata industries do you have the most experience with?",
-      "answer": "Trading and manufacturing houses, steel and engineering firms, and growing IT/ITES companies are where we've run the most campaigns, but our system adapts to any B2B ICP."
+      "answer": "The page is built for four groups: companies that supply hospitals, diagnostic chains and distributors; engineering, steel and trading houses; IT and ITES firms; and financial services. The system adapts to any B2B ICP, so if you sell to other businesses from Kolkata, it applies."
     },
     {
       "question": "What channels do you actually use to generate leads?",
-      "answer": "Primarily cold email and LinkedIn outreach aimed at trading, manufacturing, and financial-services buyers, layered with account-based marketing for named target accounts, and AI-assisted list building and personalisation underneath all three. We pick the mix based on where your buyers actually spend their attention."
+      "answer": "Primarily cold email and LinkedIn outreach aimed at business buyers in healthcare supply, manufacturing, trading and financial services, layered with account-based marketing for named target accounts, and AI-assisted list building and personalisation underneath all three. We pick the mix based on where your buyers actually spend their attention."
     },
     {
       "question": "How is this different from hiring an in-house SDR?",
