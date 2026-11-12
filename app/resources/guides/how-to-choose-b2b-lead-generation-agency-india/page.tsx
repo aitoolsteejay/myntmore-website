@@ -11,6 +11,7 @@ import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-b2b-lead-generation-agency-india`;
 const TITLE = "How to Choose a B2B Lead Generation Agency in India";
@@ -22,7 +23,7 @@ const AI_RESOURCES = [
   `${SITE_URL}/resources/blogs/b2b-outbound-benchmark-report-2026`,
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/how-to-choose-b2b-lead-generation-agency-india", {
   title: "Choosing a B2B Lead Generation Agency in India",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: TITLE,

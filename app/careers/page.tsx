@@ -3,6 +3,7 @@ import CareersClient from "./CareersClient";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const CAREERS_SCHEMA = [
   buildBreadcrumbSchema([
@@ -16,7 +17,7 @@ const CAREERS_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers", {
   title: { absolute: "Careers at Myntmore | B2B Sales & Growth Jobs" },
   description: "Join the team that builds pipelines, not decks. Open roles in sales, lead gen, and GTM strategy at Myntmore. See open roles and apply today.",
   keywords: ["myntmore careers", "b2b sales jobs mumbai", "growth marketing jobs mumbai", "lead generation jobs mumbai", "gtm jobs mumbai", "hr internship mumbai", "sales jobs bkc mumbai", "b2b agency jobs mumbai", "linkedin marketing jobs india", "cold email jobs mumbai", "startup jobs mumbai", "marketing internship mumbai", "sales head jobs mumbai", "b2b growth agency careers"],
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function CareersPage() {
   return (

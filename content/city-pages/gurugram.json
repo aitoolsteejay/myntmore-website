@@ -26,6 +26,22 @@
   "ogDescription": "Outbound lead generation for Gurugram's SaaS, fintech, IT services and staffing firms: cold email, LinkedIn outreach and ABM.",
   "breadcrumbLabel": "Gurugram",
   "badge": "Gurugram (Gurgaon)",
+  "emoji": "🏙️",
+  "floatingIcons": [
+    "🏙️",
+    "💳",
+    "☁️",
+    "🧑‍💼"
+  ],
+  "hubs": [
+    "Cyber City",
+    "Golf Course Road",
+    "Udyog Vihar",
+    "Sohna Road",
+    "MG Road",
+    "Golf Course Extension",
+    "Manesar"
+  ],
   "h1": "B2B Lead Generation Company in Gurugram (Gurgaon)",
   "intro": "Looking for a lead generation company in Gurgaon? Myntmore runs cold email, LinkedIn outreach and ABM for Gurugram's SaaS and fintech startups, IT services firms and staffing companies. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -33,14 +49,17 @@
   "whyTitle": "Why Gurugram businesses need this",
   "why": [
     {
+      "icon": "🏙️",
       "title": "Your buyers sit a few towers away, and are still hard to reach",
       "desc": "Cyber City, Golf Course Road and Udyog Vihar hold a large share of India's multinational headquarters and global capability centres. Being near them does not get you a meeting: their buying committees sit behind procurement and admin layers that referrals rarely get through."
     },
     {
+      "icon": "🚀",
       "title": "Funded startups with a pipeline target and no outbound engine",
       "desc": "Gurugram's SaaS and fintech startups usually grow first on founder networks and inbound. Once there is a pipeline number to hit each quarter, that is not enough, and hiring and ramping an SDR team here is slow and expensive."
     },
     {
+      "icon": "🧑‍💼",
       "title": "Staffing and services firms competing for the same clients",
       "desc": "Gurugram is one of India's densest markets for recruitment, staffing and consulting firms. When every competitor is messaging the same HR heads, generic outreach gets ignored. Timing it to hiring and expansion signals is what gets a reply."
     }
@@ -122,14 +141,17 @@
   "segmentsIntro": "Our lead generation services in Gurgaon are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💳",
       "title": "SaaS and fintech startups",
       "desc": "Funded product companies that need demos with mid-market and enterprise accounts, in India and in the US and UK, beyond what inbound and the founders' network bring in."
     },
     {
+      "icon": "💻",
       "title": "IT services and capability centre providers",
       "desc": "Firms selling engineering, managed services or support to enterprises and global capability centres, where the buyer is a CTO or delivery head who ignores generic pitches."
     },
     {
+      "icon": "🧑‍💼",
       "title": "Recruitment, staffing and consulting",
       "desc": "Firms whose new business depends on referrals, and who need conversations with HR heads, founders and finance leaders at companies that are hiring or expanding."
     }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import BookACallClient from "./BookACallClient";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/book-a-call", {
   title: "Book a Strategy Call | Free B2B Growth Audit",
   description: "Book a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team: your ICP, messaging and outbound systems. No pitch.",
   robots: { index: false, follow: true },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     "book a discovery call",
     "outbound audit call",
   ],
-};
+});
 
 export default function BookACallPage() {
   return <BookACallClient />;

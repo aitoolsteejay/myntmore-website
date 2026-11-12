@@ -117,18 +117,18 @@ export default function CaseStudyGeneratorClient() {
                 style={{ background: "rgba(234,88,12,0.07)", borderColor: "rgba(234,88,12,0.35)" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} aria-hidden="true" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Case Study & Proposal Generator</span>
+                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Free AI Writing Tool</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
                 <span className="relative inline-block">
-                  Never Face The Blank Page Again
+                  AI Case Study & Proposal Generator
                   <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                     <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>
               </h1>
               <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-                Turn a finished project into a case study, or a prospect conversation into a proposal draft. No invented numbers, no generic filler.
+                Never face the blank page again. Turn a finished project into a B2B case study, or a prospect conversation into a proposal draft. No invented numbers, no generic filler.
               </p>
             </header>
             <LeadGate

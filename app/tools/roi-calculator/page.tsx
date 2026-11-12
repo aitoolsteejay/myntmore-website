@@ -5,19 +5,19 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import RoiCalculatorSwitcher from "./RoiCalculatorSwitcher";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
-  title: "B2B Outreach ROI Calculator",
-  description: "Free ROI calculator for B2B outbound. Estimate the pipeline and revenue you could generate from cold email and LinkedIn outreach.",
+export const metadata: Metadata = withPageSeo("/tools/roi-calculator", {
+  title: "LinkedIn Outreach ROI Calculator (Free)",
+  description: "Free LinkedIn outreach ROI calculator: enter connection requests, acceptance, reply and close rates to see meetings, pipeline and revenue. Cold email too.",
   keywords: [
+    "linkedin outreach roi calculator",
     "roi calculator for cold outreach",
     "b2b outbound roi calculator",
-    "linkedin outreach roi calculator",
     "free roi calculator",
     "sales pipeline calculator",
     "how to calculate lead generation roi",
     "outbound sales revenue calculator",
-    "cold email revenue calculator",
     "b2b lead generation roi tool",
     "meetings booked calculator",
     "sales funnel calculator free",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/roi-calculator" },
   ...buildToolSocialMetadata("B2B Outreach ROI Calculator", "Free ROI calculator for B2B outbound. Estimate the pipeline and revenue you could generate from cold email and LinkedIn outreach.", "/tools/roi-calculator"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "ROI Calculator",

@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/content-marketing-strategist-intern", {
   title: "Content Marketing Intern, Mumbai | Rs 7-15K/mo",
   description: "Join Myntmore as Content Marketing Strategist Intern in BKC, Mumbai. Write viral LinkedIn content for founders & CXOs. 1-year min, PPO. Apply now.",
   keywords: ["content strategist internship mumbai", "linkedin ghostwriting internship", "content writing internship mumbai", "personal branding internship", "linkedin content internship india", "content marketing internship mumbai", "founder ghostwriter internship", "content strategist jobs mumbai", "linkedin content writer internship", "storytelling internship mumbai", "b2b content internship", "content writing internship with ppo", "myntmore careers", "content strategist internship jobs"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/content-marketing-strategist-intern",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for Content Marketing Strategist Intern";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;

@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"“We help companies grow” describes an industry, not a value proposition; it could be the first line of almost any B2B company's homepage. A real one names the buyer, the specific problem, and the specific outcome, which is also what makes an outbound message land as relevant instead of generic. It's the written form of the same idea behind an aha moment."}
       sourceLabel={"Read the related term: Aha Moment"}
       sourceHref={"/resources/glossary/aha-moment"}
+      furtherLabel={"See the service: GTM Strategy"}
+      furtherHref={"/services/gtm-strategy"}
       articleSchema={TERM_SCHEMA}
     />
   );

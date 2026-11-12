@@ -34,6 +34,23 @@
   "ogDescription": "Outbound lead generation for Delhi NCR's IT, SaaS, export and staffing firms in Delhi, Gurugram and Noida.",
   "breadcrumbLabel": "Delhi",
   "badge": "Delhi NCR",
+  "emoji": "🏛️",
+  "floatingIcons": [
+    "🏛️",
+    "📦",
+    "💼",
+    "🛺"
+  ],
+  "hubs": [
+    "Connaught Place",
+    "Nehru Place",
+    "Okhla",
+    "Aerocity",
+    "Saket",
+    "Jasola",
+    "Gurugram",
+    "Noida"
+  ],
   "h1": "B2B Lead Generation Agency in Delhi NCR",
   "intro": "Myntmore is a B2B lead generation company for Delhi NCR: IT services and SaaS teams in Gurugram and Noida, exporters and manufacturers, and staffing and professional services firms. Our lead generation services in Delhi run on cold email, LinkedIn outreach and ABM that get you past the gatekeepers and into real conversations.",
   "primaryCta": "Book a Free GTM Audit",
@@ -41,14 +58,17 @@
   "whyTitle": "Why Delhi NCR businesses need this",
   "why": [
     {
+      "icon": "🌍",
       "title": "Enterprise and export teams across Gurugram, Noida, and Delhi",
       "desc": "From Cyber City and Golf Course Road in Gurugram to Sector 62 in Noida and Okhla Industrial Area, Delhi NCR is home to India's largest corporate headquarters and export houses. Growth stalls when teams rely solely on founder networks instead of a predictable cold outbound pipeline."
     },
     {
+      "icon": "🛍️",
       "title": "D2C and retail brands scaling B2B distribution",
       "desc": "Fast-growing consumer brands across NCR often master D2C acquisition but lack an automated B2B outbound engine for wholesale, institutional retail partnerships, and corporate gifting deals."
     },
     {
+      "icon": "🏢",
       "title": "Enterprise buyers behind layers of gatekeepers",
       "desc": "Corporate buying committees across Connaught Place, Aerocity, and Gurugram have heavy administrative gatekeepers. Getting through requires multi-touch email and LinkedIn outreach built around timing signals, not brute-force cold calls."
     }
@@ -130,14 +150,17 @@
   "segmentsIntro": "Our lead generation services in Delhi NCR are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💻",
       "title": "IT services and SaaS in Gurugram and Noida",
       "desc": "Product engineering firms and software companies selling to enterprises and funded startups in India, the US and the UK, where buyers ignore generic pitches."
     },
     {
+      "icon": "⚙️",
       "title": "Exporters and manufacturers across NCR",
       "desc": "Export houses and industrial companies from Okhla to Manesar that have grown through trade fairs and existing buyers, and need overseas procurement teams to hear from them between shows."
     },
     {
+      "icon": "🧑‍💼",
       "title": "Recruitment, staffing and professional services",
       "desc": "Firms whose new business depends on partner networks and referrals, and who need conversations with hiring managers, founders and finance heads beyond them."
     }

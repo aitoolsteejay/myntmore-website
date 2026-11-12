@@ -126,14 +126,14 @@ export default function ICPBuilderClient() {
             </div>
             <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
               <span className="relative inline-block">
-                Build Your ICP & Value Prop
+                Ideal Customer Profile Generator
                 <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                   <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#F97316" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
             <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-              Describe your business, build deep customer profiles, and get a value proposition for each one.
+              Build your ICP and value prop in one go: describe your business, get deep customer profiles, and a value proposition for each one.
             </p>
           </header>
 
@@ -166,14 +166,14 @@ export default function ICPBuilderClient() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
             <span className="relative inline-block">
-              Build Your ICP & Value Prop
+              Ideal Customer Profile Generator
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#F97316" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-gray-700 text-sm md:text-base mb-8 max-w-xl mx-auto font-medium">
-            Describe your business, build deep customer profiles, and get a value proposition for each one.
+            Build your ICP and value prop in one go: describe your business, get deep customer profiles, and a value proposition for each one.
           </p>
 
           {/* Step indicator */}

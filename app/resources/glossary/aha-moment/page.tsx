@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"It doesn't happen by accident. It comes from referencing a specific, recognizable pain point rather than a generic benefit, so the prospect feels described rather than sold to. This is the same logic behind building content around a concrete, usable asset instead of branding copy."}
       sourceLabel={"Read the related term: Signal-Heavy Structuring"}
       sourceHref={"/resources/glossary/signal-heavy-structuring"}
+      furtherLabel={"See the service: GTM Strategy"}
+      furtherHref={"/services/gtm-strategy"}
       articleSchema={TERM_SCHEMA}
     />
   );

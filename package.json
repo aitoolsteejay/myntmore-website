@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-case-study-long-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
+    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-page-seo.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-case-study-long-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
     "faqs:build": "node scripts/generate-faq-content.mjs",
     "faqs:check": "node scripts/generate-faq-content.mjs --check",
+    "page-seo:build": "node scripts/generate-page-seo.mjs",
+    "page-seo:check": "node scripts/generate-page-seo.mjs --check",
     "sitemap:dates": "node scripts/generate-sitemap-dates.mjs",
     "sitemap:check": "node scripts/generate-sitemap-dates.mjs --check",
     "indexnow": "node scripts/indexnow.mjs",

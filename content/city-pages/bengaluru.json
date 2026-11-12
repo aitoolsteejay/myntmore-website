@@ -36,6 +36,23 @@
   "ogDescription": "Outbound lead generation built for Bangalore's B2B SaaS companies: cold email, LinkedIn and ABM that book demos in India and abroad.",
   "breadcrumbLabel": "Bengaluru",
   "badge": "Bengaluru (Bangalore) · B2B SaaS",
+  "emoji": "💻",
+  "floatingIcons": [
+    "💻",
+    "🚀",
+    "🌳",
+    "☕"
+  ],
+  "hubs": [
+    "Koramangala",
+    "HSR Layout",
+    "Indiranagar",
+    "Whitefield",
+    "Outer Ring Road",
+    "Bellandur",
+    "Manyata Tech Park",
+    "Electronic City"
+  ],
   "h1": "Lead Generation Company in Bangalore for B2B SaaS",
   "intro": "Comparing lead generation companies in Bangalore? Myntmore is a B2B lead generation company built around how SaaS sells: cold email, LinkedIn outreach and ABM that book demos with the right accounts, in India and in the US and UK. Bengaluru (Bangalore) is India's SaaS capital, so your buyers have already seen every generic SDR template.",
   "primaryCta": "Book a Free GTM Audit",
@@ -43,14 +60,17 @@
   "whyTitle": "Why Bangalore SaaS companies need outbound",
   "why": [
     {
+      "icon": "🤝",
       "title": "Inbound and founder networks plateau",
       "desc": "Most Bengaluru SaaS teams across Koramangala, HSR Layout, Indiranagar and Whitefield grow first on inbound, product-led signups and the founders' own network. That flattens out, and there is rarely a structured outbound system behind it to fill the top of the funnel."
     },
     {
+      "icon": "🎯",
       "title": "The most pitched tech buyers in India",
       "desc": "Engineering heads and tech buyers in Bengaluru get pitched constantly and filter out generic SDR templates immediately. Cutting through takes signal-based targeting built around verified tech stack, funding and hiring triggers."
     },
     {
+      "icon": "🌍",
       "title": "Selling SaaS from Bengaluru into the US and UK",
       "desc": "Fast-growing SaaS teams often expand into US, UK and European markets where no one has heard of them, without an outbound engine built to reach enterprise decision-makers abroad."
     }
@@ -132,14 +152,17 @@
   "segmentsIntro": "Our lead generation services in Bangalore are built first for SaaS companies, and for the tech firms that sell alongside them, at home or overseas.",
   "segments": [
     {
+      "icon": "💻",
       "title": "B2B SaaS, Series A to C",
       "desc": "SaaS teams that need pipeline beyond inbound and founder networks, often into US and UK markets where buyers have never heard of them."
     },
     {
+      "icon": "🤖",
       "title": "Fintech, AI and deep tech",
       "desc": "Longer, more technical sales where outreach has to show you understand the buyer's stack, regulation or use case before asking for a demo."
     },
     {
+      "icon": "🛠️",
       "title": "IT services and product engineering",
       "desc": "Firms selling to global capability centres, enterprises and funded startups, where the buyer is a CTO or engineering head who ignores generic pitches."
     }

@@ -22,7 +22,9 @@ export interface LibraryCase {
   challenge: string;
   solution: string[];
   results: string[];
-  // Derived by scripts/generate-case-study-content.mjs from the fields above.
+  // Optional search title set in the admin; empty means "<segment> Case Study".
+  metaTitle?: string;
+  // Set in the admin, or derived by scripts/generate-case-study-content.mjs from the fields above.
   metaDescription: string;
   keywords: string[];
 }
@@ -119,5 +121,5 @@ export function libraryCards() {
 
 // What the generated page's <title> and description say. Kept here so the generator
 // script and any check use one definition.
-export const libraryMetaTitle = (c: LibraryCase) => `${c.segment} Case Study`;
+export const libraryMetaTitle = (c: LibraryCase) => c.metaTitle || `${c.segment} Case Study`;
 export const libraryMetaDescription = (c: LibraryCase) => c.metaDescription;

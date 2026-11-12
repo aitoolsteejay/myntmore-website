@@ -5,11 +5,12 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import HookGraderClient from "./HookGraderClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-const DESCRIPTION = "Free LinkedIn hook grader. Paste the first two lines of your post, get a transparent score out of 100 and three rewritten hooks to choose from.";
+const DESCRIPTION = "Free LinkedIn hook grader and generator: paste your post's first two lines, get a score out of 100 and three rewritten hooks graded by the same rules.";
 
-export const metadata: Metadata = {
-  title: "LinkedIn Hook Grader",
+export const metadata: Metadata = withPageSeo("/tools/linkedin-hook-grader", {
+  title: "Free LinkedIn Hook Grader & Generator",
   description: DESCRIPTION,
   keywords: [
     "linkedin hook grader",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/linkedin-hook-grader" },
   ...buildToolSocialMetadata("LinkedIn Hook Grader", DESCRIPTION, "/tools/linkedin-hook-grader"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "LinkedIn Hook Grader",

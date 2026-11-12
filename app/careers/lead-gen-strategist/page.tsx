@@ -6,8 +6,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/lead-gen-strategist", {
   title: "B2B Lead Gen Strategist, Mumbai | Rs 4-7 LPA",
   description: "Join Myntmore as B2B Lead Gen Strategist in BKC, Mumbai. Build outbound systems via LinkedIn, cold email & AI. Rs 4-7 LPA. Apply now.",
   keywords: ["lead generation strategist jobs mumbai", "b2b lead generation jobs", "lead gen jobs bkc mumbai", "linkedin outreach jobs mumbai", "cold email jobs mumbai", "b2b marketing jobs mumbai", "sales development jobs mumbai", "lead generation executive jobs", "b2b growth jobs india", "outbound marketing jobs mumbai", "entry level lead generation jobs", "growth marketing jobs bkc", "myntmore careers", "b2b lead gen strategist job openings"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/lead-gen-strategist",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for B2B Lead Generation Strategist";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;

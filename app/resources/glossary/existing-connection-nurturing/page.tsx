@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"Most connections on LinkedIn or in an old contact list go completely dormant, which wastes a relationship that took no cold-outreach effort to build in the first place. A short comment on a recent post or a no-ask check-in every few months keeps the relationship live enough that a real outreach message later doesn't feel like it's coming out of nowhere."}
       sourceLabel={"Read: LinkedIn Outreach Sequences That Actually Get Replies"}
       sourceHref={"/resources/blogs/linkedin-outreach-sequences"}
+      furtherLabel={"See the service: LinkedIn Outreach & Automation"}
+      furtherHref={"/services/linkedin-outreach"}
       articleSchema={TERM_SCHEMA}
     />
   );

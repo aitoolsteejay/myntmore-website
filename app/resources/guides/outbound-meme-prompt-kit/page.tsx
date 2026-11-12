@@ -11,6 +11,7 @@ import Underline from "../how-to-set-up-vibe-prospecting/Underline";
 import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/outbound-meme-prompt-kit";
 const ACCENT = "#EA580C";
@@ -18,7 +19,7 @@ const TITLE = "The Outbound Meme Prompt Kit (Free)";
 const DESCRIPTION =
   "Four copy-paste AI image prompts that turn cold outreach pain into memes people share: graveyard, reject and approve, astronaut and conspiracy board.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/outbound-meme-prompt-kit", {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: "The Outbound Meme Prompt Kit",

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import EventPopup from "./components/EventPopup";
 import { OG_BASE } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/", {
   // Names Mumbai because GSC shows this page ranking top-3 for ~15
   // "lead generation / b2b marketing agency in mumbai" queries with
   // near-zero clicks under the previous location-less title.
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "msvalidate.01": "8CD18A1DDCF953EACEF706A12D7B62F4",
     },
   },
-};
+});
 import Hero from "./components/Hero";
 import LogoStrip from "./components/LogoStrip";
 import WhoWeHelp from "./components/WhoWeHelp";
@@ -58,6 +58,7 @@ import Footer from "./components/Footer";
 import JsonLd from "./components/JsonLd";
 import { buildFaqSchema, buildWebsiteSchema, buildLocalBusinessSchema } from "@/lib/schema";
 import { FAQ_ITEMS } from "@/lib/faq-data";
+import { withPageSeo } from "@/lib/page-seo";
 
 const HOME_AI_RESOURCES = [
   "https://www.myntmore.com",

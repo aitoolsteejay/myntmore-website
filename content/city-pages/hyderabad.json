@@ -32,6 +32,22 @@
   "ogDescription": "Outbound lead generation for Hyderabad's IT, pharma and biotech companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Hyderabad",
   "badge": "Hyderabad",
+  "emoji": "💊",
+  "floatingIcons": [
+    "💊",
+    "🧬",
+    "💻",
+    "🕌"
+  ],
+  "hubs": [
+    "HITEC City",
+    "Gachibowli",
+    "Financial District",
+    "Madhapur",
+    "Kondapur",
+    "Genome Valley",
+    "Jeedimetla"
+  ],
   "h1": "B2B Lead Generation Company in Hyderabad",
   "intro": "Myntmore is a B2B lead generation company for Hyderabad's pharma, biotech and IT firms. Our lead generation services in Hyderabad cover cold email, LinkedIn outreach and ABM, built for long, technical sales cycles and live within 18 days.",
   "primaryCta": "Book a Free GTM Audit",
@@ -39,14 +55,17 @@
   "whyTitle": "Why Hyderabad businesses need this",
   "why": [
     {
+      "icon": "💊",
       "title": "Pharma and biotech sales cycles that need consistency",
       "desc": "Hyderabad's pharmaceutical and biotech companies, based around its Genome Valley cluster, sell into long, compliance-heavy, technical buying processes. Getting in front of the right procurement and R&D contacts takes sustained, multi-touch outreach, not a single email blast."
     },
     {
+      "icon": "💻",
       "title": "IT and SaaS teams across HITEC City, Madhapur, and Gachibowli",
       "desc": "Hyderabad's enterprise tech and SaaS corridor across HITEC City, Madhapur, and Gachibowli competes globally for enterprise deals and GCC mandates. Generic SDR templates get lost immediately; winning qualified pipeline requires signal-led, multi-channel outreach built around verified buyer context."
     },
     {
+      "icon": "🚀",
       "title": "Growth-stage founders still running outbound manually",
       "desc": "Many of Hyderabad's fastest-growing venture-backed startups and IT services companies have no full-time outbound system. Prospecting happens in sporadic bursts on the founder's calendar, creating unpredictable revenue cycles."
     }
@@ -128,14 +147,17 @@
   "segmentsIntro": "Our lead generation services in Hyderabad are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💊",
       "title": "Pharma, API and biotech",
       "desc": "API makers, formulation and contract manufacturers, and biotech firms selling to procurement, sourcing and R&D teams in India and export markets."
     },
     {
+      "icon": "🔬",
       "title": "Clinical research and life-sciences services",
       "desc": "CROs, labs and life-sciences service providers reaching sponsors and pharma decision-makers who rarely respond to generic outreach."
     },
     {
+      "icon": "💻",
       "title": "IT services and SaaS",
       "desc": "IT services, product engineering and SaaS companies selling to enterprises, global capability centres and international buyers."
     }

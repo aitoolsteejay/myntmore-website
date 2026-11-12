@@ -7,6 +7,7 @@ import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/li
 import { EVENTS, isUpcoming, type EventItem } from "@/lib/events-data";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -28,7 +29,7 @@ const EVENTS_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/events", {
   title: "B2B Outbound Events & Webinars",
   description: "Live sessions on cold email, LinkedIn outreach, and B2B pipeline building from the team that has booked 12K+ meetings and generated $120M+ in pipeline.",
   alternates: { canonical: "https://www.myntmore.com/events" },
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/events",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 // "Upcoming" depends on the current time, so the page is re-rendered at most hourly: without this
 // an event would stay in the upcoming grid after it ended, until the next deploy.

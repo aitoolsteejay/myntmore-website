@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import MyntmoreFrameworkClient from "./MyntmoreFrameworkClient";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/myntmore-framework", {
   title: { absolute: "The Myntmore Framework: How Our B2B Outbound Works" },
   description: "How a Myntmore campaign runs: ICP targeting, personalized connection notes, paced sending and timely follow-ups. See the full framework.",
   keywords: ["linkedin outreach automation framework", "b2b outbound automation", "linkedin automation without bans", "personalized connection request automation", "myntmore framework"],
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/myntmore-framework",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function MyntmoreFrameworkPage() {
   return <MyntmoreFrameworkClient />;

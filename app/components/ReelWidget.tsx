@@ -18,9 +18,11 @@ const SESSION_KEY = "myntmore:reel-offered";
 // the internal audit page and the framework page, whose full-width workflow
 // diagram the reel would cover. Also the private pricing pages (plans and the
 // cold emailing package), where on a phone the reel sits over the price and
-// plan details prospects came to read. Matching is per path segment, so the
-// two cold emailing pages are listed by their full slugs.
+// plan details prospects came to read. And the Keystatic content admin, where
+// it would sit over the Save button and the editing fields. Matching is per
+// path segment, so the two cold emailing pages are listed by their full slugs.
 const EXCLUDED_PREFIXES = [
+  "/keystatic",
   "/menti",
   "/feedback",
   "/workshop",

@@ -275,6 +275,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/b2b-lead-generation-chennai`, lastModified: lastMod("/b2b-lead-generation-chennai"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-kolkata`, lastModified: lastMod("/b2b-lead-generation-kolkata"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-ahmedabad`, lastModified: lastMod("/b2b-lead-generation-ahmedabad"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-jaipur`, lastModified: lastMod("/b2b-lead-generation-jaipur"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-indore`, lastModified: lastMod("/b2b-lead-generation-indore"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-surat`, lastModified: lastMod("/b2b-lead-generation-surat"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-coimbatore`, lastModified: lastMod("/b2b-lead-generation-coimbatore"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-dubai`, lastModified: lastMod("/b2b-lead-generation-dubai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-abu-dhabi`, lastModified: lastMod("/b2b-lead-generation-abu-dhabi"), changeFrequency: "monthly", priority: 0.6 },
     // SEO recovery pages
     { url: `${base}/marketing-automation`, lastModified: lastMod("/marketing-automation"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/seo`, lastModified: lastMod("/seo"), changeFrequency: "monthly", priority: 0.7 },

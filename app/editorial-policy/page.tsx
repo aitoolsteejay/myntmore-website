@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildWebPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/editorial-policy`;
 const WEBPAGE_SCHEMA = buildWebPageSchema({
@@ -17,7 +18,7 @@ const WEBPAGE_SCHEMA = buildWebPageSchema({
   ],
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/editorial-policy", {
   title: "Editorial Policy & Methodology",
   description: "How Myntmore sources numbers, describes its case studies, handles AI tool data and corrects errors across its guides, benchmarks and tools.",
   alternates: { canonical: PAGE_URL },
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     "myntmore corrections policy",
     "myntmore case studies confidentiality",
   ],
-};
+});
 
 interface Section {
   heading: string;

@@ -46,12 +46,12 @@ Added to this doc's tracked scope 2026-09-03 (previously only Services/Tools/Blo
 | `/tools/battle-card-generator` | competitor battle card generator |
 | `/tools/case-study-generator` | free case study generator |
 | `/tools/dm-angle-generator` | dm angle generator |
-| `/tools/founder-presence-analyzer` | founder presence analyzer |
-| `/tools/icp-builder` | icp builder tool |
+| `/tools/founder-presence-analyzer` | linkedin competitor analysis tool |
+| `/tools/icp-builder` | ideal customer profile generator |
 | `/tools/lead-magnet-ideas` | lead magnet idea generator |
 | `/tools/linkedin-optimizer` | linkedin profile optimizer |
-| `/tools/posting-rhythm-builder` | linkedin posting rhythm builder |
-| `/tools/roi-calculator` | roi calculator for cold outreach |
+| `/tools/posting-rhythm-builder` | linkedin posting schedule planner |
+| `/tools/roi-calculator` | linkedin outreach roi calculator |
 
 ## Blog (Informational)  -  30 pages
 

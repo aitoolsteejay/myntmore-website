@@ -38,16 +38,16 @@ export function LandingPage({ onStart }: LandingPageProps) {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            Stop Guessing{" "}
+            Ideal Customer{" "}
             <span className="relative inline-block">
-              Who Your Customer Is
+              Profile Generator
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Describe your business in plain English. Get deep, structured customer profiles and a value proposition for each one, built specifically for your offer, not a generic template.
+            Stop guessing who your customer is. Describe your business in plain English and get deep, structured customer profiles and a value proposition for each one, built specifically for your offer, not a generic template.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Build My ICP Now

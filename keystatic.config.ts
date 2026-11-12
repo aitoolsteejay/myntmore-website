@@ -53,6 +53,34 @@ const githubRepo = process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO as `${string}/$
 export default config({
   storage: githubRepo ? { kind: "github", repo: githubRepo } : { kind: "local" },
   collections: {
+    pageSeo: collection({
+      label: "Page search titles",
+      path: "content/page-seo/*",
+      format: "json",
+      slugField: "path",
+      columns: ["title"],
+      schema: {
+        path: fields.slug({
+          name: {
+            label: "Page address",
+            description: "The page this applies to, e.g. /about-us (the homepage is /). Do not change it: a developer connects each address to its page once, and the build warns about pages that have no entry.",
+            validation: { isRequired: true },
+          },
+        }),
+        title: fields.text({
+          label: "Search title",
+          description: "The title Google shows, exactly as typed, including \" | Myntmore\". Aim for 60 characters or fewer; Google cuts longer titles.",
+          validation: { isRequired: true, length: { max: 70 } },
+        }),
+        description: fields.text({
+          label: "Search description",
+          description: "The snippet under the title in Google. 120 to 155 characters works best.",
+          multiline: true,
+          validation: { isRequired: true, length: { max: 170 } },
+        }),
+      },
+    }),
+
     homepageFaqs: collection({
       label: "Homepage FAQs",
       path: "content/faqs/homepage/*",
@@ -152,7 +180,16 @@ export default config({
 
         breadcrumbLabel: fields.text({ label: "Breadcrumb label", validation: { isRequired: true } }),
         badge: fields.text({ label: "Hero badge", description: "The small pill above the headline.", validation: { isRequired: true } }),
-        h1Line1: fields.text({ label: "Headline, line 1", validation: { isRequired: true } }),
+        badgeEffect: fields.select({
+          label: "Hero badge effect",
+          description: "Radar adds an animated ping ring around the badge.",
+          options: [
+            { label: "Plain badge", value: "" },
+            { label: "Radar ping", value: "radar" },
+          ],
+          defaultValue: "",
+        }),
+        h1Line1: fields.text({ label: "Headline, line 1 (optional)", description: "Leave empty for a one-line headline." }),
         h1Before: fields.text({ label: "Headline, line 2: text before the underlined words (optional)" }),
         h1Underlined: fields.text({ label: "Headline, line 2: underlined words", validation: { isRequired: true } }),
         h1After: fields.text({ label: "Headline, line 2: text after the underlined words", validation: { isRequired: true } }),
@@ -273,8 +310,8 @@ export default config({
           }),
           { label: "Case-study cards (exactly 3; used when the results style is Case-study cards)", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.tag.value }
         ),
-        trackEyebrow: fields.text({ label: "Track record label (small text above the heading)", validation: { isRequired: true } }),
-        trackTitle: fields.text({ label: "Track record heading", validation: { isRequired: true } }),
+        trackEyebrow: fields.text({ label: "Track record label (small text above the heading)", description: "Leave empty when the results section style is None." }),
+        trackTitle: fields.text({ label: "Track record heading", description: "Leave empty when the results section style is None." }),
         trackLinkText: fields.text({ label: "Link under the track record cards: text (optional)" }),
         trackLinkHref: fields.text({ label: "Link under the track record cards: address (optional)" }),
         track: fields.array(
@@ -286,8 +323,8 @@ export default config({
             label: fields.text({ label: "Caption", validation: { isRequired: true } }),
           }),
           {
-            label: "Track record numbers (exactly 4; keep them in step with lib/entity-facts.json)",
-            validation: { length: { min: 4, max: 4 } },
+            label: "Track record numbers (exactly 4 when the results style is Four counters, otherwise empty; keep them in step with lib/entity-facts.json)",
+            validation: { length: { max: 4 } },
             itemLabel: (props) => props.fields.label.value,
           }
         ),
@@ -428,14 +465,18 @@ export default config({
         ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
         ogDescription: fields.text({ label: "Share description", multiline: true, validation: { isRequired: true } }),
         breadcrumbLabel: fields.text({ label: "Breadcrumb label", validation: { isRequired: true } }),
+        country: fields.text({ label: "Country", description: "Only for cities outside India (for example United Arab Emirates). Leave empty for Indian cities." }),
         badge: fields.text({ label: "Hero badge", validation: { isRequired: true } }),
+        emoji: fields.text({ label: "City emoji", description: "Shown in the hero badge, before the badge text." }),
+        floatingIcons: fields.array(fields.text({ label: "Emoji" }), { label: "Floating hero emojis (up to 4, shown on desktop)", itemLabel: (props) => props.value }),
+        hubs: fields.array(fields.text({ label: "Area" }), { label: "Business areas (the scrolling strip under the hero)", itemLabel: (props) => props.value }),
         h1: fields.text({ label: "Headline (H1)", validation: { isRequired: true } }),
         intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),
         primaryCta: fields.text({ label: "Main button label", validation: { isRequired: true } }),
         secondaryCta: fields.text({ label: "Second button label", validation: { isRequired: true } }),
         whyTitle: fields.text({ label: "\"Why this city\" heading", validation: { isRequired: true } }),
         why: fields.array(
-          fields.object({ title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
           { label: "\"Why this city\" cards (exactly 3)", validation: { length: { min: 3, max: 3 } }, itemLabel: (props) => props.fields.title.value }
         ),
         proofTitle: fields.text({ label: "Proof heading (leave the case study list empty to hide the block)" }),
@@ -452,7 +493,7 @@ export default config({
         segmentsTitle: fields.text({ label: "\"Who we generate leads for\" heading (leave the whole block empty to hide it)" }),
         segmentsIntro: fields.text({ label: "\"Who we generate leads for\" intro", multiline: true }),
         segments: fields.array(
-          fields.object({ title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
           { label: "Segment cards (exactly 3, or none)", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.title.value }
         ),
         segmentsNote: fields.text({ label: "Note under the segments (use [link text](/address) for links)", multiline: true }),
@@ -587,6 +628,17 @@ export default config({
           label: "Client type",
           description: "Short, e.g. Contract Manufacturer. Used in the search title: <client type> Case Study.",
           validation: { isRequired: true, length: { max: 38 } },
+        }),
+        metaTitle: fields.text({
+          label: "Search title (optional)",
+          description: "Leave empty to use \"<client type> Case Study\". The site adds \" | Myntmore\", so keep it to 49 characters.",
+          validation: { length: { max: 49 } },
+        }),
+        metaDescription: fields.text({
+          label: "Search description (optional)",
+          description: "Leave empty to build it from the title and the results. If you write one, 120 to 160 characters.",
+          multiline: true,
+          validation: { length: { max: 160 } },
         }),
         n: fields.integer({
           label: "Order",

@@ -40,6 +40,17 @@ export const CITY_LINKS: CityLink[] = [
   { slug: "chennai", name: "Chennai", href: "/b2b-lead-generation-chennai", sectors: "Auto components, healthcare suppliers and exporters", industries: ["manufacturing", "pharma", "it"] },
   { slug: "ahmedabad", name: "Ahmedabad", href: "/b2b-lead-generation-ahmedabad", sectors: "Pharma, chemicals and textile exporters", industries: ["pharma", "manufacturing", "founder"] },
   { slug: "kolkata", name: "Kolkata", href: "/b2b-lead-generation-kolkata", sectors: "Healthcare suppliers, engineering and trading houses", industries: ["manufacturing", "pharma", "it", "financial", "insurance"] },
+  { slug: "jaipur", name: "Jaipur", href: "/b2b-lead-generation-jaipur", sectors: "Gem, jewellery and handicraft exporters, IT services", industries: ["manufacturing", "it"] },
+  { slug: "indore", name: "Indore", href: "/b2b-lead-generation-indore", sectors: "IT services, Pithampur pharma and auto components", industries: ["it", "pharma", "manufacturing"] },
+  { slug: "surat", name: "Surat", href: "/b2b-lead-generation-surat", sectors: "Diamonds, jewellery, textiles and chemicals", industries: ["manufacturing"] },
+  { slug: "coimbatore", name: "Coimbatore", href: "/b2b-lead-generation-coimbatore", sectors: "Pumps, motors, textile machinery and IT services", industries: ["manufacturing", "it"] },
+];
+
+// The UAE city pages. Kept apart from CITY_LINKS because the headings and intros wherever <CityLinks> is used speak
+// of India; these are linked from the case studies whose market is the UAE (components/case-studies/CaseStudyLayout.tsx).
+export const UAE_CITY_LINKS: CityLink[] = [
+  { slug: "dubai", name: "Dubai", href: "/b2b-lead-generation-dubai", sectors: "UAE companies, and companies selling into the UAE", industries: [] },
+  { slug: "abu-dhabi", name: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi", sectors: "Enterprise, energy, healthcare and finance buyers", industries: [] },
 ];
 
 // The cities whose pages are written for an industry, strongest match first (each city lists its industries in

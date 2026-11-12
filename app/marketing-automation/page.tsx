@@ -6,6 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/marketing-automation`;
 const BREADCRUMBS = buildBreadcrumbSchema([
@@ -19,7 +20,7 @@ const SERVICE_SCHEMA = buildServiceSchema({
   url: PAGE_URL,
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/marketing-automation", {
   title: "B2B Marketing Automation Services",
   description: "AI-powered marketing automation for B2B: outbound sequences, email automation, and lead nurturing that runs 24/7. Book a free automation audit.",
   alternates: { canonical: PAGE_URL },
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const SERVICES = [
   { title: "Cold Email Automation", href: "/services/cold-email", desc: "Automated multi-step email sequences with AI personalisation, domain warmup, and deliverability management." },

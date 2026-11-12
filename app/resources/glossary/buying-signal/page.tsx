@@ -49,6 +49,8 @@ export default function GlossaryTermPage() {
       body={"Fit alone (matching an ICP) tells you a company could be a customer eventually. A buying signal tells you the timing might actually be right, which is why the strongest outbound lists combine ICP fit with recent signals rather than treating a static list as evergreen."}
       sourceLabel={"See the service: Sales Intelligence"}
       sourceHref={"/services/sales-intelligence"}
+      furtherLabel={"See the service: AI Lead Generation"}
+      furtherHref={"/services/ai-lead-generation"}
       articleSchema={TERM_SCHEMA}
       faqs={FAQS}
     />

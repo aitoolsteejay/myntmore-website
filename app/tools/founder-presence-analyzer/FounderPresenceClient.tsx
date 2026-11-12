@@ -195,14 +195,14 @@ export default function FounderPresenceClient() {
             </div>
             <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
               <span className="relative inline-block">
-                Benchmark Your Founder Presence
+                LinkedIn Competitor Analysis for Founders
                 <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                   <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#D97706" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
             <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-              See how your LinkedIn posting frequency and engagement stack up against up to 5 competitors.
+              Benchmark your founder presence: see how your LinkedIn posting frequency and engagement stack up against up to 5 competitors.
             </p>
           </header>
         )}

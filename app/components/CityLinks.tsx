@@ -1,21 +1,24 @@
 import Link from "next/link";
-import { citiesFor, type CityIndustry } from "@/lib/city-links";
+import { citiesFor, type CityIndustry, type CityLink } from "@/lib/city-links";
 
 // Links to the B2B lead generation city pages (see lib/city-links.ts), filtered to the cities that match an
 // industry when one is given. "section" is a full-width band for service, landing and case study pages;
-// "inline" is a short list that sits inside an article. Plain markup, safe from Server and Client components.
+// "inline" is a short list that sits inside an article. Pass "cities" to show a fixed list instead (the UAE pages).
+// Plain markup, safe from Server and Client components.
 export default function CityLinks({
   industry,
+  cities: fixed,
   heading,
   intro,
   variant = "section",
 }: {
   industry?: CityIndustry | null;
+  cities?: CityLink[];
   heading?: string;
   intro?: string;
   variant?: "section" | "inline";
 }) {
-  const cities = citiesFor(industry);
+  const cities = fixed ?? citiesFor(industry);
   if (!cities.length) return null;
   const title = heading ?? "B2B lead generation by city";
 

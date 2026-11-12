@@ -138,7 +138,7 @@ export function buildServiceSchema({ name, description, serviceType, url, areaSe
 // City pages (/b2b-lead-generation-<city>): a Service offered in that city, provided by the one Organization.
 // Not a LocalBusiness: the only office is in Mumbai, and a city page is "serving" a city, never an office in it,
 // so it must not carry the Mumbai street address, phone or opening hours as if they were local.
-export function buildCityServiceSchema({ name, description, url, city }: { name: string; description: string; url: string; city: string }) {
+export function buildCityServiceSchema({ name, description, url, city, country = "India" }: { name: string; description: string; url: string; city: string; country?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -146,7 +146,7 @@ export function buildCityServiceSchema({ name, description, url, city }: { name:
     description,
     serviceType: "B2B lead generation",
     url,
-    areaServed: { "@type": "City", name: city, containedInPlace: { "@type": "Country", name: "India" } },
+    areaServed: { "@type": "City", name: city, containedInPlace: { "@type": "Country", name: country } },
     provider: {
       "@type": "Organization",
       name: "Myntmore",

@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"A pipeline is only as reliable as what feeds it. Inbound alone is unpredictable month to month, which is why most B2B teams treat consistent outbound as the mechanism that keeps the top of the pipeline full on a schedule, rather than leaving revenue to chance."}
       sourceLabel={"See the service: AI Lead Generation"}
       sourceHref={"/services/ai-lead-generation"}
+      furtherLabel={"See the service: Account-Based Marketing"}
+      furtherHref={"/services/account-based-marketing"}
       articleSchema={TERM_SCHEMA}
     />
   );

@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"Pushing a warm lead too hard, too fast usually resets it back to cold: a premature pitch reads as exactly the pattern-matched sales behaviour they were starting to trust you weren't doing. The right move is another touch of genuine value, not an escalated ask, until a real signal shows up."}
       sourceLabel={"Read the related term: Sales Pipeline"}
       sourceHref={"/resources/glossary/sales-pipeline"}
+      furtherLabel={"See the service: LinkedIn Outreach & Automation"}
+      furtherHref={"/services/linkedin-outreach"}
       articleSchema={TERM_SCHEMA}
     />
   );

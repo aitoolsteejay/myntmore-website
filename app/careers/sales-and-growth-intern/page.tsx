@@ -4,8 +4,9 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/sales-and-growth-intern", {
   title: "Sales & Growth Intern, Mumbai | Rs 10-20K/mo",
   description: "Join Myntmore as a Sales and Growth Intern in BKC, Mumbai. Full-time internship, Rs 10-20K a month plus incentives. Prospect, learn the CRM, close deals.",
   keywords: ["sales and growth internship mumbai", "sales internship mumbai with stipend", "growth internship mumbai", "business development internship mumbai", "b2b sales internship mumbai", "full time sales internship bkc", "crm sales intern", "sales intern jobs personal branding agency", "internship with incentives mumbai", "linkedin personal branding sales internship"],
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/sales-and-growth-intern",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for Sales and Growth Intern";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;

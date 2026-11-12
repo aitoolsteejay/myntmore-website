@@ -15,7 +15,7 @@ This is the complete reference for the Myntmore marketing site: what exists, whe
 | **Backend/DB** | Supabase (Postgres) - secondary lead log only, not the source of truth |
 | **CRM** | Zoho Forms - the actual, primary lead record for every form on the site |
 | **AI** | Google Gemini (`gemini-2.5-flash`) via `@google/genai`, used by the 6 free AI tools |
-| **Repo** | GitHub - `aitoolsteejay/ClaudeCode` |
+| **Repo** | GitHub - `aitoolsteejay/myntmore-website` |
 | **Hosting** | Vercel |
 | **Path alias** | `@/*` → repo root (e.g. `@/lib/supabase`, `@/components/ui/button`) |
 

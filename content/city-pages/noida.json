@@ -22,6 +22,22 @@
   "ogDescription": "Outbound lead generation for Noida's IT services, software development and electronics firms: cold email, LinkedIn outreach and ABM.",
   "breadcrumbLabel": "Noida",
   "badge": "Noida",
+  "emoji": "🔌",
+  "floatingIcons": [
+    "💻",
+    "🔌",
+    "📱",
+    "🏗️"
+  ],
+  "hubs": [
+    "Sector 62",
+    "Sector 63",
+    "Sector 125",
+    "Sector 132",
+    "Noida Expressway",
+    "Knowledge Park",
+    "Greater Noida"
+  ],
   "h1": "B2B Lead Generation Company in Noida",
   "intro": "Looking for a lead generation company in Noida? Myntmore runs cold email, LinkedIn outreach and ABM for Noida's IT services, software development and electronics manufacturing firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -29,14 +45,17 @@
   "whyTitle": "Why Noida businesses need this",
   "why": [
     {
+      "icon": "💻",
       "title": "IT services firms that look alike from the outside",
       "desc": "From Sector 62 to the Noida Expressway, hundreds of software and IT services firms sell similar offshore capability to the same overseas buyers. Without outreach that names a specific problem for a specific buyer, you are one more vendor in an inbox."
     },
     {
+      "icon": "🤝",
       "title": "Growth that depends on a few anchor clients",
       "desc": "Many Noida software firms grew on two or three large accounts and referrals from them. That works until one account shrinks. A steady outbound pipeline is what stops one client's budget cut from becoming your problem."
     },
     {
+      "icon": "⚙️",
       "title": "Electronics makers selling through distributors and fairs",
       "desc": "Noida and Greater Noida are a major base for electronics and component manufacturing. Most of these companies find buyers through distributors and trade fairs, with nothing running in between to reach procurement and sourcing teams directly."
     }
@@ -118,14 +137,17 @@
   "segmentsIntro": "Our lead generation services in Noida are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💻",
       "title": "IT services and product engineering",
       "desc": "Firms selling development, testing, cloud and managed services to enterprises and funded startups, where the buyer is a CTO or engineering head who ignores generic pitches."
     },
     {
+      "icon": "🌍",
       "title": "Software firms selling to the US, UK and UAE",
       "desc": "Outsourcing and custom software companies that need overseas decision-makers to hear from them, with separate sending infrastructure and copy that reads as native to that market."
     },
     {
+      "icon": "⚙️",
       "title": "Electronics and component manufacturers",
       "desc": "Makers in Noida and Greater Noida that have grown through distributors and trade fairs, and need procurement and sourcing teams to hear from them between shows."
     }

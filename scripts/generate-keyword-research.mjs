@@ -97,6 +97,7 @@ const icpPriority = (i) => ({ core: "P1", retain: "P1", test: "P2", subsegment: 
 
 // ── Cities ────────────────────────────────────────────────────────────────
 // tier: page = has a /b2b-lead-generation-<city> page; india = Indian city without one; intl = market the ICPs sell into.
+// page: true marks an intl market that also has a city page (Dubai, Abu Dhabi); it keeps the intl phrasings.
 // variants are other spellings people search; they map to the same page.
 const CITIES = [
   { name: "Mumbai", slug: "mumbai", tier: "page", variants: ["navi mumbai", "thane"], why: "HQ; BFSI, media, pharma, exporters" },
@@ -109,17 +110,17 @@ const CITIES = [
   { name: "Ahmedabad", slug: "ahmedabad", tier: "page", variants: [], why: "Pharma, chemicals, engineering exporters" },
   { name: "Gurugram", slug: "gurugram", tier: "page", variants: ["gurgaon"], why: "SaaS, IT services, MNC and GCC offices; searched apart from Delhi" },
   { name: "Noida", slug: "noida", tier: "page", variants: [], why: "IT services and product engineering" },
-  { name: "Jaipur", slug: "jaipur", tier: "india", variants: [], why: "Jewellery and handicraft exporters, IT services" },
-  { name: "Surat", slug: "surat", tier: "india", variants: [], why: "Diamond, jewellery and textile exporters" },
+  { name: "Jaipur", slug: "jaipur", tier: "page", variants: [], why: "Jewellery and handicraft exporters, IT services" },
+  { name: "Surat", slug: "surat", tier: "page", variants: [], why: "Diamond, jewellery and textile exporters" },
   { name: "Vadodara", slug: "vadodara", tier: "india", variants: ["baroda"], why: "Pharma, engineering, chemicals" },
   { name: "Rajkot", slug: "rajkot", tier: "india", variants: [], why: "Engineering components and machinery exporters" },
   { name: "Ludhiana", slug: "ludhiana", tier: "india", variants: [], why: "Industrial manufacturing, cycles, hosiery exporters" },
-  { name: "Coimbatore", slug: "coimbatore", tier: "india", variants: [], why: "Pumps, motors, textile machinery exporters" },
+  { name: "Coimbatore", slug: "coimbatore", tier: "page", variants: [], why: "Pumps, motors, textile machinery exporters" },
   { name: "Kochi", slug: "kochi", tier: "india", variants: ["cochin"], why: "IT services, seafood and spice exporters" },
-  { name: "Indore", slug: "indore", tier: "india", variants: [], why: "IT services, pharma, manufacturing" },
+  { name: "Indore", slug: "indore", tier: "page", variants: [], why: "IT services, pharma, manufacturing" },
   { name: "Chandigarh", slug: "chandigarh", tier: "india", variants: ["mohali"], why: "IT services, pharma (Baddi belt)" },
-  { name: "Dubai", slug: "dubai", tier: "intl", variants: ["uae"], why: "GCC ICPs (recruitment, IT, agencies); UAE case studies exist" },
-  { name: "Abu Dhabi", slug: "abu-dhabi", tier: "intl", variants: [], why: "GCC enterprise buyers" },
+  { name: "Dubai", slug: "dubai", tier: "intl", page: true, variants: ["uae"], why: "GCC ICPs (recruitment, IT, agencies); UAE case studies exist" },
+  { name: "Abu Dhabi", slug: "abu-dhabi", tier: "intl", page: true, variants: [], why: "GCC enterprise buyers" },
   { name: "Riyadh", slug: "riyadh", tier: "intl", variants: ["saudi arabia"], why: "Recruitment and manufacturing ICPs target Saudi" },
   { name: "Singapore", slug: "singapore", tier: "intl", variants: [], why: "Singapore case studies exist; fintech, prof. services" },
   { name: "London", slug: "london", tier: "intl", variants: ["uk"], why: "UK case studies exist; IT, accounting outsourcing" },
@@ -434,7 +435,7 @@ const PROMPTS = [
     c,
     CITIES.find((x) => x.name === c).tier === "page" ? `/b2b-lead-generation-${CITIES.find((x) => x.name === c).slug}` : `NEW: /b2b-lead-generation-${CITIES.find((x) => x.name === c).slug}`,
   ]),
-  ["quarterly", "city", "Best lead generation agency in Dubai for B2B companies", "", "Dubai", "/case-studies/markets/uae"],
+  ["quarterly", "city", "Best lead generation agency in Dubai for B2B companies", "", "Dubai", "/b2b-lead-generation-dubai"],
   ["quarterly", "city", "Lead generation agency in Mumbai for IT companies", "1", "Mumbai", "/b2b-lead-generation-mumbai"],
   // Quarterly: ICPs
   ["quarterly", "icp", "Best lead generation agency for IT services companies", "1", "", "/lp/agencies-it"],
@@ -588,18 +589,55 @@ const PROMPTS = [
   ["quarterly", "how-to", "Which Claude prompts help prepare for a sales call?", "", "", "/resources/guides/claude-sales-call-prompts"],
   ["quarterly", "how-to", "Which Claude skills can a founder use for content and lead generation?", "", "", "/resources/guides/claude-skills-guide"],
   ["quarterly", "service", "What does a LinkedIn ghostwriting service for founders include?", "", "", "/services/personal-branding"],
+  // Pages in public/llms.txt that had no question yet, and buyer prompts copied from Search Console queries (12 Nov 2026).
+  // Glossary terms with search impressions
+  ["quarterly", "definition", "What is buyer engagement in B2B sales?", "", "", "/resources/glossary/buyer-engagement"],
+  ["quarterly", "definition", "What is a hot lead in B2B outbound?", "", "", "/resources/glossary/hot-lead"],
+  ["quarterly", "definition", "What makes a good target account?", "", "", "/resources/glossary/target-account-strategy"],
+  ["quarterly", "definition", "What is sales outreach, and how is it different from cold outreach?", "", "", "/resources/glossary/sales-outreach"],
+  // Myntmore's own terms: no other site can be the source, so a miss means the engine has not picked them up
+  ["quarterly", "definition", "What is the Total Conversional Market (TCM), and how is it different from TAM?", "", "", "/resources/glossary/total-conversional-market"],
+  ["quarterly", "definition", "What is Signal-Heavy Structuring?", "", "", "/resources/glossary/signal-heavy-structuring"],
+  ["quarterly", "definition", "What is the 3-Second Rule in outbound messaging?", "", "", "/resources/glossary/3-second-rule"],
+  // Results by industry and market
+  ["quarterly", "entity", "What results has Myntmore produced for recruitment and staffing firms?", "3", "", "/case-studies/recruitment-staffing"],
+  ["quarterly", "entity", "What results has Myntmore produced for financial services firms?", "", "", "/case-studies/financial-services"],
+  ["quarterly", "entity", "What results has Myntmore produced for insurance businesses?", "", "", "/case-studies/insurance"],
+  ["quarterly", "entity", "What results has Myntmore produced for IT services companies and digital agencies?", "1", "", "/case-studies/agencies-it"],
+  ["quarterly", "entity", "What results has Myntmore produced for manufacturers and exporters?", "11", "", "/case-studies/manufacturers-exporters"],
+  ["quarterly", "entity", "What results has Myntmore produced for professional services firms?", "25", "", "/case-studies/professional-services"],
+  ["quarterly", "entity", "What results has Myntmore produced for eCommerce technology companies?", "", "", "/case-studies/ecommerce-tech"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the UAE?", "", "", "/case-studies/markets/uae"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the United States?", "", "", "/case-studies/markets/united-states"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in the United Kingdom?", "", "", "/case-studies/markets/united-kingdom"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in Singapore?", "", "", "/case-studies/markets/singapore"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in France?", "", "", "/case-studies/markets/france"],
+  ["quarterly", "entity", "What B2B outbound results has Myntmore had in India?", "", "", "/case-studies/markets/india"],
+  // Guides and a tool with no question
+  ["quarterly", "how-to", "How can AI agents book meetings with US B2B buyers?", "", "", "/resources/guides/80-us-meetings-ai-agents"],
+  ["quarterly", "how-to", "How do I generate B2B leads on LinkedIn without cold pitching?", "", "", "/resources/guides/leads-on-autopilot-guide"],
+  ["quarterly", "how-to", "What are the do's and don'ts of cold outreach?", "", "", "/resources/guides/dos-and-donts-of-outreach"],
+  ["quarterly", "how-to", "How do Bangalore SaaS companies get B2B leads?", "2", "Bengaluru", "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"],
+  ["quarterly", "how-to", "How do I test whether my B2B homepage explains itself in five seconds?", "", "", "/resources/blogs/5-second-hero-section-test"],
+  ["quarterly", "tool", "Free tool to plan a LinkedIn posting rhythm", "", "", "/tools/posting-rhythm-builder"],
+  // Tracking only (not in llms.txt): buyer prompts as people typed them into Google
+  ["quarterly", "best-of", "Which agencies excel at LinkedIn ghostwriting for fintech founders?", "7", "", "/services/personal-branding"],
+  ["quarterly", "best-of", "Which India-based lead generation agency offers global-standard quality at a lower cost?", "", "", "/resources/guides/how-to-choose-b2b-lead-generation-agency-india"],
+  ["quarterly", "how-to", "When should a Series A founder formalise their lead management process?", "2", "", "/resources/blogs/founder-led-sales-before-scaling"],
+  ["quarterly", "comparison", "What beats manual LinkedIn outbound for high-volume hiring?", "", "", "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting"],
 ];
 
 // ── Build rows ────────────────────────────────────────────────────────────
 const fill = (pattern, c) => pattern.replace("{c}", c);
 const cityRows = [];
+const hasPage = (city) => city.tier === "page" || city.page === true;
 for (const city of CITIES) {
-  const page = city.tier === "page" ? `/b2b-lead-generation-${city.slug}` : `NEW: /b2b-lead-generation-${city.slug}`;
+  const page = hasPage(city) ? `/b2b-lead-generation-${city.slug}` : `NEW: /b2b-lead-generation-${city.slug}`;
   const names = [city.name.toLowerCase(), ...city.variants];
   for (const stem of CITY_STEMS) {
     const runs =
       stem.reach === "all" ||
-      (stem.reach === "page" && city.tier === "page") ||
+      (stem.reach === "page" && hasPage(city)) ||
       (stem.reach === "india" && city.tier !== "intl") ||
       (stem.reach === "intl" && city.tier === "intl");
     if (!runs) continue;
@@ -608,7 +646,7 @@ for (const city of CITIES) {
       if (vi > 0 && CITY_STEMS.indexOf(stem) > 3) return;
       const keyword = fill(stem.kw, n);
       const cov = coverage(keyword, page);
-      const priority = city.tier === "page" ? (CITY_STEMS.indexOf(stem) < 4 ? "P1" : "P2") : city.tier === "india" ? "P2" : "P3";
+      const priority = hasPage(city) ? (CITY_STEMS.indexOf(stem) < 4 ? "P1" : "P2") : city.tier === "india" ? "P2" : "P3";
       cityRows.push({ keyword, city: city.name, city_tier: city.tier, service: stem.service, intent: "commercial", priority, status: cov.status, target_page: cov.status === "targeted" ? cov.page : page, why_this_city: city.why });
     });
   }
@@ -643,7 +681,7 @@ for (const spec of ICP_CITY) {
     if (!city) throw new Error(`unknown city ${cName}`);
     const keyword = fill(spec.pattern, cName === "Bengaluru" ? "bangalore" : cName.toLowerCase());
     const icpPage = (ICP_KEYWORDS[spec.icp].kws.find((k) => spec.pattern.includes("pharma") && k[2]) || [])[2] || ICP_KEYWORDS[spec.icp].page;
-    const cityPage = city.tier === "page" ? `/b2b-lead-generation-${city.slug}` : "";
+    const cityPage = hasPage(city) ? `/b2b-lead-generation-${city.slug}` : "";
     // An ICP x city phrase is best served by the ICP page with a section on that city's cluster (built first if it is
     // NEW), with the city page naming the ICP and linking to it. Only an ICP with no page at all falls back to the city page.
     const target = icpPage || cityPage;
@@ -655,7 +693,7 @@ for (const spec of ICP_CITY) {
       icp_status: icpStatus(icp),
       city: cName,
       city_tier: city.tier,
-      priority: icp.status.group === "core" && city.tier === "page" ? "P1" : icp.status.group === "core" || icp.status.group === "retain" ? "P2" : "P3",
+      priority: icp.status.group === "core" && hasPage(city) ? "P1" : icp.status.group === "core" || icp.status.group === "retain" ? "P2" : "P3",
       status: cov.status,
       target_page: cov.status === "targeted" ? cov.page : target,
       also_mention_on: cityPage && target !== cityPage ? cityPage : "",

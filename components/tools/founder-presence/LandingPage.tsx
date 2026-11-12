@@ -38,16 +38,16 @@ export function LandingPage({ onStart }: LandingPageProps) {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            See How You{" "}
+            LinkedIn Competitor{" "}
             <span className="relative inline-block">
-              Really Stack Up
+              Analysis for Founders
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Benchmark your LinkedIn posting frequency and engagement against up to 5 competitors, then get AI-powered positioning and headline recommendations built around the gap.
+            See how you really stack up. Benchmark your LinkedIn posting frequency and engagement against up to 5 competitors, then get AI-powered positioning and headline recommendations built around the gap.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Analyze My Presence

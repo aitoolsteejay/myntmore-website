@@ -17,3 +17,4 @@ df5ee6b  # Gold text to amber, footer grey, main landmarks, textTone helper (sty
 98f259f  # textTone for every accent colour, typewriter wrap (styling only, no copy change)
 107c8e0  # Readable accent text colours sitewide (styling only, no copy change)
 72b02ca  components/lp keystatic.config.ts  # Optional case-card link on the shared landing page component; pages that do not use case cards are unchanged
+fa62b1c  app  # Wrapped every page's metadata in withPageSeo for the Keystatic title editor; no copy change

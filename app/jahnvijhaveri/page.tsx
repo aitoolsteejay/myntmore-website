@@ -4,6 +4,7 @@ import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PHONE = "+919821008589";
 const WHATSAPP_URL = "https://wa.me/919821008589";
@@ -11,7 +12,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/jahnvi-jhaveri-profile/";
 const EMAIL = "growth@myntmore.com";
 const NEWSLETTER_URL = "/newsletter-subscribe";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/jahnvijhaveri", {
   title: "Jahnvi Jhaveri",
   description: "Jahnvi Jhaveri, Co-Founder of Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
   alternates: { canonical: `${SITE_URL}/jahnvijhaveri` },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/jahnvijhaveri`,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",

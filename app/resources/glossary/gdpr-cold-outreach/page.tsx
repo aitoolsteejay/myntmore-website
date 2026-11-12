@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"Legitimate interest is narrower than it sounds: the outreach has to be relevant to the recipient's professional role, and it has to include an easy, immediate way to opt out. It does not license the same broad, unfiltered blasting that some other regions tolerate."}
       sourceLabel={"Read: Cold Email Compliance: CAN-SPAM, GDPR & DPDP"}
       sourceHref={"/resources/blogs/cold-email-compliance-guide"}
+      furtherLabel={"See the service: Cold Email Infrastructure"}
+      furtherHref={"/services/cold-email"}
       articleSchema={TERM_SCHEMA}
     />
   );

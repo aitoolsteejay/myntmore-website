@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T11:47:41.690Z",
+  "generatedAt": "2026-11-12T12:18:30.293Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 298,
-    "linked": 263,
+    "total": 304,
+    "linked": 269,
     "orphan": 35,
     "noindex": 39,
     "notInXmlSitemap": 43,
@@ -12,7 +12,7 @@
   "pages": [
     {
       "path": "/",
-      "title": "Myntmore | AI-Powered B2B Lead Generation Agency, Mumbai",
+      "title": "Home",
       "section": "(home)",
       "status": "linked",
       "linkedFrom": [
@@ -29,7 +29,7 @@
     },
     {
       "path": "/1-on-1-consultation",
-      "title": "1-on-1 B2B Growth Consultation | Free GTM Audit",
+      "title": "1 On 1 Consultation",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -43,7 +43,7 @@
     },
     {
       "path": "/about-us",
-      "title": "About Myntmore | Founded by Tejas Jhaveri, Mumbai",
+      "title": "About Us",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -66,6 +66,21 @@
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-abu-dhabi",
+      "title": "B2B Lead Generation Company in Abu Dhabi",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
     },
     {
       "path": "/b2b-lead-generation-ahmedabad",
@@ -114,8 +129,38 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-coimbatore",
+      "title": "B2B Lead Generation Company in Coimbatore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-delhi",
       "title": "B2B Lead Generation Company in Delhi NCR",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-dubai",
+      "title": "B2B Lead Generation Company in Dubai, UAE",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -146,6 +191,36 @@
     {
       "path": "/b2b-lead-generation-hyderabad",
       "title": "Lead Generation Company & Services in Hyderabad",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-indore",
+      "title": "B2B Lead Generation Company in Indore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-jaipur",
+      "title": "B2B Lead Generation Company in Jaipur",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -224,8 +299,23 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-surat",
+      "title": "B2B Lead Generation Company in Surat",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/book-a-call",
-      "title": "Book a Strategy Call | Free B2B Growth Audit",
+      "title": "Book A Call",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -245,7 +335,7 @@
     },
     {
       "path": "/calendar/cold-emailing",
-      "title": "Cold Email Infrastructure Audit with Tejas Jhaveri",
+      "title": "Cold Emailing",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -257,7 +347,7 @@
     },
     {
       "path": "/calendar/elg",
-      "title": "Event-Led Growth Strategy Session",
+      "title": "Elg",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -268,7 +358,7 @@
     },
     {
       "path": "/calendar/email",
-      "title": "Cold Email Infrastructure Audit with Tejas Jhaveri",
+      "title": "Email",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -279,7 +369,7 @@
     },
     {
       "path": "/calendar/enwil",
-      "title": "Outbound Strategy Session with Enwil Fernandes",
+      "title": "Enwil",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -290,7 +380,7 @@
     },
     {
       "path": "/calendar/enwil-ce",
-      "title": "Outbound Strategy Session with Enwil Fernandes",
+      "title": "Enwil Ce",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -301,7 +391,7 @@
     },
     {
       "path": "/calendar/enwil-li",
-      "title": "Outbound Strategy Session with Enwil Fernandes",
+      "title": "Enwil Li",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -313,7 +403,7 @@
     },
     {
       "path": "/calendar/enwil-wa",
-      "title": "Outbound Strategy Session with Enwil Fernandes",
+      "title": "Enwil Wa",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -324,7 +414,7 @@
     },
     {
       "path": "/calendar/event-led-growth",
-      "title": "Event-Led Growth Strategy Session",
+      "title": "Event Led Growth",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -336,7 +426,7 @@
     },
     {
       "path": "/calendar/linkedin",
-      "title": "LinkedIn Outbound Diagnostic with Tejas Jhaveri",
+      "title": "Linkedin",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -347,7 +437,7 @@
     },
     {
       "path": "/calendar/th",
-      "title": "Founder Strategy Session with Tejas Jhaveri",
+      "title": "Th",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -358,7 +448,7 @@
     },
     {
       "path": "/calendar/tj",
-      "title": "Founder Strategy Session with Tejas Jhaveri",
+      "title": "Tj",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -369,7 +459,7 @@
     },
     {
       "path": "/calendar/wa",
-      "title": "Multi-Channel Outbound Strategy with Tejas Jhaveri",
+      "title": "Wa",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -380,7 +470,7 @@
     },
     {
       "path": "/calendar/web",
-      "title": "B2B Pipeline Strategy Session with Tejas Jhaveri",
+      "title": "Web",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -391,7 +481,7 @@
     },
     {
       "path": "/calendar/whatsapp",
-      "title": "Multi-Channel Outbound Strategy with Tejas Jhaveri",
+      "title": "Whatsapp",
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [],
@@ -403,7 +493,7 @@
     },
     {
       "path": "/careers",
-      "title": "Careers at Myntmore",
+      "title": "Careers",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -423,7 +513,7 @@
     },
     {
       "path": "/careers/content-marketing-strategist-intern",
-      "title": "Content Marketing Intern, Mumbai | Rs 7-15K/mo",
+      "title": "Content Marketing Strategist Intern",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -436,7 +526,7 @@
     },
     {
       "path": "/careers/gtm-strategist",
-      "title": "GTM Strategist, Mumbai | Rs 6–15 LPA",
+      "title": "Gtm Strategist",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -449,7 +539,7 @@
     },
     {
       "path": "/careers/hr-operations-intern",
-      "title": "HR & Operations Intern, Mumbai | Rs 7-15K/mo",
+      "title": "Hr Operations Intern",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -462,7 +552,7 @@
     },
     {
       "path": "/careers/lead-gen-intern",
-      "title": "B2B Lead Gen Intern, Mumbai | Rs 10-15K/mo",
+      "title": "Lead Gen Intern",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -475,7 +565,7 @@
     },
     {
       "path": "/careers/lead-gen-strategist",
-      "title": "B2B Lead Gen Strategist, Mumbai | Rs 4-7 LPA",
+      "title": "Lead Gen Strategist",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -488,7 +578,7 @@
     },
     {
       "path": "/careers/sales-and-growth-intern",
-      "title": "Sales & Growth Intern, Mumbai | Rs 10-20K/mo",
+      "title": "Sales And Growth Intern",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -501,7 +591,7 @@
     },
     {
       "path": "/careers/sales-executive",
-      "title": "Sales Executive, Mumbai | Rs 4–7 LPA",
+      "title": "Sales Executive",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -514,7 +604,7 @@
     },
     {
       "path": "/careers/systems-ai-automation-intern",
-      "title": "AI Automation Intern, Mumbai | Rs 7-20K/mo",
+      "title": "Systems Ai Automation Intern",
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
@@ -527,7 +617,7 @@
     },
     {
       "path": "/case-studies",
-      "title": "B2B Case Studies & Client Results",
+      "title": "Case Studies",
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
@@ -1802,7 +1892,7 @@
     },
     {
       "path": "/contact-us",
-      "title": "Contact Myntmore | Book a Free B2B GTM Audit",
+      "title": "Contact Us",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -1817,7 +1907,7 @@
     },
     {
       "path": "/editorial-policy",
-      "title": "Editorial Policy & Methodology",
+      "title": "Editorial Policy",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -1830,7 +1920,7 @@
     },
     {
       "path": "/enwilfernandes",
-      "title": "Enwil Fernandes",
+      "title": "Enwilfernandes",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -1841,7 +1931,7 @@
     },
     {
       "path": "/events",
-      "title": "B2B Outbound Events & Webinars",
+      "title": "Events",
       "section": "events",
       "status": "linked",
       "linkedFrom": [
@@ -1855,7 +1945,7 @@
     },
     {
       "path": "/events/predictable-pipeline-webinar",
-      "title": "Free Webinar: Build a Predictable Lead Pipeline",
+      "title": "Predictable Pipeline Webinar",
       "section": "events",
       "status": "linked",
       "linkedFrom": [
@@ -1869,7 +1959,7 @@
     },
     {
       "path": "/feedback",
-      "title": "AI Marketing Workshop Feedback",
+      "title": "Feedback",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -1892,7 +1982,7 @@
     },
     {
       "path": "/jahnvijhaveri",
-      "title": "Jahnvi Jhaveri",
+      "title": "Jahnvijhaveri",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -1918,9 +2008,11 @@
       "section": "lp",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs/cold-email-compliance-guide"
       ],
-      "inboundCount": 1,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2075,7 +2167,7 @@
     },
     {
       "path": "/marketing-automation",
-      "title": "B2B Marketing Automation Services",
+      "title": "Marketing Automation",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2088,7 +2180,7 @@
     },
     {
       "path": "/menti",
-      "title": "Live Q&A",
+      "title": "Menti",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -2100,7 +2192,7 @@
     },
     {
       "path": "/myntmore-framework",
-      "title": "The Myntmore Framework: How Our B2B Outbound Works",
+      "title": "Myntmore Framework",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2114,7 +2206,7 @@
     },
     {
       "path": "/newsletter-subscribe",
-      "title": "Subscribe to The Outbound Operator",
+      "title": "Newsletter Subscribe",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2130,7 +2222,7 @@
     },
     {
       "path": "/privacy-policy",
-      "title": "Privacy Policy: How We Handle Your Data",
+      "title": "Privacy Policy",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2145,7 +2237,7 @@
     },
     {
       "path": "/research/kmspharma",
-      "title": "KMS Pharma: Partner Accounts to Approach",
+      "title": "Kmspharma",
       "section": "research",
       "status": "orphan",
       "linkedFrom": [],
@@ -2156,7 +2248,7 @@
     },
     {
       "path": "/research/myntmore",
-      "title": "Sample Account Research: B2B SaaS",
+      "title": "Myntmore",
       "section": "research",
       "status": "orphan",
       "linkedFrom": [],
@@ -2167,7 +2259,7 @@
     },
     {
       "path": "/resources",
-      "title": "B2B Growth Resources: Blogs & Free Tools",
+      "title": "Resources",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2187,7 +2279,7 @@
     },
     {
       "path": "/resources/blogs",
-      "title": "B2B Lead Generation Blog",
+      "title": "Blogs",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2368,16 +2460,16 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/cold-email",
         "/resources/glossary/domain-warmup",
         "/resources/glossary/sender-reputation",
         "/resources/glossary/spam-complaint-rate",
         "/resources/glossary/spf-dkim-dmarc",
         "/resources/guides/cold-email-tech-stack",
         "lib/internal-paths.ts",
-        "/resources/blogs/cold-email-compliance-guide",
-        "/resources/blogs"
+        "/resources/blogs/cold-email-compliance-guide"
       ],
-      "inboundCount": 9,
+      "inboundCount": 10,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2612,12 +2704,13 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/abm",
         "/resources/glossary/multi-threading",
         "/resources/guides/claude-sales-call-prompts",
         "lib/internal-paths.ts",
         "/resources/blogs"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2822,7 +2915,7 @@
     },
     {
       "path": "/resources/feed",
-      "title": "The Feed: B2B Outbound Reels",
+      "title": "Feed",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2836,7 +2929,7 @@
     },
     {
       "path": "/resources/glossary",
-      "title": "B2B Outbound Glossary",
+      "title": "Glossary",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3556,7 +3649,7 @@
     },
     {
       "path": "/resources/guides",
-      "title": "Free B2B Growth Guides",
+      "title": "Guides",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3576,7 +3669,7 @@
     },
     {
       "path": "/resources/guides/58-meetings-600-linkedin-connections",
-      "title": "58 Meetings Booked from 600 LinkedIn Connections",
+      "title": "58 Meetings 600 Linkedin Connections",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3595,7 +3688,7 @@
     },
     {
       "path": "/resources/guides/80-us-meetings-ai-agents",
-      "title": "80+ US Meetings Booked in 1 Month with AI Agents",
+      "title": "80 Us Meetings Ai Agents",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3624,7 +3717,7 @@
     },
     {
       "path": "/resources/guides/careers-and-job-guide",
-      "title": "Career Jumpstart Toolkit",
+      "title": "Careers And Job Guide",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3637,7 +3730,7 @@
     },
     {
       "path": "/resources/guides/claude-sales-call-prompts",
-      "title": "Meeting Prep Brief",
+      "title": "Claude Sales Call Prompts",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3651,7 +3744,7 @@
     },
     {
       "path": "/resources/guides/claude-skills-guide",
-      "title": "The 6 Claude Skills Guide",
+      "title": "Claude Skills Guide",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3665,7 +3758,7 @@
     },
     {
       "path": "/resources/guides/cold-email-tech-stack",
-      "title": "The opener",
+      "title": "Cold Email Tech Stack",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3692,7 +3785,7 @@
     },
     {
       "path": "/resources/guides/education-guide",
-      "title": "AI Quick-Start Guide",
+      "title": "Education Guide",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3705,7 +3798,7 @@
     },
     {
       "path": "/resources/guides/golden-icp-framework",
-      "title": "The Golden ICP Framework for B2B Outbound",
+      "title": "Golden Icp Framework",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3735,7 +3828,7 @@
     },
     {
       "path": "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
-      "title": "Choosing a B2B Lead Generation Agency in India",
+      "title": "How To Choose B2b Lead Generation Agency India",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3753,7 +3846,7 @@
     },
     {
       "path": "/resources/guides/how-to-set-up-vibe-prospecting",
-      "title": "Vibe Prospecting on Claude: What It Is + Setup",
+      "title": "How To Set Up Vibe Prospecting",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3779,7 +3872,7 @@
     },
     {
       "path": "/resources/guides/leads-on-autopilot-guide",
-      "title": "Leads on Autopilot: A LinkedIn Framework",
+      "title": "Leads On Autopilot Guide",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3794,7 +3887,7 @@
     },
     {
       "path": "/resources/guides/linkedin-content-to-calls-starter-kit",
-      "title": "Content that attracts",
+      "title": "Linkedin Content To Calls Starter Kit",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3810,7 +3903,7 @@
     },
     {
       "path": "/resources/guides/outbound-meme-prompt-kit",
-      "title": "Pick a meme",
+      "title": "Outbound Meme Prompt Kit",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3826,7 +3919,7 @@
     },
     {
       "path": "/resources/tools",
-      "title": "Free B2B Lead Generation Tools",
+      "title": "Tools",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3846,7 +3939,7 @@
     },
     {
       "path": "/seo",
-      "title": "SEO Services Mumbai | B2B Content SEO",
+      "title": "Seo",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -3859,7 +3952,7 @@
     },
     {
       "path": "/services",
-      "title": "AI-Powered B2B Lead Generation Services",
+      "title": "Services",
       "section": "services",
       "status": "linked",
       "linkedFrom": [
@@ -3886,13 +3979,13 @@
         "/",
         "/resources/glossary/abm",
         "/resources/glossary/account-penetration",
+        "/resources/glossary/sales-pipeline",
         "/services",
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/multi-threading-b2b-buying-committee",
-        "/resources/blogs/tam-trap-vague-targeting",
-        "/resources/blogs/what-is-b2b-outbound-sales"
+        "/resources/blogs/tam-trap-vague-targeting"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3907,12 +4000,12 @@
         "/",
         "/marketing-automation",
         "/resources/glossary/b2b-lead-generation",
-        "/resources/glossary/sales-pipeline",
-        "/services",
-        "/resources/blogs/ai-personalization-cold-outreach",
-        "/resources/blogs/ai-vs-traditional-lead-generation"
+        "/resources/glossary/buying-signal",
+        "/resources/glossary/cold-lead",
+        "/resources/glossary/hot-lead",
+        "/resources/glossary/sales-pipeline"
       ],
-      "inboundCount": 14,
+      "inboundCount": 19,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3926,13 +4019,13 @@
         "/about-us",
         "/",
         "/marketing-automation",
+        "/resources/glossary/can-spam-act",
         "/resources/glossary/cold-email",
         "/resources/glossary/domain-warmup",
-        "/resources/glossary/spf-dkim-dmarc",
-        "/resources/guides/cold-email-tech-stack",
-        "/resources/guides/golden-icp-framework"
+        "/resources/glossary/gdpr-cold-outreach",
+        "/resources/glossary/response-rate"
       ],
-      "inboundCount": 21,
+      "inboundCount": 25,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3964,15 +4057,15 @@
       "status": "linked",
       "linkedFrom": [
         "/",
+        "/resources/glossary/aha-moment",
         "/resources/glossary/growth-strategy",
         "/resources/glossary/gtm-execution",
         "/resources/glossary/gtm-strategy",
+        "/resources/glossary/value-proposition",
         "/services",
-        "/resources/blogs/founder-led-sales-before-scaling",
-        "/resources/blogs/icp-mapping-b2b",
-        "/resources/blogs/multi-threading-b2b-buying-committee"
+        "/resources/blogs/5-second-hero-section-test"
       ],
-      "inboundCount": 11,
+      "inboundCount": 15,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3987,12 +4080,12 @@
         "/",
         "/marketing-automation",
         "/myntmore-framework",
+        "/resources/glossary/3-second-rule",
+        "/resources/glossary/existing-connection-nurturing",
         "/resources/glossary/linkedin-outreach",
-        "/resources/guides/58-meetings-600-linkedin-connections",
-        "/services",
-        "linkedin-outreach/LinkedinOutreachPage.tsx"
+        "/resources/glossary/warm-lead"
       ],
-      "inboundCount": 25,
+      "inboundCount": 28,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4006,13 +4099,13 @@
         "/about-us",
         "/",
         "/resources/glossary/founder-led-sales",
+        "/resources/glossary/lead-magnet",
+        "/resources/glossary/signal-heavy-structuring",
         "/resources/glossary/social-selling",
-        "/resources/guides/claude-sales-call-prompts",
-        "/resources/guides/leads-on-autopilot-guide",
-        "/services",
-        "lib/case-study-library.ts"
+        "/resources/glossary/vanity-metrics",
+        "/resources/guides/claude-sales-call-prompts"
       ],
-      "inboundCount": 18,
+      "inboundCount": 21,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4025,14 +4118,14 @@
       "linkedFrom": [
         "/",
         "/marketing-automation",
+        "/resources/glossary/buyer-persona",
         "/resources/glossary/buying-signal",
-        "/services",
-        "lib/case-study-library.ts",
-        "/resources/blogs/icp-mapping-b2b",
-        "/resources/blogs/outbound-funnel-math-not-guesswork",
-        "/resources/blogs/relevance-beats-reach-b2b-outbound"
+        "/resources/glossary/icp",
+        "/resources/glossary/lead-scoring",
+        "/resources/glossary/total-conversional-market",
+        "/services"
       ],
-      "inboundCount": 18,
+      "inboundCount": 22,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4051,7 +4144,7 @@
     },
     {
       "path": "/sitemap",
-      "title": "Site Map: Every Page on Myntmore",
+      "title": "Sitemap",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -4064,7 +4157,7 @@
     },
     {
       "path": "/tejasjhaveri",
-      "title": "Tejas Jhaveri",
+      "title": "Tejasjhaveri",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -4075,7 +4168,7 @@
     },
     {
       "path": "/thank-you",
-      "title": "Thanks, We've Got Your Details",
+      "title": "Thank You",
       "section": "other",
       "status": "orphan",
       "linkedFrom": [],
@@ -4087,7 +4180,7 @@
     },
     {
       "path": "/thankyou",
-      "title": "You're Booked!",
+      "title": "Thankyou",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -4102,7 +4195,7 @@
     },
     {
       "path": "/tools/battle-card-generator",
-      "title": "Competitor Battle Card Generator",
+      "title": "Battle Card Generator",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4118,7 +4211,7 @@
     },
     {
       "path": "/tools/case-study-generator",
-      "title": "Case Study & Proposal Generator",
+      "title": "Case Study Generator",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4151,7 +4244,7 @@
     },
     {
       "path": "/tools/dm-angle-generator",
-      "title": "Free DM Angle Generator for B2B Outreach",
+      "title": "Dm Angle Generator",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4183,7 +4276,7 @@
     },
     {
       "path": "/tools/icp-builder",
-      "title": "ICP Builder & Value Proposition Generator",
+      "title": "Icp Builder",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4201,7 +4294,7 @@
     },
     {
       "path": "/tools/lead-magnet-ideas",
-      "title": "Lead Magnet Idea Generator",
+      "title": "Lead Magnet Ideas",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4217,7 +4310,7 @@
     },
     {
       "path": "/tools/linkedin-hook-grader",
-      "title": "LinkedIn Hook Grader",
+      "title": "Linkedin Hook Grader",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4237,7 +4330,7 @@
     },
     {
       "path": "/tools/linkedin-optimizer",
-      "title": "LinkedIn Profile Optimizer",
+      "title": "Linkedin Optimizer",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4268,7 +4361,7 @@
     },
     {
       "path": "/tools/roi-calculator",
-      "title": "B2B Outreach ROI Calculator",
+      "title": "Roi Calculator",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
@@ -4285,7 +4378,7 @@
     },
     {
       "path": "/who-this-is-for",
-      "title": "You sell to businesses, not consumers",
+      "title": "Who This Is For",
       "section": "other",
       "status": "linked",
       "linkedFrom": [

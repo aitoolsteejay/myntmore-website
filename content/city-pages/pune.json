@@ -33,6 +33,23 @@
   "ogDescription": "Outbound lead generation for Pune's IT, SaaS and auto-component companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Pune",
   "badge": "Pune",
+  "emoji": "⚙️",
+  "floatingIcons": [
+    "⚙️",
+    "🚗",
+    "💻",
+    "🏍️"
+  ],
+  "hubs": [
+    "Hinjewadi",
+    "Kharadi",
+    "Magarpatta",
+    "Baner",
+    "Viman Nagar",
+    "Pimpri-Chinchwad",
+    "Chakan",
+    "Talegaon"
+  ],
   "h1": "B2B Lead Generation Company in Pune",
   "intro": "Looking for lead generation companies in Pune? Myntmore is a B2B lead generation company that builds and runs cold email, LinkedIn and ABM outreach for Pune's IT services, SaaS and auto-component firms. Campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -40,14 +57,17 @@
   "whyTitle": "Why Pune businesses need this",
   "why": [
     {
+      "icon": "💻",
       "title": "IT and SaaS teams across Hinjawadi, Magarpatta, and Kharadi",
       "desc": "From Hinjawadi IT Park to Magarpatta Cybercity and Kharadi, Pune's software and SaaS companies compete on engineering strength, but product alone does not fill a sales calendar. Without a repeatable outbound engine, even great products stay word-of-mouth secrets."
     },
     {
+      "icon": "⚙️",
       "title": "Auto-component and engineering makers across Chakan and Bhosari",
       "desc": "Reaching OEM buyers for manufacturers in Chakan, Bhosari, and Talegaon has traditionally meant trade fairs and supplier directories. A systematic outreach engine gets your precision engineering capabilities in front of new procurement heads year-round, not just at exhibitions."
     },
     {
+      "icon": "🧑‍💻",
       "title": "Great engineers, no one owning outbound",
       "desc": "A lot of Pune's most technically capable founders and teams have simply never had anyone dedicated to consistent outbound. It falls to whoever has time, which usually means it doesn't happen at all."
     }
@@ -129,14 +149,17 @@
   "segmentsIntro": "Our lead generation services in Pune are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💻",
       "title": "IT services and SaaS",
       "desc": "Software, product engineering and SaaS companies selling to enterprises and funded startups in India, the US and Europe, where the buyer is a CTO or business head who ignores generic pitches."
     },
     {
+      "icon": "⚙️",
       "title": "Auto-component and engineering manufacturers",
       "desc": "Suppliers selling to OEMs and Tier 1 buyers, in India and abroad, who want new procurement conversations year-round instead of waiting for the next trade fair."
     },
     {
+      "icon": "⚙️",
       "title": "Industrial exporters",
       "desc": "Engineering-goods and industrial-component makers reaching importers and sourcing teams overseas, with copy and sending times built for each market."
     }

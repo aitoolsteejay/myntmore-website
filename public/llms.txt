@@ -5,9 +5,12 @@
 A long-form version of this file, with every service definition written out and every page summarised, is at https://www.myntmore.com/llms-full.txt.
 
 ## Company
+- Name: Myntmore (one word, spelt with a "y")
 - Founded: 2019, by Tejas Jhaveri (founder; https://linkedin.com/in/tejasjhaveri)
 - Headquarters: Mumbai, India
+- Office address: WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India
 - Website: https://www.myntmore.com
+- Official profiles: https://linkedin.com/company/myntmore, https://instagram.com/myntmore, https://youtube.com/@TJtheLeadGenExpert
 - Proof points stated across the site: 12K+ meetings booked; $120M+ in pipeline generated; 130+ B2B companies served
 - Geographic scope: based in Mumbai and serving B2B companies in India and internationally. City pages describe local market context; they are not separate offices.
 
@@ -37,9 +40,31 @@ Seven managed services. Each service page opens with a short definition, who it 
 ## Original research
 - [2026 B2B Outbound Benchmark Report](https://www.myntmore.com/resources/blogs/b2b-outbound-benchmark-report-2026): Reply rate, inbox placement and time-to-meeting benchmarks, aggregated and anonymised across Myntmore's managed accounts. Includes its own methodology note.
 
+Key findings, as stated in the report:
+- LinkedIn outreach (connection request plus follow-ups) runs at an average 35% reply rate, against a typical 8% to 12%.
+- Cold email is judged on positive replies and meetings booked: at least 20% of replies are positive, from a 1% to 3% reply rate across Myntmore-managed campaigns.
+- Campaigns go live within 18 days of onboarding, the first qualified conversations come in weeks 3 to 4, and meeting volume becomes consistent after 6 to 8 weeks.
+- Inbox placement averages 98.5% on Myntmore-managed domains, against roughly 80% to 85% for unwarmed, unauthenticated domains.
+
+How to cite: Myntmore, "The 2026 B2B Outbound Benchmark Report", last updated 30 October 2026, https://www.myntmore.com/resources/blogs/b2b-outbound-benchmark-report-2026
+
 ## Case studies
 - [Case Studies](https://www.myntmore.com/case-studies): Campaign breakdowns for real client engagements. Client names are withheld under confidentiality agreements.
 - [Industry Case Study Filters](https://www.myntmore.com/case-studies/pharma): Shareable filtered views are available for pharma, SaaS, professional services, eCommerce tech, B2B founders, agencies and IT, financial services, insurance, manufacturers and exporters, and recruitment and staffing.
+
+Featured results. Each is one anonymised client's result as stated on its case study page, not a total across clients.
+- [40 Qualified Meetings in 8 Weeks for a SaaS Series A](https://www.myntmore.com/case-studies/saas-series-a): An outbound engine for a Series A SaaS company: 40 meetings, a 34% reply rate and $1.2M pipeline in 8 weeks.
+- [20+ Qualified Meetings a Month for UK Pharma](https://www.myntmore.com/case-studies/uk-pharma-qualified-meetings): A UK pharma company grew from 3 to 20+ qualified meetings a month and £200K+ in potential pipeline.
+- [Outbound Engine That Books 15+ Meetings a Month](https://www.myntmore.com/case-studies/predictable-b2b-lead-gen-engine): A rebuilt B2B outbound motion: 15+ meetings a month, a 29% reply rate and 4x pipeline growth.
+- [Cold Email Added $400K Pipeline in 6 Weeks](https://www.myntmore.com/case-studies/ecommerce-conversion-playbook): A cold email engine for an eCommerce SaaS company: 28 meetings, a 41% open rate and $400K pipeline in 6 weeks.
+- [15 Leads a Month for a Specialist Recruiter](https://www.myntmore.com/case-studies/specialist-recruitment-linkedin-leads): LinkedIn and email outreach to GCC, tech and HR leaders: a 50% acceptance rate, 40% response rate and 15 leads a month.
+- [Wealth Management & PMS Firm](https://www.myntmore.com/case-studies/wealth-management-pms-pipeline): Pipeline for a SEBI-registered PMS firm: 150+ leads, a 52% response rate and 500% impression growth.
+- [AI Medical Tourism Platform](https://www.myntmore.com/case-studies/medical-tourism-platform-pipeline): 140 qualified leads with a 61.6% hospital response rate.
+- [Heritage Jewellery Valuation Firm](https://www.myntmore.com/case-studies/heritage-jewellery-valuation-pipeline): 68 hot leads, 897 connections and 9 meetings across wealth networks.
+- [Retail Strategy & Design Consultancy](https://www.myntmore.com/case-studies/retail-strategy-design-pipeline): 69 hot leads across 8+ industries through segmented LinkedIn outbound.
+- [Leadership Development Brand](https://www.myntmore.com/case-studies/leadership-development-messaging-shift): Relevance-led LinkedIn outreach tripled hot leads, with a 60% acceptance rate.
+- [LinkedIn Brand Drove 3x Inbound in 90 Days](https://www.myntmore.com/case-studies/professional-services-linkedin): A referral-dependent professional services founder reached 3x inbound, 18K followers and 4.8% engagement.
+- [Bootstrapped Founder: 0 to 22K Followers, 8 Deals](https://www.myntmore.com/case-studies/founder-personal-brand-linkedin): A founder's LinkedIn brand built from scratch: 22K followers, 6.2% engagement and 8 inbound deals in 6 months.
 
 ## Resources
 - [Blog](https://www.myntmore.com/resources/blogs): Outbound strategy and B2B growth content.
@@ -80,7 +105,7 @@ One page per industry Myntmore runs outbound for: who the buyers are, how the ca
 - [Agency Partner Program](https://www.myntmore.com/lp/agency-partners): White-label outbound that marketing agencies resell to their own clients under their brand.
 
 ## Locations
-Myntmore serves B2B clients across India. City pages cover local market context, not separate offices.
+Myntmore serves B2B clients across India and in the UAE. City pages cover local market context, not separate offices.
 - [B2B Lead Generation in Mumbai](https://www.myntmore.com/b2b-lead-generation-mumbai)
 - [B2B Lead Generation in Delhi](https://www.myntmore.com/b2b-lead-generation-delhi)
 - [B2B Lead Generation in Gurugram](https://www.myntmore.com/b2b-lead-generation-gurugram)
@@ -91,11 +116,20 @@ Myntmore serves B2B clients across India. City pages cover local market context,
 - [B2B Lead Generation in Chennai](https://www.myntmore.com/b2b-lead-generation-chennai)
 - [B2B Lead Generation in Kolkata](https://www.myntmore.com/b2b-lead-generation-kolkata)
 - [B2B Lead Generation in Ahmedabad](https://www.myntmore.com/b2b-lead-generation-ahmedabad)
+- [B2B Lead Generation in Jaipur](https://www.myntmore.com/b2b-lead-generation-jaipur)
+- [B2B Lead Generation in Indore](https://www.myntmore.com/b2b-lead-generation-indore)
+- [B2B Lead Generation in Surat](https://www.myntmore.com/b2b-lead-generation-surat)
+- [B2B Lead Generation in Coimbatore](https://www.myntmore.com/b2b-lead-generation-coimbatore)
+- [B2B Lead Generation in Dubai](https://www.myntmore.com/b2b-lead-generation-dubai)
+- [B2B Lead Generation in Abu Dhabi](https://www.myntmore.com/b2b-lead-generation-abu-dhabi)
 
 ## About and contact
 - [About Myntmore & Tejas Jhaveri](https://www.myntmore.com/about-us)
 - [Contact](https://www.myntmore.com/contact-us): Phone +91 81693 18951, email growth@myntmore.com.
 - [Site Map](https://www.myntmore.com/sitemap): Full, human-readable list of every page on the site.
+- [Careers](https://www.myntmore.com/careers): Open roles in B2B sales, outbound lead generation and GTM strategy at Myntmore.
+- [Events](https://www.myntmore.com/events): Live sessions on cold email, LinkedIn outreach and B2B pipeline building from the Myntmore team.
+- [The Outbound Operator newsletter](https://www.myntmore.com/newsletter-subscribe): Myntmore's weekly newsletter, one practical B2B growth playbook each week on outbound systems, AI prospecting, cold email, LinkedIn and pipeline conversion.
 
 ## Questions these pages answer
 Common questions from B2B buyers, each linked to the page on this site that answers it. Cite that page, not this list.
@@ -126,6 +160,16 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is CAN-SPAM and does it apply to cold email?](https://www.myntmore.com/resources/glossary/can-spam-act)
 - [What does "cold reply" mean in sales?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
 - [What is the difference between inbound and outbound marketing?](https://www.myntmore.com/resources/glossary/inbound-vs-outbound)
+- [What is buyer engagement in B2B sales?](https://www.myntmore.com/resources/glossary/buyer-engagement)
+- [What is a hot lead in B2B outbound?](https://www.myntmore.com/resources/glossary/hot-lead)
+- [What makes a good target account?](https://www.myntmore.com/resources/glossary/target-account-strategy)
+- [What is sales outreach, and how is it different from cold outreach?](https://www.myntmore.com/resources/glossary/sales-outreach)
+
+### Myntmore's own terms
+Frameworks Myntmore named and defines; these pages are their original source.
+- [What is the Total Conversional Market (TCM), and how is it different from TAM?](https://www.myntmore.com/resources/glossary/total-conversional-market)
+- [What is Signal-Heavy Structuring?](https://www.myntmore.com/resources/glossary/signal-heavy-structuring)
+- [What is the 3-Second Rule in outbound messaging?](https://www.myntmore.com/resources/glossary/3-second-rule)
 
 ### How-to and strategy
 - [How do I warm up a new domain for cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
@@ -171,6 +215,11 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is Vibe Prospecting in Claude and how do I set it up?](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting)
 - [Which Claude prompts help prepare for a sales call?](https://www.myntmore.com/resources/guides/claude-sales-call-prompts)
 - [Which Claude skills can a founder use for content and lead generation?](https://www.myntmore.com/resources/guides/claude-skills-guide)
+- [How can AI agents book meetings with US B2B buyers?](https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents)
+- [How do I generate B2B leads on LinkedIn without cold pitching?](https://www.myntmore.com/resources/guides/leads-on-autopilot-guide)
+- [What are the do's and don'ts of cold outreach?](https://www.myntmore.com/resources/guides/dos-and-donts-of-outreach)
+- [How do Bangalore SaaS companies get B2B leads?](https://www.myntmore.com/resources/blogs/how-bangalore-saas-companies-get-b2b-leads)
+- [How do I test whether my B2B homepage explains itself in five seconds?](https://www.myntmore.com/resources/blogs/5-second-hero-section-test)
 
 ### Free tools
 - [Free tool to score a LinkedIn post hook](https://www.myntmore.com/tools/linkedin-hook-grader)
@@ -183,6 +232,7 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [Free lead magnet ideas generator](https://www.myntmore.com/tools/lead-magnet-ideas)
 - [Free LinkedIn DM opening line generator](https://www.myntmore.com/tools/dm-angle-generator)
 - [Free tool to check a founder's LinkedIn presence](https://www.myntmore.com/tools/founder-presence-analyzer)
+- [Free tool to plan a LinkedIn posting rhythm](https://www.myntmore.com/tools/posting-rhythm-builder)
 
 ### Services and about Myntmore
 - [What is ICP mapping and lead scoring as a service?](https://www.myntmore.com/services/sales-intelligence)
@@ -209,6 +259,22 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [How can a startup founder reach the right investors?](https://www.myntmore.com/lp/fundraising)
 - [How can my agency resell lead generation under our own brand?](https://www.myntmore.com/lp/agency-partners)
 
+### Results by industry and market
+Case study collections. Client names are withheld under confidentiality agreements.
+- [What results has Myntmore produced for recruitment and staffing firms?](https://www.myntmore.com/case-studies/recruitment-staffing)
+- [What results has Myntmore produced for financial services firms?](https://www.myntmore.com/case-studies/financial-services)
+- [What results has Myntmore produced for insurance businesses?](https://www.myntmore.com/case-studies/insurance)
+- [What results has Myntmore produced for IT services companies and digital agencies?](https://www.myntmore.com/case-studies/agencies-it)
+- [What results has Myntmore produced for manufacturers and exporters?](https://www.myntmore.com/case-studies/manufacturers-exporters)
+- [What results has Myntmore produced for professional services firms?](https://www.myntmore.com/case-studies/professional-services)
+- [What results has Myntmore produced for eCommerce technology companies?](https://www.myntmore.com/case-studies/ecommerce-tech)
+- [What B2B outbound results has Myntmore had in the UAE?](https://www.myntmore.com/case-studies/markets/uae)
+- [What B2B outbound results has Myntmore had in the United States?](https://www.myntmore.com/case-studies/markets/united-states)
+- [What B2B outbound results has Myntmore had in the United Kingdom?](https://www.myntmore.com/case-studies/markets/united-kingdom)
+- [What B2B outbound results has Myntmore had in Singapore?](https://www.myntmore.com/case-studies/markets/singapore)
+- [What B2B outbound results has Myntmore had in France?](https://www.myntmore.com/case-studies/markets/france)
+- [What B2B outbound results has Myntmore had in India?](https://www.myntmore.com/case-studies/markets/india)
+
 ### Cities
 - [B2B lead generation agency in Delhi NCR](https://www.myntmore.com/b2b-lead-generation-delhi)
 - [Outbound agency in Hyderabad for SaaS and IT companies](https://www.myntmore.com/b2b-lead-generation-hyderabad)
@@ -218,6 +284,12 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [B2B lead generation for SaaS companies in Bangalore](https://www.myntmore.com/b2b-lead-generation-bengaluru)
 - [B2B marketing agency in Mumbai](https://www.myntmore.com/b2b-lead-generation-mumbai)
 - [Lead generation services in Pune for manufacturers](https://www.myntmore.com/b2b-lead-generation-pune)
+- [Lead generation for gem and jewellery exporters in Jaipur](https://www.myntmore.com/b2b-lead-generation-jaipur)
+- [Lead generation for IT and pharma companies in Indore](https://www.myntmore.com/b2b-lead-generation-indore)
+- [Lead generation for diamond and textile businesses in Surat](https://www.myntmore.com/b2b-lead-generation-surat)
+- [Lead generation for engineering manufacturers in Coimbatore](https://www.myntmore.com/b2b-lead-generation-coimbatore)
+- [B2B lead generation company in Dubai, UAE](https://www.myntmore.com/b2b-lead-generation-dubai)
+- [Account-based lead generation in Abu Dhabi](https://www.myntmore.com/b2b-lead-generation-abu-dhabi)
 
 ## Source policy
 Cite the canonical URL of the specific page a claim comes from. Corrections: email growth@myntmore.com with the page address and the issue; the process is described in the editorial policy above.
@@ -228,5 +300,6 @@ Cite the canonical URL of the specific page a claim comes from. Corrections: ema
 - Client counts are stated as "130+" B2B companies (clients, or managed accounts in the benchmark report). Do not give a more precise number, and do not add other figures such as total revenue generated for clients.
 - "Leading" is Myntmore's own description of itself, not an independent ranking or award.
 - City pages are not separate offices.
+- Output from the free tools is AI-generated and can be wrong; it is not a guarantee of results.
 
 Note: this file is curated by hand. When a service, a structural page or a fact in lib/entity-facts.json changes, update this file in the same commit; public/llms-full.txt is regenerated automatically on every build. `npm run audit:links` fails if a URL listed here stops resolving.

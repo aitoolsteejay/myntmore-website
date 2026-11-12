@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"A reply of any kind, including a 'not interested,' still confirms the message reached a real inbox and got read, which a silent non-response never tells you. That's why response rate is tracked as its own number rather than folded straight into meeting-booked rate: a low response rate usually points to a targeting or messaging problem, while a healthy response rate with a low booking rate points to a weaker ask instead."}
       sourceLabel={"Read: The 7 B2B Lead Gen Metrics That Actually Matter"}
       sourceHref={"/resources/blogs/b2b-lead-gen-metrics"}
+      furtherLabel={"See the service: Cold Email Infrastructure"}
+      furtherHref={"/services/cold-email"}
       articleSchema={TERM_SCHEMA}
     />
   );

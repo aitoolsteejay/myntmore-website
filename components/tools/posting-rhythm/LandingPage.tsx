@@ -38,16 +38,16 @@ export function LandingPage({ onStart }: LandingPageProps) {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            Never Wonder{" "}
+            LinkedIn Posting{" "}
             <span className="relative inline-block">
-              What To Post Again
+              Schedule Planner
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Tell us your lifestyle, tone, and content strengths. Get the best days and times to post, a weekly routine, and ready-to-use post ideas, all built around how you actually work.
+            Never wonder what to post again. Tell us your lifestyle, tone, and content strengths, and get the best days and times to post, a weekly routine, and ready-to-use post ideas, all built around how you actually work.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Build My Rhythm

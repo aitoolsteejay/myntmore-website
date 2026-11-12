@@ -6,6 +6,7 @@ import { CASE_STUDY_FILTERS, caseStudyFilterFromSlug } from "@/lib/case-study-fi
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 type Props = { params: { filter: string } };
 
@@ -20,7 +21,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const description = `${filter} case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran.`;
   const url = `https://www.myntmore.com/case-studies/${params.filter}`;
   const audience = INDUSTRY_AUDIENCE[filter];
-  return {
+  return withPageSeo(`/case-studies/${params.filter}`, {
     title,
     description,
     keywords: [
@@ -32,7 +33,7 @@ export function generateMetadata({ params }: Props): Metadata {
     ],
     alternates: { canonical: url },
     openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore case studies" }] },
-  };
+  });
 }
 
 export default function FilteredCaseStudiesPage({ params }: Props) {

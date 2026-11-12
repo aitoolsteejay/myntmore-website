@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import InnerLayout from "../components/InnerLayout";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/thankyou", {
   title: "You're Booked!",
   description: "Your call with Myntmore is confirmed. We'll see you soon.",
   robots: { index: false, follow: true },
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     "myntmore call scheduled",
     "booking confirmation page",
   ],
-};
+});
 
 export default function ThankYouPage() {
   return (
