@@ -145,7 +145,7 @@ export default function ProspectResearchClient() {
         setBusy(false);
         return;
       }
-      setQuestions(d.questions);
+      if (d.questions?.length === 7) setQuestions(d.questions);
       found = d.prospects;
       setRows(found.map((p) => ({ ...p, state: "pending" })));
       setPhase("researching");

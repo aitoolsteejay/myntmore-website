@@ -87,7 +87,7 @@ describe("questions", () => {
     expect(q[0]).toContain("Logistics; 200+ staff; India");
     expect(q[1]).toBe("Raised funding in the last 12 months?");
     expect(q[2]).toBe("Said it will invest in warehouse automation?");
-    expect(q[4]).toContain("head of Operations");
+    expect(q[4]).toBe("Appointed a new Head of Operations in the last 12 months?");
     expect(q[6]).toMatch(/\(risk\)$/);
   });
 });

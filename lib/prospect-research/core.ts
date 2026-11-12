@@ -143,7 +143,7 @@ export function buildQuestions(p: Profile): string[] {
     "Raised funding in the last 12 months?",
     `Said it will invest in ${lower1(p.investArea || "the area your offer serves")}?`,
     `Hiring now for ${lower1(p.hiringRoles || "roles your offer helps with or replaces")}?`,
-    `Appointed a new ${lower1(p.buyerRole)} in the last 12 months?`,
+    `Appointed a new ${p.buyerRole} in the last 12 months?`,
     "Launched a new product, entered a new market or opened a new region in the last 12 months?",
     `Already uses ${lower1(p.competitors || "a direct competitor")}, or does this in-house? (risk)`,
   ];
