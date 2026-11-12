@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T09:56:56.050Z",
+  "generatedAt": "2026-11-12T10:03:27.494Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 296,
-    "linked": 262,
+    "total": 297,
+    "linked": 263,
     "orphan": 34,
     "noindex": 38,
     "notInXmlSitemap": 42,
@@ -90,9 +90,10 @@
       "linkedFrom": [
         "/",
         "/services",
-        "lib/city-links.ts"
+        "lib/city-links.ts",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -237,7 +238,7 @@
         "/founder-meeting",
         "/marketing-automation"
       ],
-      "inboundCount": 82,
+      "inboundCount": 83,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -1697,12 +1698,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1713,12 +1715,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1732,9 +1735,10 @@
         "/case-studies",
         "lib/internal-paths.ts",
         "/resources/blogs/cold-email-vs-linkedin-outreach",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/services/ai-lead-generation"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -1745,12 +1749,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2060,9 +2065,10 @@
         "/",
         "/resources/blogs/5-second-hero-section-test",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/resources/blogs/outbound-funnel-math-not-guesswork"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2248,7 +2254,7 @@
         "/who-this-is-for",
         "/resources/blogs"
       ],
-      "inboundCount": 11,
+      "inboundCount": 12,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2319,7 +2325,7 @@
         "/resources/blogs/cold-email-sequence-templates",
         "/resources/blogs/cold-email-vs-linkedin-outreach"
       ],
-      "inboundCount": 11,
+      "inboundCount": 12,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2348,9 +2354,10 @@
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/resources/blogs",
         "/resources/blogs/cold-email-deliverability-guide",
-        "/resources/blogs/cold-email-follow-up-sequence"
+        "/resources/blogs/cold-email-follow-up-sequence",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2420,9 +2427,10 @@
         "/resources/glossary/linkedin-outreach",
         "/resources/glossary/multi-channel-outreach",
         "lib/internal-paths.ts",
-        "/resources/blogs"
+        "/resources/blogs",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2505,6 +2513,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
+      "title": "How Bangalore SaaS Companies Get B2B Leads",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/blogs/how-to-write-a-linkedin-hook",
       "title": "How to Write a LinkedIn Hook (With Examples)",
       "section": "resources",
@@ -2529,10 +2550,11 @@
         "/resources/glossary/icp",
         "lib/internal-paths.ts",
         "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/resources/blogs",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3720,10 +3742,11 @@
         "/resources/guides/how-to-choose-an-outbound-agency",
         "/resources/guides",
         "/resources/blogs/agency-vs-in-house",
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting",
         "/resources/blogs/what-is-b2b-outbound-sales"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
