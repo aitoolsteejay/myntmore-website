@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import FounderPresenceClient from "./FounderPresenceClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/founder-presence-analyzer", {
   title: "Founder Presence Analyzer",
   description: "Free AI tool that benchmarks your LinkedIn presence against competitors and gives you positioning recommendations. Try it free.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/founder-presence-analyzer" },
   ...buildToolSocialMetadata("Founder Presence Analyzer", "Free AI tool that benchmarks your LinkedIn presence against competitors and gives you positioning recommendations. Try it free.", "/tools/founder-presence-analyzer"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Founder Presence Analyzer",

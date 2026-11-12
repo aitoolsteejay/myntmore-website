@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import BattleCardGeneratorClient from "./BattleCardGeneratorClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/battle-card-generator", {
   title: "Competitor Battle Card Generator",
   description: "Free AI tool that researches a competitor live and builds a sales battle card: strengths, gaps, and how to position against them. Try it free.",
   keywords: [
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/battle-card-generator" },
   ...buildToolSocialMetadata("Competitor Battle Card Generator", "Free AI tool that researches a competitor live and builds a sales battle card: strengths, gaps, and how to position against them. Try it free.", "/tools/battle-card-generator"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Competitor Battle Card Generator",

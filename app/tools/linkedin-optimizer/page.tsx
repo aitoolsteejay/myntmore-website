@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import ProfileOptimizerClient from "./ProfileOptimizerClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/linkedin-optimizer", {
   title: "LinkedIn Profile Optimizer",
   description: "Free AI-powered LinkedIn profile audit and rewrite. Get a profile optimised to convert visitors into high-intent inbound replies.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/linkedin-optimizer" },
   ...buildToolSocialMetadata("LinkedIn Profile Optimizer", "Free AI-powered LinkedIn profile audit and rewrite. Get a profile optimised to convert visitors into high-intent inbound replies.", "/tools/linkedin-optimizer"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "LinkedIn Profile Optimizer",

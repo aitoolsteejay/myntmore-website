@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "../th/CalendarPageClient";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/calendar/linkedin", {
   title: "LinkedIn Outbound Diagnostic with Tejas Jhaveri",
   description:
     "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. We'll audit your LinkedIn connection sequences, founder profile positioning, and reply rates.",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/calendar/linkedin",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function CalendarLinkedInPage() {
   return (

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "../th/CalendarPageClient";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/calendar/event-led-growth", {
   title: "Event-Led Growth Strategy Session",
   description:
     "Pick a 25-minute slot with Tejas Jhaveri, Founder of Myntmore. We'll map how to turn executive roundtables, webinars, and events into predictable enterprise pipeline.",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/calendar/event-led-growth",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function EventLedGrowthCalendarPage() {
   return (

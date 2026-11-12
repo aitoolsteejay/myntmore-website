@@ -4,6 +4,7 @@ import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PHONE = "+918169318951";
 const WHATSAPP_URL = "https://wa.me/918169318951";
@@ -11,7 +12,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/enwill-ferrnandes/";
 const EMAIL = "enwil@myntmore.com";
 const NEWSLETTER_URL = "/newsletter-subscribe";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/enwilfernandes", {
   title: "Enwil Fernandes",
   description: "Enwil Fernandes, Senior Sales Head at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
   alternates: { canonical: `${SITE_URL}/enwilfernandes` },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/enwilfernandes`,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",

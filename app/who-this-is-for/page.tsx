@@ -7,12 +7,13 @@ import JsonLd from "../components/JsonLd";
 import AskYourAI from "../components/AskYourAI";
 import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/who-this-is-for`;
 const TITLE = "Who Is Myntmore For? Who We Work With (and Don't)";
 const DESCRIPTION = "Myntmore runs B2B cold email, LinkedIn and ABM as one system. See which B2B teams it fits, who it doesn't, and whether to book a call.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/who-this-is-for", {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: TITLE,

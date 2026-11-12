@@ -5,6 +5,7 @@ import FadeIn from "../../components/FadeIn";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -21,7 +22,7 @@ const TOOLS_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/tools", {
   title: "Free B2B Lead Generation Tools",
   description: "Free AI-powered tools for B2B founders: optimise your LinkedIn profile, generate outreach angles, and build a stronger pipeline. No sign-up required.",
   keywords: [
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/tools",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const FREE_TOOLS = [
   {

@@ -4,6 +4,7 @@
 
 | Collection | Where files live | What reads them |
 |---|---|---|
+| Page search titles (every hand-written page: home, about, contact, careers, tools, guides, calendar and so on) | `content/page-seo/<page>.json` | the page's `<title>` and meta description, through `withPageSeo()` in `lib/page-seo.ts` (via `npm run page-seo:build`) |
 | Homepage FAQs | `content/faqs/homepage/*.json` | homepage FAQ section and its FAQPage schema (via `npm run faqs:build`) |
 | FAQs on every other page (services, city pages, ICP landing pages, guides, blog posts, tools) | `content/faqs/pages/<page>.json` | the page itself, through `lib/page-faqs.ts`, and its FAQPage schema |
 | ICP landing pages (all 9 `/lp/*` pages) | `content/landing-pages/<slug>.json` | `app/lp/<slug>/page.tsx` is generated from it at every build and rendered by `components/lp/LandingPage.tsx` |
@@ -12,6 +13,13 @@
 | Case studies, detailed (20 of 32 hand-written pages) | `content/case-study-pages/<slug>.json` | `app/case-studies/<slug>/page.tsx` generated at every build, the card on the `/case-studies` listing (`lib/case-study-detail-cards.generated.json`) and the sitemap entry |
 | Case studies | `content/case-studies/*.json` | `lib/case-study-library.json`, then one generated page and sitemap entry per case (both rebuilt on every deploy) |
 | Blog posts | `content/posts/*.mdoc` | `app/resources/blogs/[slug]/page.tsx`, the blog index, `sitemap.xml`, `llms-full.txt` |
+
+Search titles and descriptions: every page on the site has its title and description in the admin. Where depends on the page:
+
+- Blog posts, glossary terms, landing pages, city pages, service pages and case studies: on that page's own entry (**Search title**, **Search description**). For the short case studies under **Case studies** both are optional; left empty they are built from the client type, title and results.
+- Every other page (homepage, about, contact, careers, tools, guides, calendar pages, case-study industry and market filters, and so on): under **Page search titles**, one entry per page address. Type the title exactly as Google should show it, including " | Myntmore".
+
+A new hand-written page needs a developer once: add its entry under `content/page-seo/` and wrap its metadata in `withPageSeo("/address", { ... })`. Until then `npm run build` warns that the page has no search title in the admin.
 
 To change FAQs on any page: admin, **Page FAQs**, open the page's entry (names start with `city-`, `lp-`, `service-`, `blog-`, `guide-`, `tool-`), edit or drag questions, save. The answer text and the page's FAQPage schema update together on the next deploy. Adding FAQs to a page that has none yet needs a developer to connect the page once.
 
@@ -37,7 +45,7 @@ A post gets, with no code: the page, canonical tag, Open Graph tags, Article sch
 npm run dev
 ```
 
-Open http://localhost:3100/keystatic, pick **Blog posts**, **Add**. Saving writes a file into the repo. Commit and push it to `master` like any other change; Vercel then deploys.
+Open http://localhost:3000/keystatic, pick **Blog posts**, **Add**. Saving writes a file into the repo. Commit and push it to `master` like any other change; Vercel then deploys.
 
 After adding or publishing a post run `npm run llms:build` and commit the updated `public/llms-full.txt` (the prebuild step also regenerates it).
 
@@ -46,7 +54,7 @@ After adding or publishing a post run `npm run llms:build` and commit the update
 This is what lets non-developers publish without a code editor. Sign-in is GitHub, so only people with write access to the repository can edit. Each save becomes a commit, and Vercel deploys it.
 
 1. In `.env.local` on your computer add `NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO=aitoolsteejay/ClaudeCode`.
-2. Run `npm run dev`, open http://localhost:3100/keystatic. Keystatic offers to **create a GitHub app**. Accept; it writes four values into `.env.local`: `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`.
+2. Run `npm run dev`, open http://localhost:3000/keystatic. Keystatic offers to **create a GitHub app**. Accept; it writes four values into `.env.local`: `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`.
 3. In GitHub, Settings, Developer settings, GitHub Apps, open the new app and add this callback URL next to the localhost one: `https://www.myntmore.com/api/keystatic/github/oauth/callback`. Install the app on the repository.
 4. In Vercel, Project Settings, Environment Variables, add the four values from step 2 plus `NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO`, for Production. Redeploy.
 5. Open https://www.myntmore.com/keystatic and sign in with GitHub.

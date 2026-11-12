@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import LeadMagnetIdeasClient from "./LeadMagnetIdeasClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/lead-magnet-ideas", {
   title: "Lead Magnet Idea Generator",
   description: "Free AI tool that turns your business, ICP, and industry into concrete lead magnet ideas you can use in cold email and LinkedIn outreach.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/lead-magnet-ideas" },
   ...buildToolSocialMetadata("Lead Magnet Idea Generator", "Free AI tool that turns your business, ICP, and industry into concrete lead magnet ideas you can use in cold email and LinkedIn outreach.", "/tools/lead-magnet-ideas"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Lead Magnet Idea Generator",

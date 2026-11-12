@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import RoiCalculatorSwitcher from "./RoiCalculatorSwitcher";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/roi-calculator", {
   title: "B2B Outreach ROI Calculator",
   description: "Free ROI calculator for B2B outbound. Estimate the pipeline and revenue you could generate from cold email and LinkedIn outreach.",
   keywords: [
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/roi-calculator" },
   ...buildToolSocialMetadata("B2B Outreach ROI Calculator", "Free ROI calculator for B2B outbound. Estimate the pipeline and revenue you could generate from cold email and LinkedIn outreach.", "/tools/roi-calculator"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "ROI Calculator",

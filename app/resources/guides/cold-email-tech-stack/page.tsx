@@ -11,13 +11,14 @@ import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/cold-email-tech-stack";
 const ACCENT = "#EA580C";
 const TITLE = "Cold Email Tech Stack & Sequence Behind $7K";
 const DESCRIPTION = "The exact cold email tech stack (Clay, Smartlead, BounceBan) and 3-email sequence that got Myntmore an extra $7,000 in revenue. Copy the templates free.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/cold-email-tech-stack", {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: "Cold email sequence & tech stack that got us an additional $7,000 in revenue",

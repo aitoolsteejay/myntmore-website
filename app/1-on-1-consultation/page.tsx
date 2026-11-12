@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const CONSULTATION_SCHEMA = [
   buildBreadcrumbSchema([
@@ -19,7 +20,7 @@ const CONSULTATION_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/1-on-1-consultation", {
   title: "1-on-1 B2B Growth Consultation | Free GTM Audit",
   description: "Book a 1-on-1 consultation with Tejas Jhaveri, B2B growth expert. Free GTM audit: outreach review, ICP mapping. No pitch, no pressure.",
   alternates: { canonical: "https://www.myntmore.com/1-on-1-consultation" },
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/1-on-1-consultation",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function OneOnOneConsultation() {
   return (

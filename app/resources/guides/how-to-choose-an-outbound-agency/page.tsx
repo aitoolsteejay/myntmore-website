@@ -11,6 +11,7 @@ import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-an-outbound-agency`;
 const TITLE = "How to Choose a B2B Outbound Agency";
@@ -18,7 +19,7 @@ const DESCRIPTION = "A neutral checklist for vetting B2B outbound agencies: what
 
 const AI_RESOURCES = [PAGE_URL, `${SITE_URL}/resources/blogs/agency-vs-in-house`, `${SITE_URL}/resources/blogs/b2b-outbound-benchmark-report-2026`];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/how-to-choose-an-outbound-agency", {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: TITLE,

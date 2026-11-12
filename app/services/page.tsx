@@ -9,8 +9,9 @@ import { buildFaqSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/services", {
   title: "AI-Powered B2B Lead Generation Services",
   description: "Seven productized B2B growth services: LinkedIn, Cold Email, ICP Mapping, AI Lead Gen, ABM, Personal Branding, GTM Strategy. Book a free audit.",
   alternates: { canonical: "https://www.myntmore.com/services" },
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/services",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const SERVICES = [
   { number: "01", title: "LinkedIn Outreach & Automation", tagline: "Conversations happening in your LinkedIn inbox. Every week.", desc: "Multi-touch sequences that mimic human behaviour and generate replies from the right people. We manage everything from profile audit to reply handoff.", href: "/services/linkedin-outreach", hoverClass: "card-hover-linkedin", accentColor: "#0077b5", stats: [{ v: "48%", l: "Avg acceptance rate" }, { v: "21%", l: "Avg reply rate" }] },

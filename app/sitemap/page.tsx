@@ -9,8 +9,9 @@ import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
 import glossaryCards from "@/lib/glossary-index.generated.json";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/sitemap", {
   title: { absolute: "Site Map: Every Page on Myntmore" },
   description: "Every page on Myntmore, organised by section: services, case studies, blog posts, guides, the glossary, free tools, careers and more.",
   alternates: { canonical: "https://www.myntmore.com/sitemap" },
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     "myntmore resources index",
     "site map",
   ],
-};
+});
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },

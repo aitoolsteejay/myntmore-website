@@ -80,7 +80,15 @@ const cases = fs
     if (seen.has(slug)) throw new Error(`duplicate slug ${slug}`);
     seen.add(slug);
     const picked = Object.fromEntries(KEYS.map((k) => [k, c[k]]));
-    return { ...picked, metaDescription: metaDescription(picked), keywords: keywords(picked) };
+    // Optional overrides from the admin; empty fields fall back to the generated values.
+    const metaTitle = (c.metaTitle || "").trim();
+    const customDescription = (c.metaDescription || "").trim();
+    return {
+      ...picked,
+      ...(metaTitle ? { metaTitle } : {}),
+      metaDescription: customDescription || metaDescription(picked),
+      keywords: keywords(picked),
+    };
   })
   .sort((a, b) => a.n - b.n || a.slug.localeCompare(b.slug));
 

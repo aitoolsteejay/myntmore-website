@@ -8,8 +8,9 @@ import SubmitButton from "../components/SubmitButton";
 import { buildLocalBusinessSchema } from "@/lib/schema";
 import { LeadSourceField } from "../components/LeadSource";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/contact-us", {
   title: { absolute: "Contact Myntmore | Book a Free B2B GTM Audit" },
   description: "Book a free 30-minute B2B GTM audit with Myntmore. We'll map your ICP and find what's holding your pipeline back. No pitch, no pressure.",
   alternates: { canonical: "https://www.myntmore.com/contact-us" },
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/contact-us",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const CONTACT_CARDS = [
   { icon: "📅", title: "Free GTM Audit", value: "30-minute strategy call", href: "/book-a-call", cta: "Book free call" },

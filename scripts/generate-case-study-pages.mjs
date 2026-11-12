@@ -20,7 +20,8 @@ const lib = JSON.parse(fs.readFileSync(path.join(ROOT, "lib", "case-study-librar
 // Keep in step with libraryMetaTitle / libraryMetaDescription in lib/case-study-library.ts
 // (the page component reads that one for the structured data). The description and keywords
 // are derived once, by scripts/generate-case-study-content.mjs, and stored in the JSON.
-const metaTitle = (c) => `${c.segment} Case Study`;
+// The admin can set its own search title; otherwise "<client type> Case Study".
+const metaTitle = (c) => c.metaTitle || `${c.segment} Case Study`;
 const metaDescription = (c) => c.metaDescription;
 // og:site_name already carries the brand, and X cuts card titles at 70 characters.
 const ogTitle = (c) => (c.title.length <= 70 ? c.title : `${metaTitle(c)} | Myntmore`);

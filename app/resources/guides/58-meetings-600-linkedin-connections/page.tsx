@@ -37,12 +37,13 @@ import { buildArticleSchema } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/58-meetings-600-linkedin-connections";
 const BLUE = "#0077b5";
 const DESCRIPTION = "The 5-step LinkedIn lead generation framework behind 58 meetings from 600 connections in a month: ICP, positioning, warm-up, follow-ups. Read the guide.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/58-meetings-600-linkedin-connections", {
   // A string literal on purpose: the site audit script reads the page title from it.
   title: "58 Meetings Booked from 600 LinkedIn Connections",
   description: DESCRIPTION,
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: "58 Meetings Booked from 600 LinkedIn Connections in 1 Month",

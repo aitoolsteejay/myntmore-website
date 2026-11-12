@@ -11,13 +11,14 @@ import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/claude-sales-call-prompts";
 const ACCENT = "#0891B2";
 const TITLE = "5 Claude Prompts for Sales Calls (Copy-Paste)";
 const DESCRIPTION = "Five copy-paste Claude prompts for sales calls: meeting prep, discovery questions, objection prep, call openers and follow-up. Copy them free.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/claude-sales-call-prompts", {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: "The 5 Claude prompts I use before every sales call",

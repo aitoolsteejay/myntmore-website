@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import GrowthPlansPricing, { type GrowthPlansPricingProps } from "@/components/pricing/GrowthPlansPricing";
 import type { PlanetKind } from "@/components/pricing/OrbitHero";
+import { withPageSeo } from "@/lib/page-seo";
 
 // Private, unlisted pricing pages for direct sharing with prospects,
 // distinguished only by an easy-to-say code rather than a region name in
@@ -41,11 +42,11 @@ const PLANS: Record<string, Pick<GrowthPlansPricingProps, "currencyPrefix" | "cu
   },
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/plans/[code]", {
   title: "Growth Plans",
   description: "LinkedIn growth and lead generation plans.",
   robots: { index: false, follow: false },
-};
+});
 
 export default function PlansPage({ params }: { params: { code: string } }) {
   if (params.code === "orbit") {

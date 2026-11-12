@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import CaseStudyGeneratorClient from "./CaseStudyGeneratorClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/case-study-generator", {
   title: "Case Study & Proposal Generator",
   description: "Free AI tool that turns a finished project into a case study, or a conversation into a proposal draft. No invented numbers. Try it free.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/case-study-generator" },
   ...buildToolSocialMetadata("Case Study & Proposal Generator", "Free AI tool that turns a finished project into a case study, or a conversation into a proposal draft. No invented numbers. Try it free.", "/tools/case-study-generator"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Case Study & Proposal Generator",

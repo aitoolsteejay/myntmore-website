@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import DmAngleGeneratorClient from "./DmAngleGeneratorClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/dm-angle-generator", {
   title: "Free DM Angle Generator for B2B Outreach",
   description: "Free AI tool that generates 5 psychology-aligned DM opening angles for your outreach, tailored to your industry, ICP role, and offer.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/dm-angle-generator" },
   ...buildToolSocialMetadata("Free DM Angle Generator for B2B Outreach", "Free AI tool that generates 5 psychology-aligned DM opening angles for your outreach, tailored to your industry, ICP role, and offer.", "/tools/dm-angle-generator"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "DM Angle Generator",

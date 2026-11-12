@@ -5,17 +5,18 @@ import FadeIn from "../components/FadeIn";
 import AnimatedDisclosure from "@/components/value-prop/AnimatedDisclosure";
 import ValuePropExplorer from "@/components/value-prop/ValuePropExplorer";
 import { DIRECTION, FLOW, ICPS, META, SECTIONS, STATUS_GROUPS, pad } from "@/lib/value-prop";
+import { withPageSeo } from "@/lib/page-seo";
 
 // Internal strategy reference (the Notion value proposition template for all 29 ICPs).
 // Unlisted: noindex, not in the sitemap or any nav, and kept off /site-audit
 // (see isPrivate in scripts/generate-site-map.mjs). Its priorities and pricing notes are
 // hypotheses the source itself says must not be presented externally as facts.
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/value-prop", {
   title: "Value Proposition",
   description: "Customer pain, solution, benefit, proof and message, mapped for all 29 ICPs, with the provisional 2026 ICP direction.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.myntmore.com/value-prop" },
-};
+});
 
 const INK = "#0A0A0A";
 const BODY = "#52525B";

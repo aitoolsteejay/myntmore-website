@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import ICPBuilderClient from "./ICPBuilderClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/icp-builder", {
   title: "ICP Builder & Value Proposition Generator",
   description: "Free AI tool that builds deep B2B and D2C ICPs from your business description, plus a value proposition for each. Try it free.",
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/icp-builder" },
   ...buildToolSocialMetadata("ICP Builder & Value Proposition Generator", "Free AI tool that builds deep B2B and D2C ICPs from your business description, plus a value proposition for each. Try it free.", "/tools/icp-builder"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "ICP Builder & Value Proposition Generator",

@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import PostingRhythmClient from "./PostingRhythmClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/posting-rhythm-builder", {
   title: "Posting Rhythm Builder",
   description: "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.",
   keywords: [
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/posting-rhythm-builder" },
   ...buildToolSocialMetadata("Posting Rhythm Builder", "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.", "/tools/posting-rhythm-builder"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Posting Rhythm Builder",

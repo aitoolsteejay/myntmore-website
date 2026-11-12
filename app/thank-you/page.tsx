@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import InnerLayout from "../components/InnerLayout";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/thank-you", {
   title: "Thanks, We've Got Your Details",
   description: "Thanks for reaching out to Myntmore. We've received your details and will follow up within 24 hours.",
   robots: { index: false, follow: true },
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     "myntmore lead form thank you",
     "myntmore follow up confirmation",
   ],
-};
+});
 
 export default function ThankYouLeadFormPage() {
   return (

@@ -9,6 +9,7 @@ import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/li
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -25,7 +26,7 @@ const BLOGS_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/blogs", {
   title: "B2B Lead Generation Blog",
   description: "In-depth guides on cold email, ICP mapping, LinkedIn outreach, deliverability, and outbound metrics, written by the team that has booked 12K+ B2B meetings.",
   keywords: [
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/blogs",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 // Cards for pages that are not blog posts. Every blog post is a CMS post (content/posts) and
 // supplies its own card; `order` places a card among them (lowest first).

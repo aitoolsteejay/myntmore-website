@@ -5,8 +5,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/systems-ai-automation-intern", {
   title: "AI Automation Intern, Mumbai | Rs 7-20K/mo",
   description: "Join Myntmore as Systems & AI Automation Intern in BKC, Mumbai. Build AI agents, n8n/Clay automations, and own SEO/AEO/GEO. WFO, apply now.",
   keywords: ["ai automation internship mumbai", "systems intern mumbai", "n8n internship india", "ai agents internship", "automation internship with ppo", "clay apollo internship", "seo aeo geo internship", "vibe coding internship", "python automation internship mumbai", "myntmore careers", "ai automation intern jobs mumbai"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/systems-ai-automation-intern",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for Systems and AI Automation Intern";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;
