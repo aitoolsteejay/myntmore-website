@@ -5,14 +5,14 @@ import CityPage from "@/components/city/CityPage";
 import data from "@/content/city-pages/bengaluru.json";
 
 export const metadata: Metadata = {
-  title: "B2B Lead Gen Agency in Bangalore (Bengaluru)",
-  description: "B2B lead generation services in Bangalore for SaaS, IT services and tech companies: cold email, LinkedIn outreach and ABM, live within 18 days.",
+  title: "Lead Generation Companies in Bangalore for SaaS",
+  description: "Comparing lead generation companies in Bangalore? Myntmore runs outbound for B2B SaaS: cold email, LinkedIn and ABM that book demos in India and the US.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-bengaluru" },
-  keywords: ["b2b lead generation agency in bangalore","lead generation company in bangalore","sales lead generation companies in bangalore","lead generation services in bangalore","b2b lead generation bengaluru","outbound agency bangalore","linkedin outreach bengaluru","cold email agency bangalore saas","account based marketing bengaluru","ai lead generation bangalore","abm agency bengaluru","sales intelligence bangalore","b2b lead generation for saas companies bangalore","demand generation agency bangalore","lead generation for tech startups bengaluru","outbound agency for deep tech startups bangalore","b2b leads for saas companies expanding to us market","linkedin ghostwriting for founders bangalore","best b2b outbound agency in bangalore","how to get b2b leads in bengaluru","cold email agency for b2b saas india","b2b lead generation company in bengaluru","lead generation agency in bangalore","appointment setting services bengaluru","outbound sales agency bengaluru"],
+  keywords: ["lead generation companies in bangalore","saas lead generation agency bangalore","lead generation company in bangalore for saas","b2b lead generation agency in bangalore","lead generation company in bangalore","sales lead generation companies in bangalore","lead generation services in bangalore","b2b lead generation bengaluru","outbound agency bangalore","linkedin outreach bengaluru","cold email agency bangalore saas","account based marketing bengaluru","ai lead generation bangalore","abm agency bengaluru","sales intelligence bangalore","b2b lead generation for saas companies bangalore","demand generation agency bangalore","lead generation for tech startups bengaluru","outbound agency for deep tech startups bangalore","b2b leads for saas companies expanding to us market","linkedin ghostwriting for founders bangalore","best b2b outbound agency in bangalore","how to get b2b leads in bengaluru","cold email agency for b2b saas india","b2b lead generation company in bengaluru","lead generation agency in bangalore","appointment setting services bengaluru","outbound sales agency bengaluru"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation Agency in Bangalore (Bengaluru) | Myntmore",
-    description: "Outbound lead generation for Bangalore's SaaS, IT services and tech companies: cold email, LinkedIn and ABM.",
+    title: "Lead Generation Companies in Bangalore for B2B SaaS | Myntmore",
+    description: "Outbound lead generation built for Bangalore's B2B SaaS companies: cold email, LinkedIn and ABM that book demos in India and abroad.",
     url: "https://www.myntmore.com/b2b-lead-generation-bengaluru",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },

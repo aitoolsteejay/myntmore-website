@@ -51,6 +51,31 @@
       "desc": "The city's long-established financial services base has real credibility, but much of its new-business generation still depends on personal networks rather than a repeatable outbound system."
     }
   ],
+  "proofTitle": "Results for healthcare suppliers and engineering firms like Kolkata's",
+  "proofIntro": "Kolkata's B2B economy is healthcare supply, engineering, trading and financial services. These are real engagements from those industries.",
+  "proof": [
+    {
+      "label": "140 qualified leads for a medical tourism platform",
+      "href": "/case-studies/medical-tourism-platform-pipeline",
+      "result": "140 qualified leads, with a 61.6% response rate from hospital decision-makers."
+    },
+    {
+      "label": "Reaching dermatologists beyond the field team's coverage",
+      "href": "/case-studies/pharma-india-dermatologist-outreach",
+      "result": "72 webinar attendees, 24 medical-team discussions and 18 field visits agreed, in India."
+    },
+    {
+      "label": "2.1x more positive replies for an engineering goods exporter",
+      "href": "/case-studies/manufacturers-exporters-engineering-goods-replies",
+      "result": "Positive reply rates up 2.1x, with 11 active commercial opportunities and 5 technical discussions."
+    },
+    {
+      "label": "18 prospect conversations for a financial advisory practice",
+      "href": "/case-studies/financial-services-advisory-conversations",
+      "result": "18 relevant prospect conversations, with 4 high-fit prospects entering the advisory pipeline."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Kolkata: they are the engagements closest to Kolkata's industries.",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [

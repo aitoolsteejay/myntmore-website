@@ -76,6 +76,25 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
       </section>
 
 
+      {d.proof.length > 0 && (
+        <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{d.proofTitle}</h2>
+            <p className="text-base mb-10" style={{ color: "#52525B" }}>{d.proofIntro}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {d.proof.map((p) => (
+                <Link key={p.href} href={p.href} className="group flex flex-col rounded-2xl border p-5 transition-all duration-200 hover:shadow-md" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
+                  <span className="text-xs font-black uppercase tracking-[0.18em] mb-2" style={{ color: "#A14A08" }}>Case study</span>
+                  <h3 className="text-base font-black mb-2 group-hover:underline" style={{ color: "#0a0a0a" }}>{p.label}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#52525B" }}>{p.result}</p>
+                </Link>
+              ))}
+            </div>
+            <p className="text-sm mt-6" style={{ color: "#52525B" }}><Rich text={d.proofNote} /></p>
+          </div>
+        </section>
+      )}
+
       {d.segments.length > 0 && (
         <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
           <div className="max-w-4xl mx-auto">

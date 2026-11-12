@@ -12,6 +12,8 @@ import Faq from "@/app/lp/Faq";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import type { LandingPageData } from "./landing-page-data";
 import { LeadSourceField } from "@/app/components/LeadSource";
+import CityLinks from "@/app/components/CityLinks";
+import { LANDING_PAGE_INDUSTRY } from "@/lib/city-links";
 
 // One template for every ICP landing page (/lp/<slug>). The text comes from
 // content/landing-pages/<slug>.json; the markup below is what each page used to carry.
@@ -559,6 +561,11 @@ export default function LandingPage({ data: d }: { data: LandingPageData }) {
       {d.scenarios.length > 0 && <ScenariosSection d={d} />}
       {d.whyCards.length > 0 && <WhySection d={d} />}
       <Faq title={d.faqTitle} items={faqItems} />
+      <CityLinks
+        industry={LANDING_PAGE_INDUSTRY[d.slug]}
+        heading="Where we run this in India"
+        intro="City by city: the local industries we write for, and what outbound looks like there."
+      />
       <DarkCTASection d={d} />
       <FormSection d={d} />
     </LpLayout>

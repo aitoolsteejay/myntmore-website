@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import AnswerBlock from "../../components/AnswerBlock";
 import RelatedPath from "../../components/RelatedPath";
+import CityLinks from "@/app/components/CityLinks";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
@@ -393,6 +394,7 @@ export default function AiLeadGenerationClient() {
       </section>
 
             <RelatedPath heading="See it in action" intro="A case study, the thinking behind it, and the next step." items={SERVICE_PATHS["ai-lead-generation"]} accent="#3b82f6" />
+            <CityLinks intro="We run AI lead generation for B2B companies across India. See how it works for the industries in your city." />
 
 <section className="relative py-28 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>
         <div ref={ctaBlob1} aria-hidden style={{ position: "absolute", top: "50%", left: "25%", width: 600, height: 600, marginTop: -300, marginLeft: -300, borderRadius: "50%", background: "radial-gradient(circle, rgba(59,130,246,0.25) 0%, rgba(99,102,241,0.1) 40%, transparent 70%)", filter: "blur(65px)", pointerEvents: "none", willChange: "transform" }} />

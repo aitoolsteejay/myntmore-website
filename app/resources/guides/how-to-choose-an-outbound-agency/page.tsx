@@ -10,6 +10,7 @@ import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
+import CityLinks from "@/app/components/CityLinks";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-an-outbound-agency`;
 const TITLE = "How to Choose a B2B Outbound Agency";
@@ -171,6 +172,8 @@ export default function HowToChooseOutboundAgencyPage() {
       <Faq badge="FAQ" title="Common questions" items={FAQ_ITEMS.map((f) => ({ q: f.question, a: f.answer }))} />
 
       {/* Final CTA */}
+      <CityLinks heading="B2B lead generation agencies by Indian city" intro="What outbound looks like in each city we cover, by the industries that cluster there." />
+
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-2xl p-8 sm:p-12 text-center" style={{ background: "linear-gradient(135deg, #FEF9EC 0%, #FFFFFF 100%)", border: "1px solid rgba(245,183,49,0.35)", boxShadow: "0 8px 30px rgba(0,0,0,0.04)" }}>

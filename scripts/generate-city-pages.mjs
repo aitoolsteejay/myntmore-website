@@ -49,6 +49,14 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const d = { ...JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")), slug };
   for (const k of REQUIRED) if (!d[k]) problems.push(`${f}: "${k}" is empty`);
   for (const [k, n] of [["why", 3], ["services", 7], ["differentiators", 4]]) if (!Array.isArray(d[k]) || d[k].length !== n) problems.push(`${f}: "${k}" must have exactly ${n} items`);
+  if (!Array.isArray(d.proof)) problems.push(`${f}: "proof" must be a list (empty hides the block)`);
+  else {
+    if (d.proof.length && !d.proofTitle) problems.push(`${f}: "proofTitle" is empty`);
+    for (const p of d.proof) {
+      const m = /^\/case-studies\/([a-z0-9-]+)$/.exec(p.href || "");
+      if (!m || !fs.existsSync(path.join(root, "app/case-studies", m[1], "page.tsx"))) problems.push(`${f}: proof link ${p.href} is not a case study page`);
+    }
+  }
   if (d.segments.length && d.segments.length !== 3) problems.push(`${f}: "segments" must have exactly 3 items, or none`);
   if (d.metaTitle && d.metaTitle.length + " | Myntmore".length > 60) console.warn(`[city-pages] warning: ${f}: search title is ${d.metaTitle.length + 11} characters with the site suffix, over 60 (Google may cut it)`);
   if (!sitemap.includes(`/b2b-lead-generation-${slug}\``)) console.warn(`[city-pages] warning: /b2b-lead-generation-${slug} is not listed in app/sitemap.ts`);

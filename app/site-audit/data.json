@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T07:05:18.323Z",
+  "generatedAt": "2026-11-12T09:33:24.299Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 294,
@@ -74,23 +74,25 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
     },
     {
       "path": "/b2b-lead-generation-bengaluru",
-      "title": "B2B Lead Gen Agency in Bangalore (Bengaluru)",
+      "title": "Lead Generation Companies in Bangalore for SaaS",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -102,23 +104,25 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
     },
     {
       "path": "/b2b-lead-generation-delhi",
-      "title": "B2B Lead Generation Agency in Delhi NCR",
+      "title": "B2B Lead Generation Company in Delhi NCR",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -130,9 +134,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -144,9 +149,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -162,11 +168,11 @@
         "/contact-us",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/services",
+        "lib/city-links.ts",
         "/services/cold-email",
-        "/services/linkedin-outreach",
-        "/case-studies/wealth-management-pms-pipeline"
+        "/services/linkedin-outreach"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -178,9 +184,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services"
+        "/services",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

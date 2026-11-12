@@ -1,7 +1,7 @@
 {
   "slug": "hyderabad",
   "metaTitle": "Lead Generation Company & Services in Hyderabad",
-  "metaDescription": "Lead generation services in Hyderabad for IT, pharma and biotech companies: cold email, LinkedIn and ABM that book qualified meetings, live in 18 days.",
+  "metaDescription": "Lead generation company in Hyderabad for pharma, biotech and IT firms. Cold email, LinkedIn and ABM services that book qualified meetings, live in 18 days.",
   "keywords": [
     "lead generation company in hyderabad",
     "lead generation services in hyderabad",
@@ -32,8 +32,8 @@
   "ogDescription": "Outbound lead generation for Hyderabad's IT, pharma and biotech companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Hyderabad",
   "badge": "Hyderabad",
-  "h1": "B2B Lead Generation Agency in Hyderabad",
-  "intro": "Hyderabad runs on IT/ITES, pharma and biotech, and a fast-growing startup scene. We build the AI-powered cold email, LinkedIn, and ABM systems that turn long, technical sales cycles into a predictable pipeline.",
+  "h1": "B2B Lead Generation Company in Hyderabad",
+  "intro": "Myntmore is a B2B lead generation company for Hyderabad's pharma, biotech and IT firms. Our lead generation services in Hyderabad cover cold email, LinkedIn outreach and ABM, built for long, technical sales cycles and live within 18 days.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Hyderabad businesses need this",
@@ -51,6 +51,31 @@
       "desc": "Many of Hyderabad's fastest-growing venture-backed startups and IT services companies have no full-time outbound system. Prospecting happens in sporadic bursts on the founder's calendar, creating unpredictable revenue cycles."
     }
   ],
+  "proofTitle": "Pharma lead generation results",
+  "proofIntro": "Hyderabad is India's pharma and API capital. These are real engagements from pharma, API and clinical research companies.",
+  "proof": [
+    {
+      "label": "US buyers evaluating a second API supplier",
+      "href": "/case-studies/pharma-usa-api-second-source",
+      "result": "16 sourcing meetings held, 5 technical evaluation requests and 39 positive replies."
+    },
+    {
+      "label": "New commercial conversations for an API supplier",
+      "href": "/case-studies/pharma-api-supplier-conversations",
+      "result": "17 qualified sourcing conversations, 7 requests for product or technical documentation and 2 active negotiations."
+    },
+    {
+      "label": "14 high-intent meetings for a clinical research services firm",
+      "href": "/case-studies/pharma-clinical-research-meetings",
+      "result": "14 high-intent meetings and 4 opportunities that needed a formal capability presentation."
+    },
+    {
+      "label": "A ₹48 lakh pipeline for a contract pharma manufacturer",
+      "href": "/case-studies/pharma-contract-manufacturer-pipeline",
+      "result": "₹48 lakh in potential pipeline from 19 qualified buyer conversations, 6 of them in commercial evaluation."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Hyderabad: they are the engagements closest to Hyderabad's industries. See [lead generation for pharma companies](/lp/pharma), or for IT firms, [9 proposal-stage opportunities for an IT services company](/case-studies/agencies-it-services-international-proposals).",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
@@ -115,7 +140,7 @@
       "desc": "IT services, product engineering and SaaS companies selling to enterprises, global capability centres and international buyers."
     }
   ],
-  "segmentsNote": "See it in practice: [new commercial conversations for an API supplier](/case-studies/pharma-api-supplier-conversations), [14 high-intent meetings for a clinical research firm](/case-studies/pharma-clinical-research-meetings) and [9 proposal-stage opportunities for an IT services company](/case-studies/agencies-it-services-international-proposals). For pharma specifically, see [lead generation for pharma companies](/lp/pharma). IT services firms can start with [lead generation for IT companies](/lp/agencies-it), and staffing firms with [lead generation for recruitment agencies](/lp/recruitment-firms).",
+  "segmentsNote": "For pharma specifically, see [lead generation for pharma companies](/lp/pharma). IT services firms can start with [lead generation for IT companies](/lp/agencies-it), and staffing firms with [lead generation for recruitment agencies](/lp/recruitment-firms).",
   "healthcareTitle": "",
   "healthcareIntro": "",
   "healthcareBuyers": [],

@@ -14,6 +14,8 @@ import { buildArticleSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPost, getCmsPostSummaries } from "@/lib/cms-posts";
 import { OG_BASE } from "@/lib/og";
+import CityLinks from "@/app/components/CityLinks";
+import { POSTS_WITH_CITY_LINKS } from "@/lib/city-links";
 
 // Every blog post is written in the Keystatic admin (content/posts/*.mdoc) and rendered
 // here. Anything that is not a published post is a 404.
@@ -205,6 +207,14 @@ export default async function CmsBlogPost({ params }: { params: { slug: string }
                 ))}
               </ul>
             </div>
+          )}
+
+          {POSTS_WITH_CITY_LINKS.has(post.slug) && (
+            <CityLinks
+              variant="inline"
+              heading="B2B lead generation in your city"
+              intro="How we run outbound for the industries in each Indian city we cover."
+            />
           )}
 
           {post.cta && (

@@ -1,8 +1,12 @@
 {
   "slug": "delhi",
-  "metaTitle": "B2B Lead Generation Agency in Delhi NCR",
-  "metaDescription": "AI-powered B2B lead generation for Delhi NCR's enterprise, trading, and D2C companies: cold email, LinkedIn & ABM. Book a free GTM audit.",
+  "metaTitle": "B2B Lead Generation Company in Delhi NCR",
+  "metaDescription": "B2B lead generation company in Delhi NCR for IT, SaaS, export and staffing firms in Delhi, Gurugram and Noida: cold email, LinkedIn outreach and ABM.",
   "keywords": [
+    "b2b lead generation company in delhi ncr",
+    "lead generation company in delhi",
+    "lead generation company in gurgaon",
+    "lead generation company in noida",
     "b2b lead generation delhi",
     "outbound agency delhi ncr",
     "linkedin outreach delhi",
@@ -26,12 +30,12 @@
     "appointment setting services delhi",
     "outbound sales agency delhi"
   ],
-  "ogTitle": "B2B Lead Generation Agency in Delhi | Myntmore",
-  "ogDescription": "AI-powered outbound systems built for Delhi NCR's enterprise, trading, and D2C landscape.",
+  "ogTitle": "B2B Lead Generation Company in Delhi NCR | Myntmore",
+  "ogDescription": "Outbound lead generation for Delhi NCR's IT, SaaS, export and staffing firms in Delhi, Gurugram and Noida.",
   "breadcrumbLabel": "Delhi",
   "badge": "Delhi NCR",
-  "h1": "B2B Lead Generation Agency in Delhi",
-  "intro": "Delhi NCR runs on trading houses, D2C brands, and one of India's largest enterprise buyer bases. We build the AI-powered cold email, LinkedIn, and ABM systems that get you past the gatekeepers and into real conversations.",
+  "h1": "B2B Lead Generation Agency in Delhi NCR",
+  "intro": "Myntmore is a B2B lead generation company for Delhi NCR: IT services and SaaS teams in Gurugram and Noida, exporters and manufacturers, and staffing and professional services firms. Our lead generation services in Delhi run on cold email, LinkedIn outreach and ABM that get you past the gatekeepers and into real conversations.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Delhi NCR businesses need this",
@@ -49,6 +53,31 @@
       "desc": "Corporate buying committees across Connaught Place, Aerocity, and Gurugram have heavy administrative gatekeepers. Getting through requires multi-touch email and LinkedIn outreach built around timing signals, not brute-force cold calls."
     }
   ],
+  "proofTitle": "Results for IT, export and staffing firms like Delhi NCR's",
+  "proofIntro": "Delhi NCR is IT services and SaaS in Gurugram and Noida, exporters, and staffing firms. These are real engagements from those industries.",
+  "proof": [
+    {
+      "label": "US clients for a software development firm",
+      "href": "/case-studies/agencies-it-usa-software-development",
+      "result": "24 meetings booked, 7 prospects shared project requirements and 4 asked for proposals."
+    },
+    {
+      "label": "24 sales conversations for an industrial packaging manufacturer",
+      "href": "/case-studies/manufacturers-exporters-industrial-packaging-conversations",
+      "result": "24 qualified sales conversations, 7 requests for quotation and 4 ongoing commercial evaluations."
+    },
+    {
+      "label": "26 meetings for an IT staffing agency",
+      "href": "/case-studies/recruitment-staffing-it-staffing-meetings",
+      "result": "26 qualified business meetings, 8 active staffing requirement discussions and 3 new client opportunities."
+    },
+    {
+      "label": "A ₹38 lakh pipeline for a D2C logistics tech company",
+      "href": "/case-studies/ecommerce-tech-d2c-logistics-pipeline",
+      "result": "₹38 lakh in potential pipeline, 19 qualified discussions and 4 commercial proposals."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Delhi NCR: they are the engagements closest to Delhi NCR's industries.",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [

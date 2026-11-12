@@ -3,6 +3,8 @@ import Link from "next/link";
 import InnerLayout from "@/app/components/InnerLayout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
+import CityLinks from "@/app/components/CityLinks";
+import { caseStudyIndustry } from "@/lib/city-links";
 import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import RelatedPath from "@/app/components/RelatedPath";
@@ -370,6 +372,12 @@ export default function LeadershipDevelopmentMessagingShift() {
           </a>
         </div>
       </section>
+
+      <CityLinks
+        industry={caseStudyIndustry("leadership-development-messaging-shift")}
+        heading="Lead generation for this industry, by city"
+        intro="The cities where this kind of company clusters, and how we run outbound for them there."
+      />
 
       <LeadCaptureForm />
     </InnerLayout>

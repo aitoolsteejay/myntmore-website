@@ -438,6 +438,17 @@ export default config({
           fields.object({ title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
           { label: "\"Why this city\" cards (exactly 3)", validation: { length: { min: 3, max: 3 } }, itemLabel: (props) => props.fields.title.value }
         ),
+        proofTitle: fields.text({ label: "Proof heading (leave the case study list empty to hide the block)" }),
+        proofIntro: fields.text({ label: "Proof intro", multiline: true }),
+        proof: fields.array(
+          fields.object({
+            label: fields.text({ label: "Case study title", validation: { isRequired: true } }),
+            href: fields.text({ label: "Address, e.g. /case-studies/saas-series-a", validation: { isRequired: true } }),
+            result: fields.text({ label: "The result, in one or two sentences, as the case study states it", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "Case studies from this city's industries (real ones only; do not describe a client as local unless it is)", itemLabel: (props) => props.fields.label.value }
+        ),
+        proofNote: fields.text({ label: "Note under the case studies (use [link text](/address) for links)", multiline: true }),
         segmentsTitle: fields.text({ label: "\"Who we generate leads for\" heading (leave the whole block empty to hide it)" }),
         segmentsIntro: fields.text({ label: "\"Who we generate leads for\" intro", multiline: true }),
         segments: fields.array(

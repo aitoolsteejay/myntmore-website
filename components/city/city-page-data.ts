@@ -15,6 +15,12 @@ export interface CityPageData {
   secondaryCta: string;
   whyTitle: string;
   why: { title: string; desc: string }[];
+  // "Proof": real case studies from the industries that cluster in this city. Clients are anonymised and are not
+  // presented as local, so the note says so. Leave the list empty to hide the block.
+  proofTitle: string;
+  proofIntro: string;
+  proof: { label: string; href: string; result: string }[];
+  proofNote: string;
   // "Who we generate leads for": cards plus a closing note with [label](/path) links.
   segmentsTitle: string;
   segmentsIntro: string;

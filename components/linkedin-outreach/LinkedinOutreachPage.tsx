@@ -34,6 +34,7 @@ import JsonLd from "@/app/components/JsonLd";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import AnswerBlock from "@/app/components/AnswerBlock";
 import RelatedPath from "@/app/components/RelatedPath";
+import CityLinks from "@/app/components/CityLinks";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import Underline from "@/app/resources/guides/how-to-set-up-vibe-prospecting/Underline";
 import { buildFaqSchema, buildHowToSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
@@ -465,6 +466,7 @@ export default function LinkedinOutreachPage() {
       </div>
 
       <RelatedPath heading={d.relatedPath.heading} intro={d.relatedPath.intro} items={SERVICE_PATHS["linkedin-outreach"]} accent={BLUE} />
+      <CityLinks intro="We run LinkedIn outreach for B2B companies across India. See how it works for the industries in your city." />
 
       {/* Outcomes, founder + CTA */}
       <section className="px-4 py-24" style={{ backgroundColor: CREAM }}>
