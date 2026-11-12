@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"It's built from signals like spam complaint rate, bounce rate, and how often recipients open or reply, and it's cumulative: one bad sending burst can suppress deliverability for weeks after, which is why reputation is monitored continuously rather than checked once."}
       sourceLabel={"Read: Cold Email Deliverability: Why Your Emails Land in Spam (And How to Fix It)"}
       sourceHref={"/resources/blogs/cold-email-deliverability-guide"}
+      furtherLabel={"See the service: Cold Email Infrastructure"}
+      furtherHref={"/services/cold-email"}
       articleSchema={TERM_SCHEMA}
     />
   );

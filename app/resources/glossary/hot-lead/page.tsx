@@ -49,6 +49,8 @@ export default function GlossaryTermPage() {
       body={"A hot lead isn't defined by fit alone, plenty of well-fitted ICP matches never engage. It's defined by an explicit signal that they're actively evaluating right now, which is exactly why response time on a hot lead matters more than on any other stage of the pipeline: the interest is real but perishable."}
       sourceLabel={"Read the related term: Buying Signal"}
       sourceHref={"/resources/glossary/buying-signal"}
+      furtherLabel={"See the service: AI Lead Generation"}
+      furtherHref={"/services/ai-lead-generation"}
       articleSchema={TERM_SCHEMA}
       faqs={FAQS}
     />

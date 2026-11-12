@@ -46,6 +46,8 @@ export default function GlossaryTermPage() {
       body={"Where broad outbound optimises for volume across thousands of leads, ABM optimises for depth across a few dozen accounts that are individually worth the extra research and multi-threaded outreach it takes to win them."}
       sourceLabel={"See the service: Account-Based Marketing"}
       sourceHref={"/services/account-based-marketing"}
+      furtherLabel={"Read: Single-Threaded Deals Die: Why You Need the Whole Buying Committee, Not One Champion"}
+      furtherHref={"/resources/blogs/multi-threading-b2b-buying-committee"}
       articleSchema={TERM_SCHEMA}
     />
   );

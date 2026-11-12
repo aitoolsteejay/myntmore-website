@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"A post can get thousands of likes from people who will never buy anything, while a quieter post reaches the twenty right people and books three calls. The fix isn't ignoring engagement entirely, it's tracking it alongside pipeline-linked numbers like profile visits from ICP-matching titles and inbound DMs that turn into conversations."}
       sourceLabel={"Read: Founder Personal Branding: Pipeline, Not Likes"}
       sourceHref={"/resources/blogs/vanity-metrics-personal-brand-pipeline"}
+      furtherLabel={"See the service: Personal Branding for Founders"}
+      furtherHref={"/services/personal-branding"}
       articleSchema={TERM_SCHEMA}
     />
   );

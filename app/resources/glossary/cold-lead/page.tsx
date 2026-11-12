@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"Treating a cold lead as a lost cause after one unanswered email is the most common way outbound teams undersell their own pipeline. Most replies come from the second, third, or fourth touch in a sequence, not the first, which is exactly why a real cadence exists instead of a single email."}
       sourceLabel={"Read: Cold Email Sequence Templates That Get Replies"}
       sourceHref={"/resources/blogs/cold-email-sequence-templates"}
+      furtherLabel={"See the service: AI Lead Generation"}
+      furtherHref={"/services/ai-lead-generation"}
       articleSchema={TERM_SCHEMA}
     />
   );

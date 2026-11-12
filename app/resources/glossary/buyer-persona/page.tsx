@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"An ICP answers which companies and roles to target; a buyer persona answers what to actually say to them once they're on the list, by capturing how that role thinks and what convinces it. The two work together rather than replacing each other."}
       sourceLabel={"Read the related term: ICP (Ideal Customer Profile)"}
       sourceHref={"/resources/glossary/icp"}
+      furtherLabel={"See the service: ICP Mapping & Lead Scoring"}
+      furtherHref={"/services/sales-intelligence"}
       articleSchema={TERM_SCHEMA}
     />
   );

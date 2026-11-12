@@ -52,6 +52,8 @@ export default function GlossaryTermPage() {
       body={"Because the job is largely about volume, consistency, and list quality rather than relationship-building, it's one of the easiest sales functions to outsource, which is why many growing teams run it through an agency before hiring it in-house."}
       sourceLabel={"Read: Agency vs. In-House SDR for B2B Outbound"}
       sourceHref={"/resources/blogs/agency-vs-in-house"}
+      furtherLabel={"See the service: AI Lead Generation"}
+      furtherHref={"/services/ai-lead-generation"}
       articleSchema={TERM_SCHEMA}
       faqs={FAQS}
     />
