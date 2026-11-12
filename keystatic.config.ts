@@ -428,6 +428,7 @@ export default config({
         ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
         ogDescription: fields.text({ label: "Share description", multiline: true, validation: { isRequired: true } }),
         breadcrumbLabel: fields.text({ label: "Breadcrumb label", validation: { isRequired: true } }),
+        country: fields.text({ label: "Country", description: "Only for cities outside India (for example United Arab Emirates). Leave empty for Indian cities." }),
         badge: fields.text({ label: "Hero badge", validation: { isRequired: true } }),
         h1: fields.text({ label: "Headline (H1)", validation: { isRequired: true } }),
         intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),

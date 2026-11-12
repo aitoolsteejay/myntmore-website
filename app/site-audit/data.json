@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T10:21:23.208Z",
+  "generatedAt": "2026-11-12T11:30:51.226Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 297,
-    "linked": 263,
+    "total": 303,
+    "linked": 269,
     "orphan": 34,
     "noindex": 38,
     "notInXmlSitemap": 42,
@@ -68,6 +68,21 @@
       "inHtmlSitemap": false
     },
     {
+      "path": "/b2b-lead-generation-abu-dhabi",
+      "title": "B2B Lead Generation Company in Abu Dhabi",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-ahmedabad",
       "title": "B2B Lead Generation Agency in Ahmedabad",
       "section": "other",
@@ -114,8 +129,38 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-coimbatore",
+      "title": "B2B Lead Generation Company in Coimbatore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-delhi",
       "title": "B2B Lead Generation Company in Delhi NCR",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-dubai",
+      "title": "B2B Lead Generation Company in Dubai, UAE",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -146,6 +191,36 @@
     {
       "path": "/b2b-lead-generation-hyderabad",
       "title": "Lead Generation Company & Services in Hyderabad",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-indore",
+      "title": "B2B Lead Generation Company in Indore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-jaipur",
+      "title": "B2B Lead Generation Company in Jaipur",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -211,6 +286,21 @@
     {
       "path": "/b2b-lead-generation-pune",
       "title": "B2B Lead Generation Companies in Pune",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "/services",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-surat",
+      "title": "B2B Lead Generation Company in Surat",
       "section": "other",
       "status": "linked",
       "linkedFrom": [

@@ -8,6 +8,8 @@ export interface CityPageData {
   ogTitle: string;
   ogDescription: string;
   breadcrumbLabel: string;
+  // Country the city is in, for the page's structured data. Leave it out for Indian cities.
+  country?: string;
   badge: string;
   h1: string;
   intro: string;

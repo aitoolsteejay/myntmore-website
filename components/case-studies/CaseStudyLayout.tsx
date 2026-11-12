@@ -3,7 +3,7 @@ import InnerLayout from "@/app/components/InnerLayout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
 import CityLinks from "@/app/components/CityLinks";
-import { caseStudyIndustry } from "@/lib/city-links";
+import { caseStudyIndustry, UAE_CITY_LINKS } from "@/lib/city-links";
 import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
@@ -143,6 +143,14 @@ export default function CaseStudyLayout({
         heading="Lead generation for this industry, by city"
         intro="The cities where this kind of company clusters, and how we run outbound for them there."
       />
+
+      {market?.slug === "uae" && (
+        <CityLinks
+          cities={UAE_CITY_LINKS}
+          heading="B2B lead generation in the UAE"
+          intro="How we run outbound for companies selling to buyers in Dubai and Abu Dhabi."
+        />
+      )}
 
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto"><LeadCaptureForm /></div>

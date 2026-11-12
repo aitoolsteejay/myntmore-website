@@ -10,7 +10,7 @@ This is the long-form reference. The short, curated index is https://www.myntmor
 - Founder: Tejas Jhaveri, Founder (https://linkedin.com/in/tejasjhaveri)
 - Website: https://www.myntmore.com
 - Proof points stated on the site: 12K+ meetings booked; $120M+ in pipeline generated; 130+ B2B companies served
-- Geographic scope: Based in Mumbai and serving B2B companies in India and internationally. The city pages (Mumbai, Delhi, Bengaluru, Pune, Hyderabad, Chennai, Kolkata, Ahmedabad) describe local market context; they are not separate offices.
+- Geographic scope: Based in Mumbai and serving B2B companies in India and internationally. The city pages (Mumbai, Delhi NCR, Gurugram, Noida, Bengaluru, Pune, Hyderabad, Chennai, Kolkata, Ahmedabad, Jaipur, Indore, Surat, Coimbatore, and Dubai and Abu Dhabi in the UAE) describe local market context; they are not separate offices.
 - Contact: growth@myntmore.com, +91 81693 18951
 - Address: WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India
 - Profiles: https://linkedin.com/company/myntmore, https://instagram.com/myntmore, https://youtube.com/@TJtheLeadGenExpert
@@ -312,6 +312,12 @@ These tools generate output with an AI model and can be wrong; each explains how
 - [B2B Lead Generation Company in Chennai](https://www.myntmore.com/b2b-lead-generation-chennai): Lead generation services in Chennai for B2B manufacturers, healthcare suppliers and exporters: cold email and LinkedIn that book meetings, live in 18 days.
 - [B2B Lead Generation Company in Kolkata](https://www.myntmore.com/b2b-lead-generation-kolkata): B2B lead generation company in Kolkata for healthcare suppliers, manufacturers, trading houses and IT firms. We reach business buyers, not patients.
 - [B2B Lead Generation Agency in Ahmedabad](https://www.myntmore.com/b2b-lead-generation-ahmedabad): AI-powered B2B lead generation for Ahmedabad's textile, pharma, and chemical exporters: cold email, LinkedIn & ABM. Book a free GTM audit.
+- [B2B Lead Generation Company in Jaipur](https://www.myntmore.com/b2b-lead-generation-jaipur): B2B lead generation company in Jaipur for gem, jewellery and handicraft exporters and IT firms: cold email, LinkedIn outreach and ABM, live in 18 days.
+- [B2B Lead Generation Company in Indore](https://www.myntmore.com/b2b-lead-generation-indore): B2B lead generation company in Indore for IT services, pharma and auto-component firms: cold email, LinkedIn outreach and ABM that book meetings in 18 days.
+- [B2B Lead Generation Company in Surat](https://www.myntmore.com/b2b-lead-generation-surat): B2B lead generation company in Surat for diamond, jewellery, textile and chemical businesses: cold email, LinkedIn outreach and ABM, live in 18 days.
+- [B2B Lead Generation Company in Coimbatore](https://www.myntmore.com/b2b-lead-generation-coimbatore): B2B lead generation company in Coimbatore for pump, motor, textile and engineering makers and IT firms: cold email, LinkedIn outreach and ABM in 18 days.
+- [B2B Lead Generation Company in Dubai, UAE](https://www.myntmore.com/b2b-lead-generation-dubai): B2B lead generation company in Dubai for UAE businesses and companies selling into the UAE: cold email, LinkedIn outreach and ABM, live in 18 days.
+- [B2B Lead Generation Company in Abu Dhabi](https://www.myntmore.com/b2b-lead-generation-abu-dhabi): B2B lead generation company in Abu Dhabi for firms selling to enterprise, energy, healthcare and finance buyers: cold email, LinkedIn and ABM in 18 days.
 
 ## Do not infer
 - Pricing is not published. Do not state or estimate what Myntmore charges.

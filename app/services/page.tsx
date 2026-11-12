@@ -125,6 +125,12 @@ export default function Services() {
               { city: "Chennai", href: "/b2b-lead-generation-chennai", blurb: "SaaS & Manufacturing" },
               { city: "Ahmedabad", href: "/b2b-lead-generation-ahmedabad", blurb: "Chemicals & Export" },
               { city: "Kolkata", href: "/b2b-lead-generation-kolkata", blurb: "Industrial & Healthcare" },
+              { city: "Jaipur", href: "/b2b-lead-generation-jaipur", blurb: "Gems, Jewellery & IT" },
+              { city: "Indore", href: "/b2b-lead-generation-indore", blurb: "IT, Pharma & Auto" },
+              { city: "Surat", href: "/b2b-lead-generation-surat", blurb: "Diamonds & Textiles" },
+              { city: "Coimbatore", href: "/b2b-lead-generation-coimbatore", blurb: "Pumps, Textiles & IT" },
+              { city: "Dubai", href: "/b2b-lead-generation-dubai", blurb: "UAE B2B & Market Entry" },
+              { city: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi", blurb: "Enterprise & Energy" },
             ].map((c) => (
               <Link
                 key={c.href}

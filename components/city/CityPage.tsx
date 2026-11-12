@@ -33,7 +33,7 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
   return (
     <InnerLayout>
       <JsonLd data={buildFaqSchema(FAQ.map((f) => ({ question: f.q, answer: f.a })))} />
-      <JsonLd data={buildCityServiceSchema({ name: d.h1, description: d.metaDescription, url: `https://www.myntmore.com/b2b-lead-generation-${d.slug}`, city: d.breadcrumbLabel })} />
+      <JsonLd data={buildCityServiceSchema({ name: d.h1, description: d.metaDescription, url: `https://www.myntmore.com/b2b-lead-generation-${d.slug}`, city: d.breadcrumbLabel, country: d.country })} />
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: d.breadcrumbLabel, href: `/b2b-lead-generation-${d.slug}` }]} />

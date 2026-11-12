@@ -97,6 +97,7 @@ const icpPriority = (i) => ({ core: "P1", retain: "P1", test: "P2", subsegment: 
 
 // ── Cities ────────────────────────────────────────────────────────────────
 // tier: page = has a /b2b-lead-generation-<city> page; india = Indian city without one; intl = market the ICPs sell into.
+// page: true marks an intl market that also has a city page (Dubai, Abu Dhabi); it keeps the intl phrasings.
 // variants are other spellings people search; they map to the same page.
 const CITIES = [
   { name: "Mumbai", slug: "mumbai", tier: "page", variants: ["navi mumbai", "thane"], why: "HQ; BFSI, media, pharma, exporters" },
@@ -109,17 +110,17 @@ const CITIES = [
   { name: "Ahmedabad", slug: "ahmedabad", tier: "page", variants: [], why: "Pharma, chemicals, engineering exporters" },
   { name: "Gurugram", slug: "gurugram", tier: "page", variants: ["gurgaon"], why: "SaaS, IT services, MNC and GCC offices; searched apart from Delhi" },
   { name: "Noida", slug: "noida", tier: "page", variants: [], why: "IT services and product engineering" },
-  { name: "Jaipur", slug: "jaipur", tier: "india", variants: [], why: "Jewellery and handicraft exporters, IT services" },
-  { name: "Surat", slug: "surat", tier: "india", variants: [], why: "Diamond, jewellery and textile exporters" },
+  { name: "Jaipur", slug: "jaipur", tier: "page", variants: [], why: "Jewellery and handicraft exporters, IT services" },
+  { name: "Surat", slug: "surat", tier: "page", variants: [], why: "Diamond, jewellery and textile exporters" },
   { name: "Vadodara", slug: "vadodara", tier: "india", variants: ["baroda"], why: "Pharma, engineering, chemicals" },
   { name: "Rajkot", slug: "rajkot", tier: "india", variants: [], why: "Engineering components and machinery exporters" },
   { name: "Ludhiana", slug: "ludhiana", tier: "india", variants: [], why: "Industrial manufacturing, cycles, hosiery exporters" },
-  { name: "Coimbatore", slug: "coimbatore", tier: "india", variants: [], why: "Pumps, motors, textile machinery exporters" },
+  { name: "Coimbatore", slug: "coimbatore", tier: "page", variants: [], why: "Pumps, motors, textile machinery exporters" },
   { name: "Kochi", slug: "kochi", tier: "india", variants: ["cochin"], why: "IT services, seafood and spice exporters" },
-  { name: "Indore", slug: "indore", tier: "india", variants: [], why: "IT services, pharma, manufacturing" },
+  { name: "Indore", slug: "indore", tier: "page", variants: [], why: "IT services, pharma, manufacturing" },
   { name: "Chandigarh", slug: "chandigarh", tier: "india", variants: ["mohali"], why: "IT services, pharma (Baddi belt)" },
-  { name: "Dubai", slug: "dubai", tier: "intl", variants: ["uae"], why: "GCC ICPs (recruitment, IT, agencies); UAE case studies exist" },
-  { name: "Abu Dhabi", slug: "abu-dhabi", tier: "intl", variants: [], why: "GCC enterprise buyers" },
+  { name: "Dubai", slug: "dubai", tier: "intl", page: true, variants: ["uae"], why: "GCC ICPs (recruitment, IT, agencies); UAE case studies exist" },
+  { name: "Abu Dhabi", slug: "abu-dhabi", tier: "intl", page: true, variants: [], why: "GCC enterprise buyers" },
   { name: "Riyadh", slug: "riyadh", tier: "intl", variants: ["saudi arabia"], why: "Recruitment and manufacturing ICPs target Saudi" },
   { name: "Singapore", slug: "singapore", tier: "intl", variants: [], why: "Singapore case studies exist; fintech, prof. services" },
   { name: "London", slug: "london", tier: "intl", variants: ["uk"], why: "UK case studies exist; IT, accounting outsourcing" },
@@ -434,7 +435,7 @@ const PROMPTS = [
     c,
     CITIES.find((x) => x.name === c).tier === "page" ? `/b2b-lead-generation-${CITIES.find((x) => x.name === c).slug}` : `NEW: /b2b-lead-generation-${CITIES.find((x) => x.name === c).slug}`,
   ]),
-  ["quarterly", "city", "Best lead generation agency in Dubai for B2B companies", "", "Dubai", "/case-studies/markets/uae"],
+  ["quarterly", "city", "Best lead generation agency in Dubai for B2B companies", "", "Dubai", "/b2b-lead-generation-dubai"],
   ["quarterly", "city", "Lead generation agency in Mumbai for IT companies", "1", "Mumbai", "/b2b-lead-generation-mumbai"],
   // Quarterly: ICPs
   ["quarterly", "icp", "Best lead generation agency for IT services companies", "1", "", "/lp/agencies-it"],
@@ -593,13 +594,14 @@ const PROMPTS = [
 // ── Build rows ────────────────────────────────────────────────────────────
 const fill = (pattern, c) => pattern.replace("{c}", c);
 const cityRows = [];
+const hasPage = (city) => city.tier === "page" || city.page === true;
 for (const city of CITIES) {
-  const page = city.tier === "page" ? `/b2b-lead-generation-${city.slug}` : `NEW: /b2b-lead-generation-${city.slug}`;
+  const page = hasPage(city) ? `/b2b-lead-generation-${city.slug}` : `NEW: /b2b-lead-generation-${city.slug}`;
   const names = [city.name.toLowerCase(), ...city.variants];
   for (const stem of CITY_STEMS) {
     const runs =
       stem.reach === "all" ||
-      (stem.reach === "page" && city.tier === "page") ||
+      (stem.reach === "page" && hasPage(city)) ||
       (stem.reach === "india" && city.tier !== "intl") ||
       (stem.reach === "intl" && city.tier === "intl");
     if (!runs) continue;
@@ -608,7 +610,7 @@ for (const city of CITIES) {
       if (vi > 0 && CITY_STEMS.indexOf(stem) > 3) return;
       const keyword = fill(stem.kw, n);
       const cov = coverage(keyword, page);
-      const priority = city.tier === "page" ? (CITY_STEMS.indexOf(stem) < 4 ? "P1" : "P2") : city.tier === "india" ? "P2" : "P3";
+      const priority = hasPage(city) ? (CITY_STEMS.indexOf(stem) < 4 ? "P1" : "P2") : city.tier === "india" ? "P2" : "P3";
       cityRows.push({ keyword, city: city.name, city_tier: city.tier, service: stem.service, intent: "commercial", priority, status: cov.status, target_page: cov.status === "targeted" ? cov.page : page, why_this_city: city.why });
     });
   }
@@ -643,7 +645,7 @@ for (const spec of ICP_CITY) {
     if (!city) throw new Error(`unknown city ${cName}`);
     const keyword = fill(spec.pattern, cName === "Bengaluru" ? "bangalore" : cName.toLowerCase());
     const icpPage = (ICP_KEYWORDS[spec.icp].kws.find((k) => spec.pattern.includes("pharma") && k[2]) || [])[2] || ICP_KEYWORDS[spec.icp].page;
-    const cityPage = city.tier === "page" ? `/b2b-lead-generation-${city.slug}` : "";
+    const cityPage = hasPage(city) ? `/b2b-lead-generation-${city.slug}` : "";
     // An ICP x city phrase is best served by the ICP page with a section on that city's cluster (built first if it is
     // NEW), with the city page naming the ICP and linking to it. Only an ICP with no page at all falls back to the city page.
     const target = icpPage || cityPage;
@@ -655,7 +657,7 @@ for (const spec of ICP_CITY) {
       icp_status: icpStatus(icp),
       city: cName,
       city_tier: city.tier,
-      priority: icp.status.group === "core" && city.tier === "page" ? "P1" : icp.status.group === "core" || icp.status.group === "retain" ? "P2" : "P3",
+      priority: icp.status.group === "core" && hasPage(city) ? "P1" : icp.status.group === "core" || icp.status.group === "retain" ? "P2" : "P3",
       status: cov.status,
       target_page: cov.status === "targeted" ? cov.page : target,
       also_mention_on: cityPage && target !== cityPage ? cityPage : "",

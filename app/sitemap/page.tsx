@@ -260,6 +260,12 @@ const GROUPS: SitemapGroup[] = [
       { label: "B2B Lead Generation in Chennai", href: "/b2b-lead-generation-chennai" },
       { label: "B2B Lead Generation in Kolkata", href: "/b2b-lead-generation-kolkata" },
       { label: "B2B Lead Generation in Ahmedabad", href: "/b2b-lead-generation-ahmedabad" },
+      { label: "B2B Lead Generation in Jaipur", href: "/b2b-lead-generation-jaipur" },
+      { label: "B2B Lead Generation in Indore", href: "/b2b-lead-generation-indore" },
+      { label: "B2B Lead Generation in Surat", href: "/b2b-lead-generation-surat" },
+      { label: "B2B Lead Generation in Coimbatore", href: "/b2b-lead-generation-coimbatore" },
+      { label: "B2B Lead Generation in Dubai", href: "/b2b-lead-generation-dubai" },
+      { label: "B2B Lead Generation in Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi" },
     ],
   },
   {
