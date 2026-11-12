@@ -23,6 +23,23 @@
   "ogDescription": "Outbound lead generation for Surat's diamond and jewellery businesses, textile mills and traders, and chemical and engineering firms.",
   "breadcrumbLabel": "Surat",
   "badge": "Surat",
+  "emoji": "💎",
+  "floatingIcons": [
+    "💎",
+    "🧵",
+    "🧪",
+    "🏭"
+  ],
+  "hubs": [
+    "Varachha",
+    "Mahidharpura",
+    "Surat Diamond Bourse",
+    "Ring Road",
+    "Udhna",
+    "Pandesara",
+    "Sachin GIDC",
+    "Hazira"
+  ],
   "h1": "B2B Lead Generation Company in Surat",
   "intro": "Looking for a lead generation company in Surat? Myntmore runs cold email, LinkedIn outreach and ABM for Surat's diamond and jewellery businesses, textile manufacturers and traders, and chemical and engineering firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -30,14 +47,17 @@
   "whyTitle": "Why Surat businesses need this",
   "why": [
     {
+      "icon": "💎",
       "title": "Diamond firms that sell through middlemen",
       "desc": "Surat cuts and polishes a large share of the world's diamonds, and most of it is sold on through Mumbai, Antwerp, Dubai, Hong Kong and New York. Firms that want jewellery makers and retailers as direct buyers have to reach them, not wait for brokers."
     },
     {
+      "icon": "🧵",
       "title": "Textile mills competing on price alone",
       "desc": "Surat's synthetic fabric makers sell through the city's wholesale markets and agents, where the only lever is price. Reaching garment brands, exporters and institutional buyers directly is how a mill wins orders on quality and reliability."
     },
     {
+      "icon": "🧪",
       "title": "Chemical and engineering firms facing approved-vendor lists",
       "desc": "Chemical, dye and engineering firms around Hazira and Sachin sell to procurement teams that already have approved vendors. Getting onto that list starts with a technical conversation, which generic mailers never earn."
     }
@@ -119,14 +139,17 @@
   "segmentsIntro": "Our lead generation services in Surat are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💎",
       "title": "Diamond and jewellery businesses",
       "desc": "Manufacturers and exporters of natural and lab-grown diamonds and jewellery that want retailers, jewellery manufacturers and wholesalers in the US, Europe and the Gulf as direct buyers."
     },
     {
+      "icon": "🧵",
       "title": "Textile manufacturers and traders",
       "desc": "Fabric mills, weavers, processors and traders that sell through agents and wholesale markets, and want garment brands, exporters and institutional buyers to hear from them directly."
     },
     {
+      "icon": "🧪",
       "title": "Chemical, dye and engineering firms",
       "desc": "Firms in Hazira and Sachin that sell to procurement and technical teams, where the first conversation is about specifications and approvals, not price."
     }

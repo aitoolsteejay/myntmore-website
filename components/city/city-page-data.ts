@@ -11,12 +11,17 @@ export interface CityPageData {
   // Country the city is in, for the page's structured data. Leave it out for Indian cities.
   country?: string;
   badge: string;
+  // City emoji for the hero badge, up to four emojis that float around the hero on desktop, and the business
+  // areas shown in the scrolling strip under the hero. All optional.
+  emoji?: string;
+  floatingIcons?: string[];
+  hubs?: string[];
   h1: string;
   intro: string;
   primaryCta: string;
   secondaryCta: string;
   whyTitle: string;
-  why: { title: string; desc: string }[];
+  why: { icon?: string; title: string; desc: string }[];
   // "Proof": real case studies from the industries that cluster in this city. Clients are anonymised and are not
   // presented as local, so the note says so. Leave the list empty to hide the block.
   proofTitle: string;
@@ -26,7 +31,7 @@ export interface CityPageData {
   // "Who we generate leads for": cards plus a closing note with [label](/path) links.
   segmentsTitle: string;
   segmentsIntro: string;
-  segments: { title: string; desc: string }[];
+  segments: { icon?: string; title: string; desc: string }[];
   segmentsNote: string;
   // Kolkata's "healthcare buyers" block: intro, a list of buyer types, and a closing note.
   healthcareTitle: string;

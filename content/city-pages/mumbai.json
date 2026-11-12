@@ -34,6 +34,23 @@
   "ogDescription": "BKC-based lead generation agency booking qualified meetings for Mumbai's BFSI, media, SaaS and professional services firms.",
   "breadcrumbLabel": "Mumbai",
   "badge": "Mumbai",
+  "emoji": "🌊",
+  "floatingIcons": [
+    "🏦",
+    "🎬",
+    "🚆",
+    "📈"
+  ],
+  "hubs": [
+    "BKC",
+    "Lower Parel",
+    "Nariman Point",
+    "Worli",
+    "Andheri",
+    "Powai",
+    "Thane",
+    "Navi Mumbai"
+  ],
   "h1": "B2B Lead Generation Company in Mumbai",
   "intro": "Mumbai runs on BFSI, media, and some of India's densest corporate HQ density. We build the AI-powered cold email, LinkedIn, and ABM systems that get your business in front of the right buyers here, systematically.",
   "primaryCta": "Book a Free GTM Audit",
@@ -41,14 +58,17 @@
   "whyTitle": "Why Mumbai businesses need this",
   "why": [
     {
+      "icon": "🏦",
       "title": "A financial capital across BKC, Lower Parel, and Nariman Point",
       "desc": "Mumbai's BFSI, fintech, and media leaders across Bandra Kurla Complex (BKC), Lower Parel, and Nariman Point get pitched constantly. A cold email that reads like every other vendor's template gets deleted immediately. Cutting through takes research-backed, signal-driven outreach built around executive timing."
     },
     {
+      "icon": "🏢",
       "title": "Real estate is expensive, SDRs more so",
       "desc": "Between commercial office costs in Mumbai and rising SDR salaries, hiring an in-house sales development team takes months to become productive and even longer to pay for itself. A fully managed outbound engine gives you pipeline from week three without adding headcount."
     },
     {
+      "icon": "💻",
       "title": "Fast-growing B2B tech and agency corridors",
       "desc": "From Andheri East to Goregaon and Navi Mumbai, scaling B2B companies need a systematic outbound pipeline that does not rely on random founder networking or sporadic referrals."
     }
@@ -130,14 +150,17 @@
   "segmentsIntro": "We are a Mumbai lead generation company, based in BKC, working with B2B firms across the city and beyond.",
   "segments": [
     {
+      "icon": "🏦",
       "title": "BFSI, fintech and wealth",
       "desc": "NBFCs, fintechs, wealth managers and PMS firms selling to CFOs, treasury heads and business owners who ignore anything that reads like a template."
     },
     {
+      "icon": "💻",
       "title": "Media, SaaS and tech",
       "desc": "Media, adtech and B2B SaaS companies selling to brand, marketing and technology leaders in Mumbai's corporate HQs and across India."
     },
     {
+      "icon": "📊",
       "title": "Professional services",
       "desc": "Consulting, legal, tax and HR firms that grew on referrals and now need a steady flow of new conversations with decision-makers."
     }

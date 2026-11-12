@@ -24,6 +24,23 @@
   "breadcrumbLabel": "Dubai",
   "country": "United Arab Emirates",
   "badge": "Dubai, UAE",
+  "emoji": "🏙️",
+  "floatingIcons": [
+    "🏙️",
+    "✈️",
+    "🚢",
+    "💼"
+  ],
+  "hubs": [
+    "DMCC",
+    "Business Bay",
+    "DIFC",
+    "Dubai Internet City",
+    "Dubai Silicon Oasis",
+    "JAFZA",
+    "Al Quoz",
+    "Deira"
+  ],
   "h1": "B2B Lead Generation Company in Dubai",
   "intro": "Looking for a lead generation company in Dubai? Myntmore runs cold email, LinkedIn outreach and ABM for B2B companies based in the UAE, and for companies in India and elsewhere that want buyers in the UAE. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -31,14 +48,17 @@
   "whyTitle": "Why Dubai businesses need this",
   "why": [
     {
+      "icon": "🎯",
       "title": "Every buyer already has a dozen vendors",
       "desc": "Dubai is where regional headquarters, distributors and service firms for the whole Gulf sit, so a procurement or IT head there hears from suppliers in every time zone. Outreach that names a specific problem for a specific buyer is what gets a reply."
     },
     {
+      "icon": "🆕",
       "title": "Free zones full of new companies",
       "desc": "New companies set up every week across DMCC, Dubai Internet City, DIFC and JAFZA. Each needs IT, insurance, recruitment, logistics and advisory partners, and the time to reach them is before their vendor list is set."
     },
     {
+      "icon": "🤝",
       "title": "Relationship-driven deals that still start cold",
       "desc": "Deals in the UAE close on trust and meetings in person, but first contact increasingly happens on LinkedIn and email. A steady flow of booked conversations is what fills the calendar with the meetings that close."
     }
@@ -120,14 +140,17 @@
   "segmentsIntro": "Our lead generation services in Dubai are built for companies that sell to other businesses in the UAE and the wider Gulf.",
   "segments": [
     {
+      "icon": "💻",
       "title": "IT, SaaS and managed service providers",
       "desc": "Firms selling software, cloud, cybersecurity and managed IT to UAE companies, where the buyer is an IT head or CFO who already has a vendor and needs a reason to switch."
     },
     {
+      "icon": "🚚",
       "title": "Distributors, traders and B2B service firms",
       "desc": "Trading houses, distributors and service firms in facilities, logistics, insurance and recruitment that need procurement heads, HR leaders and owners to hear from them directly."
     },
     {
+      "icon": "🌍",
       "title": "Indian and international companies entering the UAE",
       "desc": "Manufacturers, pharma companies and service firms that want UAE distributors, partners or clients, and need a pipeline of meetings before they commit to an office there."
     }

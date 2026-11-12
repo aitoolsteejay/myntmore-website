@@ -22,6 +22,22 @@
   "ogDescription": "Outbound lead generation for Jaipur's gem and jewellery exporters, handicraft and home textile makers, and IT services firms.",
   "breadcrumbLabel": "Jaipur",
   "badge": "Jaipur",
+  "emoji": "💎",
+  "floatingIcons": [
+    "💎",
+    "🏰",
+    "🧶",
+    "💻"
+  ],
+  "hubs": [
+    "Sitapura",
+    "Mahindra World City",
+    "Malviya Nagar",
+    "C-Scheme",
+    "Johari Bazaar",
+    "Sanganer",
+    "Vishwakarma Industrial Area"
+  ],
   "h1": "B2B Lead Generation Company in Jaipur",
   "intro": "Looking for a lead generation company in Jaipur? Myntmore runs cold email, LinkedIn outreach and ABM for Jaipur's gem and jewellery exporters, handicraft and home textile makers, and IT services firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -29,14 +45,17 @@
   "whyTitle": "Why Jaipur businesses need this",
   "why": [
     {
+      "icon": "🌍",
       "title": "Exporters who depend on trade fairs",
       "desc": "Jaipur's gemstone, jewellery and handicraft exporters meet most new buyers at a few international fairs a year. Between shows, importers and retail buyers hear from nobody unless someone reaches them directly."
     },
     {
+      "icon": "🎯",
       "title": "Buyers who already have suppliers",
       "desc": "A jewellery chain in the US or a home décor importer in Europe already buys from somewhere. To earn a sample request, the first message has to show a range, finish or price point that fits what they sell, not a general catalogue."
     },
     {
+      "icon": "💻",
       "title": "IT firms competing with bigger cities",
       "desc": "Jaipur's IT and software services firms, many of them in Mahindra World City and Sitapura, sell against vendors from Bengaluru, Pune and NCR. Outreach that names a specific problem for a specific buyer is how they get past the first email."
     }
@@ -118,14 +137,17 @@
   "segmentsIntro": "Our lead generation services in Jaipur are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💎",
       "title": "Gem and jewellery exporters",
       "desc": "Coloured gemstone cutters, silver and fashion jewellery makers and fine jewellery houses that need importers, wholesalers and retail buyers in the US, Europe and the Gulf to hear from them between fairs."
     },
     {
+      "icon": "🧵",
       "title": "Handicraft, furniture and home textile makers",
       "desc": "Block-print textile, home décor and furniture exporters whose buyers are importers, retail chains and interior specifiers, and who want direct orders, not only agent-led ones."
     },
     {
+      "icon": "💻",
       "title": "IT and software services firms",
       "desc": "Development, testing and digital firms selling to funded startups and overseas clients, where the buyer is a founder or CTO who ignores generic pitches."
     }

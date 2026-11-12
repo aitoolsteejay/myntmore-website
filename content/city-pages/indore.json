@@ -22,6 +22,22 @@
   "ogDescription": "Outbound lead generation for Indore's IT services firms and the pharma, auto-component and food processing makers around Pithampur.",
   "breadcrumbLabel": "Indore",
   "badge": "Indore",
+  "emoji": "🏭",
+  "floatingIcons": [
+    "💻",
+    "💊",
+    "🚗",
+    "🌾"
+  ],
+  "hubs": [
+    "Super Corridor",
+    "Crystal IT Park",
+    "Vijay Nagar",
+    "Palasia",
+    "Pithampur",
+    "Sanwer Road",
+    "Dewas"
+  ],
   "h1": "B2B Lead Generation Company in Indore",
   "intro": "Looking for a lead generation company in Indore? Myntmore runs cold email, LinkedIn outreach and ABM for Indore's IT services firms and for the pharma, auto-component and food processing manufacturers around Pithampur. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -29,14 +45,17 @@
   "whyTitle": "Why Indore businesses need this",
   "why": [
     {
+      "icon": "💻",
       "title": "IT firms outgrowing referrals",
       "desc": "Indore's software and IT services companies, from the Super Corridor to Crystal IT Park, have grown on referrals and a few large accounts. A steady outbound pipeline is what lets them choose clients instead of waiting for them."
     },
     {
+      "icon": "⚙️",
       "title": "Plant capacity that needs buyers",
       "desc": "Pithampur's pharma formulation and auto-component makers add capacity faster than their distributor and OEM networks fill it. Reaching procurement and sourcing heads directly, in India and abroad, is how that capacity gets booked."
     },
     {
+      "icon": "🌾",
       "title": "Food processors selling beyond Madhya Pradesh",
       "desc": "Soya, spice and packaged food processors around Indore sell mostly through traders and brokers. Direct conversations with brands, institutional buyers and importers bring better margins and steadier orders."
     }
@@ -118,14 +137,17 @@
   "segmentsIntro": "Our lead generation services in Indore are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "💻",
       "title": "IT services and product engineering",
       "desc": "Firms selling development, testing, cloud and managed services to enterprises and funded startups, where the buyer is a CTO or engineering head who ignores generic pitches."
     },
     {
+      "icon": "💊",
       "title": "Pharma and contract manufacturers",
       "desc": "Formulation and contract manufacturing firms in and around Pithampur that need brand owners, distributors and export buyers to hear a capability pitch a procurement team can act on."
     },
     {
+      "icon": "🏭",
       "title": "Auto-component and food processing makers",
       "desc": "Manufacturers that sell through OEM vendor lists, distributors and traders, and need sourcing and procurement teams to hear from them directly."
     }

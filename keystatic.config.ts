@@ -467,13 +467,16 @@ export default config({
         breadcrumbLabel: fields.text({ label: "Breadcrumb label", validation: { isRequired: true } }),
         country: fields.text({ label: "Country", description: "Only for cities outside India (for example United Arab Emirates). Leave empty for Indian cities." }),
         badge: fields.text({ label: "Hero badge", validation: { isRequired: true } }),
+        emoji: fields.text({ label: "City emoji", description: "Shown in the hero badge, before the badge text." }),
+        floatingIcons: fields.array(fields.text({ label: "Emoji" }), { label: "Floating hero emojis (up to 4, shown on desktop)", itemLabel: (props) => props.value }),
+        hubs: fields.array(fields.text({ label: "Area" }), { label: "Business areas (the scrolling strip under the hero)", itemLabel: (props) => props.value }),
         h1: fields.text({ label: "Headline (H1)", validation: { isRequired: true } }),
         intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),
         primaryCta: fields.text({ label: "Main button label", validation: { isRequired: true } }),
         secondaryCta: fields.text({ label: "Second button label", validation: { isRequired: true } }),
         whyTitle: fields.text({ label: "\"Why this city\" heading", validation: { isRequired: true } }),
         why: fields.array(
-          fields.object({ title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
           { label: "\"Why this city\" cards (exactly 3)", validation: { length: { min: 3, max: 3 } }, itemLabel: (props) => props.fields.title.value }
         ),
         proofTitle: fields.text({ label: "Proof heading (leave the case study list empty to hide the block)" }),
@@ -490,7 +493,7 @@ export default config({
         segmentsTitle: fields.text({ label: "\"Who we generate leads for\" heading (leave the whole block empty to hide it)" }),
         segmentsIntro: fields.text({ label: "\"Who we generate leads for\" intro", multiline: true }),
         segments: fields.array(
-          fields.object({ title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
           { label: "Segment cards (exactly 3, or none)", validation: { length: { max: 3 } }, itemLabel: (props) => props.fields.title.value }
         ),
         segmentsNote: fields.text({ label: "Note under the segments (use [link text](/address) for links)", multiline: true }),

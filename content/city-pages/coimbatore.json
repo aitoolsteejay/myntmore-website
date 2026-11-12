@@ -21,6 +21,22 @@
   "ogDescription": "Outbound lead generation for Coimbatore's pump, motor and engineering makers, textile mills and machinery makers, and IT services firms.",
   "breadcrumbLabel": "Coimbatore",
   "badge": "Coimbatore",
+  "emoji": "⚙️",
+  "floatingIcons": [
+    "⚙️",
+    "💧",
+    "🧵",
+    "💻"
+  ],
+  "hubs": [
+    "TIDEL Park",
+    "Peelamedu",
+    "Avinashi Road",
+    "Saravanampatti",
+    "Ganapathy",
+    "SIDCO Kurichi",
+    "Tiruppur"
+  ],
   "h1": "B2B Lead Generation Company in Coimbatore",
   "intro": "Looking for a lead generation company in Coimbatore? Myntmore runs cold email, LinkedIn outreach and ABM for Coimbatore's pump, motor and engineering manufacturers, textile mills and machinery makers, and IT services firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -28,14 +44,17 @@
   "whyTitle": "Why Coimbatore businesses need this",
   "why": [
     {
+      "icon": "⚙️",
       "title": "Engineering makers known at home, not abroad",
       "desc": "Coimbatore makes a large share of India's pumps and motors, along with castings, wet grinders and auto components. Many of these firms have a strong dealer network at home and almost no direct contact with overseas distributors and OEM buyers."
     },
     {
+      "icon": "🧵",
       "title": "Textile mills facing new competition",
       "desc": "The city's spinning mills and textile machinery makers sell into a market where buyers can source from Bangladesh, Vietnam and Turkey. Reaching brands and sourcing heads with a specific capability is how a mill stays on the shortlist."
     },
     {
+      "icon": "💻",
       "title": "IT firms outside the big metros",
       "desc": "Coimbatore's IT and software services companies, including those at TIDEL Park, offer lower costs than bigger metros but have to prove themselves to buyers who have never heard of them. Outbound that leads with proof gets them the first call."
     }
@@ -117,14 +136,17 @@
   "segmentsIntro": "Our lead generation services in Coimbatore are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "⚙️",
       "title": "Pump, motor and engineering manufacturers",
       "desc": "Makers of pumps, motors, castings, compressors and auto components that want distributors, EPC contractors and OEM buyers, in India or overseas, to hear from them directly."
     },
     {
+      "icon": "🧵",
       "title": "Textile mills and textile machinery makers",
       "desc": "Spinning mills, fabric makers and machinery manufacturers whose buyers are brands, sourcing offices and other mills, and who want orders beyond their agent network."
     },
     {
+      "icon": "💻",
       "title": "IT and software services firms",
       "desc": "Development, testing and SaaS firms selling to overseas clients and Indian enterprises, where the buyer is a CTO or founder who ignores generic pitches."
     }

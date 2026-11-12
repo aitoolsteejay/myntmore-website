@@ -30,6 +30,23 @@
   "ogDescription": "AI-powered outbound for Chennai's manufacturing, healthcare, and IT/ITES companies: cold email, LinkedIn outreach, ABM, and ICP-led lead generation, fully managed by Myntmore.",
   "breadcrumbLabel": "Chennai",
   "badge": "B2B Growth · Chennai",
+  "emoji": "🚗",
+  "floatingIcons": [
+    "🚗",
+    "🏥",
+    "⚓",
+    "💻"
+  ],
+  "hubs": [
+    "OMR",
+    "Guindy",
+    "TIDEL Park",
+    "Ambattur",
+    "Porur",
+    "Sriperumbudur",
+    "Oragadam",
+    "Mahindra World City"
+  ],
   "h1": "B2B Lead Generation Agency in Chennai for Manufacturing, Healthcare & IT Teams",
   "intro": "Chennai is often called the Detroit of India, home to a dense automotive and auto-component manufacturing base, alongside a major healthcare and hospital-services cluster, a fast-growing IT/ITES corridor, and a significant ports, logistics, leather and textile export economy. Myntmore builds and runs the outbound engine, AI-powered cold email, LinkedIn outreach, and ABM, that turns that scale into booked sales meetings.",
   "primaryCta": "Book a Free GTM Audit",
@@ -37,14 +54,17 @@
   "whyTitle": "Chennai's economy is built for outbound, most companies just aren't running it",
   "why": [
     {
+      "icon": "⚙️",
       "title": "Manufacturing sales cycles that drag on for months",
       "desc": "Automotive and auto-component B2B deals in Chennai typically move through several stakeholders, purchasing, engineering, plant heads, before anyone signs off. Chasing this through one-off calls and trade-show follow-ups is slow. A systematic, multi-touch outbound motion keeps you in front of the right buyer at the right stage, and shortens the distance between first contact and first meeting."
     },
     {
+      "icon": "💊",
       "title": "Institutional healthcare buyers you won't meet through referrals",
       "desc": "Chennai's hospital groups, diagnostics chains, and healthcare-services companies buy through procurement heads, clinical administrators, and hospital management, people your existing referral network rarely reaches. Direct, targeted outreach gets your offer in front of the actual decision-makers, on a schedule you control instead of waiting for word-of-mouth."
     },
     {
+      "icon": "🌍",
       "title": "Export buyers found only at the next trade fair",
       "desc": "Exporters and manufacturers feeding Chennai's ports and logistics network often rely on trade fairs and agent introductions to find international buyers, useful, but seasonal and unpredictable. Cold email and LinkedIn outreach let you reach sourcing and procurement teams abroad directly, all year, without waiting for the next exhibition."
     }

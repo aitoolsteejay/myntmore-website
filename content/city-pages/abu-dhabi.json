@@ -21,6 +21,22 @@
   "breadcrumbLabel": "Abu Dhabi",
   "country": "United Arab Emirates",
   "badge": "Abu Dhabi, UAE",
+  "emoji": "🕌",
+  "floatingIcons": [
+    "🕌",
+    "🛢️",
+    "🏥",
+    "🏦"
+  ],
+  "hubs": [
+    "ADGM",
+    "Al Maryah Island",
+    "Hub71",
+    "Masdar City",
+    "KEZAD",
+    "Mussafah",
+    "Khalifa City"
+  ],
   "h1": "B2B Lead Generation Company in Abu Dhabi",
   "intro": "Looking for a lead generation company in Abu Dhabi? Myntmore runs account-based outreach over LinkedIn and email for companies selling to Abu Dhabi's large enterprises, energy and industrial groups, healthcare providers and financial services firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
   "primaryCta": "Book a Free GTM Audit",
@@ -28,14 +44,17 @@
   "whyTitle": "Why Abu Dhabi businesses need this",
   "why": [
     {
+      "icon": "🏢",
       "title": "A market of large, connected buyers",
       "desc": "Much of Abu Dhabi's spending runs through large groups and government-linked companies in energy, industry, healthcare and infrastructure. There are fewer buyers than in Dubai, each with more stakeholders, so generic email blasts burn the list fast."
     },
     {
+      "icon": "📋",
       "title": "Vendor lists decide who gets a tender",
       "desc": "Getting onto an approved vendor list starts with a conversation with the people who own the requirement, long before a tender is issued. Account-based outreach to those people, across several roles, is how a supplier becomes known in time."
     },
     {
+      "icon": "🏦",
       "title": "A growing tech and finance hub",
       "desc": "ADGM and Hub71 have brought fintech, asset management and technology companies to the capital. They need IT, compliance, recruitment and advisory partners, and they can be reached on LinkedIn long before they issue an RFP."
     }
@@ -117,14 +136,17 @@
   "segmentsIntro": "Our lead generation services in Abu Dhabi are built for companies that sell to the capital's enterprises, groups and fast-growing firms.",
   "segments": [
     {
+      "icon": "🛢️",
       "title": "Suppliers to energy, industrial and infrastructure groups",
       "desc": "Engineering, industrial services and technology firms that need procurement, operations and project heads at the capital's large groups to know them before the next tender."
     },
     {
+      "icon": "💊",
       "title": "Healthcare and life sciences suppliers",
       "desc": "Pharma, medical device and healthcare service companies that want distributors, hospital groups and procurement teams in Abu Dhabi to hear from them directly."
     },
     {
+      "icon": "🏦",
       "title": "IT, fintech and professional services firms",
       "desc": "Firms selling software, managed IT, compliance, recruitment and advisory services to companies in ADGM, Hub71 and the wider capital."
     }
