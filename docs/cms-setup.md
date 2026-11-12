@@ -53,7 +53,7 @@ After adding or publishing a post run `npm run llms:build` and commit the update
 
 This is what lets non-developers publish without a code editor. Sign-in is GitHub, so only people with write access to the repository can edit. Each save becomes a commit, and Vercel deploys it.
 
-1. In `.env.local` on your computer add `NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO=aitoolsteejay/ClaudeCode`.
+1. In `.env.local` on your computer add `NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO=aitoolsteejay/myntmore-website`.
 2. Run `npm run dev`, open http://localhost:3000/keystatic. Keystatic offers to **create a GitHub app**. Accept; it writes four values into `.env.local`: `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`.
 3. In GitHub, Settings, Developer settings, GitHub Apps, open the new app and add this callback URL next to the localhost one: `https://www.myntmore.com/api/keystatic/github/oauth/callback`. Install the app on the repository.
 4. In Vercel, Project Settings, Environment Variables, add the four values from step 2 plus `NEXT_PUBLIC_KEYSTATIC_GITHUB_REPO`, for Production. Redeploy.
