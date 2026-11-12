@@ -155,3 +155,79 @@ end $$;
 alter table public.leads drop constraint if exists leads_source_check;
 alter table public.leads add constraint leads_source_check
   check (source in ('profile_optimizer', 'posting_rhythm_builder', 'lead_magnet_ideas', 'dm_angle_generator', 'founder_presence_analyzer', 'roi_calculator', 'icp_builder', 'case_study_generator', 'battle_card_generator', 'hook_grader'));
+
+-- ─────────────────────────────────────────────────────────────────────
+-- Prospect Research tool (/tools/prospect-research)
+--
+-- Every call costs real money (Gemini with Google Search grounding), so the API routes check on the
+-- server, with the service-role key (SUPABASE_SERVICE_ROLE_KEY), that the lead exists, came from this
+-- tool and is under 24 hours old, and count runs here for the per-email, per-IP and daily caps.
+-- The three tables below have row level security on and NO policies: the anon key in the browser can
+-- neither read nor write them. Only the server (service role) can. Safe to re-run.
+
+-- 1. Allow the new lead source.
+alter table public.leads drop constraint if exists leads_source_check;
+alter table public.leads add constraint leads_source_check
+  check (source in ('profile_optimizer', 'posting_rhythm_builder', 'lead_magnet_ideas', 'dm_angle_generator', 'founder_presence_analyzer', 'roi_calculator', 'icp_builder', 'case_study_generator', 'battle_card_generator', 'hook_grader', 'prospect_research'));
+
+-- 2. One row per Gemini call: real token and search counts, duration and estimated cost.
+create table if not exists public.ai_usage_log (
+  id bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  tool text not null,
+  run_id uuid,
+  step text not null,
+  model text not null,
+  prospect_domain text,
+  prompt_tokens integer not null default 0,
+  output_tokens integer not null default 0,
+  thinking_tokens integer not null default 0,
+  tool_use_tokens integer not null default 0,
+  searches integer not null default 0,
+  duration_ms integer not null default 0,
+  cost_usd numeric(10, 6) not null default 0,
+  ok boolean not null default true,
+  error text
+);
+alter table public.ai_usage_log enable row level security;
+create index if not exists idx_ai_usage_log_run on public.ai_usage_log(run_id, step);
+create index if not exists idx_ai_usage_log_created_at on public.ai_usage_log(created_at desc);
+
+-- 3. One row per run: inputs, the profile, the prospects, the final accounts, timings and total cost.
+--    status: profiled -> running -> done, or failed; capacity = over the daily cap, to be run by hand.
+create table if not exists public.prospect_research_runs (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  started_at timestamptz,
+  finished_at timestamptz,
+  lead_id uuid references public.leads(id) on delete set null,
+  email text,
+  ip_hash text,
+  status text not null check (status in ('profiled', 'running', 'done', 'failed', 'capacity')),
+  inputs jsonb not null default '{}'::jsonb,
+  profile jsonb,
+  questions jsonb,
+  questions_hash text,
+  prospects jsonb,
+  accounts jsonb,
+  checks jsonb,
+  timings jsonb,
+  total_cost_usd numeric(10, 4),
+  total_searches integer
+);
+alter table public.prospect_research_runs enable row level security;
+create index if not exists idx_pr_runs_email on public.prospect_research_runs(email, created_at desc);
+create index if not exists idx_pr_runs_ip on public.prospect_research_runs(ip_hash, created_at desc);
+create index if not exists idx_pr_runs_status on public.prospect_research_runs(status, created_at desc);
+
+-- 4. Research per prospect, reused for 7 days for the same domain and the same seven questions.
+create table if not exists public.prospect_research_cache (
+  id bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  domain text not null,
+  questions_hash text not null,
+  prospect jsonb,
+  result jsonb not null,
+  unique (domain, questions_hash)
+);
+alter table public.prospect_research_cache enable row level security;

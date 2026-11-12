@@ -38,7 +38,7 @@ const leadSchema = z.object({
   email: z.string().trim().min(1, "Email is required").email("Please enter a valid email").max(255),
 });
 
-export type LeadSource = "profile_optimizer" | "posting_rhythm_builder" | "lead_magnet_ideas" | "dm_angle_generator" | "founder_presence_analyzer" | "case_study_generator" | "battle_card_generator" | "icp_builder" | "roi_calculator" | "hook_grader";
+export type LeadSource = "profile_optimizer" | "posting_rhythm_builder" | "lead_magnet_ideas" | "dm_angle_generator" | "founder_presence_analyzer" | "case_study_generator" | "battle_card_generator" | "icp_builder" | "roi_calculator" | "hook_grader" | "prospect_research";
 
 // Every tool except the ROI calculator sends what the visitor types to Google's
 // Gemini API (through our /api routes) to generate the result. Keep this list in
@@ -53,6 +53,7 @@ const AI_SOURCES: LeadSource[] = [
   "battle_card_generator",
   "icp_builder",
   "hook_grader",
+  "prospect_research",
 ];
 
 interface LeadGateProps {
@@ -86,6 +87,8 @@ const ZOHO_FORM_ACTIONS: Record<LeadSource, string> = {
   icp_builder:
     "https://forms.zohopublic.com/flintstop/form/ICPbuilder/formperma/an5nBPpkO1WIJo1cdInDWDmGb__ufD3Qdhqh1OrjlZg/htmlRecords/submit",
   hook_grader: SHARED_ZOHO_FORM_ACTION,
+  // TODO before launch: the Prospect Research tool's own Zoho form.
+  prospect_research: "ZOHO_FORM_ACTION_PENDING",
   roi_calculator:
     "https://forms.zohopublic.com/flintstop/form/ROICalculator/formperma/qjOewrgpxVp_WRKEGfJpQLvGELpRzoPr9ILtpbTvWiQ/htmlRecords/submit",
 };
