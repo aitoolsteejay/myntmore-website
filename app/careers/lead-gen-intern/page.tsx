@@ -6,8 +6,9 @@ import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/lead-gen-intern", {
   title: "B2B Lead Gen Intern, Mumbai | Rs 10-15K/mo",
   description: "Join Myntmore as a B2B Lead Gen Intern in BKC, Mumbai. Open to freshers, Rs 10-15K a month. Learn LinkedIn outreach, cold email and AI-led lead generation.",
   keywords: ["lead generation internship mumbai", "lead gen intern mumbai", "b2b lead generation internship", "lead generation internship for freshers", "linkedin outreach internship mumbai", "cold email internship mumbai", "b2b marketing internship mumbai", "growth marketing internship bkc", "fresher lead generation jobs mumbai", "outbound marketing internship", "internship with stipend mumbai", "full time internship bkc", "myntmore careers", "lead gen intern job openings"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/lead-gen-intern",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for B2B Lead Generation Intern";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;

@@ -30,8 +30,8 @@ P28,quarterly,city,Best B2B lead generation company in Hyderabad,,,Hyderabad,/b2
 P29,quarterly,city,Best B2B lead generation company in Chennai,,,Chennai,/b2b-lead-generation-chennai
 P30,quarterly,city,Best B2B lead generation company in Ahmedabad,,,Ahmedabad,/b2b-lead-generation-ahmedabad
 P31,quarterly,city,Best B2B lead generation company in Kolkata,,,Kolkata,/b2b-lead-generation-kolkata
-P32,quarterly,city,Best B2B lead generation company in Gurugram,,,Gurugram,NEW: /b2b-lead-generation-gurugram
-P33,quarterly,city,Best lead generation agency in Dubai for B2B companies,,,Dubai,/case-studies/markets/uae
+P32,quarterly,city,Best B2B lead generation company in Gurugram,,,Gurugram,/b2b-lead-generation-gurugram
+P33,quarterly,city,Best lead generation agency in Dubai for B2B companies,,,Dubai,/b2b-lead-generation-dubai
 P34,quarterly,city,Lead generation agency in Mumbai for IT companies,ICP 1,IT Services & Product Engineering,Mumbai,/b2b-lead-generation-mumbai
 P35,quarterly,icp,Best lead generation agency for IT services companies,ICP 1,IT Services & Product Engineering,,/lp/agencies-it
 P36,quarterly,icp,Best lead generation agency for recruitment firms in India,ICP 3,Executive Search & Recruitment,,/lp/recruitment-firms
@@ -162,3 +162,40 @@ P160,quarterly,city,B2B marketing agency in Ahmedabad,,,Ahmedabad,/b2b-lead-gene
 P161,quarterly,city,B2B lead generation for SaaS companies in Bangalore,ICP 2,B2B SaaS & Enterprise Software,Bengaluru,/b2b-lead-generation-bengaluru
 P162,quarterly,city,B2B marketing agency in Mumbai,,,Mumbai,/b2b-lead-generation-mumbai
 P163,quarterly,city,Lead generation services in Pune for manufacturers,ICP 11,Manufacturing / Industrial B2B incl. Pharma,Pune,/b2b-lead-generation-pune
+P164,quarterly,definition,"What does ""cold reply"" mean in sales?",,,,/resources/blogs/handling-cold-email-replies
+P165,quarterly,definition,What is the difference between inbound and outbound marketing?,,,,/resources/glossary/inbound-vs-outbound
+P166,quarterly,comparison,Is it better to build outbound in-house or hire an agency?,,,,/resources/blogs/agency-vs-in-house
+P167,quarterly,how-to,What is Vibe Prospecting in Claude and how do I set it up?,,,,/resources/guides/how-to-set-up-vibe-prospecting
+P168,quarterly,how-to,Which Claude prompts help prepare for a sales call?,,,,/resources/guides/claude-sales-call-prompts
+P169,quarterly,how-to,Which Claude skills can a founder use for content and lead generation?,,,,/resources/guides/claude-skills-guide
+P170,quarterly,service,What does a LinkedIn ghostwriting service for founders include?,,,,/services/personal-branding
+P171,quarterly,definition,What is buyer engagement in B2B sales?,,,,/resources/glossary/buyer-engagement
+P172,quarterly,definition,What is a hot lead in B2B outbound?,,,,/resources/glossary/hot-lead
+P173,quarterly,definition,What makes a good target account?,,,,/resources/glossary/target-account-strategy
+P174,quarterly,definition,"What is sales outreach, and how is it different from cold outreach?",,,,/resources/glossary/sales-outreach
+P175,quarterly,definition,"What is the Total Conversional Market (TCM), and how is it different from TAM?",,,,/resources/glossary/total-conversional-market
+P176,quarterly,definition,What is Signal-Heavy Structuring?,,,,/resources/glossary/signal-heavy-structuring
+P177,quarterly,definition,What is the 3-Second Rule in outbound messaging?,,,,/resources/glossary/3-second-rule
+P178,quarterly,entity,What results has Myntmore produced for recruitment and staffing firms?,ICP 3,Executive Search & Recruitment,,/case-studies/recruitment-staffing
+P179,quarterly,entity,What results has Myntmore produced for financial services firms?,,,,/case-studies/financial-services
+P180,quarterly,entity,What results has Myntmore produced for insurance businesses?,,,,/case-studies/insurance
+P181,quarterly,entity,What results has Myntmore produced for IT services companies and digital agencies?,ICP 1,IT Services & Product Engineering,,/case-studies/agencies-it
+P182,quarterly,entity,What results has Myntmore produced for manufacturers and exporters?,ICP 11,Manufacturing / Industrial B2B incl. Pharma,,/case-studies/manufacturers-exporters
+P183,quarterly,entity,What results has Myntmore produced for professional services firms?,ICP 25,Specialist B2B Professional Services,,/case-studies/professional-services
+P184,quarterly,entity,What results has Myntmore produced for eCommerce technology companies?,,,,/case-studies/ecommerce-tech
+P185,quarterly,entity,What B2B outbound results has Myntmore had in the UAE?,,,,/case-studies/markets/uae
+P186,quarterly,entity,What B2B outbound results has Myntmore had in the United States?,,,,/case-studies/markets/united-states
+P187,quarterly,entity,What B2B outbound results has Myntmore had in the United Kingdom?,,,,/case-studies/markets/united-kingdom
+P188,quarterly,entity,What B2B outbound results has Myntmore had in Singapore?,,,,/case-studies/markets/singapore
+P189,quarterly,entity,What B2B outbound results has Myntmore had in France?,,,,/case-studies/markets/france
+P190,quarterly,entity,What B2B outbound results has Myntmore had in India?,,,,/case-studies/markets/india
+P191,quarterly,how-to,How can AI agents book meetings with US B2B buyers?,,,,/resources/guides/80-us-meetings-ai-agents
+P192,quarterly,how-to,How do I generate B2B leads on LinkedIn without cold pitching?,,,,/resources/guides/leads-on-autopilot-guide
+P193,quarterly,how-to,What are the do's and don'ts of cold outreach?,,,,/resources/guides/dos-and-donts-of-outreach
+P194,quarterly,how-to,How do Bangalore SaaS companies get B2B leads?,ICP 2,B2B SaaS & Enterprise Software,Bengaluru,/resources/blogs/how-bangalore-saas-companies-get-b2b-leads
+P195,quarterly,how-to,How do I test whether my B2B homepage explains itself in five seconds?,,,,/resources/blogs/5-second-hero-section-test
+P196,quarterly,tool,Free tool to plan a LinkedIn posting rhythm,,,,/tools/posting-rhythm-builder
+P197,quarterly,best-of,Which agencies excel at LinkedIn ghostwriting for fintech founders?,ICP 7,FinTech / InsurTech / RegTech,,/services/personal-branding
+P198,quarterly,best-of,Which India-based lead generation agency offers global-standard quality at a lower cost?,,,,/resources/guides/how-to-choose-b2b-lead-generation-agency-india
+P199,quarterly,how-to,When should a Series A founder formalise their lead management process?,ICP 2,B2B SaaS & Enterprise Software,,/resources/blogs/founder-led-sales-before-scaling
+P200,quarterly,comparison,What beats manual LinkedIn outbound for high-volume hiring?,,,,/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting

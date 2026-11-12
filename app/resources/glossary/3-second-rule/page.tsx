@@ -44,6 +44,8 @@ export default function GlossaryTermPage() {
       sections={[{"heading":"The three shifts it implies","steps":[{"lead":"Earn curiosity, don't pitch.","text":"The opening line's only job is to make someone want to read the next one."},{"lead":"Ditch the static script.","text":"A generic feature-dump opener signals a salesperson looking to take up time, and gets the same treatment as spam."},{"lead":"Break the pattern.","text":"A sharp, specific observation about the prospect's situation disarms the usual filtering reflex a busy inbox trains people to have."}]},{"heading":"Why it matters","paragraphs":["Decision-makers skim their inboxes like skeptics, not fans. Outbound isn't dead as a channel, but treating every touch like a generic broadcast instead of a high-leverage, individual moment is what keeps reply rates stuck at zero."]}]}
       sourceLabel={"Read: Stop Selling Features: The 3-Second Rule of Outbound Outreach"}
       sourceHref={"/resources/blogs/stop-selling-features-cold-outreach"}
+      furtherLabel={"See the service: LinkedIn Outreach & Automation"}
+      furtherHref={"/services/linkedin-outreach"}
       articleSchema={TERM_SCHEMA}
     />
   );

@@ -4,11 +4,6 @@
 // A city page also needs its entry in app/sitemap.ts and its questions in content/faqs/pages/city-<slug>.json;
 // the generator warns when either is missing.
 //
-// It also writes lib/city-links.generated.json, the internal links between city pages and the rest of the site:
-// each city's proof cards (from "proofCaseStudies", real library case studies), its industry pages (from
-// "industryPages", /lp/* slugs) and the other cities, plus the reverse maps that let each case study and industry
-// page link back to the cities that list it.
-//
 //   node scripts/generate-city-pages.mjs           write the pages
 //   node scripts/generate-city-pages.mjs --check   exit 1 if any page is out of date
 import fs from "node:fs";
@@ -54,6 +49,14 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const d = { ...JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")), slug };
   for (const k of REQUIRED) if (!d[k]) problems.push(`${f}: "${k}" is empty`);
   for (const [k, n] of [["why", 3], ["services", 7], ["differentiators", 4]]) if (!Array.isArray(d[k]) || d[k].length !== n) problems.push(`${f}: "${k}" must have exactly ${n} items`);
+  if (!Array.isArray(d.proof)) problems.push(`${f}: "proof" must be a list (empty hides the block)`);
+  else {
+    if (d.proof.length && !d.proofTitle) problems.push(`${f}: "proofTitle" is empty`);
+    for (const p of d.proof) {
+      const m = /^\/case-studies\/([a-z0-9-]+)$/.exec(p.href || "");
+      if (!m || !fs.existsSync(path.join(root, "app/case-studies", m[1], "page.tsx"))) problems.push(`${f}: proof link ${p.href} is not a case study page`);
+    }
+  }
   if (d.segments.length && d.segments.length !== 3) problems.push(`${f}: "segments" must have exactly 3 items, or none`);
   if (d.metaTitle && d.metaTitle.length + " | Myntmore".length > 60) console.warn(`[city-pages] warning: ${f}: search title is ${d.metaTitle.length + 11} characters with the site suffix, over 60 (Google may cut it)`);
   if (!sitemap.includes(`/b2b-lead-generation-${slug}\``)) console.warn(`[city-pages] warning: /b2b-lead-generation-${slug} is not listed in app/sitemap.ts`);
@@ -65,44 +68,5 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   else if (CHECK) problems.push(`${path.relative(root, file)} is out of date`);
   else { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, next); wrote++; }
 }
-// ---- internal links between city pages, case studies and industry pages ----
-const library = JSON.parse(fs.readFileSync(path.join(root, "lib/case-study-library.json"), "utf8")).cases;
-const caseBySlug = Object.fromEntries(library.map((c) => [c.slug, c]));
-const lpDir = path.join(root, "content/landing-pages");
-const lpLabel = (slug) => {
-  const f = path.join(lpDir, `${slug}.json`);
-  if (!fs.existsSync(f)) return null;
-  return JSON.parse(fs.readFileSync(f, "utf8")).breadcrumbLabel.replace(/^For /, "");
-};
-const cityFiles = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
-const cities = cityFiles.map((f) => {
-  const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-  return { slug: f.replace(/\.json$/, ""), label: d.breadcrumbLabel, href: `/b2b-lead-generation-${f.replace(/\.json$/, "")}`, d };
-});
-const out = { cities: cities.map(({ slug, label, href }) => ({ slug, label, href })), proof: {}, industry: {}, byCaseStudy: {}, byIndustryPage: {} };
-for (const c of cities) {
-  out.proof[c.slug] = [];
-  for (const cs of c.d.proofCaseStudies || []) {
-    const lib = caseBySlug[cs];
-    if (!lib) { problems.push(`${c.slug}.json: proofCaseStudies "${cs}" is not a library case study`); continue; }
-    out.proof[c.slug].push({ href: `/case-studies/${cs}`, title: lib.title, industry: lib.industry });
-    (out.byCaseStudy[cs] ||= []).push({ href: c.href, label: c.label });
-  }
-  out.industry[c.slug] = [];
-  for (const lp of c.d.industryPages || []) {
-    const label = lpLabel(lp);
-    if (!label) { problems.push(`${c.slug}.json: industryPages "${lp}" has no content/landing-pages/${lp}.json`); continue; }
-    out.industry[c.slug].push({ href: `/lp/${lp}`, label });
-    (out.byIndustryPage[lp] ||= []).push({ href: c.href, label: c.label });
-  }
-}
-const linksFile = path.join(root, "lib/city-links.generated.json");
-const linksNext = JSON.stringify(out, null, 2) + "\n";
-const linksPrev = fs.existsSync(linksFile) ? fs.readFileSync(linksFile, "utf8") : "";
-if (linksPrev !== linksNext) {
-  if (CHECK) problems.push("lib/city-links.generated.json is out of date");
-  else { fs.writeFileSync(linksFile, linksNext); wrote++; }
-}
-
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
 console.log(CHECK ? `[city-pages] ok (${current} pages)` : `[city-pages] wrote ${wrote} page(s), ${current} already current`);

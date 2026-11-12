@@ -4,13 +4,14 @@ import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, InstagramIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const WHATSAPP_URL = "https://wa.me/919867180379";
 const LINKEDIN_URL = "https://www.linkedin.com/in/tejasjhaveri/";
 const INSTAGRAM_URL = "https://www.instagram.com/tejas_jhaveri?stkn=MTZjOGlndmw2dzIxeA==";
 const NEWSLETTER_URL = "/newsletter-subscribe";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tejasjhaveri", {
   title: "Tejas Jhaveri",
   description: "Tejas Jhaveri, Founder of Myntmore. Connect on WhatsApp, LinkedIn, or Instagram.",
   alternates: { canonical: `${SITE_URL}/tejasjhaveri` },
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/tejasjhaveri`,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",

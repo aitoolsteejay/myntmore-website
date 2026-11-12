@@ -10,8 +10,9 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { SITE_URL, buildLocalBusinessSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/about-us", {
   title: { absolute: "About Myntmore | Founded by Tejas Jhaveri, Mumbai" },
   description: "Myntmore is a Mumbai B2B outbound agency founded in 2019 by TEDx speaker Tejas Jhaveri: 12K+ meetings booked and $120M+ pipeline for 130+ B2B companies.",
   alternates: { canonical: "https://www.myntmore.com/about-us" },
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/about-us",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 // Same Person the Organization schema (lib/schema.ts) references as
 // founder, fleshed out here with the fields that belong on a bio page.

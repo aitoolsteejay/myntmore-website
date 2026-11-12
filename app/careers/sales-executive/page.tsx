@@ -4,8 +4,9 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/careers/sales-executive", {
   title: "Sales Executive, Mumbai | Rs 4–7 LPA",
   description: "Join Myntmore as Sales Executive in BKC, Mumbai. Rs 4-7 LPA. Prospect, build client relationships, and close deals. Apply now.",
   keywords: ["sales executive jobs mumbai", "b2b sales executive job", "personal branding sales jobs", "full time sales jobs mumbai", "sales executive jobs bkc", "crm sales executive job", "client facing sales jobs mumbai", "business development executive jobs", "sales jobs personal branding agency", "myntmore careers", "sales executive job b2b growth agency", "linkedin personal branding sales jobs"],
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/careers/sales-executive",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const APPLY_SUBJECT = "Application for Sales Executive";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;

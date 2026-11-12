@@ -9,8 +9,9 @@ import StatTicker from "@/app/components/StatTicker";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/80-us-meetings-ai-agents", {
   title: "80+ US Meetings Booked in 1 Month with AI Agents",
   description: "The exact AI-agent blueprint behind 800 LinkedIn connections and 80+ US B2B meetings a month, automated with n8n and AI. Read the guide.",
   keywords: [
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const HERO_STATS = [
   { v: "800", l: "Connection requests / mo" },

@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"A basic score combines two inputs: how well the lead matches the ICP, and how much they've actually engaged (opens, replies, meeting requests). A lead that's a perfect ICP fit but silent scores lower than an imperfect fit who's actively replying, because engagement is the stronger near-term predictor of a closed deal."}
       sourceLabel={"Read: The 7 B2B Lead Gen Metrics That Actually Matter"}
       sourceHref={"/resources/blogs/b2b-lead-gen-metrics"}
+      furtherLabel={"See the service: ICP Mapping & Lead Scoring"}
+      furtherHref={"/services/sales-intelligence"}
       articleSchema={TERM_SCHEMA}
     />
   );

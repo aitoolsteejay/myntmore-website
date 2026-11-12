@@ -13,7 +13,7 @@
 | Styling | Tailwind CSS + inline styles |
 | Fonts | Inter (body) + Caveat (handwritten annotations) via `next/font/google` |
 | Deployment | Vercel |
-| Repo | GitHub - `aitoolsteejay/ClaudeCode` (master branch) |
+| Repo | GitHub - `aitoolsteejay/myntmore-website` (master branch) |
 
 **Run locally:**
 ```bash
@@ -208,6 +208,6 @@ All sections are mobile-optimised. Key breakpoints used: `sm` (640px), `lg` (102
 
 **Vercel project:** `myntmoreclaude` under `aitoolsteejays-projects`  
 **Production URL:** https://myntmoreclaude.vercel.app  
-**GitHub:** https://github.com/aitoolsteejay/ClaudeCode (master branch auto-deploys via Vercel)
+**GitHub:** https://github.com/aitoolsteejay/myntmore-website (master branch auto-deploys via Vercel)
 
 Pushing to `master` does **not** auto-deploy - manual `vercel --prod` is used currently. Consider enabling Vercel's GitHub integration for auto-deploys on push.

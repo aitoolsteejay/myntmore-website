@@ -4,8 +4,9 @@ import InnerLayout from "../components/InnerLayout";
 import LeadCaptureForm from "../components/LeadCaptureForm";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/seo", {
   title: "SEO Services Mumbai | B2B Content SEO",
   description: "SEO services for B2B companies in India. Content-led SEO that drives qualified pipeline, not just traffic. Book a free SEO audit today.",
   alternates: { canonical: "https://www.myntmore.com/seo" },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/seo",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function SEOPage() {
   return (

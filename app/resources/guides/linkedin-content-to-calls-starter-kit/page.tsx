@@ -12,13 +12,14 @@ import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { ReadingProgress, RangeStat, RoutineTimeline, StaggerList } from "./KitMotion";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/linkedin-content-to-calls-starter-kit";
 const ACCENT = "#EA580C";
 const TITLE = "LinkedIn Content-to-Calls Starter Kit (Free)";
 const DESCRIPTION = "A free LinkedIn starter kit: the 3-part framework that drives calls, 5 post templates, 3 CTAs, 3 follow-up messages and a 10-minute daily routine.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/linkedin-content-to-calls-starter-kit", {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: "The LinkedIn Content-to-Calls Starter Kit",

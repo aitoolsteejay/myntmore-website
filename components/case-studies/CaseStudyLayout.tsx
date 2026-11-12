@@ -2,11 +2,12 @@ import Link from "next/link";
 import InnerLayout from "@/app/components/InnerLayout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
+import CityLinks from "@/app/components/CityLinks";
+import { caseStudyIndustry, UAE_CITY_LINKS } from "@/lib/city-links";
 import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { marketOfCaseStudy } from "@/lib/case-study-markets";
-import CITY_LINKS from "@/lib/city-links.generated.json";
 
 export interface CaseStudyLayoutProps {
   slug: string;
@@ -49,8 +50,6 @@ export default function CaseStudyLayout({
   articleSchema,
 }: CaseStudyLayoutProps) {
   const market = marketOfCaseStudy(slug);
-  // City pages that list this case study as proof link here; link back so the relationship runs both ways.
-  const cityLinks = (CITY_LINKS.byCaseStudy as Record<string, { href: string; label: string }[]>)[slug] ?? [];
   return (
     <InnerLayout>
       <JsonLd data={articleSchema} />
@@ -136,20 +135,22 @@ export default function CaseStudyLayout({
               ))}
             </div>
           </div>
-          {cityLinks.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>Lead generation for companies like this in</h2>
-              <div className="flex flex-wrap gap-3">
-                {cityLinks.map((c) => (
-                  <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
-                    {c.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </section>
+
+      <CityLinks
+        industry={caseStudyIndustry(slug)}
+        heading="Lead generation for this industry, by city"
+        intro="The cities where this kind of company clusters, and how we run outbound for them there."
+      />
+
+      {market?.slug === "uae" && (
+        <CityLinks
+          cities={UAE_CITY_LINKS}
+          heading="B2B lead generation in the UAE"
+          intro="How we run outbound for companies selling to buyers in Dubai and Abu Dhabi."
+        />
+      )}
 
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto"><LeadCaptureForm /></div>

@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const GUIDES_PAGE_SCHEMA = [
   buildBreadcrumbSchema([
@@ -21,7 +22,7 @@ const GUIDES_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides", {
   title: "Free B2B Growth Guides",
   description: "Free step-by-step guides on AI agents, Claude skills, and Vibe Prospecting for B2B founders who want to book more meetings without hiring a bigger team.",
   keywords: [
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/guides",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const GUIDES = [
   {

@@ -6,9 +6,10 @@ import NewsletterForm from "../components/NewsletterForm";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildWebPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const URL = `${SITE_URL}/newsletter-subscribe`;
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/newsletter-subscribe", {
   title: "Subscribe to The Outbound Operator",
   description: "Get one practical B2B growth playbook every week, covering outbound systems, AI prospecting, cold email, LinkedIn, and pipeline conversion.",
   keywords: ["b2b outbound newsletter", "cold email newsletter", "ai outbound insights", "lead generation newsletter", "the outbound operator"],
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     url: URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 const WEBPAGE_SCHEMA = buildWebPageSchema({
   name: "Subscribe to The Outbound Operator",
   description: "Get one practical B2B growth playbook every week, covering outbound systems, AI prospecting, cold email, LinkedIn, and pipeline conversion.",

@@ -8,8 +8,9 @@ import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/claude-skills-guide", {
   title: "The 6 Claude Skills Guide",
   description: "Six ready-to-use Claude skills for founders: content distribution, LinkedIn growth, lead gen, and more, with copy-paste prompts. Try them free.",
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/guides/claude-skills-guide",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 interface Skill {
   number: string;

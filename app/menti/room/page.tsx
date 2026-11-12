@@ -4,11 +4,12 @@ import InnerLayout from "../../components/InnerLayout";
 import RoomClient from "./RoomClient";
 import RoomLogin from "./RoomLogin";
 import { ADMIN_COOKIE_NAME, isValidAdminCookie } from "@/lib/mentiAuth";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/menti/room", {
   title: "Room",
   robots: { index: false, follow: false },
-};
+});
 
 export const dynamic = "force-dynamic";
 

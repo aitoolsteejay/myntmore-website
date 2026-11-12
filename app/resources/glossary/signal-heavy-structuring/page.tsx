@@ -44,6 +44,8 @@ export default function GlossaryTermPage() {
       sections={[{"heading":"The test it has to pass","paragraphs":["The moment a prospect opens the content, they should immediately think: \"there's something specific in here I can use today.\" That's the bar. A generic checklist or a repackaged how-to that could apply to any company in any industry fails it, no matter how well-designed it looks."]},{"heading":"Why it works","paragraphs":["High-converting content isn't about how much is said, it's about what sticks and what a reader can immediately act on. When a piece of content hands over a genuinely useful, pre-built workaround to a problem someone is actively living with, it doesn't need a hard sell attached. The value speaks for itself, and cold interest turns into a booked conversation without extra persuasion."]}]}
       sourceLabel={"Read: The Value Premium: Stop Chasing Attention and Start Creating Magnetic Leads"}
       sourceHref={"/resources/blogs/value-premium-lead-magnets"}
+      furtherLabel={"See the service: Personal Branding for Founders"}
+      furtherHref={"/services/personal-branding"}
       articleSchema={TERM_SCHEMA}
     />
   );

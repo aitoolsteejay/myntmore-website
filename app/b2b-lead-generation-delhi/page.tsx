@@ -5,14 +5,14 @@ import CityPage from "@/components/city/CityPage";
 import data from "@/content/city-pages/delhi.json";
 
 export const metadata: Metadata = {
-  title: "B2B Lead Generation Agency in Delhi NCR",
-  description: "Lead generation company in Delhi NCR for enterprise, export and D2C brands: cold email, LinkedIn and ABM that book qualified meetings. Free GTM audit.",
+  title: "B2B Lead Generation Company in Delhi NCR",
+  description: "B2B lead generation company in Delhi NCR for IT, SaaS, export and staffing firms in Delhi, Gurugram and Noida: cold email, LinkedIn outreach and ABM.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-delhi" },
-  keywords: ["b2b lead generation delhi","lead generation companies in delhi","lead generation company in delhi","lead generation agency in delhi","outbound agency delhi ncr","linkedin outreach delhi","cold email agency delhi","account based marketing delhi","ai lead generation delhi ncr","abm agency delhi ncr","sales intelligence delhi","b2b lead generation for trading companies delhi","lead generation for export houses delhi","b2b leads for d2c brands delhi ncr","enterprise lead generation delhi ncr","demand generation agency gurgaon","linkedin ghostwriting for founders delhi","best b2b outbound agency in delhi ncr","how to get b2b leads in delhi","cold email agency gurgaon noida","b2b lead generation company in delhi","lead generation agency in delhi ncr","lead generation services in delhi","appointment setting services delhi","outbound sales agency delhi"],
+  keywords: ["b2b lead generation company in delhi ncr","lead generation company in delhi","lead generation company in gurgaon","lead generation company in noida","b2b lead generation delhi","outbound agency delhi ncr","linkedin outreach delhi","cold email agency delhi","account based marketing delhi","ai lead generation delhi ncr","abm agency delhi ncr","sales intelligence delhi","b2b lead generation for trading companies delhi","lead generation for export houses delhi","b2b leads for d2c brands delhi ncr","enterprise lead generation delhi ncr","demand generation agency gurgaon","linkedin ghostwriting for founders delhi","best b2b outbound agency in delhi ncr","how to get b2b leads in delhi","cold email agency gurgaon noida","b2b lead generation company in delhi","lead generation agency in delhi ncr","lead generation services in delhi","appointment setting services delhi","outbound sales agency delhi"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation Agency in Delhi | Myntmore",
-    description: "AI-powered outbound systems built for Delhi NCR's enterprise, trading, and D2C landscape.",
+    title: "B2B Lead Generation Company in Delhi NCR | Myntmore",
+    description: "Outbound lead generation for Delhi NCR's IT, SaaS, export and staffing firms in Delhi, Gurugram and Noida.",
     url: "https://www.myntmore.com/b2b-lead-generation-delhi",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },

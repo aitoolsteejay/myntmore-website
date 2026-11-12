@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import AnswerBlock from "../../components/AnswerBlock";
 import RelatedPath from "../../components/RelatedPath";
+import CityLinks from "@/app/components/CityLinks";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import { buildServiceSchema, buildHowToSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
@@ -477,6 +478,7 @@ export default function SalesIntelligenceClient() {
       </section>
 
       <RelatedPath heading="See it in action" intro="A case study, the thinking behind it, and the next step." items={SERVICE_PATHS["sales-intelligence"]} accent="#a855f7" />
+      <CityLinks intro="We run ICP mapping and lead scoring for B2B companies across India. See how it works for the industries in your city." />
 
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section className="relative py-28 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>

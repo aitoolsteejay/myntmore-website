@@ -44,6 +44,8 @@ export default function GlossaryTermPage() {
       sections={[{"heading":"TCM vs. TAM","paragraphs":["**Total Addressable Market (TAM)** is the broad, high-level audience that theoretically could buy your product in a perfect world. It's the number that goes in a pitch deck. TCM is the much narrower group who could actually close this quarter: the ones already living with the problem, already searching for a fix.","Targeting your TAM with generic messaging produces outreach that feels random and depends entirely on luck. Targeting your TCM means every message lands in the middle of a priority the prospect is already trying to solve."]},{"heading":"Why it matters for outbound","paragraphs":["A pipeline full of polite \"maybe later\" replies is usually a sign the targeting is still TAM-shaped, not TCM-shaped. Shrinking the target list to the TCM, and being willing to ignore everyone outside it, is often what turns a stalled outbound motion into a predictable one."]}]}
       sourceLabel={"Read: The TAM Trap: Why Vague Targeting Is Quietly Killing Your Outbound Pipeline"}
       sourceHref={"/resources/blogs/tam-trap-vague-targeting"}
+      furtherLabel={"See the service: ICP Mapping & Lead Scoring"}
+      furtherHref={"/services/sales-intelligence"}
       articleSchema={TERM_SCHEMA}
     />
   );

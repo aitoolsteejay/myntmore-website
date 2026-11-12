@@ -8,6 +8,7 @@ import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/li
 import { textTone } from "@/lib/colors";
 import generatedTerms from "@/lib/glossary-index.generated.json";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const GLOSSARY_PAGE_SCHEMA = [
   buildBreadcrumbSchema([
@@ -22,7 +23,7 @@ const GLOSSARY_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/glossary", {
   title: "B2B Outbound Glossary",
   description: "Plain-English definitions of the terms behind Myntmore's outbound systems, from SPF/DKIM/DMARC and ICP to our own Total Conversional Market framework.",
   keywords: [
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/glossary",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 interface Term {
   href: string;

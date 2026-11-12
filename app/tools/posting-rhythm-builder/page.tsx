@@ -5,14 +5,15 @@ import JsonLd from "../../components/JsonLd";
 import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import PostingRhythmClient from "./PostingRhythmClient";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
-  title: "Posting Rhythm Builder",
-  description: "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.",
+export const metadata: Metadata = withPageSeo("/tools/posting-rhythm-builder", {
+  title: "Free LinkedIn Posting Schedule Planner",
+  description: "Free LinkedIn posting schedule planner: find how often to post, get a weekly routine, and ready-to-use post ideas and hooks for your ICP.",
   keywords: [
+    "linkedin posting schedule planner",
     "linkedin posting rhythm builder",
     "content calendar generator linkedin",
-    "linkedin posting schedule planner",
     "free content cadence planner",
     "linkedin content strategy planner",
     "how often should i post on linkedin",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.myntmore.com/tools/posting-rhythm-builder" },
   ...buildToolSocialMetadata("Posting Rhythm Builder", "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.", "/tools/posting-rhythm-builder"),
-};
+});
 
 const APP_SCHEMA = buildWebApplicationSchema({
   name: "Posting Rhythm Builder",

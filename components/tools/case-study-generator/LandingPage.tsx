@@ -34,20 +34,20 @@ export function LandingPage({ onStart }: LandingPageProps) {
             style={{ background: "rgba(234,88,12,0.07)", borderColor: "rgba(234,88,12,0.35)" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Case Study & Proposal Generator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Free AI Writing Tool</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            Never Face{" "}
+            AI Case Study{" "}
             <span className="relative inline-block">
-              The Blank Page Again
+              & Proposal Generator
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Turn a finished project into a case study, or a prospect conversation into a proposal draft. No invented numbers, no generic filler, ready in minutes.
+            Never face the blank page again. Turn a finished project into a B2B case study, or a prospect conversation into a proposal draft. No invented numbers, no generic filler, ready in minutes.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Start Drafting

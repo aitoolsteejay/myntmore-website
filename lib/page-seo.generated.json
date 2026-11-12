@@ -1,0 +1,422 @@
+{
+ "/": {
+  "title": "Myntmore | AI-Powered B2B Lead Generation Agency, Mumbai",
+  "description": "AI-powered B2B outbound agency in Mumbai. Cold email, LinkedIn & ABM that books meetings. 12K+ booked, $120M+ pipeline. Book a free audit."
+ },
+ "/1-on-1-consultation": {
+  "title": "1-on-1 B2B Growth Consultation | Free GTM Audit | Myntmore",
+  "description": "Book a 1-on-1 consultation with Tejas Jhaveri, B2B growth expert. Free GTM audit: outreach review, ICP mapping. No pitch, no pressure."
+ },
+ "/about-us": {
+  "title": "About Myntmore | Founded by Tejas Jhaveri, Mumbai",
+  "description": "Myntmore is a Mumbai B2B outbound agency founded in 2019 by TEDx speaker Tejas Jhaveri: 12K+ meetings booked and $120M+ pipeline for 130+ B2B companies."
+ },
+ "/book-a-call": {
+  "title": "Book a Strategy Call | Free B2B Growth Audit | Myntmore",
+  "description": "Book a free 30-minute B2B growth and outbound pipeline audit with Myntmore's senior team: your ICP, messaging and outbound systems. No pitch."
+ },
+ "/calendar/cold-emailing": {
+  "title": "Cold Email Infrastructure Audit with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your email deliverability, secondary domain setup, warming rhythm, and high-converting copy angles."
+ },
+ "/calendar/elg": {
+  "title": "Event-Led Growth Strategy Session | Myntmore",
+  "description": "Pick a 25-minute slot with Tejas Jhaveri, Founder of Myntmore. We'll map how to turn executive roundtables, webinars, and events into predictable enterprise pipeline."
+ },
+ "/calendar/email": {
+  "title": "Cold Email Infrastructure Audit with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your email deliverability, secondary domain setup, warming rhythm, and high-converting copy angles."
+ },
+ "/calendar/enwil": {
+  "title": "Outbound Strategy Session with Enwil Fernandes | Myntmore",
+  "description": "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Senior Sales Head at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks."
+ },
+ "/calendar/enwil-ce": {
+  "title": "Outbound Strategy Session with Enwil Fernandes | Myntmore",
+  "description": "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Senior Sales Head at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks."
+ },
+ "/calendar/enwil-li": {
+  "title": "Outbound Strategy Session with Enwil Fernandes | Myntmore",
+  "description": "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Senior Sales Head at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks."
+ },
+ "/calendar/enwil-wa": {
+  "title": "Outbound Strategy Session with Enwil Fernandes | Myntmore",
+  "description": "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Senior Sales Head at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks."
+ },
+ "/calendar/event-led-growth": {
+  "title": "Event-Led Growth Strategy Session | Myntmore",
+  "description": "Pick a 25-minute slot with Tejas Jhaveri, Founder of Myntmore. We'll map how to turn executive roundtables, webinars, and events into predictable enterprise pipeline."
+ },
+ "/calendar/linkedin": {
+  "title": "LinkedIn Outbound Diagnostic with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. We'll audit your LinkedIn connection sequences, founder profile positioning, and reply rates."
+ },
+ "/calendar/th": {
+  "title": "Founder Strategy Session with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute 1-on-1 slot with Tejas Jhaveri, Founder of Myntmore. An honest diagnostic of your B2B outbound systems, ICP, and pipeline bottlenecks. Zero sales pitch."
+ },
+ "/calendar/tj": {
+  "title": "Founder Strategy Session with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute 1-on-1 slot with Tejas Jhaveri, Founder of Myntmore. An honest diagnostic of your B2B outbound systems, ICP, and pipeline bottlenecks. Zero sales pitch."
+ },
+ "/calendar/wa": {
+  "title": "Multi-Channel Outbound Strategy with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your multi-channel pipeline, WhatsApp cadences, and prospect follow-up workflows."
+ },
+ "/calendar/web": {
+  "title": "B2B Pipeline Strategy Session with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute 1-on-1 slot with Tejas Jhaveri, Founder of Myntmore. We'll diagnose your outbound engine, stress-test your ICP, and map your 90-day growth roadmap."
+ },
+ "/calendar/whatsapp": {
+  "title": "Multi-Channel Outbound Strategy with Tejas Jhaveri | Myntmore",
+  "description": "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your multi-channel pipeline, WhatsApp cadences, and prospect follow-up workflows."
+ },
+ "/careers": {
+  "title": "Careers at Myntmore | B2B Sales & Growth Jobs",
+  "description": "Join the team that builds pipelines, not decks. Open roles in sales, lead gen, and GTM strategy at Myntmore. See open roles and apply today."
+ },
+ "/careers/content-marketing-strategist-intern": {
+  "title": "Content Marketing Intern, Mumbai | Rs 7-15K/mo | Myntmore",
+  "description": "Join Myntmore as Content Marketing Strategist Intern in BKC, Mumbai. Write viral LinkedIn content for founders & CXOs. 1-year min, PPO. Apply now."
+ },
+ "/careers/gtm-strategist": {
+  "title": "GTM Strategist, Mumbai | Rs 6–15 LPA | Myntmore",
+  "description": "Join Myntmore as GTM Strategist in BKC, Mumbai. Own growth across B2B brands via LinkedIn, cold email & AI automation. Rs 6-15 LPA. Apply now."
+ },
+ "/careers/hr-operations-intern": {
+  "title": "HR & Operations Intern, Mumbai | Rs 7-15K/mo | Myntmore",
+  "description": "Join Myntmore as HR & Operations Intern in BKC, Mumbai. Build hiring pipelines and HR systems with the founder. 6-month min, PPO. Apply now."
+ },
+ "/careers/lead-gen-intern": {
+  "title": "B2B Lead Gen Intern, Mumbai | Rs 10-15K/mo | Myntmore",
+  "description": "Join Myntmore as a B2B Lead Gen Intern in BKC, Mumbai. Open to freshers, Rs 10-15K a month. Learn LinkedIn outreach, cold email and AI-led lead generation."
+ },
+ "/careers/lead-gen-strategist": {
+  "title": "B2B Lead Gen Strategist, Mumbai | Rs 4-7 LPA | Myntmore",
+  "description": "Join Myntmore as B2B Lead Gen Strategist in BKC, Mumbai. Build outbound systems via LinkedIn, cold email & AI. Rs 4-7 LPA. Apply now."
+ },
+ "/careers/sales-and-growth-intern": {
+  "title": "Sales & Growth Intern, Mumbai | Rs 10-20K/mo | Myntmore",
+  "description": "Join Myntmore as a Sales and Growth Intern in BKC, Mumbai. Full-time internship, Rs 10-20K a month plus incentives. Prospect, learn the CRM, close deals."
+ },
+ "/careers/sales-executive": {
+  "title": "Sales Executive, Mumbai | Rs 4–7 LPA | Myntmore",
+  "description": "Join Myntmore as Sales Executive in BKC, Mumbai. Rs 4-7 LPA. Prospect, build client relationships, and close deals. Apply now."
+ },
+ "/careers/systems-ai-automation-intern": {
+  "title": "AI Automation Intern, Mumbai | Rs 7-20K/mo | Myntmore",
+  "description": "Join Myntmore as Systems & AI Automation Intern in BKC, Mumbai. Build AI agents, n8n/Clay automations, and own SEO/AEO/GEO. WFO, apply now."
+ },
+ "/case-studies": {
+  "title": "B2B Case Studies & Client Results | Myntmore",
+  "description": "Real results in the CRM, not the deck. See how Myntmore's cold email, LinkedIn, and ABM systems booked meetings for real B2B clients."
+ },
+ "/case-studies/agencies-it": {
+  "title": "Agencies & IT Case Studies | Myntmore",
+  "description": "Agencies & IT case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/b2b-founder": {
+  "title": "B2B Founder Case Studies | Myntmore",
+  "description": "B2B Founder case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/ecommerce-tech": {
+  "title": "eCommerce Tech Case Studies | Myntmore",
+  "description": "eCommerce Tech case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/financial-services": {
+  "title": "Financial Services Case Studies | Myntmore",
+  "description": "Financial Services case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/insurance": {
+  "title": "Insurance Case Studies | Myntmore",
+  "description": "Insurance case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/manufacturers-exporters": {
+  "title": "Manufacturers & Exporters Case Studies | Myntmore",
+  "description": "Manufacturers & Exporters case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/markets/france": {
+  "title": "B2B Case Studies in France | Myntmore",
+  "description": "2 Myntmore case studies from outbound campaigns in France: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/markets/india": {
+  "title": "B2B Case Studies in India | Myntmore",
+  "description": "3 Myntmore case studies from outbound campaigns in India: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/markets/singapore": {
+  "title": "B2B Case Studies in Singapore | Myntmore",
+  "description": "4 Myntmore case studies from outbound campaigns in Singapore: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/markets/uae": {
+  "title": "B2B Case Studies in the UAE | Myntmore",
+  "description": "4 Myntmore case studies from outbound campaigns in the UAE: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/markets/united-kingdom": {
+  "title": "B2B Case Studies in the United Kingdom | Myntmore",
+  "description": "3 Myntmore case studies from outbound campaigns in the United Kingdom: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/markets/united-states": {
+  "title": "B2B Case Studies in the United States | Myntmore",
+  "description": "4 Myntmore case studies from outbound campaigns in the United States: meetings booked, reply rates and the approach behind each result."
+ },
+ "/case-studies/pharma": {
+  "title": "Pharma Case Studies | Myntmore",
+  "description": "Pharma case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/professional-services": {
+  "title": "Professional Services Case Studies | Myntmore",
+  "description": "Professional Services case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/recruitment-staffing": {
+  "title": "Recruitment & Staffing Case Studies | Myntmore",
+  "description": "Recruitment & Staffing case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/case-studies/saas": {
+  "title": "SaaS Case Studies | Myntmore",
+  "description": "SaaS case studies from Myntmore: the meetings and pipeline our cold email and LinkedIn outbound booked, and how each campaign ran."
+ },
+ "/contact-us": {
+  "title": "Contact Myntmore | Book a Free B2B GTM Audit",
+  "description": "Book a free 30-minute B2B GTM audit with Myntmore. We'll map your ICP and find what's holding your pipeline back. No pitch, no pressure."
+ },
+ "/editorial-policy": {
+  "title": "Editorial Policy & Methodology | Myntmore",
+  "description": "How Myntmore sources numbers, describes its case studies, handles AI tool data and corrects errors across its guides, benchmarks and tools."
+ },
+ "/enwilfernandes": {
+  "title": "Enwil Fernandes | Myntmore",
+  "description": "Enwil Fernandes, Senior Sales Head at Myntmore. Connect on WhatsApp, LinkedIn, call, or email."
+ },
+ "/events": {
+  "title": "B2B Outbound Events & Webinars | Myntmore",
+  "description": "Live sessions on cold email, LinkedIn outreach, and B2B pipeline building from the team that has booked 12K+ meetings and generated $120M+ in pipeline."
+ },
+ "/events/predictable-pipeline-webinar": {
+  "title": "Free Webinar: Build a Predictable Lead Pipeline | Myntmore",
+  "description": "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings a month, across LinkedIn, cold email, targeting and automation."
+ },
+ "/feedback": {
+  "title": "AI Marketing Workshop Feedback | Myntmore",
+  "description": "Share your feedback on the Myntmore AI Marketing Workshop."
+ },
+ "/jahnvijhaveri": {
+  "title": "Jahnvi Jhaveri | Myntmore",
+  "description": "Jahnvi Jhaveri, Co-Founder of Myntmore. Connect on WhatsApp, LinkedIn, call, or email."
+ },
+ "/marketing-automation": {
+  "title": "B2B Marketing Automation Services | Myntmore",
+  "description": "AI-powered marketing automation for B2B: outbound sequences, email automation, and lead nurturing that runs 24/7. Book a free automation audit."
+ },
+ "/menti": {
+  "title": "Live Q&A | Myntmore",
+  "description": "Answer today's question live."
+ },
+ "/menti/room": {
+  "title": "Room | Myntmore",
+  "description": "Myntmore is an AI-powered B2B outbound agency in Mumbai running cold email, LinkedIn and ABM campaigns that book qualified meetings. 12K+ meetings booked."
+ },
+ "/myntmore-framework": {
+  "title": "The Myntmore Framework: How Our B2B Outbound Works",
+  "description": "How a Myntmore campaign runs: ICP targeting, personalized connection notes, paced sending and timely follow-ups. See the full framework."
+ },
+ "/newsletter-subscribe": {
+  "title": "Subscribe to The Outbound Operator | Myntmore",
+  "description": "Get one practical B2B growth playbook every week, covering outbound systems, AI prospecting, cold email, LinkedIn, and pipeline conversion."
+ },
+ "/plans/[code]": {
+  "title": "Growth Plans | Myntmore",
+  "description": "LinkedIn growth and lead generation plans."
+ },
+ "/plans/orbit": {
+  "title": "The Orbit Plan | Myntmore",
+  "description": "An essential GTM foundation for companies ready to build consistent visibility and outbound momentum."
+ },
+ "/privacy-policy": {
+  "title": "Privacy Policy: How We Handle Your Data | Myntmore",
+  "description": "How Myntmore collects, uses and protects your information: the data we collect, cookies, third-party services, retention, security and your rights."
+ },
+ "/research/kmspharma": {
+  "title": "KMS Pharma: Partner Accounts to Approach | Myntmore",
+  "description": "Research prepared by Myntmore for KMS Pharma: ten pharma companies that look ready to license a dossier, scored on fit and timing, with sources."
+ },
+ "/research/myntmore": {
+  "title": "Sample Account Research: B2B SaaS | Myntmore",
+  "description": "A sample of Myntmore's account research: ten B2B software companies with recent public signals, scored on fit and timing, with a source for every answer."
+ },
+ "/resources": {
+  "title": "B2B Growth Resources: Blogs & Free Tools | Myntmore",
+  "description": "Free B2B lead generation resources: blogs on cold email, ICP mapping, and outreach, plus free AI tools. Explore guides and tools built for you."
+ },
+ "/resources/blogs": {
+  "title": "B2B Lead Generation Blog | Myntmore",
+  "description": "In-depth guides on cold email, ICP mapping, LinkedIn outreach, deliverability, and outbound metrics, written by the team that has booked 12K+ B2B meetings."
+ },
+ "/resources/feed": {
+  "title": "The Feed: B2B Outbound Reels | Myntmore",
+  "description": "Short, practical Instagram Reels on B2B outbound, cold email, LinkedIn and AI lead generation from the Myntmore team. Watch the latest reels."
+ },
+ "/resources/glossary": {
+  "title": "B2B Outbound Glossary | Myntmore",
+  "description": "Plain-English definitions of the terms behind Myntmore's outbound systems, from SPF/DKIM/DMARC and ICP to our own Total Conversional Market framework."
+ },
+ "/resources/guides": {
+  "title": "Free B2B Growth Guides | Myntmore",
+  "description": "Free step-by-step guides on AI agents, Claude skills, and Vibe Prospecting for B2B founders who want to book more meetings without hiring a bigger team."
+ },
+ "/resources/guides/58-meetings-600-linkedin-connections": {
+  "title": "58 Meetings Booked from 600 LinkedIn Connections | Myntmore",
+  "description": "The 5-step LinkedIn lead generation framework behind 58 meetings from 600 connections in a month: ICP, positioning, warm-up, follow-ups. Read the guide."
+ },
+ "/resources/guides/80-us-meetings-ai-agents": {
+  "title": "80+ US Meetings Booked in 1 Month with AI Agents | Myntmore",
+  "description": "The exact AI-agent blueprint behind 800 LinkedIn connections and 80+ US B2B meetings a month, automated with n8n and AI. Read the guide."
+ },
+ "/resources/guides/ai-tech-stack-jewellery": {
+  "title": "AI Tech Stack for Jewellery Brands | Myntmore",
+  "description": "106 AI tools across 14 categories, curated for jewellery brand owners and retailers, from product photography and reels to paid ads."
+ },
+ "/resources/guides/careers-and-job-guide": {
+  "title": "Career Jumpstart Toolkit | Myntmore",
+  "description": "A practical playbook for landing internships, jobs, and your first break: LinkedIn fixes, an outreach playbook, and a curated job-search tool directory."
+ },
+ "/resources/guides/claude-sales-call-prompts": {
+  "title": "5 Claude Prompts for Sales Calls (Copy-Paste) | Myntmore",
+  "description": "Five copy-paste Claude prompts for sales calls: meeting prep, discovery questions, objection prep, call openers and follow-up. Copy them free."
+ },
+ "/resources/guides/claude-skills-guide": {
+  "title": "The 6 Claude Skills Guide | Myntmore",
+  "description": "Six ready-to-use Claude skills for founders: content distribution, LinkedIn growth, lead gen, and more, with copy-paste prompts. Try them free."
+ },
+ "/resources/guides/cold-email-tech-stack": {
+  "title": "Cold Email Tech Stack & Sequence Behind $7K | Myntmore",
+  "description": "The exact cold email tech stack (Clay, Smartlead, BounceBan) and 3-email sequence that got Myntmore an extra $7,000 in revenue. Copy the templates free."
+ },
+ "/resources/guides/dos-and-donts-of-outreach": {
+  "title": "Pattern Disruption: Cold Outreach Do's & Don'ts | Myntmore",
+  "description": "Why most cold outreach gets deleted unread, how pattern disruption earns a reply, and what to send on LinkedIn vs. cold email. Free Myntmore guide."
+ },
+ "/resources/guides/education-guide": {
+  "title": "AI Quick-Start Guide | Myntmore",
+  "description": "Practical AI tips for parents, educators, and creators."
+ },
+ "/resources/guides/golden-icp-framework": {
+  "title": "The Golden ICP Framework for B2B Outbound | Myntmore",
+  "description": "Build high-converting B2B prospect lists using pressure, buying triggers, Clay enrichment, and timely cold email. Get the complete Golden ICP Framework."
+ },
+ "/resources/guides/how-to-choose-an-outbound-agency": {
+  "title": "How to Choose a B2B Outbound Agency | Myntmore",
+  "description": "A neutral checklist for vetting B2B outbound agencies: what to ask about data ownership, deliverability, real reply rates, and contract terms."
+ },
+ "/resources/guides/how-to-choose-b2b-lead-generation-agency-india": {
+  "title": "Choosing a B2B Lead Generation Agency in India | Myntmore",
+  "description": "Eight criteria for choosing a B2B lead generation agency in India: agency type, target market, data, DPDP and TRAI compliance, pricing models and proof."
+ },
+ "/resources/guides/how-to-set-up-vibe-prospecting": {
+  "title": "Vibe Prospecting on Claude: What It Is + Setup | Myntmore",
+  "description": "Vibe Prospecting is a Claude connector that pulls verified B2B leads into your chat. See how it works, the 7-step setup and 10 prompts to copy."
+ },
+ "/resources/guides/job-applications-sales-funnel": {
+  "title": "Job application are like a sales funnel | Myntmore",
+  "description": "A practical job-search funnel for generating interview leads, reaching hiring managers directly, following up with proof, and closing the offer."
+ },
+ "/resources/guides/leads-on-autopilot-guide": {
+  "title": "Leads on Autopilot: A LinkedIn Framework | Myntmore",
+  "description": "A complete system to generate high-quality B2B leads on LinkedIn without cold pitching: audience, content, outreach, nurturing, and follow-ups."
+ },
+ "/resources/guides/linkedin-content-to-calls-starter-kit": {
+  "title": "LinkedIn Content-to-Calls Starter Kit (Free) | Myntmore",
+  "description": "A free LinkedIn starter kit: the 3-part framework that drives calls, 5 post templates, 3 CTAs, 3 follow-up messages and a 10-minute daily routine."
+ },
+ "/resources/guides/outbound-meme-prompt-kit": {
+  "title": "The Outbound Meme Prompt Kit (Free) | Myntmore",
+  "description": "Four copy-paste AI image prompts that turn cold outreach pain into memes people share: graveyard, reject and approve, astronaut and conspiracy board."
+ },
+ "/resources/tools": {
+  "title": "Free B2B Lead Generation Tools | Myntmore",
+  "description": "Free AI-powered tools for B2B founders: optimise your LinkedIn profile, generate outreach angles, and build a stronger pipeline. No sign-up required."
+ },
+ "/seo": {
+  "title": "SEO Services Mumbai | B2B Content SEO | Myntmore",
+  "description": "SEO services for B2B companies in India. Content-led SEO that drives qualified pipeline, not just traffic. Book a free SEO audit today."
+ },
+ "/services": {
+  "title": "AI-Powered B2B Lead Generation Services | Myntmore",
+  "description": "Seven productized B2B growth services: LinkedIn, Cold Email, ICP Mapping, AI Lead Gen, ABM, Personal Branding, GTM Strategy. Book a free audit."
+ },
+ "/site-audit": {
+  "title": "Site Audit | Myntmore",
+  "description": "Myntmore is an AI-powered B2B outbound agency in Mumbai running cold email, LinkedIn and ABM campaigns that book qualified meetings. 12K+ meetings booked."
+ },
+ "/sitemap": {
+  "title": "Site Map: Every Page on Myntmore",
+  "description": "Every page on Myntmore, organised by section: services, case studies, blog posts, guides, the glossary, free tools, careers and more."
+ },
+ "/tejasjhaveri": {
+  "title": "Tejas Jhaveri | Myntmore",
+  "description": "Tejas Jhaveri, Founder of Myntmore. Connect on WhatsApp, LinkedIn, or Instagram."
+ },
+ "/thank-you": {
+  "title": "Thanks, We've Got Your Details | Myntmore",
+  "description": "Thanks for reaching out to Myntmore. We've received your details and will follow up within 24 hours."
+ },
+ "/thankyou": {
+  "title": "You're Booked! | Myntmore",
+  "description": "Your call with Myntmore is confirmed. We'll see you soon."
+ },
+ "/tools/battle-card-generator": {
+  "title": "Free Competitor Battle Card Generator (AI) | Myntmore",
+  "description": "Free AI battle card generator: name a competitor and get their positioning, public pricing, real strengths and gaps, and how to win against them."
+ },
+ "/tools/case-study-generator": {
+  "title": "Free AI Case Study Generator for B2B | Myntmore",
+  "description": "Free AI case study generator for B2B teams: turn a finished project into a client case study, or a sales call into a proposal draft. No invented numbers."
+ },
+ "/tools/cold-email-roi-calculator": {
+  "title": "Cold Email ROI Calculator (Free, 2026 Benchmarks) | Myntmore",
+  "description": "Free cold email ROI calculator: enter your sends, reply and close rates, or start from 2026 benchmarks, and see meetings, pipeline and ROI calculate live."
+ },
+ "/tools/dm-angle-generator": {
+  "title": "Free DM Angle Generator for B2B Outreach | Myntmore",
+  "description": "Free AI tool that generates 5 psychology-aligned DM opening angles for your outreach, tailored to your industry, ICP role, and offer."
+ },
+ "/tools/founder-presence-analyzer": {
+  "title": "LinkedIn Competitor Analysis Tool (Free) | Myntmore",
+  "description": "Free LinkedIn competitor analysis for founders: compare your posting frequency and engagement with up to 5 competitors and get positioning recommendations."
+ },
+ "/tools/icp-builder": {
+  "title": "Free Ideal Customer Profile (ICP) Generator | Myntmore",
+  "description": "Free ICP generator: describe your business and get detailed B2B or D2C ideal customer profiles, each with a value proposition you can use in outreach."
+ },
+ "/tools/lead-magnet-ideas": {
+  "title": "Free Lead Magnet Idea Generator for B2B | Myntmore",
+  "description": "Free AI lead magnet idea generator: describe your business and ICP and get B2B lead magnet ideas you can offer in cold email and LinkedIn outreach."
+ },
+ "/tools/linkedin-hook-grader": {
+  "title": "Free LinkedIn Hook Grader & Generator | Myntmore",
+  "description": "Free LinkedIn hook grader and generator: paste your post's first two lines, get a score out of 100 and three rewritten hooks graded by the same rules."
+ },
+ "/tools/linkedin-optimizer": {
+  "title": "Free LinkedIn Profile Optimizer & AI Audit | Myntmore",
+  "description": "Free LinkedIn profile optimizer: an AI audit of your headline and About section, then rewrites that turn profile visitors into replies."
+ },
+ "/tools/posting-rhythm-builder": {
+  "title": "Free LinkedIn Posting Schedule Planner | Myntmore",
+  "description": "Free LinkedIn posting schedule planner: find how often to post, get a weekly routine, and ready-to-use post ideas and hooks for your ICP."
+ },
+ "/tools/roi-calculator": {
+  "title": "LinkedIn Outreach ROI Calculator (Free) | Myntmore",
+  "description": "Free LinkedIn outreach ROI calculator: enter connection requests, acceptance, reply and close rates to see meetings, pipeline and revenue. Cold email too."
+ },
+ "/value-prop": {
+  "title": "Value Proposition | Myntmore",
+  "description": "Customer pain, solution, benefit, proof and message, mapped for all 29 ICPs, with the provisional 2026 ICP direction."
+ },
+ "/who-this-is-for": {
+  "title": "Who Is Myntmore For? Who We Work With (and Don't)",
+  "description": "Myntmore runs B2B cold email, LinkedIn and ABM as one system. See which B2B teams it fits, who it doesn't, and whether to book a call."
+ },
+ "/workshop": {
+  "title": "Myntmore | B2B Lead Generation & AI-Powered Outbound Agency",
+  "description": "Myntmore is an AI-powered B2B outbound agency in Mumbai running cold email, LinkedIn and ABM campaigns that book qualified meetings. 12K+ meetings booked."
+ }
+}

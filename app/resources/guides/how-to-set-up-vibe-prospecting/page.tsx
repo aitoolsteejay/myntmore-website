@@ -8,8 +8,9 @@ import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/how-to-set-up-vibe-prospecting", {
   title: "Vibe Prospecting on Claude: What It Is + Setup",
   description: "Vibe Prospecting is a Claude connector that pulls verified B2B leads into your chat. See how it works, the 7-step setup and 10 prompts to copy.",
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 interface SetupStep {
   title: string;

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import FeedClient from "./FeedClient";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/feed", {
   title: "The Feed: B2B Outbound Reels",
   description: "Short, practical Instagram Reels on B2B outbound, cold email, LinkedIn and AI lead generation from the Myntmore team. Watch the latest reels.",
   keywords: [
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources/feed",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 export default function FeedPage() {
   return <FeedClient />;

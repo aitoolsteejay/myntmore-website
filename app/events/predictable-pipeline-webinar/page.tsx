@@ -5,6 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildEventSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const RECORDING_URL = "https://zfrmz.com/viRIcOyB23MftpLVyX4f";
 const PAGE_URL = `${SITE_URL}/events/predictable-pipeline-webinar`;
@@ -14,7 +15,7 @@ const DESCRIPTION = "Most businesses don't have a lead problem. They have a pred
 // Event schema and on-page copy.
 const META_DESCRIPTION = "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings a month, across LinkedIn, cold email, targeting and automation.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/events/predictable-pipeline-webinar", {
   title: "Free Webinar: Build a Predictable Lead Pipeline",
   description: META_DESCRIPTION,
   // The event ran on 2026-09-19. Noindexed rather than deleted so existing
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const EVENT_SCHEMA = buildEventSchema({
   name: TITLE,

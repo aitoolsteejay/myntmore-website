@@ -2,6 +2,8 @@ import Link from "next/link";
 import InnerLayout from "@/app/components/InnerLayout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
+import CityLinks from "@/app/components/CityLinks";
+import { caseStudyIndustry } from "@/lib/city-links";
 import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import RelatedPath from "@/app/components/RelatedPath";
@@ -119,6 +121,12 @@ export default function UKPharmaQualifiedMeetingsCaseStudy() {
       </section>
 
       <RelatedPath heading="Go deeper" intro="The method behind this result." items={CASE_STUDY_PATHS["uk-pharma-qualified-meetings"]} />
+
+      <CityLinks
+        industry={caseStudyIndustry("uk-pharma-qualified-meetings")}
+        heading="Lead generation for this industry, by city"
+        intro="The cities where this kind of company clusters, and how we run outbound for them there."
+      />
 
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto"><LeadCaptureForm /></div>

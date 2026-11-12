@@ -1,0 +1,59 @@
+/* Motion for the Master ICP page. Shared pieces (marquee, hero-fade, reveal, card-fade-up) come from
+   globals.css; these are the page's own, each switched off under prefers-reduced-motion at the end. */
+
+/* "Market-led 2026": the brand gradient drifting through the headline. */
+.gradientText {
+  background-image: linear-gradient(90deg, #ea580c, #f5b731, #7c3aed, #0d9488, #ea580c);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientDrift 10s ease-in-out infinite;
+}
+@keyframes gradientDrift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Second ticker row runs the other way, a little slower. */
+.tickerReverse {
+  animation-direction: reverse;
+  animation-duration: 70s !important;
+}
+.tickerSlow {
+  animation-duration: 60s !important;
+}
+
+/* Cards lift a touch on hover. */
+.lift {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.2s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* Score sum bars grow from zero once the table scrolls into view. */
+.bar {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.barsOn .bar {
+  transform: scaleX(var(--fill));
+}
+
+/* Live dot on the ticker label. */
+.pulse {
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.45); }
+  50% { box-shadow: 0 0 0 6px rgba(234, 88, 12, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradientText, .pulse { animation: none; }
+  .lift, .lift:hover { transition: none; transform: none; }
+  .bar { transition: none; transform: scaleX(var(--fill)); }
+}

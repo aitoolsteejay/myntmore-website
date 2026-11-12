@@ -283,10 +283,10 @@ export default function RoiCalculatorClient() {
               <PillBadge>ROI Calculator</PillBadge>
             </div>
             <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-3 leading-tight">
-              <HandUnderline>ROI Calculator</HandUnderline>
+              LinkedIn Outreach <HandUnderline>ROI Calculator</HandUnderline>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Calculate your outreach ROI in real-time
+              Calculate your LinkedIn outreach ROI in real time
             </p>
           </div>
           <Button

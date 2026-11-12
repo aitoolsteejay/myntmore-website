@@ -10,7 +10,8 @@ import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
-import CITY_LINKS from "@/lib/city-links.generated.json";
+import CityLinks from "@/app/components/CityLinks";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-b2b-lead-generation-agency-india`;
 const TITLE = "How to Choose a B2B Lead Generation Agency in India";
@@ -22,7 +23,7 @@ const AI_RESOURCES = [
   `${SITE_URL}/resources/blogs/b2b-outbound-benchmark-report-2026`,
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources/guides/how-to-choose-b2b-lead-generation-agency-india", {
   title: "Choosing a B2B Lead Generation Agency in India",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const ARTICLE_SCHEMA = buildArticleSchema({
   headline: TITLE,
@@ -171,15 +172,6 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
                   <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
                     Selling to Indian companies and selling from India to the US, UK or Middle East are different jobs. Domestic B2B buying is relationship-heavy: LinkedIn, phone and WhatsApp (with opt-in) often matter as much as email, and decisions can involve a promoter or family owner as well as the functional head. Selling abroad needs copy that reads as native, sending windows in the buyer&apos;s time zone and compliance with laws like CAN-SPAM and GDPR. Ask for case studies in the country and buyer role you actually target, not just a total client count.
                   </p>
-                  <p className="text-base leading-relaxed mt-4" style={{ color: "#3D3D3D" }}>
-                    Buyer markets also differ by city. Our city guides cover what selling into each one involves:{" "}
-                    {CITY_LINKS.cities.map((c, i) => (
-                      <span key={c.href}>
-                        <Link href={c.href} className="font-bold underline" style={{ color: "#A14A08" }}>{c.label}</Link>
-                        {i < CITY_LINKS.cities.length - 2 ? ", " : i === CITY_LINKS.cities.length - 2 ? " and " : "."}
-                      </span>
-                    ))}
-                  </p>
                 </div>
 
                 <div>
@@ -279,6 +271,8 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
       <Faq badge="FAQ" title="Common questions" items={FAQ_ITEMS.map((f) => ({ q: f.question, a: f.answer }))} />
 
       {/* Final CTA */}
+      <CityLinks heading="B2B lead generation agencies by Indian city" intro="What outbound looks like in each city we cover, by the industries that cluster there." />
+
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-2xl p-8 sm:p-12 text-center" style={{ background: "linear-gradient(135deg, #FEF9EC 0%, #FFFFFF 100%)", border: "1px solid rgba(245,183,49,0.35)", boxShadow: "0 8px 30px rgba(0,0,0,0.04)" }}>

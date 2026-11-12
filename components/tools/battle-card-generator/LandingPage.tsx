@@ -34,20 +34,20 @@ export function LandingPage({ onStart }: LandingPageProps) {
             style={{ background: "rgba(239,68,68,0.07)", borderColor: "rgba(239,68,68,0.35)" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Competitor Battle Card Generator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Free AI Sales Tool</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            Never Lose A Deal{" "}
+            Competitor{" "}
             <span className="relative inline-block">
-              To A Competitor You Understand Better
+              Battle Card Generator
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Paste a competitor&apos;s name, get what they do, their pricing if public, their real strengths and gaps, and exactly how to position against them for your specific offer.
+            Never lose a deal to a competitor you understand better. Paste a competitor&apos;s name, get what they do, their pricing if public, their real strengths and gaps, and exactly how to position against them for your specific offer.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Build My Battle Card

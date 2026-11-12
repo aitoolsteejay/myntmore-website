@@ -52,13 +52,13 @@ function resolve(src, token) {
 
 function metaOf(file) {
   let src = read(file);
-  let block = src.match(/export const metadata[^=]*=\s*\{([\s\S]*?)\n\};/)?.[1] ?? "";
+  let block = src.match(/export const metadata[^=]*=\s*(?:withPageSeo\([^,]*,\s*)?\{([\s\S]*?)\n\}\)?;/)?.[1] ?? "";
   if (!block) {
     // Client components cannot export metadata; it lives in a sibling layout.
     const layout = path.join(path.dirname(file), "layout.tsx");
     if (exists(layout)) {
       src = read(layout);
-      block = src.match(/export const metadata[^=]*=\s*\{([\s\S]*?)\n\};/)?.[1] ?? "";
+      block = src.match(/export const metadata[^=]*=\s*(?:withPageSeo\([^,]*,\s*)?\{([\s\S]*?)\n\}\)?;/)?.[1] ?? "";
     }
   }
   const pick = (key) => {
@@ -83,6 +83,11 @@ function pageFile(urlPath) {
   return null;
 }
 
+// Search titles and descriptions edited in the admin (content/page-seo, built into lib/page-seo.generated.json)
+// replace the ones in the page file on the live site, so they win here too.
+const PAGE_SEO_FILE = path.join(ROOT, "lib", "page-seo.generated.json");
+const PAGE_SEO = exists(PAGE_SEO_FILE) ? JSON.parse(read(PAGE_SEO_FILE)) : {};
+
 // ── Which pages ──────────────────────────────────────────────────────────
 const sitemapSrc = read(path.join(APP, "sitemap.ts"));
 const urls = [...sitemapSrc.matchAll(/url:\s*(?:base|`\$\{base\}([^`]*)`)/g)].map((m) => m[1] ?? "");
@@ -90,12 +95,13 @@ const urls = [...sitemapSrc.matchAll(/url:\s*(?:base|`\$\{base\}([^`]*)`)/g)].ma
 const pages = urls.map((u) => {
   const file = pageFile(u);
   const meta = file ? metaOf(file) : {};
+  const seo = PAGE_SEO[u || "/"] ?? {};
   const slug = u.split("/").filter(Boolean).pop() ?? "";
   return {
     path: u || "/",
     url: SITE + u,
-    title: meta.title ?? slug.replace(/-/g, " "),
-    description: meta.definition && u.startsWith("/resources/glossary/") ? meta.definition : meta.description ?? "",
+    title: seo.title?.replace(/\s+\|\s+Myntmore$/, "") || meta.title || slug.replace(/-/g, " "),
+    description: meta.definition && u.startsWith("/resources/glossary/") ? meta.definition : seo.description || meta.description || "",
   };
 });
 

@@ -4,6 +4,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildWebPageSchema, SITE_URL } from "@/lib/schema";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/privacy-policy`;
 const WEBPAGE_SCHEMA = buildWebPageSchema({
@@ -16,7 +17,7 @@ const WEBPAGE_SCHEMA = buildWebPageSchema({
   ],
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/privacy-policy", {
   title: "Privacy Policy: How We Handle Your Data",
   description: "How Myntmore collects, uses and protects your information: the data we collect, cookies, third-party services, retention, security and your rights.",
   alternates: { canonical: PAGE_URL },
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     "how myntmore uses your data",
     "myntmore terms and privacy",
   ],
-};
+});
 
 const SECTIONS = [
   {

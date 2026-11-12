@@ -24,6 +24,16 @@ export interface ReportConfig {
   riskLegend: string;
   csvName: string;
   sourcesLine: string;
+  // Used by the Prospect Research tool, where the report fills in while it runs. Both /research pages
+  // leave these out and render exactly as before.
+  /** Inside a tool page that already has the navbar spacing and breadcrumbs: less top padding, gold and orange glow only. */
+  embedded?: boolean;
+  /** Companies still being researched (soft placeholder rows) or that could not be researched. */
+  pending?: { name: string; where: string; failed?: boolean }[];
+  /** A line above the table, such as "Researching 6 of 10". */
+  progress?: React.ReactNode;
+  /** False while research is still running: the CSV download waits until every company is done. */
+  csvReady?: boolean;
 }
 
 const INK = "#0a0a0a";
@@ -86,7 +96,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
     return [...r].sort((a, b) =>
       sort === "fit" ? b.fit - a.fit : sort === "timing" ? b.timing - a.timing || b.fit - a.fit : TIER_RANK[a.tier] - TIER_RANK[b.tier] || b.timing - a.timing || b.fit - a.fit,
     );
-  }, [tier, sort]);
+  }, [ACCOUNTS, tier, sort]);
 
   const toggle = (name: string) =>
     setOpen((prev) => {
@@ -100,9 +110,9 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
   const t2 = ACCOUNTS.filter((a) => a.tier === "T2").length;
 
   return (
-    <div className="relative overflow-hidden px-4 pb-24 pt-32" style={{ color: INK }}>
+    <div className={`relative overflow-hidden px-4 pb-24 ${config.embedded ? "pt-4" : "pt-32"}`} style={{ color: INK }}>
       <div aria-hidden="true" className="pointer-events-none absolute -left-36 -top-20 h-[560px] w-[560px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(245,183,49,0.26) 0%, rgba(255,160,0,0.09) 40%, transparent 68%)" }} />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-24 h-[520px] w-[520px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(168,139,250,0.20) 0%, rgba(139,92,246,0.07) 40%, transparent 68%)" }} />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-24 h-[520px] w-[520px] rounded-full blur-[55px]" style={{ background: config.embedded ? "radial-gradient(circle, rgba(234,88,12,0.14) 0%, rgba(245,183,49,0.07) 40%, transparent 68%)" : "radial-gradient(circle, rgba(168,139,250,0.20) 0%, rgba(139,92,246,0.07) 40%, transparent 68%)" }} />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Intro */}
@@ -162,11 +172,17 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
             </div>
             <div className="flex items-center gap-3 text-sm" style={{ color: MUTED }}>
               <span>{rows.length} {rows.length === 1 ? "company" : "companies"}</span>
-              <button type="button" onClick={() => downloadCsv(rows, QUESTIONS, config.csvName)} className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border bg-white px-3.5 py-1.5 font-bold transition-colors hover:bg-[#F8F6F2] focus-visible:outline-none focus-visible:ring-2" style={{ borderColor: BORDER, color: INK }}>
+              <button type="button" disabled={config.csvReady === false} title={config.csvReady === false ? "Available when the research has finished" : undefined} onClick={() => downloadCsv(rows, QUESTIONS, config.csvName)} className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border bg-white px-3.5 py-1.5 font-bold transition-colors hover:bg-[#F8F6F2] focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white" style={{ borderColor: BORDER, color: INK }}>
                 <Download className="h-4 w-4" aria-hidden="true" /> Download CSV ({rows.length})
               </button>
             </div>
           </div>
+
+          {config.progress && (
+            <div className="border-b px-4 py-3 text-sm" style={{ borderColor: BORDER, color: INK }} role="status" aria-live="polite">
+              {config.progress}
+            </div>
+          )}
 
           <div className="flex items-center gap-2 border-b px-4 py-2.5 text-sm" style={{ borderColor: BORDER, backgroundColor: "#FBF7EE", color: MUTED }}>
             <Info className="h-4 w-4 flex-shrink-0" style={{ color: GOLD_TEXT }} aria-hidden="true" />
@@ -261,6 +277,9 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                                           Source{x.date ? `, ${x.date}` : ""} <ExternalLink className="h-3 w-3" aria-hidden="true" />
                                         </a>
                                       )}
+                                      {x.sourceStatus === "removed" && <span className="block text-xs">The source link stopped working{x.date ? ` (dated ${x.date})` : ""}, so the link was removed and this answer was marked down one step.</span>}
+                                      {x.sourceStatus === "unchecked" && <span className="block text-xs">This site blocks automated checks, so the link was not checked automatically.</span>}
+                                      {x.sourceStatus === "no_mention" && <span className="block text-xs">The linked page does not name the company, so this answer was marked down one step.</span>}
                                     </span>
                                   </li>
                                 ))}
@@ -280,6 +299,35 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                     </Fragment>
                   );
                 })}
+                {config.pending?.map((p, i) => (
+                  <tr key={`pending-${i}`} className="border-t align-top" style={{ borderColor: BORDER }}>
+                    <td className="px-4 py-4 tabular-nums" style={{ color: MUTED }}>{rows.length + i + 1}</td>
+                    <td className="px-2 py-4">
+                      <span className="inline-flex min-h-[44px] items-center font-black" style={{ color: p.failed ? MUTED : INK }}>{p.name}</span>
+                      <span className="block text-xs" style={{ color: MUTED }}>{p.where}</span>
+                    </td>
+                    {p.failed ? (
+                      <td colSpan={5 + QUESTIONS.length} className="px-2 py-4" style={{ color: MUTED }}>
+                        Could not research this company. It is left out of the scores and the CSV.
+                      </td>
+                    ) : (
+                      <>
+                        <td className="px-2 py-4">
+                          <span className="sr-only">Researching</span>
+                          <span aria-hidden="true" className="block h-3 w-4/5 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F1EADD" }} />
+                          <span aria-hidden="true" className="mt-2 block h-3 w-3/5 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F5EFE5" }} />
+                        </td>
+                        {[0, 1, 2].map((k) => (
+                          <td key={k} className="px-2 py-4"><span aria-hidden="true" className="block h-3 w-10 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F1EADD" }} /></td>
+                        ))}
+                        {QUESTIONS.map((q) => (
+                          <td key={q} className="px-1.5 py-4 text-center"><span aria-hidden="true" className="inline-block h-[18px] w-[18px] rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F5EFE5", border: `1px solid ${BORDER}` }} /></td>
+                        ))}
+                        <td className="px-3 py-4" />
+                      </>
+                    )}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

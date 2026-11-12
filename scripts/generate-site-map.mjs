@@ -45,7 +45,9 @@ const isPrivate = (p) =>
   p.startsWith("/menti/room") ||
   p.startsWith("/cold-emailing-package") ||
   p === "/value-prop" ||
-  p === "/master-icp";
+  p === "/master-icp" ||
+  // Hidden until launch: works at its URL but must not be listed anywhere. Remove at launch.
+  p === "/tools/prospect-research";
 // Legacy redirects that point at (or stand in for) a private page.
 const isPrivateRedirect = (r) =>
   isPrivate(r.from) || isPrivate(r.to) || r.from === "/international-pricing" || r.from === "/indian-pricing";
@@ -325,6 +327,8 @@ for (const f of codeFiles) {
     if (!routeSet.has(to)) continue;
     const owner = ownerOf(f);
     if (owner === to) continue;
+    // Do not name files that belong to a private page.
+    if (owner && isPrivate(owner)) continue;
     if (!referencedElsewhere.has(to)) referencedElsewhere.set(to, rel(f));
   }
 }
@@ -422,7 +426,8 @@ const data = {
   redirects: publicRedirects,
   hiddenRedirects,
   rewrites: rewrites.map((r) => ({ from: normalize(r.source), to: r.destination })),
-  apiRoutes: appFiles.filter((f) => path.basename(f) === "route.ts").map((f) => dirToRoute(path.dirname(f))).sort(),
+  // The Prospect Research tool's API is withheld with the tool page until launch.
+  apiRoutes: appFiles.filter((f) => path.basename(f) === "route.ts").map((f) => dirToRoute(path.dirname(f))).filter((r) => !r.startsWith("/api/tools/prospect-research")).sort(),
   method:
     "A page is 'linked' if it can be reached by following internal links from the homepage. Links in the XML sitemap, the HTML /sitemap page and this audit page are ignored.",
 };

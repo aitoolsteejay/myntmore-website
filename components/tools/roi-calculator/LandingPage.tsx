@@ -38,16 +38,16 @@ export function LandingPage({ onStart }: LandingPageProps) {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            See What Your{" "}
+            LinkedIn Outreach{" "}
             <span className="relative inline-block">
-              Outreach Is Worth
+              ROI Calculator
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 420 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q105 2 210 6 Q315 10 418 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-3xl">
-            Plug in your real funnel numbers and watch your pipeline, revenue, and ROI calculate live. See the full picture before you approve another dollar of outreach spend.
+            See what your LinkedIn outreach is worth. Plug in your real funnel numbers and watch your pipeline, revenue, and ROI calculate live. See the full picture before you approve another dollar of outreach spend.
           </p>
           <Button onClick={onStart} variant="hero" size="xl" className="rounded-full shadow-2xl">
             Calculate My ROI

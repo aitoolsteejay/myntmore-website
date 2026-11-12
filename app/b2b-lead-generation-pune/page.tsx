@@ -6,12 +6,12 @@ import data from "@/content/city-pages/pune.json";
 
 export const metadata: Metadata = {
   title: "B2B Lead Generation Companies in Pune",
-  description: "Looking at lead generation companies in Pune? Myntmore runs cold email, LinkedIn and ABM for Pune IT, SaaS and auto-component firms, live in 18 days.",
+  description: "Comparing B2B lead generation companies in Pune? Myntmore books qualified meetings for IT, SaaS and auto-component firms by cold email and LinkedIn.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-pune" },
-  keywords: ["b2b lead generation company in pune","lead generation companies in pune","b2b lead generation companies in pune","lead generation company in pune","lead generation agency in pune","lead generation services in pune","b2b lead generation pune","outbound agency pune","linkedin outreach pune","cold email agency pune","account based marketing pune","ai lead generation pune","abm agency pune","sales intelligence pune","b2b lead generation for saas companies pune","lead generation for auto component manufacturers pune","b2b leads for it services companies pune","lead generation for oem suppliers pune","demand generation agency pune","linkedin ghostwriting for founders pune","best b2b outbound agency in pune","how to get b2b leads in pune","cold email agency for engineering companies pune","b2b lead generation agency pune","appointment setting services pune","outbound sales agency pune"],
+  keywords: ["lead generation companies in pune","b2b lead generation companies in pune","b2b lead generation company in pune","lead generation agency in pune","lead generation services in pune","b2b lead generation pune","outbound agency pune","linkedin outreach pune","cold email agency pune","account based marketing pune","ai lead generation pune","abm agency pune","sales intelligence pune","b2b lead generation for saas companies pune","lead generation for auto component manufacturers pune","b2b leads for it services companies pune","lead generation for oem suppliers pune","demand generation agency pune","linkedin ghostwriting for founders pune","best b2b outbound agency in pune","how to get b2b leads in pune","cold email agency for engineering companies pune","b2b lead generation agency pune","appointment setting services pune","outbound sales agency pune"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation Company in Pune | Myntmore",
+    title: "B2B Lead Generation Companies in Pune | Myntmore",
     description: "Outbound lead generation for Pune's IT, SaaS and auto-component companies: cold email, LinkedIn and ABM.",
     url: "https://www.myntmore.com/b2b-lead-generation-pune",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],

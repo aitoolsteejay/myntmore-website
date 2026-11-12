@@ -731,6 +731,11 @@ main > section:first-of-type:not([style*="gradient"]):not(:has([style*="radial-g
   font-size: 0.8125rem;
 }
 
+/* ─── City page FAQ accordion (components/city/CityPage.tsx) ───
+   Safari still draws its own disclosure triangle on <summary>; the template
+   draws a + that turns into an x instead. */
+.city-faq summary::-webkit-details-marker { display: none; }
+
 /* ─── Reduced motion ───────────────────────────────────────
    Honour the OS "reduce motion" setting: entrance/idle animations
    render in their final visible state, decorative loops stop. ─── */

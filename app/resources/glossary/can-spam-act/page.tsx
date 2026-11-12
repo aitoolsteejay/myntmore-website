@@ -49,6 +49,8 @@ export default function GlossaryTermPage() {
       body={"Unlike some other regions, the US doesn't require prior opt-in for B2B cold email, which is what makes cold outreach legally viable there in the first place. But every message still needs an honest 'From' line and a real way to opt out, and violations carry real financial penalties per email."}
       sourceLabel={"Read: Cold Email Compliance: CAN-SPAM, GDPR & DPDP"}
       sourceHref={"/resources/blogs/cold-email-compliance-guide"}
+      furtherLabel={"See the service: Cold Email Infrastructure"}
+      furtherHref={"/services/cold-email"}
       articleSchema={TERM_SCHEMA}
       faqs={FAQS}
     />

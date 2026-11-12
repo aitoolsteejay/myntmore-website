@@ -22,6 +22,7 @@ import JsonLd from "@/app/components/JsonLd";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import AnswerBlock from "@/app/components/AnswerBlock";
 import RelatedPath from "@/app/components/RelatedPath";
+import CityLinks from "@/app/components/CityLinks";
 import { SERVICE_PATHS } from "@/lib/internal-paths";
 import FadeIn from "@/app/components/FadeIn";
 import StatTicker from "@/app/components/StatTicker";
@@ -294,6 +295,7 @@ export default function ColdEmailingPackage() {
       <Faq badge={d.faq.badge} title={d.faq.title} items={FAQS} />
 
       <RelatedPath heading={d.relatedPath.heading} intro={d.relatedPath.intro} items={SERVICE_PATHS["cold-email"]} accent={ORANGE} />
+      <CityLinks intro="We run cold email for B2B companies across India. See how it works for the industries in your city." />
 
       {/* Founder + CTA */}
       <section className="px-4 py-24" style={{ backgroundColor: CREAM }}>

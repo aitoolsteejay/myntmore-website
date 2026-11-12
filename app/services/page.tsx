@@ -9,9 +9,9 @@ import { buildFaqSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
-import CITY_LINKS from "@/lib/city-links.generated.json";
+import { withPageSeo } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/services", {
   title: "AI-Powered B2B Lead Generation Services",
   description: "Seven productized B2B growth services: LinkedIn, Cold Email, ICP Mapping, AI Lead Gen, ABM, Personal Branding, GTM Strategy. Book a free audit.",
   alternates: { canonical: "https://www.myntmore.com/services" },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/services",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 const SERVICES = [
   { number: "01", title: "LinkedIn Outreach & Automation", tagline: "Conversations happening in your LinkedIn inbox. Every week.", desc: "Multi-touch sequences that mimic human behaviour and generate replies from the right people. We manage everything from profile audit to reply handoff.", href: "/services/linkedin-outreach", hoverClass: "card-hover-linkedin", accentColor: "#0077b5", stats: [{ v: "48%", l: "Avg acceptance rate" }, { v: "21%", l: "Avg reply rate" }] },
@@ -86,22 +86,6 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>B2B lead generation by city</h2>
-          <p className="text-base mb-8" style={{ color: "#52525B" }}>
-            We are based in Mumbai and run these services for B2B companies across India. Each city guide covers the local buyer market.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {CITY_LINKS.cities.map((c) => (
-              <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
-                {c.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-black mb-10" style={{ color: "#0a0a0a" }}>Frequently asked questions</h2>
@@ -135,11 +119,19 @@ export default function Services() {
               { city: "Mumbai", href: "/b2b-lead-generation-mumbai", blurb: "BFSI, Media & SaaS" },
               { city: "Bengaluru", href: "/b2b-lead-generation-bengaluru", blurb: "Tech & B2B SaaS" },
               { city: "Delhi NCR", href: "/b2b-lead-generation-delhi", blurb: "Enterprise & D2C Supply" },
+              { city: "Gurugram", href: "/b2b-lead-generation-gurugram", blurb: "SaaS, Fintech & Staffing" },
+              { city: "Noida", href: "/b2b-lead-generation-noida", blurb: "IT Services & Electronics" },
               { city: "Pune", href: "/b2b-lead-generation-pune", blurb: "Auto, IT & Industrial" },
               { city: "Hyderabad", href: "/b2b-lead-generation-hyderabad", blurb: "Pharma & Enterprise Tech" },
               { city: "Chennai", href: "/b2b-lead-generation-chennai", blurb: "SaaS & Manufacturing" },
               { city: "Ahmedabad", href: "/b2b-lead-generation-ahmedabad", blurb: "Chemicals & Export" },
               { city: "Kolkata", href: "/b2b-lead-generation-kolkata", blurb: "Industrial & Healthcare" },
+              { city: "Jaipur", href: "/b2b-lead-generation-jaipur", blurb: "Gems, Jewellery & IT" },
+              { city: "Indore", href: "/b2b-lead-generation-indore", blurb: "IT, Pharma & Auto" },
+              { city: "Surat", href: "/b2b-lead-generation-surat", blurb: "Diamonds & Textiles" },
+              { city: "Coimbatore", href: "/b2b-lead-generation-coimbatore", blurb: "Pumps, Textiles & IT" },
+              { city: "Dubai", href: "/b2b-lead-generation-dubai", blurb: "UAE B2B & Market Entry" },
+              { city: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi", blurb: "Enterprise & Energy" },
             ].map((c) => (
               <Link
                 key={c.href}

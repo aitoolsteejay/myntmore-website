@@ -108,12 +108,20 @@ const ICP_LINKS = [
 const CITY_LINKS = [
   { label: "Lead generation in Mumbai", href: "/b2b-lead-generation-mumbai" },
   { label: "Delhi", href: "/b2b-lead-generation-delhi" },
+  { label: "Gurugram", href: "/b2b-lead-generation-gurugram" },
+  { label: "Noida", href: "/b2b-lead-generation-noida" },
   { label: "Bengaluru", href: "/b2b-lead-generation-bengaluru" },
   { label: "Pune", href: "/b2b-lead-generation-pune" },
   { label: "Hyderabad", href: "/b2b-lead-generation-hyderabad" },
   { label: "Chennai", href: "/b2b-lead-generation-chennai" },
   { label: "Kolkata", href: "/b2b-lead-generation-kolkata" },
   { label: "Ahmedabad", href: "/b2b-lead-generation-ahmedabad" },
+  { label: "Jaipur", href: "/b2b-lead-generation-jaipur" },
+  { label: "Indore", href: "/b2b-lead-generation-indore" },
+  { label: "Surat", href: "/b2b-lead-generation-surat" },
+  { label: "Coimbatore", href: "/b2b-lead-generation-coimbatore" },
+  { label: "Dubai", href: "/b2b-lead-generation-dubai" },
+  { label: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi" },
 ];
 
 export default function Footer() {

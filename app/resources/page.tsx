@@ -7,6 +7,7 @@ import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { OG_BASE } from "@/lib/og";
+import { withPageSeo } from "@/lib/page-seo";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
   { name: "Home", url: SITE_URL },
@@ -22,7 +23,7 @@ const RESOURCES_PAGE_SCHEMA = [
   }),
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/resources", {
   title: "B2B Growth Resources: Blogs & Free Tools",
   description: "Free B2B lead generation resources: blogs on cold email, ICP mapping, and outreach, plus free AI tools. Explore guides and tools built for you.",
   keywords: [
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     url: "https://www.myntmore.com/resources",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },
-};
+});
 
 // A real directory, not a fourth copy of content: each tile links out to
 // its own hub page rather than duplicating a hand-picked preview of posts

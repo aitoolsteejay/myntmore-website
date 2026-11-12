@@ -5,14 +5,14 @@ import CityPage from "@/components/city/CityPage";
 import data from "@/content/city-pages/kolkata.json";
 
 export const metadata: Metadata = {
-  title: "B2B Lead Generation Agency in Kolkata",
-  description: "B2B lead generation in Kolkata for healthcare suppliers, manufacturers, trading houses and IT companies: cold email, LinkedIn outreach and ABM.",
+  title: "B2B Lead Generation Company in Kolkata",
+  description: "B2B lead generation company in Kolkata for healthcare suppliers, manufacturers, trading houses and IT firms. We reach business buyers, not patients.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-kolkata" },
-  keywords: ["b2b lead generation kolkata","healthcare lead generation agency in kolkata","b2b healthcare lead generation kolkata","lead generation company kolkata","outbound agency kolkata","linkedin outreach kolkata","cold email agency west bengal","account based marketing kolkata","ai lead generation kolkata","abm agency kolkata","sales intelligence kolkata","b2b lead generation for steel companies kolkata","lead generation for trading houses kolkata","lead generation for engineering companies west bengal","b2b leads for it companies kolkata","demand generation agency kolkata","lead generation for financial services companies kolkata","best b2b outbound agency in kolkata","how to get b2b leads in kolkata","cold email agency for jute and steel exporters","b2b lead generation agency kolkata","lead generation services in kolkata","appointment setting services kolkata","outbound sales agency kolkata"],
+  keywords: ["b2b lead generation company in kolkata","lead generation company in kolkata","healthcare lead generation services in kolkata","b2b lead generation kolkata","healthcare lead generation agency in kolkata","b2b healthcare lead generation kolkata","lead generation company kolkata","outbound agency kolkata","linkedin outreach kolkata","cold email agency west bengal","account based marketing kolkata","ai lead generation kolkata","abm agency kolkata","sales intelligence kolkata","b2b lead generation for steel companies kolkata","lead generation for trading houses kolkata","lead generation for engineering companies west bengal","b2b leads for it companies kolkata","demand generation agency kolkata","lead generation for financial services companies kolkata","best b2b outbound agency in kolkata","how to get b2b leads in kolkata","cold email agency for jute and steel exporters","b2b lead generation agency kolkata","lead generation services in kolkata","appointment setting services kolkata","outbound sales agency kolkata"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation Agency in Kolkata | Myntmore",
-    description: "Outbound lead generation for Kolkata's healthcare suppliers, manufacturers, trading houses and IT companies.",
+    title: "B2B Lead Generation Company in Kolkata | Myntmore",
+    description: "Outbound lead generation for Kolkata's healthcare suppliers, manufacturers, trading houses and IT firms. Business buyers, not patient leads.",
     url: "https://www.myntmore.com/b2b-lead-generation-kolkata",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
   },

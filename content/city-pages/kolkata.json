@@ -1,8 +1,11 @@
 {
   "slug": "kolkata",
-  "metaTitle": "B2B Lead Generation Agency in Kolkata",
-  "metaDescription": "B2B lead generation in Kolkata for healthcare suppliers, manufacturers, trading houses and IT companies: cold email, LinkedIn outreach and ABM.",
+  "metaTitle": "B2B Lead Generation Company in Kolkata",
+  "metaDescription": "B2B lead generation company in Kolkata for healthcare suppliers, manufacturers, trading houses and IT firms. We reach business buyers, not patients.",
   "keywords": [
+    "b2b lead generation company in kolkata",
+    "lead generation company in kolkata",
+    "healthcare lead generation services in kolkata",
     "b2b lead generation kolkata",
     "healthcare lead generation agency in kolkata",
     "b2b healthcare lead generation kolkata",
@@ -28,29 +31,73 @@
     "appointment setting services kolkata",
     "outbound sales agency kolkata"
   ],
-  "ogTitle": "B2B Lead Generation Agency in Kolkata | Myntmore",
-  "ogDescription": "Outbound lead generation for Kolkata's healthcare suppliers, manufacturers, trading houses and IT companies.",
+  "ogTitle": "B2B Lead Generation Company in Kolkata | Myntmore",
+  "ogDescription": "Outbound lead generation for Kolkata's healthcare suppliers, manufacturers, trading houses and IT firms. Business buyers, not patient leads.",
   "breadcrumbLabel": "Kolkata",
   "badge": "Kolkata",
-  "h1": "B2B Lead Generation Agency in Kolkata",
-  "intro": "Kolkata carries decades of strength in trading, steel, and engineering, alongside a fast-growing IT sector. We build the AI-powered cold email, LinkedIn, and ABM systems that turn that legacy into new pipeline.",
+  "emoji": "🌉",
+  "floatingIcons": [
+    "🌉",
+    "🏥",
+    "⚙️",
+    "🚢"
+  ],
+  "hubs": [
+    "Salt Lake Sector V",
+    "New Town",
+    "Rajarhat",
+    "Park Street",
+    "BBD Bagh",
+    "Howrah",
+    "Kasba"
+  ],
+  "h1": "B2B Lead Generation Company in Kolkata",
+  "intro": "Myntmore is a B2B lead generation company for Kolkata's healthcare suppliers, engineering and steel firms, trading houses and IT companies. Our lead generation services in Kolkata use cold email, LinkedIn outreach and ABM to reach business buyers such as procurement heads, distributors and operations leaders. We do not generate patient leads for hospitals or clinics.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Kolkata businesses need this",
   "why": [
     {
+      "icon": "🚚",
       "title": "Decades of trading relationships, no way to grow past them",
       "desc": "Kolkata's legacy trading houses, and its long-standing strength in jute, steel, and engineering, have grown on networks built over generations. That's a strong foundation, but it caps growth once every existing relationship has been tapped."
     },
     {
+      "icon": "💻",
       "title": "An IT sector competing against better-funded rivals",
       "desc": "Kolkata's growing IT and ITES companies are up against far larger tech hubs like Bengaluru and Pune for the same buyers. Winning that fight needs a sharper, more systematic outbound motion, not more cold calls."
     },
     {
+      "icon": "🏦",
       "title": "Financial services with deep history, thin digital pipeline",
       "desc": "The city's long-established financial services base has real credibility, but much of its new-business generation still depends on personal networks rather than a repeatable outbound system."
     }
   ],
+  "proofTitle": "Results for healthcare suppliers and engineering firms like Kolkata's",
+  "proofIntro": "Kolkata's B2B economy is healthcare supply, engineering, trading and financial services. These are real engagements from those industries.",
+  "proof": [
+    {
+      "label": "140 qualified leads for a medical tourism platform",
+      "href": "/case-studies/medical-tourism-platform-pipeline",
+      "result": "140 qualified leads, with a 61.6% response rate from hospital decision-makers."
+    },
+    {
+      "label": "Reaching dermatologists beyond the field team's coverage",
+      "href": "/case-studies/pharma-india-dermatologist-outreach",
+      "result": "72 webinar attendees, 24 medical-team discussions and 18 field visits agreed, in India."
+    },
+    {
+      "label": "2.1x more positive replies for an engineering goods exporter",
+      "href": "/case-studies/manufacturers-exporters-engineering-goods-replies",
+      "result": "Positive reply rates up 2.1x, with 11 active commercial opportunities and 5 technical discussions."
+    },
+    {
+      "label": "18 prospect conversations for a financial advisory practice",
+      "href": "/case-studies/financial-services-advisory-conversations",
+      "result": "18 relevant prospect conversations, with 4 high-fit prospects entering the advisory pipeline."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Kolkata: they are the engagements closest to Kolkata's industries.",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
@@ -90,7 +137,7 @@
       "desc": "ICP, positioning and channel mix, then run by the same team across every channel."
     }
   ],
-  "diffTitle": "Why Myntmore over a typical Kolkata agency",
+  "diffTitle": "Why Myntmore over a typical Kolkata lead generation agency",
   "differentiators": [
     "AI-powered outbound systems instead of manual, referral-based prospecting",
     "A fully productized system, live in weeks, not a slow agency ramp-up",
@@ -99,11 +146,27 @@
   ],
   "formTitle": "Get a free GTM audit for your Kolkata business",
   "formSubtitle": "We'll audit your current outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
-  "segmentsTitle": "",
-  "segmentsIntro": "",
-  "segments": [],
-  "segmentsNote": "",
-  "healthcareTitle": "Healthcare lead generation in Kolkata, for B2B sellers",
+  "segmentsTitle": "Who we generate leads for in Kolkata",
+  "segmentsIntro": "Our lead generation services in Kolkata are built for companies that sell to other businesses, in India or overseas.",
+  "segments": [
+    {
+      "icon": "💊",
+      "title": "Healthcare suppliers",
+      "desc": "Medical device, diagnostics, healthcare software and pharma companies that sell to hospital groups, diagnostic chains and distributors across eastern India."
+    },
+    {
+      "icon": "⚙️",
+      "title": "Engineering, steel and trading houses",
+      "desc": "Manufacturers, exporters and trading firms that have grown on long-standing relationships and trade fairs, and need new domestic and overseas buyers to hear from them."
+    },
+    {
+      "icon": "💻",
+      "title": "IT, ITES and financial services",
+      "desc": "Firms competing with larger hubs for the same clients, where new business still depends on personal networks instead of a repeatable outbound system."
+    }
+  ],
+  "segmentsNote": "For your sector, see lead generation for [pharma and healthcare companies](/lp/pharma), [manufacturers and exporters](/lp/manufacturers-exporters), [IT services companies](/lp/agencies-it) and [financial services firms](/lp/financial-services).",
+  "healthcareTitle": "B2B healthcare lead generation services in Kolkata",
   "healthcareIntro": "Kolkata is the main healthcare hub for eastern India, and the companies that supply its hospitals, diagnostic chains and distributors sell to a small set of hard-to-reach decision-makers. If you sell medical devices, diagnostics, healthcare software or pharma products, we build outreach that reaches the people who actually buy:",
   "healthcareBuyers": [
     "Procurement heads and purchase committees at hospital groups",
@@ -111,7 +174,7 @@
     "Pharma and medical-device distributors across eastern India",
     "Hospital administrators and IT heads evaluating healthcare software"
   ],
-  "healthcareNote": "This is B2B outreach to buyers inside healthcare organisations, not patient acquisition for hospitals or clinics. See how it works for [pharma and healthcare companies](/lp/pharma), or read the [dermatology pharma case study from India](/case-studies/pharma-india-dermatologist-outreach) and the [medical tourism platform case study](/case-studies/medical-tourism-platform-pipeline).",
+  "healthcareNote": "This is B2B outreach to buyers inside healthcare organisations. It is not patient lead generation for hospitals or clinics, which needs local search, ads and booking systems. See how it works for [pharma and healthcare companies](/lp/pharma), or read the [dermatology pharma case study from India](/case-studies/pharma-india-dermatologist-outreach) and the [medical tourism platform case study](/case-studies/medical-tourism-platform-pipeline).",
   "stepsTitle": "How B2B lead generation works with us",
   "steps": [
     {
@@ -135,15 +198,5 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india). Exporters and engineering firms can start with [lead generation for manufacturers and exporters](/lp/manufacturers-exporters).",
-  "proofCaseStudies": [
-    "manufacturers-exporters-industrial-buyer-conversations",
-    "agencies-it-web-development-retainers",
-    "financial-services-advisory-conversations"
-  ],
-  "industryPages": [
-    "manufacturers-exporters",
-    "agencies-it",
-    "financial-services"
-  ]
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
 }

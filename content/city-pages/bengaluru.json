@@ -1,16 +1,15 @@
 {
   "slug": "bengaluru",
-  "metaTitle": "B2B Lead Generation Company in Bangalore",
-  "metaDescription": "B2B lead generation company in Bangalore for SaaS, IT services and tech firms: cold email, LinkedIn outreach and ABM that book meetings, live in 18 days.",
+  "metaTitle": "Lead Generation Companies in Bangalore for SaaS",
+  "metaDescription": "Comparing lead generation companies in Bangalore? Myntmore runs outbound for B2B SaaS: cold email, LinkedIn and ABM that book demos in India and the US.",
   "keywords": [
-    "b2b lead generation company in bangalore",
     "lead generation companies in bangalore",
-    "lead generation services in bangalore",
-    "b2b lead generation companies in bangalore",
-    "lead generation company in bangalore",
-    "saas lead generation bangalore",
+    "saas lead generation agency bangalore",
+    "lead generation company in bangalore for saas",
     "b2b lead generation agency in bangalore",
+    "lead generation company in bangalore",
     "sales lead generation companies in bangalore",
+    "lead generation services in bangalore",
     "b2b lead generation bengaluru",
     "outbound agency bangalore",
     "linkedin outreach bengaluru",
@@ -33,29 +32,74 @@
     "appointment setting services bengaluru",
     "outbound sales agency bengaluru"
   ],
-  "ogTitle": "B2B Lead Generation Company in Bangalore | Myntmore",
-  "ogDescription": "Outbound lead generation for Bangalore's SaaS, IT services and tech companies: cold email, LinkedIn and ABM.",
+  "ogTitle": "Lead Generation Companies in Bangalore for B2B SaaS | Myntmore",
+  "ogDescription": "Outbound lead generation built for Bangalore's B2B SaaS companies: cold email, LinkedIn and ABM that book demos in India and abroad.",
   "breadcrumbLabel": "Bengaluru",
-  "badge": "Bengaluru (Bangalore)",
-  "h1": "B2B Lead Generation Company in Bangalore (Bengaluru)",
-  "intro": "Looking for a B2B lead generation company in Bangalore? Bengaluru is India's SaaS and tech capital, and its most crowded buyer market: every CTO and VP Sales here hears from dozens of vendors a week. We build the AI-powered cold email, LinkedIn and ABM systems that get a SaaS or IT services company past that noise and turn a strong product into a predictable pipeline of meetings.",
+  "badge": "Bengaluru (Bangalore) · B2B SaaS",
+  "emoji": "💻",
+  "floatingIcons": [
+    "💻",
+    "🚀",
+    "🌳",
+    "☕"
+  ],
+  "hubs": [
+    "Koramangala",
+    "HSR Layout",
+    "Indiranagar",
+    "Whitefield",
+    "Outer Ring Road",
+    "Bellandur",
+    "Manyata Tech Park",
+    "Electronic City"
+  ],
+  "h1": "Lead Generation Company in Bangalore for B2B SaaS",
+  "intro": "Comparing lead generation companies in Bangalore? Myntmore is a B2B lead generation company built around how SaaS sells: cold email, LinkedIn outreach and ABM that book demos with the right accounts, in India and in the US and UK. Bengaluru (Bangalore) is India's SaaS capital, so your buyers have already seen every generic SDR template.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
-  "whyTitle": "Why Bengaluru businesses need this",
+  "whyTitle": "Why Bangalore SaaS companies need outbound",
   "why": [
     {
-      "title": "SaaS teams across Koramangala, HSR Layout, and Indiranagar",
-      "desc": "Bengaluru has India's highest concentration of B2B SaaS and venture-backed tech startups across Koramangala, HSR Layout, Indiranagar, and Whitefield. Most are exceptional at building product, but lack a structured outbound system for filling the top of the funnel beyond inbound form fills."
+      "icon": "🤝",
+      "title": "Inbound and founder networks plateau",
+      "desc": "Most Bengaluru SaaS teams across Koramangala, HSR Layout, Indiranagar and Whitefield grow first on inbound, product-led signups and the founders' own network. That flattens out, and there is rarely a structured outbound system behind it to fill the top of the funnel."
     },
     {
-      "title": "The most sophisticated tech buyers in India",
-      "desc": "Engineering heads and tech buyers in Bengaluru get pitched constantly and filter out generic SDR templates immediately. Cutting through here takes precision, signal-based targeting built around verified tech stack and hiring triggers."
+      "icon": "🎯",
+      "title": "The most pitched tech buyers in India",
+      "desc": "Engineering heads and tech buyers in Bengaluru get pitched constantly and filter out generic SDR templates immediately. Cutting through takes signal-based targeting built around verified tech stack, funding and hiring triggers."
     },
     {
-      "title": "Expanding from Bengaluru into US and global markets",
-      "desc": "Fast-growing tech teams in Electronic City and Outer Ring Road corridors often expand into US, UK, and European markets without an outbound engine built to reach enterprise decision-makers abroad."
+      "icon": "🌍",
+      "title": "Selling SaaS from Bengaluru into the US and UK",
+      "desc": "Fast-growing SaaS teams often expand into US, UK and European markets where no one has heard of them, without an outbound engine built to reach enterprise decision-makers abroad."
     }
   ],
+  "proofTitle": "SaaS lead generation results",
+  "proofIntro": "Most of our Bangalore conversations are with SaaS teams, so this is the proof that matters: real SaaS engagements, with the numbers.",
+  "proof": [
+    {
+      "label": "40 qualified meetings in 8 weeks for a Series A SaaS company",
+      "href": "/case-studies/saas-series-a",
+      "result": "40 meetings in 8 weeks, a 34% reply rate and $1.2M in pipeline."
+    },
+    {
+      "label": "31 enterprise sales meetings for a workflow automation SaaS",
+      "href": "/case-studies/saas-workflow-automation-enterprise",
+      "result": "31 qualified sales meetings in 3 months and 9 enterprise opportunities identified."
+    },
+    {
+      "label": "A ₹72 lakh pipeline for a fintech SaaS company",
+      "href": "/case-studies/saas-fintech-pipeline",
+      "result": "₹72 lakh in potential pipeline, 16 qualified stakeholder conversations and 4 enterprise opportunities."
+    },
+    {
+      "label": "Reply rates doubled for an HR tech SaaS platform",
+      "href": "/case-studies/saas-hr-tech-reply-rates",
+      "result": "2x the reply rate, 19 qualified product demos booked and 5 opportunities in product evaluation."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Bangalore: they are the engagements closest to Bangalore's industries. More: [24 sales calls for an AI productivity platform](/case-studies/saas-ai-productivity-sales-calls) and [21 sales conversations for a customer support SaaS](/case-studies/saas-customer-support-conversations).",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
@@ -95,7 +139,7 @@
       "desc": "ICP, positioning and channel mix, then run by the same team across every channel."
     }
   ],
-  "diffTitle": "Why Myntmore over a typical Bengaluru agency",
+  "diffTitle": "Why Myntmore over a typical Bangalore lead generation company",
   "differentiators": [
     "Signal-based targeting instead of static, bought contact lists",
     "A fully productized system, live in weeks, not a slow agency ramp-up",
@@ -105,27 +149,30 @@
   "formTitle": "Get a free GTM audit for your Bengaluru business",
   "formSubtitle": "We'll audit your current outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
   "segmentsTitle": "Who we generate leads for in Bangalore",
-  "segmentsIntro": "Our lead generation services in Bangalore are built for companies that sell to other businesses, at home or overseas.",
+  "segmentsIntro": "Our lead generation services in Bangalore are built first for SaaS companies, and for the tech firms that sell alongside them, at home or overseas.",
   "segments": [
     {
-      "title": "B2B SaaS selling in India and abroad",
-      "desc": "Series A and B SaaS teams that need pipeline beyond inbound and founder networks, often into US and UK markets where buyers have never heard of them."
+      "icon": "💻",
+      "title": "B2B SaaS, Series A to C",
+      "desc": "SaaS teams that need pipeline beyond inbound and founder networks, often into US and UK markets where buyers have never heard of them."
     },
     {
+      "icon": "🤖",
+      "title": "Fintech, AI and deep tech",
+      "desc": "Longer, more technical sales where outreach has to show you understand the buyer's stack, regulation or use case before asking for a demo."
+    },
+    {
+      "icon": "🛠️",
       "title": "IT services and product engineering",
       "desc": "Firms selling to global capability centres, enterprises and funded startups, where the buyer is a CTO or engineering head who ignores generic pitches."
-    },
-    {
-      "title": "Fintech and deep tech",
-      "desc": "Longer, more technical sales where outreach has to show you understand the buyer's stack, regulation or use case before asking for a call."
     }
   ],
-  "segmentsNote": "See it in practice: [40 qualified meetings in 8 weeks for a Series A SaaS company](/case-studies/saas-series-a) and [a ₹72 lakh pipeline for a fintech SaaS company](/case-studies/saas-fintech-pipeline). For your sector, see lead generation for [SaaS founders](/lp/saas-founders), [IT services companies](/lp/agencies-it) and [recruitment firms](/lp/recruitment-firms).",
+  "segmentsNote": "For your sector, see lead generation for [SaaS founders](/lp/saas-founders), [IT services companies](/lp/agencies-it) and [recruitment firms](/lp/recruitment-firms).",
   "healthcareTitle": "",
   "healthcareIntro": "",
   "healthcareBuyers": [],
   "healthcareNote": "",
-  "stepsTitle": "How B2B lead generation works with us",
+  "stepsTitle": "How lead generation works for a Bangalore SaaS company",
   "steps": [
     {
       "when": "Week 1",
@@ -148,15 +195,5 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india).",
-  "proofCaseStudies": [
-    "saas-workflow-automation-enterprise",
-    "saas-fintech-pipeline",
-    "saas-ai-productivity-sales-calls"
-  ],
-  "industryPages": [
-    "saas-founders",
-    "agencies-it",
-    "fundraising"
-  ]
+  "stepsNote": "New to outbound? Read [how Bangalore SaaS companies get B2B leads](/resources/blogs/how-bangalore-saas-companies-get-b2b-leads). Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
 }

@@ -12,7 +12,8 @@ import Faq from "@/app/lp/Faq";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import type { LandingPageData } from "./landing-page-data";
 import { LeadSourceField } from "@/app/components/LeadSource";
-import CITY_LINKS from "@/lib/city-links.generated.json";
+import CityLinks from "@/app/components/CityLinks";
+import { LANDING_PAGE_INDUSTRY } from "@/lib/city-links";
 
 // One template for every ICP landing page (/lp/<slug>). The text comes from
 // content/landing-pages/<slug>.json; the markup below is what each page used to carry.
@@ -463,26 +464,6 @@ function ScenariosSection({ d }: { d: LandingPageData }) {
   );
 }
 
-// City pages that list this industry page link here; this row links back to them.
-function CitiesSection({ slug }: { slug: string }) {
-  const cities = (CITY_LINKS.byIndustryPage as Record<string, { href: string; label: string }[]>)[slug] ?? [];
-  if (cities.length === 0) return null;
-  return (
-    <section className="py-14 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>Where we work with companies like yours</h2>
-        <div className="flex flex-wrap gap-3">
-          {cities.map((c) => (
-            <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
-              B2B lead generation in {c.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function DarkCTASection({ d }: { d: LandingPageData }) {
   const fade = useScrollFade(0);
   return (
@@ -580,7 +561,11 @@ export default function LandingPage({ data: d }: { data: LandingPageData }) {
       {d.scenarios.length > 0 && <ScenariosSection d={d} />}
       {d.whyCards.length > 0 && <WhySection d={d} />}
       <Faq title={d.faqTitle} items={faqItems} />
-      <CitiesSection slug={d.slug} />
+      <CityLinks
+        industry={LANDING_PAGE_INDUSTRY[d.slug]}
+        heading="Where we run this in India"
+        intro="City by city: the local industries we write for, and what outbound looks like there."
+      />
       <DarkCTASection d={d} />
       <FormSection d={d} />
     </LpLayout>

@@ -406,7 +406,7 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-3 tracking-[-0.035em] leading-[1.08] text-[#0A0A0A] text-balance"
           >
-            Your headline is the first line of your pitch.
+            Free LinkedIn Profile Optimizer
           </motion.h1>
 
           {/* Signature Myntmore gold squiggle underline with self-drawing animation */}
@@ -431,7 +431,7 @@ const LandingPage = ({ onStart }: LandingPageProps) => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto text-[#52525B] tracking-[-0.01em]"
           >
-            Most LinkedIn profiles read like passive job titles, not reasons to reply. Watch the live interactive preview below cycle through generic vs. high-converting angles.
+            Your headline is the first line of your pitch, and most LinkedIn profiles read like passive job titles, not reasons to reply. Watch the live interactive preview below cycle through generic vs. high-converting angles.
           </motion.p>
 
           {/* Continuous Auto-Switching Showcase Device */}

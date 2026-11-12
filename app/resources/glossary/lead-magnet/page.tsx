@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"The ones that actually convert are narrow and immediately usable by the exact ICP they're built for, not broad awareness content repackaged as a PDF. A generic '10 tips' guide reads as marketing; a tool that solves one specific problem for one specific role reads as genuinely useful, which is the entire difference."}
       sourceLabel={"Read: The Value Premium: Creating Magnetic Lead Magnets"}
       sourceHref={"/resources/blogs/value-premium-lead-magnets"}
+      furtherLabel={"See the service: Personal Branding for Founders"}
+      furtherHref={"/services/personal-branding"}
       articleSchema={TERM_SCHEMA}
     />
   );

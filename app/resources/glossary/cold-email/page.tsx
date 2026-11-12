@@ -46,6 +46,8 @@ export default function GlossaryTermPage() {
       body={"Done well, cold email is permission-based and targeted: it goes to a narrow list matching a defined ICP, references something specific about the recipient, and is legally compliant with laws like CAN-SPAM and GDPR. Done poorly, it collapses into the same broad, generic blasting that gives the channel its bad name."}
       sourceLabel={"See the service: Cold Email"}
       sourceHref={"/services/cold-email"}
+      furtherLabel={"Read: Cold Email Deliverability: Why Your Emails Land in Spam (And How to Fix It)"}
+      furtherHref={"/resources/blogs/cold-email-deliverability-guide"}
       articleSchema={TERM_SCHEMA}
     />
   );

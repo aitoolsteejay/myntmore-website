@@ -43,6 +43,8 @@ export default function GlossaryTermPage() {
       body={"An ICP is narrower than a buyer persona: it filters by company traits (industry, size, tech stack, buying signals) first, then names the specific role inside that company who actually has the pain and the authority to act on it."}
       sourceLabel={"Read: ICP Mapping for B2B: How to Define the Exact Buyer Who Will Close"}
       sourceHref={"/resources/blogs/icp-mapping-b2b"}
+      furtherLabel={"See the service: ICP Mapping & Lead Scoring"}
+      furtherHref={"/services/sales-intelligence"}
       articleSchema={TERM_SCHEMA}
     />
   );

@@ -30,6 +30,23 @@
   "ogDescription": "AI-powered outbound systems built for Ahmedabad's textile, pharma, and chemical manufacturing base.",
   "breadcrumbLabel": "Ahmedabad",
   "badge": "Ahmedabad",
+  "emoji": "🧪",
+  "floatingIcons": [
+    "🧪",
+    "🧵",
+    "💊",
+    "⚙️"
+  ],
+  "hubs": [
+    "SG Highway",
+    "Prahlad Nagar",
+    "GIFT City",
+    "Sanand",
+    "Changodar",
+    "Vatva",
+    "Naroda",
+    "Odhav"
+  ],
   "h1": "B2B Lead Generation Agency in Ahmedabad",
   "intro": "Ahmedabad runs on textiles, pharma, chemicals, and one of India's most entrepreneurial manufacturing bases. We build the AI-powered cold email, LinkedIn, and ABM systems that get your business in front of new domestic and export buyers.",
   "primaryCta": "Book a Free GTM Audit",
@@ -37,18 +54,46 @@
   "whyTitle": "Why Ahmedabad businesses need this",
   "why": [
     {
+      "icon": "🎪",
       "title": "Decades of trade fairs, no digital pipeline behind them",
       "desc": "Ahmedabad's textile, pharma, and chemical manufacturers have built strong export businesses almost entirely through trade shows and existing networks. That works until you need to grow beyond who already knows you."
     },
     {
+      "icon": "👔",
       "title": "Founders doing the selling themselves",
       "desc": "Gujarat's business culture is deeply entrepreneurial, and in a lot of these companies the founder is still the one prospecting. A managed outbound system frees that time up without losing the personal touch buyers expect."
     },
     {
+      "icon": "🌍",
       "title": "Global buyers you can't reach with a stall and a brochure",
       "desc": "Reaching procurement teams and importers overseas takes more than a trade-fair presence. Systematic, research-backed outreach gets your manufacturing capability and certifications in front of the right buyer, whenever they're ready to source."
     }
   ],
+  "proofTitle": "Results for pharma makers and exporters like Ahmedabad's",
+  "proofIntro": "Ahmedabad runs on pharma, chemicals and textiles. These are real engagements from those industries.",
+  "proof": [
+    {
+      "label": "A ₹48 lakh pipeline for a contract pharma manufacturer",
+      "href": "/case-studies/pharma-contract-manufacturer-pipeline",
+      "result": "₹48 lakh in potential pipeline from 19 qualified buyer conversations, 6 of them in commercial evaluation."
+    },
+    {
+      "label": "Contract manufacturing buyers in France",
+      "href": "/case-studies/pharma-france-contract-manufacturing",
+      "result": "18 buyer meetings held, 6 requests for quotation and 36 positive replies."
+    },
+    {
+      "label": "26 warm leads for a pharma packaging manufacturer",
+      "href": "/case-studies/pharma-packaging-warm-leads",
+      "result": "26 warm leads, 5 of which progressed to proposal discussions."
+    },
+    {
+      "label": "15 buyer opportunities for a textile exporter",
+      "href": "/case-studies/manufacturers-exporters-textile-buyer-opportunities",
+      "result": "15 qualified buyer opportunities, 5 catalogue requests and 3 sampling discussions."
+    }
+  ],
+  "proofNote": "Client names are withheld, and these companies are not all based in Ahmedabad: they are the engagements closest to Ahmedabad's industries.",
   "servicesTitle": "Every service, one system",
   "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
   "services": [
@@ -101,14 +146,17 @@
   "segmentsIntro": "Our lead generation services in Ahmedabad are built for companies that sell to other businesses, in India or overseas.",
   "segments": [
     {
+      "icon": "🧪",
       "title": "Pharma and chemical manufacturers",
       "desc": "API, formulation and specialty chemical companies looking for overseas buyers, distributors and sourcing teams beyond their existing customers."
     },
     {
+      "icon": "🧵",
       "title": "Textile and engineering exporters",
       "desc": "Manufacturers that built their export business at trade fairs and now need procurement teams abroad to hear from them between shows."
     },
     {
+      "icon": "🚀",
       "title": "Founder-led B2B companies",
       "desc": "Firms where the founder still does the prospecting and wants a managed outbound system that keeps the personal touch buyers expect."
     }
@@ -120,15 +168,5 @@
   "healthcareNote": "",
   "stepsTitle": "",
   "steps": [],
-  "stepsNote": "",
-  "proofCaseStudies": [
-    "pharma-contract-manufacturer-pipeline",
-    "manufacturers-exporters-textile-buyer-opportunities",
-    "b2b-founder-services-meetings-pipeline"
-  ],
-  "industryPages": [
-    "pharma",
-    "manufacturers-exporters",
-    "accounting-cfo-firms"
-  ]
+  "stepsNote": ""
 }

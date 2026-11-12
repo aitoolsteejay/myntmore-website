@@ -1,4 +1,38 @@
 {
+  "city-abu-dhabi": [
+    {
+      "question": "Does Myntmore have an office in Abu Dhabi?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Mumbai is 1.5 hours ahead of the UAE, so our working days overlap almost entirely, and UAE clients work with us over calls, shared dashboards and a weekly report."
+    },
+    {
+      "question": "How is outreach in Abu Dhabi different from Dubai?",
+      "answer": "Abu Dhabi has fewer, larger buyers, many of them government-linked groups with formal procurement. That favours account-based outreach to a defined list of companies and several roles in each, rather than high-volume cold email. Dubai suits higher volumes across more, smaller companies."
+    },
+    {
+      "question": "Which Abu Dhabi buyers is this built for?",
+      "answer": "Suppliers to energy, industrial and infrastructure groups, healthcare and life sciences companies, and IT, fintech and professional services firms selling into ADGM, Hub71 and the wider capital. The system adapts to any B2B ICP."
+    },
+    {
+      "question": "Can outreach get us onto a vendor list or a tender?",
+      "answer": "Outreach does not replace vendor registration or a tender response. What it does is start conversations with the people who own a requirement, so that when registration or a tender opens, they already know you."
+    },
+    {
+      "question": "Can you help an Indian company find clients in Abu Dhabi?",
+      "answer": "Yes. We build separate sending infrastructure, write copy that reads as native to UAE buyers and send in their working hours. Our UAE campaigns include managed IT services, employee benefits insurance and pharma distribution partners."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
   "city-ahmedabad": [
     {
       "question": "Do we need to be based in Ahmedabad to work with you?",
@@ -34,6 +68,10 @@
     }
   ],
   "city-bengaluru": [
+    {
+      "question": "What should a Bangalore SaaS company look for in a lead generation company?",
+      "answer": "Three things: targeting built on signals such as funding, hiring and tech stack instead of a bought list; copy written for technical buyers; and experience selling into the market you want, in India or overseas. Myntmore's SaaS work includes 40 qualified meetings in 8 weeks for a Series A company and 31 enterprise sales meetings in 3 months for a workflow automation platform."
+    },
     {
       "question": "Do we need to be based in Bengaluru to work with you?",
       "answer": "No. The entire engagement runs remotely, so it doesn't matter where your team sits."
@@ -109,6 +147,40 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-coimbatore": [
+    {
+      "question": "Does Myntmore have an office in Coimbatore?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Coimbatore companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Coimbatore?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Coimbatore industries is this built for?",
+      "answer": "Pump, motor and engineering manufacturers, textile mills and textile machinery makers, and IT and software services firms. The system adapts to any B2B ICP, so if you sell to other businesses from Coimbatore, it applies."
+    },
+    {
+      "question": "Can you find overseas distributors for a Coimbatore manufacturer?",
+      "answer": "Yes. For exporters we build separate sending infrastructure, write copy that reads as native to the buyer's market, send in their time zone and follow CAN-SPAM and GDPR rules. Our case studies include buyer campaigns for industrial and engineering manufacturers into Germany and other markets."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Coimbatore means months of recruiting and ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
   "city-delhi": [
     {
       "question": "Do we need to be based in Delhi to work with you?",
@@ -137,6 +209,74 @@
     {
       "question": "How is this different from hiring an in-house SDR?",
       "answer": "Hiring an in-house SDR in Delhi NCR means months of recruiting and ramp-up before they're fully productive, and even then, one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
+  "city-dubai": [
+    {
+      "question": "Does Myntmore have an office in Dubai?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Mumbai is 1.5 hours ahead of the UAE, so our working days overlap almost entirely, and UAE clients work with us over calls, shared dashboards and a weekly report."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Dubai?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which UAE businesses is this built for?",
+      "answer": "IT, SaaS and managed service providers; distributors, trading houses and B2B service firms in facilities, logistics, insurance and recruitment; and Indian and international companies that want UAE clients or partners. The system adapts to any B2B ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in the UAE. Can you help?",
+      "answer": "Yes. We build separate sending infrastructure, write copy that reads as native to UAE buyers and send in their working hours. Our UAE campaigns include managed IT services, employee benefits insurance, commercial kitchen equipment and pharma distribution partners."
+    },
+    {
+      "question": "Can you reach buyers elsewhere in the GCC?",
+      "answer": "Yes. The same system can target buyers in Saudi Arabia, Qatar, Oman and the rest of the GCC, with lists, copy and sending set up for each market. We usually recommend starting with one market and adding the next once the first is booking meetings."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an SDR in Dubai means recruiting, a visa and months of ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    }
+  ],
+  "city-gurugram": [
+    {
+      "question": "Does Myntmore have an office in Gurugram?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Gurugram companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Gurgaon?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Gurugram industries is this built for?",
+      "answer": "SaaS and fintech startups, IT services firms and capability centre providers, and recruitment, staffing and consulting firms. The system adapts to any B2B ICP, so if you sell to other businesses from Gurugram, it applies."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "Can you help a Gurugram company sell to the US, UK or UAE?",
+      "answer": "Yes. For companies selling abroad, we build separate sending infrastructure, write copy that reads as native to that market, send in the buyer's time zone and follow CAN-SPAM and GDPR rules. Our case studies include campaigns into the US, the UK, the UAE and other international markets."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Gurugram means months of recruiting and ramp-up in a competitive hiring market before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
     },
     {
       "question": "What do you need from us to get started?",
@@ -185,7 +325,83 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-indore": [
+    {
+      "question": "Does Myntmore have an office in Indore?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Indore companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Indore?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Indore industries is this built for?",
+      "answer": "IT services and software firms, pharma and contract manufacturers in and around Pithampur, and auto-component and food processing manufacturers. The system adapts to any B2B ICP, so if you sell to other businesses from Indore, it applies."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "Can you help a Indore company sell to the US, UK or UAE?",
+      "answer": "Yes. For companies selling abroad, we build separate sending infrastructure, write copy that reads as native to that market, send in the buyer's time zone and follow CAN-SPAM and GDPR rules. Our case studies include campaigns into the US, the UK, the UAE and other international markets."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Indore means months of recruiting and ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
+  "city-jaipur": [
+    {
+      "question": "Does Myntmore have an office in Jaipur?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Jaipur companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Jaipur?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Jaipur industries is this built for?",
+      "answer": "Gem and jewellery exporters, handicraft, furniture and home textile makers, and IT and software services firms. The system adapts to any B2B ICP, so if you sell to other businesses from Jaipur, it applies."
+    },
+    {
+      "question": "Can you find overseas buyers for a Jaipur exporter?",
+      "answer": "Yes. For exporters we build separate sending infrastructure, write copy that reads as native to the buyer's market, send in their time zone and follow CAN-SPAM and GDPR rules. Our export case studies include buyer campaigns into Germany, France and the UAE."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Jaipur means months of recruiting and ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
   "city-kolkata": [
+    {
+      "question": "Do you offer healthcare lead generation services in Kolkata?",
+      "answer": "Yes, for B2B sellers. If you sell medical devices, diagnostics, healthcare software or pharma products, we run outreach to procurement heads at hospital groups, lab and operations heads at diagnostic chains, distributors and hospital administrators. We do not run patient lead generation for hospitals or clinics."
+    },
+    {
+      "question": "Do you generate patient leads for hospitals in Kolkata?",
+      "answer": "No. Myntmore runs B2B lead generation: we help companies that sell to hospitals, diagnostic chains and pharma distributors reach procurement and clinical decision-makers. Patient acquisition for hospitals and clinics needs local search, ads and booking systems, which a healthcare marketing agency is better placed to run."
+    },
     {
       "question": "Do we need to be based in Kolkata to work with you?",
       "answer": "No. The entire engagement runs remotely, so it doesn't matter where in West Bengal, or beyond, your team is based."
@@ -203,16 +419,12 @@
       "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
     },
     {
-      "question": "Do you generate patient leads for hospitals in Kolkata?",
-      "answer": "No. Myntmore runs B2B lead generation: we help companies that sell to hospitals, diagnostic chains and pharma distributors reach procurement and clinical decision-makers. Patient acquisition for hospitals and clinics needs local search, ads and booking systems, which a healthcare marketing agency is better placed to run."
-    },
-    {
       "question": "Which Kolkata industries do you have the most experience with?",
-      "answer": "Trading and manufacturing houses, steel and engineering firms, and growing IT/ITES companies are where we've run the most campaigns, but our system adapts to any B2B ICP."
+      "answer": "The page is built for four groups: companies that supply hospitals, diagnostic chains and distributors; engineering, steel and trading houses; IT and ITES firms; and financial services. The system adapts to any B2B ICP, so if you sell to other businesses from Kolkata, it applies."
     },
     {
       "question": "What channels do you actually use to generate leads?",
-      "answer": "Primarily cold email and LinkedIn outreach aimed at trading, manufacturing, and financial-services buyers, layered with account-based marketing for named target accounts, and AI-assisted list building and personalisation underneath all three. We pick the mix based on where your buyers actually spend their attention."
+      "answer": "Primarily cold email and LinkedIn outreach aimed at business buyers in healthcare supply, manufacturing, trading and financial services, layered with account-based marketing for named target accounts, and AI-assisted list building and personalisation underneath all three. We pick the mix based on where your buyers actually spend their attention."
     },
     {
       "question": "How is this different from hiring an in-house SDR?",
@@ -261,6 +473,40 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-noida": [
+    {
+      "question": "Does Myntmore have an office in Noida?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Noida companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Noida?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Noida industries is this built for?",
+      "answer": "IT services and product engineering firms, software companies selling overseas, and electronics and component manufacturers in Noida and Greater Noida. The system adapts to any B2B ICP, so if you sell to other businesses from Noida, it applies."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "Can you help a Noida company sell to the US, UK or UAE?",
+      "answer": "Yes. For companies selling abroad, we build separate sending infrastructure, write copy that reads as native to that market, send in the buyer's time zone and follow CAN-SPAM and GDPR rules. Our case studies include campaigns into the US, the UK, the UAE and other international markets."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Noida means months of recruiting and ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
   "city-pune": [
     {
       "question": "Do we need to be based in Pune to work with you?",
@@ -293,6 +539,40 @@
     {
       "question": "How is this different from hiring an in-house SDR?",
       "answer": "Hiring an in-house SDR in Pune means months of recruiting and ramp-up before they're fully productive, and even then, one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
+    },
+    {
+      "question": "What do you need from us to get started?",
+      "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
+  "city-surat": [
+    {
+      "question": "Does Myntmore have an office in Surat?",
+      "answer": "No. Myntmore is based in BKC, Mumbai, and runs every engagement remotely. Surat companies work with us over calls, shared dashboards and a weekly report, the same way our clients in other cities do."
+    },
+    {
+      "question": "What should I look for in a lead generation company in Surat?",
+      "answer": "Four things: lists built from buying signals instead of bought databases, dedicated sending domains so your main domain is never at risk, copy written for your specific buyer, and reporting that shows every reply and meeting. Ask who writes the copy and who you will speak to each week before you sign."
+    },
+    {
+      "question": "Which Surat industries is this built for?",
+      "answer": "Diamond and jewellery businesses, textile manufacturers and traders, and chemical, dye and engineering firms. The system adapts to any B2B ICP, so if you sell to other businesses from Surat, it applies."
+    },
+    {
+      "question": "Can you find overseas buyers for a Surat diamond or textile business?",
+      "answer": "Yes. For exporters we build separate sending infrastructure, write copy that reads as native to the buyer's market, send in their time zone and follow CAN-SPAM and GDPR rules. Our case studies include buyer campaigns for textile, packaging and engineering exporters."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days. Most clients see their first qualified conversations within 3 to 4 weeks of kickoff, once ICP mapping, list building, and sequence setup are complete."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+    },
+    {
+      "question": "How is this different from hiring an in-house SDR?",
+      "answer": "Hiring an in-house SDR in Surat means months of recruiting and ramp-up before they are fully productive, and one person can only run so many sequences at once. A managed outbound system has multiple channels live within about three weeks, at a fraction of the fully loaded cost of a hire, and scales without you managing headcount."
     },
     {
       "question": "What do you need from us to get started?",
