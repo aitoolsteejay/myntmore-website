@@ -1,9 +1,12 @@
 {
   "slug": "pune",
   "metaTitle": "B2B Lead Generation Companies in Pune",
-  "metaDescription": "B2B lead generation services in Pune for IT, SaaS and auto-component companies: cold email, LinkedIn and ABM that book qualified meetings, live in 18 days.",
+  "metaDescription": "Looking at lead generation companies in Pune? Myntmore runs cold email, LinkedIn and ABM for Pune IT, SaaS and auto-component firms, live in 18 days.",
   "keywords": [
     "b2b lead generation company in pune",
+    "lead generation companies in pune",
+    "b2b lead generation companies in pune",
+    "lead generation company in pune",
     "lead generation agency in pune",
     "lead generation services in pune",
     "b2b lead generation pune",
@@ -31,7 +34,7 @@
   "ogDescription": "Outbound lead generation for Pune's IT, SaaS and auto-component companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Pune",
   "badge": "Pune",
-  "h1": "B2B Lead Generation Agency in Pune",
+  "h1": "B2B Lead Generation Company in Pune",
   "intro": "Pune runs on IT services, SaaS, and auto-component manufacturing. If you are comparing B2B lead generation companies in Pune, we build the AI-powered cold email, LinkedIn, and ABM systems that turn strong engineering into a predictable pipeline of meetings.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
@@ -142,5 +145,15 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india).",
+  "proofCaseStudies": [
+    "manufacturers-exporters-engineering-goods-replies",
+    "manufacturers-exporters-industrial-buyer-conversations",
+    "agencies-it-software-development-conversations"
+  ],
+  "industryPages": [
+    "manufacturers-exporters",
+    "agencies-it",
+    "saas-founders"
+  ]
 }

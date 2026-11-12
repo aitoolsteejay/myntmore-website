@@ -135,5 +135,15 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india). Exporters and engineering firms can start with [lead generation for manufacturers and exporters](/lp/manufacturers-exporters)."
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india). Exporters and engineering firms can start with [lead generation for manufacturers and exporters](/lp/manufacturers-exporters).",
+  "proofCaseStudies": [
+    "manufacturers-exporters-industrial-buyer-conversations",
+    "agencies-it-web-development-retainers",
+    "financial-services-advisory-conversations"
+  ],
+  "industryPages": [
+    "manufacturers-exporters",
+    "agencies-it",
+    "financial-services"
+  ]
 }

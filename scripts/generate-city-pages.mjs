@@ -4,6 +4,11 @@
 // A city page also needs its entry in app/sitemap.ts and its questions in content/faqs/pages/city-<slug>.json;
 // the generator warns when either is missing.
 //
+// It also writes lib/city-links.generated.json, the internal links between city pages and the rest of the site:
+// each city's proof cards (from "proofCaseStudies", real library case studies), its industry pages (from
+// "industryPages", /lp/* slugs) and the other cities, plus the reverse maps that let each case study and industry
+// page link back to the cities that list it.
+//
 //   node scripts/generate-city-pages.mjs           write the pages
 //   node scripts/generate-city-pages.mjs --check   exit 1 if any page is out of date
 import fs from "node:fs";
@@ -60,5 +65,44 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   else if (CHECK) problems.push(`${path.relative(root, file)} is out of date`);
   else { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, next); wrote++; }
 }
+// ---- internal links between city pages, case studies and industry pages ----
+const library = JSON.parse(fs.readFileSync(path.join(root, "lib/case-study-library.json"), "utf8")).cases;
+const caseBySlug = Object.fromEntries(library.map((c) => [c.slug, c]));
+const lpDir = path.join(root, "content/landing-pages");
+const lpLabel = (slug) => {
+  const f = path.join(lpDir, `${slug}.json`);
+  if (!fs.existsSync(f)) return null;
+  return JSON.parse(fs.readFileSync(f, "utf8")).breadcrumbLabel.replace(/^For /, "");
+};
+const cityFiles = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+const cities = cityFiles.map((f) => {
+  const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+  return { slug: f.replace(/\.json$/, ""), label: d.breadcrumbLabel, href: `/b2b-lead-generation-${f.replace(/\.json$/, "")}`, d };
+});
+const out = { cities: cities.map(({ slug, label, href }) => ({ slug, label, href })), proof: {}, industry: {}, byCaseStudy: {}, byIndustryPage: {} };
+for (const c of cities) {
+  out.proof[c.slug] = [];
+  for (const cs of c.d.proofCaseStudies || []) {
+    const lib = caseBySlug[cs];
+    if (!lib) { problems.push(`${c.slug}.json: proofCaseStudies "${cs}" is not a library case study`); continue; }
+    out.proof[c.slug].push({ href: `/case-studies/${cs}`, title: lib.title, industry: lib.industry });
+    (out.byCaseStudy[cs] ||= []).push({ href: c.href, label: c.label });
+  }
+  out.industry[c.slug] = [];
+  for (const lp of c.d.industryPages || []) {
+    const label = lpLabel(lp);
+    if (!label) { problems.push(`${c.slug}.json: industryPages "${lp}" has no content/landing-pages/${lp}.json`); continue; }
+    out.industry[c.slug].push({ href: `/lp/${lp}`, label });
+    (out.byIndustryPage[lp] ||= []).push({ href: c.href, label: c.label });
+  }
+}
+const linksFile = path.join(root, "lib/city-links.generated.json");
+const linksNext = JSON.stringify(out, null, 2) + "\n";
+const linksPrev = fs.existsSync(linksFile) ? fs.readFileSync(linksFile, "utf8") : "";
+if (linksPrev !== linksNext) {
+  if (CHECK) problems.push("lib/city-links.generated.json is out of date");
+  else { fs.writeFileSync(linksFile, linksNext); wrote++; }
+}
+
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
 console.log(CHECK ? `[city-pages] ok (${current} pages)` : `[city-pages] wrote ${wrote} page(s), ${current} already current`);

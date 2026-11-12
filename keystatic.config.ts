@@ -459,6 +459,16 @@ export default config({
           { label: "Steps", itemLabel: (props) => props.fields.title.value }
         ),
         stepsNote: fields.text({ label: "Note under the steps (use [link text](/address) for links)", multiline: true }),
+        proofCaseStudies: fields.array(fields.text({ label: "Case study key (the address after /case-studies/)" }), {
+          label: "Proof: library case studies to show (3 is ideal)",
+          description: "Real results from industries common in this city. Each one also links back to this city page.",
+          itemLabel: (props) => props.value,
+        }),
+        industryPages: fields.array(fields.text({ label: "Industry page key (the address after /lp/)" }), {
+          label: "Industry pages to link to",
+          description: "For example pharma, saas-founders, manufacturers-exporters. Each one also links back to this city page.",
+          itemLabel: (props) => props.value,
+        }),
         servicesTitle: fields.text({ label: "Services heading", validation: { isRequired: true } }),
         servicesIntro: fields.text({ label: "Services intro", validation: { isRequired: true } }),
         services: fields.array(

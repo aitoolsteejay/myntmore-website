@@ -36,4 +36,8 @@ export interface CityPageData {
   differentiators: string[];
   formTitle: string;
   formSubtitle: string;
+  // Library case study slugs shown as proof cards (real results from industries common in the city), and /lp/*
+  // slugs shown as industry links. Both also link back to this city page from those pages.
+  proofCaseStudies?: string[];
+  industryPages?: string[];
 }

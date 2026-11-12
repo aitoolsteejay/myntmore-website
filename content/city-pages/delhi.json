@@ -1,9 +1,12 @@
 {
   "slug": "delhi",
   "metaTitle": "B2B Lead Generation Agency in Delhi NCR",
-  "metaDescription": "AI-powered B2B lead generation for Delhi NCR's enterprise, trading, and D2C companies: cold email, LinkedIn & ABM. Book a free GTM audit.",
+  "metaDescription": "Lead generation company in Delhi NCR for enterprise, export and D2C brands: cold email, LinkedIn and ABM that book qualified meetings. Free GTM audit.",
   "keywords": [
     "b2b lead generation delhi",
+    "lead generation companies in delhi",
+    "lead generation company in delhi",
+    "lead generation agency in delhi",
     "outbound agency delhi ncr",
     "linkedin outreach delhi",
     "cold email agency delhi",
@@ -30,8 +33,8 @@
   "ogDescription": "AI-powered outbound systems built for Delhi NCR's enterprise, trading, and D2C landscape.",
   "breadcrumbLabel": "Delhi",
   "badge": "Delhi NCR",
-  "h1": "B2B Lead Generation Agency in Delhi",
-  "intro": "Delhi NCR runs on trading houses, D2C brands, and one of India's largest enterprise buyer bases. We build the AI-powered cold email, LinkedIn, and ABM systems that get you past the gatekeepers and into real conversations.",
+  "h1": "B2B Lead Generation Agency in Delhi NCR",
+  "intro": "If you are comparing lead generation companies in Delhi NCR, start with the market: trading houses, D2C brands, IT services in Gurugram and Noida, and one of India's largest enterprise buyer bases. We build the AI-powered cold email, LinkedIn and ABM systems that get you past the gatekeepers and into real conversations.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Delhi NCR businesses need this",
@@ -120,5 +123,16 @@
   "healthcareNote": "",
   "stepsTitle": "",
   "steps": [],
-  "stepsNote": ""
+  "stepsNote": "",
+  "proofCaseStudies": [
+    "agencies-it-services-international-proposals",
+    "ecommerce-tech-d2c-logistics-pipeline",
+    "recruitment-staffing-executive-search-mandates"
+  ],
+  "industryPages": [
+    "agencies-it",
+    "manufacturers-exporters",
+    "recruitment-firms",
+    "agency-partners"
+  ]
 }

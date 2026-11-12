@@ -10,6 +10,7 @@ import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
+import CITY_LINKS from "@/lib/city-links.generated.json";
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-b2b-lead-generation-agency-india`;
 const TITLE = "How to Choose a B2B Lead Generation Agency in India";
@@ -169,6 +170,15 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
                   <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>2. Match the agency to where your buyers are</h2>
                   <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
                     Selling to Indian companies and selling from India to the US, UK or Middle East are different jobs. Domestic B2B buying is relationship-heavy: LinkedIn, phone and WhatsApp (with opt-in) often matter as much as email, and decisions can involve a promoter or family owner as well as the functional head. Selling abroad needs copy that reads as native, sending windows in the buyer&apos;s time zone and compliance with laws like CAN-SPAM and GDPR. Ask for case studies in the country and buyer role you actually target, not just a total client count.
+                  </p>
+                  <p className="text-base leading-relaxed mt-4" style={{ color: "#3D3D3D" }}>
+                    Buyer markets also differ by city. Our city guides cover what selling into each one involves:{" "}
+                    {CITY_LINKS.cities.map((c, i) => (
+                      <span key={c.href}>
+                        <Link href={c.href} className="font-bold underline" style={{ color: "#A14A08" }}>{c.label}</Link>
+                        {i < CITY_LINKS.cities.length - 2 ? ", " : i === CITY_LINKS.cities.length - 2 ? " and " : "."}
+                      </span>
+                    ))}
                   </p>
                 </div>
 

@@ -5,6 +5,8 @@
   "keywords": [
     "lead generation company in hyderabad",
     "lead generation services in hyderabad",
+    "lead generation companies in hyderabad",
+    "b2b lead generation companies in hyderabad",
     "pharma lead generation agency hyderabad",
     "b2b lead generation hyderabad",
     "outbound agency hyderabad",
@@ -32,8 +34,8 @@
   "ogDescription": "Outbound lead generation for Hyderabad's IT, pharma and biotech companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Hyderabad",
   "badge": "Hyderabad",
-  "h1": "B2B Lead Generation Agency in Hyderabad",
-  "intro": "Hyderabad runs on IT/ITES, pharma and biotech, and a fast-growing startup scene. We build the AI-powered cold email, LinkedIn, and ABM systems that turn long, technical sales cycles into a predictable pipeline.",
+  "h1": "Lead Generation Company in Hyderabad for B2B Teams",
+  "intro": "As a lead generation company in Hyderabad's IT, pharma and biotech market, we work with teams whose sales cycles are long, technical and committee-driven. We build the AI-powered cold email, LinkedIn and ABM systems that turn those cycles into a predictable pipeline of qualified meetings.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Hyderabad businesses need this",
@@ -143,5 +145,15 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india).",
+  "proofCaseStudies": [
+    "pharma-api-supplier-conversations",
+    "pharma-clinical-research-meetings",
+    "agencies-it-services-international-proposals"
+  ],
+  "industryPages": [
+    "pharma",
+    "agencies-it",
+    "saas-founders"
+  ]
 }

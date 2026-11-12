@@ -107,5 +107,15 @@
   "healthcareNote": "",
   "stepsTitle": "",
   "steps": [],
-  "stepsNote": ""
+  "stepsNote": "",
+  "proofCaseStudies": [
+    "manufacturers-exporters-industrial-packaging-conversations",
+    "manufacturers-exporters-food-processing-partners",
+    "pharma-packaging-warm-leads"
+  ],
+  "industryPages": [
+    "manufacturers-exporters",
+    "pharma",
+    "agencies-it"
+  ]
 }

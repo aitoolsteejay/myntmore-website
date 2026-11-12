@@ -120,5 +120,15 @@
   "healthcareNote": "",
   "stepsTitle": "",
   "steps": [],
-  "stepsNote": ""
+  "stepsNote": "",
+  "proofCaseStudies": [
+    "pharma-contract-manufacturer-pipeline",
+    "manufacturers-exporters-textile-buyer-opportunities",
+    "b2b-founder-services-meetings-pipeline"
+  ],
+  "industryPages": [
+    "pharma",
+    "manufacturers-exporters",
+    "accounting-cfo-firms"
+  ]
 }

@@ -6,6 +6,7 @@ import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { marketOfCaseStudy } from "@/lib/case-study-markets";
+import CITY_LINKS from "@/lib/city-links.generated.json";
 
 export interface CaseStudyLayoutProps {
   slug: string;
@@ -48,6 +49,8 @@ export default function CaseStudyLayout({
   articleSchema,
 }: CaseStudyLayoutProps) {
   const market = marketOfCaseStudy(slug);
+  // City pages that list this case study as proof link here; link back so the relationship runs both ways.
+  const cityLinks = (CITY_LINKS.byCaseStudy as Record<string, { href: string; label: string }[]>)[slug] ?? [];
   return (
     <InnerLayout>
       <JsonLd data={articleSchema} />
@@ -133,6 +136,18 @@ export default function CaseStudyLayout({
               ))}
             </div>
           </div>
+          {cityLinks.length > 0 && (
+            <div>
+              <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>Lead generation for companies like this in</h2>
+              <div className="flex flex-wrap gap-3">
+                {cityLinks.map((c) => (
+                  <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
+                    {c.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

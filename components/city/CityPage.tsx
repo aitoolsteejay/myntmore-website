@@ -3,9 +3,10 @@ import InnerLayout from "@/app/components/InnerLayout";
 import LeadCaptureForm from "@/app/components/LeadCaptureForm";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import JsonLd from "@/app/components/JsonLd";
-import { buildFaqSchema, buildLocalBusinessSchema } from "@/lib/schema";
+import { buildFaqSchema, buildServiceSchema } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import type { CityPageData } from "./city-page-data";
+import CITY_LINKS from "@/lib/city-links.generated.json";
 
 // One template for the B2B lead generation city pages (/b2b-lead-generation-<city>). The text comes from
 // content/city-pages/<slug>.json; the markup below is what each page used to carry.
@@ -30,10 +31,23 @@ function Rich({ text }: { text: string }) {
 
 export default function CityPage({ data: d }: { data: CityPageData }) {
   const FAQ = pageFaqsQA(`city-${d.slug}`);
+  const proof = (CITY_LINKS.proof as Record<string, { href: string; title: string; industry: string }[]>)[d.slug] ?? [];
+  const industry = (CITY_LINKS.industry as Record<string, { href: string; label: string }[]>)[d.slug] ?? [];
+  const otherCities = CITY_LINKS.cities.filter((c) => c.slug !== d.slug);
   return (
     <InnerLayout>
       <JsonLd data={buildFaqSchema(FAQ.map((f) => ({ question: f.q, answer: f.a })))} />
-      <JsonLd data={buildLocalBusinessSchema(`https://www.myntmore.com/b2b-lead-generation-${d.slug}`)} />
+      {/* A service offered in this city, not a LocalBusiness: the city pages are not offices, and the only real
+          address (Mumbai) is already in the sitewide Organization schema. */}
+      <JsonLd
+        data={buildServiceSchema({
+          name: d.h1,
+          description: d.metaDescription,
+          serviceType: "B2B lead generation",
+          url: `https://www.myntmore.com/b2b-lead-generation-${d.slug}`,
+          areaServed: `${d.breadcrumbLabel}, India`,
+        })}
+      />
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: d.breadcrumbLabel, href: `/b2b-lead-generation-${d.slug}` }]} />
@@ -75,6 +89,26 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
         </div>
       </section>
 
+
+      {proof.length > 0 && (
+        <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>Results from B2B companies like yours</h2>
+            <p className="text-base mb-10" style={{ color: "#52525B" }}>
+              Real Myntmore campaigns for companies in the industries that drive {d.breadcrumbLabel}&apos;s B2B market. Client names are withheld under confidentiality.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {proof.map((c) => (
+                <Link key={c.href} href={c.href} className="group rounded-2xl border p-6 flex flex-col transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
+                  <span className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{c.industry}</span>
+                  <span className="text-base font-black mb-4" style={{ color: "#0a0a0a" }}>{c.title}</span>
+                  <span className="mt-auto text-sm font-bold" style={{ color: "#A14A08" }}>Read the case study <span aria-hidden="true">→</span></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {d.segments.length > 0 && (
         <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
@@ -169,6 +203,33 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
         </div>
       </section>
 
+
+      <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
+        <div className="max-w-4xl mx-auto space-y-10">
+          {industry.length > 0 && (
+            <div>
+              <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>Industry playbooks for {d.breadcrumbLabel} teams</h2>
+              <div className="flex flex-wrap gap-3">
+                {industry.map((l) => (
+                  <Link key={l.href} href={l.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          <div>
+            <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>B2B lead generation in other cities</h2>
+            <div className="flex flex-wrap gap-3">
+              {otherCities.map((c) => (
+                <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">

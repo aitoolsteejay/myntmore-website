@@ -9,6 +9,7 @@ import { buildFaqSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import { OG_BASE } from "@/lib/og";
+import CITY_LINKS from "@/lib/city-links.generated.json";
 
 export const metadata: Metadata = {
   title: "AI-Powered B2B Lead Generation Services",
@@ -82,6 +83,22 @@ export default function Services() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>B2B lead generation by city</h2>
+          <p className="text-base mb-8" style={{ color: "#52525B" }}>
+            We are based in Mumbai and run these services for B2B companies across India. Each city guide covers the local buyer market.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {CITY_LINKS.cities.map((c) => (
+              <Link key={c.href} href={c.href} className="inline-flex items-center min-h-[44px] text-sm px-4 py-2 rounded-full border font-semibold transition-colors hover:border-[#F5B731]" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9", color: "#3D3D3D" }}>
+                {c.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

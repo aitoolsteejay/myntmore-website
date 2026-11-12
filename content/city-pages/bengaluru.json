@@ -1,12 +1,16 @@
 {
   "slug": "bengaluru",
-  "metaTitle": "B2B Lead Gen Agency in Bangalore (Bengaluru)",
-  "metaDescription": "B2B lead generation services in Bangalore for SaaS, IT services and tech companies: cold email, LinkedIn outreach and ABM, live within 18 days.",
+  "metaTitle": "B2B Lead Generation Company in Bangalore",
+  "metaDescription": "B2B lead generation company in Bangalore for SaaS, IT services and tech firms: cold email, LinkedIn outreach and ABM that book meetings, live in 18 days.",
   "keywords": [
-    "b2b lead generation agency in bangalore",
-    "lead generation company in bangalore",
-    "sales lead generation companies in bangalore",
+    "b2b lead generation company in bangalore",
+    "lead generation companies in bangalore",
     "lead generation services in bangalore",
+    "b2b lead generation companies in bangalore",
+    "lead generation company in bangalore",
+    "saas lead generation bangalore",
+    "b2b lead generation agency in bangalore",
+    "sales lead generation companies in bangalore",
     "b2b lead generation bengaluru",
     "outbound agency bangalore",
     "linkedin outreach bengaluru",
@@ -29,12 +33,12 @@
     "appointment setting services bengaluru",
     "outbound sales agency bengaluru"
   ],
-  "ogTitle": "B2B Lead Generation Agency in Bangalore (Bengaluru) | Myntmore",
+  "ogTitle": "B2B Lead Generation Company in Bangalore | Myntmore",
   "ogDescription": "Outbound lead generation for Bangalore's SaaS, IT services and tech companies: cold email, LinkedIn and ABM.",
   "breadcrumbLabel": "Bengaluru",
   "badge": "Bengaluru (Bangalore)",
-  "h1": "B2B Lead Generation Agency in Bangalore",
-  "intro": "Bengaluru (Bangalore) is India's SaaS and tech capital, and its most competitive buyer market. We build the AI-powered cold email, LinkedIn, and ABM systems that cut through the noise and turn great product into predictable pipeline.",
+  "h1": "B2B Lead Generation Company in Bangalore (Bengaluru)",
+  "intro": "Looking for a B2B lead generation company in Bangalore? Bengaluru is India's SaaS and tech capital, and its most crowded buyer market: every CTO and VP Sales here hears from dozens of vendors a week. We build the AI-powered cold email, LinkedIn and ABM systems that get a SaaS or IT services company past that noise and turn a strong product into a predictable pipeline of meetings.",
   "primaryCta": "Book a Free GTM Audit",
   "secondaryCta": "View All Services",
   "whyTitle": "Why Bengaluru businesses need this",
@@ -144,5 +148,15 @@
       "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
     }
   ],
-  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india).",
+  "proofCaseStudies": [
+    "saas-workflow-automation-enterprise",
+    "saas-fintech-pipeline",
+    "saas-ai-productivity-sales-calls"
+  ],
+  "industryPages": [
+    "saas-founders",
+    "agencies-it",
+    "fundraising"
+  ]
 }
