@@ -87,8 +87,9 @@ const ZOHO_FORM_ACTIONS: Record<LeadSource, string> = {
   icp_builder:
     "https://forms.zohopublic.com/flintstop/form/ICPbuilder/formperma/an5nBPpkO1WIJo1cdInDWDmGb__ufD3Qdhqh1OrjlZg/htmlRecords/submit",
   hook_grader: SHARED_ZOHO_FORM_ACTION,
-  // TODO before launch: the Prospect Research tool's own Zoho form.
-  prospect_research: "ZOHO_FORM_ACTION_PENDING",
+  // TODO before launch: the Prospect Research tool's own Zoho form. Until then (empty) the lead is
+  // saved to Supabase only and nothing is posted to Zoho.
+  prospect_research: "",
   roi_calculator:
     "https://forms.zohopublic.com/flintstop/form/ROICalculator/formperma/qjOewrgpxVp_WRKEGfJpQLvGELpRzoPr9ILtpbTvWiQ/htmlRecords/submit",
 };
@@ -134,7 +135,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
 
     // Submit the real Zoho form in the background (hidden iframe target) so the
     // lead lands in Zoho CRM without leaving this page.
-    formRef.current?.submit();
+    if (ZOHO_FORM_ACTIONS[source]) formRef.current?.submit();
 
     const d = result.data;
 
@@ -198,7 +199,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          action={ZOHO_FORM_ACTIONS[source]}
+          action={ZOHO_FORM_ACTIONS[source] || undefined}
           method="POST"
           acceptCharset="UTF-8"
           encType="multipart/form-data"
