@@ -64,10 +64,10 @@ export default function ColdEmailRoiPageClient() {
               <PillBadge>ROI Calculator</PillBadge>
             </div>
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              See What Your <HandUnderline>Cold Email Is Worth</HandUnderline>
+              Cold Email <HandUnderline>ROI Calculator</HandUnderline>
             </h1>
             <p className="mb-10 max-w-3xl text-lg text-muted-foreground sm:text-xl">
-              Plug in your funnel numbers or start from 2026 industry benchmarks, and watch your meetings, pipeline and ROI calculate live.
+              See what your cold email is worth. Plug in your funnel numbers or start from 2026 industry benchmarks, and watch your meetings, pipeline and ROI calculate live.
             </p>
             <Button variant="hero" size="hero" onClick={scrollToCalculator}>
               Calculate My ROI <ArrowRight aria-hidden="true" />

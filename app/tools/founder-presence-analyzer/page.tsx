@@ -8,9 +8,10 @@ import FounderPresenceClient from "./FounderPresenceClient";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/tools/founder-presence-analyzer", {
-  title: "Founder Presence Analyzer",
-  description: "Free AI tool that benchmarks your LinkedIn presence against competitors and gives you positioning recommendations. Try it free.",
+  title: "LinkedIn Competitor Analysis Tool (Free)",
+  description: "Free LinkedIn competitor analysis for founders: compare your posting frequency and engagement with up to 5 competitors and get positioning recommendations.",
   keywords: [
+    "linkedin competitor analysis tool",
     "founder presence analyzer",
     "linkedin presence audit tool",
     "personal brand analyzer linkedin",

@@ -84,18 +84,18 @@ export default function BattleCardGeneratorClient() {
                 style={{ background: "rgba(239,68,68,0.07)", borderColor: "rgba(239,68,68,0.35)" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} aria-hidden="true" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Competitor Battle Card Generator</span>
+                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Free AI Sales Tool</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
                 <span className="relative inline-block">
-                  Never Lose A Deal To A Competitor
+                  Competitor Battle Card Generator
                   <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                     <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>
               </h1>
               <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-                Paste a competitor&apos;s name, get what they do, their pricing if public, their real strengths and gaps, and how to position against them.
+                Never lose a deal to a competitor. Paste a competitor&apos;s name and get what they do, their pricing if public, their real strengths and gaps, and how to position against them.
               </p>
             </header>
             <LeadGate

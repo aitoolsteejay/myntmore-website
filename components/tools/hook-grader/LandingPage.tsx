@@ -76,12 +76,12 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
         <div aria-hidden="true" className="pointer-events-none absolute -left-40 -top-36 h-[650px] w-[650px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(245,183,49,0.28) 0%, rgba(255,160,0,0.10) 40%, transparent 68%)" }} />
         <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-24 h-[600px] w-[600px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(168,139,250,0.22) 0%, rgba(139,92,246,0.08) 40%, transparent 68%)" }} />
         <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
-          <div className="mb-6"><PillBadge>LinkedIn Hook Grader</PillBadge></div>
+          <div className="mb-6"><PillBadge>Free LinkedIn Tool</PillBadge></div>
           <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-            Grade the first two lines of <HandUnderline>your LinkedIn post</HandUnderline>
+            LinkedIn <HandUnderline>Hook Grader</HandUnderline>
           </h1>
           <p className="mb-10 max-w-3xl text-lg sm:text-xl" style={{ color: "#52525B" }}>
-            The first two lines decide whether many people keep reading. Get a transparent score out of 100 and three rewritten hooks you can paste and edit.
+            Grade the first two lines of your LinkedIn post: they decide whether many people keep reading. Get a transparent score out of 100 and three rewritten hooks you can paste and edit.
           </p>
           <StartButton onStart={onStart}>Grade My Hook</StartButton>
         </div>

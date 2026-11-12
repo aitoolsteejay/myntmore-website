@@ -364,48 +364,48 @@
   "description": "Your call with Myntmore is confirmed. We'll see you soon."
  },
  "/tools/battle-card-generator": {
-  "title": "Competitor Battle Card Generator | Myntmore",
-  "description": "Free AI tool that researches a competitor live and builds a sales battle card: strengths, gaps, and how to position against them. Try it free."
+  "title": "Free Competitor Battle Card Generator (AI) | Myntmore",
+  "description": "Free AI battle card generator: name a competitor and get their positioning, public pricing, real strengths and gaps, and how to win against them."
  },
  "/tools/case-study-generator": {
-  "title": "Case Study & Proposal Generator | Myntmore",
-  "description": "Free AI tool that turns a finished project into a case study, or a conversation into a proposal draft. No invented numbers. Try it free."
+  "title": "Free AI Case Study Generator for B2B | Myntmore",
+  "description": "Free AI case study generator for B2B teams: turn a finished project into a client case study, or a sales call into a proposal draft. No invented numbers."
  },
  "/tools/cold-email-roi-calculator": {
-  "title": "Cold Email ROI Calculator | Myntmore",
-  "description": "Free cold email ROI calculator. Estimate meetings, pipeline and revenue from your outreach using 2026 benchmark reply rates."
+  "title": "Cold Email ROI Calculator (Free, 2026 Benchmarks) | Myntmore",
+  "description": "Free cold email ROI calculator: enter your sends, reply and close rates, or start from 2026 benchmarks, and see meetings, pipeline and ROI calculate live."
  },
  "/tools/dm-angle-generator": {
   "title": "Free DM Angle Generator for B2B Outreach | Myntmore",
   "description": "Free AI tool that generates 5 psychology-aligned DM opening angles for your outreach, tailored to your industry, ICP role, and offer."
  },
  "/tools/founder-presence-analyzer": {
-  "title": "Founder Presence Analyzer | Myntmore",
-  "description": "Free AI tool that benchmarks your LinkedIn presence against competitors and gives you positioning recommendations. Try it free."
+  "title": "LinkedIn Competitor Analysis Tool (Free) | Myntmore",
+  "description": "Free LinkedIn competitor analysis for founders: compare your posting frequency and engagement with up to 5 competitors and get positioning recommendations."
  },
  "/tools/icp-builder": {
-  "title": "ICP Builder & Value Proposition Generator | Myntmore",
-  "description": "Free AI tool that builds deep B2B and D2C ICPs from your business description, plus a value proposition for each. Try it free."
+  "title": "Free Ideal Customer Profile (ICP) Generator | Myntmore",
+  "description": "Free ICP generator: describe your business and get detailed B2B or D2C ideal customer profiles, each with a value proposition you can use in outreach."
  },
  "/tools/lead-magnet-ideas": {
-  "title": "Lead Magnet Idea Generator | Myntmore",
-  "description": "Free AI tool that turns your business, ICP, and industry into concrete lead magnet ideas you can use in cold email and LinkedIn outreach."
+  "title": "Free Lead Magnet Idea Generator for B2B | Myntmore",
+  "description": "Free AI lead magnet idea generator: describe your business and ICP and get B2B lead magnet ideas you can offer in cold email and LinkedIn outreach."
  },
  "/tools/linkedin-hook-grader": {
-  "title": "LinkedIn Hook Grader | Myntmore",
-  "description": "Free LinkedIn hook grader. Paste the first two lines of your post, get a transparent score out of 100 and three rewritten hooks to choose from."
+  "title": "Free LinkedIn Hook Grader & Generator | Myntmore",
+  "description": "Free LinkedIn hook grader and generator: paste your post's first two lines, get a score out of 100 and three rewritten hooks graded by the same rules."
  },
  "/tools/linkedin-optimizer": {
-  "title": "LinkedIn Profile Optimizer | Myntmore",
-  "description": "Free AI-powered LinkedIn profile audit and rewrite. Get a profile optimised to convert visitors into high-intent inbound replies."
+  "title": "Free LinkedIn Profile Optimizer & AI Audit | Myntmore",
+  "description": "Free LinkedIn profile optimizer: an AI audit of your headline and About section, then rewrites that turn profile visitors into replies."
  },
  "/tools/posting-rhythm-builder": {
-  "title": "Posting Rhythm Builder | Myntmore",
-  "description": "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP."
+  "title": "Free LinkedIn Posting Schedule Planner | Myntmore",
+  "description": "Free LinkedIn posting schedule planner: find how often to post, get a weekly routine, and ready-to-use post ideas and hooks for your ICP."
  },
  "/tools/roi-calculator": {
-  "title": "B2B Outreach ROI Calculator | Myntmore",
-  "description": "Free ROI calculator for B2B outbound. Estimate the pipeline and revenue you could generate from cold email and LinkedIn outreach."
+  "title": "LinkedIn Outreach ROI Calculator (Free) | Myntmore",
+  "description": "Free LinkedIn outreach ROI calculator: enter connection requests, acceptance, reply and close rates to see meetings, pipeline and revenue. Cold email too."
  },
  "/value-prop": {
   "title": "Value Proposition | Myntmore",

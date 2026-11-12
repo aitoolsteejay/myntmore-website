@@ -8,12 +8,12 @@ import PostingRhythmClient from "./PostingRhythmClient";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/tools/posting-rhythm-builder", {
-  title: "Posting Rhythm Builder",
-  description: "Free tool to plan a consistent LinkedIn posting rhythm: how often to post, a weekly routine and ready-to-use post ideas and hooks for your ICP.",
+  title: "Free LinkedIn Posting Schedule Planner",
+  description: "Free LinkedIn posting schedule planner: find how often to post, get a weekly routine, and ready-to-use post ideas and hooks for your ICP.",
   keywords: [
+    "linkedin posting schedule planner",
     "linkedin posting rhythm builder",
     "content calendar generator linkedin",
-    "linkedin posting schedule planner",
     "free content cadence planner",
     "linkedin content strategy planner",
     "how often should i post on linkedin",

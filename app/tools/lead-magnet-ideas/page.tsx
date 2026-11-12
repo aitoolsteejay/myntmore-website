@@ -8,8 +8,8 @@ import LeadMagnetIdeasClient from "./LeadMagnetIdeasClient";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/tools/lead-magnet-ideas", {
-  title: "Lead Magnet Idea Generator",
-  description: "Free AI tool that turns your business, ICP, and industry into concrete lead magnet ideas you can use in cold email and LinkedIn outreach.",
+  title: "Free Lead Magnet Idea Generator for B2B",
+  description: "Free AI lead magnet idea generator: describe your business and ICP and get B2B lead magnet ideas you can offer in cold email and LinkedIn outreach.",
   keywords: [
     "lead magnet idea generator",
     "free lead magnet ideas tool",

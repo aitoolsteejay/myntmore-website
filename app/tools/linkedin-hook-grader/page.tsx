@@ -7,10 +7,10 @@ import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import HookGraderClient from "./HookGraderClient";
 import { withPageSeo } from "@/lib/page-seo";
 
-const DESCRIPTION = "Free LinkedIn hook grader. Paste the first two lines of your post, get a transparent score out of 100 and three rewritten hooks to choose from.";
+const DESCRIPTION = "Free LinkedIn hook grader and generator: paste your post's first two lines, get a score out of 100 and three rewritten hooks graded by the same rules.";
 
 export const metadata: Metadata = withPageSeo("/tools/linkedin-hook-grader", {
-  title: "LinkedIn Hook Grader",
+  title: "Free LinkedIn Hook Grader & Generator",
   description: DESCRIPTION,
   keywords: [
     "linkedin hook grader",

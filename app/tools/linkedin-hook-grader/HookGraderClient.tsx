@@ -162,9 +162,9 @@ export default function HookGraderClient() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6">
         <header className="pb-10 text-center">
-          <div className="mb-5"><PillBadge>LinkedIn Hook Grader</PillBadge></div>
+          <div className="mb-5"><PillBadge>Free LinkedIn Tool</PillBadge></div>
           <h1 className="mb-4 text-4xl font-black leading-tight sm:text-5xl">
-            <HandUnderline>Hook Grader</HandUnderline>
+            LinkedIn <HandUnderline>Hook Grader</HandUnderline>
           </h1>
           <p className="mx-auto max-w-xl text-base font-medium" style={{ color: MUTED }}>
             Paste the first two lines of your post. You get a score out of 100, and three rewrites graded by the same rules.

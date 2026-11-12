@@ -177,16 +177,16 @@ export default function PostingRhythmClient() {
             <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Posting Rhythm Builder</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-            Myntmore{" "}
+            LinkedIn Posting{" "}
             <span className="relative inline-block">
-              <span className="lp-tool-accent-text">Rhythm</span> Builder
+              <span className="lp-tool-accent-text">Schedule</span> Planner
               <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q75 2 150 6 Q225 10 298 5" stroke="#D97706" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
           <p className="text-gray-700 text-sm md:text-base mb-6 max-w-xl mx-auto font-medium">
-            Helps you figure the right posting frequency and schedule for LinkedIn based on your goals.
+            Find how often to post on LinkedIn and the weekly schedule to keep, based on your goals and your week.
           </p>
         </header>
 

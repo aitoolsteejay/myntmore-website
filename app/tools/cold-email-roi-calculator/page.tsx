@@ -8,7 +8,7 @@ import ColdEmailRoiPageClient from "./ColdEmailRoiPageClient";
 import { withPageSeo } from "@/lib/page-seo";
 
 const TITLE = "Cold Email ROI Calculator";
-const DESCRIPTION = "Free cold email ROI calculator. Estimate meetings, pipeline and revenue from your outreach using 2026 benchmark reply rates.";
+const DESCRIPTION = "Free cold email ROI calculator: enter your sends, reply and close rates, or start from 2026 benchmarks, and see meetings, pipeline and ROI calculate live.";
 const PATH = "/tools/cold-email-roi-calculator";
 
 export const metadata: Metadata = withPageSeo("/tools/cold-email-roi-calculator", {
