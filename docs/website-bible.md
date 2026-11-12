@@ -4182,6 +4182,7 @@ Direct or no referrer 521 visitors, google.com 99, l.instagram.com 42, linkedin.
 ### E.5 Organic leads: how the number is found and why it is rough
 
 - Zoho CRM Leads module, filter: Lead Source equals "Website" and Created Time inside the week (use India time boundaries, 00:00 to 23:59 IST).
+- **Also count the Contacts module (found 12 Nov 2026).** Website enquiries and Zoho Bookings calls are created as Contacts, not Leads (bookings show the meeting type, such as "Enwil 25 min", in Lead Source Type). Run the same filter on Contacts and add the two. Counting Leads only reported 0 for weeks 3 to 6, while Contacts held 5, 10, 2 and 5. Contacts can also be entered by hand by the sales team, so treat the total as an upper bound.
 - It is an **upper bound**: until 10 Nov 2026 every form sent an empty source field, so organic search could not be separated from Instagram or direct visits. The new source tracking (Part 7) fixes this going forward.
 - No lead with Lead Source "Website" has been created since 8 Oct 2026.
 - Other lead types exist but are not part of this KPI: lead-magnet downloads (7, plus one on 20 Oct) and one "friend" referral.
@@ -4201,6 +4202,7 @@ Direct or no referrer 521 visitors, google.com 99, l.instagram.com 42, linkedin.
 | Like-for-like indexing | Compare against the pages that existed at the last pull. A burst of new pages drags the headline ratio down for days |
 | Zoho search | Use the criteria form `((Lead_Source:equals:Website)and(Created_Time:between:<start>,<end>))` with IST offsets |
 | Vercel | Group visitors by referrer host or by request path. Grouping by UTM source needs the paid Web Analytics Plus and returns an error otherwise |
+| Bot traffic in Vercel | Pull visitors by country as well as by referrer. Countries whose visitors average about 1.0 pageviews each with no referrer (Singapore and China every week; the United States in bursts, such as 9 to 11 Nov 2026) are crawlers and monitors. Report "visitors" and "visitors excluding likely bots" (total minus those countries' visitors) side by side. In week 6 that was 625 and about 455 |
 | Site health and schema | Run the crawl script against the live site. Exit code 0 means Site Health is 100% |
 | AI citation | ChatGPT shows "An error occurred during verification" to automated browsers. That is bot detection: do not work around it. A person runs the 10 prompts in a private window and reports which named Myntmore. Perplexity now needs an account |
 | Core Web Vitals | The free PageSpeed API quota without a key runs out quickly. The Search Console report needs a person |

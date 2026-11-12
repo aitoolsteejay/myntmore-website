@@ -11,8 +11,8 @@ import { OG_BASE } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/resources/guides/how-to-set-up-vibe-prospecting", {
-  title: "Vibe Prospecting on Claude: What It Is + Setup",
-  description: "Vibe Prospecting is a Claude connector that pulls verified B2B leads into your chat. See how it works, the 7-step setup and 10 prompts to copy.",
+  title: "Vibe Prospecting: What It Is and How to Use It in Claude",
+  description: "Vibe Prospecting is a Claude connector that finds verified B2B leads right in your chat. What it is, the 7-step setup, and 10 prompts you can copy.",
   keywords: [
     "vibe prospecting", "what is vibe prospecting", "vibe prospecting claude", "vibe prospecting setup guide",
     "claude connectors for lead generation",

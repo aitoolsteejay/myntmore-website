@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T12:18:30.293Z",
+  "generatedAt": "2026-11-12T17:54:00.835Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 304,
-    "linked": 269,
+    "total": 308,
+    "linked": 273,
     "orphan": 35,
     "noindex": 39,
     "notInXmlSitemap": 43,
@@ -151,9 +151,13 @@
       "linkedFrom": [
         "/",
         "/services",
-        "lib/city-links.ts"
+        "lib/city-links.ts",
+        "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs/founder-led-sales-before-scaling",
+        "/resources/blogs/predictable-b2b-lead-gen-engine"
       ],
-      "inboundCount": 3,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -260,10 +264,10 @@
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/services",
         "lib/city-links.ts",
-        "/services/cold-email",
-        "/services/linkedin-outreach"
+        "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/resources/blogs/b2b-outbound-benchmark-report-2026"
       ],
-      "inboundCount": 9,
+      "inboundCount": 13,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -328,7 +332,7 @@
         "/founder-meeting",
         "/marketing-automation"
       ],
-      "inboundCount": 83,
+      "inboundCount": 87,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2074,9 +2078,10 @@
       "linkedFrom": [
         "/",
         "/resources/blogs/founder-led-sales-before-scaling",
-        "/resources/blogs/founder-personal-brand-linkedin"
+        "/resources/blogs/founder-personal-brand-linkedin",
+        "/resources/blogs/investor-outreach-for-founders"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2332,6 +2337,20 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/blogs/account-targeting-strategy",
+      "title": "Account Targeting Strategy: A Step-by-Step Guide",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/glossary/target-account-strategy",
+        "/resources/blogs"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/blogs/agency-vs-in-house",
       "title": "Agency vs. In-House SDR: Which Should You Build?",
       "section": "resources",
@@ -2395,9 +2414,9 @@
         "lib/internal-paths.ts",
         "/resources/blogs",
         "/resources/blogs/handling-cold-email-replies",
-        "/resources/blogs/positive-reply-to-booked-meeting"
+        "/resources/blogs/lead-scoring-b2b-outbound"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2505,7 +2524,7 @@
         "/resources/blogs",
         "/resources/blogs/handling-cold-email-replies"
       ],
-      "inboundCount": 9,
+      "inboundCount": 11,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2520,9 +2539,10 @@
         "/resources/glossary/multi-channel-outreach",
         "lib/internal-paths.ts",
         "/resources/blogs",
-        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
+        "/resources/blogs/inbound-vs-outbound-together"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2588,7 +2608,7 @@
     },
     {
       "path": "/resources/blogs/handling-cold-email-replies",
-      "title": "Cold Reply Meaning: How to Answer Each Type",
+      "title": "Cold Reply Meaning in Chat and Sales Emails",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2641,12 +2661,53 @@
       "linkedFrom": [
         "/resources/glossary/icp",
         "lib/internal-paths.ts",
+        "/resources/blogs/account-targeting-strategy",
         "/resources/blogs/ai-vs-traditional-lead-generation",
         "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/resources/blogs",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/inbound-vs-outbound-together",
+      "title": "Inbound vs. Outbound Is the Wrong Question",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/investor-outreach-for-founders",
+      "title": "Run Your Fundraise Like a Sales Pipeline",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/lead-scoring-b2b-outbound",
+      "title": "Lead Scoring for B2B Outbound: Hot, Warm, Cold",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs"
+      ],
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2676,9 +2737,10 @@
         "lib/internal-paths.ts",
         "/resources/blogs/cold-email-sequence-templates",
         "/resources/blogs",
-        "/resources/blogs/reviving-closed-lost-leads"
+        "/resources/blogs/reviving-closed-lost-leads",
+        "/resources/blogs/what-is-b2b-outbound-sales"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2691,9 +2753,10 @@
       "linkedFrom": [
         "/resources/glossary/social-selling",
         "lib/internal-paths.ts",
+        "/resources/blogs/inbound-vs-outbound-together",
         "/resources/blogs"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2708,9 +2771,10 @@
         "/resources/glossary/multi-threading",
         "/resources/guides/claude-sales-call-prompts",
         "lib/internal-paths.ts",
+        "/resources/blogs/account-targeting-strategy",
         "/resources/blogs"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2857,9 +2921,10 @@
         "/resources/glossary/b2b-prospecting",
         "/resources/glossary/total-conversional-market",
         "lib/internal-paths.ts",
+        "/resources/blogs/account-targeting-strategy",
         "/resources/blogs"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2899,16 +2964,17 @@
     },
     {
       "path": "/resources/blogs/what-is-b2b-outbound-sales",
-      "title": "What Is B2B Outbound Sales? Complete Guide",
+      "title": "What Is Outbound Sales? B2B Meaning and Strategy",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/inbound-vs-outbound",
         "/resources/glossary/outbound-sales",
         "lib/internal-paths.ts",
+        "/resources/blogs/investor-outreach-for-founders",
         "/resources/blogs"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2969,9 +3035,10 @@
       "linkedFrom": [
         "/resources/glossary/multi-threading",
         "/resources/glossary/target-account-strategy",
+        "/resources/blogs/account-targeting-strategy",
         "/resources/glossary"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3088,12 +3155,13 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/hot-lead",
-        "/resources/glossary/target-account-strategy",
+        "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs/lead-scoring-b2b-outbound",
         "/resources/blogs/reviving-closed-lost-leads",
         "/resources/blogs/what-is-b2b-outbound-sales",
         "/resources/glossary"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3250,9 +3318,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/lead-scoring-b2b-outbound",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3266,10 +3335,11 @@
         "/resources/glossary/b2b-prospecting",
         "/resources/glossary/buyer-persona",
         "/resources/glossary/lead-qualification",
+        "/resources/blogs/investor-outreach-for-founders",
         "/resources/blogs/what-is-b2b-outbound-sales",
         "/resources/glossary"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3281,9 +3351,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/outbound-sales",
+        "/resources/blogs/inbound-vs-outbound-together",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3323,9 +3394,10 @@
       "linkedFrom": [
         "/resources/glossary/buyer-engagement",
         "/resources/glossary/lead-qualification",
+        "/resources/blogs/lead-scoring-b2b-outbound",
         "/resources/glossary"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3488,10 +3560,11 @@
       "linkedFrom": [
         "/resources/glossary/pipeline-generation",
         "/resources/glossary/warm-lead",
+        "/resources/blogs/investor-outreach-for-founders",
         "/resources/blogs/what-is-b2b-outbound-sales",
         "/resources/glossary"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3585,9 +3658,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/account-targeting-strategy",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -3981,11 +4055,11 @@
         "/resources/glossary/account-penetration",
         "/resources/glossary/sales-pipeline",
         "/services",
+        "/resources/blogs/account-targeting-strategy",
         "/resources/blogs/icp-mapping-b2b",
-        "/resources/blogs/multi-threading-b2b-buying-committee",
-        "/resources/blogs/tam-trap-vague-targeting"
+        "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 9,
+      "inboundCount": 10,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4085,7 +4159,7 @@
         "/resources/glossary/linkedin-outreach",
         "/resources/glossary/warm-lead"
       ],
-      "inboundCount": 28,
+      "inboundCount": 29,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4105,7 +4179,7 @@
         "/resources/glossary/vanity-metrics",
         "/resources/guides/claude-sales-call-prompts"
       ],
-      "inboundCount": 21,
+      "inboundCount": 22,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4125,7 +4199,7 @@
         "/resources/glossary/total-conversional-market",
         "/services"
       ],
-      "inboundCount": 22,
+      "inboundCount": 23,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4285,9 +4359,11 @@
         "/tools/cold-email-roi-calculator",
         "lib/tools-registry.ts",
         "/resources/blogs/5-second-hero-section-test",
+        "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs/lead-scoring-b2b-outbound",
         "/resources/blogs/tam-trap-vague-targeting"
       ],
-      "inboundCount": 6,
+      "inboundCount": 8,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

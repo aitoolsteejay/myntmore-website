@@ -8,14 +8,14 @@ const SLUG = "target-account-strategy";
 const PAGE_URL = `${SITE_URL}/resources/glossary/${SLUG}`;
 const TITLE = "Target Account Strategy";
 const DESCRIPTION = "A target account strategy is the process of selecting a defined list of high-value companies to pursue and planning the approach for each, based on customer fit, buying signals, and potential deal size.";
-const ALSO_KNOWN_AS = ["Strategic Account Targeting"];
+const ALSO_KNOWN_AS = ["Strategic Account Targeting","Account Targeting Strategy"];
 const META_DESCRIPTION = "What a target account strategy is, how to choose target accounts, and how strategic account targeting feeds account-based marketing.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | B2B Glossary`,
   description: META_DESCRIPTION,
   alternates: { canonical: PAGE_URL },
-  keywords: ["what is target account strategy","target account list","strategic account targeting","how to choose target accounts"],
+  keywords: ["what is target account strategy","target account list","strategic account targeting","how to choose target accounts","account targeting strategy","what makes a good target account"],
   openGraph: {
     ...OG_BASE,
     title: `${TITLE} | Myntmore Glossary`,
@@ -46,8 +46,8 @@ export default function GlossaryTermPage() {
       body={"It's the planning layer underneath ABM: before you can run account-based outreach, you need a short, ranked list of accounts and a reason each one belongs on it. Good lists are built from firmographic fit plus timing signals, then tiered so the highest-value accounts get the most research and personalization."}
       sourceLabel={"Read the related term: ABM (Account-Based Marketing)"}
       sourceHref={"/resources/glossary/abm"}
-      furtherLabel={"Read the related term: Buying Signal"}
-      furtherHref={"/resources/glossary/buying-signal"}
+      furtherLabel={"Read the full guide: Account Targeting Strategy, step by step"}
+      furtherHref={"/resources/blogs/account-targeting-strategy"}
       articleSchema={TERM_SCHEMA}
     />
   );

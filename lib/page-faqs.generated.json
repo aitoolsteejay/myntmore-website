@@ -213,6 +213,18 @@
     {
       "question": "What do you need from us to get started?",
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    },
+    {
+      "question": "Do you cover Gurugram and Noida as well as Delhi?",
+      "answer": "Yes. We run outbound for companies across Delhi NCR, including Gurugram, Noida and Faridabad. Gurugram and Noida also have their own pages on our site, but the team, process and pricing are the same wherever you sit in NCR."
+    },
+    {
+      "question": "How do I choose a lead generation agency in Delhi NCR?",
+      "answer": "Ask four things: whether they have run campaigns for your industry, how they build and verify their lists, what they report each week (meetings and conversations, not just emails sent), and whether you can leave without a long contract. An agency that cannot show real case studies or promises a fixed number of leads before seeing your ICP is a warning sign."
+    },
+    {
+      "question": "Do you offer appointment setting for Delhi companies?",
+      "answer": "Yes. Appointment setting is part of every engagement: we handle the replies and book qualified meetings straight into your calendar, so your sales team only joins calls with buyers who have agreed to talk."
     }
   ],
   "city-dubai": [
@@ -471,6 +483,18 @@
     {
       "question": "What do you need from us to get started?",
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    },
+    {
+      "question": "Where in Mumbai are you based?",
+      "answer": "Our team works out of BKC (Bandra Kurla Complex), so we can meet Mumbai clients in person when it helps. Campaigns themselves run remotely, and we work with companies across Mumbai, Navi Mumbai and Thane, from Lower Parel and Andheri to Powai."
+    },
+    {
+      "question": "How do I choose a lead generation agency in Mumbai?",
+      "answer": "Ask four things: whether they have run campaigns for your industry, how they build and verify their lists, what they report each week (meetings and conversations, not just emails sent), and whether you can leave without a long contract. An agency that cannot show real case studies or promises a fixed number of leads before seeing your ICP is a warning sign."
+    },
+    {
+      "question": "Do you offer appointment setting for Mumbai companies?",
+      "answer": "Yes. Appointment setting is part of every engagement: we handle the replies and book qualified meetings straight into your calendar, so your sales team only joins calls with buyers who have agreed to talk."
     }
   ],
   "city-noida": [
