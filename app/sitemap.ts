@@ -267,6 +267,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // City landing pages
     { url: `${base}/b2b-lead-generation-mumbai`, lastModified: lastMod("/b2b-lead-generation-mumbai"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-delhi`, lastModified: lastMod("/b2b-lead-generation-delhi"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-gurugram`, lastModified: lastMod("/b2b-lead-generation-gurugram"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-noida`, lastModified: lastMod("/b2b-lead-generation-noida"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-bengaluru`, lastModified: lastMod("/b2b-lead-generation-bengaluru"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-pune`, lastModified: lastMod("/b2b-lead-generation-pune"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-hyderabad`, lastModified: lastMod("/b2b-lead-generation-hyderabad"), changeFrequency: "monthly", priority: 0.6 },

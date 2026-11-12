@@ -30,7 +30,7 @@ import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long
 //    branding, ICP mapping) read their copy from the JSON; cold email, LinkedIn outreach and the self-serve tool keep
 //    their copy in their components for now and only their search/share metadata is in the JSON.
 //  - City pages: one JSON file per /b2b-lead-generation-<city> page. `npm run city-pages:build` (run by prebuild)
-//    writes the page; components/city/CityPage.tsx renders it. All eight cities use it.
+//    writes the page; components/city/CityPage.tsx renders it. Every city page uses it.
 //  - Case studies (detailed): one JSON file per page that uses CaseStudyLayout. `npm run case-study-pages:build`
 //    (run by prebuild) writes the page, the listing card and the sitemap entry.
 //  - Long-form case studies: the other twelve case study pages, each with its own layout. One JSON file each in

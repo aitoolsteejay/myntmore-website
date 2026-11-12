@@ -118,6 +118,8 @@ export default function Services() {
               { city: "Mumbai", href: "/b2b-lead-generation-mumbai", blurb: "BFSI, Media & SaaS" },
               { city: "Bengaluru", href: "/b2b-lead-generation-bengaluru", blurb: "Tech & B2B SaaS" },
               { city: "Delhi NCR", href: "/b2b-lead-generation-delhi", blurb: "Enterprise & D2C Supply" },
+              { city: "Gurugram", href: "/b2b-lead-generation-gurugram", blurb: "SaaS, Fintech & Staffing" },
+              { city: "Noida", href: "/b2b-lead-generation-noida", blurb: "IT Services & Electronics" },
               { city: "Pune", href: "/b2b-lead-generation-pune", blurb: "Auto, IT & Industrial" },
               { city: "Hyderabad", href: "/b2b-lead-generation-hyderabad", blurb: "Pharma & Enterprise Tech" },
               { city: "Chennai", href: "/b2b-lead-generation-chennai", blurb: "SaaS & Manufacturing" },

@@ -3,7 +3,7 @@
 // The city pages used to be linked only from the footer, the HTML sitemap and /services, so search engines saw
 // them as unimportant. <CityLinks> renders these links on the service pages, the industry landing pages, the case
 // studies and the blog posts listed below, matched by industry: a pharma case study links to the cities where
-// pharma clusters, not to all eight.
+// pharma clusters, not to every city.
 //
 // The sectors for each city restate what that city page already says. scripts/audit-internal-links.mjs reports
 // any link here that stops landing on a real page.
@@ -33,6 +33,8 @@ export const CITY_LINKS: CityLink[] = [
   { slug: "mumbai", name: "Mumbai", href: "/b2b-lead-generation-mumbai", sectors: "BFSI, fintech, media and professional services", industries: ["financial", "insurance", "saas", "professional", "ecommerce", "pharma", "recruitment", "founder"] },
   { slug: "bengaluru", name: "Bengaluru (Bangalore)", href: "/b2b-lead-generation-bengaluru", sectors: "B2B SaaS, IT services and deep tech", industries: ["saas", "it", "recruitment", "ecommerce", "founder"] },
   { slug: "delhi", name: "Delhi NCR", href: "/b2b-lead-generation-delhi", sectors: "IT and SaaS in Gurugram and Noida, exporters, staffing", industries: ["it", "saas", "manufacturing", "recruitment", "professional", "ecommerce", "financial"] },
+  { slug: "gurugram", name: "Gurugram (Gurgaon)", href: "/b2b-lead-generation-gurugram", sectors: "SaaS, fintech, IT services and staffing firms", industries: ["saas", "recruitment", "it", "financial", "professional"] },
+  { slug: "noida", name: "Noida", href: "/b2b-lead-generation-noida", sectors: "IT services, software and electronics makers", industries: ["it", "manufacturing", "saas"] },
   { slug: "pune", name: "Pune", href: "/b2b-lead-generation-pune", sectors: "IT services, SaaS and auto-component makers", industries: ["manufacturing", "it", "saas", "recruitment"] },
   { slug: "hyderabad", name: "Hyderabad", href: "/b2b-lead-generation-hyderabad", sectors: "Pharma, API, biotech and IT services", industries: ["pharma", "it", "saas", "recruitment"] },
   { slug: "chennai", name: "Chennai", href: "/b2b-lead-generation-chennai", sectors: "Auto components, healthcare suppliers and exporters", industries: ["manufacturing", "pharma", "it"] },
@@ -41,7 +43,7 @@ export const CITY_LINKS: CityLink[] = [
 ];
 
 // The cities whose pages are written for an industry, strongest match first (each city lists its industries in
-// order of weight). No industry: all eight, in the order above.
+// order of weight). No industry: every city, in the order above.
 export function citiesFor(industry?: CityIndustry | null): CityLink[] {
   if (!industry) return CITY_LINKS;
   return CITY_LINKS.filter((c) => c.industries.includes(industry)).sort((a, b) => a.industries.indexOf(industry) - b.industries.indexOf(industry));
@@ -79,7 +81,7 @@ export function caseStudyIndustry(slug: string): CityIndustry | null {
   return CASE_STUDY_PREFIXES.find(([p]) => slug.startsWith(p))?.[1] ?? null;
 }
 
-// Industry landing page (/lp/<slug>) -> industry. Pages not listed show all eight cities.
+// Industry landing page (/lp/<slug>) -> industry. Pages not listed show every city.
 export const LANDING_PAGE_INDUSTRY: Record<string, CityIndustry> = {
   "saas-founders": "saas",
   "agencies-it": "it",

@@ -108,6 +108,8 @@ const ICP_LINKS = [
 const CITY_LINKS = [
   { label: "Lead generation in Mumbai", href: "/b2b-lead-generation-mumbai" },
   { label: "Delhi", href: "/b2b-lead-generation-delhi" },
+  { label: "Gurugram", href: "/b2b-lead-generation-gurugram" },
+  { label: "Noida", href: "/b2b-lead-generation-noida" },
   { label: "Bengaluru", href: "/b2b-lead-generation-bengaluru" },
   { label: "Pune", href: "/b2b-lead-generation-pune" },
   { label: "Hyderabad", href: "/b2b-lead-generation-hyderabad" },
