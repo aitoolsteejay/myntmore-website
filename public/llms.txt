@@ -47,6 +47,9 @@ Seven managed services. Each service page opens with a short definition, who it 
 - [58 Meetings Booked from 600 LinkedIn Connections](https://www.myntmore.com/resources/guides/58-meetings-600-linkedin-connections): The five-step LinkedIn framework: ICP, positioning, warm-up, a five-message sequence and a follow-up stack.
 - [Pattern Interruption: The Do's and Don'ts of Outreach](https://www.myntmore.com/resources/guides/dos-and-donts-of-outreach): Pattern interruption in outbound, channel-specific tips for LinkedIn and cold email, what data enrichment is, and Myntmore's free outreach tools.
 - [AI Tech Stack for Jewellery Brands](https://www.myntmore.com/resources/guides/ai-tech-stack-jewellery): 106 AI tools across 14 categories for jewellery brand owners and retailers.
+- [Vibe Prospecting on Claude: What It Is + Setup](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting): What the Vibe Prospecting connector for Claude does (it pulls verified B2B leads into the chat), the 7-step setup and 10 prompts to copy.
+- [The 6 Claude Skills Guide](https://www.myntmore.com/resources/guides/claude-skills-guide): Six ready-to-use Claude skills for founders, covering content distribution, LinkedIn growth and lead generation, with copy-paste prompts.
+- [5 Claude Prompts for Sales Calls](https://www.myntmore.com/resources/guides/claude-sales-call-prompts): Copy-paste Claude prompts for meeting prep, discovery questions, objection prep, call openers and follow-up.
 - [Glossary](https://www.myntmore.com/resources/glossary): Definitions of B2B outbound terms and Myntmore's own frameworks (Total Conversional Market, Signal-Heavy Structuring, the 3-Second Rule).
 
 ## Free Tools
@@ -121,6 +124,8 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is appointment setting?](https://www.myntmore.com/resources/glossary/appointment-setting)
 - [What is a go-to-market (GTM) strategy?](https://www.myntmore.com/resources/glossary/gtm-strategy)
 - [What is CAN-SPAM and does it apply to cold email?](https://www.myntmore.com/resources/glossary/can-spam-act)
+- [What does "cold reply" mean in sales?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
+- [What is the difference between inbound and outbound marketing?](https://www.myntmore.com/resources/glossary/inbound-vs-outbound)
 
 ### How-to and strategy
 - [How do I warm up a new domain for cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
@@ -162,6 +167,10 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What makes a lead magnet worth the contact details?](https://www.myntmore.com/resources/blogs/value-premium-lead-magnets)
 - [What is B2B outbound sales and how does it work?](https://www.myntmore.com/resources/blogs/what-is-b2b-outbound-sales)
 - [How do I choose a B2B outbound agency?](https://www.myntmore.com/resources/guides/how-to-choose-an-outbound-agency)
+- [Is it better to build outbound in-house or hire an agency?](https://www.myntmore.com/resources/blogs/agency-vs-in-house)
+- [What is Vibe Prospecting in Claude and how do I set it up?](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting)
+- [Which Claude prompts help prepare for a sales call?](https://www.myntmore.com/resources/guides/claude-sales-call-prompts)
+- [Which Claude skills can a founder use for content and lead generation?](https://www.myntmore.com/resources/guides/claude-skills-guide)
 
 ### Free tools
 - [Free tool to score a LinkedIn post hook](https://www.myntmore.com/tools/linkedin-hook-grader)
@@ -181,6 +190,7 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What does an account-based marketing agency do for enterprise sales?](https://www.myntmore.com/services/account-based-marketing)
 - [What does a GTM strategy engagement include?](https://www.myntmore.com/services/gtm-strategy)
 - [What does a done-for-you cold email service include?](https://www.myntmore.com/services/cold-email)
+- [What does a LinkedIn ghostwriting service for founders include?](https://www.myntmore.com/services/personal-branding)
 - [Is there a self-serve LinkedIn outreach tool?](https://www.myntmore.com/services/do-it-yourself)
 - [Who is Myntmore not for?](https://www.myntmore.com/who-this-is-for)
 - [What is the Myntmore Framework for outbound?](https://www.myntmore.com/myntmore-framework)

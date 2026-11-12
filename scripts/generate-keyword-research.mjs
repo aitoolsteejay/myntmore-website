@@ -579,6 +579,15 @@ const PROMPTS = [
   ["quarterly", "city", "B2B lead generation for SaaS companies in Bangalore", "2", "Bengaluru", "/b2b-lead-generation-bengaluru"],
   ["quarterly", "city", "B2B marketing agency in Mumbai", "", "Mumbai", "/b2b-lead-generation-mumbai"],
   ["quarterly", "city", "Lead generation services in Pune for manufacturers", "11", "Pune", "/b2b-lead-generation-pune"],
+  // Question-style Search Console queries (12 Aug–10 Nov 2026) whose ranking page was missing from public/llms.txt.
+  // Appended rather than grouped so the IDs above stay the same.
+  ["quarterly", "definition", "What does \"cold reply\" mean in sales?", "", "", "/resources/blogs/handling-cold-email-replies"],
+  ["quarterly", "definition", "What is the difference between inbound and outbound marketing?", "", "", "/resources/glossary/inbound-vs-outbound"],
+  ["quarterly", "comparison", "Is it better to build outbound in-house or hire an agency?", "", "", "/resources/blogs/agency-vs-in-house"],
+  ["quarterly", "how-to", "What is Vibe Prospecting in Claude and how do I set it up?", "", "", "/resources/guides/how-to-set-up-vibe-prospecting"],
+  ["quarterly", "how-to", "Which Claude prompts help prepare for a sales call?", "", "", "/resources/guides/claude-sales-call-prompts"],
+  ["quarterly", "how-to", "Which Claude skills can a founder use for content and lead generation?", "", "", "/resources/guides/claude-skills-guide"],
+  ["quarterly", "service", "What does a LinkedIn ghostwriting service for founders include?", "", "", "/services/personal-branding"],
 ];
 
 // ── Build rows ────────────────────────────────────────────────────────────
