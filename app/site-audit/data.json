@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:55:10.517Z",
+  "generatedAt": "2026-11-13T08:01:45.024Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 313,
@@ -709,12 +709,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/b2b-lead-generation-for-it-services",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -725,9 +726,10 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/b2b-lead-generation-for-it-services",
         "/case-studies"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false

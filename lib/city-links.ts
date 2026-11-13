@@ -121,4 +121,5 @@ export const POSTS_WITH_CITY_LINKS = new Set([
   "how-hyderabad-pharma-companies-find-b2b-buyers",
   "how-pune-manufacturers-find-b2b-buyers",
   "how-kolkata-healthcare-suppliers-reach-hospital-buyers",
+  "b2b-lead-generation-for-it-services",
 ]);
