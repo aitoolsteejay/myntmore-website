@@ -52,7 +52,7 @@ export default function BookACallClient() {
     function handleMessage(e: MessageEvent) {
       if (typeof e.origin === "string" && (e.origin.includes("zohobookings") || e.origin.includes("zoho.com"))) {
         if (e.data && (e.data.type === "booking_success" || e.data.action === "booked" || e.data.status === "completed")) {
-          router.push("/thankyou");
+          router.push("/thank-you?booked=1");
         }
       }
     }

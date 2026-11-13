@@ -17,7 +17,10 @@ export const metadata: Metadata = withPageSeo("/thank-you", {
   ],
 });
 
-export default function ThankYouLeadFormPage() {
+// Bookings (Zoho Bookings on /book-a-call, /founder-meeting, /calendar/th) land here with ?booked=1,
+// so every conversion uses one thank-you URL while bookers still see a booking confirmation.
+export default function ThankYouLeadFormPage({ searchParams }: { searchParams?: { booked?: string } }) {
+  const booked = searchParams?.booked === "1";
   return (
     <InnerLayout>
       <section className="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-20 px-4" style={{ backgroundColor: "#F8F6F2" }}>
@@ -32,30 +35,33 @@ export default function ThankYouLeadFormPage() {
           </div>
 
           <span className="inline-flex text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 hero-fade-d1" style={{ backgroundColor: "rgba(245,183,49,0.12)", color: "#A14A08", border: "1px solid rgba(245,183,49,0.35)" }}>
-            Message received
+            {booked ? <>You&apos;re all set</> : "Message received"}
           </span>
 
           <h1 className="text-4xl sm:text-5xl font-black mb-5 leading-tight hero-fade-d2" style={{ color: "#0a0a0a" }}>
-            Thanks, we&apos;ve got your details.
+            {booked ? "Your call is booked!" : <>Thanks, we&apos;ve got your details.</>}
           </h1>
 
           <p className="text-lg mb-10 hero-fade-d3" style={{ color: "#52525B" }}>
-            Someone from our team will review what you shared and follow up within 24 hours with next steps for your pipeline. No spam, no auto-drip sequence, just a real reply.
+            {booked
+              ? <>Thanks for booking time with our founder. You&apos;ll get a calendar invite and a confirmation email shortly. Keep an eye on your inbox.</>
+              : "Someone from our team will review what you shared and follow up within 24 hours with next steps for your pipeline. No spam, no auto-drip sequence, just a real reply."}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center hero-fade-d3">
-            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2">
+            {!booked && <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2">
               Skip the wait, book a call
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </a>
+            </a>}
             <Link href="/case-studies" className="px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2 rounded-xl border transition-colors" style={{ borderColor: "#D0C9BF", color: "#0a0a0a", backgroundColor: "rgba(255,255,255,0.7)" }}>
               See client results
             </Link>
           </div>
 
           <p className="mt-8 text-xs hero-fade-d3" style={{ color: "#71675E" }}>
+            {booked ? "Need to reschedule? Just use the link in your confirmation email." : <>
             Wrong email or need to add something?{" "}
-            <a href="mailto:growth@myntmore.com" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>Email us directly</a>.
+            <a href="mailto:growth@myntmore.com" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>Email us directly</a>.</>}
           </p>
         </div>
       </section>

@@ -39,7 +39,7 @@ export default function CalendarPageClient({
     function handleMessage(e: MessageEvent) {
       if (e.origin !== "https://calendly.com") return;
       if (e.data?.event === "calendly.event_scheduled") {
-        router.push("/thankyou");
+        router.push("/thank-you?booked=1");
       }
     }
     window.addEventListener("message", handleMessage);

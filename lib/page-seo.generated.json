@@ -363,10 +363,6 @@
   "title": "Thanks, We've Got Your Details | Myntmore",
   "description": "Thanks for reaching out to Myntmore. We've received your details and will follow up within 24 hours."
  },
- "/thankyou": {
-  "title": "You're Booked! | Myntmore",
-  "description": "Your call with Myntmore is confirmed. We'll see you soon."
- },
  "/tools/battle-card-generator": {
   "title": "Free Competitor Battle Card Generator (AI) | Myntmore",
   "description": "Free AI battle card generator: name a competitor and get their positioning, public pricing, real strengths and gaps, and how to win against them."

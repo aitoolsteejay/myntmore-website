@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-13T08:17:10.852Z",
+  "generatedAt": "2026-11-13T09:12:42.164Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 314,
+    "total": 313,
     "linked": 279,
-    "orphan": 35,
-    "noindex": 36,
-    "notInXmlSitemap": 40,
+    "orphan": 34,
+    "noindex": 35,
+    "notInXmlSitemap": 39,
     "privateHidden": 8
   },
   "pages": [
@@ -19,10 +19,9 @@
         "/resources/guides/58-meetings-600-linkedin-connections",
         "/resources/guides/80-us-meetings-ai-agents",
         "/resources/guides/ai-tech-stack-jewellery",
-        "/resources/guides/how-to-set-up-vibe-prospecting",
-        "/thankyou"
+        "/resources/guides/how-to-set-up-vibe-prospecting"
       ],
-      "inboundCount": 5,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -639,7 +638,7 @@
         "/services/gtm-strategy",
         "/services/personal-branding"
       ],
-      "inboundCount": 27,
+      "inboundCount": 26,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2076,9 +2075,10 @@
         "/",
         "/resources/blogs/agency-vs-in-house",
         "/resources/blogs/cold-email-vs-linkedin-outreach",
-        "/resources/blogs/stop-selling-features-cold-outreach"
+        "/resources/blogs/stop-selling-features-cold-outreach",
+        "lp/LandingPage.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4384,18 +4384,6 @@
       "path": "/thank-you",
       "title": "Thank You",
       "section": "other",
-      "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
-      "noindex": true,
-      "referencedIn": "app/components/LeadCaptureForm.tsx",
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
-    },
-    {
-      "path": "/thankyou",
-      "title": "Thankyou",
-      "section": "other",
       "status": "linked",
       "linkedFrom": [
         "/book-a-call",
@@ -4728,6 +4716,11 @@
     {
       "from": "/contact",
       "to": "/contact-us",
+      "permanent": true
+    },
+    {
+      "from": "/thankyou",
+      "to": "/thank-you",
       "permanent": true
     },
     {

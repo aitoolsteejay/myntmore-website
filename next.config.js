@@ -8,6 +8,8 @@ const REDIRECTS = [
   { source: "/founder-meeting", destination: "/book-a-call", permanent: true },
   { source: "/about", destination: "/about-us", permanent: true },
   { source: "/contact", destination: "/contact-us", permanent: true },
+  // Old booking thank-you page; bookings now share /thank-you (booking variant via ?booked=1).
+  { source: "/thankyou", destination: "/thank-you?booked=1", permanent: true },
   { source: "/personal-branding", destination: "/services/personal-branding", permanent: true },
   // Renamed from the opaque "GIAtech-stack" slug and moved under guides.
   // It was in the sitemap, so Google may already hold the old URL.
