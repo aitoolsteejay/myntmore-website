@@ -27,15 +27,15 @@
   "faqs": [
     {
       "question": "Why do Google and Yahoo require DMARC for senders?",
-      "answer": "Google and Yahoo enforce DMARC to combat phishing and spoofed sender identities. Enforcing DMARC ensures that only authorized mail servers can send messages claiming to come from your domain, immediately protecting your recipient pool and sender reputation."
+      "answer": "To fight phishing and spoofed sender identities. DMARC lets a domain owner state which mail servers may send as that domain, and what receivers should do with mail that fails the check. Since 2024, Google and Yahoo require it for bulk senders, so cold email without DMARC is far more likely to be filtered."
     },
     {
       "question": "Can cold emails land in spam even if SPF and DKIM pass?",
-      "answer": "Yes. While SPF and DKIM verify sender identity, inbox algorithms also evaluate content spam triggers, sudden spikes in sending volume, recipient engagement rates, and bounce rates. Authentication is necessary for inbox placement, but not solely sufficient on its own."
+      "answer": "Yes. SPF and DKIM verify who sent the email, but inbox providers also weigh spam complaints, sudden spikes in sending volume, recipient engagement and bounce rates. Authentication is necessary for inbox placement but not sufficient on its own, so clean lists and steady volumes matter just as much."
     },
     {
       "question": "What DMARC policy should a new sending domain start with?",
-      "answer": "A new sending domain should begin with p=none to monitor aggregate reports (RUA) and confirm legitimate sending services are passing authentication. Once all mail streams pass SPF and DKIM alignment, the policy can be tightened to p=quarantine or p=reject."
+      "answer": "Start with p=none, which monitors without blocking, and read the aggregate (RUA) reports to confirm every legitimate sending service passes authentication. Once all mail streams pass SPF and DKIM alignment, tighten the policy to p=quarantine and then p=reject. Tightening too early can block your own legitimate mail."
     }
   ]
 }

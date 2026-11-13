@@ -15,7 +15,7 @@
     },
     {
       "question": "How do we receive the accounts?",
-      "answer": "You get exportable account lists with full signal context attached, mapped to your fields and ready to import into whatever system your team already uses. We don't build or manage CRM integrations, that stays part of your own process."
+      "answer": "As exportable account lists with the buying signal attached to each account, mapped to your fields and ready to import into the system your team already uses. We don't build or manage CRM integrations; that stays part of your process. Lists are refreshed as new signals appear."
     },
     {
       "question": "What's the typical pipeline impact?",

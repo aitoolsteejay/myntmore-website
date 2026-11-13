@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 };
 
 const FAQS = [
-  { question: "How long does a cold email domain warmup take?", answer: "A new secondary domain requires a minimum of 14 to 21 days of continuous warm-up before sending its first live cold outreach. Rushing this ramp period risks triggering automated spam filters from Google Workspace and Microsoft 365." },
-  { question: "Can you warm up a domain while sending live cold emails?", answer: "Yes. In fact, maintaining ongoing background warm-up while running active outbound campaigns helps preserve domain reputation by sustaining high open and positive reply ratios even when prospect reply rates fluctuate." },
+  { question: "How long does a cold email domain warmup take?", answer: "A new secondary domain needs at least 14 to 21 days of continuous warm-up before it sends its first live cold outreach. Rushing this ramp period risks triggering the spam filters at Google Workspace and Microsoft 365, and a damaged domain reputation takes far longer to repair than the warm-up takes." },
+  { question: "Can you warm up a domain while sending live cold emails?", answer: "Yes, once the initial warm-up is done. Keeping background warm-up running alongside live campaigns helps preserve domain reputation, because it sustains steady opens and replies even when prospect reply rates dip. What you should not do is start live campaigns on a domain that has not finished its first warm-up." },
   { question: "What daily volume limit should a warmed mailbox maintain?", answer: "To stay within safe deliverability thresholds, each warmed mailbox should send no more than 30 to 40 cold emails per day, plus 15 to 20 warm-up emails. High-volume outbound campaigns scale by distributing mail across multiple secondary domains and mailboxes rather than blasting from a single address." },
 ];
 

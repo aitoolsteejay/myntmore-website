@@ -3,23 +3,23 @@
   "items": [
     {
       "question": "What is a LinkedIn hook?",
-      "answer": "The first two lines of a LinkedIn post, the part shown before the \"see more\" cut. How much shows depends on the device, usually two to three lines. For many readers, those lines decide whether the rest gets read."
+      "answer": "The opening lines of a LinkedIn post, the part shown before the \"see more\" cut. How much shows depends on the device, usually two to three lines. For many readers, those lines decide whether the rest gets read, so a strong hook is the cheapest way to improve a post's reach."
     },
     {
       "question": "How is the score calculated?",
-      "answer": "Six rules are checked in code: length, curiosity, specificity, authority, action and a clickbait penalty. They add up to 100. The same wording always gets the same score, and the AI never sets it."
+      "answer": "Six rules are checked in code: length, curiosity, specificity, authority, action and a clickbait penalty. They add up to 100. The same wording always gets the same score, and the AI never sets it, so you can edit a hook, re-check it and see exactly what changed."
     },
     {
       "question": "What does the AI do?",
-      "answer": "Google's Gemini writes three alternative hooks, each from a different angle: a specific result, a contrarian take and a curiosity gap. Each alternative is then scored with the same six rules, so you can compare them with your original."
+      "answer": "Google's Gemini writes three alternative hooks, each from a different angle: a specific result, a contrarian take and a curiosity gap. Each alternative is then scored with the same six rules, so you can compare them with your original. The AI only writes; the scoring stays in code."
     },
     {
       "question": "Will it make up numbers for my hook?",
-      "answer": "No. The rewrites keep your meaning and facts. Where a number would help and you gave none, the tool uses a placeholder such as [X%] for you to fill in with something true."
+      "answer": "No. The rewrites keep your meaning and facts. Where a number would help and you gave none, the tool uses a placeholder such as [X%] for you to fill in with something true. AI output can still be wrong, so read each rewrite before you post it."
     },
     {
       "question": "Is a high score a guarantee the post will perform?",
-      "answer": "No. The score tells you how well the opening follows common hook principles. Reach also depends on your audience, topic, timing and the rest of the post. Use the score to compare versions, not to predict results."
+      "answer": "No. The score shows how well the opening follows common hook principles. Reach also depends on your audience, topic, timing and the rest of the post. Use the score to compare versions of the same hook, not to predict how many people a post will reach."
     }
   ]
 }

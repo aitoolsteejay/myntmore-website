@@ -129,10 +129,10 @@ const CATEGORIES: { key: ToolCategory; label: string }[] = [
 ];
 
 const ABOUT_FAQ = [
-  { q: "Who is this toolkit for?", a: "Anyone early in their career, students and recent grads looking for internships, jobs, or their first real break, who wants a practical, no-fluff starting point." },
-  { q: "Do I need an existing LinkedIn presence or portfolio?", a: "No. Every fix and tool here is meant to be usable the same day, whether you're starting from a blank profile or already have one you want to sharpen." },
-  { q: "Is this list exhaustive?", a: "No, it's intentionally a quick-start, not a full course. Think of it as a solid set of starting points across six areas, not the final word on any one tool." },
-  { q: "Who put this together?", a: "Built by Myntmore, based on a college workshop on LinkedIn, cold outreach, and the AI tools that speed up a job search." },
+  { q: "Who is this toolkit for?", a: "Anyone early in their career: students and recent graduates looking for internships, jobs or their first real break, who want a practical, no-fluff starting point. It assumes no prior experience with LinkedIn, cold outreach or AI tools, and every section can be used on its own." },
+  { q: "Do I need an existing LinkedIn presence or portfolio?", a: "No. Every fix and tool here is meant to be usable the same day, whether you're starting from a blank profile or already have one you want to sharpen. If you are starting from zero, begin with the LinkedIn profile section, because recruiters usually check it before replying to you." },
+  { q: "Is this list exhaustive?", a: "No. It is intentionally a quick-start, not a full course: a solid set of starting points across six areas, not the final word on any one tool. Pick the area where you are weakest, use it for a week, and come back for the next one once that habit sticks." },
+  { q: "Who put this together?", a: "Myntmore, a B2B outbound agency based in Mumbai. It grew out of a college workshop we ran on LinkedIn, cold outreach and the AI tools that speed up a job search. The same principles we use to start sales conversations for clients apply to starting conversations with employers." },
 ];
 
 /* ─── Small building blocks ───────────────────────────────────────── */

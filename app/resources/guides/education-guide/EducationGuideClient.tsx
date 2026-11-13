@@ -255,10 +255,10 @@ const PROMPT_PRINCIPLES = [
 ];
 
 const ABOUT_FAQ = [
-  { q: "Who is this guide for?", a: "Anyone who wants a practical, no-fluff starting point for using AI well, parents, teachers, students who create content, and school leadership." },
-  { q: "Do I need to already know these tools?", a: "No. Every tip is written to be usable the same day, whether you've never opened an AI tool before or already use one daily." },
-  { q: "Is this list exhaustive?", a: "No, it's intentionally a quick-start, not a full course. Think of it as 10 solid starting points per audience, not the final word on AI in education." },
-  { q: "Who put this together?", a: "This guide was built by Myntmore, based on the practical questions we hear most often from parents, educators, and school leadership about using AI well." },
+  { q: "Who is this guide for?", a: "Anyone who wants a practical, no-fluff starting point for using AI well: parents, teachers, students who create content, and school leadership. Each audience has its own section, so you can skip straight to the part that applies to you without reading the whole guide." },
+  { q: "Do I need to already know these tools?", a: "No. Every tip is written to be usable the same day, whether you've never opened an AI tool before or already use one daily. Where a tip needs a specific tool, the guide names it and explains what it does, so you can try it without any setup beyond a free account." },
+  { q: "Is this list exhaustive?", a: "No. It is intentionally a quick-start, not a full course: 10 solid starting points per audience, not the final word on AI in education. AI tools change quickly, so treat the specific tools as examples and focus on the habits behind them, which last longer." },
+  { q: "Who put this together?", a: "Myntmore, a B2B outbound agency based in Mumbai that uses AI tools in its own daily work. The guide is based on the practical questions we hear most often from parents, educators and school leadership about using AI well, answered in plain language without technical jargon." },
 ];
 
 /* ─── Small building blocks ───────────────────────────────────────── */

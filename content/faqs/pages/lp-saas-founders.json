@@ -7,15 +7,15 @@
     },
     {
       "question": "How is this different from tools like Apollo or Clay that we already use?",
-      "answer": "Those tools give you data. We give you a fully managed system, ICP mapping, signal based targeting, copywriting, sequencing, and deliverability, run by a team that adjusts it every week based on what is working."
+      "answer": "Those tools give you data and automation. We give you a fully managed system: ICP mapping, signal-based targeting, copywriting, sequencing and deliverability, run by a team that adjusts it every week based on what is working. Data alone rarely books meetings; what you do with it each week does."
     },
     {
       "question": "Will this work if we are still pre-product-market fit?",
-      "answer": "Outbound works best once you have a handful of paying customers and a clear picture of who gets value fastest. If you are very early, we will tell you honestly and suggest starting with a smaller pilot."
+      "answer": "Outbound works best once you have a handful of paying customers and a clear picture of who gets value fastest. If you are very early, we will tell you honestly and suggest a smaller pilot, which can still be useful for testing which segments respond before you scale."
     },
     {
       "question": "How do you avoid spam filters and protect our sender reputation?",
-      "answer": "We set up dedicated sending infrastructure, warm it up properly, and follow strict sending limits and personalisation practices, so your core domain reputation stays protected."
+      "answer": "We set up dedicated sending domains and inboxes, separate from your main domain, and warm them up before any campaign sends. SPF, DKIM and DMARC are configured on every domain, volumes stay within strict daily limits, and inbox placement is monitored, so your core domain's reputation is never at risk."
     },
     {
       "question": "Do you integrate with our CRM, like HubSpot or Salesforce?",
@@ -23,11 +23,11 @@
     },
     {
       "question": "What does pricing and commitment look like?",
-      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract."
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
     },
     {
       "question": "We already tried outbound once and it did not work. Why would this be different?",
-      "answer": "Most failed outbound comes down to generic targeting and copy that reads like everyone else's. We rebuild it around specific buying signals and messaging tailored to your product, and iterate weekly instead of setting it and walking away."
+      "answer": "Most failed outbound comes down to generic targeting and copy that reads like everyone else's. We rebuild it around specific buying signals and messaging tailored to your product, then iterate weekly instead of setting it and walking away. We also review what you ran before, so we don't repeat it."
     }
   ]
 }

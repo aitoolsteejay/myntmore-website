@@ -7,7 +7,7 @@
     },
     {
       "question": "How accurate is the lead scoring?",
-      "answer": "With a well-defined ICP, our scoring model runs at roughly 85–90% relevance on the top tier. We build in a feedback loop: your team flags false positives and the model adjusts over time. Accuracy compounds month over month."
+      "answer": "With a well-defined ICP, our scoring runs at roughly 85 to 90% relevance on the top tier. Every list is checked by people before outreach, and your team flags false positives, which the model learns from. Accuracy improves month over month as it sees which leads actually book meetings."
     },
     {
       "question": "How do we receive the leads?",
@@ -15,7 +15,7 @@
     },
     {
       "question": "How many leads can you generate per month?",
-      "answer": "For most B2B clients with a defined ICP we deliver 300 to 1,500 scored, research-enriched leads per month. Volume is never the goal. Relevance is. 200 right-fit leads beat 2,000 cold ones every time."
+      "answer": "For most B2B clients with a defined ICP, we deliver 300 to 1,500 scored, research-enriched leads a month. Volume is never the goal; relevance is. 200 right-fit leads beat 2,000 cold ones, so the number we agree with you depends on your market size and how many conversations your team can take."
     },
     {
       "question": "Will this work for a niche industry with a small TAM?",

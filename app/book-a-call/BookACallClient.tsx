@@ -22,7 +22,7 @@ import FadeIn from "../components/FadeIn";
 const FAQS = [
   {
     q: "Who is this strategy session best suited for?",
-    a: "This call is designed for B2B founders, CEOs, Heads of Sales, and GTM leaders selling high-ticket services, SaaS, or complex enterprise solutions who want to build a predictable, repeatable outbound pipeline without relying on luck or spam.",
+    a: "B2B founders, CEOs, heads of sales and GTM leaders selling high-ticket services, SaaS or complex enterprise solutions, who want a predictable, repeatable outbound pipeline without relying on luck or spam. It suits teams that have some customers already and want more of the same kind, in India or overseas.",
   },
   {
     q: "Is this call really 100% free? What is the catch?",
@@ -30,15 +30,15 @@ const FAQS = [
   },
   {
     q: "What should I bring to the call?",
-    a: "Bring a quick overview of your target customer profile (ICP), your current outbound or inbound channels, and your target monthly revenue goals. If you have live outbound copy or campaign metrics you'd like us to review, have them handy!",
+    a: "A quick overview of your ideal customer profile (ICP), the outbound or inbound channels you use today and your monthly revenue goals. If you have live outbound copy or campaign metrics you'd like us to review, have them ready. A rough version of each is fine; working it out is part of the call.",
   },
   {
     q: "Can I bring my co-founder or Head of Sales along?",
-    a: "Absolutely. Feel free to forward the Google Meet calendar invite to anyone on your leadership, sales, or marketing team who is involved in your pipeline generation.",
+    a: "Yes. Forward the Google Meet calendar invite to anyone on your leadership, sales or marketing team who is involved in generating pipeline. It often helps to have whoever owns your targeting and whoever takes the sales calls in the same conversation, so the plan we discuss fits both.",
   },
   {
     q: "What if none of the available slots work for my timezone?",
-    a: "If you can't find a convenient time, you can reach out directly via WhatsApp at +91 81693 18951 or email us at growth@myntmore.com and we'll accommodate your schedule.",
+    a: "Reach out directly on WhatsApp at +91 81693 18951 or email growth@myntmore.com, and we'll find a time that suits your schedule. We work with companies in India and overseas, so calls outside Indian business hours can usually be arranged. Mention your time zone and a few times that work.",
   },
 ];
 

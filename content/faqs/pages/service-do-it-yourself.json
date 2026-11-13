@@ -7,23 +7,23 @@
     },
     {
       "question": "Whose LinkedIn account does this run on?",
-      "answer": "Yours. You log in with your own LinkedIn account, and every campaign you build runs from that account. Nothing is handed over to us."
+      "answer": "Yours. You log in with your own LinkedIn account, and every campaign you build runs from that account. Nothing is handed over to us, and we don't send messages on your behalf. That also means connection requests and replies stay in your own inbox, where you can answer them directly."
     },
     {
       "question": "Can I run more than one campaign?",
-      "answer": "Yes. Each campaign has its own list of leads, connection note, and follow-up sequence, so you can run as many as you need at once, for different segments, offers, or lists."
+      "answer": "Yes. Each campaign has its own list of leads, connection note and follow-up sequence, so you can run several at once for different segments, offers or lists. Running them side by side also lets you compare acceptance and reply rates and keep the messages that work."
     },
     {
       "question": "What can I configure for my follow-ups?",
-      "answer": "For every campaign, you set how many follow-up messages go out, what each one says, and the time delay before each one is sent."
+      "answer": "For every campaign, you set how many follow-up messages go out, what each one says and the delay before each one is sent. Follow-ups only go to people who have accepted your connection request, so you can write them as a natural continuation of the first note."
     },
     {
       "question": "What do I see on my dashboard?",
-      "answer": "Both campaign-level and lifetime metrics: acceptance rate, reply rate, and the live status of every lead in every campaign."
+      "answer": "Both campaign-level and lifetime metrics: acceptance rate, reply rate and the live status of every lead in every campaign. That makes it easy to see which connection notes and follow-ups are working, and which campaigns need a new list or new copy."
     },
     {
       "question": "How do I get access?",
-      "answer": "Book a demo with our team and we'll get you set up."
+      "answer": "Book a demo with our team and we'll get you set up. On the call we show you how campaigns, follow-ups and the dashboard work, and help you set up your first campaign. If you would rather have the whole system run for you, we can talk about our managed LinkedIn outreach service instead."
     }
   ]
 }

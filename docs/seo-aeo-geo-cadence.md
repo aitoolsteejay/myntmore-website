@@ -89,7 +89,7 @@ Still open, and why:
 - **Third-party scripts.** GA4, the Meta Pixel and Ahrefs Analytics all load `afterInteractive`. Moving the Pixel and Ahrefs to `lazyOnload` would cost some page views from very short visits, so that is a marketing decision, not applied.
 - **Real benchmark and external work.** New benchmark data needs real campaign data; citations, PR, directories and interviews happen off-site (`myntmore-ai-visibility-checklist.md`).
 - **Case studies** still lack a "what we would do differently" section; that needs the real story from each engagement.
-- **FAQ lengths.** 108 FAQ answers sit under 40 words (mostly landing and city pages); `npm run audit:answers --all` lists them.
+- **FAQ lengths.** All FAQ answers sit in the 40 to 60 word range as of 2026-11-13 (`npm run audit:answers` to recheck).
 - Core Web Vitals field data still needs PageSpeed Insights / CrUX on the deployed site; the build measures payload, not LCP, CLS or INP.
 
 ## Re-auditing later

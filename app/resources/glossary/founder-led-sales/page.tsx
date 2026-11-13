@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const FAQS = [
   { question: "How long should founder-led sales last?", answer: "Founder-led sales typically lasts until the founder closes 10 to 15 non-referral customer deals and identifies a repeatable objection-handling pattern. Handing off sales before this milestone forces new reps to guess positioning, which often leads to missed quotas and failed sales hires." },
   { question: "What is the biggest risk of staying in founder-led sales too long?", answer: "The primary risk is founder burnout and bottlenecked company revenue. When all discovery calls, proposal writing, and negotiations depend entirely on the founder's personal calendar, outbound capacity hits a hard ceiling, preventing the company from scaling beyond early revenue stages." },
-  { question: "Can an agency assist during founder-led sales?", answer: "Yes. An outbound agency can build lead lists, manage domain deliverability, and book qualified meetings directly on the founder's calendar. The founder takes the sales meetings while the agency runs the top-of-funnel infrastructure." },
+  { question: "Can an agency assist during founder-led sales?", answer: "Yes. An outbound agency can build lead lists, manage deliverability and book qualified meetings directly on the founder's calendar. The founder takes the sales meetings while the agency runs the top of the funnel. That keeps the founder's time on the conversations that teach the most about the market." },
 ];
 
 const TERM_SCHEMA = buildDefinedTermSchema({
