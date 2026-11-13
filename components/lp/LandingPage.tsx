@@ -502,6 +502,7 @@ function FormSection({ d }: { d: LandingPageData }) {
           <p className="text-base" style={{ color: "#52525B" }}>{d.formBody}</p>
         </div>
         <div className="rounded-2xl border p-8" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
+          {d.slug === "agency-partners" ? <PartnerForm d={d} /> : (
           <form className="space-y-4"
             action="https://forms.zohopublic.com/flintstop/form/MyntmoreWebsiteform/formperma/3F8IpEgLtb2RnoXcr_yUsp56_-WdQdO2-sM6eaCOKi0/htmlRecords/submit"
             name="form" id="form" method="POST" acceptCharset="UTF-8" encType="multipart/form-data">
@@ -535,9 +536,62 @@ function FormSection({ d }: { d: LandingPageData }) {
             <SubmitButton>{d.submitLabel}</SubmitButton>
             <p className="text-center text-xs" style={{ color: "#71675E" }}>{d.formNote}</p>
           </form>
+          )}
         </div>
       </div>
     </section>
+  );
+}
+
+// Agency partner applications go to the Zoho "Partner With Us" form, not the general website form.
+// Field names must match that Zoho form exactly, or Zoho stores empty values.
+const PARTNER_INPUT = "w-full px-4 py-3 rounded-xl text-sm outline-none border";
+const PARTNER_INPUT_STYLE = { backgroundColor: "#ffffff", borderColor: "#E8E2D9", color: "#0a0a0a" } as const;
+const PARTNER_LABEL_STYLE = { color: "#3D3D3D" } as const;
+
+function PartnerForm({ d }: { d: LandingPageData }) {
+  const [firstPlaceholder, ...rest] = (d.namePlaceholder || "").split(" ");
+  const lastPlaceholder = rest.join(" ");
+  return (
+    <form className="space-y-4"
+      action="https://forms.zohopublic.com/flintstop/form/PartnerWithUs/formperma/QuX_ef4ymZVzJx6nIuD2oXldohvw3iNEq3N0Qs8XER8/htmlRecords/submit"
+      name="form" id="form" method="POST" acceptCharset="UTF-8" encType="multipart/form-data">
+      <LeadSourceField />
+      <input type="hidden" name="zf_redirect_url" value="https://www.myntmore.com/thank-you" />
+      <input type="hidden" name="zc_gad" value="" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="Name_First" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>First Name *</label>
+          <input id="Name_First" name="Name_First" type="text" required maxLength={255} placeholder={firstPlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+        <div>
+          <label htmlFor="Name_Last" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>Last Name *</label>
+          <input id="Name_Last" name="Name_Last" type="text" required maxLength={255} placeholder={lastPlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="PhoneNumber_countrycode" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>Phone *</label>
+          <input id="PhoneNumber_countrycode" name="PhoneNumber_countrycode" type="tel" required maxLength={20} placeholder={d.phonePlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+        <div>
+          <label htmlFor="Email" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>Email *</label>
+          <input id="Email" name="Email" type="email" required maxLength={255} placeholder={d.emailPlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="SingleLine" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>Designation *</label>
+          <input id="SingleLine" name="SingleLine" type="text" required maxLength={255} placeholder={d.designationPlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+        <div>
+          <label htmlFor="SingleLine1" className="block text-xs font-semibold mb-1.5" style={PARTNER_LABEL_STYLE}>Company Name *</label>
+          <input id="SingleLine1" name="SingleLine1" type="text" required maxLength={255} placeholder={d.companyPlaceholder} className={PARTNER_INPUT} style={PARTNER_INPUT_STYLE} />
+        </div>
+      </div>
+      <SubmitButton>{d.submitLabel}</SubmitButton>
+      <p className="text-center text-xs" style={{ color: "#71675E" }}>{d.formNote}</p>
+    </form>
   );
 }
 
