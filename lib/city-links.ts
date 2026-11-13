@@ -118,4 +118,5 @@ export const POSTS_WITH_CITY_LINKS = new Set([
   "b2b-lead-gen-metrics",
   "founder-led-sales-before-scaling",
   "how-bangalore-saas-companies-get-b2b-leads",
+  "how-hyderabad-pharma-companies-find-b2b-buyers",
 ]);
