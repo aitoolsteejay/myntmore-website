@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-13T08:01:45.024Z",
+  "generatedAt": "2026-11-13T08:17:10.852Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 313,
-    "linked": 278,
+    "total": 314,
+    "linked": 279,
     "orphan": 35,
     "noindex": 36,
     "notInXmlSitemap": 40,
@@ -335,7 +335,7 @@
         "/founder-meeting",
         "/marketing-automation"
       ],
-      "inboundCount": 91,
+      "inboundCount": 92,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2377,11 +2377,12 @@
         "/careers/lead-gen-intern",
         "/resources/glossary/target-account-strategy",
         "/resources/blogs",
+        "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
         "/resources/blogs/b2b-lead-generation-for-it-services",
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2458,6 +2459,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
+      "title": "How Corporate Gifting Companies Win B2B Orders",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/blogs/b2b-lead-generation-for-it-services",
       "title": "B2B Lead Generation for IT Services",
       "section": "resources",
@@ -2484,11 +2498,11 @@
         "/resources/glossary/meeting-booked-rate",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
         "/resources/blogs/b2b-lead-gen-metrics",
+        "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
         "/resources/blogs",
-        "/resources/blogs/cold-email-sequence-templates",
-        "/resources/blogs/cold-email-vs-linkedin-outreach"
+        "/resources/blogs/cold-email-sequence-templates"
       ],
-      "inboundCount": 15,
+      "inboundCount": 16,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2539,9 +2553,9 @@
         "/resources/glossary/spf-dkim-dmarc",
         "/resources/guides/cold-email-tech-stack",
         "lib/internal-paths.ts",
-        "/resources/blogs/cold-email-compliance-guide"
+        "/resources/blogs/b2b-lead-generation-for-corporate-gifting"
       ],
-      "inboundCount": 11,
+      "inboundCount": 12,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2876,10 +2890,10 @@
         "/resources/guides/claude-sales-call-prompts",
         "lib/internal-paths.ts",
         "/resources/blogs/account-targeting-strategy",
-        "/resources/blogs/how-kolkata-healthcare-suppliers-reach-hospital-buyers",
-        "/resources/blogs"
+        "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
+        "/resources/blogs/how-kolkata-healthcare-suppliers-reach-hospital-buyers"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4225,7 +4239,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 25,
+      "inboundCount": 26,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4285,7 +4299,7 @@
         "/resources/glossary/linkedin-outreach",
         "/resources/glossary/warm-lead"
       ],
-      "inboundCount": 30,
+      "inboundCount": 31,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4486,10 +4500,10 @@
         "lib/tools-registry.ts",
         "/resources/blogs/5-second-hero-section-test",
         "/resources/blogs/account-targeting-strategy",
-        "/resources/blogs/lead-scoring-b2b-outbound",
-        "/resources/blogs/tam-trap-vague-targeting"
+        "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
+        "/resources/blogs/lead-scoring-b2b-outbound"
       ],
-      "inboundCount": 8,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

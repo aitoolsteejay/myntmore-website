@@ -121,6 +121,7 @@ Every brief adheres to the checklist standard:
 ## Brief 4: How Corporate Gifting Companies Win High-Ticket B2B Corporate Clients
 
 - **Type:** NEW BLOG POST (`content/posts/b2b-lead-generation-for-corporate-gifting.mdoc`)
+- **Status:** Published 2026-11-13 as practical advice: there is no corporate gifting case study, so the post cites no client results, and the seasonal-timing and budget-cycle norms in this brief are written as advice, not fact.
 - **Working Title:** "How Corporate Gifting Companies Get High-Ticket B2B Orders Before Festival Seasons"
 - **Primary Keyword:** `b2b lead generation for corporate gifting`
   - *Collision Check:* Clean (mapped from `docs/keywords/icp-keywords.csv` ICP 16).
