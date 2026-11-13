@@ -147,6 +147,8 @@ const GROUPS: SitemapGroup[] = [
       { label: "LinkedIn Content-to-Calls Starter Kit", href: "/resources/guides/linkedin-content-to-calls-starter-kit" },
       { label: "The Outbound Meme Prompt Kit", href: "/resources/guides/outbound-meme-prompt-kit" },
       { label: "Job Applications Are a Sales Funnel", href: "/resources/guides/job-applications-sales-funnel" },
+      { label: "AI Quick-Start Guide", href: "/resources/guides/education-guide" },
+      { label: "Career Jumpstart Toolkit", href: "/resources/guides/careers-and-job-guide" },
     ],
   },
   {
@@ -216,6 +218,7 @@ const GROUPS: SitemapGroup[] = [
     accent: "#8B5CF6",
     links: [
       { label: "Events & Webinars", href: "/events" },
+      { label: "Predictable Lead Pipeline Webinar Recording", href: "/events/predictable-pipeline-webinar" },
       { label: "Agency vs. In-House SDR", href: "/resources/blogs/agency-vs-in-house" },
     ],
   },

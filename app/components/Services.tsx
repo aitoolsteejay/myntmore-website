@@ -305,6 +305,9 @@ export default function Services() {
             </svg>
           </a>
           <p className="text-sm text-[#71675E]">No commitment · 30-minute call · Live in 18 days</p>
+          <a href="/b2b-lead-generation-mumbai" className="text-sm font-semibold text-[#52525B] underline underline-offset-2">
+            Explore B2B lead generation in Mumbai
+          </a>
         </div>
 
         {/* Bottom stat strip */}

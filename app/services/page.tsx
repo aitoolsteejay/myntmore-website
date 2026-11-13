@@ -111,7 +111,7 @@ export default function Services() {
               B2B Outbound Services Across India
             </h2>
             <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#52525B" }}>
-              Our systems are managed remotely from BKC, Mumbai for high-growth B2B teams across India&apos;s commercial hubs:
+              From BKC, we run <Link href="/b2b-lead-generation-mumbai" className="underline underline-offset-2">B2B lead generation in Mumbai</Link> and manage outbound campaigns for teams across India.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

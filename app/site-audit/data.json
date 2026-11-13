@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-12T17:54:00.835Z",
+  "generatedAt": "2026-11-13T06:43:54.456Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 308,
     "linked": 273,
     "orphan": 35,
-    "noindex": 39,
-    "notInXmlSitemap": 43,
+    "noindex": 36,
+    "notInXmlSitemap": 40,
     "privateHidden": 8
   },
   "pages": [
@@ -254,7 +254,7 @@
     },
     {
       "path": "/b2b-lead-generation-mumbai",
-      "title": "B2B Lead Generation Company in Mumbai",
+      "title": "B2B Lead Generation Agency in Mumbai",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -1957,9 +1957,9 @@
         "/events"
       ],
       "inboundCount": 2,
-      "noindex": true,
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
     },
     {
       "path": "/feedback",
@@ -2608,7 +2608,7 @@
     },
     {
       "path": "/resources/blogs/handling-cold-email-replies",
-      "title": "Cold Reply Meaning in Chat and Sales Emails",
+      "title": "What Is a Cold Reply? Meaning, Examples & How to Respond",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3798,9 +3798,9 @@
         "/resources/guides"
       ],
       "inboundCount": 1,
-      "noindex": true,
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
     },
     {
       "path": "/resources/guides/claude-sales-call-prompts",
@@ -3866,9 +3866,9 @@
         "/resources/guides"
       ],
       "inboundCount": 1,
-      "noindex": true,
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
     },
     {
       "path": "/resources/guides/golden-icp-framework",

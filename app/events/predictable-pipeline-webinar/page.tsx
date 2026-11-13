@@ -18,10 +18,6 @@ const META_DESCRIPTION = "A free live webinar on the cold outreach system Myntmo
 export const metadata: Metadata = withPageSeo("/events/predictable-pipeline-webinar", {
   title: "Free Webinar: Build a Predictable Lead Pipeline",
   description: META_DESCRIPTION,
-  // The event ran on 2026-09-19. Noindexed rather than deleted so existing
-  // links and registrations still resolve; flip this back when the page is
-  // updated for the next session.
-  robots: { index: false, follow: true },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     ...OG_BASE,

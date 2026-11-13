@@ -217,6 +217,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // END generated: glossary terms
     { url: `${base}/resources/feed`, lastModified: lastMod("/resources/feed"), changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/events`, lastModified: lastMod("/events"), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/events/predictable-pipeline-webinar`, lastModified: lastMod("/events/predictable-pipeline-webinar"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/newsletter-subscribe`, lastModified: lastMod("/newsletter-subscribe"), changeFrequency: "monthly", priority: 0.7 },
     // Free tools
     { url: `${base}/tools/linkedin-optimizer`, lastModified: lastMod("/tools/linkedin-optimizer"), changeFrequency: "monthly", priority: 0.7 },
@@ -242,6 +243,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/resources/guides/linkedin-content-to-calls-starter-kit`, lastModified: lastMod("/resources/guides/linkedin-content-to-calls-starter-kit"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/outbound-meme-prompt-kit`, lastModified: lastMod("/resources/guides/outbound-meme-prompt-kit"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/job-applications-sales-funnel`, lastModified: lastMod("/resources/guides/job-applications-sales-funnel"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/resources/guides/education-guide`, lastModified: lastMod("/resources/guides/education-guide"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/resources/guides/careers-and-job-guide`, lastModified: lastMod("/resources/guides/careers-and-job-guide"), changeFrequency: "monthly", priority: 0.7 },
     // Careers
     { url: `${base}/careers`, lastModified: lastMod("/careers"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/careers/lead-gen-strategist`, lastModified: lastMod("/careers/lead-gen-strategist"), changeFrequency: "monthly", priority: 0.5 },

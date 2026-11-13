@@ -5,13 +5,13 @@ import CityPage from "@/components/city/CityPage";
 import data from "@/content/city-pages/mumbai.json";
 
 export const metadata: Metadata = {
-  title: "B2B Lead Generation Company in Mumbai",
-  description: "Mumbai lead generation agency based in BKC, booking qualified meetings for BFSI, media, SaaS and professional services firms with cold email and LinkedIn.",
+  title: "B2B Lead Generation Agency in Mumbai",
+  description: "Get managed B2B lead generation from a Mumbai agency based in BKC. We build verified prospect lists, run cold email and LinkedIn, and book qualified meetings.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-mumbai" },
   keywords: ["b2b lead generation companies in mumbai","lead generation company in mumbai","b2b marketing company in mumbai","linkedin lead generation agency mumbai","b2b lead generation mumbai","outbound agency mumbai","linkedin outreach mumbai","cold email agency mumbai","account based marketing mumbai","ai lead generation mumbai","abm agency mumbai","sales intelligence mumbai","b2b lead generation for bfsi companies mumbai","lead generation for media and entertainment companies mumbai","b2b leads for professional services firms mumbai","demand generation agency mumbai","linkedin ghostwriting for founders mumbai","cold email agency bkc mumbai","best b2b outbound agency in mumbai","how to get b2b leads in mumbai","outbound agency for saas founders mumbai","b2b lead generation agency mumbai","lead generation agency in mumbai","lead generation services in mumbai","appointment setting services mumbai","outbound sales agency mumbai"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation Company in Mumbai | Myntmore",
+    title: "B2B Lead Generation Agency in Mumbai | Myntmore",
     description: "BKC-based lead generation agency booking qualified meetings for Mumbai's BFSI, media, SaaS and professional services firms.",
     url: "https://www.myntmore.com/b2b-lead-generation-mumbai",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],

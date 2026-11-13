@@ -95,7 +95,7 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
               {d.h1}
             </h1>
             <p className="hero-fade-d2 text-lg sm:text-xl max-w-2xl mb-8" style={{ color: MUTED }}>
-              {d.intro}
+              <Rich text={d.intro} />
             </p>
             <div className="hero-fade-d3 flex flex-col sm:flex-row gap-4">
               <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center justify-center gap-2">

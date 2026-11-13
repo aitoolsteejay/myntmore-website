@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/page-seo";
 export const metadata: Metadata = withPageSeo("/resources/guides/education-guide", {
   title: "AI Quick-Start Guide",
   description: "Practical AI tips for parents, educators, and creators.",
-  robots: { index: false, follow: false },
+  alternates: { canonical: "/resources/guides/education-guide" },
 });
 
 export default function EducationGuidePage() {
