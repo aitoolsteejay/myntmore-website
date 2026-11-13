@@ -27,7 +27,11 @@ export default function SubmitButton({ children, submittingLabel = "Submittingâ€
       disabled={submitting}
       onClick={(e) => {
         const form = e.currentTarget.closest("form");
-        if (form && form.checkValidity()) setSubmitting(true);
+        // Disable only AFTER the browser has started the submission. Disabling the
+        // button inside the click handler (React flushes the state update
+        // synchronously for real user clicks) makes the browser cancel the submit,
+        // which left every form stuck on "Submittingâ€¦" with nothing sent.
+        if (form && form.checkValidity()) setTimeout(() => setSubmitting(true), 0);
       }}
       className={`${className} disabled:opacity-60 disabled:cursor-not-allowed`}
     >
