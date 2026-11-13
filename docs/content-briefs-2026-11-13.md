@@ -48,6 +48,7 @@ Every brief adheres to the checklist standard:
 ## Brief 2: B2B Lead Generation for IT Services & Offshoring
 
 - **Type:** NEW BLOG POST (`content/posts/b2b-lead-generation-for-it-services.mdoc`)
+- **Status:** Published 2026-11-13, then expanded the same day with the triggers, Head of Product role, reply-rate FAQ and two more case studies from this brief.
 - **Working Title:** "How IT Services & Software Development Agencies Win US and European Enterprise Clients"
 - **Primary Keyword:** `b2b lead generation for it services`
   - *Collision Check:* Clean (0 occurrences as primary).
@@ -73,7 +74,7 @@ Every brief adheres to the checklist standard:
   2. `/lp/agencies-it` (Anchor: "B2B lead generation for agencies and IT firms")
   3. `/case-studies/agencies-it-usa-software-development` (Anchor: "US software development case study")
 - **Sources & Evidence:**
-  - Published Myntmore case study data: US software development firm generating 38 qualified enterprise meetings; UAE managed IT provider booking 24 pipeline meetings.
+  - Published Myntmore case study data: US software development firm, 24 meetings booked, 19 held and 4 proposals requested (`/case-studies/agencies-it-usa-software-development`); UAE managed IT provider, 16 meetings booked and 5 service assessments requested (`/case-studies/agencies-it-uae-managed-it`). Corrected 2026-11-13: an earlier version said 38 and 24 meetings, which the case studies do not support.
   - Canonical Myntmore entity facts (`130+` B2B companies served).
 
 ---
