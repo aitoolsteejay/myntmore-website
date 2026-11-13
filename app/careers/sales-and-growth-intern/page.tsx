@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
@@ -77,6 +78,9 @@ export default function SalesAndGrowthIntern() {
         <div className="max-w-3xl mx-auto space-y-12">
           <div>
             <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>About the role</h2>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: "#52525B" }}>
+              Interested in prospect research and campaign delivery? See the <Link href="/careers/lead-gen-intern" className="underline">B2B Lead Generation Internship</Link>.
+            </p>
             <p className="text-base leading-relaxed" style={{ color: "#52525B" }}>
               We&apos;re looking for a driven Sales and Growth Intern to identify and connect with potential clients, high-level executives, startup founders, doctors, lawyers, and more, and help them unlock the power of personal branding with Myntmore. You&apos;ll work across the full sales cycle: prospecting, relationship-building, and closing, while keeping our CRM organised and our pipeline moving. This is a full-time internship with a monthly stipend plus incentives.
             </p>

@@ -81,6 +81,9 @@ export default function LeadGenStrategist() {
         <div className="max-w-3xl mx-auto space-y-12">
           <div>
             <h2 className="text-2xl font-black mb-4" style={{ color: "#0a0a0a" }}>About the role</h2>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: "#52525B" }}>
+              Starting your career in outbound? See the <Link href="/careers/lead-gen-intern" className="underline">B2B Lead Generation Internship</Link>.
+            </p>
             <p className="text-base leading-relaxed mb-4" style={{ color: "#52525B" }}>
               We&apos;re looking for a sharp, strategic, and execution-obsessed B2B Lead Generation Strategist who understands how to build pipelines across LinkedIn, cold email, newsletters, SEO content, communities, and outbound workflows. This is not a &apos;spray and pray&apos; lead gen role. It&apos;s a precision marketing and growth strategy role.
             </p>

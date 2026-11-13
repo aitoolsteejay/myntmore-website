@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-13T06:43:54.456Z",
+  "generatedAt": "2026-11-13T07:06:24.513Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 308,
-    "linked": 273,
+    "total": 310,
+    "linked": 275,
     "orphan": 35,
     "noindex": 36,
     "notInXmlSitemap": 40,
@@ -332,7 +332,7 @@
         "/founder-meeting",
         "/marketing-automation"
       ],
-      "inboundCount": 87,
+      "inboundCount": 88,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -560,9 +560,11 @@
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
+        "/careers/lead-gen-strategist",
+        "/careers/sales-and-growth-intern",
         "/careers"
       ],
-      "inboundCount": 1,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -746,9 +748,10 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/b2b-lead-generation-for-it-services",
         "/case-studies"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2013,10 +2016,11 @@
       "status": "linked",
       "linkedFrom": [
         "/",
+        "/resources/blogs/agency-vs-in-house",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
         "/resources/blogs/cold-email-compliance-guide"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2029,11 +2033,12 @@
       "linkedFrom": [
         "/",
         "/resources/blogs/5-second-hero-section-test",
+        "/resources/blogs/b2b-lead-generation-for-it-services",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
         "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting",
         "/resources/blogs/tam-trap-vague-targeting"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2277,7 +2282,7 @@
         "/resources/guides/58-meetings-600-linkedin-connections",
         "/resources/guides/80-us-meetings-ai-agents"
       ],
-      "inboundCount": 75,
+      "inboundCount": 76,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2342,10 +2347,14 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/careers/lead-gen-intern",
         "/resources/glossary/target-account-strategy",
-        "/resources/blogs"
+        "/resources/blogs",
+        "/resources/blogs/b2b-lead-generation-for-it-services",
+        "/resources/blogs/icp-mapping-b2b",
+        "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 2,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2417,6 +2426,22 @@
         "/resources/blogs/lead-scoring-b2b-outbound"
       ],
       "inboundCount": 9,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/b2b-lead-generation-for-it-services",
+      "title": "B2B Lead Generation for IT Services",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs",
+        "/resources/blogs/multi-threading-b2b-buying-committee",
+        "/resources/blogs/what-is-b2b-outbound-sales"
+      ],
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2608,7 +2633,7 @@
     },
     {
       "path": "/resources/blogs/handling-cold-email-replies",
-      "title": "What Is a Cold Reply? Meaning, Examples & How to Respond",
+      "title": "Cold Reply Meaning, Examples & How to Respond",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2630,9 +2655,12 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/resources/blogs"
+        "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs",
+        "/resources/blogs/inbound-vs-outbound-together",
+        "/resources/blogs/lead-scoring-b2b-outbound"
       ],
-      "inboundCount": 1,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2678,9 +2706,12 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/resources/blogs"
+        "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs/founder-led-sales-before-scaling",
+        "/resources/blogs",
+        "/resources/blogs/what-is-b2b-outbound-sales"
       ],
-      "inboundCount": 1,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2691,9 +2722,12 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/resources/blogs"
+        "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs/founder-led-sales-before-scaling",
+        "/resources/blogs",
+        "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 1,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2705,9 +2739,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/blogs/account-targeting-strategy",
-        "/resources/blogs"
+        "/resources/blogs/icp-mapping-b2b",
+        "/resources/blogs",
+        "/resources/blogs/outbound-funnel-math-not-guesswork"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2768,13 +2804,14 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/abm",
+        "/resources/glossary/buying-committee",
         "/resources/glossary/multi-threading",
         "/resources/guides/claude-sales-call-prompts",
         "lib/internal-paths.ts",
         "/resources/blogs/account-targeting-strategy",
         "/resources/blogs"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2968,13 +3005,14 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/careers/lead-gen-intern",
         "/resources/glossary/inbound-vs-outbound",
         "/resources/glossary/outbound-sales",
         "lib/internal-paths.ts",
         "/resources/blogs/investor-outreach-for-founders",
         "/resources/blogs"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3008,7 +3046,7 @@
         "/resources/glossary/appointment-setting",
         "/resources/glossary/b2b-lead-generation"
       ],
-      "inboundCount": 53,
+      "inboundCount": 54,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3049,9 +3087,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/buying-committee",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -3149,6 +3188,21 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/glossary/buying-committee",
+      "title": "Buying Committee",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs/b2b-lead-generation-for-it-services",
+        "/resources/blogs/multi-threading-b2b-buying-committee",
+        "/resources/glossary"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/resources/glossary/buying-signal",
       "title": "Buying Signal",
       "section": "resources",
@@ -3156,12 +3210,13 @@
       "linkedFrom": [
         "/resources/glossary/hot-lead",
         "/resources/blogs/account-targeting-strategy",
+        "/resources/blogs/b2b-lead-generation-for-it-services",
         "/resources/blogs/lead-scoring-b2b-outbound",
         "/resources/blogs/reviving-closed-lost-leads",
         "/resources/blogs/what-is-b2b-outbound-sales",
         "/resources/glossary"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3631,9 +3686,12 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/cold-email-compliance-guide",
+        "/resources/blogs/cold-email-deliverability-guide",
+        "/resources/blogs/cold-email-follow-up-sequence",
         "/resources/glossary"
       ],
-      "inboundCount": 1,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -4159,7 +4217,7 @@
         "/resources/glossary/linkedin-outreach",
         "/resources/glossary/warm-lead"
       ],
-      "inboundCount": 29,
+      "inboundCount": 30,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

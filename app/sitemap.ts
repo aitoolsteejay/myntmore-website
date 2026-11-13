@@ -173,6 +173,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/resources/glossary/business-development`, lastModified: lastMod("/resources/glossary/business-development"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/buyer-engagement`, lastModified: lastMod("/resources/glossary/buyer-engagement"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/buyer-persona`, lastModified: lastMod("/resources/glossary/buyer-persona"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/resources/glossary/buying-committee`, lastModified: lastMod("/resources/glossary/buying-committee"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/buying-signal`, lastModified: lastMod("/resources/glossary/buying-signal"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/can-spam-act`, lastModified: lastMod("/resources/glossary/can-spam-act"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/cold-email`, lastModified: lastMod("/resources/glossary/cold-email"), changeFrequency: "monthly", priority: 0.6 },

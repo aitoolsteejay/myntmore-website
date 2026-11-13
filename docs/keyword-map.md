@@ -117,6 +117,31 @@ Primary keyword is the first entry in each page's `keywords`. The sitewide check
 
 Secondary keywords from `docs/keyword-research-2026-11.md` were added to the 8 city pages and 6 landing pages (`agencies-it`, `recruitment-firms`, `manufacturers-exporters`, `saas-founders`, `pharma`, `agency-partners`); no page's primary keyword changed. "b2b lead generation agency mumbai" moved from the homepage to `/b2b-lead-generation-mumbai`, so the two no longer compete for it. Sitewide check after the change: no duplicate primaries.
 
+## November 13 cycle
+
+The route scan found 268 first keywords across page metadata and published CMS posts, with zero exact primary-keyword duplicates. The two rows marked Draft are in the local build and await release.
+
+| Route | Primary keyword | Status |
+| --- | --- | --- |
+| `/resources/blogs/account-targeting-strategy` | account targeting strategy | Live |
+| `/resources/blogs/lead-scoring-b2b-outbound` | lead scoring for b2b outbound | Live |
+| `/resources/blogs/inbound-vs-outbound-together` | how inbound and outbound work together | Live |
+| `/resources/blogs/investor-outreach-for-founders` | fundraising pipeline for founders | Live |
+| `/resources/blogs/how-bangalore-saas-companies-get-b2b-leads` | how to get b2b leads in bengaluru | Live |
+| `/b2b-lead-generation-abu-dhabi` | b2b lead generation company in abu dhabi | Live |
+| `/b2b-lead-generation-coimbatore` | b2b lead generation company in coimbatore | Live |
+| `/b2b-lead-generation-dubai` | b2b lead generation company in dubai | Live |
+| `/b2b-lead-generation-gurugram` | b2b lead generation company in gurgaon | Live |
+| `/b2b-lead-generation-indore` | b2b lead generation company in indore | Live |
+| `/b2b-lead-generation-jaipur` | b2b lead generation company in jaipur | Live |
+| `/b2b-lead-generation-noida` | b2b lead generation company in noida | Live |
+| `/b2b-lead-generation-surat` | b2b lead generation company in surat | Live |
+| `/careers/lead-gen-intern` | lead generation internship mumbai | Live |
+| `/resources/blogs/b2b-lead-generation-for-it-services` | b2b lead generation for it services | Draft |
+| `/resources/glossary/buying-committee` | buying committee | Draft |
+
+The IT services playbook covers how a team builds its own outbound pipeline. The existing `/lp/agencies-it` page addresses buyers evaluating Myntmore’s services. The Buying Committee entry defines stakeholder roles and links to the existing multi-threading guide for outreach tactics.
+
 ## `/lp/*` vs `/services/*` cannibalization check
 
 Programmatically diffed the full keyword arrays (every keyword, not just primary) of all 9 `/lp/*` pages against all 7 `/services/*` pages: **zero exact overlaps**. This holds structurally  -  most `/lp/*` pages target industry verticals (`b2b lead generation for nbfcs`, `lead generation for exporters india`, `lead generation for staffing agencies`, …) while `/services/*` pages target channels/methods or, for the newest one, the strategic layer above them (`cold email agency`, `linkedin outreach agency`, `icp mapping services`, `gtm strategy agency`, …). Different axis of differentiation, no query overlap.

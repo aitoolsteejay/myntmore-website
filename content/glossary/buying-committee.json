@@ -1,0 +1,23 @@
+{
+  "slug": "buying-committee",
+  "title": "Buying Committee",
+  "tag": "GTM Strategy",
+  "accent": "#0891B2",
+  "tagline": "The people who shape a B2B purchase, from the person doing the work to the person approving the spend.",
+  "excerpt": "Who shapes a B2B purchase, how to map their roles and what to ask before a deal moves forward.",
+  "definition": "A buying committee is the group of people who evaluate, influence, approve or block a B2B purchase, each with different responsibilities and criteria.",
+  "body": "A buying committee forms around a decision. It can include the employee who will use a service, the manager who owns the budget, specialists who evaluate risks and the people who sign off on terms. Some of those people join calls. Others review security documentation, compare costs or give an opinion internally. An org chart helps you identify likely roles, but the buyer’s actual decision process tells you which people matter.\n\nStart by mapping responsibilities. Ask who feels the problem, who defines success, who has to approve the spend and whose team will take on the work after launch. A champion is someone who advocates for the project inside the account. They can help you understand how the decision will happen and introduce colleagues when it makes sense. They may also need material they can share on their own, such as a short project summary or implementation plan.\n\nImagine a retailer buying help with a warehouse integration. The operations lead wants fewer manual reconciliations. Engineering evaluates the systems the partner will touch and how the integration will be maintained. Finance wants to understand the cost and timing. Security checks what data the vendor will access. Procurement confirms the supplier can meet contract and onboarding requirements. If the sales team learns about security only after submitting a proposal, the project can sit while the vendor gathers information that could have been prepared earlier.\n\nKeep a short account record with each role, what they need to see, how you know and what remains open. Update it after conversations. Ask the champion who else should be in the next meeting and why. When several people join, summarize the shared decision and give each person the evidence relevant to their responsibility. For instance, give engineering a draft integration scope and finance a delivery plan with clear assumptions. A committee map is useful when it helps the buyer make a decision and helps your team agree on the next step.",
+  "sourceLabel": "Read the guide to reaching the whole buying committee",
+  "sourceHref": "/resources/blogs/multi-threading-b2b-buying-committee",
+  "furtherLabel": "Related term: Account Penetration",
+  "furtherHref": "/resources/glossary/account-penetration",
+  "schemaDescription": "A buying committee is the group of people who evaluate, influence, approve or block a B2B purchase, each with different responsibilities and criteria.",
+  "metaTitleSuffix": "B2B Glossary",
+  "ogTitleSuffix": "Myntmore Glossary",
+  "metaDescription": "Learn what a buying committee is, who shapes a B2B purchase and how to map each stakeholder’s role with a worked example.",
+  "keywords": [
+    "buying committee",
+    "what is a buying committee",
+    "buying committee roles"
+  ]
+}

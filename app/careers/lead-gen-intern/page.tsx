@@ -84,6 +84,9 @@ export default function LeadGenIntern() {
             <p className="text-base leading-relaxed mb-4" style={{ color: "#52525B" }}>
               We&apos;re looking for a curious, hardworking fresher who wants to learn B2B lead generation by doing it. You&apos;ll work alongside our lead generation team on live campaigns across LinkedIn, cold email, and outbound workflows. No prior experience is needed. We&apos;ll teach you the tools, the process, and the thinking behind it.
             </p>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: "#52525B" }}>
+              Get familiar with the work in our <Link href="/resources/blogs/what-is-b2b-outbound-sales" className="underline">outbound sales guide</Link> and our <Link href="/resources/blogs/account-targeting-strategy" className="underline">account targeting guide</Link>.
+            </p>
             <div className="rounded-xl p-6" style={{ backgroundColor: "#FEF9EC", border: "1px solid rgba(245,183,49,0.3)" }}>
               <p className="text-sm font-bold mb-2" style={{ color: "#0a0a0a" }}>What makes this internship different</p>
               <p className="text-sm leading-relaxed" style={{ color: "#52525B" }}>
