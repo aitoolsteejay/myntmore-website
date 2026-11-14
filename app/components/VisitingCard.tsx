@@ -23,6 +23,8 @@ export default function VisitingCard({
   ctaHref = "/book-a-call",
   ctaLabel = "Book a Call",
   intro,
+  nameDecoration,
+  children,
 }: {
   path: string;
   name: string;
@@ -34,6 +36,8 @@ export default function VisitingCard({
   ctaHref?: string;
   ctaLabel?: string;
   intro?: string;
+  nameDecoration?: ReactNode;
+  children?: ReactNode;
 }) {
   const bookCall = (
     <a href={ctaHref} className="btn-dark w-full py-3.5 text-sm font-bold inline-flex items-center justify-center gap-2">
@@ -115,7 +119,10 @@ export default function VisitingCard({
             </div>
           </div>
 
-          <h1 className="text-2xl font-black mb-1" style={{ color: "#0a0a0a" }}>{name}</h1>
+          <h1 className="text-2xl font-black mb-1" style={{ color: "#0a0a0a" }}>
+            {name}
+            {nameDecoration}
+          </h1>
           <p className="text-sm mb-5" style={{ color: "#71675E" }}>{title}</p>
 
           {intro ? (
@@ -153,6 +160,7 @@ export default function VisitingCard({
 
           {!intro && bookCall}
         </div>
+        {children}
       </section>
     </InnerLayout>
   );

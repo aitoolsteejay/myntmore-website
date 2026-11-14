@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OutboundQuiz, SignatureMark } from "./CardDetails";
 import VisitingCard from "../components/VisitingCard";
 import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
@@ -46,6 +47,7 @@ export default function EnwilFernandesCard() {
         path="/enwilfernandes"
         name="Enwil Fernandes"
         title="Head of Sales, Myntmore"
+        nameDecoration={<SignatureMark />}
         intro="If you’re figuring out where your outbound pipeline is getting stuck, let’s talk."
         ctaHref="/calendar/enwil"
         ctaLabel="Book a call with Enwil"
@@ -59,7 +61,9 @@ export default function EnwilFernandesCard() {
           { label: "Email", cta: "Email", href: `mailto:${EMAIL}`, icon: <EmailIcon />, bg: "#0A66C2" },
           { label: "Newsletter", cta: "Subscribe to the Myntmore newsletter", href: NEWSLETTER_URL, icon: <NewsletterIcon />, bg: "#D97706" },
         ]}
-      />
+      >
+        <OutboundQuiz />
+      </VisitingCard>
     </>
   );
 }

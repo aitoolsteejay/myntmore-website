@@ -1,0 +1,20 @@
+.mark {
+  display: block;
+  width: 6rem;
+  height: 0.45rem;
+  margin: 0.125rem auto 0.375rem;
+  border-bottom: 3px solid #d99c23;
+  border-radius: 0 0 48% 44%;
+  transform: rotate(-3deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mark[data-animate="true"] {
+    animation: draw 560ms cubic-bezier(0.2, 0.75, 0.3, 1) both;
+  }
+}
+
+@keyframes draw {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
+}
