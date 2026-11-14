@@ -19,13 +19,23 @@ For each URL in the priority batches below:
 
 ---
 
+## November 13 priority articles
+
+- [x] `https://www.myntmore.com/resources/blogs/account-targeting-strategy`
+- [x] `https://www.myntmore.com/resources/blogs/lead-scoring-b2b-outbound`
+- [x] `https://www.myntmore.com/resources/blogs/inbound-vs-outbound-together`
+- [ ] `https://www.myntmore.com/resources/blogs/investor-outreach-for-founders` (live test passed, request rejected due to the daily quota)
+- [ ] `https://www.myntmore.com/resources/blogs/how-bangalore-saas-companies-get-b2b-leads`
+
+Search Console accepted `/services` and the three checked articles on November 13. Resume with the two unchecked articles when the quota resets.
+
 ## Batch 1: Urgent - Wrong-Canonical Overwrite (Days 1 & 2)
 
 **Issue:** Google has historically flagged these URLs as "Duplicate without user-selected canonical" and attributed canonical ownership to unrelated external domains (`747live.bet` or `winzir.ph`) based on stale crawls (July to August 2026).
 **Status in Code:** All 19 pages return HTTP 200, self-referencing canonical tags, and `index, follow` robots headers.
 
 ### Day 1 (Core Commercial & Careers - 10 URLs)
-- [ ] `https://www.myntmore.com/services` (Main commercial hub, previously crawled 27 Jul)
+- [x] `https://www.myntmore.com/services` (request accepted November 13)
 - [ ] `https://www.myntmore.com/services/gtm-strategy`
 - [ ] `https://www.myntmore.com/careers/gtm-strategist`
 - [ ] `https://www.myntmore.com/careers/content-marketing-strategist-intern`

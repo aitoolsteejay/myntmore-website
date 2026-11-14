@@ -185,7 +185,7 @@ export default function ReelWidget() {
         className="block text-center mt-2 text-xs font-bold"
         style={{ color: "#71675E" }}
       >
-        Follow @tejas_jhaveri
+        Follow @myntmore
       </a>
     </div>
   );

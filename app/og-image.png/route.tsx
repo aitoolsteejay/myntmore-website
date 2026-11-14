@@ -2,16 +2,15 @@ import { ImageResponse } from "next/og";
 import fs from "node:fs";
 import path from "node:path";
 
-// The social card (1200x630) for every page: /og-image.png?path=/the/page.
+// Branded dynamic Open Graph social card (1200x630) for every page: /og-image.png?path=/the/page.
 //
-// Layout rule: Slack, WhatsApp, iMessage and LinkedIn mobile crop the card to a square from the
-// centre, so everything a reader must see (logo, section label, the page's title, the domain)
-// lives in the middle 620px. The proof points sit either side of it and only show on the wide
-// cards (LinkedIn, X, Facebook). Colours and type are the site's: cream ground with soft gold
-// glows, Inter in black, gold and amber accents, the pill label from the hero.
+// Layout rule: Slack, WhatsApp, Telegram, iMessage and LinkedIn mobile crop the card to a
+// square or right-aligned preview box. All critical elements (logo, section kicker pill,
+// page title, 3-step system infographic, proof stats and domain) are balanced in the
+// central safe zone so nothing is cut off.
 //
-// The title comes from the page itself (its og:title), fetched from the same deployment, so a
-// card can only ever say what a real page says. If that fails the brand tagline card is drawn.
+// Titles and metadata are resolved synchronously from local content files and page-seo
+// mapping with network fallback, guaranteeing instant, reliable rendering on Vercel.
 
 export const runtime = "nodejs";
 
@@ -23,21 +22,87 @@ const PILL_BG = "#FEF9EC";
 const PILL_TEXT = "#A14A08";
 const MUTED = "#71675E";
 const LINE = "#E8E2D9";
+const WHITE = "#FFFFFF";
 
 type Assets = { logo: string; black: Buffer; extra: Buffer; bold: Buffer };
-let cached: Assets | null = null;
+let cachedAssets: Assets | null = null;
 
-// Literal path segments so the file tracer bundles these with the route.
 function assets(): Assets {
-  if (cached) return cached;
+  if (cachedAssets) return cachedAssets;
   const logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.png"));
-  cached = {
+  cachedAssets = {
     logo: `data:image/png;base64,${logo.toString("base64")}`,
     black: fs.readFileSync(path.join(process.cwd(), "lib", "og-fonts", "Inter-900.woff")),
     extra: fs.readFileSync(path.join(process.cwd(), "lib", "og-fonts", "Inter-800.woff")),
     bold: fs.readFileSync(path.join(process.cwd(), "lib", "og-fonts", "Inter-700.woff")),
   };
-  return cached;
+  return cachedAssets;
+}
+
+let cachedTitleMap: Record<string, string> | null = null;
+
+function getTitleMap(): Record<string, string> {
+  if (cachedTitleMap) return cachedTitleMap;
+  const map: Record<string, string> = {};
+
+  try {
+    const seoPath = path.join(process.cwd(), "lib", "page-seo.generated.json");
+    if (fs.existsSync(seoPath)) {
+      const seo = JSON.parse(fs.readFileSync(seoPath, "utf8"));
+      for (const [p, d] of Object.entries(seo as Record<string, { title?: string }>)) {
+        if (d?.title) map[p] = d.title;
+      }
+    }
+  } catch {}
+
+  try {
+    const cityDir = path.join(process.cwd(), "content", "city-pages");
+    if (fs.existsSync(cityDir)) {
+      for (const f of fs.readdirSync(cityDir)) {
+        if (f.endsWith(".json")) {
+          const d = JSON.parse(fs.readFileSync(path.join(cityDir, f), "utf8"));
+          if (d.slug) map[`/b2b-lead-generation-${d.slug}`] = d.metaTitle || d.ogTitle;
+        }
+      }
+    }
+  } catch {}
+
+  try {
+    const libPath = path.join(process.cwd(), "lib", "case-study-library.json");
+    if (fs.existsSync(libPath)) {
+      const lib = JSON.parse(fs.readFileSync(libPath, "utf8"));
+      for (const c of lib.cases || []) {
+        if (c.slug && c.title) map[`/case-studies/${c.slug}`] = c.title;
+      }
+    }
+  } catch {}
+
+  try {
+    const serviceDir = path.join(process.cwd(), "content", "service-pages");
+    if (fs.existsSync(serviceDir)) {
+      for (const f of fs.readdirSync(serviceDir)) {
+        if (f.endsWith(".json")) {
+          const d = JSON.parse(fs.readFileSync(path.join(serviceDir, f), "utf8"));
+          if (d.slug) map[`/services/${d.slug}`] = d.metaTitle || d.ogTitle;
+        }
+      }
+    }
+  } catch {}
+
+  try {
+    const glossaryDir = path.join(process.cwd(), "content", "glossary");
+    if (fs.existsSync(glossaryDir)) {
+      for (const f of fs.readdirSync(glossaryDir)) {
+        if (f.endsWith(".json")) {
+          const d = JSON.parse(fs.readFileSync(path.join(glossaryDir, f), "utf8"));
+          if (d.slug) map[`/resources/glossary/${d.slug}`] = d.term ? `${d.term} Definition` : d.metaTitle;
+        }
+      }
+    }
+  } catch {}
+
+  cachedTitleMap = map;
+  return cachedTitleMap;
 }
 
 const SAFE_PATH = /^\/[A-Za-z0-9\-_./]*$/;
@@ -53,12 +118,12 @@ function decodeEntities(s: string) {
     .replace(/&amp;/g, "&");
 }
 
-async function pageTitle(origin: string, pagePath: string): Promise<string | null> {
+async function fetchPageTitle(origin: string, pagePath: string): Promise<string | null> {
   if (!SAFE_PATH.test(pagePath) || pagePath.includes("//") || pagePath.includes("..") || pagePath.length > 200) return null;
   try {
     const res = await fetch(origin + pagePath, {
       headers: { "user-agent": "MyntmoreOgImage/1.0" },
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(4000),
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
@@ -71,220 +136,568 @@ async function pageTitle(origin: string, pagePath: string): Promise<string | nul
   }
 }
 
-function cleanTitle(raw: string) {
-  // "Page title | Myntmore", "... | Myntmore Glossary", "A | B | Myntmore": drop the brand segments,
-  // then keep the first segment alone when it is long enough to stand on its own.
+function cleanTitle(raw: string): string {
   const parts = raw
     .replace(/\s+/g, " ")
     .split(/\s+[|\u2013\u2014]\s+/)
     .map((x) => x.trim())
     .filter((x) => x && !/^myntmore(\s+\w+)?$/i.test(x));
-  let t = parts.length > 1 && parts[0].length < 22 ? `${parts[0]} \u2013 ${parts[1]}` : parts[0] ?? "";
-  if (t.length > 96) t = t.slice(0, 93).replace(/\s+\S*$/, "").replace(/[\s,:;|-]+$/, "") + "\u2026";
+  let t = parts.length > 1 && parts[0].length < 22 ? `${parts[0]} - ${parts[1]}` : parts[0] ?? "";
+  if (t.length > 92) t = t.slice(0, 89).replace(/\s+\S*$/, "").replace(/[\s,:;|-]+$/, "") + "...";
   return t || "Myntmore";
 }
 
-function kicker(p: string) {
-  if (/^\/services\/.+/.test(p)) return "SERVICE";
-  if (p === "/services") return "SERVICES";
-  if (/^\/case-studies\/.+/.test(p)) return "CASE STUDY";
-  if (p === "/case-studies") return "CASE STUDIES";
-  if (/^\/resources\/blogs\/.+/.test(p) || p === "/resources/blogs") return "BLOG";
-  if (p.startsWith("/resources/glossary")) return "GLOSSARY";
-  if (p.startsWith("/resources/guides") || p.startsWith("/instagram-resources")) return "GUIDE";
-  if (p === "/resources/tools" || p.startsWith("/tools/")) return "FREE TOOL";
-  if (p === "/resources") return "RESOURCES";
-  if (/^\/careers\/.+/.test(p)) return "WE’RE HIRING";
-  if (p === "/careers") return "CAREERS";
-  if (/^\/b2b-lead-generation-/.test(p)) return "B2B LEAD GENERATION";
-  if (p.startsWith("/lp/")) return "OUTBOUND SYSTEMS";
-  if (p.startsWith("/research")) return "ACCOUNT RESEARCH";
-  if (p.startsWith("/events")) return "EVENTS";
-  return "B2B GROWTH & OUTBOUND SYSTEMS";
-}
-
-function titleSize(len: number) {
-  if (len <= 22) return 76;
-  if (len <= 40) return 64;
-  if (len <= 62) return 54;
-  if (len <= 80) return 47;
-  return 42;
-}
-
-// Highlight the last words in amber, the way the site's hero highlights its key phrase.
-function highlightFrom(words: string[]) {
-  if (words.length >= 5) return words.length - 2;
+function highlightFrom(words: string[]): number {
+  if (words.length >= 6) return words.length - 2;
   if (words.length >= 3) return words.length - 1;
   return words.length;
+}
+
+type StatItem = { val: string; label: string };
+type CardMetadata = {
+  kickerText: string;
+  defaultTitle: string | null;
+  steps: string[];
+  stats: StatItem[];
+};
+
+function getCardConfig(pagePath: string): CardMetadata {
+  if (pagePath === "/" || !pagePath) {
+    return {
+      kickerText: "AI-Powered B2B Outbound Engine",
+      defaultTitle: "More Conversations. More Pipeline. Zero Guesswork.",
+      steps: ["AI ICP & Deep Research", "Cold Email & LinkedIn", "Qualified Meetings Booked"],
+      stats: [
+        { val: "12K+", label: "Meetings" },
+        { val: "$120M+", label: "Pipeline" },
+        { val: "130+", label: "Clients" },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/b2b-lead-generation-")) {
+    const citySlug = pagePath.replace("/b2b-lead-generation-", "");
+    const cityName = citySlug
+      .split("-")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ");
+    return {
+      kickerText: `B2B LEAD GENERATION · ${cityName.toUpperCase()}`,
+      defaultTitle: `B2B Outbound Lead Generation Agency in ${cityName}`,
+      steps: [`${cityName} Market Intelligence`, "Target Decision Makers", "High-Intent B2B Meetings"],
+      stats: [
+        { val: "12K+", label: "Meetings" },
+        { val: "$120M+", label: "Pipeline" },
+        { val: cityName === "Mumbai" ? "BKC HQ" : "Top Hub", label: cityName },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/services/")) {
+    const slug = pagePath.replace("/services/", "");
+    if (slug === "cold-email") {
+      return {
+        kickerText: "COLD EMAIL INFRASTRUCTURE",
+        defaultTitle: "Cold Email Engine Built for Primary Inbox Delivery",
+        steps: ["Secondary Domain Setup", "Lead List Enrichment", "High-Converting Copy"],
+        stats: [
+          { val: "100%", label: "Inbox Delivery" },
+          { val: "30-40%", label: "Open Rates" },
+          { val: "12K+", label: "Meetings" },
+        ],
+      };
+    }
+    if (slug === "linkedin-outreach") {
+      return {
+        kickerText: "LINKEDIN OUTREACH & SOCIAL SELLING",
+        defaultTitle: "Turn LinkedIn Into a Predictable B2B Meeting Pipeline",
+        steps: ["Founder Profile Authority", "Targeted Connections", "1-on-1 Inbox Selling"],
+        stats: [
+          { val: "60%+", label: "Acceptance" },
+          { val: "12K+", label: "Meetings" },
+          { val: "130+", label: "Companies" },
+        ],
+      };
+    }
+    if (slug === "account-based-marketing") {
+      return {
+        kickerText: "ACCOUNT-BASED MARKETING (ABM)",
+        defaultTitle: "Precision ABM Outbound for High-Value Enterprise Accounts",
+        steps: ["Tier-1 Account Mapping", "Multi-Stakeholder Outreach", "Executive Pipeline"],
+        stats: [
+          { val: "12K+", label: "Meetings" },
+          { val: "$120M+", label: "Pipeline" },
+          { val: "130+", label: "Enterprise ICPs" },
+        ],
+      };
+    }
+    if (slug === "ai-lead-generation") {
+      return {
+        kickerText: "AI LEAD GENERATION & AGENTS",
+        defaultTitle: "Autonomous AI Agents That Research & Book Qualified B2B Demos",
+        steps: ["AI Buying Signals", "Automated Qualification", "Hyper-Personalized Touchpoints"],
+        stats: [
+          { val: "12K+", label: "Meetings" },
+          { val: "$120M+", label: "Pipeline" },
+          { val: "10x", label: "Outbound Scale" },
+        ],
+      };
+    }
+    if (slug === "personal-branding") {
+      return {
+        kickerText: "FOUNDER PERSONAL BRANDING",
+        defaultTitle: "Build Executive Authority and Inbound Demand on LinkedIn",
+        steps: ["Strategic POV & Angles", "High-Reach Content Rhythm", "DM Conversation Conversion"],
+        stats: [
+          { val: "100K+", label: "Followers Built" },
+          { val: "12K+", label: "Meetings" },
+          { val: "130+", label: "Founders" },
+        ],
+      };
+    }
+    if (slug === "sales-intelligence") {
+      return {
+        kickerText: "SALES INTELLIGENCE & ICP MAPPING",
+        defaultTitle: "Verified B2B Decision Maker Data & Intent Signals",
+        steps: ["TAM & ICP Definition", "Waterfall Email Verification", "Enriched Buying Signals"],
+        stats: [
+          { val: "98%+", label: "Data Accuracy" },
+          { val: "12K+", label: "Meetings" },
+          { val: "Zero", label: "Bounce Waste" },
+        ],
+      };
+    }
+    if (slug === "gtm-strategy") {
+      return {
+        kickerText: "GTM STRATEGY & POSITIONING",
+        defaultTitle: "Go-to-Market Outbound Playbooks That Accelerate Pipeline",
+        steps: ["Offer & Positioning Matrix", "Channel Architecture", "Predictable Scaling Model"],
+        stats: [
+          { val: "$120M+", label: "Pipeline" },
+          { val: "12K+", label: "Meetings" },
+          { val: "130+", label: "GTM Launches" },
+        ],
+      };
+    }
+    if (slug === "do-it-yourself") {
+      return {
+        kickerText: "DIY OUTBOUND FRAMEWORK",
+        defaultTitle: "The Step-by-Step B2B Outbound System Built In-House",
+        steps: ["Domain Infrastructure Setup", "Copy & Messaging Prompts", "Outbound Operating System"],
+        stats: [
+          { val: "100%", label: "In-House System" },
+          { val: "12K+", label: "Meetings Blueprint" },
+          { val: "Zero", label: "Agency Lock-in" },
+        ],
+      };
+    }
+  }
+
+  if (pagePath.startsWith("/case-studies")) {
+    return {
+      kickerText: "VERIFIED CASE STUDY",
+      defaultTitle: null,
+      steps: ["Outbound Bottleneck Audit", "Multi-Channel AI Engine", "Verified Revenue & Pipeline"],
+      stats: [
+        { val: "12K+", label: "Meetings Booked" },
+        { val: "$120M+", label: "Pipeline Generated" },
+        { val: "100%", label: "Verified Data" },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/resources/guides") || pagePath.startsWith("/instagram-resources")) {
+    return {
+      kickerText: "B2B GROWTH PLAYBOOK",
+      defaultTitle: null,
+      steps: ["Battle-Tested Framework", "Step-by-Step Playbook", "Free Prompts & Templates"],
+      stats: [
+        { val: "Free", label: "Playbook" },
+        { val: "12K+", label: "Meetings Data" },
+        { val: "100%", label: "Actionable" },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/tools/") || pagePath === "/resources/tools") {
+    return {
+      kickerText: "FREE B2B GROWTH TOOL",
+      defaultTitle: null,
+      steps: ["Instant AI-Powered Analysis", "Benchmark Comparison", "Actionable Action Plan"],
+      stats: [
+        { val: "100% Free", label: "No Signup" },
+        { val: "Instant", label: "Results" },
+        { val: "12K+", label: "Benchmarks" },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/resources/blogs")) {
+    return {
+      kickerText: "OUTBOUND STRATEGY & INSIGHTS",
+      defaultTitle: null,
+      steps: ["Market Analysis & Research", "Tactical Outbound Framework", "Key Growth Takeaways"],
+      stats: [
+        { val: "12K+", label: "Meetings" },
+        { val: "$120M+", label: "Pipeline" },
+        { val: "130+", label: "Companies" },
+      ],
+    };
+  }
+
+  if (pagePath.startsWith("/careers")) {
+    return {
+      kickerText: "WE'RE HIRING · MUMBAI BKC & REMOTE",
+      defaultTitle: null,
+      steps: ["High-Ownership Roles", "AI & Outbound Systems", "Accelerated Career Growth"],
+      stats: [
+        { val: "BKC", label: "Mumbai HQ" },
+        { val: "Top 1%", label: "B2B Talent" },
+        { val: "130+", label: "Companies" },
+      ],
+    };
+  }
+
+  if (pagePath === "/about-us") {
+    return {
+      kickerText: "ABOUT MYNTMORE",
+      defaultTitle: "AI-Powered B2B Outbound Agency Founded by Tejas Jhaveri",
+      steps: ["Founded in 2019 in Mumbai", "AI Agents + Human Strategy", "12K+ Verified Meetings Booked"],
+      stats: [
+        { val: "12K+", label: "Meetings" },
+        { val: "$120M+", label: "Pipeline" },
+        { val: "130+", label: "Clients" },
+      ],
+    };
+  }
+
+  if (pagePath === "/book-a-call" || pagePath === "/1-on-1-consultation") {
+    return {
+      kickerText: "COMPLIMENTARY GTM AUDIT",
+      defaultTitle: "Book a 30-Minute B2B Outbound Pipeline Audit",
+      steps: ["Outreach & ICP Review", "Identify Pipeline Bottlenecks", "Actionable 90-Day Strategy"],
+      stats: [
+        { val: "30 Min", label: "Free Audit" },
+        { val: "Zero", label: "Pressure" },
+        { val: "12K+", label: "Meetings Experience" },
+      ],
+    };
+  }
+
+  return {
+    kickerText: "B2B GROWTH & OUTBOUND SYSTEMS",
+    defaultTitle: null,
+    steps: ["AI ICP & Deep Research", "Multi-Channel Outbound", "Qualified Meetings Booked"],
+    stats: [
+      { val: "12K+", label: "Meetings" },
+      { val: "$120M+", label: "Pipeline" },
+      { val: "130+", label: "Clients" },
+    ],
+  };
 }
 
 export async function GET(req: Request) {
   const { searchParams, origin } = new URL(req.url);
   const pagePath = searchParams.get("path") || "/";
+  const explicitTitle = searchParams.get("title");
   const a = assets();
+  const config = getCardConfig(pagePath);
 
-  const isHome = pagePath === "/";
-  const raw = isHome ? null : await pageTitle(origin, pagePath);
-  const tagline = ["More conversations.", "More pipeline.", "Less guesswork."];
-  const title = raw ? cleanTitle(raw) : null;
-  const label = raw ? kicker(pagePath) : "B2B GROWTH & OUTBOUND SYSTEMS";
+  let rawTitle = explicitTitle || config.defaultTitle;
 
-  const words = title ? title.split(" ") : [];
+  if (!rawTitle) {
+    const titleMap = getTitleMap();
+    if (titleMap[pagePath]) {
+      rawTitle = titleMap[pagePath];
+    } else {
+      const fetched = await fetchPageTitle(origin, pagePath);
+      if (fetched) {
+        rawTitle = fetched;
+      } else {
+        const parts = pagePath.split("/").filter(Boolean);
+        const last = parts[parts.length - 1] || "Myntmore";
+        rawTitle = last
+          .split("-")
+          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(" ");
+      }
+    }
+  }
+
+  const title = cleanTitle(rawTitle);
+  const words = title ? title.split(" ") : ["Myntmore", "Outbound", "Systems"];
   const hi = highlightFrom(words);
-  const size = title ? titleSize(title.length) : 56;
-
-  const text = {
-    display: "flex",
-    fontFamily: "Inter",
-    fontWeight: 900,
-    color: INK,
-    letterSpacing: "-0.03em",
-    lineHeight: 1.08,
-    textAlign: "center" as const,
-  };
-
-  const ring = (style: Record<string, string | number>) => (
-    <div
-      style={{
-        position: "absolute",
-        display: "flex",
-        borderRadius: 9999,
-        border: "2px solid rgba(245, 183, 49, 0.42)",
-        ...style,
-      }}
-    />
-  );
-
-  const stat = (value: string, caption: string, side: "left" | "right") => (
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        bottom: 0,
-        [side]: 64,
-        width: 190,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: side === "left" ? "flex-start" : "flex-end",
-        fontFamily: "Inter",
-      }}
-    >
-      <div style={{ display: "flex", fontSize: 44, fontWeight: 900, color: AMBER, letterSpacing: "-0.03em", lineHeight: 1 }}>{value}</div>
-      <div
-        style={{
-          display: "flex",
-          marginTop: 8,
-          fontSize: 14,
-          fontWeight: 800,
-          color: MUTED,
-          letterSpacing: "0.14em",
-          textAlign: side === "left" ? "left" : "right",
-        }}
-      >
-        {caption}
-      </div>
-    </div>
-  );
+  const fontSize = words.length > 8 ? "46px" : "54px";
 
   return new ImageResponse(
     (
       <div
         style={{
-          width: "100%",
-          height: "100%",
-          position: "relative",
+          width: "1200px",
+          height: "630px",
           display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
           backgroundColor: CREAM,
           backgroundImage:
-            "radial-gradient(circle at 90% 8%, rgba(245, 183, 49, 0.30) 0%, rgba(245, 183, 49, 0) 42%), radial-gradient(circle at 8% 92%, rgba(217, 119, 6, 0.17) 0%, rgba(217, 119, 6, 0) 42%)",
+            "radial-gradient(circle at 92% 10%, rgba(245, 183, 49, 0.28) 0%, transparent 45%), radial-gradient(circle at 8% 90%, rgba(217, 119, 6, 0.16) 0%, transparent 45%)",
+          padding: "48px 64px",
           fontFamily: "Inter",
+          position: "relative",
         }}
       >
-        {ring({ width: 460, height: 460, left: -170, bottom: -200 })}
-        {ring({ width: 300, height: 300, left: -90, bottom: -120 })}
-        {ring({ width: 420, height: 420, right: -150, top: -190 })}
-        {ring({ width: 260, height: 260, right: -70, top: -110 })}
-
-        {stat("12K+", "MEETINGS BOOKED", "left")}
-        {stat("$120M+", "PIPELINE GENERATED", "right")}
-
+        {/* Ambient background rings */}
         <div
           style={{
             position: "absolute",
-            top: 0,
-            bottom: 0,
-            left: 290,
-            width: 620,
+            width: "420px",
+            height: "420px",
+            borderRadius: "9999px",
+            border: "1.5px solid rgba(245, 183, 49, 0.35)",
+            top: "-160px",
+            right: "-120px",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            width: "380px",
+            height: "380px",
+            borderRadius: "9999px",
+            border: "1.5px solid rgba(217, 119, 6, 0.22)",
+            bottom: "-150px",
+            left: "-100px",
+          }}
+        />
+
+        {/* Top Header: Logo + Category Pill */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <img src={a.logo} width={140} height={48} style={{ objectFit: "contain" }} />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              backgroundColor: PILL_BG,
+              border: "1.5px solid rgba(245, 183, 49, 0.55)",
+              borderRadius: "9999px",
+              padding: "8px 20px",
+              color: PILL_TEXT,
+              fontSize: "15px",
+              fontWeight: 800,
+              letterSpacing: "0.14em",
+            }}
+          >
+            <div
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "9999px",
+                backgroundColor: GOLD,
+              }}
+            />
+            <span>{config.kickerText.toUpperCase()}</span>
+          </div>
+        </div>
+
+        {/* Middle Content: Title + 3-Step Infographic */}
+        <div
+          style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            paddingTop: 6,
+            textAlign: "center",
+            margin: "auto 0",
           }}
         >
-          <img src={a.logo} width={124} height={80} style={{ objectFit: "contain" }} />
-
+          {/* Title */}
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              marginTop: 18,
-              backgroundColor: PILL_BG,
-              border: "1.5px solid rgba(245, 183, 49, 0.55)",
-              borderRadius: 9999,
-              padding: "9px 22px",
-              color: PILL_TEXT,
-              fontSize: 16,
-              fontWeight: 800,
-              letterSpacing: "0.16em",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              maxWidth: "940px",
+              fontSize,
+              fontWeight: 900,
+              lineHeight: 1.14,
+              letterSpacing: "-0.03em",
+              color: INK,
+              marginBottom: "26px",
             }}
           >
-            <div style={{ display: "flex", width: 8, height: 8, borderRadius: 9999, backgroundColor: GOLD, marginRight: 11 }} />
-            {label}
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{
+                  color: i >= hi ? AMBER : INK,
+                  marginRight: "12px",
+                }}
+              >
+                {word}
+              </span>
+            ))}
           </div>
 
-          {title ? (
+          {/* Infographic: 3-Step Outbound Architecture */}
+          {config.steps && config.steps.length > 0 && (
             <div
               style={{
-                ...text,
-                marginTop: 26,
-                fontSize: size,
-                flexWrap: "wrap",
+                display: "flex",
+                alignItems: "center",
                 justifyContent: "center",
-                maxWidth: 580,
+                gap: "12px",
+                width: "100%",
+                maxWidth: "880px",
               }}
             >
-              {words.map((w, i) => (
-                <span key={i} style={{ display: "flex", marginRight: i === words.length - 1 ? 0 : size * 0.26, color: i >= hi ? AMBER : INK }}>
-                  {w}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <div style={{ ...text, marginTop: 26, fontSize: size, flexDirection: "column", alignItems: "center" }}>
-              <span style={{ display: "flex" }}>{tagline[0]}</span>
-              <span style={{ display: "flex" }}>{tagline[1]}</span>
-              <span style={{ display: "flex", color: AMBER }}>{tagline[2]}</span>
+              {config.steps.flatMap((step, i) => {
+                const stepCard = (
+                  <div
+                    key={`step-${i}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      backgroundColor: WHITE,
+                      border: `1.5px solid ${LINE}`,
+                      borderRadius: "14px",
+                      padding: "12px 18px",
+                      boxShadow: "0 4px 14px rgba(10, 6, 24, 0.04)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "28px",
+                        height: "28px",
+                        borderRadius: "8px",
+                        backgroundColor: PILL_BG,
+                        color: AMBER,
+                        fontSize: "14px",
+                        fontWeight: 900,
+                      }}
+                    >
+                      {`0${i + 1}`}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "15px",
+                        fontWeight: 800,
+                        color: INK,
+                        letterSpacing: "-0.01em",
+                      }}
+                    >
+                      {step}
+                    </span>
+                  </div>
+                );
+
+                if (i < config.steps.length - 1) {
+                  const arrow = (
+                    <svg
+                      key={`arrow-${i}`}
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={AMBER}
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  );
+                  return [stepCard, arrow];
+                }
+                return [stepCard];
+              })}
             </div>
           )}
+        </div>
 
+        {/* Bottom Bar: Proof Metrics + Domain */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+            paddingTop: "20px",
+            borderTop: `1.5px solid ${LINE}`,
+          }}
+        >
+          {/* Left: 3 Stats */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              marginTop: 30,
-              paddingTop: 16,
-              borderTop: `1.5px solid ${LINE}`,
-              width: 200,
-              justifyContent: "center",
-              fontSize: 22,
+              gap: "24px",
+            }}
+          >
+            {config.stats.map((s, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "baseline",
+                  gap: "6px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: 900,
+                    color: AMBER,
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  {s.val}
+                </span>
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 800,
+                    color: MUTED,
+                    letterSpacing: "0.06em",
+                  }}
+                >
+                  {s.label.toUpperCase()}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Right: Domain with gold dot */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              fontSize: "18px",
               fontWeight: 800,
               color: INK,
             }}
           >
-            <div style={{ display: "flex", width: 8, height: 8, borderRadius: 9999, backgroundColor: AMBER, marginRight: 9 }} />
-            myntmore.com
+            <div
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "9999px",
+                backgroundColor: GOLD,
+              }}
+            />
+            <span>myntmore.com</span>
           </div>
         </div>
       </div>
@@ -298,7 +711,6 @@ export async function GET(req: Request) {
         { name: "Inter", data: a.bold, weight: 700, style: "normal" },
       ],
       headers: {
-        // Cards follow page titles, so they are not immutable; a day at the edge is plenty.
         "Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
       },
     }

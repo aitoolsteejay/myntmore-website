@@ -10,14 +10,14 @@ Audited from the repo root against the live production site (`https://www.myntmo
 |---|---|---|
 | **W1 · Site health crawl** | `scripts/seo-crawl.py`, exit code 0. Crawled all 281 live sitemap URLs. **Site Health: 281/281 = 100.0%**. **Schema coverage: 272/281 = 96.8%** (+0.2% vs 11-06). 0 FAIL lines. | **PASS** |
 | **W2 · Sitemap & robots live** | `https://www.myntmore.com/sitemap.xml` returns HTTP 200 with 281 `<loc>` URLs. `https://www.myntmore.com/robots.txt` returns HTTP 200 with `Sitemap: https://www.myntmore.com/sitemap.xml`. Local build matches live at 281 URLs. | **PASS** |
-| **W3 · Manual actions & security** | Requires Search Console UI access. Checklist provided below for manual verification. | **NEEDS YOU** |
-| **W4 · Wrong-canonical tripwire** | Live crawl verified 281/281 pages return self-referencing canonical tags (0 pointing elsewhere). GSC live request indexing queue is tracked in `docs/gsc-request-indexing-list.md`. | **PASS (Code/Live) / NEEDS GSC BATCHES** |
-| **W5 · Indexing errors** | 0 crawl errors, 0 broken links in repo build (24,617 links crawled). Requires GSC Pages report export to compare with prior 158/265 baseline. | **NEEDS YOU** |
+| **W3 · Manual actions & security** | Search Console showed “No issues detected” under both Manual actions and Security issues for `sc-domain:myntmore.com`. | **PASS** |
+| **W4 · Wrong-canonical tripwire** | Live crawl verified 281 self-referencing canonicals. Search Console accepted four indexing requests before returning “Quota exceeded” on Investor Outreach for Founders. See `docs/gsc-request-indexing-list.md`. | **PARTIAL** |
+| **W5 · Indexing errors** | The Page indexing export, updated 9 Nov, shows 201 indexed and 132 unindexed pages across nine reasons for All known pages. | **EXPORTED** |
 | **W6 · Core Web Vitals** | Speed Insights installed (`@vercel/speed-insights`). Requires Search Console mobile CWV report export. | **NEEDS YOU** |
-| **W7 · Search snapshot** | Search Console connector not active. Requires 7-day GSC Performance export to compare against 10-29..11-04 window. | **NEEDS YOU** |
+| **W7 · Search snapshot** | Exported the Search Console Web Search comparison for the last seven days versus the previous seven days, using the scorecard’s non-brand regex. | **EXPORTED** |
 | **W8 · KPI scorecard** | Measurable rows updated below from live crawl and code state. | **PARTIAL** |
-| **W9 · Newsletter issue sent** | Zoho Campaigns connector not active. Requires confirmation of weekly issue sent with UTM-tagged link. | **NEEDS YOU** |
-| **W10 · Distribute what shipped** | Shipped in last 7 days: 5 new blog posts, 8 new city pages. Draft LinkedIn copy with exact UTM tags provided below. | **READY TO POST** |
+| **W9 · Newsletter issue sent** | The available Zoho Campaigns account opened organization onboarding. Send status for The Outbound Operator is unverified. | **NEEDS ACCOUNT ACCESS** |
+| **W10 · Distribute what shipped** | Five LinkedIn drafts with UTM tags are ready below. Scheduling requires a signed-in Myntmore Page admin account. | **NEEDS ACCOUNT ACCESS** |
 | **W11 · Content backlog depth** | 4 complete, production-ready briefs written in `docs/content-briefs-2026-11-13.md` (DMARC/Infra, IT Services Outbound, Belkins Alternatives, Corporate Gifting). 0 primary keyword collisions. | **PASS** |
 | **W12 · Events accuracy** | `/events` inspected: 1 event ("predictable-pipeline-webinar", ended Sep 19, 2026) correctly displayed in "Past Sessions / Recording". 0 upcoming events with dates in the past. | **PASS** |
 | **W13 · Careers accuracy** | 8 open roles on `/careers`. Nearest `validThrough` is 2027-01-28 (76 days ahead, target >=7). Closed roles (`/careers/content-strategist`, `/careers/senior-sales-head`) verified returning HTTP 308 permanent redirect. | **PASS** |
@@ -60,12 +60,12 @@ Schema      : 272/281 = 96.8%
 | Row | Metric | Value | Source / Notes |
 |---|---|---|---|
 | 1 | Organic leads | Pending CRM export | Check Zoho Leads where `Lead_Source = Website` |
-| 2 | Non-brand clicks | Pending GSC export | Search Console Performance (last 7 days, brand regex excluded) |
-| 3 | Non-brand impressions | Pending GSC export | Search Console Performance (last 7 days, brand regex excluded) |
+| 2 | Non-brand clicks | **8** (previous 7 days: 7) | Search Console Performance, Web Search, brand regex excluded |
+| 3 | Non-brand impressions | **2,571** (previous 7 days: 2,198) | Search Console Performance, Web Search, brand regex excluded |
 | 4 | Queries in top 10 | Pending GSC export | Count of unique queries at position <= 10.0 |
 | 5 | City pages on page 1 | 5 of 8 (baseline) | Prior baseline: AMD (6.4), DEL (7.8), MAA (8.2), HYD (8.8), BOM (9.3) |
 | 6 | Submitted pages | 281 | Verified live in `sitemap.xml` (up from 268) |
-| 7 | Indexed pages | Pending GSC export | Prior baseline: 158 of 265 on 10-30 |
+| 7 | Indexed pages | **201** | Page indexing, All known pages, updated 9 Nov. Includes URLs outside the submitted sitemap. |
 | 8 | Site health | **100.0% (281/281)** | Verified via `scripts/seo-crawl.py` |
 | 9 | Schema coverage | **96.8% (272/281)** | Verified via `scripts/seo-crawl.py` (+0.2% vs last week) |
 | 10 | AI referral visitors | Pending Analytics export | Vercel Analytics / GA4 (check AI hosts in referrer list) |
@@ -134,8 +134,6 @@ Below are non-salesy, insight-driven LinkedIn posts with UTM tracking parameters
 
 ## Action Items for You
 
-1. **W3:** Open Search Console -> Security and Manual Actions -> Confirm both report "No issues".
-2. **W4:** Continue the daily manual indexing submissions (10/day) from `docs/gsc-request-indexing-list.md`, starting with `/services` and the 5 new blog posts.
-3. **W5 & W7:** Export the Search Console Pages table ("Why pages aren't indexed") and the 7-day Performance comparison table so we can update the exact GSC KPI numbers.
-4. **W9:** Confirm whether The Outbound Operator went out this week in Zoho Campaigns.
-5. **W10:** Copy and schedule the draft LinkedIn posts above.
+1. **W4:** Resume indexing after the daily quota resets. Start with Investor Outreach for Founders and the Bangalore SaaS article, then continue the checklist.
+2. **W9:** Open the Myntmore organization in Zoho Campaigns and verify this week’s send history.
+3. **W10:** Schedule the five drafts above from a Myntmore LinkedIn Page admin account.
