@@ -22,6 +22,7 @@ export default function VisitingCard({
   vCardHref,
   ctaHref = "/book-a-call",
   ctaLabel = "Book a Call",
+  intro,
 }: {
   path: string;
   name: string;
@@ -32,7 +33,25 @@ export default function VisitingCard({
   vCardHref?: string;
   ctaHref?: string;
   ctaLabel?: string;
+  intro?: string;
 }) {
+  const bookCall = (
+    <a href={ctaHref} className="btn-dark w-full py-3.5 text-sm font-bold inline-flex items-center justify-center gap-2">
+      {ctaLabel}
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+    </a>
+  );
+  const saveContact = vCardHref && (
+    <a
+      href={vCardHref}
+      className={`${intro ? "" : "mb-6 "}inline-flex w-full items-center justify-center gap-2 rounded-2xl border-2 px-5 py-3.5 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md`}
+      style={{ borderColor: "#F5B731", color: "#0a0a0a", background: "linear-gradient(135deg, #FEF9EC 0%, #FDE68A 30%, #FEF9EC 100%)" }}
+    >
+      <SaveContactIcon />
+      {intro ? "Save contact" : "Save Contact"}
+    </a>
+  );
+
   return (
     <InnerLayout>
       <section className="relative overflow-hidden pt-32 pb-24 px-4 min-h-[70vh] flex flex-col items-center" style={{ backgroundColor: "#F8F6F2" }}>
@@ -99,42 +118,40 @@ export default function VisitingCard({
           <h1 className="text-2xl font-black mb-1" style={{ color: "#0a0a0a" }}>{name}</h1>
           <p className="text-sm mb-5" style={{ color: "#71675E" }}>{title}</p>
 
-          {vCardHref && (
-            <a
-              href={vCardHref}
-              className="mb-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl border-2 px-5 py-3.5 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-              style={{ borderColor: "#F5B731", color: "#0a0a0a", background: "linear-gradient(135deg, #FEF9EC 0%, #FDE68A 30%, #FEF9EC 100%)" }}
-            >
-              <SaveContactIcon />
-              Save Contact
-            </a>
-          )}
+          {intro ? (
+            <>
+              <p className="mb-5 text-sm leading-relaxed text-[#52525B]">{intro}</p>
+              <div className="mb-5 grid gap-2">
+                {bookCall}
+                {saveContact}
+              </div>
+            </>
+          ) : saveContact}
 
-          <div className="flex flex-col gap-3 mb-8">
+          <div className={intro ? "flex flex-wrap justify-center gap-2 border-t border-[#E8E2D9] pt-4" : "mb-8 flex flex-col gap-3"}>
             {contacts.map((c) => (
               <a
                 key={c.label}
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group flex items-center gap-4 w-full rounded-2xl border px-5 py-4 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                className={intro
+                  ? "group flex min-h-11 items-center gap-1.5 rounded-full border px-2.5 py-1.5 hover:border-[#F5B731]"
+                  : "group flex w-full items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"}
                 style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}
               >
-                <span className="flex items-center justify-center h-11 w-11 rounded-full text-white flex-shrink-0" style={{ backgroundColor: c.bg }}>
+                <span aria-hidden="true" className={`flex shrink-0 items-center justify-center rounded-full text-white ${intro ? "size-6 [&>svg]:size-3.5" : "size-11"}`} style={{ backgroundColor: c.bg }}>
                   {c.icon}
                 </span>
-                <span className="text-sm font-bold flex-1" style={{ color: "#0a0a0a" }}>{c.cta}</span>
-                <svg className="w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="#71675E" strokeWidth={2.5} aria-hidden="true">
+                <span className={intro ? "text-xs font-semibold" : "flex-1 text-sm font-bold"} style={{ color: "#0a0a0a" }}>{intro ? c.label : c.cta}</span>
+                {!intro && <svg className="w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="#71675E" strokeWidth={2.5} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+                </svg>}
               </a>
             ))}
           </div>
 
-          <a href={ctaHref} className="btn-dark w-full py-3.5 text-sm font-bold inline-flex items-center justify-center gap-2">
-            {ctaLabel}
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
+          {!intro && bookCall}
         </div>
       </section>
     </InnerLayout>

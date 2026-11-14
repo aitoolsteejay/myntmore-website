@@ -31,6 +31,7 @@ const EXCLUDED_PREFIXES = [
   "/plans",
   "/value-prop",
   "/master-icp",
+  "/enwilfernandes",
 ];
 
 const isExcluded = (path: string) => EXCLUDED_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`));
