@@ -7,6 +7,7 @@ import InnerLayout from "../components/InnerLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
 import StatTicker from "../components/StatTicker";
 import { textTone } from "@/lib/colors";
+import ROLES from "@/lib/careers-roles.generated.json";
 
 function Blobs() {
   const b1 = useRef<HTMLDivElement>(null);
@@ -86,65 +87,6 @@ function Marquee() {
     </div>
   );
 }
-
-const ROLES = [
-  {
-    slug: "lead-gen-strategist", accent: "#3b82f6", tag: "Outbound & GTM",
-    title: "Lead Generation Strategist",
-    type: "Full-time · BKC, Mumbai", location: "India",
-    desc: "You'll build and run outbound systems across LinkedIn, cold email, and AI-led automation, end to end.",
-    bullets: ["Clear grasp of outbound funnels", "Hands-on with Clay, Apollo, or similar", "Data-driven and systems-minded"],
-  },
-  {
-    slug: "lead-gen-intern", accent: "#3b82f6", tag: "Outbound & GTM",
-    title: "Lead Generation Intern",
-    type: "Full-time Internship · BKC, Mumbai", location: "India",
-    desc: "You'll learn B2B lead generation hands-on, supporting live LinkedIn and cold email campaigns across multiple client industries.",
-    bullets: ["Freshers welcome, no experience needed", "Rs 10,000–15,000 a month", "Curious, careful, and quick to learn"],
-  },
-  {
-    slug: "gtm-strategist", accent: "#10b981", tag: "Growth Marketing",
-    title: "GTM Strategist",
-    type: "Full-time · BKC, Mumbai", location: "India",
-    desc: "You'll own growth across multiple B2B brands: LinkedIn, cold email, AI automation, and content-led demand generation.",
-    bullets: ["3+ years B2B lead generation", "Strong copywriting & ICP research", "Comfortable with AI + automation tools"],
-  },
-  {
-    slug: "hr-operations-intern", accent: "#a855f7", tag: "People & Ops",
-    title: "HR and Operations Intern",
-    type: "Internship · BKC, Mumbai", location: "India",
-    desc: "You'll build real hiring pipelines, KPI/KRA frameworks, and HR systems directly with the founder, not admin busywork.",
-    bullets: ["6-month minimum commitment", "Organised, systems-first thinker", "Comfortable with Notion & sheets"],
-  },
-  {
-    slug: "content-marketing-strategist-intern", accent: "#ec4899", tag: "Content & Branding",
-    title: "Content Marketing Strategist Intern",
-    type: "Internship · BKC, Mumbai", location: "India",
-    desc: "You'll research, write, and strategise high-impact LinkedIn content for founders and CXOs, building distinct voices across multiple clients.",
-    bullets: ["1-year minimum commitment", "Rs 7,000–15,000 a month + incentives", "Strong LinkedIn & storytelling instinct"],
-  },
-  {
-    slug: "sales-executive", accent: "#F5B731", tag: "Sales",
-    title: "Sales Executive",
-    type: "Full-time · BKC, Mumbai", location: "India",
-    desc: "You'll prospect and close deals with founders, executives, and professionals, helping them unlock personal branding with Myntmore.",
-    bullets: ["Background in sales or B2B services", "CRM-savvy (Zoho or similar)", "Confident, client-facing communicator"],
-  },
-  {
-    slug: "sales-and-growth-intern", accent: "#F5B731", tag: "Sales",
-    title: "Sales and Growth Intern",
-    type: "Full-time Internship · BKC, Mumbai", location: "India",
-    desc: "You'll prospect and help close deals with founders, executives, and professionals, learning the CRM and the sales cycle hands-on.",
-    bullets: ["Rs 10,000–20,000 a month + incentives", "Interest in sales or B2B services", "Confident, client-facing communicator"],
-  },
-  {
-    slug: "systems-ai-automation-intern", accent: "#14B8A6", tag: "Systems & AI",
-    title: "Systems & AI Automation Intern",
-    type: "Internship · BKC, Mumbai", location: "India",
-    desc: "You'll build the internal and client-facing AI agents and automations that run Myntmore, and own SEO, AEO, and GEO along the way.",
-    bullets: ["Comfortable with n8n, Clay, or Python", "SEO nerd, curious about AI search", "Ownership mindset, ships fast"],
-  },
-];
 
 // Department pills, derived from each role's tag rather than hand-listed a
 // second time, so a new ROLES entry can't silently go unfiltered.

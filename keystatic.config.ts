@@ -899,6 +899,210 @@ export default config({
         ),
       },
     }),
+
+    careers: collection({
+      label: "Careers (Job Postings)",
+      path: "content/careers/*",
+      format: "json",
+      slugField: "slug",
+      columns: ["title", "tag", "validThrough"],
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Role slug",
+            description: "The page lives at /careers/<slug>. Example: gtm-strategist, lead-gen-intern.",
+            validation: { isRequired: true },
+          },
+        }),
+        title: fields.text({
+          label: "Job Title",
+          description: "e.g. GTM Strategist, B2B Lead Generation Intern",
+          validation: { isRequired: true },
+        }),
+        tag: fields.select({
+          label: "Department Tag",
+          options: [
+            { label: "Outbound & GTM", value: "Outbound & GTM" },
+            { label: "Growth Marketing", value: "Growth Marketing" },
+            { label: "Sales", value: "Sales" },
+            { label: "People & Ops", value: "People & Ops" },
+            { label: "Content & Branding", value: "Content & Branding" },
+            { label: "Systems & AI", value: "Systems & AI" },
+          ],
+          defaultValue: "Outbound & GTM",
+        }),
+        accent: fields.text({
+          label: "Accent Colour (hex)",
+          description: "Hex color code for tags and highlights (e.g. #3b82f6, #10b981, #F5B731, #a855f7, #ec4899, #14B8A6).",
+          defaultValue: "#3b82f6",
+          validation: { isRequired: true },
+        }),
+        badge: fields.text({
+          label: "Hero Badge",
+          description: "e.g. Full-Time · BKC, Mumbai or Internship · Work from Office · BKC, Mumbai",
+          validation: { isRequired: true },
+        }),
+        cardDesc: fields.text({
+          label: "Careers Hub Card Description",
+          description: "Short 1-2 sentence description displayed on the /careers hub card.",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        cardBullets: fields.array(fields.text({ label: "Highlight" }), {
+          label: "Careers Hub Card Bullets (3 items)",
+          itemLabel: (props) => props.value,
+        }),
+        applySubject: fields.text({
+          label: "Application Email Subject",
+          description: "Subject line prefilled in the mailto button, e.g. Application for GTM Strategist",
+          validation: { isRequired: true },
+        }),
+        grid: fields.array(
+          fields.object({
+            label: fields.text({ label: "Card Label (e.g. Location, Type, Commitment, Hours, CTC, Stipend)", validation: { isRequired: true } }),
+            value: fields.text({ label: "Card Value", multiline: true, validation: { isRequired: true } }),
+          }),
+          {
+            label: "Header Info Cards (3 cards: Location, Type/Commitment/Hours, CTC/Stipend)",
+            itemLabel: (props) => `${props.fields.label.value}: ${props.fields.value.value}`,
+          }
+        ),
+        schemaDescription: fields.text({
+          label: "Google for Jobs Schema Description",
+          description: "Plain text summary of the role for Google for Jobs structured data.",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        employmentType: fields.select({
+          label: "Employment Type (Schema)",
+          description: "Value for Google for Jobs JobPosting schema.",
+          options: [
+            { label: "Full-Time (FULL_TIME)", value: "FULL_TIME" },
+            { label: "Internship (INTERN)", value: "INTERN" },
+            { label: "Full-Time & Intern (FULL_TIME,INTERN)", value: "FULL_TIME,INTERN" },
+            { label: "Part-Time (PART_TIME)", value: "PART_TIME" },
+            { label: "Contractor (CONTRACTOR)", value: "CONTRACTOR" },
+          ],
+          defaultValue: "FULL_TIME",
+        }),
+        salaryMin: fields.integer({
+          label: "Base Salary Min (in INR, numbers only)",
+          description: "e.g. 600000 for 6 LPA, or 10000 for 10K/mo",
+          validation: { isRequired: true },
+        }),
+        salaryMax: fields.integer({
+          label: "Base Salary Max (in INR, numbers only)",
+          description: "e.g. 1500000 for 15 LPA, or 20000 for 20K/mo",
+          validation: { isRequired: true },
+        }),
+        salaryUnit: fields.select({
+          label: "Salary Unit (Schema)",
+          options: [
+            { label: "Per Year (YEAR)", value: "YEAR" },
+            { label: "Per Month (MONTH)", value: "MONTH" },
+          ],
+          defaultValue: "YEAR",
+        }),
+        datePosted: fields.text({
+          label: "Date Posted (ISO timestamp)",
+          description: "e.g. 2026-07-28T17:15:52+05:30",
+          validation: { isRequired: true },
+        }),
+        validThrough: fields.text({
+          label: "Valid Through (ISO timestamp)",
+          description: "Rolling 6-month window for Google for Jobs, e.g. 2027-04-15T00:00:00+05:30",
+          validation: { isRequired: true },
+        }),
+        aboutIntro: fields.text({
+          label: "About the Role: Paragraphs",
+          description: "Separate paragraphs with blank lines.",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        aboutNoteText: fields.text({
+          label: "About the Role: Link Note (optional, e.g. Starting your career? See internship)",
+        }),
+        aboutNoteHref: fields.text({
+          label: "About the Role: Link URL (optional, e.g. /careers/lead-gen-intern)",
+        }),
+        aboutCalloutTitle: fields.text({
+          label: "About Callout Box Title (optional, e.g. What makes this role different)",
+        }),
+        aboutCalloutText: fields.text({
+          label: "About Callout Box Text (optional)",
+          multiline: true,
+        }),
+        primaryGoal: fields.text({
+          label: "Primary Goal (optional)",
+          description: "Weekly measurable outcome for the role.",
+          multiline: true,
+        }),
+        responsibilitiesTitle: fields.text({
+          label: "Responsibilities Section Title",
+          defaultValue: "What you'll do",
+          validation: { isRequired: true },
+        }),
+        responsibilities: fields.array(
+          fields.object({
+            title: fields.text({ label: "Title / Area", validation: { isRequired: true } }),
+            desc: fields.text({ label: "Description (can be bullet points, one per line)", multiline: true, validation: { isRequired: true } }),
+          }),
+          {
+            label: "Responsibilities / What You'll Do",
+            itemLabel: (props) => props.fields.title.value,
+          }
+        ),
+        whoYouAreTitle: fields.text({
+          label: "Who You Are Section Title",
+          defaultValue: "Who you are",
+          validation: { isRequired: true },
+        }),
+        whoYouAreIntro: fields.text({
+          label: "Who You Are: Intro text (optional)",
+          multiline: true,
+        }),
+        whoYouAre: fields.array(
+          fields.object({
+            label: fields.text({ label: "Attribute / Quality Label", validation: { isRequired: true } }),
+            desc: fields.text({ label: "Description", multiline: true, validation: { isRequired: true } }),
+          }),
+          {
+            label: "Who You Are Items",
+            itemLabel: (props) => props.fields.label.value,
+          }
+        ),
+        skills: fields.array(fields.text({ label: "Skill / Mindset" }), {
+          label: "Skills & Mindset We Value (optional)",
+          itemLabel: (props) => props.value,
+        }),
+        whatYoullLearn: fields.array(fields.text({ label: "Learning Outcome" }), {
+          label: "What You'll Learn (optional)",
+          itemLabel: (props) => props.value,
+        }),
+        whyJoin: fields.text({
+          label: "Why Join Myntmore",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        metaTitle: fields.text({
+          label: "Search Title (Google snippet)",
+          description: "Around 50-55 characters.",
+          validation: { isRequired: true },
+        }),
+        metaDescription: fields.text({
+          label: "Search Description",
+          description: "120 to 155 characters.",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), {
+          label: "Search Keywords",
+          itemLabel: (props) => props.value,
+        }),
+        ogTitle: fields.text({ label: "Share Title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
+        ogDescription: fields.text({ label: "Share Description", multiline: true, validation: { isRequired: true } }),
+      },
+    }),
   },
   // The three bespoke service pages keep their own layouts, so each has its own page-copy file
   // (the search and share metadata for all eight services is in the Service pages collection).

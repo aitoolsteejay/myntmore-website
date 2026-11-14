@@ -27,7 +27,7 @@ export default function EnwilCalendarClient({
   embedUrl = "https://meetingwithteejay.zohobookings.com/portal-embed#/4203790000004915016",
   badge = "1-on-1 Outbound Consultation",
   title = "Pick a time that works for you",
-  description = "Schedule a 1-on-1 session with our Senior Sales Head. We'll review your outbound pipeline, target ICP, and conversion bottlenecks.",
+  description = "Schedule a 1-on-1 session with our Head of Sales. We'll review your outbound pipeline, target ICP, and conversion bottlenecks.",
 }: EnwilCalendarClientProps) {
   const initializedRef = useRef(false);
   const [loading, setLoading] = useState(true);
@@ -114,7 +114,7 @@ export default function EnwilCalendarClient({
                   <div className="relative w-14 h-14 rounded-full border-2 border-white shadow-sm overflow-hidden bg-amber-50 shrink-0">
                     <Image
                       src="/enwil.png"
-                      alt="Enwil Fernandes, Senior Sales Head at Myntmore"
+                      alt="Enwil Fernandes, Head of Sales at Myntmore"
                       fill
                       sizes="56px"
                       className="object-cover"
@@ -122,7 +122,7 @@ export default function EnwilCalendarClient({
                   </div>
                   <div>
                     <div className="text-base font-bold text-[#0A0A0A]">Enwil Fernandes</div>
-                    <div className="text-xs text-[#71675E]">Senior Sales Head · B2B Outbound Specialist</div>
+                    <div className="text-xs text-[#71675E]">Head of Sales · B2B Outbound Specialist</div>
                     <span className="inline-block mt-1.5 text-[11px] font-semibold text-[#A14A08] bg-[#FEF9EC] px-2.5 py-0.5 rounded border border-[#F5B731]/30">
                       Senior Growth Consultation
                     </span>

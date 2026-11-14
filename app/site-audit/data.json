@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T07:43:07.034Z",
+  "generatedAt": "2026-11-14T09:12:18.614Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 312,
@@ -46,11 +46,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/careers/systems-ai-automation-intern",
         "/",
         "/editorial-policy"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -503,16 +502,10 @@
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
-        "/careers/content-marketing-strategist-intern",
-        "/careers/gtm-strategist",
-        "/careers/hr-operations-intern",
-        "/careers/lead-gen-intern",
-        "/careers/lead-gen-strategist",
-        "/careers/sales-and-growth-intern",
-        "/careers/sales-executive",
-        "/careers/systems-ai-automation-intern"
+        "/",
+        "careers/JobPostingPage.tsx"
       ],
-      "inboundCount": 9,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -562,11 +555,9 @@
       "section": "careers",
       "status": "linked",
       "linkedFrom": [
-        "/careers/lead-gen-strategist",
-        "/careers/sales-and-growth-intern",
         "/careers"
       ],
-      "inboundCount": 3,
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2363,7 +2354,6 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/careers/lead-gen-intern",
         "/resources/glossary/target-account-strategy",
         "/resources/blogs",
         "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
@@ -2371,7 +2361,7 @@
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 7,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3076,14 +3066,13 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/careers/lead-gen-intern",
         "/resources/glossary/inbound-vs-outbound",
         "/resources/glossary/outbound-sales",
         "lib/internal-paths.ts",
         "/resources/blogs/investor-outreach-for-founders",
         "/resources/blogs"
       ],
-      "inboundCount": 6,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

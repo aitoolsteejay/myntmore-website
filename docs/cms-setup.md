@@ -12,6 +12,7 @@
 | City pages (7 of 8 `/b2b-lead-generation-*` pages) | `content/city-pages/<slug>.json` | `app/b2b-lead-generation-<slug>/page.tsx` generated at every build and rendered by `components/city/CityPage.tsx` |
 | Case studies, detailed (20 of 32 hand-written pages) | `content/case-study-pages/<slug>.json` | `app/case-studies/<slug>/page.tsx` generated at every build, the card on the `/case-studies` listing (`lib/case-study-detail-cards.generated.json`) and the sitemap entry |
 | Case studies | `content/case-studies/*.json` | `lib/case-study-library.json`, then one generated page and sitemap entry per case (both rebuilt on every deploy) |
+| Careers (job postings) | `content/careers/<slug>.json` | `app/careers/<slug>/page.tsx` generated at every build, `/careers` hub listing cards (`lib/careers-roles.generated.json`), JobPosting schema for Google for Jobs, and `npm run audit:jobs` |
 | Blog posts | `content/posts/*.mdoc` | `app/resources/blogs/[slug]/page.tsx`, the blog index, `sitemap.xml`, `llms-full.txt` |
 
 Search titles and descriptions: every page on the site has its title and description in the admin. Where depends on the page:

@@ -1,0 +1,124 @@
+{
+  "slug": "systems-ai-automation-intern",
+  "title": "Systems & AI Automation Intern",
+  "tag": "Systems & AI",
+  "accent": "#14B8A6",
+  "badge": "Internship · Work from Office · BKC, Mumbai",
+  "cardDesc": "You'll build the internal and client-facing AI agents and automations that run Myntmore, and own SEO, AEO, and GEO along the way.",
+  "cardBullets": [
+    "Comfortable with n8n, Clay, or Python",
+    "SEO nerd, curious about AI search",
+    "Ownership mindset, ships fast"
+  ],
+  "applySubject": "Application for Systems and AI Automation Intern",
+  "grid": [
+    {
+      "label": "Location",
+      "value": "WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051"
+    },
+    {
+      "label": "Hours",
+      "value": "Full-time, 10:00 AM – 7:00 PM"
+    },
+    {
+      "label": "Stipend",
+      "value": "Rs 7,000–20,000 (based on experience)"
+    }
+  ],
+  "schemaDescription": "Join Myntmore as a Systems & AI Automation Intern in BKC, Mumbai. Build internal and client-facing AI agents, automate workflows with n8n/Clay/Python, and own SEO, AEO, and GEO. Full-time hours, work from office.",
+  "employmentType": "INTERN",
+  "salaryMin": 7000,
+  "salaryMax": 20000,
+  "salaryUnit": "MONTH",
+  "datePosted": "2026-09-30T00:00:00+05:30",
+  "validThrough": "2027-03-30T00:00:00+05:30",
+  "aboutIntro": "Your role isn't just maintaining tools, it's building, automating, and optimizing the systems that keep Myntmore running and growing. Think about the setups that quietly save hours every week, the pages that climb to the top of Google, and the answers where ChatGPT and Perplexity recommend us. That's what we're aiming for. You'll explore the best tools and trends out there and make our systems even better. Your mission? Make Myntmore impossible to miss, on search, on AI, and everywhere our audience looks.",
+  "aboutNoteText": "",
+  "aboutNoteHref": "",
+  "aboutCalloutTitle": "What makes this role exciting",
+  "aboutCalloutText": "Think like a founder: take ownership of problems, not just tasks.\nSolve across the business: from sales to ops to delivery to internal workflows.\nWork across industries: understand different growth engines, not just one.\nVibe code & ship fast: speed over perfection.\nGamify everything: leaderboards and incentives for internal systems, plus gamified lead magnets for Myntmore and client campaigns.\nAutomate internal systems at Myntmore to reduce manual work to near zero.\nExperiment with new AI tools before most people even discover them.",
+  "primaryGoal": "",
+  "responsibilitiesTitle": "What you'll be doing",
+  "responsibilities": [
+    {
+      "title": "AI Agents & Systems",
+      "desc": "Build internal AI agents to automate marketing, content, outreach, and operations workflows.\nBuild client-facing agents for campaigns, including outreach, content, lead generation, and reporting.\nArchitect systems that can run end-to-end workflows and, over time, entire business functions.\nIdentify bottlenecks across the business and client accounts, and design systems to solve them.\nExperiment with vibe coding and emerging AI tools to build, test, and iterate quickly."
+    },
+    {
+      "title": "Automation & Integrations",
+      "desc": "Design, build, and optimize automations using n8n, Zapier, and Python.\nUse Clay to enrich data, personalize messaging at scale, and build repeatable pipelines.\nConnect systems across Notion, Slack, Gmail, Google Sheets, LinkedIn, Zoho CRM, Calendly, and ManyChat.\nTurn manual processes into scalable, self-running systems."
+    },
+    {
+      "title": "Technical Operations",
+      "desc": "Maintain, update, and secure internal tools, databases, hosting, and domains.\nManage proxies, API keys, and access credentials across all platforms.\nMonitor system performance, storage, and integrations to ensure smooth operations.\nEnsure data security best practices across all repositories and tools."
+    },
+    {
+      "title": "SEO, AEO & GEO",
+      "desc": "Plan and execute SEO strategies to improve organic rankings and website performance.\nOptimize content for visibility on AI platforms such as ChatGPT, Perplexity, and Grok.\nConduct regular website audits and stay updated on search and AI trends."
+    },
+    {
+      "title": "Content & Marketing Support",
+      "desc": "Create and publish blogs, website pages, and marketing content aligned with SEO goals.\nEvaluate, implement, and manage new tools for outreach, webinars, and events.\nSupport client projects, including technical setups and lead magnet creation."
+    },
+    {
+      "title": "Process & Documentation",
+      "desc": "Document systems, workflows, and processes for team-wide use.\nCollaborate with internal teams to understand requirements and deliver technical solutions."
+    }
+  ],
+  "whoYouAreTitle": "You're right for this if",
+  "whoYouAreIntro": "",
+  "whoYouAre": [
+    {
+      "label": "You Think in Systems",
+      "desc": "You love building processes that run on their own.\nYou naturally spot bottlenecks and think about how to fix them before they become problems.\nYou look at a manual task and immediately think: 'Can this be automated?'"
+    },
+    {
+      "label": "You're Hands-On With Tech",
+      "desc": "You're comfortable working with tools like Supabase, Vercel, GitHub, and Zoho.\nYou can build, deploy, and optimise AI agents and automated workflows.\nYou can write Python scripts to support your automations."
+    },
+    {
+      "label": "You're Curious About Search & AI",
+      "desc": "You're an SEO nerd who wants to understand how Google decides what to show.\nYou're equally curious about how ChatGPT, Perplexity, and other AI platforms surface information.\nYou enjoy experimenting with new tools, platforms, and APIs."
+    },
+    {
+      "label": "You Take Ownership",
+      "desc": "You can handle recurring work and new projects without needing constant reminders.\nYou think like an operator, not just a builder.\nYou're willing to go the extra mile for the team and our clients."
+    },
+    {
+      "label": "You're a Team Player",
+      "desc": "You collaborate well with others.\nYou're comfortable working across different functions and solving problems together.\nYou care about the success of the team and the client, not just your individual tasks."
+    }
+  ],
+  "skills": [
+    "Development & Hosting: GitHub · Vercel · Supabase · Cloudflare",
+    "AI Coding: Claude Code · Codex · Cursor",
+    "CRM & Automation: Zoho CRM · Calendly · n8n · Zapier · Make",
+    "Lead Data & Enrichment: Clay · Apollo · Explorium",
+    "SEO & Analytics: Google Search Console · Google Analytics · Ahrefs",
+    "Outreach: Instantly · Smartlead · Lemlist"
+  ],
+  "whatYoullLearn": [
+    "Someone who can walk into any business and spot inefficiencies instantly",
+    "Someone who can design systems that replace entire workflows",
+    "Someone who understands how different industries scale revenue",
+    "Someone founders trust to solve problems, not just execute tasks"
+  ],
+  "whyJoin": "Build real production AI systems and growth engines that run a premier B2B agency. Work from our BKC office in Mumbai with an ambitious founder and team.",
+  "metaTitle": "AI Automation Intern, Mumbai | Rs 7-20K/mo",
+  "metaDescription": "Join Myntmore as Systems & AI Automation Intern in BKC, Mumbai. Build AI agents, n8n/Clay automations, and own SEO/AEO/GEO. WFO, apply now.",
+  "keywords": [
+    "ai automation internship mumbai",
+    "systems intern mumbai",
+    "n8n internship india",
+    "ai agents internship",
+    "automation internship with ppo",
+    "clay apollo internship",
+    "seo aeo geo internship",
+    "vibe coding internship",
+    "python automation internship mumbai",
+    "myntmore careers",
+    "ai automation intern jobs mumbai"
+  ],
+  "ogTitle": "Systems & AI Automation Intern | Myntmore Careers",
+  "ogDescription": "Build the AI agents and automations that run Myntmore. Internship, BKC Mumbai."
+}

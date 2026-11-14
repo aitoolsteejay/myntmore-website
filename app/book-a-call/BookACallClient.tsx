@@ -128,7 +128,7 @@ export default function BookACallClient() {
                     <div className="relative w-14 h-14 rounded-full border-2 border-white shadow-md overflow-hidden bg-amber-50">
                       <Image
                         src="/enwil.png"
-                        alt="Enwil Fernandes, Senior Sales Head at Myntmore"
+                        alt="Enwil Fernandes, Head of Sales at Myntmore"
                         fill
                         sizes="56px"
                         className="object-cover"

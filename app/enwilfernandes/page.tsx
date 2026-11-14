@@ -14,13 +14,13 @@ const NEWSLETTER_URL = "/newsletter-subscribe";
 
 export const metadata: Metadata = withPageSeo("/enwilfernandes", {
   title: "Enwil Fernandes",
-  description: "Enwil Fernandes, Senior Sales Head at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
+  description: "Enwil Fernandes, Head of Sales at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
   alternates: { canonical: `${SITE_URL}/enwilfernandes` },
   robots: { index: false, follow: false },
   openGraph: {
     ...OG_BASE,
-    title: "Enwil Fernandes | Senior Sales Head, Myntmore",
-    description: "Enwil Fernandes, Senior Sales Head at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
+    title: "Enwil Fernandes | Head of Sales, Myntmore",
+    description: "Enwil Fernandes, Head of Sales at Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
     url: `${SITE_URL}/enwilfernandes`,
     images: ogImages("/enwilfernandes"),
   },
@@ -30,7 +30,7 @@ const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Enwil Fernandes",
-  jobTitle: "Senior Sales Head",
+  jobTitle: "Head of Sales",
   worksFor: { "@type": "Organization", name: "Myntmore", url: SITE_URL, logo: `${SITE_URL}/logo.png` },
   url: `${SITE_URL}/enwilfernandes`,
   email: EMAIL,
@@ -45,9 +45,9 @@ export default function EnwilFernandesCard() {
       <VisitingCard
         path="/enwilfernandes"
         name="Enwil Fernandes"
-        title="Senior Sales Head, Myntmore"
+        title="Head of Sales, Myntmore"
         photoSrc="/enwil.png"
-        photoAlt="Enwil Fernandes, Senior Sales Head at Myntmore"
+        photoAlt="Enwil Fernandes, Head of Sales at Myntmore"
         vCardHref="/api/vcard/enwil-fernandes"
         contacts={[
           { label: "WhatsApp", cta: "Reach out on WhatsApp", href: WHATSAPP_URL, icon: <WhatsAppIcon />, bg: "#25D366" },

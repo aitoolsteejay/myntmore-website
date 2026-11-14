@@ -258,6 +258,17 @@ for (const post of cmsPosts) {
   edges.push({ from: "/resources/blogs", fromFile: "app/resources/blogs/page.tsx", to: post.route });
 }
 
+// The careers hub (/careers) lists every active role in lib/careers-roles.generated.json
+const careersRolesFile = path.join(ROOT, "lib", "careers-roles.generated.json");
+if (exists(careersRolesFile)) {
+  try {
+    const roles = JSON.parse(read(careersRolesFile));
+    for (const r of roles) {
+      edges.push({ from: "/careers", fromFile: "app/careers/CareersClient.tsx", to: `/careers/${r.slug}` });
+    }
+  } catch {}
+}
+
 // Links inside the service page JSON: content/service-pages holds the copy of the five template services,
 // content/service-copy the copy of cold email, LinkedIn outreach and the self-serve tool. A string value that is
 // a bare site path (e.g. "/case-studies/saas-series-a") is a link from that service's page.
