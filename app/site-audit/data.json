@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-13T09:12:42.164Z",
+  "generatedAt": "2026-11-14T07:43:07.034Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 313,
+    "total": 312,
     "linked": 279,
-    "orphan": 34,
-    "noindex": 35,
-    "notInXmlSitemap": 39,
+    "orphan": 33,
+    "noindex": 34,
+    "notInXmlSitemap": 38,
     "privateHidden": 8
   },
   "pages": [
@@ -331,10 +331,10 @@
         "/",
         "/contact-us",
         "/events",
-        "/founder-meeting",
-        "/marketing-automation"
+        "/marketing-automation",
+        "/myntmore-framework"
       ],
-      "inboundCount": 92,
+      "inboundCount": 91,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -1996,17 +1996,6 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
-    },
-    {
-      "path": "/founder-meeting",
-      "title": "Founder Meeting",
-      "section": "other",
-      "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
-      "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -4387,10 +4376,9 @@
       "status": "linked",
       "linkedFrom": [
         "/book-a-call",
-        "/calendar/th",
-        "/founder-meeting"
+        "/calendar/th"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
