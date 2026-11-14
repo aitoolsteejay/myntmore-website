@@ -6,7 +6,7 @@ import FadeIn from "../components/FadeIn";
 import JsonLd from "../components/JsonLd";
 import AskYourAI from "../components/AskYourAI";
 import { buildArticleSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/who-this-is-for`;
@@ -31,7 +31,7 @@ export const metadata: Metadata = withPageSeo("/who-this-is-for", {
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/who-this-is-for"),
   },
 });
 

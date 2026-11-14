@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "../how-to-set-up-vibe-prospecting/Underline";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/leads-on-autopilot-guide";
@@ -30,7 +30,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/leads-on-autopi
     title: "Leads on Autopilot: A LinkedIn Framework | Myntmore",
     description: "Generate high-quality B2B leads on LinkedIn without cold pitching. Audience clarity, content authority, outreach, nurturing, and follow-ups, in one system.",
     url: URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/leads-on-autopilot-guide"),
   },
 });
 

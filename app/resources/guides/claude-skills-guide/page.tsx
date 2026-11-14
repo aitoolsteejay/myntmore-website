@@ -7,7 +7,7 @@ import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/resources/guides/claude-skills-guide", {
@@ -33,7 +33,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/claude-skills-g
     title: "The 6 Claude Skills Guide",
     description: "Six ready-to-use Claude skills for founders and marketers, complete with copy-paste prompts.",
     url: "https://www.myntmore.com/resources/guides/claude-skills-guide",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/claude-skills-guide"),
   },
 });
 

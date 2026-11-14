@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CalendarPageClient from "../th/CalendarPageClient";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/calendar/email", {
@@ -15,7 +15,7 @@ export const metadata: Metadata = withPageSeo("/calendar/email", {
     description:
       "Pick a 30-minute slot with Tejas Jhaveri, Founder of Myntmore. Review your email deliverability, secondary domain setup, warming rhythm, and high-converting copy angles.",
     url: "https://www.myntmore.com/calendar/cold-emailing",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/calendar/email"),
   },
 });
 

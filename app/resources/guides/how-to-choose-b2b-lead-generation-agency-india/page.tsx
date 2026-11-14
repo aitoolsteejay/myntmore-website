@@ -9,7 +9,7 @@ import Faq from "@/app/lp/Faq";
 import { buildFaqSchema, buildArticleSchema, SITE_URL } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { pageFaqs } from "@/lib/page-faqs";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
 import { withPageSeo } from "@/lib/page-seo";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/how-to-choose-b
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: PAGE_URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/how-to-choose-b2b-lead-generation-agency-india"),
   },
 });
 

@@ -6,7 +6,7 @@ import FadeIn from "../../components/FadeIn";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const GUIDES_PAGE_SCHEMA = [
@@ -46,7 +46,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides", {
     title: "Free B2B Growth Guides | Myntmore",
     description: "Step-by-step AI and outbound guides, built by the team behind 12K+ B2B meetings booked.",
     url: "https://www.myntmore.com/resources/guides",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides"),
   },
 });
 

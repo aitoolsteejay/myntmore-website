@@ -7,7 +7,7 @@ import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/resources/guides/how-to-set-up-vibe-prospecting", {
@@ -33,7 +33,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/how-to-set-up-v
     title: "How to Set Up Vibe Prospecting on Claude for B2B Leads",
     description: "Connect Vibe Prospecting to Claude in 7 steps, then run 10 ready-to-copy prompts for verified B2B leads.",
     url: "https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/how-to-set-up-vibe-prospecting"),
   },
 });
 

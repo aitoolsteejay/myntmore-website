@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/careers/hr-operations-intern", {
@@ -18,7 +18,7 @@ export const metadata: Metadata = withPageSeo("/careers/hr-operations-intern", {
     title: "HR and Operations Intern | Myntmore Careers",
     description: "Build real hiring pipelines and HR systems for a fast-growing agency. Internship, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/hr-operations-intern",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers/hr-operations-intern"),
   },
 });
 

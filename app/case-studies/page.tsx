@@ -3,7 +3,7 @@ import CaseStudiesClient from "./CaseStudiesClient";
 import { libraryCards } from "@/lib/case-study-library";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const SCHEMA = [
@@ -28,7 +28,7 @@ export const metadata: Metadata = withPageSeo("/case-studies", {
     title: "B2B Case Studies & Client Results | Myntmore",
     description: "Real client results from Myntmore's cold email, LinkedIn outreach, and ABM systems.",
     url: "https://www.myntmore.com/case-studies",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/case-studies"),
   },
 });
 

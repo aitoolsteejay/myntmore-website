@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "./schema";
-import { OG_BASE } from "./og";
+import { OG_BASE, ogImages } from "./og";
 
 export function buildToolSocialMetadata(
   title: string,
@@ -8,7 +8,7 @@ export function buildToolSocialMetadata(
   path: string
 ): Pick<Metadata, "openGraph" | "twitter"> {
   const fullTitle = `${title} | Myntmore`;
-  const image = `${SITE_URL}/og-image.png`;
+  const images = ogImages(path, "Myntmore B2B growth systems");
 
   return {
     openGraph: {
@@ -16,7 +16,7 @@ export function buildToolSocialMetadata(
       title: fullTitle,
       description,
       url: `${SITE_URL}${path}`,
-      images: [{ url: image, width: 1200, height: 630, alt: "Myntmore B2B growth systems" }],
+      images,
     },
     // Setting `twitter` replaces the root layout's object, so the handles go here too.
     twitter: {
@@ -25,7 +25,7 @@ export function buildToolSocialMetadata(
       creator: "@myntmore",
       title: fullTitle,
       description,
-      images: [image],
+      images: images.map((i) => i.url),
     },
   };
 }

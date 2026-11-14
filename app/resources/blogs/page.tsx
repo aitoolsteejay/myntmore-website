@@ -8,7 +8,7 @@ import NewsletterForm from "../../components/NewsletterForm";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const BREADCRUMB_SCHEMA = buildBreadcrumbSchema([
@@ -49,7 +49,7 @@ export const metadata: Metadata = withPageSeo("/resources/blogs", {
     title: "B2B Lead Generation Blog | Myntmore",
     description: "Practical lead gen guides from the team behind 12K+ B2B meetings booked.",
     url: "https://www.myntmore.com/resources/blogs",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/blogs"),
   },
 });
 

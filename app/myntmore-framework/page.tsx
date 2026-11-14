@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import MyntmoreFrameworkClient from "./MyntmoreFrameworkClient";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/myntmore-framework", {
@@ -13,7 +13,7 @@ export const metadata: Metadata = withPageSeo("/myntmore-framework", {
     title: "The Myntmore Framework: How Our B2B Outbound Works",
     description: "The automation pipeline behind every Myntmore outbound campaign, from ICP targeting to human-safe, timely follow-ups.",
     url: "https://www.myntmore.com/myntmore-framework",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/myntmore-framework"),
   },
 });
 

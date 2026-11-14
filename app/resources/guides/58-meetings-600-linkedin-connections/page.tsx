@@ -36,7 +36,7 @@ import Underline from "../how-to-set-up-vibe-prospecting/Underline";
 import { buildArticleSchema } from "@/lib/schema";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/58-meetings-600-linkedin-connections";
@@ -69,7 +69,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/58-meetings-600
     title: "58 Meetings Booked from 600 LinkedIn Connections in 1 Month",
     description: "600 LinkedIn connections → 58 meetings in 1 month. The full 5-step framework: ICP, positioning, warm-up, 5-message sequence, follow-ups.",
     url: URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/58-meetings-600-linkedin-connections"),
   },
 });
 

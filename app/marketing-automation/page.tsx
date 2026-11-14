@@ -5,7 +5,7 @@ import LeadCaptureForm from "../components/LeadCaptureForm";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildServiceSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const PAGE_URL = `${SITE_URL}/marketing-automation`;
@@ -46,7 +46,7 @@ export const metadata: Metadata = withPageSeo("/marketing-automation", {
     title: "Marketing Automation Services | Myntmore",
     description: "AI-powered marketing automation that builds your pipeline while you sleep.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/marketing-automation"),
   },
 });
 

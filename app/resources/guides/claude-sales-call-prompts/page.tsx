@@ -10,7 +10,7 @@ import Underline from "../how-to-set-up-vibe-prospecting/Underline";
 import { buildArticleSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import ArticleMeta from "@/app/components/ArticleMeta";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/claude-sales-call-prompts";
@@ -37,7 +37,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/claude-sales-ca
     title: `${TITLE} | Myntmore`,
     description: DESCRIPTION,
     url: URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/claude-sales-call-prompts"),
   },
 });
 

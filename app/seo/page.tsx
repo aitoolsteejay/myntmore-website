@@ -3,7 +3,7 @@ import Link from "next/link";
 import InnerLayout from "../components/InnerLayout";
 import LeadCaptureForm from "../components/LeadCaptureForm";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/seo", {
@@ -31,7 +31,7 @@ export const metadata: Metadata = withPageSeo("/seo", {
     title: "SEO Services | Myntmore",
     description: "B2B SEO that drives qualified pipeline, not just traffic.",
     url: "https://www.myntmore.com/seo",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/seo"),
   },
 });
 

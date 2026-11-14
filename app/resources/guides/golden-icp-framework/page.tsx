@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import CopyBlock from "@/app/components/CopyBlock";
 import FadeIn from "@/app/components/FadeIn";
 import Underline from "../how-to-set-up-vibe-prospecting/Underline";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const URL = "https://www.myntmore.com/resources/guides/golden-icp-framework";
@@ -31,7 +31,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/golden-icp-fram
     title: "The Golden ICP Framework | Myntmore",
     description: "Stop building lists around job titles. Find buyers under pressure to solve the problem you solve.",
     url: URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/golden-icp-framework"),
   },
 });
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import EventPopup from "./components/EventPopup";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 
 export const metadata: Metadata = withPageSeo("/", {
   // Names Mumbai because GSC shows this page ranking top-3 for ~15
@@ -37,7 +37,7 @@ export const metadata: Metadata = withPageSeo("/", {
     description:
       "We build and run your outbound engine using AI agents and human intelligence. Cold email, LinkedIn outreach, and ABM that books qualified meetings at scale.",
     url: "https://www.myntmore.com",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/"),
   },
   verification: {
     other: {

@@ -8,7 +8,7 @@ import JsonLd from "../components/JsonLd";
 import { buildFaqSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/services", {
@@ -21,7 +21,7 @@ export const metadata: Metadata = withPageSeo("/services", {
     title: "B2B Lead Generation Services | AI-Powered Outbound | Myntmore",
     description: "Seven productized B2B growth services. We build the architecture, you close the deals.",
     url: "https://www.myntmore.com/services",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/services"),
   },
 });
 

@@ -5,7 +5,7 @@ import FadeIn from "../components/FadeIn";
 import NewsletterForm from "../components/NewsletterForm";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildWebPageSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const URL = `${SITE_URL}/newsletter-subscribe`;
@@ -19,7 +19,7 @@ export const metadata: Metadata = withPageSeo("/newsletter-subscribe", {
     title: "The Outbound Operator Newsletter | Myntmore",
     description: "One practical B2B growth playbook every week. Built from real campaigns, not recycled theory.",
     url: URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/newsletter-subscribe"),
   },
 });
 const WEBPAGE_SCHEMA = buildWebPageSchema({

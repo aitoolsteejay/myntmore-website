@@ -7,7 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import generatedTerms from "@/lib/glossary-index.generated.json";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const GLOSSARY_PAGE_SCHEMA = [
@@ -43,7 +43,7 @@ export const metadata: Metadata = withPageSeo("/resources/glossary", {
     title: "B2B Outbound Glossary | Myntmore",
     description: "Plain-English definitions of the terms and frameworks behind Myntmore's outbound systems.",
     url: "https://www.myntmore.com/resources/glossary",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/glossary"),
   },
 });
 

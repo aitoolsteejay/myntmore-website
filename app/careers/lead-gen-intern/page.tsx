@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/careers/lead-gen-intern", {
@@ -18,7 +18,7 @@ export const metadata: Metadata = withPageSeo("/careers/lead-gen-intern", {
     title: "B2B Lead Generation Intern | Myntmore Careers",
     description: "Learn to build B2B pipelines across multiple industries. Open to freshers. Full-time internship, BKC Mumbai, Rs 10,000–15,000 a month.",
     url: "https://www.myntmore.com/careers/lead-gen-intern",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers/lead-gen-intern"),
   },
 });
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CareersClient from "./CareersClient";
 import JsonLd from "../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const CAREERS_SCHEMA = [
@@ -27,7 +27,7 @@ export const metadata: Metadata = withPageSeo("/careers", {
     title: "Careers at Myntmore",
     description: "Open roles in sales, lead generation, and GTM strategy at Myntmore.",
     url: "https://www.myntmore.com/careers",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers"),
   },
 });
 

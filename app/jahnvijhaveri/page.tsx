@@ -3,7 +3,7 @@ import VisitingCard from "../components/VisitingCard";
 import JsonLd from "../components/JsonLd";
 import { WhatsAppIcon, LinkedInIcon, EmailIcon, PhoneIcon, NewsletterIcon } from "../components/ContactIcons";
 import { SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const PHONE = "+919821008589";
@@ -22,7 +22,7 @@ export const metadata: Metadata = withPageSeo("/jahnvijhaveri", {
     title: "Jahnvi Jhaveri | Co-Founder, Myntmore",
     description: "Jahnvi Jhaveri, Co-Founder of Myntmore. Connect on WhatsApp, LinkedIn, call, or email.",
     url: `${SITE_URL}/jahnvijhaveri`,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/jahnvijhaveri"),
   },
 });
 

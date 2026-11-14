@@ -13,7 +13,7 @@ import Faq from "@/app/lp/Faq";
 import { buildArticleSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPost, getCmsPostSummaries } from "@/lib/cms-posts";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
 import { POSTS_WITH_CITY_LINKS } from "@/lib/city-links";
 
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: post.ogDescription,
       url,
       type: "article",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+      images: ogImages(`/resources/blogs/${post.slug}`),
     },
   };
 }

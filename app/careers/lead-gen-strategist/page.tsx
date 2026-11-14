@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/careers/lead-gen-strategist", {
@@ -18,7 +18,7 @@ export const metadata: Metadata = withPageSeo("/careers/lead-gen-strategist", {
     title: "B2B Lead Generation Strategist | Myntmore Careers",
     description: "Build predictable B2B pipelines across multiple industries. Full-time, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/lead-gen-strategist",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers/lead-gen-strategist"),
   },
 });
 

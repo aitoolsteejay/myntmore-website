@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/careers/content-marketing-strategist-intern", {
@@ -17,7 +17,7 @@ export const metadata: Metadata = withPageSeo("/careers/content-marketing-strate
     title: "Content Marketing Strategist Intern | Myntmore Careers",
     description: "Write high-impact LinkedIn content for founders and CXOs. Internship, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/content-marketing-strategist-intern",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers/content-marketing-strategist-intern"),
   },
 });
 

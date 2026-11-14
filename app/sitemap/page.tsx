@@ -8,7 +8,7 @@ import { buildBreadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
 import glossaryCards from "@/lib/glossary-index.generated.json";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/sitemap", {
@@ -20,7 +20,7 @@ export const metadata: Metadata = withPageSeo("/sitemap", {
     title: "Site Map: Every Page on Myntmore",
     description: "Every page on Myntmore, organised by services, case studies, resources, free tools, careers, and more.",
     url: "https://www.myntmore.com/sitemap",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/sitemap"),
   },
   keywords: [
     "myntmore sitemap",

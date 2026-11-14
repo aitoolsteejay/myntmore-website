@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import CaseStudiesClient from "../../CaseStudiesClient";
 import { libraryCards } from "@/lib/case-study-library";
 import { CASE_STUDY_MARKETS, caseStudiesInMarket, marketFromSlug } from "@/lib/case-study-markets";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 type Props = { params: { market: string } };
@@ -24,7 +24,7 @@ export function generateMetadata({ params }: Props): Metadata {
     description,
     keywords: [`b2b lead generation ${market.label}`, `outbound sales case studies ${market.label}`, `cold email ${market.label} case study`, `linkedin outreach ${market.label}`],
     alternates: { canonical: url },
-    openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore case studies" }] },
+    openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: ogImages(`/case-studies/markets/${market.slug}`, "Myntmore case studies") },
   });
 }
 

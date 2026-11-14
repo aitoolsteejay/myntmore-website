@@ -9,7 +9,7 @@ import JsonLd from "../components/JsonLd";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { SITE_URL, buildLocalBusinessSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/about-us", {
@@ -39,7 +39,7 @@ export const metadata: Metadata = withPageSeo("/about-us", {
     title: "About Myntmore | Founded by Tejas Jhaveri, Mumbai",
     description: "Myntmore is a Mumbai B2B outbound agency founded in 2019 by Tejas Jhaveri, TEDx speaker and growth educator at IIT and IIM. 12K+ meetings booked, $120M+ pipeline.",
     url: "https://www.myntmore.com/about-us",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/about-us"),
   },
 });
 

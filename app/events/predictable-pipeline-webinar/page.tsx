@@ -4,7 +4,7 @@ import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildEventSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 const RECORDING_URL = "https://zfrmz.com/viRIcOyB23MftpLVyX4f";
@@ -24,7 +24,7 @@ export const metadata: Metadata = withPageSeo("/events/predictable-pipeline-webi
     title: "We Create 200+ Meetings a Month Through Cold Outreach | Myntmore Webinar",
     description: "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings every month. Sep 19, 2026 · 11:30 AM – 1:00 PM IST.",
     url: PAGE_URL,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/events/predictable-pipeline-webinar"),
   },
 });
 

@@ -58,7 +58,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@myntmore",
     creator: "@myntmore",
-    images: ["/og-image.png"],
+    // No `images` here on purpose: Next copies a page's openGraph images into twitter only while
+    // twitter.images is unset, so a generic image here would pin every page's X card to it.
   },
   robots: {
     index: true,

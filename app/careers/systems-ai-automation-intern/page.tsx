@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import JsonLd from "../../components/JsonLd";
 import { buildJobPostingSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/careers/systems-ai-automation-intern", {
@@ -17,7 +17,7 @@ export const metadata: Metadata = withPageSeo("/careers/systems-ai-automation-in
     title: "Systems & AI Automation Intern | Myntmore Careers",
     description: "Build the AI agents and automations that run Myntmore. Internship, BKC Mumbai.",
     url: "https://www.myntmore.com/careers/systems-ai-automation-intern",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/careers/systems-ai-automation-intern"),
   },
 });
 

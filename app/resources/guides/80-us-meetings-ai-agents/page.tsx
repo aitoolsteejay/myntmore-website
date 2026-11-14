@@ -8,7 +8,7 @@ import FadeIn from "@/app/components/FadeIn";
 import StatTicker from "@/app/components/StatTicker";
 import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 export const metadata: Metadata = withPageSeo("/resources/guides/80-us-meetings-ai-agents", {
@@ -36,7 +36,7 @@ export const metadata: Metadata = withPageSeo("/resources/guides/80-us-meetings-
     title: "80+ US Meetings Booked in 1 Month with AI Agents",
     description: "800 connections/month → 80+ US meetings/month → 4 new clients/month. The full AI-agent blueprint.",
     url: "https://www.myntmore.com/resources/guides/80-us-meetings-ai-agents",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore" }],
+    images: ogImages("/resources/guides/80-us-meetings-ai-agents"),
   },
 });
 

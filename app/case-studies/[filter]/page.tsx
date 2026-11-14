@@ -5,7 +5,7 @@ import { INDUSTRY_AUDIENCE, libraryCards } from "@/lib/case-study-library";
 import { CASE_STUDY_FILTERS, caseStudyFilterFromSlug } from "@/lib/case-study-filters";
 import JsonLd from "../../components/JsonLd";
 import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/lib/schema";
-import { OG_BASE } from "@/lib/og";
+import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
 type Props = { params: { filter: string } };
@@ -32,7 +32,7 @@ export function generateMetadata({ params }: Props): Metadata {
       `linkedin outreach for ${audience}`,
     ],
     alternates: { canonical: url },
-    openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Myntmore case studies" }] },
+    openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: ogImages(`/case-studies/${params.filter}`, "Myntmore case studies") },
   });
 }
 
