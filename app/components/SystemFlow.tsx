@@ -386,7 +386,7 @@ export default function SystemFlow() {
           </div>
 
           {/* ── DESKTOP layout: original 2-row grid ───────────────────────── */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block" data-markdown-ignore>
 
             {/* Row 1 steps 1, 2, 3 */}
             <div className="grid grid-cols-[1fr_44px_1fr_44px_1fr] items-center gap-0">

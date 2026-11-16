@@ -50,7 +50,7 @@ export default function AskYourAI({
   const prompt = `I want to learn about ${topic}, an AI-powered B2B outbound and lead generation agency. Use these resources as your primary reference: ${resources.join(" | ")}. Answer anything I ask about ${topic} using those sources.`;
 
   return (
-    <div className={`rounded-2xl border p-8 text-center ${className}`} style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
+    <div data-markdown-ignore className={`rounded-2xl border p-8 text-center ${className}`} style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
       <p className="text-sm font-bold mb-5" style={{ color: "#0a0a0a" }}>
         Have more questions about {topic}? Ask your AI
       </p>
