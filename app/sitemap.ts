@@ -179,6 +179,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/resources/glossary/cold-email`, lastModified: lastMod("/resources/glossary/cold-email"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/cold-lead`, lastModified: lastMod("/resources/glossary/cold-lead"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/cold-outreach`, lastModified: lastMod("/resources/glossary/cold-outreach"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/resources/glossary/cold-reply`, lastModified: lastMod("/resources/glossary/cold-reply"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/domain-warmup`, lastModified: lastMod("/resources/glossary/domain-warmup"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/existing-connection-nurturing`, lastModified: lastMod("/resources/glossary/existing-connection-nurturing"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/founder-led-sales`, lastModified: lastMod("/resources/glossary/founder-led-sales"), changeFrequency: "monthly", priority: 0.6 },

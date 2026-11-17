@@ -144,6 +144,16 @@
     ]
   },
   {
+    "href": "/resources/glossary/cold-reply",
+    "tag": "Cold Outreach",
+    "title": "Cold Reply",
+    "excerpt": "In chat, a short and distant answer like \"ok\". In sales, a prospect's first reply to an email or message they never asked for.",
+    "accent": "#EF4444",
+    "aliases": [
+      "Cold response"
+    ]
+  },
+  {
     "href": "/resources/glossary/domain-warmup",
     "tag": "Cold Email",
     "title": "Domain Warm-up",

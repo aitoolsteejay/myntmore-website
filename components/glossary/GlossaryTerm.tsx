@@ -6,7 +6,8 @@ import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { buildFaqSchema, type FaqItem } from "@/lib/schema";
 
-// One titled block of a longer-form term: paragraphs (use **double asterisks** for bold), an optional numbered list
+// One titled block of a longer-form term: paragraphs (use **double asterisks** for bold and [label](/path) for an
+// internal link), an optional numbered list
 // whose items open with a bold lead-in, and an optional comparison table (first column = row label).
 export interface GlossarySection {
   heading: string;
@@ -15,11 +16,16 @@ export interface GlossarySection {
   table?: { columns: string[]; rows: { label: string; cells: string[] }[] }; // empty rows = no table
 }
 
-// Turns **bold** into <strong>; everything else stays plain text.
+// Turns **bold** into <strong> and [label](/path) into an internal link; everything else stays plain text.
 function Rich({ text }: { text: string }) {
   return (
     <>
-      {text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => (part.startsWith("**") && part.endsWith("**") ? <strong key={i}>{part.slice(2, -2)}</strong> : part))}
+      {text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\(\/[^)\s]*\))/g).map((part, i) => {
+        if (part.startsWith("**") && part.endsWith("**")) return <strong key={i}>{part.slice(2, -2)}</strong>;
+        const link = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+        if (link) return <Link key={i} href={link[2]} className="font-semibold underline underline-offset-2" style={{ color: "#A14A08" }}>{link[1]}</Link>;
+        return part;
+      })}
     </>
   );
 }

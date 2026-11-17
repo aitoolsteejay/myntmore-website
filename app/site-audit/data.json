@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T11:02:14.626Z",
+  "generatedAt": "2026-11-17T11:15:09.723Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 316,
-    "linked": 283,
+    "total": 317,
+    "linked": 284,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -2318,7 +2318,7 @@
         "/resources/guides/58-meetings-600-linkedin-connections",
         "/resources/guides/80-us-meetings-ai-agents"
       ],
-      "inboundCount": 77,
+      "inboundCount": 78,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2684,10 +2684,11 @@
     },
     {
       "path": "/resources/blogs/handling-cold-email-replies",
-      "title": "Cold Reply Meaning, Examples & How to Respond",
+      "title": "How to Respond to Cold Email Replies: 4 Examples",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/cold-reply",
         "/resources/glossary/meeting-booked-rate",
         "/resources/guides/claude-sales-call-prompts",
         "/resources/blogs/cold-email-follow-up-sequence",
@@ -2695,7 +2696,7 @@
         "/resources/blogs",
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3136,7 +3137,7 @@
         "/resources/glossary/appointment-setting",
         "/resources/glossary/b2b-lead-generation"
       ],
-      "inboundCount": 54,
+      "inboundCount": 55,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3358,6 +3359,20 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/sales-outreach",
+        "/resources/glossary"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/resources/glossary/cold-reply",
+      "title": "Cold Reply Meaning: Chat vs. Sales | Glossary",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs/handling-cold-email-replies",
         "/resources/glossary"
       ],
       "inboundCount": 2,
@@ -3663,10 +3678,11 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/cold-reply",
         "/resources/blogs/handling-cold-email-replies",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
