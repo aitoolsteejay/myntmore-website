@@ -1,0 +1,53 @@
+{
+  "slug": "france",
+  "keywords": [
+    "how to find buyers in france",
+    "find pharma buyers in france",
+    "contract manufacturing buyers france",
+    "packaging buyers france cosmetics",
+    "export to france from india b2b",
+    "b2b lead generation france",
+    "cold email france gdpr cnil"
+  ],
+  "heroLead": "Find B2B buyers in",
+  "heroUnderlined": "France",
+  "intro": "Two outbound campaigns for Indian manufacturers selling into France: a tablet and capsule maker reaching pharma sourcing teams, and a carton maker reaching cosmetics brands. Every number below comes from a real campaign.",
+  "audiences": [
+    {
+      "icon": "🏭",
+      "title": "Indian manufacturers exporting to France",
+      "body": "Pharma contract manufacturers, packaging makers and other exporters whose French relationships start and stop at trade shows."
+    },
+    {
+      "icon": "🧴",
+      "title": "Suppliers to French brands",
+      "body": "Companies selling to French pharma, cosmetics and consumer brands that need to reach sourcing, procurement and development teams directly."
+    }
+  ],
+  "playsTitle": "What worked in France",
+  "plays": [
+    {
+      "tag": "Pharma · Contract manufacturing",
+      "title": "Write in French and English",
+      "body": "A tablet and capsule maker reached sourcing, external manufacturing and supply chain leads at French pharma companies whose portfolios matched its dosage forms. Messages went out in French and English.",
+      "results": ["18 buyer meetings", "6 requests for quotation", "36 positive replies"],
+      "href": "/case-studies/pharma-france-contract-manufacturing"
+    },
+    {
+      "tag": "Packaging · Cosmetics",
+      "title": "Go to the packaging development team",
+      "body": "A carton and printed packaging maker mapped French cosmetics brands that fit its capabilities, then contacted packaging development, procurement and operations leaders about upcoming packaging needs.",
+      "results": ["18 meetings booked", "6 packaging briefs", "4 sample and quotation requests"],
+      "href": "/case-studies/manufacturers-exporters-france-packaging"
+    }
+  ],
+  "rulesTitle": "The rules",
+  "rulesBody": "France applies GDPR, and its regulator, the CNIL, accepts B2B email prospecting without prior consent when the message relates to the recipient's job, the recipient is told how their data is used and they can opt out easily. We keep messages role-relevant and honour every opt-out.",
+  "timingTitle": "Timing and language",
+  "timingBody": "France is 3.5 hours behind India in summer and 4.5 hours in winter. Messages go out on French weekday mornings. The pharma campaign wrote to sourcing teams in both French and English.",
+  "industryLinks": [
+    { "label": "Pharma companies", "href": "/lp/pharma" },
+    { "label": "Manufacturers & exporters", "href": "/lp/manufacturers-exporters" }
+  ],
+  "cities": null
+}

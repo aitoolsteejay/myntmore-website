@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T10:46:58.537Z",
+  "generatedAt": "2026-11-17T10:53:51.866Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 314,
@@ -254,7 +254,7 @@
     },
     {
       "path": "/b2b-lead-generation-mumbai",
-      "title": "B2B Lead Generation Agency in Mumbai",
+      "title": "AI B2B Lead Generation Agency in Mumbai",
       "section": "other",
       "status": "linked",
       "linkedFrom": [
@@ -2537,13 +2537,13 @@
         "/resources/glossary/can-spam-act",
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
+        "case-studies/MarketGuide.tsx",
         "/resources/blogs",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/cold-email-follow-up-sequence",
-        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
-        "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers"
+        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
       ],
-      "inboundCount": 9,
+      "inboundCount": 10,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

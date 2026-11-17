@@ -110,6 +110,15 @@ One page per industry Myntmore runs outbound for: who the buyers are, how the ca
 - [Founders Raising Capital](https://www.myntmore.com/lp/fundraising): Investor lists and outreach to funds whose thesis matches the startup.
 - [Agency Partner Program](https://www.myntmore.com/lp/agency-partners): White-label outbound that marketing agencies resell to their own clients under their brand.
 
+## Markets
+One page per country with two or more campaigns: the case studies there, what worked, the outreach rules and timing, and common questions.
+- [UAE](https://www.myntmore.com/case-studies/markets/uae): Indian manufacturers and pharma companies shortlisting UAE distributors, and UAE brokers and IT providers booking local meetings.
+- [United States](https://www.myntmore.com/case-studies/markets/united-states): Indian software and API companies and US-focused recruiters booking 16 to 24 meetings each with US buyers; CAN-SPAM and time zones.
+- [United Kingdom](https://www.myntmore.com/case-studies/markets/united-kingdom): UK pharma, accounting-practice partnerships and engineering recruitment; UK GDPR and PECR.
+- [Singapore](https://www.myntmore.com/case-studies/markets/singapore): Singapore finance, insurance and staffing firms, and an Indian pharma developer opening licensing talks.
+- [France](https://www.myntmore.com/case-studies/markets/france): Indian pharma and packaging manufacturers reaching French buyers, with outreach in French and English; GDPR and CNIL.
+- [India](https://www.myntmore.com/case-studies/markets/india): Payroll, insurance partnership and doctor outreach campaigns inside India; DPDP Act and TRAI.
+
 ## Locations
 Myntmore serves B2B clients across India and in the UAE. City pages cover local market context, not separate offices.
 - [B2B Lead Generation in Mumbai](https://www.myntmore.com/b2b-lead-generation-mumbai)

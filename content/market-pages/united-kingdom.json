@@ -1,0 +1,61 @@
+{
+  "slug": "united-kingdom",
+  "keywords": [
+    "b2b lead generation uk",
+    "how to get uk clients from india",
+    "how to find uk accounting firms for outsourcing",
+    "uk pharma lead generation",
+    "recruitment agency business development uk",
+    "cold email uk gdpr pecr",
+    "outbound lead generation agency for uk market"
+  ],
+  "heroLead": "Book meetings with decision-makers in",
+  "heroUnderlined": "the United Kingdom",
+  "intro": "Three outbound campaigns in the UK: an outsourcing firm partnering with accounting practices, a UK pharma company in a small specialist market, and an engineering recruiter. Every number below comes from a real campaign.",
+  "audiences": [
+    {
+      "icon": "🌏",
+      "title": "Firms selling into the UK from abroad",
+      "body": "Bookkeeping, accounting and other outsourcing firms that want UK partners or clients, and need a credible first conversation rather than a price pitch."
+    },
+    {
+      "icon": "🇬🇧",
+      "title": "UK-based firms",
+      "body": "Pharma companies, recruiters and service firms that need more qualified meetings without adding consultants' hours to business development."
+    }
+  ],
+  "playsTitle": "What worked in the United Kingdom",
+  "plays": [
+    {
+      "tag": "Pharma · UK",
+      "title": "Narrow the list in a small market",
+      "body": "A UK pharma company needed predictable access to a small, specialised market. We narrowed the ICP, mapped high-fit accounts and ran precision outreach instead of volume.",
+      "results": ["3 to 20+ qualified meetings a month", "5% to 35% positive responses", "£200K+ potential pipeline"],
+      "href": "/case-studies/uk-pharma-qualified-meetings"
+    },
+    {
+      "tag": "Bookkeeping · Partnerships",
+      "title": "Partner with practices, not end clients",
+      "body": "Direct outreach to individual businesses gave a bookkeeping firm uneven results. Messages to managing partners at UK accounting practices offered overflow capacity instead.",
+      "results": ["15 meetings booked", "5 delivery-model reviews", "2 paid pilots agreed"],
+      "href": "/case-studies/financial-services-uk-bookkeeping"
+    },
+    {
+      "tag": "Recruitment · Engineering",
+      "title": "Only contact employers who are hiring",
+      "body": "A UK engineering recruiter's consultants spent too long on broad business development. Outreach went only to employers with relevant advertised vacancies.",
+      "results": ["23 meetings booked", "8 hiring briefs", "4 searches authorized"],
+      "href": "/case-studies/recruitment-uk-engineering-staffing"
+    }
+  ],
+  "rulesTitle": "The rules",
+  "rulesBody": "UK GDPR allows B2B cold email on a legitimate interest basis when the message is relevant to the recipient's role. Under PECR, emails to corporate addresses don't need prior consent but must identify the sender and offer an opt-out. Sole traders and some partnerships count as individuals.",
+  "timingTitle": "Timing",
+  "timingBody": "The UK is 4.5 hours behind India in summer and 5.5 hours in winter. Messages go out on UK weekday mornings, so an India-based team can take meetings in its own afternoon.",
+  "industryLinks": [
+    { "label": "Accounting & CFO firms", "href": "/lp/accounting-cfo-firms" },
+    { "label": "Pharma companies", "href": "/lp/pharma" },
+    { "label": "Recruitment & staffing", "href": "/lp/recruitment-firms" }
+  ],
+  "cities": null
+}
