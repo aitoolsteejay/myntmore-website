@@ -142,15 +142,57 @@
   ],
   "formTitle": "Get Your Free Chennai GTM Audit",
   "formSubtitle": "We'll map your ICP across Chennai's manufacturing, healthcare, or IT/ITES landscape and show you exactly where your next quarter of pipeline should come from. No pitch, no pressure.",
-  "segmentsTitle": "",
-  "segmentsIntro": "",
-  "segments": [],
-  "segmentsNote": "",
-  "healthcareTitle": "",
-  "healthcareIntro": "",
-  "healthcareBuyers": [],
-  "healthcareNote": "",
-  "stepsTitle": "",
-  "steps": [],
-  "stepsNote": ""
+  "segmentsTitle": "Who we generate leads for in Chennai",
+  "segmentsIntro": "Our lead generation services in Chennai are built for companies that sell to other businesses, in India or overseas.",
+  "segments": [
+    {
+      "icon": "🚗",
+      "title": "Auto-component and engineering manufacturers",
+      "desc": "Suppliers selling to OEMs and Tier 1 buyers around Sriperumbudur, Oragadam and beyond, who want procurement conversations year-round instead of waiting for the next trade fair."
+    },
+    {
+      "icon": "🏥",
+      "title": "Healthcare and medical suppliers",
+      "desc": "Device, diagnostics and healthcare software companies selling to hospital groups, diagnostic chains and distributors, where a small purchase committee makes the decision."
+    },
+    {
+      "icon": "💻",
+      "title": "IT, ITES and SaaS firms",
+      "desc": "Companies along OMR and around TIDEL Park selling to enterprises in India, the US and Europe, where the buyer is a CTO or operations head who ignores generic pitches."
+    }
+  ],
+  "segmentsNote": "For your sector, see lead generation for [manufacturers and exporters](/lp/manufacturers-exporters), [pharma and healthcare companies](/lp/pharma) and [IT services companies](/lp/agencies-it). Exporting? See our results in [the UAE](/case-studies/markets/uae), [the United States](/case-studies/markets/united-states) and [France](/case-studies/markets/france). For industrial outbound in western Tamil Nadu, see [B2B lead generation in Coimbatore](/b2b-lead-generation-coimbatore).",
+  "healthcareTitle": "B2B healthcare lead generation in Chennai",
+  "healthcareIntro": "Chennai is one of India's largest hospital and medical-services hubs, and the companies that supply it sell to a small group of hard-to-reach decision-makers. If you sell medical devices, diagnostics, healthcare software or pharma products, we build outreach that reaches the people who actually buy:",
+  "healthcareBuyers": [
+    "Procurement heads and purchase committees at hospital groups",
+    "Lab and operations heads at diagnostic chains",
+    "Pharma and medical-device distributors across south India",
+    "Hospital administrators and IT heads evaluating healthcare software"
+  ],
+  "healthcareNote": "This is B2B outreach to buyers inside healthcare organisations. It is not patient lead generation for hospitals or clinics, which needs local search, ads and booking systems. See how it works for [pharma and healthcare companies](/lp/pharma), or read the [medical tourism platform case study](/case-studies/medical-tourism-platform-pipeline).",
+  "stepsTitle": "How B2B lead generation works with us",
+  "steps": [
+    {
+      "when": "Week 1",
+      "title": "ICP and buying signals",
+      "desc": "We define who to target and which signals mean they are in-market: new plants and capacity expansions, OEM sourcing changes, hospital expansions, funding and leadership changes."
+    },
+    {
+      "when": "Weeks 1–2",
+      "title": "Lists, domains and copy",
+      "desc": "Verified contact lists, dedicated sending domains with warm-up, and copy written for the buyer's role, industry and country."
+    },
+    {
+      "when": "Within 18 days",
+      "title": "Campaigns go live",
+      "desc": "Cold email and LinkedIn sequences start sending, with account-based plays for named OEM, hospital-group and enterprise accounts."
+    },
+    {
+      "when": "Weeks 3–8",
+      "title": "Conversations, then consistency",
+      "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
+    }
+  ],
+  "stepsNote": "Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
 }

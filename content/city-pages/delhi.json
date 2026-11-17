@@ -165,12 +165,33 @@
       "desc": "Firms whose new business depends on partner networks and referrals, and who need conversations with hiring managers, founders and finance heads beyond them."
     }
   ],
-  "segmentsNote": "For your sector, see lead generation for [IT services companies](/lp/agencies-it), [SaaS founders](/lp/saas-founders), [recruitment firms](/lp/recruitment-firms), [manufacturers and exporters](/lp/manufacturers-exporters) and [accounting and CFO firms](/lp/accounting-cfo-firms). Based in one of the two satellite cities? See [B2B lead generation in Gurugram](/b2b-lead-generation-gurugram) and [B2B lead generation in Noida](/b2b-lead-generation-noida). For outreach to jewellery and handicraft businesses in Rajasthan, see [B2B lead generation in Jaipur](/b2b-lead-generation-jaipur).",
+  "segmentsNote": "For your sector, see lead generation for [IT services companies](/lp/agencies-it), [SaaS founders](/lp/saas-founders), [recruitment firms](/lp/recruitment-firms), [manufacturers and exporters](/lp/manufacturers-exporters) and [accounting and CFO firms](/lp/accounting-cfo-firms). Based in one of the two satellite cities? See [B2B lead generation in Gurugram](/b2b-lead-generation-gurugram) and [B2B lead generation in Noida](/b2b-lead-generation-noida). For outreach to jewellery and handicraft businesses in Rajasthan, see [B2B lead generation in Jaipur](/b2b-lead-generation-jaipur). Consulting, HR or advisory firm? See [lead generation for professional services firms](/lp/professional-services). Selling to D2C brands? See [lead generation for eCommerce tech companies](/lp/ecommerce-tech).",
   "healthcareTitle": "",
   "healthcareIntro": "",
   "healthcareBuyers": [],
   "healthcareNote": "",
-  "stepsTitle": "",
-  "steps": [],
-  "stepsNote": ""
+  "stepsTitle": "How B2B lead generation works with us",
+  "steps": [
+    {
+      "when": "Week 1",
+      "title": "ICP and buying signals",
+      "desc": "We define who to target and which signals mean they are in-market: funding, new offices, sales and tech hiring, leadership changes and tenders."
+    },
+    {
+      "when": "Weeks 1–2",
+      "title": "Lists, domains and copy",
+      "desc": "Verified contact lists, dedicated sending domains with warm-up, and copy written for the buyer's role, industry and country."
+    },
+    {
+      "when": "Within 18 days",
+      "title": "Campaigns go live",
+      "desc": "Cold email and LinkedIn sequences start sending, with account-based plays for your named enterprise accounts."
+    },
+    {
+      "when": "Weeks 3–8",
+      "title": "Conversations, then consistency",
+      "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
+    }
+  ],
+  "stepsNote": "Selling software or IT services abroad? See our [results with US buyers](/case-studies/markets/united-states). Comparing agencies? Use our [guide to choosing a B2B lead generation agency in India](/resources/guides/how-to-choose-b2b-lead-generation-agency-india)."
 }
