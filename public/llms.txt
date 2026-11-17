@@ -87,6 +87,7 @@ Featured results. Each is one anonymised client's result as stated on its case s
 AI-powered tools. Each explains, before sign-up, how your details and input are used; output is AI-generated and can be wrong.
 - [ROI Calculator](https://www.myntmore.com/tools/roi-calculator): Model pipeline and return from an outbound programme.
 - [Cold Email ROI Calculator](https://www.myntmore.com/tools/cold-email-roi-calculator): Estimate meetings, pipeline and ROI from cold email volume, checked against 2026 benchmark rates.
+- [Cold Email Inbox & Domain Calculator](https://www.myntmore.com/tools/cold-email-inbox-calculator): Domains, inboxes, emails per inbox per day and go-live date for a target sending volume, using about 30 sends per inbox per day, 4 inboxes per domain and 14 to 21 days of warm-up.
 - [ICP Builder](https://www.myntmore.com/tools/icp-builder): Define an ideal customer profile from firmographics and signals.
 - [LinkedIn Profile Optimizer](https://www.myntmore.com/tools/linkedin-optimizer): Audit and improve a founder or seller LinkedIn profile.
 - [DM Angle Generator](https://www.myntmore.com/tools/dm-angle-generator): Generate psychology-aligned DM opening angles for outreach.
@@ -246,6 +247,7 @@ Frameworks Myntmore named and defines; these pages are their original source.
 - [Free tool to audit and improve a LinkedIn profile for sales](https://www.myntmore.com/tools/linkedin-optimizer)
 - [Free ROI calculator for an outbound programme](https://www.myntmore.com/tools/roi-calculator)
 - [Free cold email ROI calculator](https://www.myntmore.com/tools/cold-email-roi-calculator)
+- [How many domains and inboxes do I need for cold email?](https://www.myntmore.com/tools/cold-email-inbox-calculator)
 - [Free ICP builder tool](https://www.myntmore.com/tools/icp-builder)
 - [Free sales battle card generator](https://www.myntmore.com/tools/battle-card-generator)
 - [Free B2B case study generator](https://www.myntmore.com/tools/case-study-generator)

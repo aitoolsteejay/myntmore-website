@@ -121,7 +121,7 @@ const DATA: SetupGuideData = {
   related: [
     { label: "How to set up Smartlead", href: "/resources/guides/smartlead-setup", note: "Connect these inboxes, warm them up and launch the first campaign." },
     { label: "Gmail and Yahoo sender requirements", href: "/resources/blogs/gmail-and-yahoo-sender-requirements", note: "Authentication, spam rate and unsubscribe rules, in plain English." },
-    { label: "SPF, DKIM & DMARC explained", href: "/resources/glossary/spf-dkim-dmarc", note: "What each record does and why receiving servers check all three." },
+    { label: "Inbox & domain calculator", href: "/tools/cold-email-inbox-calculator", note: "Work out how many domains and inboxes your volume needs, and your go-live date." },
     { label: "Cold email deliverability guide", href: "/resources/blogs/cold-email-deliverability-guide", note: "Why emails land in spam, and how to fix it before you scale." },
   ],
   cta: {

@@ -93,6 +93,16 @@ const FREE_TOOLS = [
     hoverClass: "card-hover-green",
   },
   {
+    title: "Cold Email Inbox & Domain Calculator",
+    desc: "Enter the volume you want to send and get the domains to buy, inboxes to create, emails per inbox per day and the date you can start sending after warm-up.",
+    href: "/tools/cold-email-inbox-calculator",
+    icon: "📬",
+    cta: "Calculate my inboxes",
+    accentColor: "#16a34a",
+    accentBg: "rgba(34,197,94,0.1)",
+    hoverClass: "card-hover-green",
+  },
+  {
     title: "Posting Rhythm Builder",
     desc: "Plan a consistent LinkedIn posting rhythm that keeps your personal brand visible to your ICP, without guessing what to post or when.",
     href: "/tools/posting-rhythm-builder",

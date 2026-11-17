@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T11:21:37.480Z",
+  "generatedAt": "2026-11-17T11:26:32.437Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 317,
-    "linked": 284,
+    "total": 318,
+    "linked": 285,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -333,7 +333,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 92,
+      "inboundCount": 93,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -3809,11 +3809,10 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
-        "/resources/guides/cold-email-infrastructure-setup",
         "/resources/guides/cold-email-tech-stack",
         "/resources/glossary"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4004,9 +4003,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides",
-        "/resources/guides/smartlead-setup"
+        "/resources/guides/smartlead-setup",
+        "/tools/cold-email-inbox-calculator"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4180,9 +4180,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-infrastructure-setup",
-        "/resources/guides"
+        "/resources/guides",
+        "/tools/cold-email-inbox-calculator"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4197,12 +4198,12 @@
         "/resources",
         "/tools/battle-card-generator",
         "/tools/case-study-generator",
+        "/tools/cold-email-inbox-calculator",
         "/tools/cold-email-roi-calculator",
         "/tools/dm-angle-generator",
-        "/tools/founder-presence-analyzer",
-        "/tools/icp-builder"
+        "/tools/founder-presence-analyzer"
       ],
-      "inboundCount": 13,
+      "inboundCount": 14,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4295,7 +4296,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 28,
+      "inboundCount": 29,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4482,19 +4483,35 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/tools/cold-email-inbox-calculator",
+      "title": "Cold Email Inbox Calculator",
+      "section": "tools",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/tools",
+        "lib/tools-registry.ts"
+      ],
+      "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/tools/cold-email-roi-calculator",
       "title": "Cold Email Roi Calculator",
       "section": "tools",
       "status": "linked",
       "linkedFrom": [
         "/resources/tools",
+        "/tools/cold-email-inbox-calculator",
         "lib/tools-registry.ts",
         "/resources/blogs/cold-email-follow-up-sequence",
         "/resources/blogs/handling-cold-email-replies",
         "/resources/blogs/positive-reply-to-booked-meeting",
         "/services/cold-email"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

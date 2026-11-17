@@ -77,6 +77,12 @@ export const TOOLS_REGISTRY: Record<string, ToolInfo> = {
     href: "/tools/cold-email-roi-calculator",
     tagline: "Meetings, pipeline and ROI from your cold email volume",
   },
+  "cold-email-inbox-calculator": {
+    slug: "cold-email-inbox-calculator",
+    name: "Cold Email Inbox & Domain Calculator",
+    href: "/tools/cold-email-inbox-calculator",
+    tagline: "Domains, inboxes and go-live date for your sending volume",
+  },
 };
 
 // Each tool links to 2 others chosen for a natural next-step workflow, not
@@ -93,5 +99,6 @@ export const RELATED_TOOLS: Record<string, string[]> = {
   "linkedin-hook-grader": ["posting-rhythm-builder", "linkedin-optimizer"],
   "posting-rhythm-builder": ["linkedin-optimizer", "founder-presence-analyzer", "linkedin-hook-grader"],
   "roi-calculator": ["cold-email-roi-calculator", "battle-card-generator"],
-  "cold-email-roi-calculator": ["roi-calculator", "icp-builder"],
+  "cold-email-roi-calculator": ["cold-email-inbox-calculator", "roi-calculator"],
+  "cold-email-inbox-calculator": ["cold-email-roi-calculator", "icp-builder"],
 };

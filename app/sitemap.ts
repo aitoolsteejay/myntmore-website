@@ -226,6 +226,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/tools/dm-angle-generator`, lastModified: lastMod("/tools/dm-angle-generator"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/tools/roi-calculator`, lastModified: lastMod("/tools/roi-calculator"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/tools/cold-email-roi-calculator`, lastModified: lastMod("/tools/cold-email-roi-calculator"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/tools/cold-email-inbox-calculator`, lastModified: lastMod("/tools/cold-email-inbox-calculator"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/tools/posting-rhythm-builder`, lastModified: lastMod("/tools/posting-rhythm-builder"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/tools/linkedin-hook-grader`, lastModified: lastMod("/tools/linkedin-hook-grader"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/tools/lead-magnet-ideas`, lastModified: lastMod("/tools/lead-magnet-ideas"), changeFrequency: "monthly", priority: 0.7 },

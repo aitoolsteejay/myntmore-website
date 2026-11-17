@@ -206,6 +206,7 @@ const GROUPS: SitemapGroup[] = [
       { label: "DM Angle Generator", href: "/tools/dm-angle-generator" },
       { label: "ROI Calculator", href: "/tools/roi-calculator" },
       { label: "Cold Email ROI Calculator", href: "/tools/cold-email-roi-calculator" },
+      { label: "Cold Email Inbox & Domain Calculator", href: "/tools/cold-email-inbox-calculator" },
       { label: "Posting Rhythm Builder", href: "/tools/posting-rhythm-builder" },
       { label: "LinkedIn Hook Grader", href: "/tools/linkedin-hook-grader" },
       { label: "Lead Magnet Idea Generator", href: "/tools/lead-magnet-ideas" },
