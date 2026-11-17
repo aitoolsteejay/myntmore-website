@@ -28,7 +28,7 @@ export default function CopyBlock({ text, accent = "#0a0a0a", label = "Copy into
           onClick={handleCopy}
           className="flex min-h-[44px] items-center gap-1.5 text-xs font-bold rounded-md px-3.5 py-2 transition-colors hover:bg-[#F8F6F2]"
           style={{ backgroundColor: "#FFFFFF", border: "1px solid #E8E2D9", color: "#0A0A0A" }}
-          aria-label="Copy prompt"
+          aria-label={`Copy ${label}`}
         >
           {copied ? (
             <>
