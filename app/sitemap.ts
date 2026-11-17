@@ -240,6 +240,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/resources/guides/leads-on-autopilot-guide`, lastModified: lastMod("/resources/guides/leads-on-autopilot-guide"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/58-meetings-600-linkedin-connections`, lastModified: lastMod("/resources/guides/58-meetings-600-linkedin-connections"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/cold-email-tech-stack`, lastModified: lastMod("/resources/guides/cold-email-tech-stack"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/resources/guides/cold-email-infrastructure-setup`, lastModified: lastMod("/resources/guides/cold-email-infrastructure-setup"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/resources/guides/smartlead-setup`, lastModified: lastMod("/resources/guides/smartlead-setup"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/claude-sales-call-prompts`, lastModified: lastMod("/resources/guides/claude-sales-call-prompts"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/linkedin-content-to-calls-starter-kit`, lastModified: lastMod("/resources/guides/linkedin-content-to-calls-starter-kit"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/resources/guides/outbound-meme-prompt-kit`, lastModified: lastMod("/resources/guides/outbound-meme-prompt-kit"), changeFrequency: "monthly", priority: 0.7 },

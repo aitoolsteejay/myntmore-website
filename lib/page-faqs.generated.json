@@ -603,6 +603,24 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "guide-cold-email-infrastructure-setup": [
+    {
+      "question": "How many domains and inboxes do I need for cold email?",
+      "answer": "Work back from your daily volume. Each inbox should send about 30 live emails a day, and we put 4 inboxes on each domain. Our standard setup is 10 domains with 4 inboxes each, 40 inboxes sending up to about 1,200 emails a day. A smaller campaign needs fewer domains."
+    },
+    {
+      "question": "Can I send cold email from my main domain?",
+      "answer": "You shouldn't. If a campaign draws spam complaints or bounces, the damage lands on the domain your team uses for clients, invoices and hiring. Send from secondary domains that are close variations of your brand, redirect them to your main website, and keep your main domain for everyday email."
+    },
+    {
+      "question": "How long does DNS setup take before I can send?",
+      "answer": "DNS records usually publish within minutes to a few hours and can take up to 48 hours. That is only the start: each new inbox then needs 14 to 21 days of warm-up before its first live cold email. Plan for about three weeks from buying domains to your first campaign."
+    },
+    {
+      "question": "Do I need DMARC for cold email?",
+      "answer": "Set it up on every sending domain. Gmail requires DMARC from senders who send more than 5,000 messages a day to Gmail accounts, and requires SPF or DKIM from everyone. Start with p=none to monitor, read the reports, and move to p=quarantine once all your legitimate mail passes."
+    }
+  ],
   "guide-how-to-choose-an-outbound-agency": [
     {
       "question": "How long should an outbound agency's minimum contract be?",
@@ -641,6 +659,24 @@
     {
       "question": "Should I pay per lead or pay a retainer?",
       "answer": "Pay per lead suits you when you only want contacts and will run the outreach yourself. A retainer or per-meeting model suits you when you want the agency to run the whole system, because it rewards them for testing, fixing deliverability and improving copy instead of maximising the number of contacts delivered."
+    }
+  ],
+  "guide-smartlead-setup": [
+    {
+      "question": "How many emails per day should each Smartlead inbox send?",
+      "answer": "About 30 live emails per inbox per day, and stay under 40. Get more volume by adding inboxes rather than pushing each one harder. Our standard 40 inboxes send up to about 1,200 emails a day at that rate, with warm-up still running alongside the campaign on every inbox."
+    },
+    {
+      "question": "How long should Smartlead warm-up run before I send?",
+      "answer": "Give each new inbox 14 to 21 days of warm-up before its first live email. Start at 3 to 5 warm-up emails a day and ramp up by 2 to 3 a day to a steady 20 to 30. Keep warm-up running after the campaign starts, so the inbox keeps a steady record of normal engagement."
+    },
+    {
+      "question": "Should I turn on open tracking in Smartlead?",
+      "answer": "Only with a custom tracking domain, because shared tracking links can hurt deliverability. Many teams turn open tracking off and judge campaigns on replies and meetings instead, since opens are unreliable anyway. Across our campaigns, 1% to 3% of prospects reply and at least 20% of those replies are positive."
+    },
+    {
+      "question": "What spam complaint rate is safe for cold email?",
+      "answer": "Keep it below 0.3%, the limit Gmail and Yahoo both set, and aim for below 0.1%, which Google recommends. If complaints or bounces rise on an inbox, pause that inbox and fix the list or the copy before sending more. Honour every opt-out within 2 days and never re-add those contacts."
     }
   ],
   "lp-accounting-cfo-firms": [

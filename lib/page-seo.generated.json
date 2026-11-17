@@ -291,6 +291,10 @@
   "title": "The 6 Claude Skills Guide | Myntmore",
   "description": "Six ready-to-use Claude skills for founders: content distribution, LinkedIn growth, lead gen, and more, with copy-paste prompts. Try them free."
  },
+ "/resources/guides/cold-email-infrastructure-setup": {
+  "title": "Cold Email Infrastructure Setup: Domains & DNS | Myntmore",
+  "description": "Set up cold email domains, Google Workspace inboxes, and SPF, DKIM, DMARC and MX records step by step, with copy-ready DNS records. Free guide."
+ },
  "/resources/guides/cold-email-tech-stack": {
   "title": "Cold Email Tech Stack & Sequence Behind $7K | Myntmore",
   "description": "The exact cold email tech stack (Clay, Smartlead, BounceBan) and 3-email sequence that got Myntmore an extra $7,000 in revenue. Copy the templates free."
@@ -334,6 +338,10 @@
  "/resources/guides/outbound-meme-prompt-kit": {
   "title": "The Outbound Meme Prompt Kit (Free) | Myntmore",
   "description": "Four copy-paste AI image prompts that turn cold outreach pain into memes people share: graveyard, reject and approve, astronaut and conspiracy board."
+ },
+ "/resources/guides/smartlead-setup": {
+  "title": "How to Set Up Smartlead for Cold Email | Myntmore",
+  "description": "Connect Google inboxes to Smartlead, set warm-up and sending limits, schedule a 5-step sequence and launch safely. The settings we use for clients."
  },
  "/resources/tools": {
   "title": "Free B2B Lead Generation Tools | Myntmore",

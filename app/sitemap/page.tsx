@@ -143,6 +143,8 @@ const GROUPS: SitemapGroup[] = [
       { label: "Leads on Autopilot: A Step-by-Step Framework", href: "/resources/guides/leads-on-autopilot-guide" },
       { label: "58 Meetings from 600 LinkedIn Connections", href: "/resources/guides/58-meetings-600-linkedin-connections" },
       { label: "The Cold Email Stack Behind an Extra $7,000", href: "/resources/guides/cold-email-tech-stack" },
+      { label: "Cold Email Infrastructure Setup", href: "/resources/guides/cold-email-infrastructure-setup" },
+      { label: "How to Set Up Smartlead", href: "/resources/guides/smartlead-setup" },
       { label: "5 Claude Prompts for Sales Calls", href: "/resources/guides/claude-sales-call-prompts" },
       { label: "LinkedIn Content-to-Calls Starter Kit", href: "/resources/guides/linkedin-content-to-calls-starter-kit" },
       { label: "The Outbound Meme Prompt Kit", href: "/resources/guides/outbound-meme-prompt-kit" },

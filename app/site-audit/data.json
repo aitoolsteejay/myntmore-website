@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T10:53:51.866Z",
+  "generatedAt": "2026-11-17T11:02:14.626Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 314,
-    "linked": 281,
+    "total": 316,
+    "linked": 283,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -333,7 +333,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 91,
+      "inboundCount": 92,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2318,7 +2318,7 @@
         "/resources/guides/58-meetings-600-linkedin-connections",
         "/resources/guides/80-us-meetings-ai-agents"
       ],
-      "inboundCount": 76,
+      "inboundCount": 77,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2559,11 +2559,11 @@
         "/resources/glossary/sender-reputation",
         "/resources/glossary/spam-complaint-rate",
         "/resources/glossary/spf-dkim-dmarc",
+        "/resources/guides/cold-email-infrastructure-setup",
         "/resources/guides/cold-email-tech-stack",
-        "lib/internal-paths.ts",
-        "/resources/blogs/b2b-lead-generation-for-corporate-gifting"
+        "lib/internal-paths.ts"
       ],
-      "inboundCount": 12,
+      "inboundCount": 13,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2575,11 +2575,12 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/outbound-meme-prompt-kit",
+        "/resources/guides/smartlead-setup",
         "/resources/blogs/ai-personalization-cold-outreach",
         "/resources/blogs",
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3791,10 +3792,11 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
         "/resources/guides/cold-email-tech-stack",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3883,7 +3885,7 @@
         "/resources/guides/cold-email-tech-stack",
         "/resources/guides/dos-and-donts-of-outreach"
       ],
-      "inboundCount": 17,
+      "inboundCount": 18,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3978,15 +3980,30 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/guides/cold-email-infrastructure-setup",
+      "title": "Cold Email Infrastructure Setup",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides",
+        "/resources/guides/smartlead-setup"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/guides/cold-email-tech-stack",
       "title": "Cold Email Tech Stack",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
         "/resources/guides",
+        "/resources/guides/smartlead-setup",
         "/resources/blogs/cold-email-sequence-templates"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4139,6 +4156,20 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/guides/smartlead-setup",
+      "title": "Smartlead Setup",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/guides"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/tools",
       "title": "Tools",
       "section": "resources",
@@ -4246,7 +4277,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 26,
+      "inboundCount": 28,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

@@ -148,6 +148,22 @@ const GUIDES = [
     accent: "#0077b5",
   },
   {
+    href: "/resources/guides/cold-email-infrastructure-setup",
+    tag: "Cold Email",
+    title: "Cold Email Infrastructure Setup: Domains, Inboxes & DNS",
+    excerpt: "Separate sending domains, Google Workspace inboxes, and copy-ready MX, SPF, DKIM and DMARC records, in the order we set them up for every client.",
+    readTime: "6 min read",
+    accent: "#EA580C",
+  },
+  {
+    href: "/resources/guides/smartlead-setup",
+    tag: "Cold Email",
+    title: "How to Set Up Smartlead for Cold Email",
+    excerpt: "Connect Google inboxes, warm them up for 14 to 21 days, cap sending at about 30 a day per inbox, and launch a 5-step sequence safely.",
+    readTime: "6 min read",
+    accent: "#EA580C",
+  },
+  {
     href: "/resources/guides/cold-email-tech-stack",
     tag: "Cold Email",
     title: "The Cold Email Stack Behind an Extra $7,000 in Revenue",

@@ -79,6 +79,8 @@ Featured results. Each is one anonymised client's result as stated on its case s
 - [Vibe Prospecting on Claude: What It Is + Setup](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting): What the Vibe Prospecting connector for Claude does (it pulls verified B2B leads into the chat), the 7-step setup and 10 prompts to copy.
 - [The 6 Claude Skills Guide](https://www.myntmore.com/resources/guides/claude-skills-guide): Six ready-to-use Claude skills for founders, covering content distribution, LinkedIn growth and lead generation, with copy-paste prompts.
 - [5 Claude Prompts for Sales Calls](https://www.myntmore.com/resources/guides/claude-sales-call-prompts): Copy-paste Claude prompts for meeting prep, discovery questions, objection prep, call openers and follow-up.
+- [Cold Email Infrastructure Setup](https://www.myntmore.com/resources/guides/cold-email-infrastructure-setup): Sending domains, Google Workspace inboxes and copy-ready MX, SPF, DKIM and DMARC records, step by step.
+- [How to Set Up Smartlead](https://www.myntmore.com/resources/guides/smartlead-setup): Connecting inboxes, 14 to 21 days of warm-up, about 30 emails per inbox per day, and a 5-step sequence.
 - [Glossary](https://www.myntmore.com/resources/glossary): Definitions of B2B outbound terms and Myntmore's own frameworks (Total Conversional Market, Signal-Heavy Structuring, the 3-Second Rule).
 
 ## Free Tools
@@ -189,6 +191,8 @@ Frameworks Myntmore named and defines; these pages are their original source.
 ### How-to and strategy
 - [How do I warm up a new domain for cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
 - [How many cold emails can I send per day per inbox?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
+- [How do I set up domains, inboxes and SPF, DKIM and DMARC for cold email?](https://www.myntmore.com/resources/guides/cold-email-infrastructure-setup)
+- [How do I set up Smartlead for cold email?](https://www.myntmore.com/resources/guides/smartlead-setup)
 - [How do I avoid the spam folder with cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
 - [How do I reply to a positive cold email response and book the meeting?](https://www.myntmore.com/resources/blogs/positive-reply-to-booked-meeting)
 - [How do I handle objections and replies to cold emails?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
