@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-14T09:12:18.614Z",
+  "generatedAt": "2026-11-17T10:46:58.537Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 312,
-    "linked": 279,
+    "total": 314,
+    "linked": 281,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -377,9 +377,12 @@
       "title": "Enwil",
       "section": "calendar",
       "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
+      "linkedFrom": [
+        "/enwilfernandes"
+      ],
+      "inboundCount": 1,
       "noindex": true,
+      "referencedIn": "app/enwilfernandes/page.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -402,7 +405,6 @@
       "linkedFrom": [],
       "inboundCount": 0,
       "noindex": true,
-      "referencedIn": "app/calendar/enwil/page.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -1947,6 +1949,7 @@
       "linkedFrom": [],
       "inboundCount": 0,
       "noindex": true,
+      "referencedIn": "app/components/ReelWidget.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -2064,6 +2067,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/lp/ecommerce-tech",
+      "title": "B2B Lead Generation for eCommerce Tech Companies",
+      "section": "lp",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/lp/financial-services",
       "title": "B2B Outbound for Financial Services Firms",
       "section": "lp",
@@ -2142,6 +2158,19 @@
         "/resources/blogs/relevance-beats-reach-b2b-outbound"
       ],
       "inboundCount": 6,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/lp/professional-services",
+      "title": "Lead Generation for Professional Services Firms",
+      "section": "lp",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4157,7 +4186,7 @@
         "/services/account-based-marketing",
         "/services/ai-lead-generation"
       ],
-      "inboundCount": 16,
+      "inboundCount": 17,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

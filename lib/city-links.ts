@@ -95,6 +95,8 @@ export function caseStudyIndustry(slug: string): CityIndustry | null {
 // Industry landing page (/lp/<slug>) -> industry. Pages not listed show every city.
 export const LANDING_PAGE_INDUSTRY: Record<string, CityIndustry> = {
   "saas-founders": "saas",
+  "ecommerce-tech": "ecommerce",
+  "professional-services": "professional",
   "agencies-it": "it",
   "manufacturers-exporters": "manufacturing",
   pharma: "pharma",

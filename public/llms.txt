@@ -99,6 +99,8 @@ AI-powered tools. Each explains, before sign-up, how your details and input are 
 One page per industry Myntmore runs outbound for: who the buyers are, how the campaign is run, and that industry's case studies and questions.
 - [IT Services & Agencies](https://www.myntmore.com/lp/agencies-it): Outbound for IT services, software development and digital agencies, including Indian firms winning clients in the US, UK and UAE.
 - [B2B SaaS](https://www.myntmore.com/lp/saas-founders): Cold email and LinkedIn outbound that books demos for B2B SaaS founders and sales teams.
+- [eCommerce Tech](https://www.myntmore.com/lp/ecommerce-tech): Outbound that books demos with D2C founders, operations heads and CRM leaders for Shopify apps, logistics, analytics, marketplace and retention platforms.
+- [Professional Services Firms](https://www.myntmore.com/lp/professional-services): LinkedIn content and partner-approved outreach for consulting, HR, tax, coaching and advisory firms. Not used for cold outreach by Indian law or CA practices, whose professional rules restrict soliciting clients.
 - [Recruitment & Staffing Firms](https://www.myntmore.com/lp/recruitment-firms): New client conversations and search mandates for recruitment, staffing and executive search firms.
 - [Manufacturers & Exporters](https://www.myntmore.com/lp/manufacturers-exporters): Reaching overseas procurement teams, importers and distributors for Indian manufacturers and exporters, between trade shows.
 - [Pharma](https://www.myntmore.com/lp/pharma): Outreach to buyers, sourcing teams and distribution partners for API manufacturers, CDMOs and formulation companies.
@@ -253,6 +255,8 @@ Frameworks Myntmore named and defines; these pages are their original source.
 
 ### Industries
 - [How can a SaaS founder get the first customers through outbound?](https://www.myntmore.com/lp/saas-founders)
+- [How do I get demos for a Shopify app beyond the app store?](https://www.myntmore.com/lp/ecommerce-tech)
+- [How do consulting firms get clients beyond referrals?](https://www.myntmore.com/lp/professional-services)
 - [How can a software development agency win clients in the US and UK?](https://www.myntmore.com/lp/agencies-it)
 - [How do contract manufacturers and CDMOs find new customers?](https://www.myntmore.com/lp/pharma)
 - [How do textile and engineering exporters find importers abroad?](https://www.myntmore.com/lp/manufacturers-exporters)
