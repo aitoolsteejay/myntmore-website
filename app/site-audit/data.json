@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:15:09.723Z",
+  "generatedAt": "2026-11-17T11:21:37.480Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 317,
@@ -2397,7 +2397,7 @@
     },
     {
       "path": "/resources/blogs/agency-vs-in-house",
-      "title": "Agency vs. In-House SDR: Which Should You Build?",
+      "title": "Outsourced SDR vs In-House SDR: Cost, Ramp & Risk",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2578,9 +2578,10 @@
         "/resources/guides/smartlead-setup",
         "/resources/blogs/ai-personalization-cold-outreach",
         "/resources/blogs",
+        "/resources/blogs/cold-email-vs-linkedin-outreach",
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2607,7 +2608,7 @@
     },
     {
       "path": "/resources/blogs/cold-email-vs-linkedin-outreach",
-      "title": "Cold Email vs. LinkedIn Outreach for B2B Pipeline",
+      "title": "Cold Email vs LinkedIn: 1-3% vs 35% Reply Rates",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3917,10 +3918,11 @@
         "/resources/guides/linkedin-content-to-calls-starter-kit",
         "/resources/guides",
         "lib/internal-paths.ts",
+        "/resources/blogs/cold-email-vs-linkedin-outreach",
         "/resources/blogs/linkedin-outreach-agency-vs-manual-prospecting",
         "/services/linkedin-outreach"
       ],
-      "inboundCount": 7,
+      "inboundCount": 8,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
