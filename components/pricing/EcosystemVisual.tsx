@@ -13,7 +13,17 @@
 
 export type EcosystemVariant = "orbit" | "flywheel";
 
-const GOLD = "#F5B731";
+const BLUE = "#3B82F6";
+const TEAL = "#14B8A6";
+const GREEN = "#10B981";
+// Chip colours: the same blue / green / teal the plan columns use; text uses the
+// darker readable shade of each (see lib/colors.ts).
+const CHIPS = [
+  { accent: BLUE, text: "#1D4ED8" },
+  { accent: TEAL, text: "#0F766E" },
+  { accent: GREEN, text: "#047857" },
+];
+const BAR = `linear-gradient(90deg, ${BLUE}, ${TEAL})`;
 const INK = "#0f0f14";
 const WORDS = ["People", "Content", "Opportunities"] as const;
 
@@ -22,19 +32,18 @@ const PATH = "circle(43% at 50% 50%)";
 
 const CSS = `
 .eco-stage{position:relative;width:100%;aspect-ratio:1/1;container-type:inline-size}
-.eco-ring{position:absolute;inset:7%;border-radius:50%;border:1.5px dashed rgba(245,183,49,.6)}
-.eco-glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(245,183,49,.22) 0%,rgba(245,183,49,0) 70%)}
-.eco-ping{position:absolute;inset:21%;border-radius:50%;border:1.5px solid rgba(245,183,49,.55);animation:eco-ping 3.6s ease-out infinite}
-.eco-ping.b{animation-delay:1.8s}
-.eco-hub{position:absolute;inset:21%;border-radius:50%;background:#fff;border:1.5px solid rgba(245,183,49,.6);box-shadow:0 24px 60px rgba(245,183,49,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3}
+.eco-ring{position:absolute;inset:7%;border-radius:50%;border:1.5px dashed rgba(20,184,166,.55)}
+.eco-glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.16) 0%,rgba(20,184,166,.08) 45%,rgba(20,184,166,0) 72%)}
+.eco-ping{position:absolute;inset:21%;border-radius:50%;border:1.5px solid rgba(59,130,246,.5);animation:eco-ping 3.6s ease-out infinite}
+.eco-ping.b{animation-delay:1.8s;border-color:rgba(20,184,166,.5)}
+.eco-hub{position:absolute;inset:21%;border-radius:50%;background:#fff;border:1.5px solid rgba(20,184,166,.55);box-shadow:0 24px 60px rgba(20,184,166,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3}
 .eco-chip{position:absolute;top:0;left:0;z-index:2;white-space:nowrap;font-weight:700;font-size:clamp(.68rem,2.3cqw,.95rem);line-height:1;padding:.55em 1em;border-radius:999px;background:#fff;border:1px solid #E8E2D9;color:${INK};box-shadow:0 6px 18px rgba(15,15,20,.06);offset-path:${PATH};offset-rotate:0deg}
-.eco-chip.gold{background:${GOLD};border-color:${GOLD}}
 .eco-orbit{animation:eco-orbit 12s linear infinite}
-.eco-dot{position:absolute;top:0;left:0;z-index:1;width:3.2cqw;height:3.2cqw;margin:0;border-radius:50%;background:${GOLD};box-shadow:0 0 0 .9cqw rgba(245,183,49,.25);offset-path:${PATH};offset-rotate:0deg;animation:eco-orbit 9s linear infinite}
+.eco-dot{position:absolute;top:0;left:0;z-index:1;width:3.2cqw;height:3.2cqw;margin:0;border-radius:50%;background:${TEAL};box-shadow:0 0 0 .9cqw rgba(20,184,166,.25);offset-path:${PATH};offset-rotate:0deg;animation:eco-orbit 9s linear infinite}
 .eco-lit{animation:eco-lit 9s linear infinite}
 @keyframes eco-orbit{from{offset-distance:0%}to{offset-distance:100%}}
 @keyframes eco-ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
-@keyframes eco-lit{0%,3%{background:${GOLD};border-color:${GOLD};transform:scale(1.12)}16%,100%{background:#fff;border-color:#E8E2D9;transform:scale(1)}}
+@keyframes eco-lit{0%,3%{background:${TEAL};border-color:${TEAL};color:#fff;transform:scale(1.12)}16%,100%{background:#fff;border-color:#E8E2D9;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.eco-ping,.eco-orbit,.eco-dot,.eco-lit{animation:none}}
 @supports not (offset-path:circle(10px at 50% 50%)){
   .eco-chip{offset-path:none}
@@ -59,8 +68,8 @@ export default function EcosystemVisual({ variant }: { variant: EcosystemVariant
           WORDS.map((word, i) => (
             <span
               key={word}
-              className={`eco-chip eco-orbit${i === 2 ? " gold" : ""}`}
-              style={{ offsetDistance: `${(i * 100) / 3}%`, animationDelay: `${-(i * 12) / 3}s` }}
+              className="eco-chip eco-orbit"
+              style={{ color: CHIPS[i].text, borderColor: CHIPS[i].accent, backgroundColor: `${CHIPS[i].accent}14`, offsetDistance: `${(i * 100) / 3}%`, animationDelay: `${-(i * 12) / 3}s` }}
             >
               {word}
             </span>
@@ -87,7 +96,7 @@ export default function EcosystemVisual({ variant }: { variant: EcosystemVariant
             <br />
             Growth ecosystem
           </p>
-          <div className="my-4 h-[3px] w-12 rounded-full" style={{ backgroundColor: GOLD }} />
+          <div className="my-4 h-[3px] w-12 rounded-full" style={{ background: BAR }} />
           <p className="font-semibold" style={{ color: "#4a4238", fontSize: "clamp(.78rem, 2.7cqw, 1.4rem)", lineHeight: 1.4 }}>
             Consistent presence.
             <br />

@@ -250,7 +250,7 @@ export default function PlanExplorer({
         </div>
       </div>
 
-      <div id="plans-section" className="relative max-w-6xl mx-auto pt-10 scroll-mt-40">
+      <div id="plans-section" className="relative max-w-6xl mx-auto pt-10 pb-14 scroll-mt-40">
         {view === "cards" ? (
           <div key="cards" className="animate-in fade-in duration-300">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -349,7 +349,7 @@ export default function PlanExplorer({
               <table className="w-full text-left border-collapse min-w-[760px]">
                 <thead>
                   <tr style={{ borderBottom: `1px solid ${BORDER}` }}>
-                    <th className="px-4 sm:px-6 py-4 w-[40%] text-left text-sm font-black uppercase tracking-widest sticky left-0 lg:top-[140px] z-30 bg-white" style={{ color: TEXT_MUTED, boxShadow: `0 1px 0 ${BORDER}` }}>
+                    <th className="px-4 sm:px-6 py-4 w-[40%] text-left text-sm font-black uppercase tracking-widest sticky left-0 lg:top-[140px] z-30 bg-white" style={{ color: "#000000", boxShadow: `0 1px 0 ${BORDER}` }}>
                       Feature
                     </th>
                     {TIERS.map((tier) => (
@@ -381,8 +381,8 @@ export default function PlanExplorer({
                       {section.rows.map((row) => (
                         <tr key={row.label} className="price-row" style={{ borderTop: `1px solid ${BORDER}` }}>
                           <td className="px-4 sm:px-6 py-5 bg-white max-lg:sticky max-lg:left-0">
-                            <div className="text-base font-semibold" style={{ color: "#3D3D3D" }}>{row.label}</div>
-                            <div className="text-sm mt-1 leading-snug" style={{ color: TEXT_MUTED }}>{row.info}</div>
+                            <div className="text-base font-semibold" style={{ color: "#000000" }}>{row.label}</div>
+                            <div className="text-sm mt-1 leading-snug" style={{ color: "#000000" }}>{row.info}</div>
                           </td>
                           {row.values.map((v, i) => (
                             <td key={i} className="px-4 py-5 text-center" style={{ backgroundColor: `${TIERS[i].accent}0d` }}>
@@ -395,8 +395,8 @@ export default function PlanExplorer({
                   ))}
                   <tr style={{ borderTop: `1px solid ${BORDER}` }}>
                     <td className="px-4 sm:px-6 py-5 bg-white max-lg:sticky max-lg:left-0">
-                      <div className="text-base font-semibold" style={{ color: "#3D3D3D" }}>Ready to scale your pipeline?</div>
-                      <div className="text-sm mt-1" style={{ color: TEXT_MUTED }}>A written service agreement is shared and signed before onboarding.</div>
+                      <div className="text-base font-semibold" style={{ color: "#000000" }}>Ready to scale your pipeline?</div>
+                      <div className="text-sm mt-1" style={{ color: "#000000" }}>A written service agreement is shared and signed before onboarding.</div>
                     </td>
                     {TIERS.map((tier) => (
                       <td key={tier.key} className="px-3 py-4 text-center" style={{ backgroundColor: `${tier.accent}0d` }}>
