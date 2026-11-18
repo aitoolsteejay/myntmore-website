@@ -8,17 +8,22 @@ export const metadata: Metadata = withPageSeo("/calendar/enwil", {
   description:
     "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Head of Sales at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks.",
   robots: { index: false, follow: false },
-  alternates: { canonical: "https://www.myntmore.com/calendar/enwil-li" },
+  alternates: { canonical: "https://www.myntmore.com/calendar/enwil" },
   openGraph: {
     ...OG_BASE,
     title: "Outbound Strategy Session | Enwil Fernandes | Myntmore",
     description:
       "Schedule a 30-minute 1-on-1 strategy call with Enwil Fernandes, Head of Sales at Myntmore. Review your B2B outbound systems, target ICP, and conversion bottlenecks.",
-    url: "https://www.myntmore.com/calendar/enwil-li",
+    url: "https://www.myntmore.com/calendar/enwil",
     images: ogImages("/calendar/enwil"),
   },
 });
 
 export default function EnwilShortCalendarPage() {
-  return <EnwilCalendarClient canonicalPath="/calendar/enwil-li" />;
+  return (
+    <EnwilCalendarClient
+      canonicalPath="/calendar/enwil"
+      embedUrl="https://meetingwithteejay.zohobookings.com/portal-embed#/4203790000005122002"
+    />
+  );
 }

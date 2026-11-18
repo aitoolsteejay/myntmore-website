@@ -1,0 +1,63 @@
+{
+  "slug": "uae",
+  "keywords": [
+    "how to find distributors in uae",
+    "find pharma distributors in uae",
+    "how to find importers in uae from india",
+    "b2b lead generation uae",
+    "export to uae b2b buyers",
+    "distributor search uae for indian manufacturers",
+    "employee benefits insurance leads uae",
+    "managed it services leads uae"
+  ],
+  "heroLead": "Find distributors and buyers in",
+  "heroUnderlined": "the UAE",
+  "intro": "Four outbound campaigns in the UAE: Indian manufacturers building a distributor shortlist, and UAE brokers and IT providers booking meetings with local decision-makers. Every number below comes from a real campaign.",
+  "audiences": [
+    {
+      "icon": "🚢",
+      "title": "Companies entering the UAE",
+      "body": "Indian manufacturers and pharma companies that need an importer or distributor with the right customer coverage, rather than selling to end buyers one by one."
+    },
+    {
+      "icon": "🏙️",
+      "title": "Firms already based in the UAE",
+      "body": "Brokers, IT providers and service firms that need earlier meetings with HR, finance and operations heads at UAE companies."
+    }
+  ],
+  "playsTitle": "What worked in the UAE",
+  "plays": [
+    {
+      "tag": "Pharma · Market entry",
+      "title": "Shortlist distributors instead of blasting them",
+      "body": "An Indian formulation company approached UAE distributors and importers about portfolio fit. Follow-ups asked about customer segments, existing product lines and support for market entry, so only real fits reached a meeting.",
+      "results": ["12 partner meetings", "3 distributors shortlisted", "20 positive replies"],
+      "href": "/case-studies/pharma-uae-distribution-partners"
+    },
+    {
+      "tag": "Insurance · Employee benefits",
+      "title": "Reach employers before renewal, not during it",
+      "body": "A UAE brokerage kept arriving after benefits renewals were decided. Outreach to HR directors, finance heads and owners at employers with 50 to 500 staff established renewal timing first.",
+      "results": ["20 meetings booked", "7 benefits reviews agreed", "4 quotation exercises"],
+      "href": "/case-studies/insurance-uae-employee-benefits"
+    },
+    {
+      "tag": "Manufacturing · Distribution",
+      "title": "Qualify partners on after-sales, not just interest",
+      "body": "An Indian commercial kitchen equipment maker had enquiries from distributors with uneven coverage. Follow-ups checked customer segments, installation support and after-sales capability before any shortlist.",
+      "results": ["14 meetings booked", "4 distributors shortlisted", "2 commercial discussions"],
+      "href": "/case-studies/manufacturers-exporters-uae-kitchen-equipment"
+    }
+  ],
+  "rulesTitle": "The rules",
+  "rulesBody": "The UAE has a federal Personal Data Protection Law, and free zones such as DIFC and ADGM run their own data protection rules. We contact business decision-makers only, say clearly who is writing and why, and stop at the first opt-out. Check specifics with counsel before scaling.",
+  "timingTitle": "Timing",
+  "timingBody": "UAE time is 1.5 hours behind India. Messages go out on weekday mornings UAE time, and we avoid Friday afternoons, when many companies keep shorter hours.",
+  "industryLinks": [
+    { "label": "Pharma companies", "href": "/lp/pharma" },
+    { "label": "Manufacturers & exporters", "href": "/lp/manufacturers-exporters" },
+    { "label": "Insurance brokers", "href": "/lp/insurance" },
+    { "label": "IT services & agencies", "href": "/lp/agencies-it" }
+  ],
+  "cities": "uae"
+}

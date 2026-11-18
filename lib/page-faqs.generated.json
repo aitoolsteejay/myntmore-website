@@ -603,6 +603,24 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "guide-cold-email-infrastructure-setup": [
+    {
+      "question": "How many domains and inboxes do I need for cold email?",
+      "answer": "Work back from your daily volume. Each inbox should send about 30 live emails a day, and we put 4 inboxes on each domain. Our standard setup is 10 domains with 4 inboxes each, 40 inboxes sending up to about 1,200 emails a day. A smaller campaign needs fewer domains."
+    },
+    {
+      "question": "Can I send cold email from my main domain?",
+      "answer": "You shouldn't. If a campaign draws spam complaints or bounces, the damage lands on the domain your team uses for clients, invoices and hiring. Send from secondary domains that are close variations of your brand, redirect them to your main website, and keep your main domain for everyday email."
+    },
+    {
+      "question": "How long does DNS setup take before I can send?",
+      "answer": "DNS records usually publish within minutes to a few hours and can take up to 48 hours. That is only the start: each new inbox then needs 14 to 21 days of warm-up before its first live cold email. Plan for about three weeks from buying domains to your first campaign."
+    },
+    {
+      "question": "Do I need DMARC for cold email?",
+      "answer": "Set it up on every sending domain. Gmail requires DMARC from senders who send more than 5,000 messages a day to Gmail accounts, and requires SPF or DKIM from everyone. Start with p=none to monitor, read the reports, and move to p=quarantine once all your legitimate mail passes."
+    }
+  ],
   "guide-how-to-choose-an-outbound-agency": [
     {
       "question": "How long should an outbound agency's minimum contract be?",
@@ -641,6 +659,24 @@
     {
       "question": "Should I pay per lead or pay a retainer?",
       "answer": "Pay per lead suits you when you only want contacts and will run the outreach yourself. A retainer or per-meeting model suits you when you want the agency to run the whole system, because it rewards them for testing, fixing deliverability and improving copy instead of maximising the number of contacts delivered."
+    }
+  ],
+  "guide-smartlead-setup": [
+    {
+      "question": "How many emails per day should each Smartlead inbox send?",
+      "answer": "About 30 live emails per inbox per day, and stay under 40. Get more volume by adding inboxes rather than pushing each one harder. Our standard 40 inboxes send up to about 1,200 emails a day at that rate, with warm-up still running alongside the campaign on every inbox."
+    },
+    {
+      "question": "How long should Smartlead warm-up run before I send?",
+      "answer": "Give each new inbox 14 to 21 days of warm-up before its first live email. Start at 3 to 5 warm-up emails a day and ramp up by 2 to 3 a day to a steady 20 to 30. Keep warm-up running after the campaign starts, so the inbox keeps a steady record of normal engagement."
+    },
+    {
+      "question": "Should I turn on open tracking in Smartlead?",
+      "answer": "Only with a custom tracking domain, because shared tracking links can hurt deliverability. Many teams turn open tracking off and judge campaigns on replies and meetings instead, since opens are unreliable anyway. Across our campaigns, 1% to 3% of prospects reply and at least 20% of those replies are positive."
+    },
+    {
+      "question": "What spam complaint rate is safe for cold email?",
+      "answer": "Keep it below 0.3%, the limit Gmail and Yahoo both set, and aim for below 0.1%, which Google recommends. If complaints or bounces rise on an inbox, pause that inbox and fix the list or the copy before sending more. Honour every opt-out within 2 days and never re-add those contacts."
     }
   ],
   "lp-accounting-cfo-firms": [
@@ -727,6 +763,32 @@
     {
       "question": "Will our client ever see Myntmore's name anywhere",
       "answer": "No. Every report, dashboard, email signature and outreach touchpoint is branded as yours. We stay invisible to your client unless you choose to introduce us, for example on a joint strategy call. Your client relationship, and the credit for the results, stays entirely with your agency."
+    }
+  ],
+  "lp-ecommerce-tech": [
+    {
+      "question": "How do I get demos for a Shopify app beyond the app store?",
+      "answer": "Reach the merchants directly. App store listings mostly bring small stores on free plans, so we pick established brands by size, category and growth stage and contact the founder or the person who owns the problem your app solves. For one Shopify app company this booked 27 product demos, with a 39% LinkedIn connection acceptance rate."
+    },
+    {
+      "question": "Who should we contact at a D2C brand: the founder or someone else?",
+      "answer": "It depends on what your product fixes. Logistics and fulfilment tools sell to operations heads and supply chain managers, retention and CRM platforms to CRM or lifecycle leads, and analytics products to growth and revenue leaders. Founders sign at smaller brands. We split the list by role and write a separate message for each group."
+    },
+    {
+      "question": "Our product is technical. How do you explain it to non-technical buyers?",
+      "answer": "We translate features into the business result the buyer already tracks, such as acquisition cost, repeat purchase, delivery times or marketplace sales. For an eCommerce analytics platform with technical positioning, outreach and founder content built around those outcomes booked 15 qualified sales meetings and 3 late-stage product opportunities."
+    },
+    {
+      "question": "Do you sell to shoppers or run consumer marketing?",
+      "answer": "No. We only run B2B outreach to the businesses that would buy your product: D2C brands, marketplace sellers and online retailers. We don't run ads, consumer email or marketing to shoppers. Every contact is a founder, operations, CRM or growth leader at a brand, reached through cold email, LinkedIn and your founder's content."
+    },
+    {
+      "question": "How soon will we see the first demos?",
+      "answer": "Campaigns usually go live about 18 days after onboarding, and first qualified conversations typically come in weeks 3 to 4. In one eCommerce SaaS campaign, 28 qualified meetings were booked within 6 weeks. Timing is not guaranteed; it depends on your market, your list and how quickly brands review new tools."
+    },
+    {
+      "question": "What does pricing and commitment look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We book the demos; your team runs them and closes the deal."
     }
   ],
   "lp-financial-services": [
@@ -867,6 +929,32 @@
       "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
     }
   ],
+  "lp-professional-services": [
+    {
+      "question": "How do consulting firms get clients beyond referrals?",
+      "answer": "By being visible to the right founders and business heads before they need help, then reaching them when they do. We position the lead partner on LinkedIn around practical insight and pair it with targeted, partner-approved outreach. For one management consulting firm this led to 16 qualified conversations and 4 potential retained engagements."
+    },
+    {
+      "question": "Is this LinkedIn content, outreach, or both?",
+      "answer": "Usually both. Content makes prospects recognise you and trust your thinking; outreach starts the conversation with the specific people you want to work with. Some firms start with content alone: one referral-dependent founder tripled inbound enquiries in 90 days from a rebuilt profile and consistent posting."
+    },
+    {
+      "question": "Can a law firm or CA practice in India use this?",
+      "answer": "Not for cold outreach. Bar Council of India rules restrict advocates from soliciting work, and ICAI's Code of Ethics restricts chartered accountants in practice, so we don't run outreach for Indian law or CA practices' own services. Consulting, HR, coaching and tax advisory firms that can market directly are a fit. Every firm should confirm its professional body's rules."
+    },
+    {
+      "question": "Will outreach under a partner's name sound like a sales pitch?",
+      "answer": "No. One onboarding call captures how your partners describe their work, and a partner approves every message before it goes out. Messages open on a situation the prospect is likely facing, such as growth, restructuring or a tax decision, not a list of services. No client names appear without written permission."
+    },
+    {
+      "question": "How long before we see the first consultations?",
+      "answer": "Outreach campaigns usually go live about 18 days after onboarding, and first qualified conversations typically follow in weeks 3 to 4. Content builds more slowly; inbound from LinkedIn usually needs a few months of consistent posting. Timing is not guaranteed and depends on your market and how long your buyers take to choose an advisor."
+    },
+    {
+      "question": "What does pricing and commitment look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough activity to judge results. After that it runs month to month with 30 days' notice, with no annual contract. Proposals, pricing and the advice you give clients always stay with your firm; we book the conversations."
+    }
+  ],
   "lp-recruitment-firms": [
     {
       "question": "How do executive search firms win new mandates?",
@@ -925,6 +1013,114 @@
     {
       "question": "We already tried outbound once and it did not work. Why would this be different?",
       "answer": "Most failed outbound comes down to generic targeting and copy that reads like everyone else's. We rebuild it around specific buying signals and messaging tailored to your product, then iterate weekly instead of setting it and walking away. We also review what you ran before, so we don't repeat it."
+    }
+  ],
+  "market-france": [
+    {
+      "question": "How do Indian manufacturers find buyers in France?",
+      "answer": "Map French companies whose portfolios match your capability, then contact the sourcing or development team directly. A tablet and capsule maker reached French pharma sourcing and supply chain leads this way and held 18 buyer meetings with 6 requests for quotation. A carton maker reaching cosmetics brands booked 18 meetings."
+    },
+    {
+      "question": "Should outreach to French buyers be in French?",
+      "answer": "Where you can, yes. Our pharma contract manufacturing campaign wrote to French sourcing teams in both French and English and received 36 positive replies. Many French procurement teams work in English, but a message in their own language shows the effort and makes replying easier for anyone less comfortable writing in English."
+    },
+    {
+      "question": "Is B2B cold email allowed in France?",
+      "answer": "Yes, within GDPR. France's regulator, the CNIL, accepts B2B email prospecting without prior consent when the message relates to the recipient's job, the recipient is told how their data is used and they can opt out easily. This is general information, not legal advice, so confirm specifics with counsel."
+    },
+    {
+      "question": "Can outbound replace trade shows for European buyers?",
+      "answer": "It works best alongside them. Exhibitions give you a few days a year with buyers; outbound keeps conversations going in between and reaches buyers who don't attend. Our French manufacturer campaigns turned outreach into quotation and sample requests without waiting for the next show. Campaigns usually go live about 18 days after onboarding."
+    }
+  ],
+  "market-india": [
+    {
+      "question": "How do B2B service firms in India get clients beyond referrals?",
+      "answer": "Reach the decision-makers when they are reviewing vendors. A payroll firm targeting companies with 100 to 500 employees contacted HR heads, finance controllers and founders, then asked about their current process and review timing. It booked 24 meetings, which led to 7 detailed requirements and 4 proposal requests."
+    },
+    {
+      "question": "Can outbound support a pharma field force in India?",
+      "answer": "Yes, where representatives have limited coverage. A dermatology company launching a product used a city-wise list of dermatologists across eight cities and medical-team-approved webinar invitations. It drew 72 webinar attendees, 24 medical-team discussions and 18 field visits agreed. Every message was approved by the client's medical team first."
+    },
+    {
+      "question": "Is cold email legal in India under the DPDP Act?",
+      "answer": "India's Digital Personal Data Protection Act, 2023 centres on notice and consent, and its rules are still being phased in. Business outreach to professionals in their work role carries a different risk than consumer marketing. TRAI rules separately govern commercial calls and SMS. This is general information, not legal advice; confirm specifics with counsel."
+    },
+    {
+      "question": "Do you run campaigns in specific Indian cities?",
+      "answer": "Yes. Lists are built city by city, so a campaign can focus on the cities where your buyers are, or where your own team has gaps. We have pages for 14 Indian cities, from Mumbai and Bengaluru to Coimbatore and Indore, each covering the local industries we write for and what outbound looks like there."
+    }
+  ],
+  "market-singapore": [
+    {
+      "question": "How do service firms in Singapore get clients beyond referrals?",
+      "answer": "Open on a specific need instead of a list of services. A Singapore outsourced CFO firm contacted founders and finance leaders about needs such as monthly management reports or senior finance support, then qualified on their current setup. The campaign booked 19 meetings, led to 6 needs assessments and 3 proposal requests."
+    },
+    {
+      "question": "Can an Indian pharma company find licensing partners in Singapore?",
+      "answer": "Yes. An Indian specialty pharma developer reached business development and licensing leaders at Singapore-based pharma businesses and regional teams with an approved, non-confidential product summary. It led to 10 licensing meetings and 4 confidential portfolio reviews. Confidentiality agreements and commercial terms stayed with the client once discussions progressed."
+    },
+    {
+      "question": "What rules apply to cold email in Singapore?",
+      "answer": "Singapore's Personal Data Protection Act governs how personal data is collected and used, and the Spam Control Act covers unsolicited commercial email sent in bulk. We keep volumes low, contact business decision-makers only and honour every opt-out. This is general information, not legal advice, so confirm specifics with counsel before scaling."
+    },
+    {
+      "question": "How soon will a Singapore campaign book meetings?",
+      "answer": "Campaigns usually go live about 18 days after onboarding, and first qualified conversations typically come in weeks 3 to 4. Singapore is 2.5 hours ahead of India, so messages go out on Singapore weekday mornings and meetings fit an Indian working day. Our four Singapore campaigns booked between 10 and 19 meetings each."
+    }
+  ],
+  "market-uae": [
+    {
+      "question": "How do Indian manufacturers find distributors in the UAE?",
+      "answer": "Approach distributors and importers directly about portfolio fit, then shortlist on coverage. For an Indian formulation company, outreach to owners and business development heads at UAE distributors led to 12 partner meetings and 3 distributors shortlisted. Follow-ups covered customer segments, existing product lines and support for market entry, so only real fits reached a meeting."
+    },
+    {
+      "question": "Do you work with companies based in the UAE, or only exporters?",
+      "answer": "Both. Two of our four UAE campaigns were for companies selling into the UAE, and two were for firms working there: a brokerage that booked 20 meetings with employers before their benefits renewal, and an IT provider that booked 16 meetings with multi-office firms. For UAE-based lead generation by city, see our Dubai and Abu Dhabi pages."
+    },
+    {
+      "question": "Is cold email allowed in the UAE?",
+      "answer": "B2B outreach to business decision-makers is common in the UAE, but data protection rules apply. The UAE has a federal Personal Data Protection Law, and free zones such as DIFC and ADGM have their own. We contact business roles only, say who is writing and why, and stop at the first opt-out. Confirm specifics with counsel."
+    },
+    {
+      "question": "How long before the first UAE meetings?",
+      "answer": "Campaigns usually go live about 18 days after onboarding, and first qualified conversations typically come in weeks 3 to 4. Distributor searches take longer to close, because each partner is qualified on coverage and after-sales capability before a shortlist. Timing is not guaranteed and depends on your product and market."
+    }
+  ],
+  "market-united-kingdom": [
+    {
+      "question": "How can an Indian outsourcing firm win UK clients?",
+      "answer": "Approach UK firms as partners, not just as end clients. A bookkeeping firm that got uneven results from contacting individual businesses switched to messages offering overflow capacity to managing partners at UK accounting practices. That campaign booked 15 meetings, led to 5 delivery-model reviews and 2 paid pilots agreed."
+    },
+    {
+      "question": "Is B2B cold email allowed under UK GDPR?",
+      "answer": "Yes, with conditions. UK GDPR allows it on a legitimate interest basis when the message is relevant to the recipient's role. Under PECR, emails to corporate addresses don't need prior consent but must identify the sender and offer an opt-out. Sole traders and some partnerships count as individuals. This is general information, not legal advice."
+    },
+    {
+      "question": "Does outbound work in small, specialist UK markets?",
+      "answer": "It can, if the list is narrow. For a UK pharma company in a small specialised market, we narrowed the ideal customer profile and mapped high-fit accounts instead of sending at volume. Within 4 months it went from 3 to over 20 qualified meetings a month, with positive responses rising from 5% to 35%."
+    },
+    {
+      "question": "What time do you send to UK buyers?",
+      "answer": "The UK is 4.5 hours behind India in summer and 5.5 hours in winter. Messages go out on UK weekday mornings, so replies arrive during the Indian working afternoon and meetings fit both teams' days. Campaigns usually go live about 18 days after onboarding, with first conversations in weeks 3 to 4."
+    }
+  ],
+  "market-united-states": [
+    {
+      "question": "How can an Indian company get US clients without marketplaces?",
+      "answer": "Reach the decision-makers directly with one relevant capability. An Indian software firm we worked with contacted CTOs, engineering heads and operations leaders at mid-sized US retail and logistics companies, and booked 24 meetings that led to 7 shared project requirements and 4 proposal requests, without relying on referrals or project marketplaces."
+    },
+    {
+      "question": "Is cold email to US companies legal?",
+      "answer": "Yes. B2B cold email in the US falls under the CAN-SPAM Act, which doesn't require prior consent. Every email needs honest sender and subject lines, a physical postal address and a working opt-out that you honour within 10 business days. This is general information, not legal advice, so confirm specifics with counsel."
+    },
+    {
+      "question": "How do you handle US time zones from India?",
+      "answer": "US time zones are 9.5 to 13.5 hours behind India, so messages are scheduled for each recipient's morning in their own time zone. Meetings are booked into US working hours, which usually means evening calls for an India-based team. We agree the calling window with you before launch so nobody is surprised."
+    },
+    {
+      "question": "How soon do US campaigns produce meetings?",
+      "answer": "Campaigns usually go live about 18 days after onboarding, and first qualified conversations typically come in weeks 3 to 4, with meeting volume steadier after 6 to 8 weeks. Our four US campaigns booked between 16 and 24 meetings each. Results are not guaranteed and depend on your offer and buyers."
     }
   ],
   "service-account-based-marketing": [
@@ -1143,6 +1339,24 @@
     {
       "question": "What's the typical pipeline impact?",
       "answer": "Clients who switch from bought lists to signal-led outreach typically see 3–5x improvement in pipeline conversion within 90 days. The exact number depends on how well-defined your ICP is and how quickly your team adopts signal-triggered outreach. We build in a calibration period of 30 days to tune the scoring model to your market."
+    }
+  ],
+  "tool-cold-email-inbox-calculator": [
+    {
+      "question": "How many inboxes do I need for cold email?",
+      "answer": "Divide the emails you want to send each sending day by about 30, the most we send from one inbox per day. For 5,000 new prospects a month on a 5-email sequence, that is about 1,150 emails a day across roughly 39 inboxes. Our standard client setup is 40 inboxes on 10 domains."
+    },
+    {
+      "question": "How many inboxes should I put on one domain?",
+      "answer": "We put 4 inboxes on each sending domain. More inboxes per domain means one domain carries more of your volume, so a reputation problem on that domain affects more of your sending. Spreading inboxes across more domains, plus a spare domain or two, keeps any single problem small."
+    },
+    {
+      "question": "How many cold emails can one inbox send per day?",
+      "answer": "Keep live sending at about 30 emails per inbox per day and stay under 40. Get more volume by adding inboxes rather than pushing each one harder. Start lower in the first week of live sending, and raise the limit as replies come in and bounces stay low."
+    },
+    {
+      "question": "How long before new inboxes can send cold email?",
+      "answer": "Plan for 14 to 21 days of warm-up after the domains and DNS records are set up. Warm-up starts at 3 to 5 emails a day per inbox and ramps to 20 to 30. Keep warm-up running after the campaign starts. In total, expect about three weeks from buying domains to your first live email."
     }
   ],
   "tool-linkedin-hook-grader": [

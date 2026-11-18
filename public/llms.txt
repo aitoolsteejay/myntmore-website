@@ -79,12 +79,15 @@ Featured results. Each is one anonymised client's result as stated on its case s
 - [Vibe Prospecting on Claude: What It Is + Setup](https://www.myntmore.com/resources/guides/how-to-set-up-vibe-prospecting): What the Vibe Prospecting connector for Claude does (it pulls verified B2B leads into the chat), the 7-step setup and 10 prompts to copy.
 - [The 6 Claude Skills Guide](https://www.myntmore.com/resources/guides/claude-skills-guide): Six ready-to-use Claude skills for founders, covering content distribution, LinkedIn growth and lead generation, with copy-paste prompts.
 - [5 Claude Prompts for Sales Calls](https://www.myntmore.com/resources/guides/claude-sales-call-prompts): Copy-paste Claude prompts for meeting prep, discovery questions, objection prep, call openers and follow-up.
+- [Cold Email Infrastructure Setup](https://www.myntmore.com/resources/guides/cold-email-infrastructure-setup): Sending domains, Google Workspace inboxes and copy-ready MX, SPF, DKIM and DMARC records, step by step.
+- [How to Set Up Smartlead](https://www.myntmore.com/resources/guides/smartlead-setup): Connecting inboxes, 14 to 21 days of warm-up, about 30 emails per inbox per day, and a 5-step sequence.
 - [Glossary](https://www.myntmore.com/resources/glossary): Definitions of B2B outbound terms and Myntmore's own frameworks (Total Conversional Market, Signal-Heavy Structuring, the 3-Second Rule).
 
 ## Free Tools
 AI-powered tools. Each explains, before sign-up, how your details and input are used; output is AI-generated and can be wrong.
 - [ROI Calculator](https://www.myntmore.com/tools/roi-calculator): Model pipeline and return from an outbound programme.
 - [Cold Email ROI Calculator](https://www.myntmore.com/tools/cold-email-roi-calculator): Estimate meetings, pipeline and ROI from cold email volume, checked against 2026 benchmark rates.
+- [Cold Email Inbox & Domain Calculator](https://www.myntmore.com/tools/cold-email-inbox-calculator): Domains, inboxes, emails per inbox per day and go-live date for a target sending volume, using about 30 sends per inbox per day, 4 inboxes per domain and 14 to 21 days of warm-up.
 - [ICP Builder](https://www.myntmore.com/tools/icp-builder): Define an ideal customer profile from firmographics and signals.
 - [LinkedIn Profile Optimizer](https://www.myntmore.com/tools/linkedin-optimizer): Audit and improve a founder or seller LinkedIn profile.
 - [DM Angle Generator](https://www.myntmore.com/tools/dm-angle-generator): Generate psychology-aligned DM opening angles for outreach.
@@ -99,6 +102,8 @@ AI-powered tools. Each explains, before sign-up, how your details and input are 
 One page per industry Myntmore runs outbound for: who the buyers are, how the campaign is run, and that industry's case studies and questions.
 - [IT Services & Agencies](https://www.myntmore.com/lp/agencies-it): Outbound for IT services, software development and digital agencies, including Indian firms winning clients in the US, UK and UAE.
 - [B2B SaaS](https://www.myntmore.com/lp/saas-founders): Cold email and LinkedIn outbound that books demos for B2B SaaS founders and sales teams.
+- [eCommerce Tech](https://www.myntmore.com/lp/ecommerce-tech): Outbound that books demos with D2C founders, operations heads and CRM leaders for Shopify apps, logistics, analytics, marketplace and retention platforms.
+- [Professional Services Firms](https://www.myntmore.com/lp/professional-services): LinkedIn content and partner-approved outreach for consulting, HR, tax, coaching and advisory firms. Not used for cold outreach by Indian law or CA practices, whose professional rules restrict soliciting clients.
 - [Recruitment & Staffing Firms](https://www.myntmore.com/lp/recruitment-firms): New client conversations and search mandates for recruitment, staffing and executive search firms.
 - [Manufacturers & Exporters](https://www.myntmore.com/lp/manufacturers-exporters): Reaching overseas procurement teams, importers and distributors for Indian manufacturers and exporters, between trade shows.
 - [Pharma](https://www.myntmore.com/lp/pharma): Outreach to buyers, sourcing teams and distribution partners for API manufacturers, CDMOs and formulation companies.
@@ -107,6 +112,15 @@ One page per industry Myntmore runs outbound for: who the buyers are, how the ca
 - [Insurance Brokers](https://www.myntmore.com/lp/insurance): Reaching HR heads and CFOs at companies near their group insurance renewal window.
 - [Founders Raising Capital](https://www.myntmore.com/lp/fundraising): Investor lists and outreach to funds whose thesis matches the startup.
 - [Agency Partner Program](https://www.myntmore.com/lp/agency-partners): White-label outbound that marketing agencies resell to their own clients under their brand.
+
+## Markets
+One page per country with two or more campaigns: the case studies there, what worked, the outreach rules and timing, and common questions.
+- [UAE](https://www.myntmore.com/case-studies/markets/uae): Indian manufacturers and pharma companies shortlisting UAE distributors, and UAE brokers and IT providers booking local meetings.
+- [United States](https://www.myntmore.com/case-studies/markets/united-states): Indian software and API companies and US-focused recruiters booking 16 to 24 meetings each with US buyers; CAN-SPAM and time zones.
+- [United Kingdom](https://www.myntmore.com/case-studies/markets/united-kingdom): UK pharma, accounting-practice partnerships and engineering recruitment; UK GDPR and PECR.
+- [Singapore](https://www.myntmore.com/case-studies/markets/singapore): Singapore finance, insurance and staffing firms, and an Indian pharma developer opening licensing talks.
+- [France](https://www.myntmore.com/case-studies/markets/france): Indian pharma and packaging manufacturers reaching French buyers, with outreach in French and English; GDPR and CNIL.
+- [India](https://www.myntmore.com/case-studies/markets/india): Payroll, insurance partnership and doctor outreach campaigns inside India; DPDP Act and TRAI.
 
 ## Locations
 Myntmore serves B2B clients across India and in the UAE. City pages cover local market context, not separate offices.
@@ -162,7 +176,8 @@ Common questions from B2B buyers, each linked to the page on this site that answ
 - [What is appointment setting?](https://www.myntmore.com/resources/glossary/appointment-setting)
 - [What is a go-to-market (GTM) strategy?](https://www.myntmore.com/resources/glossary/gtm-strategy)
 - [What is CAN-SPAM and does it apply to cold email?](https://www.myntmore.com/resources/glossary/can-spam-act)
-- [What does "cold reply" mean in sales?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
+- [What does "cold reply" mean?](https://www.myntmore.com/resources/glossary/cold-reply)
+- [How do I respond to a cold email reply?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
 - [What is the difference between inbound and outbound marketing?](https://www.myntmore.com/resources/glossary/inbound-vs-outbound)
 - [What is buyer engagement in B2B sales?](https://www.myntmore.com/resources/glossary/buyer-engagement)
 - [What is a hot lead in B2B outbound?](https://www.myntmore.com/resources/glossary/hot-lead)
@@ -178,6 +193,8 @@ Frameworks Myntmore named and defines; these pages are their original source.
 ### How-to and strategy
 - [How do I warm up a new domain for cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
 - [How many cold emails can I send per day per inbox?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
+- [How do I set up domains, inboxes and SPF, DKIM and DMARC for cold email?](https://www.myntmore.com/resources/guides/cold-email-infrastructure-setup)
+- [How do I set up Smartlead for cold email?](https://www.myntmore.com/resources/guides/smartlead-setup)
 - [How do I avoid the spam folder with cold email?](https://www.myntmore.com/resources/blogs/cold-email-deliverability-guide)
 - [How do I reply to a positive cold email response and book the meeting?](https://www.myntmore.com/resources/blogs/positive-reply-to-booked-meeting)
 - [How do I handle objections and replies to cold emails?](https://www.myntmore.com/resources/blogs/handling-cold-email-replies)
@@ -230,6 +247,7 @@ Frameworks Myntmore named and defines; these pages are their original source.
 - [Free tool to audit and improve a LinkedIn profile for sales](https://www.myntmore.com/tools/linkedin-optimizer)
 - [Free ROI calculator for an outbound programme](https://www.myntmore.com/tools/roi-calculator)
 - [Free cold email ROI calculator](https://www.myntmore.com/tools/cold-email-roi-calculator)
+- [How many domains and inboxes do I need for cold email?](https://www.myntmore.com/tools/cold-email-inbox-calculator)
 - [Free ICP builder tool](https://www.myntmore.com/tools/icp-builder)
 - [Free sales battle card generator](https://www.myntmore.com/tools/battle-card-generator)
 - [Free B2B case study generator](https://www.myntmore.com/tools/case-study-generator)
@@ -253,6 +271,8 @@ Frameworks Myntmore named and defines; these pages are their original source.
 
 ### Industries
 - [How can a SaaS founder get the first customers through outbound?](https://www.myntmore.com/lp/saas-founders)
+- [How do I get demos for a Shopify app beyond the app store?](https://www.myntmore.com/lp/ecommerce-tech)
+- [How do consulting firms get clients beyond referrals?](https://www.myntmore.com/lp/professional-services)
 - [How can a software development agency win clients in the US and UK?](https://www.myntmore.com/lp/agencies-it)
 - [How do contract manufacturers and CDMOs find new customers?](https://www.myntmore.com/lp/pharma)
 - [How do textile and engineering exporters find importers abroad?](https://www.myntmore.com/lp/manufacturers-exporters)

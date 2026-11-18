@@ -1,0 +1,62 @@
+{
+  "slug": "singapore",
+  "keywords": [
+    "b2b lead generation singapore",
+    "lead generation agency singapore",
+    "how to get clients in singapore",
+    "pharma licensing partners singapore",
+    "outsourced cfo leads singapore",
+    "staffing agency business development singapore",
+    "insurance broker leads singapore"
+  ],
+  "heroLead": "Book meetings with businesses in",
+  "heroUnderlined": "Singapore",
+  "intro": "Four outbound campaigns in Singapore: three Singapore firms in finance, insurance and staffing, and an Indian pharma developer opening licensing talks. Every number below comes from a real campaign.",
+  "audiences": [
+    {
+      "icon": "🇸🇬",
+      "title": "Singapore-based firms",
+      "body": "Outsourced finance, insurance broking and staffing firms that rely on referrals and want earlier conversations with business owners, finance heads and HR leaders."
+    },
+    {
+      "icon": "🌏",
+      "title": "Companies reaching Singapore and its regional teams",
+      "body": "Indian companies looking for licensing, distribution or commercial partners among Singapore-based businesses and the regional teams based there."
+    }
+  ],
+  "playsTitle": "What worked in Singapore",
+  "plays": [
+    {
+      "tag": "Outsourced CFO · Singapore",
+      "title": "Open on a specific finance need",
+      "body": "A Singapore CFO and accounting firm contacted founders and finance leaders about specific needs, such as monthly management reports or senior finance support, instead of a service list.",
+      "results": ["19 meetings booked", "6 needs assessments", "3 proposals requested"],
+      "href": "/case-studies/financial-services-singapore-outsourced-cfo"
+    },
+    {
+      "tag": "Pharma · Licensing",
+      "title": "Share a non-confidential summary first",
+      "body": "An Indian specialty pharma developer reached business development and licensing leaders with an approved, non-confidential product summary. Confidentiality agreements came only once talks progressed.",
+      "results": ["10 licensing meetings", "4 confidential portfolio reviews", "16 positive replies"],
+      "href": "/case-studies/pharma-singapore-product-licensing"
+    },
+    {
+      "tag": "Staffing · Contract",
+      "title": "Ask about upcoming needs, not open roles",
+      "body": "A Singapore staffing firm with uneven demand asked HR, finance and operations leaders about upcoming temporary staffing needs, then qualified by role, duration and start date.",
+      "results": ["17 meetings booked", "6 staffing requirements", "3 candidate submissions approved"],
+      "href": "/case-studies/recruitment-singapore-contract-staffing"
+    }
+  ],
+  "rulesTitle": "The rules",
+  "rulesBody": "Singapore's Personal Data Protection Act (PDPA) governs how personal data is collected and used, and the Spam Control Act covers unsolicited commercial email sent in bulk. We keep volumes low, contact business decision-makers only and honour every opt-out. Check specifics with counsel.",
+  "timingTitle": "Timing",
+  "timingBody": "Singapore is 2.5 hours ahead of India. Messages go out on Singapore weekday mornings, which is early morning in India, and meetings fit easily into an Indian working day.",
+  "industryLinks": [
+    { "label": "Accounting & CFO firms", "href": "/lp/accounting-cfo-firms" },
+    { "label": "Insurance brokers", "href": "/lp/insurance" },
+    { "label": "Pharma companies", "href": "/lp/pharma" },
+    { "label": "Recruitment & staffing", "href": "/lp/recruitment-firms" }
+  ],
+  "cities": null
+}

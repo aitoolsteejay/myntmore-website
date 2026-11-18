@@ -1,0 +1,60 @@
+{
+  "slug": "india",
+  "keywords": [
+    "b2b outbound case studies india",
+    "b2b lead generation results india",
+    "payroll services lead generation india",
+    "pharma doctor outreach campaign india",
+    "insurance broker partnerships hr consultants india",
+    "dpdp act cold email india"
+  ],
+  "heroLead": "B2B outbound results across",
+  "heroUnderlined": "India",
+  "intro": "Three outbound campaigns inside India: a payroll firm, an employee benefits brokerage building referral partners, and a dermatology company reaching doctors across eight cities. Every number below comes from a real campaign.",
+  "audiences": [
+    {
+      "icon": "🏢",
+      "title": "Firms selling to Indian companies",
+      "body": "Service providers that depend on referrals and want to reach HR heads, finance controllers and founders when they are actually reviewing a vendor."
+    },
+    {
+      "icon": "🩺",
+      "title": "Teams extending a field force",
+      "body": "Pharma and healthcare companies that need to reach professionals in cities where their representatives have limited coverage."
+    }
+  ],
+  "playsTitle": "What worked in India",
+  "plays": [
+    {
+      "tag": "Payroll · Services",
+      "title": "Qualify on vendor review timing",
+      "body": "A payroll firm targeting companies with 100 to 500 employees reached HR heads, finance controllers and founders. Follow-ups established workforce size, current process and when they planned to review vendors.",
+      "results": ["24 meetings booked", "7 detailed requirements", "4 proposals requested"],
+      "href": "/case-studies/financial-services-india-payroll"
+    },
+    {
+      "tag": "Insurance · Partnerships",
+      "title": "Reach partners who already serve your buyers",
+      "body": "An employee benefits brokerage approached founders and practice heads at HR consultancies about complementary services, adding a referral channel alongside direct employer outreach.",
+      "results": ["15 meetings booked", "5 partnership discussions", "2 referral processes agreed"],
+      "href": "/case-studies/insurance-india-hr-consultants-referral"
+    },
+    {
+      "tag": "Pharma · Doctor outreach",
+      "title": "Cover the cities your field team can't",
+      "body": "A dermatology company launching a product built a city-wise list of dermatologists across eight cities and sent medical-team-approved webinar invitations with coordinated reminders.",
+      "results": ["72 webinar attendees", "24 medical-team discussions", "18 field visits agreed"],
+      "href": "/case-studies/pharma-india-dermatologist-outreach"
+    }
+  ],
+  "rulesTitle": "The rules",
+  "rulesBody": "India's Digital Personal Data Protection Act, 2023 centres on notice and consent, and its rules are still being phased in. TRAI rules govern commercial calls and SMS. We contact professionals in their business role, say who is writing and why, and honour every opt-out.",
+  "timingTitle": "Where it runs",
+  "timingBody": "Lists are built city by city, so campaigns can focus on the cities where your buyers or your coverage gaps are. The city pages below show the industries we write for in each one.",
+  "industryLinks": [
+    { "label": "Accounting & CFO firms", "href": "/lp/accounting-cfo-firms" },
+    { "label": "Insurance brokers", "href": "/lp/insurance" },
+    { "label": "Pharma companies", "href": "/lp/pharma" }
+  ],
+  "cities": "india"
+}

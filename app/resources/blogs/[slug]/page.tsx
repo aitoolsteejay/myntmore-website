@@ -8,6 +8,7 @@ import AskYourAI from "../../../components/AskYourAI";
 import NewsletterForm from "../../../components/NewsletterForm";
 import JsonLd from "../../../components/JsonLd";
 import ToolCallout from "../../../components/ToolCallout";
+import CopyBlock from "../../../components/CopyBlock";
 import ArticleMeta from "@/app/components/ArticleMeta";
 import Faq from "@/app/lp/Faq";
 import { buildArticleSchema, buildFaqSchema, SITE_URL } from "@/lib/schema";
@@ -101,10 +102,15 @@ function renderers(accent: string) {
         <blockquote className="border-l-4 pl-5 space-y-3" style={{ borderColor: "#F5B731", color: TEXT }}>{children}</blockquote>
       ),
       divider: () => <hr style={{ borderColor: "#E8E2D9" }} />,
-      code: ({ children }: { children: string }) => (
-        <pre className="rounded-xl border p-4 overflow-x-auto text-sm" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9", color: INK }}>
-          <code>{children}</code>
-        </pre>
+      // Code blocks in posts hold text meant to be copied (email templates, prompts), so they render with a
+      // Copy button. A language on the fence ("email-template") becomes the label, with dashes as spaces.
+      code: ({ children, language }: { children: string; language?: string }) => (
+        <CopyBlock
+          text={children.replace(/\n$/, "")}
+          accent={accent}
+          label={language ? language.replace(/-/g, " ") : "Copy-ready text"}
+          successMessage="Copied to clipboard"
+        />
       ),
       image: ({ src, alt }: { src: string; alt: string }) => (
         // eslint-disable-next-line @next/next/no-img-element

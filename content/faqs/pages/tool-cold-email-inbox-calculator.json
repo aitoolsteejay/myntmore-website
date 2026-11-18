@@ -1,0 +1,21 @@
+{
+  "page": "Tool page: Cold Email Inbox & Domain Calculator (/tools/cold-email-inbox-calculator)",
+  "items": [
+    {
+      "question": "How many inboxes do I need for cold email?",
+      "answer": "Divide the emails you want to send each sending day by about 30, the most we send from one inbox per day. For 5,000 new prospects a month on a 5-email sequence, that is about 1,150 emails a day across roughly 39 inboxes. Our standard client setup is 40 inboxes on 10 domains."
+    },
+    {
+      "question": "How many inboxes should I put on one domain?",
+      "answer": "We put 4 inboxes on each sending domain. More inboxes per domain means one domain carries more of your volume, so a reputation problem on that domain affects more of your sending. Spreading inboxes across more domains, plus a spare domain or two, keeps any single problem small."
+    },
+    {
+      "question": "How many cold emails can one inbox send per day?",
+      "answer": "Keep live sending at about 30 emails per inbox per day and stay under 40. Get more volume by adding inboxes rather than pushing each one harder. Start lower in the first week of live sending, and raise the limit as replies come in and bounces stay low."
+    },
+    {
+      "question": "How long before new inboxes can send cold email?",
+      "answer": "Plan for 14 to 21 days of warm-up after the domains and DNS records are set up. Warm-up starts at 3 to 5 emails a day per inbox and ramps to 20 to 30. Keep warm-up running after the campaign starts. In total, expect about three weeks from buying domains to your first live email."
+    }
+  ]
+}

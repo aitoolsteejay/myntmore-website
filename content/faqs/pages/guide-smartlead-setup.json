@@ -1,0 +1,21 @@
+{
+  "page": "Guide: Smartlead Setup (/resources/guides/smartlead-setup)",
+  "items": [
+    {
+      "question": "How many emails per day should each Smartlead inbox send?",
+      "answer": "About 30 live emails per inbox per day, and stay under 40. Get more volume by adding inboxes rather than pushing each one harder. Our standard 40 inboxes send up to about 1,200 emails a day at that rate, with warm-up still running alongside the campaign on every inbox."
+    },
+    {
+      "question": "How long should Smartlead warm-up run before I send?",
+      "answer": "Give each new inbox 14 to 21 days of warm-up before its first live email. Start at 3 to 5 warm-up emails a day and ramp up by 2 to 3 a day to a steady 20 to 30. Keep warm-up running after the campaign starts, so the inbox keeps a steady record of normal engagement."
+    },
+    {
+      "question": "Should I turn on open tracking in Smartlead?",
+      "answer": "Only with a custom tracking domain, because shared tracking links can hurt deliverability. Many teams turn open tracking off and judge campaigns on replies and meetings instead, since opens are unreliable anyway. Across our campaigns, 1% to 3% of prospects reply and at least 20% of those replies are positive."
+    },
+    {
+      "question": "What spam complaint rate is safe for cold email?",
+      "answer": "Keep it below 0.3%, the limit Gmail and Yahoo both set, and aim for below 0.1%, which Google recommends. If complaints or bounces rise on an inbox, pause that inbox and fix the list or the copy before sending more. Honour every opt-out within 2 days and never re-add those contacts."
+    }
+  ]
+}

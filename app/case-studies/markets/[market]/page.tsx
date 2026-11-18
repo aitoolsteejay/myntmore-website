@@ -5,6 +5,8 @@ import { libraryCards } from "@/lib/case-study-library";
 import { CASE_STUDY_MARKETS, caseStudiesInMarket, marketFromSlug } from "@/lib/case-study-markets";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
+import { marketPage } from "@/lib/market-pages";
+import MarketGuide from "@/components/case-studies/MarketGuide";
 
 type Props = { params: { market: string } };
 
@@ -22,7 +24,7 @@ export function generateMetadata({ params }: Props): Metadata {
   return withPageSeo(`/case-studies/markets/${market.slug}`, {
     title,
     description,
-    keywords: [`b2b lead generation ${market.label}`, `outbound sales case studies ${market.label}`, `cold email ${market.label} case study`, `linkedin outreach ${market.label}`],
+    keywords: [...marketPage(market.slug).keywords, `b2b lead generation ${market.label}`, `outbound sales case studies ${market.label}`],
     alternates: { canonical: url },
     openGraph: { ...OG_BASE, title: `${title} | Myntmore`, description, url, images: ogImages(`/case-studies/markets/${market.slug}`, "Myntmore case studies") },
   });
@@ -31,5 +33,14 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function MarketCaseStudiesPage({ params }: Props) {
   const market = marketFromSlug(params.market);
   if (!market) notFound();
-  return <CaseStudiesClient initialMarket={market.slug} libraryCards={libraryCards()} />;
+  const page = marketPage(market.slug);
+  return (
+    <CaseStudiesClient
+      initialMarket={market.slug}
+      libraryCards={libraryCards()}
+      marketHero={{ lead: page.heroLead, underlined: page.heroUnderlined, intro: page.intro }}
+    >
+      <MarketGuide page={page} phrase={market.phrase} />
+    </CaseStudiesClient>
+  );
 }

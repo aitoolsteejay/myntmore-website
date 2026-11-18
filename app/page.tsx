@@ -4,19 +4,17 @@ import EventPopup from "./components/EventPopup";
 import { OG_BASE, ogImages } from "@/lib/og";
 
 export const metadata: Metadata = withPageSeo("/", {
-  // Names Mumbai because GSC shows this page ranking top-3 for ~15
-  // "lead generation / b2b marketing agency in mumbai" queries with
-  // near-zero clicks under the previous location-less title.
-  title: { absolute: "Myntmore | AI B2B Marketing & Lead Generation Agency Mumbai" },
+  // No city in the title: /b2b-lead-generation-mumbai owns the Mumbai queries
+  // (decided 2026-11-17 after GSC showed this page and the Mumbai page splitting
+  // "lead generation agency in mumbai"). Keep Mumbai wording off this page's
+  // title, description and keywords so the two stop competing.
+  title: { absolute: "Myntmore | AI B2B Lead Generation & Outbound Agency" },
   description:
-    "AI-powered B2B marketing and lead generation agency in Mumbai. Cold email, LinkedIn and ABM that book meetings: 12K+ booked, $120M+ pipeline. Free audit.",
+    "AI-powered B2B lead generation agency. Cold email, LinkedIn and ABM that book qualified meetings: 12K+ booked, $120M+ pipeline. Free audit.",
   alternates: { canonical: "https://www.myntmore.com" },
   keywords: [
     "b2b lead generation",
     "b2b lead generation agency india",
-    "ai marketing agency in mumbai",
-    "b2b marketing agency in mumbai",
-    "lead generation agency in mumbai",
     "cold email agency",
     "cold email infrastructure",
     "linkedin outreach and automation",
@@ -33,7 +31,7 @@ export const metadata: Metadata = withPageSeo("/", {
   ],
   openGraph: {
     ...OG_BASE,
-    title: "Myntmore | AI B2B Marketing & Lead Generation Agency Mumbai",
+    title: "Myntmore | AI B2B Lead Generation & Outbound Agency",
     description:
       "We build and run your outbound engine using AI agents and human intelligence. Cold email, LinkedIn outreach, and ABM that books qualified meetings at scale.",
     url: "https://www.myntmore.com",

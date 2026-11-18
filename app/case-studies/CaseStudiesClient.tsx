@@ -264,7 +264,8 @@ const INDUSTRIES = CASE_STUDY_FILTERS.map((filter) => filter.label);
 // the original cards first.
 const SHOW_MORE_STEP = 10;
 
-export default function CaseStudiesClient({ initialFilter = "All", initialMarket, libraryCards = [] }: { initialFilter?: string; initialMarket?: string; libraryCards?: CaseStudy[] }) {
+// A market page passes its own hero text (marketHero) and its written guide (children), which sits under the cards.
+export default function CaseStudiesClient({ initialFilter = "All", initialMarket, libraryCards = [], marketHero, children }: { initialFilter?: string; initialMarket?: string; libraryCards?: CaseStudy[]; marketHero?: { lead: string; underlined: string; intro: string }; children?: React.ReactNode }) {
   const industryFilter = initialFilter;
   const market = initialMarket ? marketFromSlug(initialMarket) : null;
   const allCaseStudies = [...CASE_STUDIES, ...libraryCards];
@@ -315,14 +316,14 @@ export default function CaseStudiesClient({ initialFilter = "All", initialMarket
           {market ? (
             <>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight hero-fade-d1" style={{ color: "#0a0a0a" }}>
-                B2B lead generation case studies in{" "}
+                {marketHero ? marketHero.lead : "B2B lead generation case studies in"}{" "}
                 <span className="relative inline-block">
-                  {market.phrase}
+                  {marketHero ? marketHero.underlined : market.phrase}
                   <Underline />
                 </span>
               </h1>
               <p className="text-lg sm:text-xl max-w-2xl hero-fade-d2" style={{ color: "#52525B" }}>
-                {filteredCaseStudies.length} Myntmore case studies from outbound campaigns in {market.phrase}, across {marketIndustries.join(", ")}. Each one has the real numbers: meetings booked, reply rates and what we did to get them.
+                {marketHero ? marketHero.intro : `${filteredCaseStudies.length} Myntmore case studies from outbound campaigns in ${market.phrase}, across ${marketIndustries.join(", ")}. Each one has the real numbers: meetings booked, reply rates and what we did to get them.`}
               </p>
             </>
           ) : (
@@ -432,6 +433,8 @@ export default function CaseStudiesClient({ initialFilter = "All", initialMarket
           )}
         </div>
       </section>
+
+      {children}
 
       <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-3xl mx-auto">
