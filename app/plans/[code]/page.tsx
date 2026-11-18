@@ -36,13 +36,9 @@ const PLANS: Record<string, Pick<GrowthPlansPricingProps, "currencyPrefix" | "cu
   earth: {
     currencyPrefix: "₹",
     currencySuffix: "+ GST",
-    prices: {
-      starter: "99,999",
-      growth: "1,74,999",
-      leadGen: "1,44,999",
-      coldEmail: "1,54,999",
-      automation: "19,499",
-    },
+    visual: "orbit",
+    layout: "stitch",
+    prices: EARTH_PRICES,
   },
   neptune: {
     currencyPrefix: "$",
