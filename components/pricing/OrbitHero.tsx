@@ -1,5 +1,7 @@
 "use client";
 
+import EcosystemVisual, { type EcosystemVariant } from "./EcosystemVisual";
+
 const GOLD = "#F5B731";
 const INK = "#0f0f14";
 
@@ -13,6 +15,8 @@ interface OrbitHeroProps {
   leadWords: string;
   accentWord: string;
   planet?: PlanetKind;
+  // "planet" keeps the original artwork; the others swap in the animated ecosystem visual.
+  visual?: "planet" | EcosystemVariant;
   // Rendered by the parent so the animated price counter stays in one place.
   priceNode: React.ReactNode;
   billingNote: string;
@@ -21,7 +25,7 @@ interface OrbitHeroProps {
 
 // Surface detail for each planet, built from soft procedural noise and shading
 // rather than hand-drawn shapes, so patches, continents and bands look natural.
-// Everything is tone-on-tone in the page's existing lavender, white and gold
+// Everything is tone-on-tone in the page's existing cream, white and gold
 // palette (no new colours) and sits inside the sphere's clip path.
 const SPHERE_BOX = { x: CX - SPHERE_R, y: CY - SPHERE_R, width: SPHERE_R * 2, height: SPHERE_R * 2 };
 
@@ -39,7 +43,7 @@ function Surface({ kind }: { kind: PlanetKind }) {
   if (kind === "earth") {
     return (
       <g>
-        {/* oceans: a deeper lavender than the land is bright, then crisp continents on top */}
+        {/* oceans: a deeper cream than the land is bright, then crisp continents on top */}
         <rect {...SPHERE_BOX} fill="url(#earth-ocean)" />
         <rect {...SPHERE_BOX} filter="url(#tex-land-edge)" opacity="0.55" />
         <rect {...SPHERE_BOX} filter="url(#tex-land)" opacity="0.95" />
@@ -75,7 +79,7 @@ function Surface({ kind }: { kind: PlanetKind }) {
 // Hero for the private pricing pages: bold two-line title, a planet that
 // matches the page (Mars, Earth or Neptune), and a price
 // card. Decorative parts are aria-hidden.
-export default function OrbitHero({ leadWords, accentWord, planet = "mars", priceNode, billingNote, summary }: OrbitHeroProps) {
+export default function OrbitHero({ leadWords, accentWord, planet = "mars", visual = "planet", priceNode, billingNote, summary }: OrbitHeroProps) {
   return (
     <div className="relative max-w-6xl mx-auto mb-14">
       <div className="hero-fade flex flex-wrap items-center justify-between gap-3 mb-8">
@@ -83,9 +87,11 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
           <span className="w-2 h-2 rounded-full" style={{ backgroundColor: GOLD }} aria-hidden="true" />
           <span className="text-xs font-bold uppercase tracking-[0.3em]" style={{ color: INK }}>Service plans</span>
         </span>
-        <span className="hidden md:inline-flex items-center gap-4 px-7 py-3 rounded-full bg-white/70 text-xs font-bold uppercase tracking-[0.32em]" style={{ color: INK }}>
+        {visual === "planet" && (
+          <span className="hidden md:inline-flex items-center gap-4 px-7 py-3 rounded-full bg-white/70 text-xs font-bold uppercase tracking-[0.32em]" style={{ color: INK }}>
           People <span style={{ color: GOLD }}>×</span> Content <span style={{ color: GOLD }}>×</span> Opportunities
         </span>
+        )}
       </div>
 
       <div className="grid md:grid-cols-[1.15fr_1fr] gap-6 items-center">
@@ -110,21 +116,23 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
           </p>
         </div>
 
-        {/* Planet */}
+        {visual !== "planet" ? (
+          <EcosystemVisual variant={visual} />
+        ) : (
         <div className="hero-fade-d2 relative hidden md:block w-full max-w-[560px] justify-self-end aspect-square" style={{ containerType: "inline-size" }} aria-hidden="true">
           <svg viewBox="0 0 600 600" className="absolute inset-0 w-full h-full overflow-visible">
             <defs>
               <radialGradient id="orbit-sphere" cx="34%" cy="28%" r="85%">
                 <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="42%" stopColor="#f7f2ff" />
-                <stop offset="78%" stopColor="#e5d9fb" />
-                <stop offset="100%" stopColor="#d3bff6" />
+                <stop offset="42%" stopColor="#fffaf0" />
+                <stop offset="78%" stopColor="#fbeec8" />
+                <stop offset="100%" stopColor="#f3d98a" />
               </radialGradient>
               {/* light falling across the surface: bright upper left, shaded lower right */}
               <radialGradient id="orbit-shade" cx="34%" cy="28%" r="85%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0.35" />
                 <stop offset="55%" stopColor="#ffffff" stopOpacity="0" />
-                <stop offset="100%" stopColor="#7a5ccf" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#b97a0a" stopOpacity="0.32" />
               </radialGradient>
               {/* soft white wash behind the caption so it stays readable */}
               <radialGradient id="orbit-caption" cx="50%" cy="50%" r="50%">
@@ -140,7 +148,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               {/* soft procedural textures (tinted with the page's lavender and gold) */}
               <filter id="tex-patches" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.0055" numOctaves="2" seed="11" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.58  0 0 0 0 0.46  0 0 0 0 0.88  3 0 0 0 -1.15" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.72  0 0 0 0 0.19  3 0 0 0 -1.15" />
               </filter>
               <filter id="tex-dust" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="2" seed="29" />
@@ -154,24 +162,24 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
               </filter>
               <filter id="tex-land" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.0075" numOctaves="4" seed="8" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.33  0 0 0 0 0.78  22 0 0 0 -10.6" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.93  0 0 0 0 0.66  0 0 0 0 0.14  22 0 0 0 -10.6" />
               </filter>
               {/* a slightly wider, lighter copy of the land so continents get a soft shoreline */}
               <filter id="tex-land-edge" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.0075" numOctaves="4" seed="8" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.72  0 0 0 0 0.62  0 0 0 0 0.94  9 0 0 0 -3.9" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.98  0 0 0 0 0.82  0 0 0 0 0.46  9 0 0 0 -3.9" />
               </filter>
               <filter id="tex-clouds" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.005 0.022" numOctaves="3" seed="21" />
                 <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  5 0 0 0 -2.7" />
               </filter>
               <radialGradient id="earth-ocean" cx="34%" cy="28%" r="85%">
-                <stop offset="0%" stopColor="#e4d8fb" />
-                <stop offset="100%" stopColor="#b9a0ee" />
+                <stop offset="0%" stopColor="#fff8e6" />
+                <stop offset="100%" stopColor="#f6e2ac" />
               </radialGradient>
               <filter id="tex-bands" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.001 0.02" numOctaves="2" seed="4" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0.58  0 0 0 0 0.46  0 0 0 0 0.88  2.6 0 0 0 -0.9" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.72  0 0 0 0 0.19  2.6 0 0 0 -0.9" />
               </filter>
               <filter id="planet-soft" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="3" />
@@ -182,19 +190,19 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </radialGradient>
               <radialGradient id="storm" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#8f74dc" stopOpacity="0.6" />
-                <stop offset="70%" stopColor="#a98fe6" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#a98fe6" stopOpacity="0" />
+                <stop offset="0%" stopColor="#d99a14" stopOpacity="0.5" />
+                <stop offset="70%" stopColor="#eab53a" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#eab53a" stopOpacity="0" />
               </radialGradient>
               <linearGradient id="crater-bowl" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#7d5fd0" stopOpacity="0.4" />
-                <stop offset="55%" stopColor="#9d84e3" stopOpacity="0.15" />
+                <stop offset="0%" stopColor="#b97a0a" stopOpacity="0.35" />
+                <stop offset="55%" stopColor="#d99a14" stopOpacity="0.14" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0.55" />
               </linearGradient>
             </defs>
 
             {/* soft planet shadow, then the sphere with its surface */}
-            <circle cx={CX + 18} cy={CY + 52} r={SPHERE_R - 14} fill="#a78bfa" opacity="0.28" filter="url(#orbit-shadow)" />
+            <circle cx={CX + 18} cy={CY + 52} r={SPHERE_R - 14} fill="#F5B731" opacity="0.3" filter="url(#orbit-shadow)" />
             <circle cx={CX} cy={CY} r={SPHERE_R} fill="url(#orbit-sphere)" />
             <g clipPath="url(#orbit-clip)">
               <Surface kind={planet} />
@@ -220,10 +228,11 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", pric
             </div>
           </div>
         </div>
+        )}
       </div>
 
       {/* Price card */}
-      <div className="hero-fade-d2 mt-10 rounded-[28px] border bg-white/80 backdrop-blur-sm px-6 py-6 sm:px-10 sm:py-8 grid sm:grid-cols-[1fr_auto] gap-6 items-center" style={{ borderColor: "#EDE7DD", boxShadow: "0 20px 60px rgba(124,58,237,0.08)" }}>
+      <div className="hero-fade-d2 mt-10 rounded-[28px] border bg-white/80 backdrop-blur-sm px-6 py-6 sm:px-10 sm:py-8 grid sm:grid-cols-[1fr_auto] gap-6 items-center" style={{ borderColor: "#EDE7DD", boxShadow: "0 20px 60px rgba(245,183,49,0.16)" }}>
         <p className="text-base sm:text-lg leading-relaxed max-w-xl" style={{ color: "#3b3b45" }}>
           {summary}
         </p>

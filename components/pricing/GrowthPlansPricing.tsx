@@ -5,6 +5,7 @@ import { Rocket, Zap, Target, Mail, Bot } from "lucide-react";
 import InnerLayout from "@/app/components/InnerLayout";
 import FadeIn from "@/app/components/FadeIn";
 import OrbitHero, { type PlanetKind } from "./OrbitHero";
+import PlanExplorer from "./PlanExplorer";
 import { GOLD_TEXT, textTone } from "@/lib/colors";
 
 // Every one of these is identical across all 3 tiers (8 infrastructure items
@@ -284,6 +285,10 @@ export interface GrowthPlansPricingProps {
   pageTitle: string;
   // Which planet the hero shows; matches the plan code in the URL.
   planet?: PlanetKind;
+  // Swaps the planet for the animated ecosystem hero (A = orbit, C = flywheel).
+  visual?: "orbit" | "flywheel";
+  // "stitch" uses the Quick Overview Cards / Full Detailed Matrix layout in place of the tier cards and table.
+  layout?: "classic" | "stitch";
   currencyPrefix: string;
   currencySuffix?: string;
   prices: {
@@ -295,15 +300,16 @@ export interface GrowthPlansPricingProps {
   };
 }
 
-export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, currencySuffix, prices }: GrowthPlansPricingProps) {
+export default function GrowthPlansPricing({ pageTitle, planet, visual, layout = "classic", currencyPrefix, currencySuffix, prices }: GrowthPlansPricingProps) {
+  const stitch = layout === "stitch";
   const titleWords = pageTitle.split(" ");
   const accentWord = titleWords[titleWords.length - 1];
   const leadWords = titleWords.slice(0, -1).join(" ");
 
   const tiers = [
-    { name: "LinkedIn Starter", tagline: "Foundational LinkedIn growth", icon: Rocket, price: prices.starter, accent: BLUE },
-    { name: "LinkedIn Growth", tagline: "Best for maximum pipeline", icon: Zap, price: prices.growth, featured: true, accent: GOLD },
-    { name: "Lead Generation", tagline: "Volume-focused outbound", icon: Target, price: prices.leadGen, accent: TEAL },
+    { name: "LinkedIn Starter", short: "Starter", tagline: "Foundational LinkedIn growth", icon: Rocket, price: prices.starter, accent: BLUE },
+    { name: "LinkedIn Growth", short: "Growth", tagline: "Best for maximum pipeline", icon: Zap, price: prices.growth, featured: true, accent: GOLD },
+    { name: "Lead Generation", short: "Lead Gen", tagline: "Volume-focused outbound", icon: Target, price: prices.leadGen, accent: TEAL },
   ];
 
   // Same slow ambient drift as Hero.tsx / CTABanner.tsx's background blobs,
@@ -342,7 +348,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
   return (
     <InnerLayout>
       <section className="relative pt-32 pb-24 px-4 overflow-clip" style={{ backgroundColor: "#F8F6F2" }}>
-        {/* Soft gold-to-lavender wash behind the hero, matching the planet
+        {/* Soft warm gold wash behind the hero, matching the planet
             artwork -- fades out via mask before the cards so the table and
             cards below sit back on plain cream. */}
         <div
@@ -355,8 +361,8 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
             height: "820px",
             background:
               "radial-gradient(ellipse 60% 62% at 8% 22%, rgba(245,183,49,0.34) 0%, rgba(245,183,49,0.10) 48%, transparent 74%)," +
-              "radial-gradient(ellipse 52% 60% at 92% 30%, rgba(167,139,250,0.34) 0%, rgba(167,139,250,0.10) 48%, transparent 74%)," +
-              "radial-gradient(ellipse 46% 40% at 86% 72%, rgba(167,139,250,0.26) 0%, transparent 70%)," +
+              "radial-gradient(ellipse 52% 60% at 92% 30%, rgba(245,183,49,0.26) 0%, rgba(245,183,49,0.08) 48%, transparent 74%)," +
+              "radial-gradient(ellipse 46% 40% at 86% 72%, rgba(245,183,49,0.20) 0%, transparent 70%)," +
               "radial-gradient(ellipse 40% 36% at 10% 66%, rgba(245,183,49,0.18) 0%, transparent 70%)",
             WebkitMaskImage: "linear-gradient(to bottom, black 62%, transparent 100%)",
             maskImage: "linear-gradient(to bottom, black 62%, transparent 100%)",
@@ -365,18 +371,22 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
         />
         {/* Subtle blobs, same treatment as Services.tsx / CTABanner.tsx, now drifting like Hero.tsx's */}
         <div ref={blobGoldRef} aria-hidden="true" style={{ position: "absolute", top: "-80px", right: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.20) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
-        <div ref={blobPurpleRef} aria-hidden="true" style={{ position: "absolute", bottom: "-80px", left: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.14) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
+        <div ref={blobPurpleRef} aria-hidden="true" style={{ position: "absolute", bottom: "-80px", left: "-60px", width: "480px", height: "480px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.14) 0%, transparent 70%)", filter: "blur(80px)", pointerEvents: "none", willChange: "transform" }} />
 
         <OrbitHero
           leadWords={leadWords}
           accentWord={accentWord}
           planet={planet}
+          visual={visual}
           priceNode={<>{currencyPrefix}<AnimatedPrice target={prices.starter} /></>}
           billingNote={`${currencySuffix ? `${currencySuffix}, ` : ""}billed monthly`}
           summary="LinkedIn growth and lead generation, run as a done-for-you system. Every plan shares the same foundation, the difference is how much volume and content sits on top of it."
         />
 
+        {stitch && <PlanExplorer prices={prices} currencyPrefix={currencyPrefix} currencySuffix={currencySuffix} />}
+
         <div className="relative max-w-5xl mx-auto space-y-14">
+          {!stitch && (
           <div>
             <FadeIn>
               <SectionHeading eyebrow="01" title="LinkedIn Growth Plans" subtitle="Done For You" />
@@ -448,10 +458,11 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
               })}
             </div>
           </div>
+          )}
 
           {/* Shared inclusions, shown once */}
           <FadeIn delay={140}>
-            <div id="included-in-every-plan" className="rounded-2xl p-6 sm:p-8 scroll-mt-28 bg-white" style={{ border: `1px solid ${BORDER}` }}>
+            <div id="included-in-every-plan" className="rounded-2xl p-6 sm:p-8 scroll-mt-40 bg-white" style={{ border: `1px solid ${BORDER}` }}>
               <div className="flex items-baseline justify-between flex-wrap gap-2 mb-5">
                 <h2 className="text-sm font-black uppercase tracking-widest" style={{ color: TEXT_DARK }}>Included in every plan</h2>
                 <span className="text-xs font-semibold" style={{ color: TEXT_MUTED }}>Same on all 3 tiers</span>
@@ -486,63 +497,89 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
           </FadeIn>
 
           {/* Full comparison table */}
+          {!stitch && (
           <FadeIn delay={200}>
             <div id="plan-comparison" className="rounded-2xl overflow-clip bg-white scroll-mt-28" style={{ border: `1px solid ${BORDER}` }}>
               <div className="px-6 py-4" style={{ borderBottom: `1px solid ${BORDER}` }}>
                 <h2 className="text-sm font-black uppercase tracking-widest" style={{ color: TEXT_DARK }}>Overview</h2>
               </div>
-              {/* The header row stays pinned while the table scrolls. On desktop it pins under the site header (the page scrolls, so no
-                  ancestor may be a scroll container); on phones the table scrolls inside its own box so it can also scroll sideways. */}
-              <div className="max-sm:max-h-[70vh] max-sm:overflow-auto">
-                <table className="w-full" style={{ minWidth: 560 }}>
-                  <thead>
-                    <tr style={{ borderBottom: `1px solid ${BORDER}` }}>
-                      <th className="px-4 sm:px-6 py-3 text-left text-xs font-black uppercase tracking-widest sticky left-0 top-0 sm:top-[81px] z-30 bg-white" style={{ color: TEXT_MUTED, minWidth: 220, boxShadow: `0 1px 0 ${BORDER}` }}>
-                        Feature
+              {/* The header row stays pinned under the site header on every screen size, and now carries each plan's price, so
+                  you always know which column is which without scrolling back up to the cards. No inner scroll box and no
+                  sideways scroll: the columns shrink to fit phones, so the page scrolls normally and the header always sticks. */}
+              <table className="w-full table-fixed">
+                <colgroup>
+                  <col />
+                  {tiers.map((tier) => (
+                    <col key={tier.name} className="w-[76px] sm:w-[150px]" />
+                  ))}
+                </colgroup>
+                <thead>
+                  <tr style={{ borderBottom: `1px solid ${BORDER}` }}>
+                    <th className="px-3 sm:px-6 py-3 text-left text-xs font-black uppercase tracking-widest sticky top-[81px] z-30 bg-white align-bottom" style={{ color: TEXT_MUTED, boxShadow: `0 1px 0 ${BORDER}` }}>
+                      Feature
+                    </th>
+                    {tiers.map((tier) => (
+                      <th
+                        key={tier.name}
+                        className="px-1 sm:px-3 py-3 text-center sticky top-[81px] z-20 align-bottom"
+                        style={{ color: textTone(tier.accent), backgroundColor: "#ffffff", backgroundImage: `linear-gradient(${tier.accent}14, ${tier.accent}14)`, boxShadow: `inset 0 3px 0 ${tier.accent}, 0 1px 0 ${BORDER}` }}
+                      >
+                        <span className="block text-[11px] sm:text-xs font-black leading-tight">
+                          <span className="sm:hidden">{tier.short}</span>
+                          <span className="hidden sm:inline">{tier.name}</span>
+                        </span>
+                        <span className="block mt-1 text-[11px] sm:text-sm font-black leading-tight whitespace-nowrap" style={{ color: TEXT_DARK }}>
+                          {currencyPrefix}{tier.price}
+                        </span>
                       </th>
-                      {tiers.map((tier) => (
-                        <th
-                          key={tier.name}
-                          className="px-4 py-3 text-center text-xs font-black sticky top-0 sm:top-[81px] z-20"
-                          style={{ color: textTone(tier.accent), backgroundColor: "#ffffff", backgroundImage: `linear-gradient(${tier.accent}0d, ${tier.accent}0d)`, width: 130, boxShadow: `0 1px 0 ${BORDER}` }}
-                        >
-                          {tier.name}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {TABLE_SECTIONS.map((section) => (
-                      <Fragment key={section.title}>
-                        <tr>
-                          <td colSpan={4} className="px-4 sm:px-6 py-2.5 text-xs font-black uppercase tracking-widest" style={{ color: section.tintText, backgroundColor: section.tint }}>
-                            {section.title}
-                          </td>
-                        </tr>
-                        {section.rows.map((row) => (
-                          <tr key={row.label} className="price-row" style={{ borderTop: `1px solid ${BORDER}` }}>
-                            <td className="px-4 sm:px-6 py-4 text-sm font-semibold sticky left-0 bg-white" style={{ color: "#3D3D3D", minWidth: 220 }}>
-                              {row.label}
-                              {row.info && <InfoTooltip text={row.info} />}
-                            </td>
-                            {row.values.map((v, ci) => (
-                              <td
-                                key={ci}
-                                className="px-4 py-4 text-center"
-                                style={{ backgroundColor: `${tiers[ci].accent}0d`, width: 130 }}
-                              >
-                                <DiffCell value={v} accent={tiers[ci].accent} />
-                              </td>
-                            ))}
-                          </tr>
-                        ))}
-                      </Fragment>
                     ))}
-                  </tbody>
-                </table>
-              </div>
+                  </tr>
+                </thead>
+                <tbody>
+                  {TABLE_SECTIONS.map((section) => (
+                    <Fragment key={section.title}>
+                      <tr>
+                        <td colSpan={4} className="px-3 sm:px-6 py-2.5 text-xs font-black uppercase tracking-widest" style={{ color: section.tintText, backgroundColor: section.tint }}>
+                          {section.title}
+                        </td>
+                      </tr>
+                      {section.rows.map((row) => (
+                        <tr key={row.label} className="price-row" style={{ borderTop: `1px solid ${BORDER}` }}>
+                          <td className="px-3 sm:px-6 py-3 sm:py-4 text-[13px] sm:text-sm font-semibold leading-snug bg-white" style={{ color: "#3D3D3D" }}>
+                            {row.label}
+                            {row.info && <InfoTooltip text={row.info} />}
+                          </td>
+                          {row.values.map((v, ci) => (
+                            <td
+                              key={ci}
+                              className="px-1 sm:px-3 py-3 sm:py-4 text-center"
+                              style={{ backgroundColor: `${tiers[ci].accent}0d` }}
+                            >
+                              <DiffCell value={v} accent={tiers[ci].accent} />
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </Fragment>
+                  ))}
+                </tbody>
+                {/* Same call to action at the bottom, so reaching the end of the table doesn't mean scrolling back up to pick a plan. */}
+                <tfoot>
+                  <tr style={{ borderTop: `1px solid ${BORDER}` }}>
+                    <td className="px-3 sm:px-6 py-4 text-[13px] sm:text-sm font-semibold bg-white" style={{ color: TEXT_MUTED }}>Ready to start?</td>
+                    {tiers.map((tier) => (
+                      <td key={tier.name} className="px-1 sm:px-3 py-4 text-center" style={{ backgroundColor: `${tier.accent}0d` }}>
+                        <a href="/book-a-call" className="btn-dark price-cta inline-block w-full text-center px-1 sm:px-3 py-2 text-[11px] sm:text-xs font-bold rounded-full whitespace-nowrap">
+                          Get Started
+                        </a>
+                      </td>
+                    ))}
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </FadeIn>
+          )}
 
           {/* Additional standalone options -- a horizontal split (features
               left, price/CTA right on larger screens) so these read as
@@ -550,7 +587,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
               3-tier comparison cards above. */}
           <div className="space-y-10">
             <FadeIn>
-              <div>
+              <div id="cold-email-system" className="scroll-mt-40">
                 <div className="mb-6">
                   <SectionHeading eyebrow="02" title="Cold Email Outbound System" subtitle="Done For You" />
                 </div>
@@ -590,7 +627,7 @@ export default function GrowthPlansPricing({ pageTitle, planet, currencyPrefix, 
             </FadeIn>
 
             <FadeIn delay={90}>
-              <div>
+              <div id="automation-tool" className="scroll-mt-40">
                 <div className="mb-6">
                   <SectionHeading eyebrow="03" title="LinkedIn Automation Tool" subtitle="Do It Yourself" />
                 </div>
