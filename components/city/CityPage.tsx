@@ -8,6 +8,8 @@ import FadeIn from "@/app/components/FadeIn";
 import FredokaLabels from "@/app/components/FredokaLabels";
 import { buildFaqSchema, buildCityServiceSchema } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
+import industryCityPages from "@/lib/industry-city-pages.generated.json";
+import type { IndustryCityIndexEntry } from "@/components/industry-city/industry-city-data";
 import type { CityPageData } from "./city-page-data";
 
 // One template for the B2B lead generation city pages (/b2b-lead-generation-<city>). The text comes from
@@ -66,6 +68,7 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
   const city = d.breadcrumbLabel;
   const floats = d.floatingIcons ?? [];
   const hubs = d.hubs ?? [];
+  const cityIndustries = (industryCityPages as IndustryCityIndexEntry[]).filter((p) => p.citySlug === d.slug);
   return (
     <FredokaLabels>
       <InnerLayout>
@@ -306,6 +309,53 @@ export default function CityPage({ data: d }: { data: CityPageData }) {
             </div>
           </div>
         </section>
+
+        {cityIndustries.length > 0 && (
+          <section className="py-20 px-4 border-t" style={{ borderColor: LINE, backgroundColor: CREAM }}>
+            <div className="max-w-5xl mx-auto">
+              <FadeIn>
+                <Eyebrow>🏭 Industry playbooks in {city}</Eyebrow>
+                <h2 className="text-3xl sm:text-4xl font-black mb-3" style={{ color: INK }}>
+                  Dedicated B2B lead generation by industry in {city}
+                </h2>
+                <p className="text-base mb-10 max-w-2xl" style={{ color: MUTED }}>
+                  Explore sector-specific buyer lists, outreach playbooks, and verified results built for {city}&apos;s core B2B verticals.
+                </p>
+              </FadeIn>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {cityIndustries.map((item, i) => (
+                  <FadeIn key={item.slug} delay={i * 70}>
+                    <Link
+                      href={item.href}
+                      className="lp-card group flex h-full flex-col rounded-2xl border p-6"
+                      style={{ backgroundColor: "#ffffff", borderColor: LINE }}
+                    >
+                      <div className="flex items-center justify-between gap-3 mb-3">
+                        <span className="text-2xl leading-none" aria-hidden="true">{item.emoji}</span>
+                        <span
+                          className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
+                          style={{ backgroundColor: "#FEF9EC", color: ACCENT }}
+                        >
+                          {item.badge}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-black mb-2 group-hover:underline" style={{ color: INK }}>
+                        {item.industryName} in {city}
+                      </h3>
+                      <p className="text-xs leading-relaxed mb-4 flex-1" style={{ color: MUTED }}>
+                        {item.metaDescription}
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: ACCENT }}>
+                        Explore {item.industryName} playbook
+                        <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                      </span>
+                    </Link>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-20 px-4 border-t" style={{ borderColor: LINE }}>
           <div className="max-w-3xl mx-auto">

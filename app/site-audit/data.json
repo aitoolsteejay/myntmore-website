@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-14T09:12:18.614Z",
+  "generatedAt": "2026-11-18T10:44:44.989Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 312,
-    "linked": 279,
+    "total": 327,
+    "linked": 294,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -96,6 +96,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-automotive-manufacturing-chennai",
+      "title": "Lead Gen for Auto & Auto Parts Makers Chennai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-chennai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/b2b-lead-generation-bengaluru",
       "title": "Lead Generation Companies in Bangalore for SaaS",
       "section": "other",
@@ -110,6 +123,45 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-bfsi-gurugram",
+      "title": "B2B Lead Generation for BFSI in Gurugram",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-gurugram"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-brokers-mumbai",
+      "title": "B2B Lead Generation for Brokers in Mumbai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-mumbai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-chemical-manufacturing-ahmedabad",
+      "title": "Lead Gen for Chemical Makers in Ahmedabad",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-ahmedabad"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/b2b-lead-generation-chennai",
@@ -161,6 +213,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-distributors-mumbai",
+      "title": "B2B Lead Generation for Distributors in Mumbai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-mumbai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/b2b-lead-generation-dubai",
       "title": "B2B Lead Generation Company in Dubai, UAE",
       "section": "other",
@@ -174,6 +239,19 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-exporters-kolkata",
+      "title": "B2B Lead Generation for Exporters in Kolkata",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-kolkata"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/b2b-lead-generation-gurugram",
@@ -222,6 +300,45 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-industrial-automation-pune",
+      "title": "Lead Gen for Industrial Automation in Pune",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-pune"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-insurance-gurugram",
+      "title": "B2B Lead Generation for Insurance in Gurugram",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-gurugram"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-insurance-mumbai",
+      "title": "B2B Lead Generation for Insurance in Mumbai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-mumbai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/b2b-lead-generation-jaipur",
       "title": "B2B Lead Generation Company in Jaipur",
       "section": "other",
@@ -251,6 +368,19 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-logistics-mumbai",
+      "title": "B2B Lead Generation for Logistics in Mumbai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-mumbai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/b2b-lead-generation-mumbai",
@@ -288,6 +418,32 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-pharma-hyderabad",
+      "title": "B2B Lead Generation for Pharma in Hyderabad",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-hyderabad"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-pharma-mumbai",
+      "title": "B2B Lead Generation for Pharma in Mumbai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-mumbai"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/b2b-lead-generation-pune",
       "title": "B2B Lead Generation Companies in Pune",
       "section": "other",
@@ -302,6 +458,19 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-stone-marble-exporters-jaipur",
+      "title": "Lead Gen for Stone & Marble Exporters Jaipur",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-jaipur"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/b2b-lead-generation-surat",
@@ -319,6 +488,32 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-textile-manufacturing-ahmedabad",
+      "title": "Lead Gen for Textile Makers in Ahmedabad",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-ahmedabad"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-textile-manufacturing-surat",
+      "title": "Lead Gen for Textile Makers in Surat",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-surat"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/book-a-call",
       "title": "Book A Call",
       "section": "other",
@@ -333,7 +528,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 91,
+      "inboundCount": 92,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -377,9 +572,12 @@
       "title": "Enwil",
       "section": "calendar",
       "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
+      "linkedFrom": [
+        "/enwilfernandes"
+      ],
+      "inboundCount": 1,
       "noindex": true,
+      "referencedIn": "app/enwilfernandes/page.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -1947,6 +2145,7 @@
       "linkedFrom": [],
       "inboundCount": 0,
       "noindex": true,
+      "referencedIn": "app/components/ReelWidget.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -4157,7 +4356,7 @@
         "/services/account-based-marketing",
         "/services/ai-lead-generation"
       ],
-      "inboundCount": 16,
+      "inboundCount": 18,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

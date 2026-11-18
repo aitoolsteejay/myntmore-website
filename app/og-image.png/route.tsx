@@ -103,6 +103,19 @@ function getTitleMap(): Record<string, string> {
   } catch {}
 
   try {
+    const icDir = path.join(process.cwd(), "content", "industry-city-pages");
+    if (fs.existsSync(icDir)) {
+      for (const f of fs.readdirSync(icDir)) {
+        if (f.endsWith(".json")) {
+          const d = JSON.parse(fs.readFileSync(path.join(icDir, f), "utf8"));
+          const slug = f.replace(/\.json$/, "");
+          map[`/b2b-lead-generation-${slug}`] = d.h1 || d.metaTitle || d.ogTitle;
+        }
+      }
+    }
+  } catch {}
+
+  try {
     const careersDir = path.join(process.cwd(), "content", "careers");
     if (fs.existsSync(careersDir)) {
       for (const f of fs.readdirSync(careersDir)) {
@@ -204,8 +217,24 @@ function getCardConfig(pagePath: string): CardMetadata {
   }
 
   if (pagePath.startsWith("/b2b-lead-generation-")) {
-    const citySlug = pagePath.replace("/b2b-lead-generation-", "");
-    const cityName = citySlug
+    const slug = pagePath.replace("/b2b-lead-generation-", "");
+    try {
+      const icFile = path.join(process.cwd(), "content", "industry-city-pages", `${slug}.json`);
+      if (fs.existsSync(icFile)) {
+        const d = JSON.parse(fs.readFileSync(icFile, "utf8"));
+        return {
+          kickerText: `${d.industryName} · ${d.cityName}`,
+          defaultTitle: d.h1 || d.metaTitle,
+          steps: [`${d.cityName} Buyer Intel`, "Cold Email & LinkedIn", "Qualified Meetings"],
+          stats: [
+            { val: "12K+", label: "Meetings" },
+            { val: "$120M+", label: "Pipeline" },
+            { val: "130+", label: "Clients" },
+          ],
+        };
+      }
+    } catch {}
+    const cityName = slug
       .split("-")
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(" ");

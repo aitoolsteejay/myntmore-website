@@ -8,6 +8,7 @@ import { buildBreadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
 import { getCmsPostSummaries } from "@/lib/cms-posts";
 import glossaryCards from "@/lib/glossary-index.generated.json";
+import industryCityPages from "@/lib/industry-city-pages.generated.json";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
@@ -271,6 +272,14 @@ const GROUPS: SitemapGroup[] = [
       { label: "B2B Lead Generation in Dubai", href: "/b2b-lead-generation-dubai" },
       { label: "B2B Lead Generation in Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi" },
     ],
+  },
+  {
+    title: "Industry x City Pages",
+    accent: "#D97706",
+    links: industryCityPages.map((p) => ({
+      label: `${p.industryName} in ${p.cityName}`,
+      href: p.href,
+    })),
   },
   {
     title: "Company",

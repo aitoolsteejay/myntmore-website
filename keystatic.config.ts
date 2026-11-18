@@ -528,6 +528,98 @@ export default config({
       },
     }),
 
+    industryCityPages: collection({
+      label: "Industry x City pages",
+      path: "content/industry-city-pages/*",
+      format: "json",
+      slugField: "slug",
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Page slug (industry-city)",
+            description: "The page lives at /b2b-lead-generation-<slug> (e.g. pharma-hyderabad). Cannot be changed after first save. Automatically updates the sitemap and parent city page.",
+            validation: { isRequired: true },
+          },
+        }),
+        citySlug: fields.text({ label: "Parent city key (e.g. mumbai, gurugram, hyderabad)", validation: { isRequired: true } }),
+        cityName: fields.text({ label: "City display name (e.g. Mumbai)", validation: { isRequired: true } }),
+        industrySlug: fields.text({ label: "Industry key (e.g. pharma, insurance, textile-manufacturing)", validation: { isRequired: true } }),
+        industryName: fields.text({ label: "Industry display name (e.g. Pharma)", validation: { isRequired: true } }),
+        industryLpHref: fields.text({ label: "Optional vertical LP link (e.g. /lp/pharma)" }),
+        industryLpLabel: fields.text({ label: "Optional vertical LP button label" }),
+        metaTitle: fields.text({ label: "Search title (aim <= 49 chars; site adds ' | Myntmore')", validation: { isRequired: true, length: { max: 70 } } }),
+        metaDescription: fields.text({ label: "Search description (max 160 chars)", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords", itemLabel: (props) => props.value }),
+        ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
+        ogDescription: fields.text({ label: "Share description", multiline: true, validation: { isRequired: true } }),
+        badge: fields.text({ label: "Hero badge (e.g. Pharma · Hyderabad)", validation: { isRequired: true } }),
+        emoji: fields.text({ label: "Hero emoji", validation: { isRequired: true } }),
+        floatingIcons: fields.array(fields.text({ label: "Emoji" }), { label: "Floating hero emojis (4)", itemLabel: (props) => props.value }),
+        hubs: fields.array(fields.text({ label: "Corridor / Hub" }), { label: "Local industry hubs (marquee strip)", itemLabel: (props) => props.value }),
+        h1: fields.text({ label: "Headline (H1)", validation: { isRequired: true } }),
+        intro: fields.text({ label: "Hero intro (supports [text](/path) links)", multiline: true, validation: { isRequired: true } }),
+        primaryCta: fields.text({ label: "Primary CTA label", validation: { isRequired: true } }),
+        secondaryCta: fields.text({ label: "Secondary CTA label", validation: { isRequired: true } }),
+        whyTitle: fields.text({ label: "Market reality heading", validation: { isRequired: true } }),
+        why: fields.array(
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          { label: "Market reality cards (exactly 3)", validation: { length: { min: 3, max: 3 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        buyersTitle: fields.text({ label: "Buyers & signals heading", validation: { isRequired: true } }),
+        buyersIntro: fields.text({ label: "Buyers intro", multiline: true, validation: { isRequired: true } }),
+        buyers: fields.array(
+          fields.object({ role: fields.text({ label: "Buyer role / title", validation: { isRequired: true } }), signal: fields.text({ label: "Buying signal & outreach angle", multiline: true, validation: { isRequired: true } }) }),
+          { label: "Target decision-makers & signals (4 to 6)", validation: { length: { min: 4 } }, itemLabel: (props) => props.fields.role.value }
+        ),
+        segmentsTitle: fields.text({ label: "Sub-segments heading", validation: { isRequired: true } }),
+        segmentsIntro: fields.text({ label: "Sub-segments intro", multiline: true, validation: { isRequired: true } }),
+        segments: fields.array(
+          fields.object({ icon: fields.text({ label: "Emoji" }), title: fields.text({ label: "Title", validation: { isRequired: true } }), desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }) }),
+          { label: "Sub-segments (exactly 3)", validation: { length: { min: 3, max: 3 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        segmentsNote: fields.text({ label: "Note under segments (supports [text](/path) links)", multiline: true }),
+        proofTitle: fields.text({ label: "Proof heading", validation: { isRequired: true } }),
+        proofIntro: fields.text({ label: "Proof intro", multiline: true, validation: { isRequired: true } }),
+        proof: fields.array(
+          fields.object({
+            label: fields.text({ label: "Case study title", validation: { isRequired: true } }),
+            href: fields.text({ label: "Address (e.g. /case-studies/pharma-usa-api-second-source)", validation: { isRequired: true } }),
+            result: fields.text({ label: "Verified result from the case study", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "Verified case studies (real ones only)", validation: { length: { min: 2 } }, itemLabel: (props) => props.fields.label.value }
+        ),
+        proofNote: fields.text({ label: "Honesty disclaimer under proof", multiline: true, validation: { isRequired: true } }),
+        stepsTitle: fields.text({ label: "8-week rollout heading", validation: { isRequired: true } }),
+        steps: fields.array(
+          fields.object({
+            when: fields.text({ label: "When (e.g. Weeks 1 to 2)", validation: { isRequired: true } }),
+            title: fields.text({ label: "Title", validation: { isRequired: true } }),
+            desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "Rollout steps (exactly 4)", validation: { length: { min: 4, max: 4 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        stepsNote: fields.text({ label: "Note under steps", multiline: true }),
+        servicesTitle: fields.text({ label: "Services heading", validation: { isRequired: true } }),
+        servicesIntro: fields.text({ label: "Services intro", multiline: true, validation: { isRequired: true } }),
+        services: fields.array(
+          fields.object({
+            title: fields.text({ label: "Service", validation: { isRequired: true } }),
+            href: fields.text({ label: "Address (e.g. /services/cold-email)", validation: { isRequired: true } }),
+            desc: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "Services (exactly 6)", validation: { length: { min: 6, max: 6 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        diffTitle: fields.text({ label: "Why Myntmore heading", validation: { isRequired: true } }),
+        differentiators: fields.array(fields.text({ label: "Point", multiline: true }), { label: "Why Myntmore points (exactly 4)", validation: { length: { min: 4, max: 4 } }, itemLabel: (props) => props.value.slice(0, 60) }),
+        faqs: fields.array(
+          fields.object({ q: fields.text({ label: "Question", validation: { isRequired: true } }), a: fields.text({ label: "Answer", multiline: true, validation: { isRequired: true } }) }),
+          { label: "FAQs (at least 4)", validation: { length: { min: 4 } }, itemLabel: (props) => props.fields.q.value }
+        ),
+        formTitle: fields.text({ label: "Form heading", validation: { isRequired: true } }),
+        formSubtitle: fields.text({ label: "Form subtitle", multiline: true, validation: { isRequired: true } }),
+      },
+    }),
+
     caseStudyPages: collection({
       label: "Case studies (detailed)",
       path: "content/case-study-pages/*",

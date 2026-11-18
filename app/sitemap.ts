@@ -285,6 +285,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/b2b-lead-generation-coimbatore`, lastModified: lastMod("/b2b-lead-generation-coimbatore"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-dubai`, lastModified: lastMod("/b2b-lead-generation-dubai"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-abu-dhabi`, lastModified: lastMod("/b2b-lead-generation-abu-dhabi"), changeFrequency: "monthly", priority: 0.6 },
+    // Industry x City landing pages
+    // BEGIN generated: industry city pages (scripts/generate-industry-city-pages.mjs)
+    { url: `${base}/b2b-lead-generation-automotive-manufacturing-chennai`, lastModified: lastMod("/b2b-lead-generation-automotive-manufacturing-chennai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-bfsi-gurugram`, lastModified: lastMod("/b2b-lead-generation-bfsi-gurugram"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-brokers-mumbai`, lastModified: lastMod("/b2b-lead-generation-brokers-mumbai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-chemical-manufacturing-ahmedabad`, lastModified: lastMod("/b2b-lead-generation-chemical-manufacturing-ahmedabad"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-distributors-mumbai`, lastModified: lastMod("/b2b-lead-generation-distributors-mumbai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-exporters-kolkata`, lastModified: lastMod("/b2b-lead-generation-exporters-kolkata"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-industrial-automation-pune`, lastModified: lastMod("/b2b-lead-generation-industrial-automation-pune"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-insurance-gurugram`, lastModified: lastMod("/b2b-lead-generation-insurance-gurugram"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-insurance-mumbai`, lastModified: lastMod("/b2b-lead-generation-insurance-mumbai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-logistics-mumbai`, lastModified: lastMod("/b2b-lead-generation-logistics-mumbai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-pharma-hyderabad`, lastModified: lastMod("/b2b-lead-generation-pharma-hyderabad"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-pharma-mumbai`, lastModified: lastMod("/b2b-lead-generation-pharma-mumbai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-stone-marble-exporters-jaipur`, lastModified: lastMod("/b2b-lead-generation-stone-marble-exporters-jaipur"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-textile-manufacturing-ahmedabad`, lastModified: lastMod("/b2b-lead-generation-textile-manufacturing-ahmedabad"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-textile-manufacturing-surat`, lastModified: lastMod("/b2b-lead-generation-textile-manufacturing-surat"), changeFrequency: "monthly", priority: 0.6 },
+    // END generated: industry city pages
     // SEO recovery pages
     { url: `${base}/marketing-automation`, lastModified: lastMod("/marketing-automation"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/seo`, lastModified: lastMod("/seo"), changeFrequency: "monthly", priority: 0.7 },

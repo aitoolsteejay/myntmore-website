@@ -269,6 +269,21 @@ if (exists(careersRolesFile)) {
   } catch {}
 }
 
+// Each city page (/b2b-lead-generation-<city>) links to its child industry x city pages
+const industryCityFile = path.join(ROOT, "lib", "industry-city-pages.generated.json");
+if (exists(industryCityFile)) {
+  try {
+    const icPages = JSON.parse(read(industryCityFile));
+    for (const p of icPages) {
+      edges.push({
+        from: `/b2b-lead-generation-${p.citySlug}`,
+        fromFile: "components/city/CityPage.tsx",
+        to: p.href,
+      });
+    }
+  } catch {}
+}
+
 // Links inside the service page JSON: content/service-pages holds the copy of the five template services,
 // content/service-copy the copy of cold email, LinkedIn outreach and the self-serve tool. A string value that is
 // a bare site path (e.g. "/case-studies/saas-series-a") is a link from that service's page.
