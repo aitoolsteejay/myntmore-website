@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T12:15:17.072Z",
+  "generatedAt": "2026-11-19T12:22:51.354Z",
   "site": "https://www.myntmore.com",
   "counts": {
     "total": 343,
@@ -401,9 +401,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -414,9 +415,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -447,9 +449,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -475,9 +478,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -543,9 +547,10 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/"
+        "/",
+        "lib/city-links.ts"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

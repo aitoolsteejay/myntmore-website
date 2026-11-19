@@ -33,8 +33,9 @@ export interface MarketPage {
   timingTitle: string;
   timingBody: string;
   industryLinks: { label: string; href: string }[];
-  // Which city links to show: the UAE city pages, every Indian city page, or none.
-  cities: "uae" | "india" | null;
+  // Which city links to show: the UAE city pages, every Indian city page, this market's own city pages
+  // (MARKET_CITY_LINKS in lib/city-links.ts), or none.
+  cities: "uae" | "india" | "market" | null;
 }
 
 // The admin stores "no city links" as "none" (a dropdown cannot hold null), and may leave out the slug,
@@ -42,7 +43,7 @@ export interface MarketPage {
 type MarketFile = Omit<MarketPage, "slug" | "cities"> & { cities: string | null };
 const load = (slug: MarketSlug, file: unknown): MarketPage => {
   const f = file as MarketFile;
-  return { ...f, slug, cities: f.cities === "uae" || f.cities === "india" ? f.cities : null };
+  return { ...f, slug, cities: f.cities === "uae" || f.cities === "india" || f.cities === "market" ? f.cities : null };
 };
 
 const PAGES: Record<MarketSlug, MarketPage> = {

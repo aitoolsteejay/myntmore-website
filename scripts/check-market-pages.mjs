@@ -28,7 +28,7 @@ for (const f of files) {
     if (!/^\/case-studies\/[a-z0-9-]+$/.test(p.href ?? "") || !pageExists(p.href)) problems.push(`${f}: play "${p.title}" links to ${p.href}, which is not a case study page`);
   }
   for (const l of d.industryLinks ?? []) if (!pageExists(l.href ?? "")) problems.push(`${f}: industry link ${l.href} is not a page`);
-  if (![null, "uae", "india", "none"].includes(d.cities ?? null)) problems.push(`${f}: "cities" must be uae, india or none`);
+  if (![null, "uae", "india", "market", "none"].includes(d.cities ?? null)) problems.push(`${f}: "cities" must be uae, india, market or none`);
 }
 for (const k of KNOWN) if (!files.includes(`${k}.json`)) problems.push(`content/market-pages/${k}.json is missing`);
 if (problems.length) {

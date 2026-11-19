@@ -726,6 +726,7 @@ export default config({
           options: [
             { label: "UAE city pages (Dubai, Abu Dhabi)", value: "uae" },
             { label: "Every Indian city page", value: "india" },
+            { label: "This market's city pages (New York and Los Angeles for the US, London, Paris, Singapore)", value: "market" },
             { label: "None", value: "none" },
           ],
           defaultValue: "none",
