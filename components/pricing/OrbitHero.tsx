@@ -104,7 +104,6 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", visu
             <br />
             <span className="italic" style={{ color: "#23232b" }}>
               {accentWord}
-              <span style={{ color: GOLD }}>.</span>
             </span>
           </h1>
           <svg viewBox="0 0 460 22" fill="none" className="hero-fade-d1 mt-3 w-[min(78vw,400px)]" aria-hidden="true">
