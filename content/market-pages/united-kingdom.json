@@ -30,21 +30,33 @@
       "tag": "Pharma · UK",
       "title": "Narrow the list in a small market",
       "body": "A UK pharma company needed predictable access to a small, specialised market. We narrowed the ICP, mapped high-fit accounts and ran precision outreach instead of volume.",
-      "results": ["3 to 20+ qualified meetings a month", "5% to 35% positive responses", "£200K+ potential pipeline"],
+      "results": [
+        "3 to 20+ qualified meetings a month",
+        "5% to 35% positive responses",
+        "£200K+ potential pipeline"
+      ],
       "href": "/case-studies/uk-pharma-qualified-meetings"
     },
     {
       "tag": "Bookkeeping · Partnerships",
       "title": "Partner with practices, not end clients",
       "body": "Direct outreach to individual businesses gave a bookkeeping firm uneven results. Messages to managing partners at UK accounting practices offered overflow capacity instead.",
-      "results": ["15 meetings booked", "5 delivery-model reviews", "2 paid pilots agreed"],
+      "results": [
+        "15 meetings booked",
+        "5 delivery-model reviews",
+        "2 paid pilots agreed"
+      ],
       "href": "/case-studies/financial-services-uk-bookkeeping"
     },
     {
       "tag": "Recruitment · Engineering",
       "title": "Only contact employers who are hiring",
       "body": "A UK engineering recruiter's consultants spent too long on broad business development. Outreach went only to employers with relevant advertised vacancies.",
-      "results": ["23 meetings booked", "8 hiring briefs", "4 searches authorized"],
+      "results": [
+        "23 meetings booked",
+        "8 hiring briefs",
+        "4 searches authorized"
+      ],
       "href": "/case-studies/recruitment-uk-engineering-staffing"
     }
   ],
@@ -53,9 +65,18 @@
   "timingTitle": "Timing",
   "timingBody": "The UK is 4.5 hours behind India in summer and 5.5 hours in winter. Messages go out on UK weekday mornings, so an India-based team can take meetings in its own afternoon.",
   "industryLinks": [
-    { "label": "Accounting & CFO firms", "href": "/lp/accounting-cfo-firms" },
-    { "label": "Pharma companies", "href": "/lp/pharma" },
-    { "label": "Recruitment & staffing", "href": "/lp/recruitment-firms" }
+    {
+      "label": "Accounting & CFO firms",
+      "href": "/lp/accounting-cfo-firms"
+    },
+    {
+      "label": "Pharma companies",
+      "href": "/lp/pharma"
+    },
+    {
+      "label": "Recruitment & staffing",
+      "href": "/lp/recruitment-firms"
+    }
   ],
-  "cities": null
+  "cities": "none"
 }

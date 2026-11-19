@@ -11,6 +11,7 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 const CHECK = process.argv.includes("--check");
 const dir = path.join(root, "content/industry-city-pages");
 const j = (v) => JSON.stringify(v);
+const INDUSTRY_KEYS = new Set(JSON.parse(fs.readFileSync(path.join(root, "lib/industry-keys.json"), "utf8")).map((i) => i.key));
 
 const REQUIRED = [
   "citySlug",
@@ -80,6 +81,9 @@ if (fs.existsSync(dir)) {
     }
     const d = { ...JSON.parse(raw), slug };
     for (const k of REQUIRED) if (!d[k]) problems.push(`${f}: "${k}" is empty`);
+    if (!INDUSTRY_KEYS.has(d.industrySlug)) {
+      problems.push(`${f}: industrySlug "${d.industrySlug}" is not in lib/industry-keys.json`);
+    }
     if (!fs.existsSync(path.join(root, "content/city-pages", `${d.citySlug}.json`))) {
       problems.push(`${f}: citySlug "${d.citySlug}" does not match a file in content/city-pages/`);
     }

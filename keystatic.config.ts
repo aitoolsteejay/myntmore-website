@@ -14,6 +14,7 @@ import { heritageJewelleryValuationPipelineCaseSchema } from "./content/case-stu
 import { leadershipDevelopmentMessagingShiftCaseSchema } from "./content/case-study-long/schemas/leadership-development-messaging-shift";
 import { retailStrategyDesignPipelineCaseSchema } from "./content/case-study-long/schemas/retail-strategy-design-pipeline";
 import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long/schemas/wealth-management-pms-pipeline";
+import industryKeys from "./lib/industry-keys.json";
 
 // Content lives as files in the repo.
 //  - Homepage FAQs: JSON files. `npm run faqs:build` (run by prebuild) turns
@@ -41,6 +42,10 @@ import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long
 //    its sitemap entry (both run by prebuild).
 //  - Glossary terms: one JSON file per term. `npm run glossary:build` (run by prebuild) writes each
 //    term page, the A-Z index cards and the sitemap entries. All 51 terms are CMS terms; the longer-form ones use "Sections".
+//  - Events: one JSON file per event. `npm run events:build` (run by prebuild) writes lib/events.generated.json
+//    (read by /events, the pop-up and the sitemap) and the thin page under app/events/<slug>/.
+//  - Market pages: one JSON file per /case-studies/markets/<market> page, read by lib/market-pages.ts and checked
+//    by scripts/check-market-pages.mjs (run by prebuild).
 //  - Blog posts: .mdoc files read at build time by lib/cms-posts.ts and
 //    rendered by app/resources/blogs/[slug]/page.tsx (served at /resources/blogs/<slug>).
 //    All blog posts are CMS posts; there are no hand-built blog pages.
@@ -380,7 +385,7 @@ export default config({
             validation: { isRequired: true },
           },
         }),
-        metaTitle: fields.text({ label: "Search title", description: "Aim for 49 characters or fewer (the site adds \" | Myntmore\"); Google cuts long titles.", validation: { isRequired: true, length: { max: 70 } } }),
+        metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
         metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
         keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
         ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
@@ -459,7 +464,7 @@ export default config({
             validation: { isRequired: true },
           },
         }),
-        metaTitle: fields.text({ label: "Search title", description: "Aim for 49 characters or fewer (the site adds \" | Myntmore\"); Google cuts long titles.", validation: { isRequired: true, length: { max: 70 } } }),
+        metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
         metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
         keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
         ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
@@ -541,13 +546,23 @@ export default config({
             validation: { isRequired: true },
           },
         }),
-        citySlug: fields.text({ label: "Parent city key (e.g. mumbai, gurugram, hyderabad)", validation: { isRequired: true } }),
+        citySlug: fields.relationship({
+          label: "Parent city page",
+          description: "Pick from the existing city pages. To add a city, create its page under City pages first.",
+          collection: "cityPages",
+          validation: { isRequired: true },
+        }),
         cityName: fields.text({ label: "City display name (e.g. Mumbai)", validation: { isRequired: true } }),
-        industrySlug: fields.text({ label: "Industry key (e.g. pharma, insurance, textile-manufacturing)", validation: { isRequired: true } }),
+        industrySlug: fields.select({
+          label: "Industry",
+          description: "Groups this page with the same industry in other cities. A new industry is one line in lib/industry-keys.json; ask a developer.",
+          options: industryKeys.map((i) => ({ label: i.label, value: i.key })),
+          defaultValue: industryKeys[0].key,
+        }),
         industryName: fields.text({ label: "Industry display name (e.g. Pharma)", validation: { isRequired: true } }),
         industryLpHref: fields.text({ label: "Optional vertical LP link (e.g. /lp/pharma)" }),
         industryLpLabel: fields.text({ label: "Optional vertical LP button label" }),
-        metaTitle: fields.text({ label: "Search title (aim <= 49 chars; site adds ' | Myntmore')", validation: { isRequired: true, length: { max: 70 } } }),
+        metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
         metaDescription: fields.text({ label: "Search description (max 160 chars)", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
         keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords", itemLabel: (props) => props.value }),
         ogTitle: fields.text({ label: "Share title (LinkedIn, WhatsApp)", validation: { isRequired: true } }),
@@ -617,6 +632,104 @@ export default config({
         ),
         formTitle: fields.text({ label: "Form heading", validation: { isRequired: true } }),
         formSubtitle: fields.text({ label: "Form subtitle", multiline: true, validation: { isRequired: true } }),
+      },
+    }),
+
+    events: collection({
+      label: "Events",
+      path: "content/events/*",
+      format: "json",
+      slugField: "slug",
+      columns: ["date", "title"],
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Event address",
+            description: "The page lives at /events/<address>, e.g. predictable-pipeline-webinar. It cannot be changed after the first save. A new event appears on /events, in the sitemap and (if switched on) in the pop-up after the next deploy.",
+            validation: { isRequired: true },
+          },
+        }),
+        title: fields.text({ label: "Title (shown on the page and the event card)", multiline: true, validation: { isRequired: true } }),
+        breadcrumbLabel: fields.text({ label: "Short name for the breadcrumb (e.g. Predictable Pipeline Webinar)", validation: { isRequired: true } }),
+        tag: fields.text({ label: "Tag (e.g. Live Webinar, Workshop)", validation: { isRequired: true } }),
+        format: fields.text({ label: "Format (e.g. Online · Live Webinar)", validation: { isRequired: true } }),
+        accent: fields.text({ label: "Accent colour (hex, e.g. #8b5cf6)", validation: { isRequired: true, pattern: { regex: /^#[0-9a-fA-F]{6}$/, message: "Use a hex colour like #8b5cf6" } } }),
+        date: fields.date({ label: "Date", validation: { isRequired: true } }),
+        startTime: fields.text({ label: "Start time, India time (24-hour, e.g. 11:30)", validation: { isRequired: true, pattern: { regex: /^([01]\d|2[0-3]):[0-5]\d$/, message: "Use 24-hour time like 11:30" } } }),
+        endTime: fields.text({ label: "End time, India time (24-hour, e.g. 13:00)", description: "The event counts as upcoming until this time, then the page switches to the recording.", validation: { isRequired: true, pattern: { regex: /^([01]\d|2[0-3]):[0-5]\d$/, message: "Use 24-hour time like 13:00" } } }),
+        cardDescription: fields.text({ label: "Short description (event card and pop-up, one or two sentences)", multiline: true, validation: { isRequired: true, length: { max: 200 } } }),
+        description: fields.text({ label: "Full description (the event page)", multiline: true, validation: { isRequired: true } }),
+        topics: fields.array(fields.text({ label: "Topic" }), { label: "\"What we'll cover\" topics", itemLabel: (props) => props.value }),
+        registrationUrl: fields.text({ label: "Registration link", description: "Shown as the \"Register Free\" button until the event ends. Required to switch on the pop-up." }),
+        recordingUrl: fields.text({ label: "Recording link (optional)", description: "Shown as the \"Get the Recording\" button after the event ends." }),
+        showPopup: fields.checkbox({
+          label: "Show the pop-up on the site",
+          description: "Shows this event in the pop-up until it ends. Switch it off once the event is over: pages built before the end time can keep showing it until the next deploy.",
+          defaultValue: false,
+        }),
+        metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
+        metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        ogTitle: fields.text({ label: "Share title (optional, LinkedIn and WhatsApp)", description: "Leave empty to use the search title." }),
+        ogDescription: fields.text({ label: "Share description (optional)", multiline: true, description: "Leave empty to use the search description." }),
+      },
+    }),
+
+    marketPages: collection({
+      label: "Market pages",
+      path: "content/market-pages/*",
+      format: "json",
+      slugField: "slug",
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Market key",
+            description: "The page lives at /case-studies/markets/<key>. Edit the six existing markets here. A new market also needs its case studies tagged in code (lib/case-study-markets.ts), so ask a developer before creating one.",
+            validation: { isRequired: true },
+          },
+        }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
+        heroLead: fields.text({ label: "Headline, first part (e.g. Find distributors and buyers in)", validation: { isRequired: true } }),
+        heroUnderlined: fields.text({ label: "Headline, underlined end (e.g. the UAE)", validation: { isRequired: true } }),
+        intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),
+        audiences: fields.array(
+          fields.object({
+            icon: fields.text({ label: "Emoji", validation: { isRequired: true } }),
+            title: fields.text({ label: "Title", validation: { isRequired: true } }),
+            body: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "\"Who this is for\" cards", validation: { length: { min: 1 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        playsTitle: fields.text({ label: "\"What worked\" heading", validation: { isRequired: true } }),
+        plays: fields.array(
+          fields.object({
+            tag: fields.text({ label: "Tag (e.g. Pharma · Market entry)", validation: { isRequired: true } }),
+            title: fields.text({ label: "Title", validation: { isRequired: true } }),
+            body: fields.text({ label: "Text", multiline: true, validation: { isRequired: true } }),
+            results: fields.array(fields.text({ label: "Result" }), { label: "Results (as the case study states them)", itemLabel: (props) => props.value }),
+            href: fields.text({ label: "Case study address, e.g. /case-studies/pharma-uae-distribution-partners", validation: { isRequired: true } }),
+          }),
+          { label: "Plays (each one is a real case study)", validation: { length: { min: 1 } }, itemLabel: (props) => props.fields.title.value }
+        ),
+        rulesTitle: fields.text({ label: "Rules heading", validation: { isRequired: true } }),
+        rulesBody: fields.text({ label: "Rules text", multiline: true, validation: { isRequired: true } }),
+        timingTitle: fields.text({ label: "Timing heading", validation: { isRequired: true } }),
+        timingBody: fields.text({ label: "Timing text", multiline: true, validation: { isRequired: true } }),
+        industryLinks: fields.array(
+          fields.object({
+            label: fields.text({ label: "Link text", validation: { isRequired: true } }),
+            href: fields.text({ label: "Address, e.g. /lp/pharma", validation: { isRequired: true } }),
+          }),
+          { label: "Industry page links", itemLabel: (props) => props.fields.label.value }
+        ),
+        cities: fields.select({
+          label: "City links at the bottom of the page",
+          options: [
+            { label: "UAE city pages (Dubai, Abu Dhabi)", value: "uae" },
+            { label: "Every Indian city page", value: "india" },
+            { label: "None", value: "none" },
+          ],
+          defaultValue: "none",
+        }),
       },
     }),
 
@@ -868,7 +981,8 @@ export default config({
         }),
         metaTitle: fields.text({
           label: "Search title (optional)",
-          description: "Shown in Google results. Leave empty to use the title. Keep under 60 characters.",
+          description: "Shown in Google results. Leave empty to use the title. Up to 49 characters: the site adds \" | Myntmore\" (11 characters).",
+          validation: { length: { max: 49 } },
         }),
         description: fields.text({
           label: "Search description",
@@ -1178,8 +1292,8 @@ export default config({
         }),
         metaTitle: fields.text({
           label: "Search Title (Google snippet)",
-          description: "Around 50-55 characters.",
-          validation: { isRequired: true },
+          description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.",
+          validation: { isRequired: true, length: { max: 49 } },
         }),
         metaDescription: fields.text({
           label: "Search Description",

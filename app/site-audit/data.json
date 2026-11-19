@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-18T10:48:59.941Z",
+  "generatedAt": "2026-11-19T05:32:11.946Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 333,
+    "total": 331,
     "linked": 300,
-    "orphan": 33,
-    "noindex": 34,
-    "notInXmlSitemap": 38,
-    "privateHidden": 8
+    "orphan": 31,
+    "noindex": 32,
+    "notInXmlSitemap": 36,
+    "privateHidden": 6
   },
   "pages": [
     {
@@ -528,7 +528,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 94,
+      "inboundCount": 95,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2155,7 +2155,7 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/events/predictable-pipeline-webinar"
+        "events/EventPage.tsx"
       ],
       "inboundCount": 2,
       "noindex": false,
@@ -2164,14 +2164,13 @@
     },
     {
       "path": "/events/predictable-pipeline-webinar",
-      "title": "Predictable Pipeline Webinar",
+      "title": "Free Webinar: Build a Predictable Lead Pipeline",
       "section": "events",
       "status": "linked",
       "linkedFrom": [
-        "/",
         "/events"
       ],
-      "inboundCount": 2,
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2783,7 +2782,7 @@
     },
     {
       "path": "/resources/blogs/cold-email-sequence-templates",
-      "title": "Cold Email Sequence Template: 5 Emails + Follow-Ups",
+      "title": "Cold Email Sequence Template: 5 Emails + Example",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -4869,30 +4868,6 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
-    },
-    {
-      "path": null,
-      "private": true,
-      "title": "Private pricing / admin page (URL withheld)",
-      "section": "private",
-      "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
-      "noindex": true,
-      "inXmlSitemap": false,
-      "inHtmlSitemap": false
-    },
-    {
-      "path": null,
-      "private": true,
-      "title": "Private pricing / admin page (URL withheld)",
-      "section": "private",
-      "status": "orphan",
-      "linkedFrom": [],
-      "inboundCount": 0,
-      "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },

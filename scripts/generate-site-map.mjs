@@ -269,6 +269,16 @@ if (exists(careersRolesFile)) {
   } catch {}
 }
 
+// The events hub (/events) lists every event in lib/events.generated.json (built from content/events/)
+const eventsFile = path.join(ROOT, "lib", "events.generated.json");
+if (exists(eventsFile)) {
+  try {
+    for (const e of JSON.parse(read(eventsFile))) {
+      edges.push({ from: "/events", fromFile: "app/events/page.tsx", to: `/events/${e.slug}` });
+    }
+  } catch {}
+}
+
 // Each city page (/b2b-lead-generation-<city>) links to its child industry x city pages
 const industryCityFile = path.join(ROOT, "lib", "industry-city-pages.generated.json");
 if (exists(industryCityFile)) {

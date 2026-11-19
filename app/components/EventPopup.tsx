@@ -7,14 +7,11 @@ import { textTone } from "@/lib/colors";
 
 const SHOW_DELAY_MS = 7000;
 
-// Manually paused. `isUpcoming` already hides the popup once an event ends,
-// but a statically prerendered homepage keeps serving the build-time result
-// until the next deploy, so a past event can still flash up. Set this back to
-// true when a live event is scheduled -- see lib/events-data.ts.
-const POPUP_ENABLED = false;
-
+// Shows the next upcoming event whose "Show the pop-up" switch is on in the admin (content/events/*.json).
+// `isUpcoming` hides it once the event ends, but a statically prerendered page keeps serving the build-time
+// result until the next deploy, so switch the pop-up off in the admin once the event is over.
 export default function EventPopup() {
-  const event = POPUP_ENABLED ? EVENTS.filter(isUpcoming)[0] : undefined;
+  const event = EVENTS.filter((e) => e.showPopup && isUpcoming(e))[0];
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

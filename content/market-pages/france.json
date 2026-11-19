@@ -30,14 +30,22 @@
       "tag": "Pharma · Contract manufacturing",
       "title": "Write in French and English",
       "body": "A tablet and capsule maker reached sourcing, external manufacturing and supply chain leads at French pharma companies whose portfolios matched its dosage forms. Messages went out in French and English.",
-      "results": ["18 buyer meetings", "6 requests for quotation", "36 positive replies"],
+      "results": [
+        "18 buyer meetings",
+        "6 requests for quotation",
+        "36 positive replies"
+      ],
       "href": "/case-studies/pharma-france-contract-manufacturing"
     },
     {
       "tag": "Packaging · Cosmetics",
       "title": "Go to the packaging development team",
       "body": "A carton and printed packaging maker mapped French cosmetics brands that fit its capabilities, then contacted packaging development, procurement and operations leaders about upcoming packaging needs.",
-      "results": ["18 meetings booked", "6 packaging briefs", "4 sample and quotation requests"],
+      "results": [
+        "18 meetings booked",
+        "6 packaging briefs",
+        "4 sample and quotation requests"
+      ],
       "href": "/case-studies/manufacturers-exporters-france-packaging"
     }
   ],
@@ -46,8 +54,14 @@
   "timingTitle": "Timing and language",
   "timingBody": "France is 3.5 hours behind India in summer and 4.5 hours in winter. Messages go out on French weekday mornings. The pharma campaign wrote to sourcing teams in both French and English.",
   "industryLinks": [
-    { "label": "Pharma companies", "href": "/lp/pharma" },
-    { "label": "Manufacturers & exporters", "href": "/lp/manufacturers-exporters" }
+    {
+      "label": "Pharma companies",
+      "href": "/lp/pharma"
+    },
+    {
+      "label": "Manufacturers & exporters",
+      "href": "/lp/manufacturers-exporters"
+    }
   ],
-  "cities": null
+  "cities": "none"
 }
