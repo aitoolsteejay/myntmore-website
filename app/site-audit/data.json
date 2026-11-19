@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-19T05:32:11.946Z",
+  "generatedAt": "2026-11-19T12:15:17.072Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 331,
-    "linked": 300,
-    "orphan": 31,
-    "noindex": 32,
-    "notInXmlSitemap": 36,
+    "total": 343,
+    "linked": 310,
+    "orphan": 33,
+    "noindex": 34,
+    "notInXmlSitemap": 38,
     "privateHidden": 6
   },
   "pages": [
@@ -269,6 +269,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-hong-kong",
+      "title": "B2B Lead Generation Company in Hong Kong",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-hyderabad",
       "title": "Lead Generation Company & Services in Hyderabad",
       "section": "other",
@@ -383,6 +396,32 @@
       "inHtmlSitemap": false
     },
     {
+      "path": "/b2b-lead-generation-london",
+      "title": "B2B Lead Generation Company in London",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-los-angeles",
+      "title": "B2B Lead Generation Company in Los Angeles",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-mumbai",
       "title": "AI B2B Lead Generation Agency in Mumbai",
       "section": "other",
@@ -403,6 +442,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-new-york",
+      "title": "B2B Lead Generation Company in New York",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-noida",
       "title": "B2B Lead Generation Company in Noida",
       "section": "other",
@@ -413,6 +465,19 @@
         "lib/city-links.ts"
       ],
       "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-paris",
+      "title": "B2B Lead Generation Company in Paris",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -460,6 +525,32 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-shanghai",
+      "title": "B2B Lead Generation Company in Shanghai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-singapore",
+      "title": "B2B Lead Generation Company in Singapore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-stone-marble-exporters-jaipur",
       "title": "Lead Gen for Stone & Marble Exporters Jaipur",
       "section": "other",
@@ -483,6 +574,19 @@
         "lib/city-links.ts"
       ],
       "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-sydney",
+      "title": "B2B Lead Generation Company in Sydney",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -512,6 +616,32 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-tokyo",
+      "title": "B2B Lead Generation Company in Tokyo",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-toronto",
+      "title": "B2B Lead Generation Company in Toronto",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
     },
     {
       "path": "/book-a-call",
@@ -623,6 +753,28 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/calendar/elg/page.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/calendar/ig",
+      "title": "Ig",
+      "section": "calendar",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/calendar/instagram",
+      "title": "Instagram",
+      "section": "calendar",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -5103,6 +5255,18 @@
   ],
   "hiddenRedirects": 7,
   "rewrites": [
+    {
+      "from": "/calendar/IG",
+      "to": "/calendar/ig"
+    },
+    {
+      "from": "/calendly/IG",
+      "to": "/calendar/ig"
+    },
+    {
+      "from": "/calendly/ig",
+      "to": "/calendar/ig"
+    },
     {
       "from": "/tools/dm-angle-generator",
       "to": "https://mynt-more-angles.lovable.app"

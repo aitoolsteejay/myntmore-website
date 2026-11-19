@@ -126,6 +126,20 @@ const CITY_LINKS = [
   { label: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi" },
 ];
 
+// Cities outside India, shown on their own footer row.
+const WORLD_CITY_LINKS = [
+  { label: "New York", href: "/b2b-lead-generation-new-york" },
+  { label: "London", href: "/b2b-lead-generation-london" },
+  { label: "Tokyo", href: "/b2b-lead-generation-tokyo" },
+  { label: "Paris", href: "/b2b-lead-generation-paris" },
+  { label: "Singapore", href: "/b2b-lead-generation-singapore" },
+  { label: "Hong Kong", href: "/b2b-lead-generation-hong-kong" },
+  { label: "Los Angeles", href: "/b2b-lead-generation-los-angeles" },
+  { label: "Shanghai", href: "/b2b-lead-generation-shanghai" },
+  { label: "Sydney", href: "/b2b-lead-generation-sydney" },
+  { label: "Toronto", href: "/b2b-lead-generation-toronto" },
+];
+
 export default function Footer() {
   const ctaHref = "/book-a-call";
   const breathRef = useRef<HTMLDivElement>(null);
@@ -292,6 +306,21 @@ export default function Footer() {
                 {link.label}
               </Link>
               {i < CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
+            </span>
+          ))}
+        </div>
+
+        <div className="py-4 lg:py-6 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-2 border-b" style={{ borderColor: "#E8E2D9" }}>
+          <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>Worldwide:</span>
+          {WORLD_CITY_LINKS.map((link, i) => (
+            <span key={link.href} className="flex items-center gap-x-2">
+              <Link href={link.href} className="inline-flex min-h-[44px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
+              >
+                {link.label}
+              </Link>
+              {i < WORLD_CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
             </span>
           ))}
         </div>

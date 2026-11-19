@@ -295,6 +295,32 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-hong-kong": [
+    {
+      "question": "Does Myntmore have an office in Hong Kong?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Hong Kong work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Hong Kong market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Hong Kong built for?",
+      "answer": "B2B companies that want meetings with Hong Kong buyers, mainly finance, trading, logistics and technology firms. That includes firms based there and Indian or international companies selling into the market. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Hong Kong. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Hong Kong and send in their working hours. Hong Kong is 2.5 hours ahead of India, so meetings fit easily into an Indian working day. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Hong Kong buyers?",
+      "answer": "Hong Kong's Unsolicited Electronic Messages Ordinance requires accurate sender details and an unsubscribe option in commercial email, and the Personal Data (Privacy) Ordinance governs personal data. We contact business decision-makers only, keep volumes low and honour every opt-out. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
   "city-hyderabad": [
     {
       "question": "Do we need to be based in Hyderabad to work with you?",
@@ -447,6 +473,58 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-london": [
+    {
+      "question": "Does Myntmore have an office in London?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to London work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the London market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for London built for?",
+      "answer": "B2B companies that want meetings with London buyers, mainly financial services, fintech, professional services and SaaS firms. That includes firms based there and Indian or international companies selling into United Kingdom. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in London. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in London and send in their working hours. London is 4.5 hours behind India in summer and 5.5 hours in winter, so meetings fit the Indian afternoon. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for London buyers?",
+      "answer": "UK GDPR allows B2B cold email on a legitimate interest basis when the message is relevant to the recipient's role. Under PECR, emails to corporate addresses don't need prior consent but must identify the sender and offer an opt-out. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
+  "city-los-angeles": [
+    {
+      "question": "Does Myntmore have an office in Los Angeles?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Los Angeles work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Los Angeles market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Los Angeles built for?",
+      "answer": "B2B companies that want meetings with Los Angeles buyers, mainly e-commerce, media, aerospace and SaaS companies. That includes firms based there and Indian or international companies selling into United States. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Los Angeles. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Los Angeles and send in their working hours. Los Angeles is 12.5 to 13.5 hours behind India, so meetings usually land late in the Indian evening. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Los Angeles buyers?",
+      "answer": "US B2B cold email falls under the CAN-SPAM Act, which does not require prior consent but does require honest sender and subject lines, a postal address in every email and an opt-out honoured within 10 business days. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
   "city-mumbai": [
     {
       "question": "Do we need to be based in Mumbai to work with you?",
@@ -497,6 +575,32 @@
       "answer": "Yes. Appointment setting is part of every engagement: we handle the replies and book qualified meetings straight into your calendar, so your sales team only joins calls with buyers who have agreed to talk. Each meeting comes with notes on the prospect and what they asked about."
     }
   ],
+  "city-new-york": [
+    {
+      "question": "Does Myntmore have an office in New York?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to New York work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the New York market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for New York built for?",
+      "answer": "B2B companies that want meetings with New York buyers, mainly financial services, SaaS, media and professional services firms. That includes firms based there and Indian or international companies selling into United States. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in New York. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in New York and send in their working hours. New York is 9.5 hours behind India in summer and 10.5 hours in winter, so meetings usually land in the Indian evening. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for New York buyers?",
+      "answer": "US B2B cold email falls under the CAN-SPAM Act, which does not require prior consent but does require honest sender and subject lines, a postal address in every email and an opt-out honoured within 10 business days. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
   "city-noida": [
     {
       "question": "Does Myntmore have an office in Noida?",
@@ -529,6 +633,32 @@
     {
       "question": "What do you need from us to get started?",
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
+  "city-paris": [
+    {
+      "question": "Does Myntmore have an office in Paris?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Paris work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Paris market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Paris built for?",
+      "answer": "B2B companies that want meetings with Paris buyers, mainly pharma, cosmetics, aerospace and SaaS companies. That includes firms based there and Indian or international companies selling into France. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Paris. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Paris and send in their working hours. Paris is 3.5 hours behind India in summer and 4.5 hours in winter, so meetings fit the Indian afternoon. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Paris buyers?",
+      "answer": "France applies GDPR, and its regulator, the CNIL, accepts B2B email prospecting without prior consent when the message relates to the recipient's job, they are told how their data is used, and they can opt out easily. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
     }
   ],
   "city-pune": [
@@ -569,6 +699,58 @@
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
     }
   ],
+  "city-shanghai": [
+    {
+      "question": "Does Myntmore have an office in Shanghai?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Shanghai work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Shanghai market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Shanghai built for?",
+      "answer": "B2B companies that want meetings with Shanghai buyers, mainly manufacturers, multinationals' China offices and pharma companies. That includes firms based there and Indian or international companies selling into China. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Shanghai. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Shanghai and send in their working hours. Shanghai is 2.5 hours ahead of India, so meetings fit easily into an Indian working day. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Shanghai buyers?",
+      "answer": "China's Personal Information Protection Law sets strict rules on collecting personal information and on transferring it abroad. Campaigns are scoped with you, and checked with counsel, before launch, and we contact people in their business roles only. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
+  "city-singapore": [
+    {
+      "question": "Does Myntmore have an office in Singapore?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Singapore work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Singapore market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Singapore built for?",
+      "answer": "B2B companies that want meetings with Singapore buyers, mainly finance, insurance, staffing and regional headquarters. That includes firms based there and Indian or international companies selling into the market. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Singapore. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Singapore and send in their working hours. Singapore is 2.5 hours ahead of India, so meetings fit easily into an Indian working day. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Singapore buyers?",
+      "answer": "Singapore's Personal Data Protection Act governs how personal data is collected and used, and the Spam Control Act covers unsolicited commercial email sent in bulk. We keep volumes low and honour every opt-out. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
   "city-surat": [
     {
       "question": "Does Myntmore have an office in Surat?",
@@ -601,6 +783,84 @@
     {
       "question": "What do you need from us to get started?",
       "answer": "A clear picture of your ICP (even a rough one works), access to a domain we can set up for outbound sending, and about an hour of your time for an onboarding call. We handle ICP refinement, list building, sequence writing, and day-to-day campaign management from there."
+    }
+  ],
+  "city-sydney": [
+    {
+      "question": "Does Myntmore have an office in Sydney?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Sydney work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Sydney market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Sydney built for?",
+      "answer": "B2B companies that want meetings with Sydney buyers, mainly financial services, SaaS and professional services firms. That includes firms based there and Indian or international companies selling into Australia. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Sydney. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Sydney and send in their working hours. Sydney is 4.5 hours ahead of India in the Australian winter and 5.5 hours in summer, so meetings fit the Indian morning. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Sydney buyers?",
+      "answer": "Australia's Spam Act 2003 requires consent for commercial email, which can be inferred when a business address is conspicuously published and the message relates to the person's role. Every email needs sender details and a working unsubscribe. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
+  "city-tokyo": [
+    {
+      "question": "Does Myntmore have an office in Tokyo?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Tokyo work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Tokyo market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Tokyo built for?",
+      "answer": "B2B companies that want meetings with Tokyo buyers, mainly manufacturers, trading houses, IT and pharma companies. That includes firms based there and Indian or international companies selling into Japan. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Tokyo. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Tokyo and send in their working hours. Tokyo is 3.5 hours ahead of India, so messages go out on Japanese weekday mornings and meetings fit the Indian morning. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Tokyo buyers?",
+      "answer": "Japan's Act on the Regulation of Transmission of Specified Electronic Mail generally requires consent for advertising email, with exceptions such as business addresses a company publishes. Its APPI governs personal data. Campaigns are scoped with you, and with counsel, before launch. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
+    }
+  ],
+  "city-toronto": [
+    {
+      "question": "Does Myntmore have an office in Toronto?",
+      "answer": "No. Myntmore's only office is in BKC, Mumbai, and every engagement runs remotely. Companies selling to Toronto work with us over calls, a shared dashboard and a weekly report, the same way our other clients do. This page describes the Toronto market we reach, not a local branch."
+    },
+    {
+      "question": "Who is lead generation for Toronto built for?",
+      "answer": "B2B companies that want meetings with Toronto buyers, mainly financial services, SaaS, AI and professional services firms. That includes firms based there and Indian or international companies selling into Canada. If your buyers are businesses, not consumers, the same system adapts to your ICP."
+    },
+    {
+      "question": "We are an Indian company that wants clients in Toronto. Can you help?",
+      "answer": "Yes. We build separate sending domains so your main domain is never at risk, write copy for buyers in Toronto and send in their working hours. Toronto is 9.5 hours behind India in summer and 10.5 hours in winter, so meetings usually land in the Indian evening. Campaigns go live within 18 days of kickoff."
+    },
+    {
+      "question": "Is cold email allowed for Toronto buyers?",
+      "answer": "Canada's Anti-Spam Legislation (CASL) requires consent. Implied consent can apply when a business address is conspicuously published, with no statement refusing messages, and the email relates to the person's role. Every email needs sender details and an unsubscribe. This is general information, not legal advice."
+    },
+    {
+      "question": "How quickly can we expect meetings to start?",
+      "answer": "Campaigns go live within 18 days of kickoff, and most clients see their first qualified conversations in weeks 3 to 4. The first two weeks go into ICP mapping, list building, sending domains with warm-up, and copy. Meeting volume usually becomes consistent by weeks 6 to 8, once messaging is tuned on real replies."
+    },
+    {
+      "question": "What does pricing look like?",
+      "answer": "We work on a monthly retainer with a 3-month minimum, which covers setup and enough sending to judge results. After that it runs month to month with 30 days' notice, with no annual contract. We don't publish a price list; we share a quote after a free GTM audit call, once we know which channels you need."
     }
   ],
   "guide-cold-email-infrastructure-setup": [

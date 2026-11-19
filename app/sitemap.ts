@@ -293,6 +293,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/b2b-lead-generation-coimbatore`, lastModified: lastMod("/b2b-lead-generation-coimbatore"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-dubai`, lastModified: lastMod("/b2b-lead-generation-dubai"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/b2b-lead-generation-abu-dhabi`, lastModified: lastMod("/b2b-lead-generation-abu-dhabi"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-new-york`, lastModified: lastMod("/b2b-lead-generation-new-york"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-london`, lastModified: lastMod("/b2b-lead-generation-london"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-tokyo`, lastModified: lastMod("/b2b-lead-generation-tokyo"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-paris`, lastModified: lastMod("/b2b-lead-generation-paris"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-singapore`, lastModified: lastMod("/b2b-lead-generation-singapore"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-hong-kong`, lastModified: lastMod("/b2b-lead-generation-hong-kong"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-los-angeles`, lastModified: lastMod("/b2b-lead-generation-los-angeles"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-shanghai`, lastModified: lastMod("/b2b-lead-generation-shanghai"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-sydney`, lastModified: lastMod("/b2b-lead-generation-sydney"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/b2b-lead-generation-toronto`, lastModified: lastMod("/b2b-lead-generation-toronto"), changeFrequency: "monthly", priority: 0.6 },
     // Industry x City landing pages
     // BEGIN generated: industry city pages (scripts/generate-industry-city-pages.mjs)
     { url: `${base}/b2b-lead-generation-automotive-manufacturing-chennai`, lastModified: lastMod("/b2b-lead-generation-automotive-manufacturing-chennai"), changeFrequency: "monthly", priority: 0.6 },
