@@ -142,6 +142,18 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/calendar/IG",
+        destination: "/calendar/ig",
+      },
+      {
+        source: "/calendly/IG",
+        destination: "/calendar/ig",
+      },
+      {
+        source: "/calendly/ig",
+        destination: "/calendar/ig",
+      },
+      {
         source: "/tools/dm-angle-generator",
         destination: "https://mynt-more-angles.lovable.app",
       },
