@@ -117,7 +117,7 @@ export default function OrbitHero({ leadWords, accentWord, planet = "mars", visu
         </div>
 
         {visual !== "planet" ? (
-          <EcosystemVisual variant={visual} />
+          <EcosystemVisual variant={visual} planet={planet} />
         ) : (
         <div className="hero-fade-d2 relative hidden md:block w-full max-w-[560px] justify-self-end aspect-square" style={{ containerType: "inline-size" }} aria-hidden="true">
           <svg viewBox="0 0 600 600" className="absolute inset-0 w-full h-full overflow-visible">

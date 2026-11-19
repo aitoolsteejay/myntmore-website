@@ -1,107 +1,144 @@
 "use client";
 
-// Replaces the planet in the plans hero with an animation that carries the
-// same message: the "LinkedIn GTM Growth ecosystem" circle and the
-// People x Content x Opportunities idea.
-//   orbit    (option A): People, Content and Opportunities orbit the circle.
-//   flywheel (option C): a gold dot circles a ring and lights People, then
-//                         Content, then Opportunities, on repeat.
-// Pure CSS motion (offset-path), so no extra JS; it stops under
-// prefers-reduced-motion and falls back to a static layout where
-// offset-path is not supported. Decorative parts are aria-hidden, the real
-// text stays readable.
+// Hero visual for the private plans pages: a glossy planet with two tilted
+// rings, two dots circling the dashed ring and a floating "LinkedIn GTM
+// Growth ecosystem" card. Same artwork on every page; only the palette
+// changes per planet (Earth green, Mars terracotta, Neptune blue).
+// Pure SVG/CSS motion, so no extra JS; it stops under prefers-reduced-motion.
+// Decorative parts are aria-hidden, the card text stays readable.
 
 export type EcosystemVariant = "orbit" | "flywheel";
+export type EcosystemPlanet = "mars" | "earth" | "neptune";
 
-const BLUE = "#3B82F6";
-const TEAL = "#14B8A6";
-const GREEN = "#10B981";
-// Chip colours: the same blue / green / teal the plan columns use; text uses the
-// darker readable shade of each (see lib/colors.ts).
-const CHIPS = [
-  { accent: BLUE, text: "#1D4ED8" },
-  { accent: TEAL, text: "#0F766E" },
-  { accent: GREEN, text: "#047857" },
-];
-const BAR = `linear-gradient(90deg, ${BLUE}, ${TEAL})`;
-const INK = "#0f0f14";
-const WORDS = ["People", "Content", "Opportunities"] as const;
+interface Palette {
+  orb: [string, string, string, string];
+  glow: string;
+  ring: string;
+  ring2: string;
+  dotA: [string, string];
+  dotB: [string, string];
+  heading: string;
+}
 
-// Chips sit on the ring: circle(43%) matches the ring's inset of 7%.
-const PATH = "circle(43% at 50% 50%)";
+const PALETTES: Record<EcosystemPlanet, Palette> = {
+  earth: {
+    orb: ["#ffffff", "#f4f8f1", "#dbe8d5", "#bcd3bd"],
+    glow: "#5E8C61",
+    ring: "#5E8C61",
+    ring2: "rgba(74,98,60,.45)",
+    dotA: ["#B7D3A8", "#5E8C61"],
+    dotB: ["#D9D2A0", "#A39A4A"],
+    heading: "#3F6B45",
+  },
+  mars: {
+    orb: ["#ffffff", "#fdf1ea", "#f6cdb8", "#e8a083"],
+    glow: "#D85A30",
+    ring: "#D85A30",
+    ring2: "rgba(153,60,29,.4)",
+    dotA: ["#F5C4B3", "#D85A30"],
+    dotB: ["#FAC775", "#BA7517"],
+    heading: "#993C1D",
+  },
+  neptune: {
+    orb: ["#ffffff", "#eff2f8", "#c9d3e6", "#97a9cc"],
+    glow: "#3B5488",
+    ring: "#34508A",
+    ring2: "rgba(59,84,136,.4)",
+    dotA: ["#9FB1D6", "#34508A"],
+    dotB: ["#B9C0D8", "#5D6B94"],
+    heading: "#263F70",
+  },
+};
+
+const TILT = "-24 200 200;-17 200 200;-24 200 200";
+const TILT2 = "18 200 200;11 200 200;18 200 200";
 
 const CSS = `
 .eco-stage{position:relative;width:100%;aspect-ratio:1/1;container-type:inline-size}
-.eco-ring{position:absolute;inset:7%;border-radius:50%;border:1.5px dashed rgba(20,184,166,.55)}
-.eco-glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.16) 0%,rgba(20,184,166,.08) 45%,rgba(20,184,166,0) 72%)}
-.eco-ping{position:absolute;inset:21%;border-radius:50%;border:1.5px solid rgba(59,130,246,.5);animation:eco-ping 3.6s ease-out infinite}
-.eco-ping.b{animation-delay:1.8s;border-color:rgba(20,184,166,.5)}
-.eco-hub{position:absolute;inset:21%;border-radius:50%;background:#fff;border:1.5px solid rgba(20,184,166,.55);box-shadow:0 24px 60px rgba(20,184,166,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3}
-.eco-chip{position:absolute;top:0;left:0;z-index:2;white-space:nowrap;font-weight:700;font-size:clamp(.68rem,2.3cqw,.95rem);line-height:1;padding:.55em 1em;border-radius:999px;background:#fff;border:1px solid #E8E2D9;color:${INK};box-shadow:0 6px 18px rgba(15,15,20,.06);offset-path:${PATH};offset-rotate:0deg}
-.eco-orbit{animation:eco-orbit 12s linear infinite}
-.eco-dot{position:absolute;top:0;left:0;z-index:1;width:3.2cqw;height:3.2cqw;margin:0;border-radius:50%;background:${TEAL};box-shadow:0 0 0 .9cqw rgba(20,184,166,.25);offset-path:${PATH};offset-rotate:0deg;animation:eco-orbit 9s linear infinite}
-.eco-lit{animation:eco-lit 9s linear infinite}
-@keyframes eco-orbit{from{offset-distance:0%}to{offset-distance:100%}}
-@keyframes eco-ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
-@keyframes eco-lit{0%,3%{background:${TEAL};border-color:${TEAL};color:#fff;transform:scale(1.12)}16%,100%{background:#fff;border-color:#E8E2D9;transform:scale(1)}}
-@media (prefers-reduced-motion:reduce){.eco-ping,.eco-orbit,.eco-dot,.eco-lit{animation:none}}
-@supports not (offset-path:circle(10px at 50% 50%)){
-  .eco-chip{offset-path:none}
-  .eco-chip:nth-of-type(1){top:3%;left:50%;transform:translateX(-50%)}
-  .eco-chip:nth-of-type(2){top:70%;left:70%}
-  .eco-chip:nth-of-type(3){top:70%;left:2%}
-  .eco-dot{display:none}
-}
+.eco-stage svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.eco-card{position:absolute;top:12%;right:0;width:54%;z-index:5;background:#fff;border:1px solid #E8E2D9;border-radius:12px;padding:2.8cqw 3.6cqw;box-shadow:0 2cqw 5cqw rgba(15,15,20,.12);animation:eco-bob 4.5s ease-in-out infinite}
+.eco-card em{display:block;font-style:normal;font-weight:700;font-size:max(.6rem,2.9cqw);letter-spacing:.08em;text-transform:uppercase;line-height:1.35}
+.eco-card span{display:block;font-weight:500;font-size:max(.78rem,3.7cqw);line-height:1.4;color:#4a4238;margin-top:1.1cqw}
+@keyframes eco-bob{50%{transform:translateY(-1.5cqw)}}
+@media (prefers-reduced-motion:reduce){.eco-card{animation:none}}
 `;
 
-export default function EcosystemVisual({ variant }: { variant: EcosystemVariant }) {
+function Grad({ id, a, b }: { id: string; a: string; b: string }) {
+  return (
+    <radialGradient id={id} cx="35%" cy="30%">
+      <stop offset="0" stopColor={a} />
+      <stop offset="1" stopColor={b} />
+    </radialGradient>
+  );
+}
+
+export default function EcosystemVisual({ planet = "earth" }: { variant?: EcosystemVariant; planet?: EcosystemPlanet }) {
+  const p = PALETTES[planet] ?? PALETTES.earth;
+  const ringProps = { fill: "none", stroke: p.ring, strokeWidth: 1.5, strokeDasharray: "6 5", opacity: 0.9 } as const;
+
   return (
     <div className="hero-fade-d2 relative hidden md:block w-full max-w-[560px] justify-self-end" aria-hidden="true">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="eco-stage">
-        <div className="eco-glow" />
-        <div className="eco-ring" />
-        <div className="eco-ping" />
-        <div className="eco-ping b" />
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="eco-orb" cx="34%" cy="28%" r="85%">
+              <stop offset="0" stopColor={p.orb[0]} />
+              <stop offset=".38" stopColor={p.orb[1]} />
+              <stop offset=".76" stopColor={p.orb[2]} />
+              <stop offset="1" stopColor={p.orb[3]} />
+            </radialGradient>
+            <Grad id="eco-da" a={p.dotA[0]} b={p.dotA[1]} />
+            <Grad id="eco-db" a={p.dotB[0]} b={p.dotB[1]} />
+            <filter id="eco-shadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="14" />
+            </filter>
+            <clipPath id="eco-front">
+              <rect x="0" y="200" width="400" height="200" />
+            </clipPath>
+            <path id="eco-p1" d="M 28 200 A 172 108 0 1 1 372 200 A 172 108 0 1 1 28 200" />
+            <path id="eco-p2" d="M 24 200 A 176 92 0 1 1 376 200 A 176 92 0 1 1 24 200" />
+            <g id="eco-dots">
+              <circle r="8" fill="url(#eco-da)">
+                <animateMotion dur="12s" repeatCount="indefinite">
+                  <mpath href="#eco-p1" />
+                </animateMotion>
+              </circle>
+              <circle r="6" fill="url(#eco-db)">
+                <animateMotion dur="12s" begin="-6s" repeatCount="indefinite">
+                  <mpath href="#eco-p1" />
+                </animateMotion>
+              </circle>
+            </g>
+          </defs>
 
-        {variant === "orbit" &&
-          WORDS.map((word, i) => (
-            <span
-              key={word}
-              className="eco-chip eco-orbit"
-              style={{ color: CHIPS[i].text, borderColor: CHIPS[i].accent, backgroundColor: `${CHIPS[i].accent}14`, offsetDistance: `${(i * 100) / 3}%`, animationDelay: `${-(i * 12) / 3}s` }}
-            >
-              {word}
-            </span>
-          ))}
+          {/* back half of the rings and dots, behind the planet */}
+          <g>
+            <animateTransform attributeName="transform" type="rotate" values={TILT} dur="16s" repeatCount="indefinite" />
+            <use href="#eco-p1" {...ringProps} />
+            <use href="#eco-dots" />
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" values={TILT2} dur="20s" repeatCount="indefinite" />
+            <use href="#eco-p2" fill="none" stroke={p.ring2} strokeWidth="1" />
+          </g>
 
-        {variant === "flywheel" && (
-          <>
-            {WORDS.map((word, i) => (
-              <span
-                key={word}
-                className="eco-chip eco-lit"
-                style={{ offsetDistance: `${(i * 100) / 3}%`, animationDelay: `${(i * 9) / 3}s` }}
-              >
-                {word}
-              </span>
-            ))}
-            <span className="eco-dot" />
-          </>
-        )}
+          <circle cx="214" cy="266" r="96" fill={p.glow} opacity=".28" filter="url(#eco-shadow)" />
+          <circle cx="200" cy="200" r="100" fill="url(#eco-orb)" />
 
-        <div className="eco-hub">
-          <p className="font-extrabold uppercase" style={{ color: INK, fontSize: "clamp(.85rem, 3.2cqw, 1.7rem)", lineHeight: 1.25, letterSpacing: "0.06em" }}>
-            LinkedIn GTM
-            <br />
-            Growth ecosystem
-          </p>
-          <div className="my-4 h-[3px] w-12 rounded-full" style={{ background: BAR }} />
-          <p className="font-semibold" style={{ color: "#4a4238", fontSize: "clamp(.78rem, 2.7cqw, 1.4rem)", lineHeight: 1.4 }}>
-            Consistent presence.
-            <br />
-            Real opportunities.
-          </p>
+          {/* front half, passing in front of the planet */}
+          <g>
+            <animateTransform attributeName="transform" type="rotate" values={TILT} dur="16s" repeatCount="indefinite" />
+            <g clipPath="url(#eco-front)">
+              <use href="#eco-p1" {...ringProps} />
+              <use href="#eco-dots" />
+            </g>
+          </g>
+        </svg>
+
+        <div className="eco-card">
+          <em style={{ color: p.heading }}>LinkedIn GTM growth ecosystem</em>
+          <span>Consistent presence. Real opportunities.</span>
         </div>
       </div>
     </div>
