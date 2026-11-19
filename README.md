@@ -6,6 +6,8 @@ This is a large, content-heavy marketing site: **165 routes** as of this writing
 
 ---
 
+For copy-and-paste Codex prompts by page type and task, see the [website prompt library](docs/website-prompt-library.md).
+
 ## Table of contents
 
 - [Tech stack](#tech-stack)

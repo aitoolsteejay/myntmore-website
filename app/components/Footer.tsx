@@ -204,7 +204,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#3D3D3D" }}>Services</h3>
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5">
+              <Link
+                href="/services"
+                className="transition-colors duration-200"
+                style={{ color: "#3D3D3D" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#3D3D3D"; }}
+              >
+                Services
+              </Link>
+            </h3>
             <ul className="space-y-0 lg:space-y-3" role="list">
               {SERVICES_LINKS.map((link) => (
                 <li key={link.label}>

@@ -160,7 +160,7 @@ function CheckIcon({ color, size = "sm" }: { color: string; size?: "sm" | "lg" }
 }
 
 function MatrixCell({ value, accent }: { value: Cell; accent: string }) {
-  if (value === false) return <span className="text-base font-bold" style={{ color: "#C9C2B7" }}>—</span>;
+  if (value === false) return <span className="text-base font-bold" style={{ color: "#C9C2B7" }}>-</span>;
   if (value === true) {
     return (
       <span className="flex justify-center">
