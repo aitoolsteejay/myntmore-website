@@ -107,7 +107,7 @@ Primary keyword is the first entry in each page's `keywords`. The sitewide check
 | `/tools/linkedin-hook-grader` | linkedin hook grader |
 | `/case-studies/specialist-recruitment-linkedin-leads` | recruitment firm lead generation case study |
 | `/resources/glossary/spam-complaint-rate` | spam complaint rate |
-| `/resources/blogs/gmail-and-yahoo-sender-requirements` (DRAFT, `published: false`) | gmail and yahoo sender requirements |
+| `/resources/blogs/gmail-and-yahoo-sender-requirements` | gmail and yahoo sender requirements |
 
 ## Added 2026-11-02: accounting and CFO firms landing page, keyword expansion
 

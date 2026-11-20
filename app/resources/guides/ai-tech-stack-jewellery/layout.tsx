@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/schema";
+import { buildArticleSchema, SITE_URL } from "@/lib/schema";
+import JsonLd from "@/app/components/JsonLd";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
 
@@ -29,10 +30,24 @@ export const metadata: Metadata = withPageSeo("/resources/guides/ai-tech-stack-j
   },
 });
 
+// Article schema lives here because the page itself is a client component. The first publication date is not
+// on record, so only the last update (from lib/sitemap-dates.json) is given.
+const ARTICLE_SCHEMA = buildArticleSchema({
+  headline: "AI Tech Stack for Jewellery Brands",
+  description: "106 AI tools across 14 categories, curated for jewellery brand owners and retailers, from product photography and reels to paid ads.",
+  url: PAGE_URL,
+  dateModified: "2026-10-22T15:20:46+05:30",
+});
+
 export default function GIATechStackLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={ARTICLE_SCHEMA} />
+      {children}
+    </>
+  );
 }

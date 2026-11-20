@@ -264,7 +264,8 @@ export interface ArticleSchemaInput {
   headline: string;
   description: string;
   url: string;
-  datePublished: string;
+  // Optional: leave it out when the first publication date is not known (Google treats it as recommended).
+  datePublished?: string;
   dateModified: string;
   image?: string;
 }

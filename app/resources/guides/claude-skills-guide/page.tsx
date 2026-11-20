@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/app/components/JsonLd";
+import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import Link from "next/link";
 import { Camera, CalendarCheck, Mail } from "lucide-react";
 import InnerLayout from "@/app/components/InnerLayout";
@@ -333,9 +335,18 @@ function SkillSection({ skill }: { skill: Skill }) {
   );
 }
 
+// Article schema. The first publication date is not on record, so only the last update (from lib/sitemap-dates.json) is given.
+const ARTICLE_SCHEMA = buildArticleSchema({
+  headline: "The 6 Claude Skills Guide",
+  description: "Six ready-to-use Claude skills for founders: content distribution, LinkedIn growth, lead gen, and more, with copy-paste prompts. Try them free.",
+  url: `${SITE_URL}/resources/guides/claude-skills-guide`,
+  dateModified: "2026-11-14T12:09:59+05:30",
+});
+
 export default function ClaudeSkillsGuide() {
   return (
     <InnerLayout>
+      <JsonLd data={ARTICLE_SCHEMA} />
       {/* Hero */}
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto">

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
   openGraph: {
     ...OG_BASE,
-    title: "We Create 200+ Meetings a Month Through Cold Outreach | Myntmore Webinar",
+    title: "We Create 200+ Meetings a Month Through Cold Outreach | Myntmore",
     description: "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings every month. Sep 19, 2026 · 11:30 AM – 1:00 PM IST.",
     url: URL,
     images: ogImages("/events/predictable-pipeline-webinar"),

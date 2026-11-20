@@ -823,7 +823,7 @@ About 37 permanent redirects (308), grouped by reason: renamed pages (`/about` t
 | --- | --- |
 | 18 pages with a wrong Google canonical (e.g. `/services`) | Needs Search Console Test Live URL then Request Indexing by a person (10.5) |
 | Indexed-pages count for the 2 to 8 Nov week | Not finished; last count was 158 of 265 on 30 Oct |
-| Gmail and Yahoo sender-requirements post | Drafted in `content/posts/gmail-and-yahoo-sender-requirements.mdoc`, unpublished, needs a fact-check |
+| Gmail and Yahoo sender-requirements post | Published 20 Nov 2026 after a fact-check against Google's and Yahoo's sender pages |
 | How to describe LinkedIn automation | Owner decision pending; blocks one content brief |
 | Zoho Bookings may still have a 1-hour service | Check inside Zoho; cannot be seen from the repo |
 | Live Keystatic admin | Not confirmed switched on; screens not tested in a browser |

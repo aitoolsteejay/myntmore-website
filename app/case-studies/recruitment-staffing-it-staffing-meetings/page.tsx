@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/recruitment-staffing-it-staff
 
 export const metadata: Metadata = {
   title: "IT Staffing Agency Case Study",
-  description: "26 Meetings for an IT Staffing Agency: 8 active staffing requirement discussions and 3 new client opportunities. A Myntmore Recruitment & Staffing case study.",
+  description: "26 Meetings for an IT Staffing Agency: 8 active staffing requirement discussions. A Myntmore Recruitment & Staffing case study.",
   keywords: [
     "it staffing agency lead generation",
     "it staffing agency case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "26 Meetings for an IT Staffing Agency",
-    description: "26 Meetings for an IT Staffing Agency: 8 active staffing requirement discussions and 3 new client opportunities. A Myntmore Recruitment & Staffing case study.",
+    description: "26 Meetings for an IT Staffing Agency: 8 active staffing requirement discussions. A Myntmore Recruitment & Staffing case study.",
     url: URL,
     images: ogImages("/case-studies/recruitment-staffing-it-staffing-meetings"),
   },

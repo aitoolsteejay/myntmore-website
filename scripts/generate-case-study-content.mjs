@@ -28,7 +28,7 @@ const AUDIENCES = {
 };
 
 // The meta description: the title plus up to three of the case's own numeric results that the
-// title doesn't already state, sized to land between 120 and 160 characters.
+// title doesn't already state, sized to land between 120 and 155 characters (Google cuts most descriptions past about 155).
 const lead = (s) => (s.match(/^[₹$]?\d[\d.,]*\+?x?/) || [""])[0].toLowerCase();
 function metaDescription(c) {
   const words = new Set(c.title.toLowerCase().split(/\s+/));
@@ -41,13 +41,13 @@ function metaDescription(c) {
   for (let n = 0; n <= Math.min(3, items.length); n++) {
     for (const tail of tails) {
       const s = n ? `${c.title}: ${join(items.slice(0, n))}.${tail}` : `${c.title}.${tail}`;
-      if (s.length > 160) continue;
+      if (s.length > 155) continue;
       // Prefer: in range, then more results, then the shorter tail.
       const score = (s.length >= 120 ? 1000 : 0) + n * 100 + (tail === tails[0] ? 10 : 0);
       if (!best || score > best.score) best = { s, score };
     }
   }
-  if (!best || best.s.length < 120) throw new Error(`${c.slug}: no meta description between 120 and 160 characters`);
+  if (!best || best.s.length < 120) throw new Error(`${c.slug}: no meta description between 120 and 155 characters`);
   return best.s;
 }
 

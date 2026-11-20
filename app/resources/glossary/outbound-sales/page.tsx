@@ -8,7 +8,7 @@ const SLUG = "outbound-sales";
 const PAGE_URL = `${SITE_URL}/resources/glossary/${SLUG}`;
 const TITLE = "Outbound Sales";
 const DESCRIPTION = "Outbound sales is a sales model in which the seller initiates contact with targeted prospects through channels such as cold email, LinkedIn, and phone, rather than waiting for inbound inquiries.";
-const META_DESCRIPTION = "Outbound sales defined in one line: the seller contacts chosen prospects first. For the channels, process and examples, see the full B2B outbound sales guide.";
+const META_DESCRIPTION = "Outbound sales defined in one line: the seller contacts chosen prospects first. For channels, process and examples, see the full B2B outbound sales guide.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | B2B Glossary`,

@@ -31,7 +31,7 @@ const problems = [];
 for (const c of lib) {
   if (metaTitle(c).length + " | Myntmore".length > 60) problems.push(`${c.slug}: meta title is ${metaTitle(c).length + 11} characters, over 60`);
   const d = metaDescription(c).length;
-  if (d < 120 || d > 160) problems.push(`${c.slug}: meta description is ${d} characters, outside 120 to 160`);
+  if (d < 120 || d > 155) problems.push(`${c.slug}: meta description is ${d} characters, outside 120 to 155`);
   if (ogTitle(c).length > 70) problems.push(`${c.slug}: og:title is ${ogTitle(c).length} characters, over 70`);
   if (!c.keywords?.length) problems.push(`${c.slug}: no keywords`);
 }

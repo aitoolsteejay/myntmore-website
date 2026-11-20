@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T12:22:51.354Z",
+  "generatedAt": "2026-11-20T04:06:02.088Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 343,
-    "linked": 310,
+    "total": 344,
+    "linked": 311,
     "orphan": 33,
     "noindex": 34,
     "notInXmlSitemap": 38,
@@ -663,7 +663,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 95,
+      "inboundCount": 96,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2892,9 +2892,9 @@
         "/resources/blogs",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/cold-email-follow-up-sequence",
-        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
+        "/resources/blogs/gmail-and-yahoo-sender-requirements"
       ],
-      "inboundCount": 10,
+      "inboundCount": 11,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2914,7 +2914,7 @@
         "/resources/guides/cold-email-tech-stack",
         "lib/internal-paths.ts"
       ],
-      "inboundCount": 13,
+      "inboundCount": 14,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3030,6 +3030,21 @@
         "/resources/blogs/personal-branding-agency-vs-content-freelancer"
       ],
       "inboundCount": 4,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/gmail-and-yahoo-sender-requirements",
+      "title": "Gmail and Yahoo Sender Requirements Explained",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/guides/smartlead-setup",
+        "/resources/blogs"
+      ],
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3739,9 +3754,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-tech-stack",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4104,9 +4120,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/spam-complaint-rate",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4147,9 +4164,10 @@
         "/resources/blogs/cold-email-compliance-guide",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/cold-email-follow-up-sequence",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -4161,9 +4179,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-tech-stack",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4647,7 +4666,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 29,
+      "inboundCount": 30,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

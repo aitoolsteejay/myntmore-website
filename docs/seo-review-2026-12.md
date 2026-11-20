@@ -132,6 +132,13 @@ These touched many pages at once, so they show up in the AI tracker and Google's
 | Blog posts and glossary terms link to the service pages | 12 Nov | Service pages' positions, in the Performance report | __ |
 | Search titles and descriptions editable in Keystatic; the CMS refuses titles over 49 characters | 12 and 19 Nov | Nothing to measure; prevents titles being cut off in Google | n/a |
 
+## Held until after this review
+
+Small fixes deliberately not made, so they don't change pages being measured here. Apply them once the review is done:
+
+- Search descriptions a few characters over 155 (Google may cut the last word): `/b2b-lead-generation-mumbai` (159), `/b2b-lead-generation-noida` (160), `/b2b-lead-generation-insurance-mumbai` (157), `/b2b-lead-generation-gurugram` (156), `/b2b-lead-generation-indore` (156).
+- Share title over 70 characters (cut off on X): `/b2b-lead-generation-automotive-manufacturing-chennai` (76).
+
 ## 7. What to do with the results
 
 - **A city page that moved onto page 1:** leave it alone for another month.

@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/saas-customer-support-convers
 
 export const metadata: Metadata = {
   title: "Customer Support SaaS Case Study",
-  description: "21 Sales Conversations for a Customer Support SaaS: 3x increase in LinkedIn engagement. The challenge, approach and results from a Myntmore SaaS case study.",
+  description: "21 Sales Conversations for a Customer Support SaaS. The challenge, approach and results from a Myntmore SaaS case study.",
   keywords: [
     "customer support saas lead generation",
     "customer support saas case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "21 Sales Conversations for a Customer Support SaaS",
-    description: "21 Sales Conversations for a Customer Support SaaS: 3x increase in LinkedIn engagement. The challenge, approach and results from a Myntmore SaaS case study.",
+    description: "21 Sales Conversations for a Customer Support SaaS. The challenge, approach and results from a Myntmore SaaS case study.",
     url: URL,
     images: ogImages("/case-studies/saas-customer-support-conversations"),
   },
