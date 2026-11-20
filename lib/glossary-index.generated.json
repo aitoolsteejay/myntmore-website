@@ -103,7 +103,13 @@
     "tag": "Targeting",
     "title": "Buying Signal",
     "excerpt": "An observable event, like a new hire or funding round, suggesting a company may be ready to buy now.",
-    "accent": "#0D9488"
+    "accent": "#0D9488",
+    "aliases": [
+      "Sales Trigger",
+      "Intent Signal",
+      "Trigger Event",
+      "Purchasing Signal"
+    ]
   },
   {
     "href": "/resources/glossary/can-spam-act",

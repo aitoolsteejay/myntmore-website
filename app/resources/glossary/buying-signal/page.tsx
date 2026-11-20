@@ -7,14 +7,15 @@ import { buildDefinedTermSchema, SITE_URL } from "@/lib/schema";
 const SLUG = "buying-signal";
 const PAGE_URL = `${SITE_URL}/resources/glossary/${SLUG}`;
 const TITLE = "Buying Signal";
-const DESCRIPTION = "A buying signal is an observable event, such as a company hiring for a relevant role or raising funding, that indicates it may be ready to buy a product like yours right now.";
-const META_DESCRIPTION = "What buying signals are in B2B sales, common examples, and how they're used to time outbound outreach instead of guessing.";
+const DESCRIPTION = "A buying signal is an observable corporate event, such as a leadership hire or funding round, indicating that an account is ready for an outbound sales conversation.";
+const ALSO_KNOWN_AS = ["Sales Trigger","Intent Signal","Trigger Event","Purchasing Signal"];
+const META_DESCRIPTION = "What buying signals are in B2B sales development, major trigger categories, a worked example, and how to time outreach to win qualified meetings.";
 
 export const metadata: Metadata = {
   title: `${TITLE} | B2B Glossary`,
   description: META_DESCRIPTION,
   alternates: { canonical: PAGE_URL },
-  keywords: ["what is a buying signal","buying signals b2b sales","intent data buying signals","examples of buying signals"],
+  keywords: ["what is a buying signal","buying signals b2b sales","intent data buying signals","examples of buying signals","sales trigger events","b2b prospecting triggers"],
   openGraph: {
     ...OG_BASE,
     title: `${TITLE} | Myntmore Glossary`,
@@ -35,6 +36,7 @@ const TERM_SCHEMA = buildDefinedTermSchema({
   description: DESCRIPTION,
   url: PAGE_URL,
   inDefinedTermSet: `${SITE_URL}/resources/glossary`,
+  alternateName: ALSO_KNOWN_AS,
 });
 
 export default function GlossaryTermPage() {
@@ -44,13 +46,14 @@ export default function GlossaryTermPage() {
       tag={"Targeting"}
       accent={"#0D9488"}
       title={TITLE}
+      alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"The difference between messaging a company that fits, and messaging one that fits and is actually ready."}
-      definition={"An observable event, like a new relevant hire, a funding round, or a leadership change, that suggests a company may be ready to buy right now rather than at some undefined future point."}
-      body={"Fit alone (matching an ICP) tells you a company could be a customer eventually. A buying signal tells you the timing might actually be right, which is why the strongest outbound lists combine ICP fit with recent signals rather than treating a static list as evergreen."}
+      definition={"An observable event, like a new executive hire, funding round, or tech stack migration, that indicates an account is actively experiencing change and ready to buy."}
+      body={"Ideal Customer Profile (ICP) fit confirms whether a company has the structural capacity to become a client eventually. A buying signal confirms whether the timing is right today. In modern B2B sales development, reaching out to an account without an identifiable buying signal forces sales representatives into generic pitching, resulting in sub-one-percent response rates. When outreach references an observable operational trigger, reply rates climb significantly because the prospect already feels the friction you are solving.\n\nB2B buying signals fall into three major classifications: executive transitions (such as a newly appointed Chief Technology Officer or VP of Sales in their first 90 days), capital and operational expansions (such as a Series A funding round, new geographic office openings, or sudden hiring sprees in target departments), and technology changes (such as deprecating legacy software, adopting a new CRM, or experiencing vendor fatigue).\n\nConsider a worked example: a B2B cybersecurity firm targets mid-market financial services firms. Rather than emailing all compliance heads across 2,000 regional banks, the sales team sets automated monitoring for job postings listing compliance audit tools and regulatory technology skills. When a regional bank posts three new listings for audit managers following a corporate restructuring, the sales team triggers a personalized three-touch sequence acknowledging the operational hiring surge. The message does not sell software immediately; it addresses the exact compliance workload challenges the new team will face.\n\nCommon mistakes include relying solely on single scraped signals without verifying account fit, confusing vanity press releases with operational intent, and delaying outreach until weeks after the event occurred. At Myntmore, monitoring forty plus daily buying signals across executive changes, tech migrations, and verified intent data is how cold campaigns achieve twenty percent plus positive reply rates."}
       sourceLabel={"See the service: Sales Intelligence"}
       sourceHref={"/services/sales-intelligence"}
-      furtherLabel={"See the service: AI Lead Generation"}
-      furtherHref={"/services/ai-lead-generation"}
+      furtherLabel={"Read: Build a High-Converting Account Targeting Strategy"}
+      furtherHref={"/resources/blogs/account-targeting-strategy"}
       articleSchema={TERM_SCHEMA}
       faqs={FAQS}
     />

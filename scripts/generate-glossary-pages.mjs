@@ -14,7 +14,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { checkEntry } from "./lib/content-rules.mjs";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const root = process.cwd();
 const CHECK = process.argv.includes("--check");
 const dir = path.join(root, "content/glossary");
 const j = (v) => JSON.stringify(v);
