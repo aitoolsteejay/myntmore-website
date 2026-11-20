@@ -138,6 +138,7 @@ Small fixes deliberately not made, so they don't change pages being measured her
 
 - Search descriptions a few characters over 155 (Google may cut the last word): `/b2b-lead-generation-mumbai` (159), `/b2b-lead-generation-noida` (160), `/b2b-lead-generation-insurance-mumbai` (157), `/b2b-lead-generation-gurugram` (156), `/b2b-lead-generation-indore` (156).
 - Share title over 70 characters (cut off on X): `/b2b-lead-generation-automotive-manufacturing-chennai` (76).
+- FAQ answer that opens with a hedge instead of the answer: `/lp/ecommerce-tech`, "Who should we contact at a D2C brand: the founder or someone else?" starts "It depends on what your product fixes." (edit in Keystatic, Page FAQs, `lp-ecommerce-tech`).
 
 ## 7. What to do with the results
 
