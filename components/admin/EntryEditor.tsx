@@ -9,6 +9,7 @@ import type { FieldDescriptor } from "@/lib/admin/schema";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Path = (string | number)[];
 type Errors = Record<string, string>;
+export type Choices = Record<string, { slug: string; title: string }[]>;
 
 const key = (path: Path) => path.join(".");
 const INPUT =
@@ -38,10 +39,22 @@ function defaultFor(desc: FieldDescriptor): any {
     case "object":
       return Object.fromEntries(Object.entries(desc.fields).map(([k, d]) => [k, defaultFor(d)]));
     case "array":
+    case "multiselect":
       return [];
     default:
       return null;
   }
+}
+
+/** Keystatic's own slug rule for a name typed into a slug field: lowercase words joined by hyphens. */
+function slugify(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 /** A list item's heading: its first non-empty text field. */
@@ -74,23 +87,22 @@ function ErrorText({ text }: { text?: string }) {
   ) : null;
 }
 
-function Field({
-  desc,
-  value,
-  path,
-  onChange,
-  errors,
-  readOnly,
-}: {
-  desc: FieldDescriptor;
-  value: any;
-  path: Path;
+interface Ctx {
   onChange: (path: Path, v: any) => void;
   errors: Errors;
   readOnly: boolean;
-}) {
+  choices: Choices;
+  /** Creating a new entry: the file name can still be set. */
+  creating: boolean;
+  /** The entry's name is its file name (the page uses it as an id), so they are one value. */
+  nameIsFileName: boolean;
+}
+
+function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; path: Path; ctx: Ctx }) {
+  const { onChange, errors, readOnly } = ctx;
   const id = `f-${key(path)}`;
   const error = errors[key(path)];
+  const border = error ? "border-[#D9534F]" : "border-[#E8E2D9]";
   switch (desc.kind) {
     case "text": {
       const length = typeof value === "string" ? value.length : 0;
@@ -118,7 +130,30 @@ function Field({
         </div>
       );
     }
-    case "slug":
+    case "slug": {
+      if (desc.isEntryName && ctx.nameIsFileName) {
+        return (
+          <div>
+            <Label text={desc.label} required htmlFor={id} />
+            <Help text={ctx.creating ? "Lowercase words joined by hyphens. It becomes the page address and cannot be changed later." : desc.description} />
+            <input
+              id={id}
+              type="text"
+              value={value?.slug ?? ""}
+              disabled={readOnly || !ctx.creating}
+              onChange={(e) => {
+                const v = e.target.value.toLowerCase();
+                onChange(path, { name: v, slug: v });
+              }}
+              className={`${INPUT} mt-1.5 font-mono ${border}`}
+            />
+            {!ctx.creating && <p className="mt-1 text-xs text-[#71675E]">The page address and file name; it cannot be changed here.</p>}
+            <ErrorText text={error} />
+          </div>
+        );
+      }
+      // While creating, the file name follows the name until it is edited by hand.
+      const followsName = ctx.creating && (value?.slug ?? "") === slugify(value?.name ?? "");
       return (
         <div>
           <Label text={desc.label} required htmlFor={id} />
@@ -128,17 +163,129 @@ function Field({
             type="text"
             value={value?.name ?? ""}
             disabled={readOnly}
-            onChange={(e) => onChange(path, { ...value, name: e.target.value })}
-            className={`${INPUT} mt-1.5 ${error ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}
+            onChange={(e) => onChange(path, { name: e.target.value, slug: followsName ? slugify(e.target.value) : value?.slug ?? "" })}
+            className={`${INPUT} mt-1.5 ${border}`}
           />
-          {desc.isEntryName && (
+          {desc.isEntryName && !ctx.creating && (
             <p className="mt-1 text-xs text-[#71675E]">
               File name: <span className="font-mono">{value?.slug}</span> (cannot be changed here)
             </p>
           )}
+          {desc.isEntryName && ctx.creating && (
+            <div className="mt-2">
+              <label htmlFor={`${id}-slug`} className="block text-xs font-semibold text-[#52525B]">
+                File name (becomes part of the page address; cannot be changed later)
+              </label>
+              <input
+                id={`${id}-slug`}
+                type="text"
+                value={value?.slug ?? ""}
+                onChange={(e) => onChange(path, { ...value, slug: e.target.value.toLowerCase() })}
+                className={`${INPUT} mt-1 font-mono text-sm ${border}`}
+              />
+            </div>
+          )}
           <ErrorText text={error} />
         </div>
       );
+    }
+    case "integer":
+    case "number":
+      return (
+        <div>
+          <Label text={desc.label} required={desc.required} htmlFor={id} />
+          <Help text={desc.description} />
+          <input
+            id={id}
+            type="number"
+            inputMode={desc.kind === "integer" ? "numeric" : "decimal"}
+            step={desc.kind === "integer" ? 1 : desc.step ?? "any"}
+            min={desc.min}
+            max={desc.max}
+            value={value ?? ""}
+            disabled={readOnly}
+            onChange={(e) => onChange(path, e.target.value === "" ? null : Number(e.target.value))}
+            className={`${INPUT} mt-1.5 max-w-[14rem] tabular-nums ${border}`}
+          />
+          <ErrorText text={error} />
+        </div>
+      );
+    case "date":
+    case "datetime":
+      return (
+        <div>
+          <Label text={desc.label} required={desc.required} htmlFor={id} />
+          <Help text={desc.description} />
+          <input
+            id={id}
+            type={desc.kind === "date" ? "date" : "datetime-local"}
+            value={value ?? ""}
+            disabled={readOnly}
+            onChange={(e) => onChange(path, e.target.value || null)}
+            className={`${INPUT} mt-1.5 max-w-[16rem] ${border}`}
+          />
+          <ErrorText text={error} />
+        </div>
+      );
+    case "url":
+      return (
+        <div>
+          <Label text={desc.label} required={desc.required} htmlFor={id} />
+          <Help text={desc.description} />
+          <input
+            id={id}
+            type="url"
+            value={value ?? ""}
+            disabled={readOnly}
+            onChange={(e) => onChange(path, e.target.value || null)}
+            className={`${INPUT} mt-1.5 ${border}`}
+          />
+          <ErrorText text={error} />
+        </div>
+      );
+    case "relationship": {
+      const options = ctx.choices[desc.collection] ?? [];
+      return (
+        <div>
+          <Label text={desc.label} required={desc.required} htmlFor={id} />
+          <Help text={desc.description} />
+          <select id={id} value={value ?? ""} disabled={readOnly} onChange={(e) => onChange(path, e.target.value || null)} className={`${INPUT} mt-1.5 ${border}`}>
+            <option value="">Choose…</option>
+            {value && !options.some((o) => o.slug === value) && <option value={value}>{value} (not found)</option>}
+            {options.map((o) => (
+              <option key={o.slug} value={o.slug}>
+                {o.title === o.slug ? o.slug : `${o.title} (${o.slug})`}
+              </option>
+            ))}
+          </select>
+          <ErrorText text={error} />
+        </div>
+      );
+    }
+    case "multiselect": {
+      const selected: string[] = Array.isArray(value) ? value : [];
+      return (
+        <fieldset>
+          <legend className="text-sm font-semibold">{desc.label}</legend>
+          <Help text={desc.description} />
+          <div className="mt-1.5 flex flex-wrap gap-x-5 gap-y-2">
+            {desc.options.map((o) => (
+              <label key={o.value} className="flex items-center gap-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={selected.includes(o.value)}
+                  disabled={readOnly}
+                  onChange={(e) => onChange(path, e.target.checked ? [...selected, o.value] : selected.filter((v) => v !== o.value))}
+                  className="h-4 w-4 accent-[#A14A08]"
+                />
+                {o.label}
+              </label>
+            ))}
+          </div>
+          <ErrorText text={error} />
+        </fieldset>
+      );
+    }
     case "checkbox":
       return (
         <div>
@@ -166,7 +313,7 @@ function Field({
             value={value ?? ""}
             disabled={readOnly}
             onChange={(e) => onChange(path, e.target.value)}
-            className={`${INPUT} mt-1.5 border-[#E8E2D9]`}
+            className={`${INPUT} mt-1.5 ${border}`}
           >
             {desc.options.map((o) => (
               <option key={o.value} value={o.value}>
@@ -184,41 +331,26 @@ function Field({
           <Help text={desc.description} />
           <div className="space-y-5">
             {Object.entries(desc.fields).map(([k, d]) => (
-              <Field key={k} desc={d} value={value?.[k]} path={[...path, k]} onChange={onChange} errors={errors} readOnly={readOnly} />
+              <Field key={k} desc={d} value={value?.[k]} path={[...path, k]} ctx={ctx} />
             ))}
           </div>
         </fieldset>
       );
     case "array":
-      return <ArrayField desc={desc} value={Array.isArray(value) ? value : []} path={path} onChange={onChange} errors={errors} readOnly={readOnly} />;
-    default:
+      return <ArrayField desc={desc} value={Array.isArray(value) ? value : []} path={path} ctx={ctx} />;
+    case "unsupported":
       return (
         <div>
           <Label text={desc.label} />
-          <p className="mt-1 text-[13px] text-[#71675E]">
-            This kind of field ({desc.kind === "unsupported" ? desc.type : desc.kind}) is not editable here yet.
-          </p>
+          <p className="mt-1 text-[13px] text-[#71675E]">This kind of field ({desc.type}) is not editable here yet.</p>
           <pre className="mt-1 max-h-40 overflow-auto rounded-lg bg-white p-2 text-xs text-[#52525B]">{JSON.stringify(value, null, 2)}</pre>
         </div>
       );
   }
 }
 
-function ArrayField({
-  desc,
-  value,
-  path,
-  onChange,
-  errors,
-  readOnly,
-}: {
-  desc: Extract<FieldDescriptor, { kind: "array" }>;
-  value: any[];
-  path: Path;
-  onChange: (path: Path, v: any) => void;
-  errors: Errors;
-  readOnly: boolean;
-}) {
+function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor, { kind: "array" }>; value: any[]; path: Path; ctx: Ctx }) {
+  const { onChange, errors, readOnly } = ctx;
   const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
   const move = (from: number, to: number) => {
     const next = value.slice();
@@ -294,7 +426,7 @@ function ArrayField({
               </div>
               {!collapsed[i] && (
                 <div className="p-4">
-                  <Field desc={desc.element} value={item} path={[...path, i]} onChange={onChange} errors={errors} readOnly={readOnly} />
+                  <Field desc={desc.element} value={item} path={[...path, i]} ctx={ctx} />
                 </div>
               )}
             </li>
@@ -328,30 +460,46 @@ export default function EntryEditor({
   initialState,
   initialSha,
   readOnly,
+  choices = {},
+  entryHref,
+  mode = "edit",
+  needsFaq = false,
+  nameIsFileName = false,
 }: {
   typeKey: string;
+  /** The entry's file name (for a singleton, the file it is saved as). Empty while creating. */
   slug: string;
   fields: Record<string, FieldDescriptor>;
   initialState: Record<string, unknown>;
   initialSha: string;
   readOnly: boolean;
+  /** Entries a relationship field can point to, by collection. */
+  choices?: Choices;
+  /** Where this entry is edited, for the "open the latest version" link. */
+  entryHref: string;
+  mode?: "edit" | "create";
+  /** Creating a page that shows questions and answers: ask for the first one. */
+  needsFaq?: boolean;
+  nameIsFileName?: boolean;
 }) {
+  const creating = mode === "create";
   const [state, setState] = useState(initialState);
+  const [faq, setFaq] = useState({ question: "", answer: "" });
   const [saved, setSaved] = useState(() => JSON.stringify(initialState));
   const [sha, setSha] = useState(initialSha);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>({ kind: "idle" });
-  const dirty = useMemo(() => JSON.stringify(state) !== saved, [state, saved]);
+  const dirty = useMemo(() => creating || JSON.stringify(state) !== saved, [creating, state, saved]);
 
   useEffect(() => {
-    if (!dirty) return;
+    if (!dirty || status.kind === "saved") return;
     const warn = (e: BeforeUnloadEvent) => {
       e.preventDefault();
       e.returnValue = "";
     };
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
-  }, [dirty]);
+  }, [dirty, status.kind]);
 
   const onChange = (path: Path, v: any) => {
     setState((s) => setIn(s, path, v));
@@ -361,26 +509,38 @@ export default function EntryEditor({
   async function save() {
     setStatus({ kind: "saving" });
     setErrors({});
-    const res = await fetch(`/api/admin/entries/${typeKey}/${slug}`, {
+    const res = await fetch(creating ? `/api/admin/entries/${typeKey}` : `/api/admin/entries/${typeKey}/${slug}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ state, sha }),
+      body: JSON.stringify(creating ? { state, faq: needsFaq ? faq : null } : { state, sha }),
     }).catch(() => null);
     const body = await res?.json().catch(() => null);
     if (!res || !body) return setStatus({ kind: "error", text: "Could not reach the server. Nothing was saved; your edits are still here." });
     if (res.status === 409) return setStatus({ kind: "conflict", text: body.error });
     if (!res.ok) {
-      const next: Errors = Object.fromEntries((body.errors ?? []).map((e: { path: Path; message: string }) => [key(e.path), e.message]));
+      // Several problems can belong to one field (or to the whole entry, path []): show them all.
+      const next: Errors = {};
+      for (const e of (body.errors ?? []) as { path: Path; message: string }[]) next[key(e.path)] = next[key(e.path)] ? `${next[key(e.path)]} ${e.message}` : e.message;
       setErrors(next);
       // Bring the first problem into view (lists expand by default, so its input is on the page).
       const first = Object.keys(next)[0];
-      if (first)
+      if (first !== undefined)
         setTimeout(() => {
-          const el = document.getElementById(`f-${first}`);
+          const el = document.getElementById(first === "" ? "entry-errors" : `f-${first}`);
           el?.scrollIntoView({ behavior: "smooth", block: "center" });
           el?.focus({ preventScroll: true });
         }, 50);
       return setStatus({ kind: "error", text: body.error ?? "Could not save." });
+    }
+    if (creating) {
+      setStatus({
+        kind: "saved",
+        text: body.local ? "Created in the files on this computer. Opening it…" : "Created. The new page goes live in about 2 minutes, once Vercel finishes deploying. Opening it…",
+        url: body.commitUrl,
+        warning: body.logWarning,
+      });
+      window.location.assign(`/admin/content/${typeKey}/${body.slug}?created=1`);
+      return;
     }
     setSaved(JSON.stringify(state));
     if (body.unchanged) return setStatus({ kind: "saved", text: "No changes to save.", url: null });
@@ -396,21 +556,45 @@ export default function EntryEditor({
     });
   }
 
+  const ctx: Ctx = { onChange, errors, readOnly, choices, creating, nameIsFileName };
   const errorCount = Object.keys(errors).length;
+  const entryErrors = errors[""];
   return (
     <div className="pb-28">
+      {entryErrors && (
+        <div id="entry-errors" tabIndex={-1} role="alert" className="mt-6 rounded-lg border border-[#F5C2C0] bg-[#FDECEA] p-3 text-sm text-[#9F1D1D]">
+          {entryErrors}
+        </div>
+      )}
       <div className="mt-6 space-y-7">
         {Object.entries(fields).map(([k, d]) => (
-          <Field key={k} desc={d} value={(state as any)[k]} path={[k]} onChange={onChange} errors={errors} readOnly={readOnly} />
+          <Field key={k} desc={d} value={(state as any)[k]} path={[k]} ctx={ctx} />
         ))}
+        {needsFaq && (
+          <fieldset className="rounded-xl border border-[#E8E2D9] bg-white p-4">
+            <legend className="px-1 text-sm font-bold">First question and answer on this page</legend>
+            <Help text="This page shows a list of questions and answers, so it needs at least one. Add more in Page FAQs after creating the page." />
+            <div className="mt-3 space-y-4">
+              <div>
+                <Label text="Question" required htmlFor="f-_faq" />
+                <input id="f-_faq" type="text" value={faq.question} onChange={(e) => setFaq({ ...faq, question: e.target.value })} className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`} />
+              </div>
+              <div>
+                <Label text="Answer" required htmlFor="f-_faq-answer" />
+                <textarea id="f-_faq-answer" rows={4} value={faq.answer} onChange={(e) => setFaq({ ...faq, answer: e.target.value })} className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`} />
+              </div>
+              <ErrorText text={errors._faq} />
+            </div>
+          </fieldset>
+        )}
       </div>
 
       <div className="fixed inset-x-0 bottom-0 border-t border-[#E8E2D9] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
           <div className="min-w-0 flex-1 text-sm" role="status" aria-live="polite">
             {readOnly && <span className="text-[#71675E]">View only.</span>}
-            {!readOnly && status.kind === "idle" && <span className="text-[#71675E]">{dirty ? "Unsaved changes" : "No changes yet"}</span>}
-            {status.kind === "saving" && <span className="text-[#71675E]">Saving and publishing…</span>}
+            {!readOnly && status.kind === "idle" && <span className="text-[#71675E]">{creating ? "Not created yet" : dirty ? "Unsaved changes" : "No changes yet"}</span>}
+            {status.kind === "saving" && <span className="text-[#71675E]">{creating ? "Checking and creating…" : "Saving and publishing…"}</span>}
             {status.kind === "saved" && (
               <span className="text-[#166534]">
                 {status.text}{" "}
@@ -425,15 +609,17 @@ export default function EntryEditor({
             {status.kind === "error" && (
               <span className="text-[#9F1D1D]">
                 {status.text}
-                {errorCount > 0 && ` ${errorCount} field${errorCount === 1 ? "" : "s"} marked in red.`}
+                {errorCount > 0 && ` ${errorCount} problem${errorCount === 1 ? "" : "s"} marked in red.`}
               </span>
             )}
             {status.kind === "conflict" && (
               <span className="text-[#9F1D1D]">
                 {status.text}{" "}
-                <a href={`/admin/content/${typeKey}/${slug}`} target="_blank" rel="noreferrer" className="font-semibold underline">
-                  Open the latest version in a new tab
-                </a>
+                {!creating && (
+                  <a href={entryHref} target="_blank" rel="noreferrer" className="font-semibold underline">
+                    Open the latest version in a new tab
+                  </a>
+                )}
               </span>
             )}
           </div>
@@ -441,10 +627,10 @@ export default function EntryEditor({
             <button
               type="button"
               onClick={save}
-              disabled={!dirty || status.kind === "saving"}
+              disabled={!dirty || status.kind === "saving" || (creating && status.kind === "saved")}
               className="rounded-lg bg-[#0A0A0A] px-5 py-2.5 text-sm font-bold text-white disabled:opacity-40"
             >
-              {status.kind === "saving" ? "Saving…" : "Save and publish"}
+              {status.kind === "saving" ? "Saving…" : creating ? "Create and publish" : "Save and publish"}
             </button>
           )}
         </div>

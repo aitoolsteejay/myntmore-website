@@ -15,6 +15,7 @@ import "server-only";
 import { createSign } from "node:crypto";
 import {
   assertContentPath,
+  assertRepoPath,
   ConflictError,
   type Author,
   type CommitResult,
@@ -139,6 +140,52 @@ export class GitHubStore implements ContentStore {
       return Array.isArray(items) ? items.filter((i) => i.type === "file").map((i) => i.name) : [];
     } catch (err) {
       if (err instanceof GitHubError && err.status === 404) return [];
+      throw err;
+    }
+  }
+
+  /** One GraphQL request for a whole folder; falls back to one request per file if GitHub omits any text. */
+  async readDir(dir: string): Promise<StoredFile[]> {
+    assertContentPath(`${dir}/x`);
+    try {
+      const res = await this.fetchImpl(`${this.api}/graphql`, {
+        method: "POST",
+        headers: { ...this.headers(), Authorization: `Bearer ${await this.installationToken()}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: `query($owner: String!, $name: String!, $expr: String!) { repository(owner: $owner, name: $name) { object(expression: $expr) { ... on Tree { entries { name type object { ... on Blob { oid text isBinary } } } } } } }`,
+          variables: { owner: this.cfg.owner, name: this.cfg.repo, expr: `${this.cfg.branch}:${dir}` },
+        }),
+        cache: "no-store",
+      });
+      if (res.ok) {
+        const body = (await res.json()) as {
+          data?: { repository?: { object?: { entries?: { name: string; type: string; object: { oid: string; text: string | null; isBinary: boolean } }[] } } };
+        };
+        const entries = body.data?.repository?.object?.entries;
+        if (entries) {
+          const files = entries.filter((e) => e.type === "blob");
+          if (files.every((e) => typeof e.object.text === "string" && !e.object.isBinary)) {
+            return files
+              .map((e) => ({ path: `${dir}/${e.name}`, text: e.object.text as string, sha: e.object.oid }))
+              .sort((a, b) => a.path.localeCompare(b.path));
+          }
+        }
+      }
+    } catch {
+      // Fall back below.
+    }
+    const names = (await this.listDir(dir)).sort();
+    const files = await Promise.all(names.map((n) => this.readFile(`${dir}/${n}`)));
+    return files.filter((f): f is StoredFile => f !== null);
+  }
+
+  async exists(repoPath: string): Promise<boolean> {
+    assertRepoPath(repoPath);
+    try {
+      await this.request("GET", this.contentsPath(repoPath, this.cfg.branch));
+      return true;
+    } catch (err) {
+      if (err instanceof GitHubError && err.status === 404) return false;
       throw err;
     }
   }

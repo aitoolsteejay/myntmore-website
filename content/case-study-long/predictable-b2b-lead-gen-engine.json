@@ -29,9 +29,18 @@
     "headline": "Built a full outbound engine that books 15+ meetings/month on autopilot",
     "intro": "A mid-size B2B services firm had tried outbound before and failed: bad lists, generic copy, zero personalisation. We rebuilt everything from scratch and made outbound their #1 channel.",
     "stats": [
-      { "value": "15+", "label": "Meetings/month" },
-      { "value": "29%", "label": "Reply rate" },
-      { "value": "4x", "label": "Pipeline vs prior quarter" }
+      {
+        "value": "15+",
+        "label": "Meetings/month"
+      },
+      {
+        "value": "29%",
+        "label": "Reply rate"
+      },
+      {
+        "value": "4x",
+        "label": "Pipeline vs prior quarter"
+      }
     ]
   },
   "colors": {
@@ -56,9 +65,18 @@
   },
   "results": {
     "figures": [
-      { "value": "15+", "label": "Qualified meetings/month" },
-      { "value": "29%", "label": "Average reply rate" },
-      { "value": "4x", "label": "Pipeline vs prior quarter" }
+      {
+        "value": "15+",
+        "label": "Qualified meetings/month"
+      },
+      {
+        "value": "29%",
+        "label": "Average reply rate"
+      },
+      {
+        "value": "4x",
+        "label": "Pipeline vs prior quarter"
+      }
     ],
     "summary": "Within 10 weeks the engine was fully live and booking 15+ qualified meetings every month without any manual prospecting from the sales team. Pipeline grew 4x compared to the prior quarter. The client's head of sales described it as “finally having a system that actually works.”"
   },
@@ -67,8 +85,17 @@
     "attribution": "Head of Sales, B2B Professional Services (Growth Stage)"
   },
   "services": [
-    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
-    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
-    { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" }
+    {
+      "name": "AI Lead Generation",
+      "href": "/services/ai-lead-generation"
+    },
+    {
+      "name": "Cold Email Infrastructure",
+      "href": "/services/cold-email"
+    },
+    {
+      "name": "ICP Mapping & Lead Scoring",
+      "href": "/services/sales-intelligence"
+    }
   ]
 }

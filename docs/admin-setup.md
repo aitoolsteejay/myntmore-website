@@ -8,13 +8,14 @@ Editor's browser ──▶ Vercel function ──▶ GitHub (master) ──▶ V
                           └──▶ Supabase: who may edit + activity log
 ```
 
-**Phase 1 (this release):** sign-in and roles, reading from GitHub, saving with conflict checks, the activity log, and **Page FAQs** editable end to end. The other content types are listed on the admin home as "not editable here yet" and are still edited in Keystatic (`/keystatic`).
+**Phase 1:** sign-in and roles, reading from GitHub, saving with conflict checks, the activity log, Page FAQs.
+**Phase 2:** every JSON content type (13 collections, 15 single pages) is editable; new entries can be created for landing, city and industry-city pages, events, case studies, the glossary, careers, FAQs and search titles; and every save is checked against the build's own rules (`scripts/lib/content-rules.mjs`, shared with the page generators), so the admin cannot commit a change that would stop the site from building. Blog posts are still edited in Keystatic (`/keystatic`).
 
 ## How a save works
 
 1. The form posts the edited entry to `/api/admin/entries/<type>/<entry>`.
 2. The server checks the person is signed in, is an active editor, and may edit that content type.
-3. It validates the entry with **Keystatic's own field rules** (required fields, character limits, dropdown options), from `keystatic.config.ts`.
+3. It validates the entry with **Keystatic's own field rules** (required fields, character limits, dropdown options), from `keystatic.config.ts`, then with the **build rules** the page generators apply (exact list lengths, links to pages that must exist, a landing or city page's FAQ file), answered from the latest `master`.
 4. It writes the file the way Keystatic does (`JSON.stringify(value, null, 2)` + newline), keeping the existing file's layout so a save changes only the lines that were edited.
 5. It reads the latest `master`; if the file changed since the editor opened it, it stops with "This was edited by Rahul at 3:42 pm" and nothing is committed. The editor's changes stay in the form.
 6. It commits through a GitHub App: author = the editor (e.g. `Priya <priya@myntmore.com>`), committer = the App.
@@ -115,7 +116,8 @@ Then open `http://localhost:3000/admin`. You are signed in as "Local developer",
 | `lib/admin/fields.ts` | Keystatic's `fields`, recording each field's settings so the admin can draw the form. `keystatic.config.ts` and the content schemas import `fields` from here. |
 | `lib/admin/schema.ts` | Parse, validate and write entries with Keystatic's own field functions; describe fields for the form; field-level diffs. |
 | `lib/admin/store.ts`, `lib/admin/github.ts` | Reading and committing: GitHub App in production, local files in development. Conflict checks. |
-| `lib/admin/entries.ts` | Load, save and log entries. `ENABLED_TYPES` lists what the admin can edit. |
+| `lib/admin/entries.ts` | Load, save, create and log entries. `CREATABLE_TYPES` lists where new entries can be added. |
+| `scripts/lib/content-rules.mjs`, `lib/admin/rules.ts` | Build rules shared by the generators and the admin. |
 | `lib/admin/auth.ts`, `middleware.ts` | Sign-in check and roles. |
 | `lib/admin/activity.ts` | Activity log. |
 | `components/admin/EntryEditor.tsx` | The form renderer. |
@@ -125,6 +127,5 @@ Tests: `npm run test:roi` runs everything, including `lib/admin/schema.test.ts` 
 
 ## Next phases
 
-- **Phase 2:** the other JSON content types (form fields for dates, numbers, links between entries, images).
 - **Phase 3:** blog posts (Markdoc editor with preview, image upload).
 - **Phase 4:** deploy status in the admin, Undo, an Editors page, and a guide for editors.

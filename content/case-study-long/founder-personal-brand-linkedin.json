@@ -29,9 +29,18 @@
     "headline": "Bootstrapped founder went from 0 to 22K followers and 8 inbound deals",
     "intro": "A bootstrapped B2B founder had expert-level knowledge but zero online presence. Word of mouth was maxed out. We built their personal brand from scratch on LinkedIn.",
     "stats": [
-      { "value": "22K", "label": "LinkedIn followers" },
-      { "value": "8", "label": "Inbound deals" },
-      { "value": "6.2%", "label": "Engagement rate" }
+      {
+        "value": "22K",
+        "label": "LinkedIn followers"
+      },
+      {
+        "value": "8",
+        "label": "Inbound deals"
+      },
+      {
+        "value": "6.2%",
+        "label": "Engagement rate"
+      }
     ]
   },
   "colors": {
@@ -56,9 +65,18 @@
   },
   "results": {
     "figures": [
-      { "value": "22K", "label": "LinkedIn followers gained" },
-      { "value": "8", "label": "Inbound deals in 6 months" },
-      { "value": "6.2%", "label": "Average engagement rate" }
+      {
+        "value": "22K",
+        "label": "LinkedIn followers gained"
+      },
+      {
+        "value": "8",
+        "label": "Inbound deals in 6 months"
+      },
+      {
+        "value": "6.2%",
+        "label": "Average engagement rate"
+      }
     ],
     "summary": "In 6 months the founder grew from under 500 to 22K followers, with a 6.2% average engagement rate, well above the 1–2% LinkedIn average. More importantly, 8 inbound deals came directly through LinkedIn DMs from people who had been following the content."
   },
@@ -67,8 +85,17 @@
     "attribution": "Founder, B2B Operations Consulting"
   },
   "services": [
-    { "name": "Personal Branding", "href": "/services/personal-branding" },
-    { "name": "LinkedIn Outreach", "href": "/services/linkedin-outreach" },
-    { "name": "GTM Strategy", "href": "/services/gtm-strategy" }
+    {
+      "name": "Personal Branding",
+      "href": "/services/personal-branding"
+    },
+    {
+      "name": "LinkedIn Outreach",
+      "href": "/services/linkedin-outreach"
+    },
+    {
+      "name": "GTM Strategy",
+      "href": "/services/gtm-strategy"
+    }
   ]
 }

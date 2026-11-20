@@ -1,11 +1,15 @@
 // Writes app/careers/<slug>/page.tsx for every file in content/careers/ (the files the Keystatic admin edits)
-// and updates lib/careers-roles.generated.json for the main /careers hub page.
+// and updates lib/careers-roles.generated.json for the main /careers hub page. It also keeps the role entries in
+// app/sitemap.ts (between marker comments) in step with the folder, and checks each role with the build rules
+// shared with the content admin (scripts/lib/content-rules.mjs).
 //
 //   node scripts/generate-career-pages.mjs           write the pages
 //   node scripts/generate-career-pages.mjs --check   exit 1 if any page is out of date
 
 import fs from "node:fs";
 import path from "node:path";
+import { checkEntry } from "./lib/content-rules.mjs";
+import { syncSitemapBlock } from "./lib/sitemap-block.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const CHECK = process.argv.includes("--check");
@@ -17,7 +21,6 @@ if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-const REQUIRED = ["title", "slug", "tag", "validThrough", "datePosted", "schemaDescription", "metaTitle", "metaDescription"];
 
 const problems = [];
 const rolesList = [];
@@ -31,9 +34,7 @@ for (const f of files) {
   const data = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
   data.slug = slug;
 
-  for (const k of REQUIRED) {
-    if (!data[k]) problems.push(`${f}: "${k}" is empty`);
-  }
+  for (const p of await checkEntry("careers", data, null)) problems.push(`${f}: ${p.message}`);
 
   // Summary for the /careers hub card
   rolesList.push({
@@ -130,6 +131,10 @@ if (existingRolesJson !== rolesJsonStr) {
   }
 }
 
+const careerRoutes = files.map((f) => `/careers/${f.replace(/\.json$/, "")}`);
+if (syncSitemapBlock({ root, name: "career roles", script: "scripts/generate-career-pages.mjs", routes: careerRoutes, priority: 0.5, check: CHECK }) && CHECK) {
+  problems.push("app/sitemap.ts career role entries are out of date");
+}
 if (problems.length) {
   console.error(problems.join("\n"));
   process.exit(1);

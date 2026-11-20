@@ -23,15 +23,36 @@
     "headline": "Building an outbound pipeline for an AI-powered medical tourism platform",
     "intro": "With nearly two decades of experience in medical tourism dating back to 2006, the founder saw firsthand how difficult it is for international patients to find the right specialists, reports, and cross-border support. Building in the health-tech and medical travel space, the company leverages technology to simplify cross-border patient journeys while helping hospitals and partners manage enquiries, case coordination, and patient care.",
     "stats": [
-      { "value": "140", "label": "Qualified leads generated" },
-      { "value": "61.6%", "label": "Hospital decision-maker response" },
-      { "value": "58", "label": "Leads from doctors (top volume)" }
+      {
+        "value": "140",
+        "label": "Qualified leads generated"
+      },
+      {
+        "value": "61.6%",
+        "label": "Hospital decision-maker response"
+      },
+      {
+        "value": "58",
+        "label": "Leads from doctors (top volume)"
+      }
     ],
     "quickMetrics": [
-      { "value": "59.7%", "text": "BD & Ops response rate" },
-      { "value": "51.9%", "text": "Ops & Partnerships response" },
-      { "value": "49.3%", "text": "Hospital CEOs response rate" },
-      { "value": "38.1%", "text": "highest acceptance (BD & Ops)" }
+      {
+        "value": "59.7%",
+        "text": "BD & Ops response rate"
+      },
+      {
+        "value": "51.9%",
+        "text": "Ops & Partnerships response"
+      },
+      {
+        "value": "49.3%",
+        "text": "Hospital CEOs response rate"
+      },
+      {
+        "value": "38.1%",
+        "text": "highest acceptance (BD & Ops)"
+      }
     ]
   },
   "challenge": {
@@ -70,9 +91,18 @@
     "eyebrow": "The Data Breakdown",
     "heading": "Outreach Results by Segment",
     "intro": [
-      { "text": "Across the consolidated ICPs, the campaigns generated ", "bold": false },
-      { "text": "140 qualified leads", "bold": true },
-      { "text": ". Doctors delivered the highest overall lead volume, while hospital leaders and business-focused roles exhibited exceptional response rates post-connection.", "bold": false }
+      {
+        "text": "Across the consolidated ICPs, the campaigns generated ",
+        "bold": false
+      },
+      {
+        "text": "140 qualified leads",
+        "bold": true
+      },
+      {
+        "text": ". Doctors delivered the highest overall lead volume, while hospital leaders and business-focused roles exhibited exceptional response rates post-connection.",
+        "bold": false
+      }
     ],
     "columns": {
       "segment": "Segment",
@@ -125,15 +155,42 @@
     ],
     "insightHeading": "Scale vs. Engagement Dynamics",
     "insight": [
-      { "text": "The data highlighted an essential pipeline distinction between ", "bold": false },
-      { "text": "scale", "bold": true },
-      { "text": " and ", "bold": false },
-      { "text": "engagement", "bold": true },
-      { "text": ": Doctors provided the highest raw volume with 58 leads, whereas Hospital Decision Makers responded at an extraordinary ", "bold": false },
-      { "text": "61.59%", "bold": true },
-      { "text": " and Business Development & Operations reached ", "bold": false },
-      { "text": "59.74%", "bold": true },
-      { "text": ". This clarity allows the team to allocate outreach specifically where volume is required vs where high-touch enterprise partnerships are nurtured.", "bold": false }
+      {
+        "text": "The data highlighted an essential pipeline distinction between ",
+        "bold": false
+      },
+      {
+        "text": "scale",
+        "bold": true
+      },
+      {
+        "text": " and ",
+        "bold": false
+      },
+      {
+        "text": "engagement",
+        "bold": true
+      },
+      {
+        "text": ": Doctors provided the highest raw volume with 58 leads, whereas Hospital Decision Makers responded at an extraordinary ",
+        "bold": false
+      },
+      {
+        "text": "61.59%",
+        "bold": true
+      },
+      {
+        "text": " and Business Development & Operations reached ",
+        "bold": false
+      },
+      {
+        "text": "59.74%",
+        "bold": true
+      },
+      {
+        "text": ". This clarity allows the team to allocate outreach specifically where volume is required vs where high-touch enterprise partnerships are nurtured.",
+        "bold": false
+      }
     ]
   },
   "messaging": {
@@ -180,9 +237,18 @@
   "services": {
     "heading": "Services used in this engagement",
     "items": [
-      { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
-      { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" },
-      { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" }
+      {
+        "name": "AI Lead Generation",
+        "href": "/services/ai-lead-generation"
+      },
+      {
+        "name": "LinkedIn Outreach & Automation",
+        "href": "/services/linkedin-outreach"
+      },
+      {
+        "name": "ICP Mapping & Lead Scoring",
+        "href": "/services/sales-intelligence"
+      }
     ]
   },
   "cta": {

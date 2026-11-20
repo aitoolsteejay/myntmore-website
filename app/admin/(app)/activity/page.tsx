@@ -82,7 +82,7 @@ export default async function ActivityPage({ searchParams }: { searchParams: { e
             <li key={r.id} className="rounded-xl border border-[#E8E2D9] bg-white p-4">
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm">
                 <span className="font-bold">{r.editor_name}</span>
-                <span className="text-[#71675E]">{r.action === "revert" ? "undid a change to" : "updated"}</span>
+                <span className="text-[#71675E]">{r.action === "revert" ? "undid a change to" : r.action === "create" ? "created" : r.action === "delete" ? "deleted" : "updated"}</span>
                 <Link href={`/admin/content/${r.content_type}/${r.entry}`} className="font-semibold text-[#A14A08] hover:underline">
                   {labelOf(r.content_type)}: {r.entry}
                 </Link>

@@ -61,6 +61,10 @@ export interface ContentStore {
   readFile(filePath: string): Promise<StoredFile | null>;
   /** File names (not paths) directly inside a directory. */
   listDir(dir: string): Promise<string[]>;
+  /** Every file directly inside a content directory, with its text, in as few requests as possible. */
+  readDir(dir: string): Promise<StoredFile[]>;
+  /** Whether any repository path exists (read-only; used by build rules that check links). */
+  exists(repoPath: string): Promise<boolean>;
   lastChange(filePath: string): Promise<LastChange | null>;
   /** Commit all changes at once, refusing with ConflictError if any file moved on since it was opened. */
   commit(changes: FileChange[], message: string, author: Author): Promise<CommitResult>;
@@ -70,6 +74,13 @@ export interface ContentStore {
 export function blobSha(text: string): string {
   const body = Buffer.from(text, "utf8");
   return createHash("sha1").update(`blob ${body.length}\0`).update(body).digest("hex");
+}
+
+/** A repository-relative path with no way out of the repository. */
+export function assertRepoPath(repoPath: string): void {
+  if (!repoPath || repoPath.startsWith("/") || repoPath.includes("..") || repoPath.includes("\\") || path.posix.normalize(repoPath) !== repoPath) {
+    throw new Error(`Invalid repository path ${repoPath}`);
+  }
 }
 
 /** Only content folders are ever read or written. */
@@ -102,6 +113,20 @@ export class LocalStore implements ContentStore {
     } catch {
       return [];
     }
+  }
+
+  async readDir(dir: string): Promise<StoredFile[]> {
+    const names = (await this.listDir(dir)).sort();
+    const files = await Promise.all(names.map((n) => this.readFile(`${dir}/${n}`)));
+    return files.filter((f): f is StoredFile => f !== null);
+  }
+
+  async exists(repoPath: string): Promise<boolean> {
+    assertRepoPath(repoPath);
+    return fs.stat(path.join(this.root, repoPath)).then(
+      () => true,
+      () => false,
+    );
   }
 
   async lastChange(): Promise<LastChange | null> {

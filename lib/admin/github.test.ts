@@ -21,6 +21,7 @@ class FakeGitHub {
   trees = new Map<string, Map<string, string>>();
   head: string;
   tokenRequests = 0;
+  graphqlRequests = 0;
   /** Called once just before the next ref update, to simulate someone else pushing in between. */
   beforeNextRefUpdate: (() => void) | null = null;
   private n = 0;
@@ -55,6 +56,15 @@ class FakeGitHub {
       return json(201, { token: "inst-token", expires_at: new Date(Date.now() + 3600_000).toISOString() });
     }
     if ((init?.headers as Record<string, string>)?.Authorization !== "Bearer inst-token") return json(401, { message: "bad token" });
+    if (p === "/graphql" && method === "POST") {
+      this.graphqlRequests++;
+      const [branch, dir] = body.variables.expr.split(":");
+      const files = this.commits.get(branch === "master" ? this.head : branch)!.files;
+      const entries = Array.from(files.keys())
+        .filter((f) => f.startsWith(dir + "/") && !f.slice(dir.length + 1).includes("/"))
+        .map((f) => ({ name: f.slice(dir.length + 1), type: "blob", object: { oid: blobSha(files.get(f)!), text: files.get(f)!, isBinary: false } }));
+      return json(200, { data: { repository: { object: { entries } } } });
+    }
     const repo = "/repos/acme/site";
     if (!p.startsWith(repo)) return json(404, {});
     const rest = p.slice(repo.length);
@@ -139,6 +149,19 @@ describe("reading", () => {
     expect(await store.readFile("content/faqs/pages/a.json")).toEqual({ path: "content/faqs/pages/a.json", text: '{"x":1}\n', sha: blobSha('{"x":1}\n') });
     expect(await store.readFile("content/faqs/pages/missing.json")).toBeNull();
     expect((await store.listDir("content/faqs/pages")).sort()).toEqual(["a.json", "b.json"]);
+  });
+
+  it("reads a whole folder in one GraphQL request", async () => {
+    const files = await store.readDir("content/faqs/pages");
+    expect(files.map((f) => f.path)).toEqual(["content/faqs/pages/a.json", "content/faqs/pages/b.json"]);
+    expect(files[0].sha).toBe(blobSha('{"x":1}\n'));
+    expect(gh.graphqlRequests).toBe(1);
+  });
+
+  it("checks whether any repository path exists, read-only", async () => {
+    expect(await store.exists("README.md")).toBe(true);
+    expect(await store.exists("app/nope/page.tsx")).toBe(false);
+    await expect(store.exists("../etc/passwd")).rejects.toThrow();
   });
 
   it("refuses anything outside content/", async () => {

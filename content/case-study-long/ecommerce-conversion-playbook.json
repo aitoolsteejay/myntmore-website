@@ -29,9 +29,18 @@
     "headline": "Cold email added $400K pipeline for an eCommerce SaaS in 6 weeks",
     "intro": "An eCommerce SaaS tool had a strong product but no repeatable way to reach DTC brand owners. Manual outreach was inconsistent and burning the team's time.",
     "stats": [
-      { "value": "28", "label": "Meetings booked" },
-      { "value": "41%", "label": "Open rate" },
-      { "value": "$400K", "label": "Pipeline generated" }
+      {
+        "value": "28",
+        "label": "Meetings booked"
+      },
+      {
+        "value": "41%",
+        "label": "Open rate"
+      },
+      {
+        "value": "$400K",
+        "label": "Pipeline generated"
+      }
     ]
   },
   "colors": {
@@ -56,9 +65,18 @@
   },
   "results": {
     "figures": [
-      { "value": "28", "label": "Qualified meetings in 6 weeks" },
-      { "value": "41%", "label": "Average email open rate" },
-      { "value": "$400K", "label": "Pipeline generated" }
+      {
+        "value": "28",
+        "label": "Qualified meetings in 6 weeks"
+      },
+      {
+        "value": "41%",
+        "label": "Average email open rate"
+      },
+      {
+        "value": "$400K",
+        "label": "Pipeline generated"
+      }
     ],
     "summary": "Within 6 weeks, the client had 28 qualified demos on the calendar, a 41% average open rate across sequences, and $400K in tracked pipeline. Two of those deals closed within the first quarter, directly attributable to the outbound system we built."
   },
@@ -67,8 +85,17 @@
     "attribution": "Co-founder, eCommerce SaaS (Seed stage)"
   },
   "services": [
-    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
-    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
-    { "name": "ICP Mapping", "href": "/services/sales-intelligence" }
+    {
+      "name": "Cold Email Infrastructure",
+      "href": "/services/cold-email"
+    },
+    {
+      "name": "AI Lead Generation",
+      "href": "/services/ai-lead-generation"
+    },
+    {
+      "name": "ICP Mapping",
+      "href": "/services/sales-intelligence"
+    }
   ]
 }

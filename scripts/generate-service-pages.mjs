@@ -11,6 +11,7 @@
 // component, adding its slug to COMPONENTS below, and creating content/service-pages/<slug>.json.
 import fs from "node:fs";
 import path from "node:path";
+import { checkEntry } from "./lib/content-rules.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const CHECK = process.argv.includes("--check");
@@ -62,8 +63,8 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const slug = f.replace(/\.json$/, "");
   const d = { ...JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")), slug };
   if (!COMPONENTS[slug]) { problems.push(`${f}: no component registered for "${slug}" in scripts/generate-service-pages.mjs`); continue; }
-  if (d.metaTitle && d.metaTitle.length + " | Myntmore".length > 60) problems.push(`${f}: search title is ${d.metaTitle.length + 11} characters with the site suffix, over 60`);
-  if (d.metaDescription && d.metaDescription.length > 160) problems.push(`${f}: search description is ${d.metaDescription.length} characters, over 160`);
+  // Build rules shared with the content admin: scripts/lib/content-rules.mjs
+  for (const p of await checkEntry("servicePages", d, null)) problems.push(`${f}: ${p.message}`);
   const file = path.join(root, "app/services", slug, "page.tsx");
   const next = page(d);
   const prev = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";

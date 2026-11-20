@@ -287,6 +287,33 @@ export function serializeEntry(type: ContentType, state: Record<string, any>, pr
   return JSON.stringify(value, null, 2) + "\n";
 }
 
+/**
+ * Text for a brand-new file. Keystatic leaves empty text fields out of the file, but the pages read
+ * these files as typed JSON imports, where a key that every other entry has must exist; so a new file
+ * writes every text field, empty ones as "", in schema order.
+ */
+export function serializeNewEntry(type: ContentType, state: Record<string, any>): string {
+  const fill = (field: Field, value: any): any => {
+    if (field.kind === "object") {
+      const out: Record<string, any> = {};
+      for (const [k, f] of Object.entries<Field>(field.fields)) {
+        if (value && k in value) out[k] = fill(f, value[k]);
+        else if (adminFieldInfo(f)?.type === "text") out[k] = "";
+      }
+      return out;
+    }
+    if (field.kind === "array" && Array.isArray(value)) return value.map((v) => fill(field.element, v));
+    return value;
+  };
+  const value = JSON.parse(serializeEntry(type, state));
+  return JSON.stringify(fill({ kind: "object", fields: type.schema }, value), null, 2) + "\n";
+}
+
+/** The file name a singleton is saved under, e.g. "cold-email" for content/service-copy/cold-email. */
+export function singletonSlug(type: ContentType): string {
+  return type.path.split("/").pop()!;
+}
+
 // ── Describe (schema → plain data for the browser form) ─────────────────
 
 export type FieldDescriptor =

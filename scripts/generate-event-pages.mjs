@@ -9,6 +9,7 @@
 //   node scripts/generate-event-pages.mjs --check   exit 1 if anything is out of date
 import fs from "node:fs";
 import path from "node:path";
+import { checkEntry } from "./lib/content-rules.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const CHECK = process.argv.includes("--check");
@@ -16,7 +17,6 @@ const dir = path.join(root, "content/events");
 const out = path.join(root, "lib/events.generated.json");
 const j = JSON.stringify;
 
-const REQUIRED = ["title", "breadcrumbLabel", "tag", "format", "accent", "date", "startTime", "endTime", "cardDescription", "description", "metaTitle", "metaDescription"];
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // "13:00" -> "1:00 PM"
@@ -31,16 +31,10 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const slug = f.replace(/\.json$/, "");
   const raw = fs.readFileSync(path.join(dir, f), "utf8");
   const d = JSON.parse(raw);
-  if (raw.includes("—")) problems.push(`${f}: contains an em dash`);
-  for (const k of REQUIRED) if (!d[k]) problems.push(`${f}: "${k}" is empty`);
-  if (!/^[a-z0-9-]+$/.test(slug)) problems.push(`${f}: the file name must be lowercase letters, numbers and hyphens`);
-  if (d.date && !/^\d{4}-\d{2}-\d{2}$/.test(d.date)) problems.push(`${f}: "date" must look like 2026-09-19`);
-  for (const k of ["startTime", "endTime"]) if (d[k] && !/^([01]\d|2[0-3]):[0-5]\d$/.test(d[k])) problems.push(`${f}: "${k}" must be 24-hour time like 13:00`);
-  if (d.startTime && d.endTime && d.endTime <= d.startTime) problems.push(`${f}: the end time must be after the start time`);
-  if (d.accent && !/^#[0-9a-fA-F]{6}$/.test(d.accent)) problems.push(`${f}: "accent" must be a hex colour like #8b5cf6`);
-  if (d.metaTitle && d.metaTitle.length > 49) problems.push(`${f}: search title is ${d.metaTitle.length} characters; the site adds " | Myntmore", so keep it to 49`);
-  if (d.showPopup && !d.registrationUrl) problems.push(`${f}: the pop-up is switched on but there is no registration link`);
-  if (problems.length) continue;
+  // Build rules shared with the content admin: scripts/lib/content-rules.mjs
+  const found = await checkEntry("events", { ...d, slug }, null);
+  for (const p of found) problems.push(`${f}: ${p.message}`);
+  if (found.length) continue;
 
   const [y, mo, da] = d.date.split("-").map(Number);
   const month = MONTHS[mo - 1];

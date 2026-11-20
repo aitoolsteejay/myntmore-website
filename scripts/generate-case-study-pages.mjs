@@ -12,6 +12,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { caseStudyMetaTitle, caseStudyOgTitle } from "./lib/content-rules.mjs";
 
 const ROOT = process.cwd();
 const CHECK = process.argv.includes("--check");
@@ -21,10 +22,10 @@ const lib = JSON.parse(fs.readFileSync(path.join(ROOT, "lib", "case-study-librar
 // (the page component reads that one for the structured data). The description and keywords
 // are derived once, by scripts/generate-case-study-content.mjs, and stored in the JSON.
 // The admin can set its own search title; otherwise "<client type> Case Study".
-const metaTitle = (c) => c.metaTitle || `${c.segment} Case Study`;
+// The title formulas are shared with the content admin: scripts/lib/content-rules.mjs.
+const metaTitle = caseStudyMetaTitle;
 const metaDescription = (c) => c.metaDescription;
-// og:site_name already carries the brand, and X cuts card titles at 70 characters.
-const ogTitle = (c) => (c.title.length <= 70 ? c.title : `${metaTitle(c)} | Myntmore`);
+const ogTitle = caseStudyOgTitle;
 
 // Limits that apply to every page this writes: the layout appends " | Myntmore" to the title.
 const problems = [];
