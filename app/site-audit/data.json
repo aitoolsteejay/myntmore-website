@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-20T10:53:12.139Z",
+  "generatedAt": "2026-11-20T12:44:26.124Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 350,
-    "linked": 311,
+    "total": 349,
+    "linked": 310,
     "orphan": 39,
     "noindex": 34,
     "notInXmlSitemap": 44,
@@ -954,19 +954,6 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
-    },
-    {
-      "path": "/careers/systems-ai-automation-intern",
-      "title": "Systems Ai Automation Intern",
-      "section": "careers",
-      "status": "linked",
-      "linkedFrom": [
-        "/careers"
-      ],
-      "inboundCount": 1,
-      "noindex": false,
-      "inXmlSitemap": true,
-      "inHtmlSitemap": false
     },
     {
       "path": "/case-studies",
@@ -5255,6 +5242,11 @@
     },
     {
       "from": "/careers/senior-sales-head",
+      "to": "/careers",
+      "permanent": true
+    },
+    {
+      "from": "/careers/systems-ai-automation-intern",
       "to": "/careers",
       "permanent": true
     },

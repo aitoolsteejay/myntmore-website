@@ -262,7 +262,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/careers/lead-gen-strategist`, lastModified: lastMod("/careers/lead-gen-strategist"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/sales-and-growth-intern`, lastModified: lastMod("/careers/sales-and-growth-intern"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/sales-executive`, lastModified: lastMod("/careers/sales-executive"), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/careers/systems-ai-automation-intern`, lastModified: lastMod("/careers/systems-ai-automation-intern"), changeFrequency: "monthly", priority: 0.5 },
     // END generated: career roles
     // Industry landing pages and the partner program
     // BEGIN generated: landing pages (scripts/generate-landing-pages.mjs)

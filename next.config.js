@@ -28,6 +28,8 @@ const REDIRECTS = [
   { source: "/careers/content-strategist", destination: "/careers", permanent: true },
   // Retired full-time role (removed 2026-09-24), no longer listed on /careers.
   { source: "/careers/senior-sales-head", destination: "/careers", permanent: true },
+  // Retired intern role (removed 2026-11-20), no longer listed on /careers.
+  { source: "/careers/systems-ai-automation-intern", destination: "/careers", permanent: true },
 
   // Legacy WordPress URLs from the previous site, still being crawled and
   // reported as 404s. Only the ones with a genuine present-day equivalent

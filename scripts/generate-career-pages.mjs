@@ -131,6 +131,20 @@ if (existingRolesJson !== rolesJsonStr) {
   }
 }
 
+// Clean up any deleted career role page directories
+const careersAppDir = path.join(root, "app", "careers");
+const validSlugs = new Set(files.map((f) => f.replace(/\.json$/, "")));
+for (const entry of fs.readdirSync(careersAppDir, { withFileTypes: true })) {
+  if (entry.isDirectory() && !validSlugs.has(entry.name)) {
+    const orphanedDir = path.join(careersAppDir, entry.name);
+    if (CHECK) {
+      problems.push(`${orphanedDir} is orphaned, role was removed from content/careers`);
+    } else {
+      fs.rmSync(orphanedDir, { recursive: true, force: true });
+    }
+  }
+}
+
 const careerRoutes = files.map((f) => `/careers/${f.replace(/\.json$/, "")}`);
 if (syncSitemapBlock({ root, name: "career roles", script: "scripts/generate-career-pages.mjs", routes: careerRoutes, priority: 0.5, check: CHECK }) && CHECK) {
   problems.push("app/sitemap.ts career role entries are out of date");
