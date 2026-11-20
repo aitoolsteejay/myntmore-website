@@ -459,8 +459,17 @@ select.outline-none:not([class*="ring"]):focus-visible {
 }
 
 /* ─── Inner-page hero entrance animations ────────────────── */
+/* Starts at 0.01, not 0: browsers do not count an element painted at opacity 0 as the Largest Contentful Paint, so a
+   hero headline that fades in from 0 is ignored and a later element (such as the reels pop-up) becomes the LCP. At 0.01
+   it looks the same but is counted from its first paint. */
+/* Reserve the space of rotating or typed text without adding words to the page: an empty, invisible element draws the
+   phrase from its data-text attribute, so it sizes the layout but is not part of the heading's text for search engines.
+   Used by the homepage hero line and the "Our promise" heading. */
+.reserve-text::before { content: attr(data-text); }
+.reserve-text.with-cursor::after { content: "|"; margin-left: 3px; font-weight: 900; }
+
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0.01; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .hero-fade    { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }

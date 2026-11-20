@@ -131,6 +131,7 @@ These touched many pages at once, so they show up in the AI tracker and Google's
 | Open Graph tags completed, branded share cards | 11 and 14 Nov | Paste three pages into LinkedIn's Post Inspector | __ |
 | Blog posts and glossary terms link to the service pages | 12 Nov | Service pages' positions, in the Performance report | __ |
 | Search titles and descriptions editable in Keystatic; the CMS refuses titles over 49 characters | 12 and 19 Nov | Nothing to measure; prevents titles being cut off in Google | n/a |
+| Page speed fixes, site-wide: hero headlines now count for Largest Contentful Paint (they faded in from opacity 0, so the reels pop-up at 5s became the LCP on several pages), and count-up figures and the homepage's rotating text no longer shift the layout | 20 Nov | Search Console, Core Web Vitals report (mobile): expect fewer "poor" or "needs improvement" URLs once 28 days of field data have passed. Lab before and after: LCP about 6.4s to 0.3s on the Mumbai, cold email, LinkedIn and case studies pages; layout shift 0.53 to 0 (LinkedIn page), 0.24 to 0 (pharma page), 0.36 to under 0.01 (homepage). This also touches the city pages in section 2, so a small ranking gain there may be partly speed | __ |
 
 ## Held until after this review
 

@@ -138,6 +138,8 @@ export default function WhoWeHelp() {
   const transitionRafRef = useRef<number | null>(null);
   const transitionRafRef2 = useRef<number | null>(null);
   const [progressKey, setProgressKey] = useState(0); // forces CSS restart
+  const [mounted, setMounted] = useState(false); // see the content panel below
+  useEffect(() => setMounted(true), []);
 
   const switchTab = useCallback((idx: number, manual = false) => {
     if (manual) {
@@ -324,52 +326,64 @@ export default function WhoWeHelp() {
             }}
           />
 
-          <div className="relative z-10 flex flex-col lg:flex-row gap-12">
-
-            {/* LEFT Heading + tagline + CTA */}
-            <div className="flex-1 flex flex-col justify-center">
-              <h3
-                className="text-2xl sm:text-4xl font-black text-[#0a0a0a] tracking-tight mb-4 sm:mb-5 leading-tight"
-                style={{ whiteSpace: "pre-line" }}
+          {/* Every persona's panel sits in the same grid cell and only the active one is visible, so the panel keeps the
+              height of the tallest persona instead of growing and shrinking as it rotates (which shifted the page below,
+              a Core Web Vitals layout shift). The inactive copies are added after hydration only, so the server HTML still
+              carries just the first persona; they are hidden from screen readers and the tab order. */}
+          <div className="relative z-10 grid">
+            {PERSONAS.map((p, idx) => (idx === activeIndex || mounted) && (
+              <div
+                key={p.tab}
+                aria-hidden={idx === activeIndex ? undefined : true}
+                className="flex flex-col lg:flex-row gap-12"
+                style={{ gridArea: "1 / 1", visibility: idx === activeIndex ? "visible" : "hidden" }}
               >
-                {persona.heading}
-              </h3>
-              <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: "#71675E" }}>
-                {persona.tagline}
-              </p>
-              <div>
-                <a
-                  href="/book-a-call"
-                  className="btn-dark inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold"
-                >
-                  {persona.cta}
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
 
-            {/* RIGHT Benefits */}
-            <div className="flex-1 flex flex-col justify-center gap-7">
-              {persona.benefits.map((b, i) => (
-                <div key={b.title} className="flex gap-4">
-                  {/* Numbered dot */}
-                  <div
-                    className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
-                    style={{ backgroundColor: "#F5B731", color: "#0a0a0a" }}
-                    aria-hidden="true"
+                {/* LEFT Heading + tagline + CTA */}
+                <div className="flex-1 flex flex-col justify-center">
+                  <h3
+                    className="text-2xl sm:text-4xl font-black text-[#0a0a0a] tracking-tight mb-4 sm:mb-5 leading-tight"
+                    style={{ whiteSpace: "pre-line" }}
                   >
-                    {i + 1}
-                  </div>
+                    {p.heading}
+                  </h3>
+                  <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: "#71675E" }}>
+                    {p.tagline}
+                  </p>
                   <div>
-                    <h4 className="text-base font-bold text-[#0a0a0a] mb-1">{b.title}</h4>
-                    <p className="text-sm leading-relaxed" style={{ color: "#52525B" }}>{b.description}</p>
+                    <a
+                      href="/book-a-call"
+                      className="btn-dark inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold"
+                    >
+                      {p.cta}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
-              ))}
-            </div>
 
+                {/* RIGHT Benefits */}
+                <div className="flex-1 flex flex-col justify-center gap-7">
+                  {p.benefits.map((b, i) => (
+                    <div key={b.title} className="flex gap-4">
+                      {/* Numbered dot */}
+                      <div
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
+                        style={{ backgroundColor: "#F5B731", color: "#0a0a0a" }}
+                        aria-hidden="true"
+                      >
+                        {i + 1}
+                      </div>
+                      <div>
+                        <h4 className="text-base font-bold text-[#0a0a0a] mb-1">{b.title}</h4>
+                        <p className="text-sm leading-relaxed" style={{ color: "#52525B" }}>{b.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
