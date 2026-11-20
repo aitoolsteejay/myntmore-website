@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 
 // Keystatic fields for the /services/cold-email page copy
 // (content/service-copy/cold-email.json). Keys match the JSON exactly.

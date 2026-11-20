@@ -1,4 +1,5 @@
-import { collection, config, fields, singleton } from "@keystatic/core";
+import { collection, config, singleton } from "@keystatic/core";
+import { fields } from "./lib/admin/fields";
 import { coldEmailCopySchema } from "./content/service-copy/schemas/cold-email";
 import { linkedinOutreachCopySchema } from "./content/service-copy/schemas/linkedin-outreach";
 import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-yourself";

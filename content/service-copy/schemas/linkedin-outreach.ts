@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 
 const t = (label: string, description?: string) => fields.text({ label, description });
 const para = (label: string, description?: string) => fields.text({ label, multiline: true, description });

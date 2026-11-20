@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createServerClient } from "@supabase/ssr";
 import { prefersMarkdown } from "./lib/markdown/negotiate";
 import { renderPageMarkdown } from "./lib/markdown/render";
 
@@ -14,8 +15,51 @@ const pilotPaths = new Set([
   "/resources/blogs/b2b-lead-generation-for-it-services",
 ]);
 
+// Admin (/admin, /api/admin): only signed-in people get past this point. Pages and API routes then
+// check on the server that the person is an active editor with the right role (lib/admin/auth.ts).
+const ADMIN_PUBLIC = new Set(["/admin/login", "/admin/auth/callback", "/api/admin/auth/login"]);
+
+async function adminGuard(request: NextRequest): Promise<NextResponse> {
+  const path = request.nextUrl.pathname;
+  const withHeaders = (res: NextResponse) => {
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+    res.headers.set("Cache-Control", "private, no-store");
+    return res;
+  };
+  // Local development without Supabase (ADMIN_LOCAL_DEV=1, never on Vercel or in production).
+  if (process.env.ADMIN_LOCAL_DEV === "1" && process.env.NODE_ENV !== "production" && !process.env.VERCEL) {
+    return withHeaders(NextResponse.next());
+  }
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  // Not configured: let the page explain; API routes refuse on their own.
+  if (!url || !key) return withHeaders(NextResponse.next());
+
+  let response = NextResponse.next({ request });
+  const supabase = createServerClient(url, key, {
+    cookies: {
+      getAll: () => request.cookies.getAll(),
+      setAll: (list) => {
+        list.forEach(({ name, value }) => request.cookies.set(name, value));
+        response = NextResponse.next({ request });
+        list.forEach(({ name, value, options }) => response.cookies.set(name, value, options));
+      },
+    },
+  });
+  const { data } = await supabase.auth.getUser();
+  if (!data.user && !ADMIN_PUBLIC.has(path)) {
+    if (path.startsWith("/api/")) return withHeaders(NextResponse.json({ error: "Sign in to continue." }, { status: 401 }));
+    const login = new URL("/admin/login", request.url);
+    if (path !== "/admin") login.searchParams.set("next", path);
+    return withHeaders(NextResponse.redirect(login));
+  }
+  return withHeaders(response);
+}
+
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  if (path === "/admin" || path.startsWith("/admin/") || path.startsWith("/api/admin/")) return adminGuard(request);
   if (process.env.MARKDOWN_PILOT !== "1" || !pilotPaths.has(path) || !["GET", "HEAD"].includes(request.method)) {
     return NextResponse.next();
   }
@@ -115,7 +159,10 @@ export async function middleware(request: NextRequest) {
 // Match before Next.js removes Flight headers and the _rsc query from the
 // middleware request. The exact path allowlist also excludes normalized assets.
 export const config = {
-  matcher: {
+  matcher: [
+    { source: "/admin/:path*" },
+    { source: "/api/admin/:path*" },
+    {
     source: "/(about-us|services(?:/gtm-strategy|/sales-intelligence)?|case-studies/agencies-it-usa-software-development|resources/blogs/(?:account-targeting-strategy|b2b-lead-generation-for-it-services))?",
     missing: [
       { type: "header", key: "rsc" },
@@ -124,5 +171,6 @@ export const config = {
       { type: "header", key: "x-nextjs-data" },
       { type: "query", key: "_rsc" },
     ],
-  },
+    },
+  ],
 };

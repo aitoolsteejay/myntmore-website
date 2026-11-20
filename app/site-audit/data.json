@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-20T04:26:57.967Z",
+  "generatedAt": "2026-11-20T10:27:20.566Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 344,
+    "total": 349,
     "linked": 311,
-    "orphan": 33,
+    "orphan": 38,
     "noindex": 34,
-    "notInXmlSitemap": 38,
-    "privateHidden": 6
+    "notInXmlSitemap": 43,
+    "privateHidden": 11
   },
   "pages": [
     {
@@ -5054,6 +5054,66 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },

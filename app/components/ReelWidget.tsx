@@ -31,6 +31,7 @@ const EXCLUDED_PREFIXES = [
   "/plans",
   "/value-prop",
   "/master-icp",
+  "/admin",
   "/enwilfernandes",
 ];
 

@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 import { longCaseMetaFields } from "./_meta";
 
 const richHint = "Wrap words in **double asterisks** for bold, __double underscores__ for italic and [link text](/path) for a link.";

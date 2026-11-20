@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 import { longCaseMetaFields } from "./_meta";
 
 // A run of text where some parts are bold. Keep the spaces at the edges of each part as they should appear.

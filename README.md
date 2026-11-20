@@ -274,6 +274,8 @@ Zoho CRM is the primary lead record for each tool (a dedicated form per tool, or
 
 No `.env.example` is committed - set these in your local `.env.local` and in the Vercel project's environment settings.
 
+The content admin at `/admin` needs its own variables (`SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_GITHUB_APP_ID`, `ADMIN_GITHUB_APP_PRIVATE_KEY`, `ADMIN_GITHUB_INSTALLATION_ID`, `ADMIN_GITHUB_REPO`, and optionally `ADMIN_GITHUB_BRANCH` and `ADMIN_VERCEL_DEPLOY_HOOK_URL`). See [`docs/admin-setup.md`](docs/admin-setup.md); for local work, `ADMIN_LOCAL_DEV=1 npm run dev` needs none of them.
+
 ## SEO / AEO / GEO governance
 
 This is a genuinely load-bearing part of the repo, not boilerplate. Read `docs/seo-aeo-geo-cadence.md` before shipping any content change - it defines:

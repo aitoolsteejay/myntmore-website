@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 import { longCaseMetaFields } from "./_meta";
 
 const richNote = "Wrap words in **double asterisks** to make them bold.";

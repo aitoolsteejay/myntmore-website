@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 import { longCaseMetaFields } from "./_meta";
 
 const sectionParagraphs = fields.array(fields.text({ label: "Paragraph", multiline: true }), { label: "Paragraphs", itemLabel: (props) => props.value.slice(0, 50) });
