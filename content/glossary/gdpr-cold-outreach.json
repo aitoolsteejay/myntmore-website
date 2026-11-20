@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "The EU law governing how personal data like a prospect's name and work email can be used for outreach, which for B2B allows outreach under 'legitimate interest' rather than requiring prior opt-in.",
-  "body": "Legitimate interest is narrower than it sounds: the outreach has to be relevant to the recipient's professional role, and it has to include an easy, immediate way to opt out. It does not license the same broad, unfiltered blasting that some other regions tolerate.",
+  "body": "GDPR governs how personal data, such as a prospect's name and work email, can be collected and used when contacting people in the EU, and the UK applies its own version of the same rules. This is general information, not legal advice. For B2B outreach, the lawful basis most teams rely on is legitimate interest rather than prior consent. Legitimate interest is narrower than it sounds: the outreach has to be relevant to the recipient's professional role, and it has to include an easy, immediate way to opt out. It does not license the same broad, unfiltered blasting that some other regions tolerate. Relying on it means doing a balancing test, weighing your interest in contacting someone against their reasonable expectations and rights. You also need to tell people where you got their data if they ask, honour objections promptly and keep suppressed contacts off future lists. Email adds a second layer: national e-privacy rules sit alongside GDPR and can be stricter, and some countries treat emails to individual employees differently from generic company addresses. Say a team buys a large list of EU contacts and emails all of them the same message. That is hard to defend; a short, relevant list of people whose role matches the offer is far easier.",
   "sourceLabel": "Read: Cold Email Compliance: CAN-SPAM, GDPR & DPDP",
   "sourceHref": "/resources/blogs/cold-email-compliance-guide",
   "furtherLabel": "See the service: Cold Email Infrastructure",
@@ -24,5 +24,18 @@
     "gdpr b2b outreach",
     "legitimate interest gdpr cold email"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "Is cold email legal under GDPR?",
+      "answer": "B2B cold email can be lawful under GDPR when it relies on legitimate interest: the message is relevant to the recipient's role, you have assessed that interest against their rights, and every email offers an easy opt-out. National e-privacy rules can add requirements, so check the specific country. This is general information, not legal advice."
+    },
+    {
+      "question": "What is legitimate interest in GDPR for B2B outreach?",
+      "answer": "Legitimate interest is a lawful basis that lets you process personal data without consent when you have a genuine business reason and it does not override the person's rights. For outreach, that means contacting people whose professional role fits your offer, being transparent and stopping immediately when they object."
+    },
+    {
+      "question": "What do you need to include in a GDPR-compliant cold email?",
+      "answer": "Clear identification of who you are, a relevant reason for contacting the recipient and an easy way to opt out of further messages. Be ready to explain where you obtained their details if asked, and remove anyone who objects from all future outreach. Keep records of your legitimate interest assessment."
+    }
+  ]
 }

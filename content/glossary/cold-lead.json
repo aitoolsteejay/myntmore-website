@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A prospect matching your ICP who hasn't engaged with any outreach yet, the starting point of a sequence, not a signal that they won't ever respond.",
-  "body": "Treating a cold lead as a lost cause after one unanswered email is the most common way outbound teams undersell their own pipeline. Most replies come from the second, third, or fourth touch in a sequence, not the first, which is exactly why a real cadence exists instead of a single email.",
+  "body": "A cold lead is where every outbound sequence starts: a person who fits your ideal customer profile but has never engaged with you. Cold describes the relationship, not the prospect's likelihood of buying. Treating a cold lead as a lost cause after one unanswered email is the most common way outbound teams undersell their own pipeline. Most replies come from the second, third or fourth touch in a sequence, not the first, which is exactly why a real cadence exists instead of a single email. Busy buyers miss messages, read them at the wrong moment or wait to see whether you follow up at all. Say a team emails 100 cold leads and hears back from 3 after the first message. If they stop there, they never find out how many of the other 97 would have replied to a sharper second or third touch. The quality of a cold lead depends on the list, not the label: a well-researched contact with a recent trigger, such as a new role or a funding round, is a far better cold lead than a name pulled from a broad database. Mark a cold lead as unresponsive only after a full sequence across more than one channel.",
   "sourceLabel": "Read: Cold Email Sequence Templates That Get Replies",
   "sourceHref": "/resources/blogs/cold-email-sequence-templates",
   "furtherLabel": "See the service: AI Lead Generation",
@@ -24,5 +24,18 @@
     "cold lead vs warm lead",
     "cold lead outreach"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between a cold lead and a warm lead?",
+      "answer": "A cold lead fits your ideal customer profile but has never engaged with you; a warm lead has. Opening emails, accepting a connection or replying neutrally turns a cold lead warm. Both can become customers, but they need different handling: cold leads need a relevant first reason to talk, warm leads need nurturing."
+    },
+    {
+      "question": "How many times should you contact a cold lead?",
+      "answer": "Usually four or five touches spread over two to three weeks, across email and LinkedIn where possible. Each touch should add something new, such as a different angle or a short proof point, rather than repeating the first message. After that, move the lead to a later sequence triggered by a new signal."
+    },
+    {
+      "question": "How do you warm up a cold lead?",
+      "answer": "Show relevance before you ask for anything. Reference a real trigger, such as a new role, a hire or an expansion, engage with their LinkedIn posts, and make the first message about their likely problem rather than your product. A cold lead warms up when they recognise you as someone who understands their situation."
+    }
+  ]
 }

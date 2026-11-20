@@ -15,7 +15,7 @@
     "LinkedIn Lead Generation"
   ],
   "definition": "Reaching prospects directly on LinkedIn through connection requests, messages, and follow-ups, using the platform's job and company data to target the exact decision-makers you want.",
-  "body": "LinkedIn's advantage is context: the prospect can see your profile, mutual connections, and what you post before deciding to reply, so a credible profile does part of the selling. The trade-off is volume, since weekly connection limits cap how many people you can reach, which is why many teams pair LinkedIn with cold email rather than choosing one.",
+  "body": "LinkedIn outreach means contacting prospects directly on LinkedIn through connection requests, messages and follow-ups, using the platform's job and company information to reach the exact decision-makers you want. Its advantage is context: the prospect can see your profile, your mutual connections and what you post before deciding to reply, so a credible profile does part of the selling. A typical sequence is a short connection request, a thank-you message with one relevant question once they accept, a follow-up that offers something useful, and a polite final note. Reply rates are usually far higher than cold email; across Myntmore-managed campaigns, LinkedIn outreach averages a 35% reply rate. The trade-off is volume, since LinkedIn limits how many connection requests and messages a profile can send, which is why many teams pair LinkedIn with cold email rather than choosing one. Say a founder sends a pitch in the connection request itself. Many people decline it, and the profile has used up part of its limited capacity for nothing. The common mistakes are pitching before the connection is accepted, sending copy-pasted messages, running outreach from an empty or outdated profile, and automating so aggressively that the account risks restrictions.",
   "sourceLabel": "See the service: LinkedIn Outreach",
   "sourceHref": "/services/linkedin-outreach",
   "furtherLabel": "Read: Cold Email vs. LinkedIn Outreach for B2B Pipeline",
@@ -30,5 +30,18 @@
     "linkedin lead generation",
     "linkedin outreach definition"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you do LinkedIn outreach for B2B?",
+      "answer": "Target decision-makers who fit your ideal customer profile, make sure your profile clearly says who you help, then send a short connection request without a pitch. Once they accept, ask one relevant question, follow up with something useful, and keep the whole sequence to four or five touches."
+    },
+    {
+      "question": "Should you pitch in a LinkedIn connection request?",
+      "answer": "No. A pitch in the connection request lowers acceptance, because the prospect has not agreed to a conversation yet. Send a blank request or a short note with a genuine reason to connect, and save the business conversation for after they accept, when your profile has already introduced you."
+    },
+    {
+      "question": "Is LinkedIn outreach better than cold email?",
+      "answer": "LinkedIn outreach usually gets a much higher reply rate per person, while cold email reaches far more people at lower cost. They suit different buyers and volumes, so many B2B teams run both on the same accounts, letting each prospect hear from them in two places."
+    }
+  ]
 }

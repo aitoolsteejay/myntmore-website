@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A free, specific piece of value, like a calculator, template, or custom report, offered in exchange for a prospect's attention, used to earn a reply before any pitch is made.",
-  "body": "The ones that actually convert are narrow and immediately usable by the exact ICP they're built for, not broad awareness content repackaged as a PDF. A generic '10 tips' guide reads as marketing; a tool that solves one specific problem for one specific role reads as genuinely useful, which is the entire difference.",
+  "body": "A lead magnet is something useful a prospect gets for free, offered to start a conversation before any pitch. In B2B outbound it often appears inside the first message: an offer to share a benchmark, a template, a short audit or a calculator relevant to the reader's role. The ones that actually convert are narrow and immediately usable by the exact ICP they are built for, not broad awareness content repackaged as a PDF. A generic '10 tips' guide reads as marketing; a tool that solves one specific problem for one specific role reads as genuinely useful, which is the entire difference. Say a company sells warehouse software. A downloadable e-book about 'the future of logistics' asks the prospect for time and gives little back. A one-page checklist for preparing inventory systems before opening a second warehouse speaks to a situation the reader may be in right now. Good lead magnets also make the next step natural: if the checklist surfaces a gap, a conversation about fixing it follows. The common mistakes are gating weak content behind long forms, offering something unrelated to the product, and never following up with the people who took it.",
   "sourceLabel": "Read: The Value Premium: Creating Magnetic Lead Magnets",
   "sourceHref": "/resources/blogs/value-premium-lead-magnets",
   "furtherLabel": "See the service: Personal Branding for Founders",
@@ -24,5 +24,18 @@
     "b2b lead magnet examples",
     "lead magnet ideas"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What makes a good B2B lead magnet?",
+      "answer": "A good B2B lead magnet solves one specific problem for one specific role, quickly. Templates, calculators, benchmarks and short audits work better than broad e-books because the reader can use them straight away. It should also connect naturally to what you sell, so the conversation that follows feels like the obvious next step."
+    },
+    {
+      "question": "Should a lead magnet be gated behind a form?",
+      "answer": "Gate it only when it is valuable enough that the reader will happily trade their details for it. In outbound, offering the resource directly in a reply often works better than sending people to a form. Asking 'Want me to send it?' starts a conversation, which is the real goal."
+    },
+    {
+      "question": "How do you use a lead magnet in cold outreach?",
+      "answer": "Offer it as a low-pressure next step instead of asking for a meeting. Mention the resource in one line, explain why it is relevant to the reader's situation and ask whether they would like it. People who say yes are showing interest, which gives you a natural reason to follow up."
+    }
+  ]
 }

@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A company's plan for increasing revenue over a defined period, choosing which levers to pull, such as new customers, new markets, pricing, or expanding existing accounts.",
-  "body": "Growth strategy sits above GTM strategy: it decides where growth should come from, and GTM decides how to win in each of those places. For most early and mid-stage B2B companies, the most controllable lever is new customer acquisition through outbound, because it doesn't depend on waiting for search rankings or referrals to compound.",
+  "body": "A growth strategy answers one question: where should next year's revenue come from? The usual levers are new customers, new markets or segments, pricing and packaging, and expanding existing accounts. Growth strategy sits above GTM strategy: it decides where growth should come from, and GTM decides how to win in each of those places. Choosing well means being honest about which levers the company can actually pull. For most early and mid-stage B2B companies, the most controllable lever is new customer acquisition through outbound, because it does not depend on waiting for search rankings or referrals to compound. Say a company wants to grow revenue by half. It could find more customers like its best ones, enter a neighbouring vertical, raise prices or sell more to current clients. Each needs different work: outbound and sales capacity for the first two, packaging changes for the third, account management for the fourth. The common mistakes are pursuing every lever at once with the same team, choosing a target market because it is large rather than because the company can win there, and setting a revenue goal without working out how many deals, meetings and conversations it really requires.",
   "sourceLabel": "Read: Building a Predictable B2B Lead Generation Engine",
   "sourceHref": "/resources/blogs/predictable-b2b-lead-gen-engine",
   "furtherLabel": "See the service: GTM Strategy",
@@ -24,5 +24,18 @@
     "growth strategy vs gtm strategy",
     "b2b growth levers"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between a growth strategy and a GTM strategy?",
+      "answer": "A growth strategy decides where revenue growth should come from, such as new customers, new markets, pricing or existing accounts. A GTM strategy decides how to win in each chosen area: the target buyers, positioning, channels and sales process. Growth strategy sets direction; GTM strategy turns it into a plan for reaching buyers."
+    },
+    {
+      "question": "What are the main B2B growth levers?",
+      "answer": "Most B2B companies grow through four levers: winning new customers, entering new markets or segments, changing pricing and packaging, and expanding revenue from existing accounts. The right mix depends on stage. Early companies usually rely on new customer acquisition, while mature companies get more from expansion and retention."
+    },
+    {
+      "question": "How do you build a B2B growth strategy?",
+      "answer": "Start from your best existing customers: who they are, why they bought and how much they are worth. Decide which lever offers the most controllable growth, set a revenue target, and work backwards to the deals, meetings and conversations needed. Then choose channels and staffing that can realistically produce those numbers."
+    }
+  ]
 }

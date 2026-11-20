@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is the difference between lead generation and pipeline generation?", answer: "Lead generation produces contacts or interest. Pipeline generation produces qualified sales opportunities with a deal value attached. A lead becomes pipeline only once it has been qualified as a real buyer with a need and a plausible timeline, which is why pipeline is the better measure of sales progress." },
+  { question: "How much pipeline do you need to hit a revenue target?", answer: "Divide the target by your win rate on qualified opportunities. If you win one in four, you need roughly four times the target in pipeline. Then check timing: deals take a full sales cycle to close, so the pipeline has to exist that far before the period it is meant to fill." },
+  { question: "How do B2B companies generate pipeline?", answer: "From three main sources: outbound outreach to chosen accounts, inbound interest from content and search, and referrals from customers and partners. Outbound is the source a team controls most directly, which is why companies with a fixed revenue target usually rely on it to keep the pipeline steady." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -43,12 +49,13 @@ export default function GlossaryTermPage() {
       alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"Creating new, qualified sales opportunities on purpose, instead of hoping enough show up each quarter."}
       definition={"The activity of creating new qualified sales opportunities, through outbound, inbound, and referrals, so the sales pipeline has enough deals in it to hit revenue targets."}
-      body={"Lead generation produces contacts; pipeline generation is measured one step later, in qualified opportunities with a real deal value attached. Teams usually work backwards from a revenue target: if you close one in four qualified opportunities, you need four times your target in pipeline, and outbound is the lever you control most directly to build it."}
+      body={"Pipeline generation is measured one step later than lead generation. Lead generation produces contacts; pipeline generation produces qualified opportunities with a real deal value attached, the deals your sales team can actually forecast. Teams usually work backwards from a revenue target: if you close one in four qualified opportunities, you need four times your target in pipeline, and you need it early enough for your sales cycle to play out. Outbound is the lever a team controls most directly, because inbound and referrals arrive on the market's schedule rather than yours. Say a company wants to close 10 new deals this quarter, closes a quarter of its qualified opportunities, and has a three-month sales cycle. It needs about 40 qualified opportunities, and most of them should already be in the pipeline at the start of the quarter, not created during it. The common mistakes are counting leads or meetings as pipeline before they are qualified, building pipeline in bursts after a slow month instead of steadily, and not tracking which source each opportunity came from, which makes it impossible to know where to invest next."}
       sourceLabel={"Read: Outbound Funnel Math, Not Gut Feel"}
       sourceHref={"/resources/blogs/outbound-funnel-math-not-guesswork"}
       furtherLabel={"Read the related term: Sales Pipeline"}
       furtherHref={"/resources/glossary/sales-pipeline"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

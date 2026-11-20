@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "How widely a seller is engaged inside a target company, measured by how many relevant stakeholders, teams, or business units they have active relationships with.",
-  "body": "Low penetration means a deal rests on one person; if they change roles or lose interest, it's gone. Teams raise penetration by multi-threading outreach to other members of the buying committee and, in existing customers, by expanding from the first team that bought into neighbouring departments.",
+  "body": "Low penetration means a deal rests on one person; if they change roles or lose interest, it's gone. Penetration is usually measured by counting the relevant stakeholders you are actively talking to inside an account, and by how many teams or business units you have reached. In new business, that means mapping the buying committee early: the person who uses the product, the person who owns the budget, and anyone who evaluates risk, such as IT or procurement. In existing customers, it means expanding from the first team that bought into neighbouring departments that have the same problem. Say you sell to a company with five regional offices and only one office uses your service. Penetration there is one in five, and the other four offices are the most natural place to grow, because you already have proof inside the same company. Teams raise penetration by multi-threading outreach to other members of the buying committee, asking their champion for introductions, and sharing results from the first team internally. The common mistakes are treating a single enthusiastic contact as account coverage, and contacting several people with identical messages, which reads as spam rather than a considered approach.",
   "sourceLabel": "Read the related term: Multi-Threading",
   "sourceHref": "/resources/glossary/multi-threading",
   "furtherLabel": "See the service: Account-Based Marketing",
@@ -24,5 +24,18 @@
     "account penetration b2b",
     "increase account penetration"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you measure account penetration?",
+      "answer": "Count the relevant stakeholders you have an active relationship with inside the account, and compare that with the people who influence the buying decision. For existing customers, also track how many teams or business units use your product out of those that could. A simple ratio, such as three of seven stakeholders engaged, is enough."
+    },
+    {
+      "question": "How do you increase account penetration in B2B sales?",
+      "answer": "Map the buying committee, then reach each role with a message about its own concern rather than one generic pitch. Ask your existing contact for introductions, share results from the first team with neighbouring departments, and coordinate email and LinkedIn so everyone at the account hears a consistent story from you."
+    },
+    {
+      "question": "What is the difference between account penetration and account expansion?",
+      "answer": "Account penetration describes how widely you are engaged inside a company, measured in stakeholders and teams. Account expansion is the revenue that follows from that reach, such as new departments, more users or added services. Higher penetration usually comes first, because expansion depends on relationships beyond the first buyer."
+    }
+  ]
 }

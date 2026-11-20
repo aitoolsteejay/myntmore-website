@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "The percentage of prospects who reply to an outreach message, whether positive, negative, or a question, the first real signal that targeting and messaging are working before any meeting gets booked.",
-  "body": "A reply of any kind, including a 'not interested,' still confirms the message reached a real inbox and got read, which a silent non-response never tells you. That's why response rate is tracked as its own number rather than folded straight into meeting-booked rate: a low response rate usually points to a targeting or messaging problem, while a healthy response rate with a low booking rate points to a weaker ask instead.",
+  "body": "A reply of any kind, including a 'not interested', still confirms the message reached a real inbox and got read, which a silent non-response never tells you. That is why response rate is tracked as its own number rather than folded straight into meeting-booked rate. It is calculated by dividing the number of prospects who replied by the number contacted. Say a campaign reaches 400 prospects and 12 reply: the response rate is 3%. If only 2 of those 12 agree to a meeting, the response rate looks healthy but the booking step is weak, so the fix is the call to action or the follow-up, not the list. As a rule of thumb, a low response rate usually points to a targeting or messaging problem, while a healthy response rate with a low booking rate points to a weaker ask. Channels differ a great deal: across Myntmore-managed campaigns, cold email runs at 1% to 3% while LinkedIn outreach averages a 35% reply rate, so compare each channel against itself rather than against the other. The common mistakes are counting auto-replies and bounces as responses, mixing different segments into one number, and celebrating replies without reading what they say.",
   "sourceLabel": "Read: The 7 B2B Lead Gen Metrics That Actually Matter",
   "sourceHref": "/resources/blogs/b2b-lead-gen-metrics",
   "furtherLabel": "See the service: Cold Email Infrastructure",
@@ -24,5 +24,18 @@
     "response rate definition b2b",
     "good response rate outbound"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you calculate response rate?",
+      "answer": "Divide the number of prospects who replied by the number of prospects contacted, then multiply by 100. Count each person once, however many messages they received, and exclude auto-replies and bounces. Track positive replies separately as well, because a high response rate made of 'not interested' replies is a different problem from silence."
+    },
+    {
+      "question": "What is the difference between response rate and positive reply rate?",
+      "answer": "Response rate counts every reply, including objections and 'not interested'. Positive reply rate counts only replies showing interest, such as a question or an agreement to talk. Response rate tells you whether people read and engage with the message; positive reply rate tells you whether the offer and targeting are right."
+    },
+    {
+      "question": "Why is my outreach response rate low?",
+      "answer": "Most low response rates come from targeting or relevance: the list includes people without the problem, or the first line does not show why they were chosen. Check deliverability too, since messages landing in spam cannot get replies. Fix the list first, then the opening line, before rewriting the rest of the message."
+    }
+  ]
 }

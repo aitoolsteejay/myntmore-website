@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is signal-heavy structuring in content?", answer: "Signal-heavy structuring is a content approach where every piece includes something specific and immediately usable, such as a template, a worked example or a step-by-step walkthrough, instead of general branding copy. The reader should be able to act on it the same day, which builds trust and makes a follow-up conversation easier." },
+  { question: "How does signal-heavy content help B2B outbound?", answer: "It gives outreach a genuinely useful reason to get in touch and shows prospects the quality of your thinking before a call. A message that shares a relevant template or walkthrough is more likely to be read and saved than a pitch, and it often starts a conversation without needing a hard sell." },
+  { question: "What is an example of signal-heavy content?", answer: "A post for recruitment firms that includes a ready-to-copy outreach sequence for hiring managers is signal-heavy; a general post about why outbound matters is not. Other examples include a filled-in ICP worksheet, a pre-built cold email template for a specific industry or a setup checklist for a particular tool." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -41,12 +47,14 @@ export default function GlossaryTermPage() {
       tagline={"A framework for building content and lead magnets around a concrete, usable asset, not generic branding copy, so the content itself does the convincing."}
       definitionLead={"Signal-Heavy Structuring:"}
       definition={"a content framework where every piece includes a highly specific, concrete asset the reader can use to solve a real problem immediately, rather than generic branding copy. If a system is being explained, that means a tailored walkthrough showing exactly how it works. If a tool is being discussed, that means an actual pre-built template, not just a description of one."}
+      body={"Signal-heavy structuring is a test for content as much as a format: every piece should hand the reader something concrete they can use straight away. That might be a working template, a filled-in example, a step-by-step walkthrough or a short checklist built for a specific situation. Generic branding copy, broad advice and repackaged how-tos fail the test, however polished they look. In outbound, this kind of content does two jobs. It gives a cold message a useful reason to exist, and it shows a prospect what working with you would be like before they ever take a call. Say a team selling to recruitment firms writes a post about outbound. A general piece on 'why outbound matters' gets skimmed. A post that includes a ready-to-use sequence for approaching hiring managers at companies with open roles gets saved, shared and replied to. The common mistakes are describing a tool instead of providing it, writing for every industry at once and hiding the useful part behind long introductions. Put the usable asset near the top, keep it specific to one audience and one problem, and let the value carry the message instead of adding a hard sell."}
       sections={[{"heading":"The test it has to pass","paragraphs":["The moment a prospect opens the content, they should immediately think: \"there's something specific in here I can use today.\" That's the bar. A generic checklist or a repackaged how-to that could apply to any company in any industry fails it, no matter how well-designed it looks."]},{"heading":"Why it works","paragraphs":["High-converting content isn't about how much is said, it's about what sticks and what a reader can immediately act on. When a piece of content hands over a genuinely useful, pre-built workaround to a problem someone is actively living with, it doesn't need a hard sell attached. The value speaks for itself, and cold interest turns into a booked conversation without extra persuasion."]}]}
       sourceLabel={"Read: The Value Premium: Stop Chasing Attention and Start Creating Magnetic Leads"}
       sourceHref={"/resources/blogs/value-premium-lead-magnets"}
       furtherLabel={"See the service: Personal Branding for Founders"}
       furtherHref={"/services/personal-branding"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

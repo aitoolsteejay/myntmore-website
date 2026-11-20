@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is the 3-second rule in cold email?", answer: "The 3-second rule is the idea that a prospect decides almost instantly, from the subject line and first sentence, whether a cold message is worth reading. It means the opening has to show relevance to the reader straight away, instead of introducing your company or listing product features." },
+  { question: "How do you write a cold email opening line that gets read?", answer: "Lead with one specific, true observation about the prospect or their company, such as an expansion, a hiring push or a recent change, and connect it to a problem you solve. Keep it to one short sentence. Avoid opening with your company name, a generic compliment or a question that could apply to anyone." },
+  { question: "Does the 3-second rule apply to LinkedIn messages?", answer: "Yes. On LinkedIn the preview shows even less text than an email, so the first words of a connection note or message decide whether it gets opened. The same principle applies: make the opening about the recipient's situation, keep it short, and save any pitch for after they have replied." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -41,12 +47,14 @@ export default function GlossaryTermPage() {
       tagline={"You have roughly 3 seconds to earn a prospect's curiosity before an outbound message gets ignored, and spending those seconds pitching loses it."}
       definitionLead={"The 3-Second Rule:"}
       definition={"you have exactly 3 seconds to earn a prospect's interest in a cold outbound message. If those seconds are spent pitching features, listing service offerings, or introducing company history, the prospect has already moved on. The message's sole job in that window is to earn curiosity, not to explain the product."}
+      body={"The 3-second rule is a rule of thumb rather than a measured law: busy decision-makers judge a cold message almost instantly, usually from the subject line, the preview text and the first sentence. Whatever is in that opening has to give them a reason to keep reading. In practice, that means the first line is about the prospect and their situation, not about you, your company history or your feature list. Say two emails reach the same head of operations. One opens with 'We are a leading provider of workflow automation solutions.' The other opens with 'Saw you are opening a second warehouse in Pune; are stock counts still reconciled by hand?' The second earns the next sentence because it names something true and relevant to the reader. The common mistakes are opening with a company introduction, cramming every benefit into the first paragraph and using clever hooks that have nothing to do with the reader's world. The fix is to research one specific observation per prospect, lead with it, and save product detail for the conversation that follows once they reply. It applies to LinkedIn messages and connection notes as much as to email, because the preview a prospect sees is just as short."}
       sections={[{"heading":"The three shifts it implies","steps":[{"lead":"Earn curiosity, don't pitch.","text":"The opening line's only job is to make someone want to read the next one."},{"lead":"Ditch the static script.","text":"A generic feature-dump opener signals a salesperson looking to take up time, and gets the same treatment as spam."},{"lead":"Break the pattern.","text":"A sharp, specific observation about the prospect's situation disarms the usual filtering reflex a busy inbox trains people to have."}]},{"heading":"Why it matters","paragraphs":["Decision-makers skim their inboxes like skeptics, not fans. Outbound isn't dead as a channel, but treating every touch like a generic broadcast instead of a high-leverage, individual moment is what keeps reply rates stuck at zero."]}]}
       sourceLabel={"Read: Stop Selling Features: The 3-Second Rule of Outbound Outreach"}
       sourceHref={"/resources/blogs/stop-selling-features-cold-outreach"}
       furtherLabel={"See the service: LinkedIn Outreach & Automation"}
       furtherHref={"/services/linkedin-outreach"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "Maintaining light, ongoing engagement, likes, comments, the occasional genuine check-in, with people already in your network, so a future outreach message lands as familiar rather than cold.",
-  "body": "Most connections on LinkedIn or in an old contact list go completely dormant, which wastes a relationship that took no cold-outreach effort to build in the first place. A short comment on a recent post or a no-ask check-in every few months keeps the relationship live enough that a real outreach message later doesn't feel like it's coming out of nowhere.",
+  "body": "Most connections on LinkedIn or in an old contact list go completely dormant, which wastes a relationship that took no cold-outreach effort to build in the first place. Nurturing keeps those relationships warm with small, genuine touches: a thoughtful comment on a recent post, a congratulations on a new role, or a no-ask check-in every few months. None of it sells anything. The point is that when a real outreach message arrives later, it comes from a name the recipient recognises, so it reads as a continuation rather than an interruption. Say a founder has 2,000 connections and spends ten minutes a day commenting on posts from the 50 people closest to their ideal customer profile. Within a few months those 50 have seen the founder's name repeatedly, and a direct message about a relevant problem gets read rather than ignored. The common mistakes are treating nurturing as disguised pitching, such as a 'quick check-in' that turns into a demo request, and spreading attention so thinly across thousands of contacts that nobody notices it. Pick a focused group, be consistent, and keep the engagement about them. Done well, it turns an existing network into the warmest part of an outbound pipeline.",
   "sourceLabel": "Read: LinkedIn Outreach Sequences That Actually Get Replies",
   "sourceHref": "/resources/blogs/linkedin-outreach-sequences",
   "furtherLabel": "See the service: LinkedIn Outreach & Automation",
@@ -24,5 +24,18 @@
     "warm network outreach",
     "how to nurture b2b leads"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is connection nurturing on LinkedIn?",
+      "answer": "Connection nurturing is the habit of staying lightly engaged with people already in your network, through comments, congratulations and occasional no-ask messages. It keeps the relationship warm, so that when you later reach out about a real business need, your message comes from a familiar name instead of landing as a cold pitch."
+    },
+    {
+      "question": "How often should you engage with existing connections?",
+      "answer": "Regularly but lightly. A few genuine comments a week on posts from a focused list of priority contacts, plus a no-ask check-in every few months, is enough to stay familiar. Consistency matters more than volume: occasional bursts of activity followed by months of silence do little to keep a relationship warm."
+    },
+    {
+      "question": "Is nurturing existing connections better than cold outreach?",
+      "answer": "They work best together. Nurturing makes outreach to people you already know far more likely to get a reply, while cold outreach reaches buyers outside your network. Most B2B teams should do both: warm up the relevant part of their existing network and run targeted cold outreach to new accounts in parallel."
+    }
+  ]
 }

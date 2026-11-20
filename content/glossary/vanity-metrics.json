@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "Surface numbers like likes, follower counts, or impressions that look impressive but don't reliably show whether content is actually generating leads or revenue.",
-  "body": "A post can get thousands of likes from people who will never buy anything, while a quieter post reaches the twenty right people and books three calls. The fix isn't ignoring engagement entirely, it's tracking it alongside pipeline-linked numbers like profile visits from ICP-matching titles and inbound DMs that turn into conversations.",
+  "body": "A post can get thousands of likes from people who will never buy anything, while a quieter post reaches the twenty right people and books three calls. Vanity metrics are tempting because they are easy to see and they always go up with more activity, but they say little about whether the right buyers are paying attention. In outbound, the same trap appears as emails sent, connection requests accepted or open rates, which measure effort and reach rather than buying interest. Say a founder's LinkedIn post gets 5,000 impressions and 200 likes, mostly from peers and friends, while another post gets 800 impressions but leads to four messages from people at target companies. The second post did more for the pipeline, even though every surface number is smaller. The fix isn't ignoring engagement entirely, it's tracking it alongside pipeline-linked numbers like profile visits from ICP-matching titles, inbound DMs that turn into conversations, positive replies and meetings booked. The common mistakes are reporting reach to leadership as if it were results, changing content to chase likes from the wrong audience, and dropping a channel too early because its numbers look small even though the right people are responding.",
   "sourceLabel": "Read: Founder Personal Branding: Pipeline, Not Likes",
   "sourceHref": "/resources/blogs/vanity-metrics-personal-brand-pipeline",
   "furtherLabel": "See the service: Personal Branding for Founders",
@@ -24,5 +24,18 @@
     "vanity metrics vs pipeline metrics",
     "linkedin vanity metrics"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between vanity metrics and actionable metrics?",
+      "answer": "Vanity metrics, such as likes, followers and impressions, show reach but not buying interest, and they rarely tell you what to change. Actionable metrics, such as positive replies, meetings booked and pipeline created, connect directly to revenue and point to a decision, like rewriting a message or changing who you target."
+    },
+    {
+      "question": "Which LinkedIn metrics actually matter for B2B lead generation?",
+      "answer": "The ones that show the right people are engaging: profile visits from people matching your ideal customer profile, comments and messages from target accounts, connection requests from relevant buyers, and conversations that turn into meetings. Likes and impressions are worth watching for trends, but they should not be the measure of success."
+    },
+    {
+      "question": "Are open rates a vanity metric in cold email?",
+      "answer": "Largely, yes. Open tracking has become unreliable because mail clients and privacy features load images automatically, so opens are often overstated. Positive reply rate and meetings booked are far better signals of whether a cold email campaign is working, because they show real interest from the people you targeted."
+    }
+  ]
 }

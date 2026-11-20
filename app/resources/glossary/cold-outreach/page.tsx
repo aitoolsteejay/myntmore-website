@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "Is cold outreach legal?", answer: "Yes, in most markets, when it follows the local rules. In the US, CAN-SPAM requires accurate sender details and an opt-out. In the EU and UK, GDPR allows B2B outreach under legitimate interest if it is relevant and easy to opt out of. National e-privacy rules can be stricter, so check the market you contact." },
+  { question: "What is the difference between cold outreach and cold calling?", answer: "Cold calling is one channel of cold outreach. Cold outreach is any first contact with someone who does not know you, including cold email, LinkedIn messages and calls. Many B2B teams now lead with email and LinkedIn, which reach more people at lower cost, and use calls for accounts that have already engaged." },
+  { question: "How do you make cold outreach work?", answer: "Narrow the list, find a reason to contact each person now and lead with their problem rather than your product. Keep the first message short, ask one easy question and follow up several times with something new each time. Running email and LinkedIn together on the same accounts usually beats relying on either alone." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -43,12 +49,13 @@ export default function GlossaryTermPage() {
       alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"Reaching out first to people who don't know you yet, across email, LinkedIn, or phone."}
       definition={"Contacting prospects who have no prior relationship with you, through channels like email, LinkedIn, or phone, with the aim of starting a relevant sales conversation."}
-      body={"Cold outreach is channel-agnostic: cold email and LinkedIn outreach are both forms of it. What makes it work is the same everywhere: a narrow list, a reason to contact this person now, and an opening that earns curiosity in the first few seconds instead of leading with a pitch."}
+      body={"Cold outreach covers any first contact with a prospect who has no prior relationship with you, whether by email, LinkedIn or phone. It is channel-agnostic: cold email and LinkedIn outreach are both forms of it, and the strongest programmes run them together on the same accounts so a prospect hears from you in more than one place. What makes it work is the same everywhere: a narrow list, a reason to contact this person now, and an opening that earns curiosity in the first few seconds instead of leading with a pitch. Done badly, it is the generic message every buyer has learned to ignore: a long product description sent to anyone with a matching job title. Done well, it reads like a note from someone who has done their homework. Say a team sells payroll software. 'We help companies with payroll' is generic cold outreach. 'You opened two new offices this quarter; are you running payroll for both from one system yet?' is relevant cold outreach, because it names a specific situation the reader recognises. Cold outreach is also subject to rules: provider sending limits, data protection law such as GDPR, and an easy way to opt out in every message."}
       sourceLabel={"Read the related term: The 3-Second Rule"}
       sourceHref={"/resources/glossary/3-second-rule"}
       furtherLabel={"Read: Stop Selling Features in Cold Outreach"}
       furtherHref={"/resources/blogs/stop-selling-features-cold-outreach"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "An ongoing score inbox providers assign to a sending domain or IP based on past behaviour, deciding whether future emails land in the inbox or get routed to spam.",
-  "body": "It's built from signals like spam complaint rate, bounce rate, and how often recipients open or reply, and it's cumulative: one bad sending burst can suppress deliverability for weeks after, which is why reputation is monitored continuously rather than checked once.",
+  "body": "Sender reputation is how inbox providers such as Gmail, Outlook and Yahoo decide whether to trust mail from your domain. It is built from signals like spam complaint rate, bounce rate and how often recipients open, reply to or delete your messages, and it is cumulative: one bad sending burst can suppress deliverability for weeks after, which is why reputation is monitored continuously rather than checked once. Providers do not publish one universal score, but their rules show what matters. Gmail and Yahoo both ask senders to keep spam complaints below 0.3%, and Google recommends staying below 0.10%. Authentication (SPF, DKIM and DMARC) tells providers the mail really comes from you, and new domains start with little reputation at all, which is why they need a gradual warm-up before full sending. Say a team sends from a new domain to an old, unverified list. A high share of addresses bounce, a few recipients report spam, and the provider starts filtering everything that domain sends, including good emails to engaged prospects. The usual protections are dedicated sending domains kept separate from the company's main domain, verified lists, steady daily volumes and an easy unsubscribe.",
   "sourceLabel": "Read: Cold Email Deliverability: Why Your Emails Land in Spam (And How to Fix It)",
   "sourceHref": "/resources/blogs/cold-email-deliverability-guide",
   "furtherLabel": "See the service: Cold Email Infrastructure",
@@ -24,5 +24,18 @@
     "sender reputation cold email",
     "improve sender reputation"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you check your sender reputation?",
+      "answer": "Use the providers' own tools first. Google Postmaster Tools shows the spam rate and domain reputation Gmail sees for your sending domain once it is verified and sending enough mail. Microsoft offers similar data through its sender programmes. Watch bounce rates and reply rates in your sending tool as early warning signs alongside them."
+    },
+    {
+      "question": "How do you improve a damaged sender reputation?",
+      "answer": "Reduce volume, clean the list and send only to engaged or well-targeted recipients until the signals recover. Remove bounced and inactive addresses, fix authentication, make unsubscribing easy and keep warm-up running. Recovery takes weeks, so it is often faster to protect your main domain by sending outreach from separate, warmed-up domains."
+    },
+    {
+      "question": "Does sender reputation belong to the domain or the IP address?",
+      "answer": "Both matter, but for most cold email senders the domain carries the reputation that counts. Shared sending platforms spread IP reputation across many customers, so providers lean heavily on the domain's own history. That is why a domain that has been used carelessly can stay filtered even after moving to a different sending tool."
+    }
+  ]
 }

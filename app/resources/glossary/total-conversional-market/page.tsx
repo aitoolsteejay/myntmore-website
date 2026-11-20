@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is the difference between TAM and TCM?", answer: "TAM, or Total Addressable Market, is everyone who could theoretically buy your product. TCM, or Total Conversional Market, is the much smaller group who feel the problem today, show buying signals and match your best customers. TAM sizes the opportunity; TCM tells outbound teams exactly whom to contact first." },
+  { question: "How do you find your Total Conversional Market?", answer: "Start from your ideal customer profile, then filter for timing using buying signals such as recent funding, relevant hiring, leadership changes or expansion. Check each account against your best existing customers. The result is a short list of companies likely to need what you sell now, which you should rebuild regularly as signals change." },
+  { question: "Why is targeting the whole addressable market a problem for outbound?", answer: "Targeting the whole addressable market forces generic messages, because nothing specific applies to everyone. Generic outreach gets ignored or reported as spam, which also damages deliverability. A narrower, signal-based list lets each message reference a real situation, which is what earns replies from busy decision-makers." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -41,12 +47,14 @@ export default function GlossaryTermPage() {
       tagline={"The specific, motivated slice of your market that's actually ready to buy right now, as opposed to the much larger group who theoretically could someday."}
       definitionLead={"Total Conversional Market (TCM):"}
       definition={"the highly specific, highly motivated subset of prospects who are actively feeling the pain point today, are already looking for workarounds, and are ready to act immediately."}
+      body={"Total Conversional Market, or TCM, is a narrower way of looking at who to target. Total Addressable Market describes everyone who could theoretically buy; TCM describes the much smaller group who are feeling the problem today, show verifiable buying signals and resemble your best existing customers. For outbound, that difference decides whether messages land as relevant or as noise. Say a company's TAM is 20,000 businesses in its category. Perhaps only a few hundred of them have just raised funding, started hiring for the role the product supports or announced the kind of change that creates the need right now. Those few hundred are the TCM, and a short list built around them can be researched properly and messaged specifically. The common mistakes are treating TAM as a target list, which forces generic copy, and assuming that a smaller list means less opportunity, when in practice it usually means fewer wasted sends and more real conversations. Finding the TCM starts with your ideal customer profile and then adds timing, using signals such as funding, hiring, leadership changes or expansion. The list should be rebuilt regularly, because companies move in and out of it as their circumstances change."}
       sections={[{"heading":"TCM vs. TAM","paragraphs":["**Total Addressable Market (TAM)** is the broad, high-level audience that theoretically could buy your product in a perfect world. It's the number that goes in a pitch deck. TCM is the much narrower group who could actually close this quarter: the ones already living with the problem, already searching for a fix.","Targeting your TAM with generic messaging produces outreach that feels random and depends entirely on luck. Targeting your TCM means every message lands in the middle of a priority the prospect is already trying to solve."]},{"heading":"Why it matters for outbound","paragraphs":["A pipeline full of polite \"maybe later\" replies is usually a sign the targeting is still TAM-shaped, not TCM-shaped. Shrinking the target list to the TCM, and being willing to ignore everyone outside it, is often what turns a stalled outbound motion into a predictable one."]}]}
       sourceLabel={"Read: The TAM Trap: Why Vague Targeting Is Quietly Killing Your Outbound Pipeline"}
       sourceHref={"/resources/blogs/tam-trap-vague-targeting"}
       furtherLabel={"See the service: ICP Mapping & Lead Scoring"}
       furtherHref={"/services/sales-intelligence"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

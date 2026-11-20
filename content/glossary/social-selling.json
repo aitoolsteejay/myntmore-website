@@ -13,7 +13,7 @@
     "Social Outreach"
   ],
   "definition": "Using social platforms, mainly LinkedIn in B2B, to build relationships with prospects by sharing useful content and engaging with theirs before and alongside direct outreach.",
-  "body": "Social selling makes cold outreach warmer: if a prospect has already seen your posts or traded comments with you, your message arrives from a familiar name rather than as a stranger's pitch. It's slower to build than pure outreach, but it compounds, and it's where a founder's personal brand directly supports pipeline.",
+  "body": "Social selling is the slower, compounding side of B2B outreach. Instead of starting every relationship with a cold message, the seller builds familiarity first, on LinkedIn in most B2B markets: posting useful observations, commenting thoughtfully on prospects' posts and sharing examples of work. Social selling makes cold outreach warmer: if a prospect has already seen your posts or traded comments with you, your message arrives from a familiar name rather than as a stranger's pitch. It is slower to build than pure outreach, but it compounds, and it is where a founder's personal brand directly supports pipeline. Say a founder posts twice a week about a problem their buyers face, and comments on posts by twenty target prospects over a month. When the connection request finally arrives, many of those prospects already recognise the name. The common mistakes are treating social selling as broadcasting, posting about the company rather than the buyer's problems, and pitching in the comments, which undoes the trust the activity was meant to build. Social selling works best alongside direct outreach, not instead of it: the content builds credibility, and the messages start the conversations.",
   "sourceLabel": "See the service: Personal Branding",
   "sourceHref": "/services/personal-branding",
   "furtherLabel": "Read: The Silent Salesperson: LinkedIn Lead Machine",
@@ -28,5 +28,18 @@
     "social outreach",
     "social selling linkedin"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between social selling and LinkedIn outreach?",
+      "answer": "Social selling builds familiarity through content and engagement; LinkedIn outreach starts direct conversations through connection requests and messages. Social selling makes outreach warmer, because prospects already recognise you. Outreach turns that familiarity into meetings. Most effective B2B teams on LinkedIn run both together rather than choosing one."
+    },
+    {
+      "question": "How much time does social selling take?",
+      "answer": "A sustainable routine is a few posts a week plus a short daily slot for commenting on prospects' posts. Consistency matters more than volume, because familiarity builds over months, not days. Founders with little time often work with a ghostwriter, so their ideas are published regularly without writing every post themselves."
+    },
+    {
+      "question": "Does social selling work for B2B?",
+      "answer": "Yes, especially where buyers are active on LinkedIn and trust individuals more than brands. It does not replace direct outreach, but it lifts its results: connection requests from familiar names are more likely to be accepted and answered. It works less well in sectors where decision-makers rarely use social platforms."
+    }
+  ]
 }

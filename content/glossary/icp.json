@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A description of the exact type of company and buyer most likely to want your product, used to decide who's worth messaging before outreach starts.",
-  "body": "An ICP is narrower than a buyer persona: it filters by company traits (industry, size, tech stack, buying signals) first, then names the specific role inside that company who actually has the pain and the authority to act on it.",
+  "body": "An ICP is narrower than a buyer persona: it filters by company traits (industry, size, tech stack, buying signals) first, then names the specific role inside that company who actually has the pain and the authority to act on it. The best place to build one is your own closed deals. Look at the customers who bought fastest, stayed longest and got the most value, and find what they have in common: sector, company size, location, the tools they use and the event that made them start looking. Say a team reviews its last twenty customers and finds that most were growing software companies that had just hired their first sales leader. That combination becomes a sharper ICP than \"technology companies\", and the hiring event becomes a trigger worth tracking. A good ICP also says who is out of scope, often called a negative ICP, so the team stops spending time on accounts that never convert. The common mistakes are writing an ICP so broad that it describes the whole market, building it from wishes about who you would like to sell to rather than evidence of who buys, and never revisiting it as the product and market change.",
   "sourceLabel": "Read: ICP Mapping for B2B: How to Define the Exact Buyer Who Will Close",
   "sourceHref": "/resources/blogs/icp-mapping-b2b",
   "furtherLabel": "See the service: ICP Mapping & Lead Scoring",
@@ -24,5 +24,18 @@
     "icp meaning b2b",
     "icp vs buyer persona"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you define an ideal customer profile?",
+      "answer": "Start with your best existing customers: the ones who bought fastest, stayed longest and got the most value. List what they share, such as industry, company size, location, tools used and the trigger that made them buy. Then name the role that owns the problem, and list the accounts you deliberately exclude."
+    },
+    {
+      "question": "What is a negative ICP?",
+      "answer": "A negative ICP describes the companies and roles you deliberately do not target, because they rarely convert, churn quickly or cost more to serve than they are worth. Writing it down stops teams wasting outreach on poor-fit accounts and keeps lists clean, which also protects reply rates and sending reputation in cold email."
+    },
+    {
+      "question": "How often should you update your ICP?",
+      "answer": "Review it at least every six months, and sooner when something changes: a new product, a new market, or a shift in which customers close and stay. Compare recent wins and losses with the current ICP, and tighten it wherever the deals that actually closed look different from the profile."
+    }
+  ]
 }

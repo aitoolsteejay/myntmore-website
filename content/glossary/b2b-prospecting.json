@@ -15,7 +15,7 @@
     "Outbound Prospecting"
   ],
   "definition": "The research step of outbound sales: finding companies and contacts that match your ideal customer profile, verifying their details, and deciding who to reach out to first.",
-  "body": "Prospecting comes before outreach and decides most of its outcome. A strong prospect list is narrow, filtered by fit and by timing signals like hiring, funding, or a tech change, and has verified contact data. A weak one is a broad export of job titles, which no amount of clever copy can rescue.",
+  "body": "B2B prospecting is the research step that comes before outreach, and it decides most of the outcome. It means finding companies that match your ideal customer profile, identifying the people inside them who own the problem you solve, verifying their contact details and deciding who to approach first. A strong prospect list is narrow, filtered by fit and by timing signals like hiring, funding, a leadership change or a new technology, and has verified data so emails do not bounce. A weak one is a broad export of job titles, which no amount of clever copy can rescue. Good prospecting also records why each account is on the list, because that reason becomes the first line of the outreach. Say a team is selling to logistics companies. A list of every logistics business in the country gives it thousands of names and no reason to write to any of them; a list of companies that opened a new warehouse this year gives it fewer names and an obvious opening. The common mistakes are buying lists without checking them, targeting by title alone, and skipping verification, which raises bounce rates and damages the sending domain's reputation.",
   "sourceLabel": "Read: The TAM Trap: Vague Targeting Kills Your Pipeline",
   "sourceHref": "/resources/blogs/tam-trap-vague-targeting",
   "furtherLabel": "Read the related term: ICP (Ideal Customer Profile)",
@@ -30,5 +30,18 @@
     "outbound prospecting",
     "b2b prospecting meaning"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is B2B prospecting?",
+      "answer": "B2B prospecting is finding and researching the companies and people most likely to buy from you before you contact them. It covers matching accounts to your ideal customer profile, identifying decision-makers, verifying contact details and spotting signals that a company may need what you sell now."
+    },
+    {
+      "question": "How do you find B2B prospects?",
+      "answer": "Start from your ideal customer profile, then build a list of matching companies using databases, LinkedIn and public sources. Narrow it with timing signals such as hiring, funding or expansion, find the people who own the problem, and verify every email address before any outreach goes out."
+    },
+    {
+      "question": "What is the difference between prospecting and lead generation?",
+      "answer": "Prospecting is the research step: finding and qualifying the right accounts and contacts. Lead generation is the broader process of turning those prospects, or inbound visitors, into people who have shown interest. Prospecting produces the list; outreach and lead generation turn it into conversations."
+    }
+  ]
 }

@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A sequence aimed at prospects who went quiet, existing connections, past leads, or non-responders, rather than a cold audience who's never heard from you.",
-  "body": "Because there's already some history, the opener can reference it directly, acknowledging time has passed, sharing what's changed, or simply checking if priorities have shifted, instead of pretending the earlier conversation never happened. That context is exactly what a first-touch cold sequence doesn't have, and it's why a re-engagement campaign often outperforms new cold outreach at a fraction of the cost.",
+  "body": "A re-engagement campaign goes back to people who already know something about you: prospects who replied once and went quiet, past leads who stalled, old customers, or contacts who opened but never answered. Because there is already some history, the opener can reference it directly, acknowledging that time has passed, sharing what has changed, or simply asking whether priorities have shifted, instead of pretending the earlier conversation never happened. That context is exactly what a first-touch cold sequence lacks, and it is why re-engagement often costs less effort per conversation than starting from zero. The timing should follow the reason the conversation stopped. A prospect who said \"not this quarter\" is worth contacting near the date they gave; one who chose a competitor is worth a note before their contract is likely to be reviewed. Say a team has 300 leads that went quiet over the past year. Sorting them by why they stalled, and writing one short message per reason, usually beats sending all 300 the same \"just checking in\" email. The common mistakes are re-engaging too soon, sending a generic nudge with nothing new to say, and ignoring the people who explicitly asked not to be contacted again.",
   "sourceLabel": "Read: Cold Email Sequence Templates That Get Replies",
   "sourceHref": "/resources/blogs/cold-email-sequence-templates",
   "furtherLabel": "Go deeper: How to revive closed-lost leads",
@@ -24,5 +24,18 @@
     "reaching out to old leads",
     "reactivating dormant leads"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is a re-engagement campaign in B2B sales?",
+      "answer": "A re-engagement campaign is a sequence sent to people who already have some history with you, such as quiet prospects, stalled deals or past customers. It references that history and leads with something new, like a result, a product change or a change at their company, rather than repeating the original pitch."
+    },
+    {
+      "question": "When should you send a re-engagement email?",
+      "answer": "Send it when something has changed, not on a fixed timer. Good moments are the date a prospect gave for revisiting, a few months before a competitor contract is likely to be reviewed, or a new trigger such as funding, a hire or an expansion. Without a reason to write, wait."
+    },
+    {
+      "question": "What should a re-engagement email say?",
+      "answer": "Lead with what has changed since you last spoke, then ask one easy question about where things stand now. Refer to the earlier conversation honestly, keep the message short, and avoid generic phrases like \"just checking in\", which give the reader no reason to reply."
+    }
+  ]
 }
