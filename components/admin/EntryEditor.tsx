@@ -5,6 +5,7 @@
 // every save with Keystatic's own field rules, so the hints here are for convenience only.
 import { useEffect, useMemo, useState } from "react";
 import type { FieldDescriptor } from "@/lib/admin/schema";
+import type { Section } from "@/lib/admin/sections";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Path = (string | number)[];
@@ -37,7 +38,9 @@ function defaultFor(desc: FieldDescriptor): any {
     case "select":
       return desc.options[0]?.value ?? "";
     case "object":
-      return Object.fromEntries(Object.entries(desc.fields).map(([k, d]) => [k, defaultFor(d)]));
+      return Object.fromEntries(
+        Object.entries(desc.fields).map(([k, d]) => [k, defaultFor(d)]),
+      );
     case "array":
     case "multiselect":
       return [];
@@ -60,13 +63,28 @@ function slugify(name: string): string {
 /** A list item's heading: its first non-empty text field. */
 function itemTitle(desc: FieldDescriptor, value: any, index: number): string {
   if (desc.kind === "object") {
-    for (const [k, d] of Object.entries(desc.fields)) if (d.kind === "text" && typeof value?.[k] === "string" && value[k].trim()) return value[k];
+    for (const [k, d] of Object.entries(desc.fields))
+      if (
+        d.kind === "text" &&
+        typeof value?.[k] === "string" &&
+        value[k].trim()
+      )
+        return value[k];
   }
-  if (desc.kind === "text" && typeof value === "string" && value.trim()) return value;
+  if (desc.kind === "text" && typeof value === "string" && value.trim())
+    return value;
   return `Item ${index + 1}`;
 }
 
-function Label({ text, required, htmlFor }: { text: string; required?: boolean; htmlFor?: string }) {
+function Label({
+  text,
+  required,
+  htmlFor,
+}: {
+  text: string;
+  required?: boolean;
+  htmlFor?: string;
+}) {
   return (
     <label htmlFor={htmlFor} className="block text-sm font-semibold">
       {text}
@@ -76,7 +94,9 @@ function Label({ text, required, htmlFor }: { text: string; required?: boolean; 
 }
 
 function Help({ text }: { text?: string }) {
-  return text ? <p className="mt-0.5 text-[13px] leading-relaxed text-[#71675E]">{text}</p> : null;
+  return text ? (
+    <p className="mt-0.5 text-[13px] leading-relaxed text-[#71675E]">{text}</p>
+  ) : null;
 }
 
 function ErrorText({ text }: { text?: string }) {
@@ -96,9 +116,21 @@ interface Ctx {
   creating: boolean;
   /** The entry's name is its file name (the page uses it as an id), so they are one value. */
   nameIsFileName: boolean;
+  /** Text being searched for: list items containing it open by themselves. */
+  query: string;
 }
 
-function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; path: Path; ctx: Ctx }) {
+function Field({
+  desc,
+  value,
+  path,
+  ctx,
+}: {
+  desc: FieldDescriptor;
+  value: any;
+  path: Path;
+  ctx: Ctx;
+}) {
   const { onChange, errors, readOnly } = ctx;
   const id = `f-${key(path)}`;
   const error = errors[key(path)];
@@ -111,7 +143,9 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
         id,
         value: value ?? "",
         disabled: readOnly,
-        onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => onChange(path, e.target.value),
+        onChange: (
+          e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+        ) => onChange(path, e.target.value),
         className: `${INPUT} ${error || over ? "border-[#D9534F]" : "border-[#E8E2D9]"}`,
         "aria-invalid": !!error || over,
       };
@@ -120,12 +154,22 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
           <Label text={desc.label} required={desc.required} htmlFor={id} />
           <Help text={desc.description} />
           <div className="mt-1.5">
-            {desc.multiline ? <textarea rows={Math.min(10, Math.max(3, Math.ceil(length / 90)))} {...props} /> : <input type="text" {...props} />}
+            {desc.multiline ? (
+              <textarea
+                rows={Math.min(10, Math.max(3, Math.ceil(length / 90)))}
+                {...props}
+              />
+            ) : (
+              <input type="text" {...props} />
+            )}
           </div>
-          <p className={`mt-1 text-xs tabular-nums ${over ? "font-semibold text-[#9F1D1D]" : "text-[#71675E]"}`}>
-            {desc.max !== undefined ? `${length} / ${desc.max}` : `${length} characters`}
-            {desc.min !== undefined && desc.min > 1 ? ` (at least ${desc.min})` : ""}
-          </p>
+          {desc.max !== undefined && (
+            <p
+              className={`mt-1 text-xs tabular-nums ${over ? "font-semibold text-[#9F1D1D]" : "text-[#71675E]"}`}
+            >
+              {length} / {desc.max} characters{over ? ": too long" : ""}
+            </p>
+          )}
           <ErrorText text={error} />
         </div>
       );
@@ -135,7 +179,13 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
         return (
           <div>
             <Label text={desc.label} required htmlFor={id} />
-            <Help text={ctx.creating ? "Lowercase words joined by hyphens. It becomes the page address and cannot be changed later." : desc.description} />
+            <Help
+              text={
+                ctx.creating
+                  ? "Lowercase words joined by hyphens. It becomes the page address and cannot be changed later."
+                  : desc.description
+              }
+            />
             <input
               id={id}
               type="text"
@@ -147,13 +197,18 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
               }}
               className={`${INPUT} mt-1.5 font-mono ${border}`}
             />
-            {!ctx.creating && <p className="mt-1 text-xs text-[#71675E]">The page address and file name; it cannot be changed here.</p>}
+            {!ctx.creating && (
+              <p className="mt-1 text-xs text-[#71675E]">
+                The page address and file name; it cannot be changed here.
+              </p>
+            )}
             <ErrorText text={error} />
           </div>
         );
       }
       // While creating, the file name follows the name until it is edited by hand.
-      const followsName = ctx.creating && (value?.slug ?? "") === slugify(value?.name ?? "");
+      const followsName =
+        ctx.creating && (value?.slug ?? "") === slugify(value?.name ?? "");
       return (
         <div>
           <Label text={desc.label} required htmlFor={id} />
@@ -163,24 +218,41 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
             type="text"
             value={value?.name ?? ""}
             disabled={readOnly}
-            onChange={(e) => onChange(path, { name: e.target.value, slug: followsName ? slugify(e.target.value) : value?.slug ?? "" })}
+            onChange={(e) =>
+              onChange(path, {
+                name: e.target.value,
+                slug: followsName
+                  ? slugify(e.target.value)
+                  : (value?.slug ?? ""),
+              })
+            }
             className={`${INPUT} mt-1.5 ${border}`}
           />
           {desc.isEntryName && !ctx.creating && (
             <p className="mt-1 text-xs text-[#71675E]">
-              File name: <span className="font-mono">{value?.slug}</span> (cannot be changed here)
+              File name: <span className="font-mono">{value?.slug}</span>{" "}
+              (cannot be changed here)
             </p>
           )}
           {desc.isEntryName && ctx.creating && (
             <div className="mt-2">
-              <label htmlFor={`${id}-slug`} className="block text-xs font-semibold text-[#52525B]">
-                File name (becomes part of the page address; cannot be changed later)
+              <label
+                htmlFor={`${id}-slug`}
+                className="block text-xs font-semibold text-[#52525B]"
+              >
+                File name (becomes part of the page address; cannot be changed
+                later)
               </label>
               <input
                 id={`${id}-slug`}
                 type="text"
                 value={value?.slug ?? ""}
-                onChange={(e) => onChange(path, { ...value, slug: e.target.value.toLowerCase() })}
+                onChange={(e) =>
+                  onChange(path, {
+                    ...value,
+                    slug: e.target.value.toLowerCase(),
+                  })
+                }
                 className={`${INPUT} mt-1 font-mono text-sm ${border}`}
               />
             </div>
@@ -199,12 +271,17 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
             id={id}
             type="number"
             inputMode={desc.kind === "integer" ? "numeric" : "decimal"}
-            step={desc.kind === "integer" ? 1 : desc.step ?? "any"}
+            step={desc.kind === "integer" ? 1 : (desc.step ?? "any")}
             min={desc.min}
             max={desc.max}
             value={value ?? ""}
             disabled={readOnly}
-            onChange={(e) => onChange(path, e.target.value === "" ? null : Number(e.target.value))}
+            onChange={(e) =>
+              onChange(
+                path,
+                e.target.value === "" ? null : Number(e.target.value),
+              )
+            }
             className={`${INPUT} mt-1.5 max-w-[14rem] tabular-nums ${border}`}
           />
           <ErrorText text={error} />
@@ -249,9 +326,17 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
         <div>
           <Label text={desc.label} required={desc.required} htmlFor={id} />
           <Help text={desc.description} />
-          <select id={id} value={value ?? ""} disabled={readOnly} onChange={(e) => onChange(path, e.target.value || null)} className={`${INPUT} mt-1.5 ${border}`}>
+          <select
+            id={id}
+            value={value ?? ""}
+            disabled={readOnly}
+            onChange={(e) => onChange(path, e.target.value || null)}
+            className={`${INPUT} mt-1.5 ${border}`}
+          >
             <option value="">Choose…</option>
-            {value && !options.some((o) => o.slug === value) && <option value={value}>{value} (not found)</option>}
+            {value && !options.some((o) => o.slug === value) && (
+              <option value={value}>{value} (not found)</option>
+            )}
             {options.map((o) => (
               <option key={o.slug} value={o.slug}>
                 {o.title === o.slug ? o.slug : `${o.title} (${o.slug})`}
@@ -275,7 +360,14 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
                   type="checkbox"
                   checked={selected.includes(o.value)}
                   disabled={readOnly}
-                  onChange={(e) => onChange(path, e.target.checked ? [...selected, o.value] : selected.filter((v) => v !== o.value))}
+                  onChange={(e) =>
+                    onChange(
+                      path,
+                      e.target.checked
+                        ? [...selected, o.value]
+                        : selected.filter((v) => v !== o.value),
+                    )
+                  }
                   className="h-4 w-4 accent-[#A14A08]"
                 />
                 {o.label}
@@ -326,41 +418,76 @@ function Field({ desc, value, path, ctx }: { desc: FieldDescriptor; value: any; 
       );
     case "object":
       return (
-        <fieldset className={desc.label ? "rounded-xl border border-[#E8E2D9] p-4" : ""}>
-          {desc.label && <legend className="px-1 text-sm font-bold">{desc.label}</legend>}
+        <fieldset
+          className={desc.label ? "rounded-xl border border-[#E8E2D9] p-4" : ""}
+        >
+          {desc.label && (
+            <legend className="px-1 text-sm font-bold">{desc.label}</legend>
+          )}
           <Help text={desc.description} />
           <div className="space-y-5">
             {Object.entries(desc.fields).map(([k, d]) => (
-              <Field key={k} desc={d} value={value?.[k]} path={[...path, k]} ctx={ctx} />
+              <Field
+                key={k}
+                desc={d}
+                value={value?.[k]}
+                path={[...path, k]}
+                ctx={ctx}
+              />
             ))}
           </div>
         </fieldset>
       );
     case "array":
-      return <ArrayField desc={desc} value={Array.isArray(value) ? value : []} path={path} ctx={ctx} />;
+      return (
+        <ArrayField
+          desc={desc}
+          value={Array.isArray(value) ? value : []}
+          path={path}
+          ctx={ctx}
+        />
+      );
     case "unsupported":
       return (
         <div>
           <Label text={desc.label} />
-          <p className="mt-1 text-[13px] text-[#71675E]">This kind of field ({desc.type}) is not editable here yet.</p>
-          <pre className="mt-1 max-h-40 overflow-auto rounded-lg bg-white p-2 text-xs text-[#52525B]">{JSON.stringify(value, null, 2)}</pre>
+          <p className="mt-1 text-[13px] text-[#71675E]">
+            This kind of field ({desc.type}) is not editable here yet.
+          </p>
+          <pre className="mt-1 max-h-40 overflow-auto rounded-lg bg-white p-2 text-xs text-[#52525B]">
+            {JSON.stringify(value, null, 2)}
+          </pre>
         </div>
       );
   }
 }
 
-function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor, { kind: "array" }>; value: any[]; path: Path; ctx: Ctx }) {
+function ArrayField({
+  desc,
+  value,
+  path,
+  ctx,
+}: {
+  desc: Extract<FieldDescriptor, { kind: "array" }>;
+  value: any[];
+  path: Path;
+  ctx: Ctx;
+}) {
   const { onChange, errors, readOnly } = ctx;
-  const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
+  // Items with several fields start folded to one line (their title); open one to edit it.
+  const foldable =
+    desc.element.kind === "object" || desc.element.kind === "array";
+  const [open, setOpen] = useState<Record<number, boolean>>({});
   const move = (from: number, to: number) => {
     const next = value.slice();
     const [item] = next.splice(from, 1);
     next.splice(to, 0, item);
     onChange(path, next);
-    setCollapsed({});
+    setOpen({ ...open, [from]: open[to], [to]: open[from] });
   };
   const error = errors[key(path)];
-  const canAdd = !readOnly && (desc.max === undefined || value.length < desc.max);
+  const canAdd =
+    !readOnly && (desc.max === undefined || value.length < desc.max);
   return (
     <section aria-label={desc.label}>
       <div className="flex items-baseline justify-between gap-4">
@@ -371,21 +498,58 @@ function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor,
       </div>
       <Help text={desc.description} />
       <ErrorText text={error} />
-      <ol className="mt-3 space-y-3">
+      <ol className="mt-3 space-y-2">
         {value.map((item, i) => {
-          const itemErrors = Object.keys(errors).some((k) => k.startsWith(`${key([...path, i])}.`) || k === key([...path, i]));
+          const itemErrors = Object.keys(errors).some(
+            (k) =>
+              k.startsWith(`${key([...path, i])}.`) || k === key([...path, i]),
+          );
+          const isOpen =
+            !foldable ||
+            open[i] ||
+            itemErrors ||
+            (ctx.query.length > 1 &&
+              JSON.stringify(item ?? "")
+                .toLowerCase()
+                .includes(ctx.query.toLowerCase()));
           return (
-            <li key={i} className={`rounded-xl border bg-white ${itemErrors ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}>
-              <div className="flex items-center gap-2 border-b border-[#E8E2D9] px-4 py-2">
-                <button
-                  type="button"
-                  onClick={() => setCollapsed({ ...collapsed, [i]: !collapsed[i] })}
-                  className="min-w-0 flex-1 truncate text-left text-sm font-semibold"
-                  aria-expanded={!collapsed[i]}
-                >
-                  <span className="mr-2 tabular-nums text-xs text-[#71675E]">{i + 1}</span>
-                  {itemTitle(desc.element, item, i)}
-                </button>
+            <li
+              key={i}
+              className={`rounded-xl border bg-white ${itemErrors ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}
+            >
+              <div
+                className={`flex items-center gap-2 px-4 py-2 ${isOpen ? "border-b border-[#E8E2D9]" : ""}`}
+              >
+                {foldable ? (
+                  <button
+                    type="button"
+                    onClick={() => setOpen({ ...open, [i]: !isOpen })}
+                    className="flex min-w-0 flex-1 items-center gap-2 text-left text-sm font-semibold"
+                    aria-expanded={isOpen}
+                  >
+                    <span
+                      aria-hidden
+                      className={`text-[#A14A08] transition-transform ${isOpen ? "rotate-90" : ""}`}
+                    >
+                      ›
+                    </span>
+                    <span className="tabular-nums text-xs text-[#71675E]">
+                      {i + 1}
+                    </span>
+                    <span className="truncate">
+                      {itemTitle(desc.element, item, i)}
+                    </span>
+                    {!isOpen && (
+                      <span className="ml-auto shrink-0 text-xs font-normal text-[#A14A08]">
+                        Edit
+                      </span>
+                    )}
+                  </button>
+                ) : (
+                  <span className="flex-1 tabular-nums text-xs text-[#71675E]">
+                    {i + 1}
+                  </span>
+                )}
                 {!readOnly && (
                   <div className="flex shrink-0 gap-1 text-xs font-semibold">
                     <button
@@ -409,12 +573,16 @@ function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor,
                     <button
                       type="button"
                       onClick={() => {
-                        if (window.confirm(`Remove "${itemTitle(desc.element, item, i)}"?`)) {
+                        if (
+                          window.confirm(
+                            `Remove "${itemTitle(desc.element, item, i)}"?`,
+                          )
+                        ) {
                           onChange(
                             path,
                             value.filter((_, j) => j !== i),
                           );
-                          setCollapsed({});
+                          setOpen({});
                         }
                       }}
                       className="rounded px-2 py-1 text-[#9F1D1D] hover:bg-[#FDECEA]"
@@ -424,9 +592,14 @@ function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor,
                   </div>
                 )}
               </div>
-              {!collapsed[i] && (
+              {isOpen && (
                 <div className="p-4">
-                  <Field desc={desc.element} value={item} path={[...path, i]} ctx={ctx} />
+                  <Field
+                    desc={desc.element}
+                    value={item}
+                    path={[...path, i]}
+                    ctx={ctx}
+                  />
                 </div>
               )}
             </li>
@@ -436,7 +609,10 @@ function ArrayField({ desc, value, path, ctx }: { desc: Extract<FieldDescriptor,
       {canAdd && (
         <button
           type="button"
-          onClick={() => onChange(path, [...value, defaultFor(desc.element)])}
+          onClick={() => {
+            onChange(path, [...value, defaultFor(desc.element)]);
+            setOpen({ ...open, [value.length]: true });
+          }}
           className="mt-3 rounded-lg border border-dashed border-[#C9BFB2] px-4 py-2 text-sm font-semibold text-[#52525B] hover:border-[#A14A08] hover:text-[#A14A08]"
         >
           + Add item
@@ -465,6 +641,7 @@ export default function EntryEditor({
   mode = "edit",
   needsFaq = false,
   nameIsFileName = false,
+  sections,
 }: {
   typeKey: string;
   /** The entry's file name (for a singleton, the file it is saved as). Empty while creating. */
@@ -481,6 +658,8 @@ export default function EntryEditor({
   /** Creating a page that shows questions and answers: ask for the first one. */
   needsFaq?: boolean;
   nameIsFileName?: boolean;
+  /** The form's sections, in page order (lib/admin/sections.ts). */
+  sections: Section[];
 }) {
   const creating = mode === "create";
   const [state, setState] = useState(initialState);
@@ -489,7 +668,15 @@ export default function EntryEditor({
   const [sha, setSha] = useState(initialSha);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>({ kind: "idle" });
-  const dirty = useMemo(() => creating || JSON.stringify(state) !== saved, [creating, state, saved]);
+  const [query, setQuery] = useState("");
+  // The first section starts open; the rest open when clicked (or when they hold an error or a search match).
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>(
+    () => (sections[0] ? { [sections[0].id]: true } : {}),
+  );
+  const dirty = useMemo(
+    () => creating || JSON.stringify(state) !== saved,
+    [creating, state, saved],
+  );
 
   useEffect(() => {
     if (!dirty || status.kind === "saved") return;
@@ -509,41 +696,70 @@ export default function EntryEditor({
   async function save() {
     setStatus({ kind: "saving" });
     setErrors({});
-    const res = await fetch(creating ? `/api/admin/entries/${typeKey}` : `/api/admin/entries/${typeKey}/${slug}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(creating ? { state, faq: needsFaq ? faq : null } : { state, sha }),
-    }).catch(() => null);
+    const res = await fetch(
+      creating
+        ? `/api/admin/entries/${typeKey}`
+        : `/api/admin/entries/${typeKey}/${slug}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(
+          creating ? { state, faq: needsFaq ? faq : null } : { state, sha },
+        ),
+      },
+    ).catch(() => null);
     const body = await res?.json().catch(() => null);
-    if (!res || !body) return setStatus({ kind: "error", text: "Could not reach the server. Nothing was saved; your edits are still here." });
-    if (res.status === 409) return setStatus({ kind: "conflict", text: body.error });
+    if (!res || !body)
+      return setStatus({
+        kind: "error",
+        text: "Could not reach the server. Nothing was saved; your edits are still here.",
+      });
+    if (res.status === 409)
+      return setStatus({ kind: "conflict", text: body.error });
     if (!res.ok) {
       // Several problems can belong to one field (or to the whole entry, path []): show them all.
       const next: Errors = {};
-      for (const e of (body.errors ?? []) as { path: Path; message: string }[]) next[key(e.path)] = next[key(e.path)] ? `${next[key(e.path)]} ${e.message}` : e.message;
+      for (const e of (body.errors ?? []) as { path: Path; message: string }[])
+        next[key(e.path)] = next[key(e.path)]
+          ? `${next[key(e.path)]} ${e.message}`
+          : e.message;
       setErrors(next);
       // Bring the first problem into view (lists expand by default, so its input is on the page).
       const first = Object.keys(next)[0];
       if (first !== undefined)
         setTimeout(() => {
-          const el = document.getElementById(first === "" ? "entry-errors" : `f-${first}`);
+          const el = document.getElementById(
+            first === "" ? "entry-errors" : `f-${first}`,
+          );
           el?.scrollIntoView({ behavior: "smooth", block: "center" });
           el?.focus({ preventScroll: true });
         }, 50);
-      return setStatus({ kind: "error", text: body.error ?? "Could not save." });
+      return setStatus({
+        kind: "error",
+        text: body.error ?? "Could not save.",
+      });
     }
     if (creating) {
       setStatus({
         kind: "saved",
-        text: body.local ? "Created in the files on this computer. Opening it…" : "Created. The new page goes live in about 2 minutes, once Vercel finishes deploying. Opening it…",
+        text: body.local
+          ? "Created in the files on this computer. Opening it…"
+          : "Created. The new page goes live in about 2 minutes, once Vercel finishes deploying. Opening it…",
         url: body.commitUrl,
         warning: body.logWarning,
       });
-      window.location.assign(`/admin/content/${typeKey}/${body.slug}?created=1`);
+      window.location.assign(
+        `/admin/content/${typeKey}/${body.slug}?created=1`,
+      );
       return;
     }
     setSaved(JSON.stringify(state));
-    if (body.unchanged) return setStatus({ kind: "saved", text: "No changes to save.", url: null });
+    if (body.unchanged)
+      return setStatus({
+        kind: "saved",
+        text: "No changes to save.",
+        url: null,
+      });
     setSha(body.sha);
     const n = body.changes.length;
     setStatus({
@@ -556,67 +772,322 @@ export default function EntryEditor({
     });
   }
 
-  const ctx: Ctx = { onChange, errors, readOnly, choices, creating, nameIsFileName };
+  const ctx: Ctx = {
+    onChange,
+    errors,
+    readOnly,
+    choices,
+    creating,
+    nameIsFileName,
+    query: query.trim(),
+  };
   const errorCount = Object.keys(errors).length;
   const entryErrors = errors[""];
+
+  // Search: a field matches when its label or its text contains the words typed.
+  const q = query.trim().toLowerCase();
+  const fieldMatches = (k: string) => {
+    if (q.length < 2) return true;
+    const d = fields[k] as any;
+    return `${d?.label ?? ""} ${d?.description ?? ""} ${JSON.stringify((state as any)[k] ?? "")}`
+      .toLowerCase()
+      .includes(q);
+  };
+  const hasError = (k: string) =>
+    Object.keys(errors).some((e) => e === k || e.startsWith(`${k}.`));
+  const visible = sections
+    .map((sec) => ({
+      ...sec,
+      keys: sec.keys.filter((k) => fields[k] && fieldMatches(k)),
+    }))
+    .filter((sec) => sec.keys.length);
+  const isOpen = (sec: Section) =>
+    !sec.title ||
+    q.length >= 2 ||
+    openSections[sec.id] ||
+    sec.keys.some(hasError);
+  const toggle = (sec: Section) =>
+    setOpenSections((o) => ({ ...o, [sec.id]: !isOpen(sec) }));
+  const jump = (sec: Section) => {
+    setOpenSections((o) => ({ ...o, [sec.id]: true }));
+    setTimeout(
+      () =>
+        document
+          .getElementById(`sec-${sec.id}`)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" }),
+      30,
+    );
+  };
+  const content = visible.filter((s) => s.kind === "content");
+  const settings = visible.filter((s) => s.kind === "settings");
+  const many = sections.length > 2;
+
+  const renderSection = (sec: Section) => {
+    const open = isOpen(sec);
+    const errs = sec.keys.filter(hasError).length;
+    if (!sec.title)
+      return (
+        <div key={sec.id} className="space-y-6">
+          {sec.keys.map((k) => (
+            <Field
+              key={k}
+              desc={fields[k]}
+              value={(state as any)[k]}
+              path={[k]}
+              ctx={ctx}
+            />
+          ))}
+        </div>
+      );
+    return (
+      <section
+        key={sec.id}
+        id={`sec-${sec.id}`}
+        className={`scroll-mt-4 rounded-2xl border bg-white ${errs ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}
+      >
+        <button
+          type="button"
+          onClick={() => toggle(sec)}
+          aria-expanded={open}
+          className="flex w-full items-start gap-3 px-5 py-4 text-left"
+        >
+          <span
+            aria-hidden
+            className={`mt-0.5 text-lg leading-none text-[#A14A08] transition-transform ${open ? "rotate-90" : ""}`}
+          >
+            ›
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block font-bold">{sec.title}</span>
+            {sec.help && (
+              <span className="mt-0.5 block text-[13px] text-[#71675E]">
+                {sec.help}
+              </span>
+            )}
+          </span>
+          {errs > 0 && (
+            <span className="shrink-0 rounded-full bg-[#FDECEA] px-2 py-0.5 text-xs font-semibold text-[#9F1D1D]">
+              Needs a fix
+            </span>
+          )}
+          {!open && !errs && (
+            <span className="shrink-0 text-xs font-semibold text-[#A14A08]">
+              Edit
+            </span>
+          )}
+        </button>
+        {open && (
+          <div className="space-y-6 border-t border-[#E8E2D9] px-5 py-5">
+            {sec.keys.map((k) => (
+              <Field
+                key={k}
+                desc={fields[k]}
+                value={(state as any)[k]}
+                path={[k]}
+                ctx={ctx}
+              />
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  };
+
   return (
     <div className="pb-28">
       {entryErrors && (
-        <div id="entry-errors" tabIndex={-1} role="alert" className="mt-6 rounded-lg border border-[#F5C2C0] bg-[#FDECEA] p-3 text-sm text-[#9F1D1D]">
+        <div
+          id="entry-errors"
+          tabIndex={-1}
+          role="alert"
+          className="mt-6 rounded-lg border border-[#F5C2C0] bg-[#FDECEA] p-3 text-sm text-[#9F1D1D]"
+        >
           {entryErrors}
         </div>
       )}
-      <div className="mt-6 space-y-7">
-        {Object.entries(fields).map(([k, d]) => (
-          <Field key={k} desc={d} value={(state as any)[k]} path={[k]} ctx={ctx} />
-        ))}
-        {needsFaq && (
-          <fieldset className="rounded-xl border border-[#E8E2D9] bg-white p-4">
-            <legend className="px-1 text-sm font-bold">First question and answer on this page</legend>
-            <Help text="This page shows a list of questions and answers, so it needs at least one. Add more in Page FAQs after creating the page." />
-            <div className="mt-3 space-y-4">
+      {many && (
+        <div className="mt-6">
+          <label className="sr-only" htmlFor="find-text">
+            Find text on this page
+          </label>
+          <input
+            id="find-text"
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Find text on this page, e.g. a sentence you want to change"
+            className={`${INPUT} border-[#E8E2D9]`}
+          />
+          {q.length >= 2 && (
+            <p className="mt-1.5 text-[13px] text-[#71675E]">
+              {visible.length
+                ? `Showing only the parts that contain "${query.trim()}".`
+                : `Nothing on this page contains "${query.trim()}".`}{" "}
+              <button
+                type="button"
+                onClick={() => setQuery("")}
+                className="font-semibold text-[#A14A08] hover:underline"
+              >
+                Show everything
+              </button>
+            </p>
+          )}
+        </div>
+      )}
+      <div
+        className={`mt-6 ${many ? "lg:grid lg:grid-cols-[13rem_1fr] lg:gap-8" : ""}`}
+      >
+        {many && (
+          <nav aria-label="Sections of this page" className="hidden lg:block">
+            <div className="sticky top-4 space-y-4 text-sm">
               <div>
-                <Label text="Question" required htmlFor="f-_faq" />
-                <input id="f-_faq" type="text" value={faq.question} onChange={(e) => setFaq({ ...faq, question: e.target.value })} className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`} />
+                <p className="text-xs font-bold uppercase tracking-wide text-[#71675E]">
+                  On this page
+                </p>
+                <ul className="mt-2 space-y-1">
+                  {content.map((sec) => (
+                    <li key={sec.id}>
+                      <button
+                        type="button"
+                        onClick={() => jump(sec)}
+                        className="w-full rounded px-2 py-1 text-left text-[#52525B] hover:bg-white hover:text-[#0A0A0A]"
+                      >
+                        {sec.title}
+                        {sec.keys.some(hasError) && (
+                          <span className="ml-1 text-[#9F1D1D]">•</span>
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div>
-                <Label text="Answer" required htmlFor="f-_faq-answer" />
-                <textarea id="f-_faq-answer" rows={4} value={faq.answer} onChange={(e) => setFaq({ ...faq, answer: e.target.value })} className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`} />
-              </div>
-              <ErrorText text={errors._faq} />
+              {settings.length > 0 && (
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wide text-[#71675E]">
+                    Settings
+                  </p>
+                  <ul className="mt-2 space-y-1">
+                    {settings.map((sec) => (
+                      <li key={sec.id}>
+                        <button
+                          type="button"
+                          onClick={() => jump(sec)}
+                          className="w-full rounded px-2 py-1 text-left text-[#52525B] hover:bg-white hover:text-[#0A0A0A]"
+                        >
+                          {sec.title}
+                          {sec.keys.some(hasError) && (
+                            <span className="ml-1 text-[#9F1D1D]">•</span>
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          </fieldset>
+          </nav>
         )}
+        <div className="min-w-0 space-y-3">
+          {content.map(renderSection)}
+          {settings.length > 0 && (
+            <h2 className="pt-6 text-xs font-bold uppercase tracking-wide text-[#71675E]">
+              Settings (rarely changed)
+            </h2>
+          )}
+          {settings.map(renderSection)}
+          {needsFaq && (
+            <fieldset className="rounded-xl border border-[#E8E2D9] bg-white p-4">
+              <legend className="px-1 text-sm font-bold">
+                First question and answer on this page
+              </legend>
+              <Help text="This page shows a list of questions and answers, so it needs at least one. Add more in Page FAQs after creating the page." />
+              <div className="mt-3 space-y-4">
+                <div>
+                  <Label text="Question" required htmlFor="f-_faq" />
+                  <input
+                    id="f-_faq"
+                    type="text"
+                    value={faq.question}
+                    onChange={(e) =>
+                      setFaq({ ...faq, question: e.target.value })
+                    }
+                    className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}
+                  />
+                </div>
+                <div>
+                  <Label text="Answer" required htmlFor="f-_faq-answer" />
+                  <textarea
+                    id="f-_faq-answer"
+                    rows={4}
+                    value={faq.answer}
+                    onChange={(e) => setFaq({ ...faq, answer: e.target.value })}
+                    className={`${INPUT} mt-1.5 ${errors._faq ? "border-[#D9534F]" : "border-[#E8E2D9]"}`}
+                  />
+                </div>
+                <ErrorText text={errors._faq} />
+              </div>
+            </fieldset>
+          )}
+        </div>
       </div>
 
       <div className="fixed inset-x-0 bottom-0 border-t border-[#E8E2D9] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
-          <div className="min-w-0 flex-1 text-sm" role="status" aria-live="polite">
+          <div
+            className="min-w-0 flex-1 text-sm"
+            role="status"
+            aria-live="polite"
+          >
             {readOnly && <span className="text-[#71675E]">View only.</span>}
-            {!readOnly && status.kind === "idle" && <span className="text-[#71675E]">{creating ? "Not created yet" : dirty ? "Unsaved changes" : "No changes yet"}</span>}
-            {status.kind === "saving" && <span className="text-[#71675E]">{creating ? "Checking and creating…" : "Saving and publishing…"}</span>}
+            {!readOnly && status.kind === "idle" && (
+              <span className="text-[#71675E]">
+                {creating
+                  ? "Not created yet"
+                  : dirty
+                    ? "Unsaved changes"
+                    : "No changes yet"}
+              </span>
+            )}
+            {status.kind === "saving" && (
+              <span className="text-[#71675E]">
+                {creating ? "Checking and creating…" : "Saving and publishing…"}
+              </span>
+            )}
             {status.kind === "saved" && (
               <span className="text-[#166534]">
                 {status.text}{" "}
                 {status.url && (
-                  <a href={status.url} target="_blank" rel="noreferrer" className="font-semibold underline">
+                  <a
+                    href={status.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold underline"
+                  >
                     View commit
                   </a>
                 )}
-                {status.warning && <span className="block text-[#A14A08]">{status.warning}</span>}
+                {status.warning && (
+                  <span className="block text-[#A14A08]">{status.warning}</span>
+                )}
               </span>
             )}
             {status.kind === "error" && (
               <span className="text-[#9F1D1D]">
                 {status.text}
-                {errorCount > 0 && ` ${errorCount} problem${errorCount === 1 ? "" : "s"} marked in red.`}
+                {errorCount > 0 &&
+                  ` ${errorCount} problem${errorCount === 1 ? "" : "s"} marked in red.`}
               </span>
             )}
             {status.kind === "conflict" && (
               <span className="text-[#9F1D1D]">
                 {status.text}{" "}
                 {!creating && (
-                  <a href={entryHref} target="_blank" rel="noreferrer" className="font-semibold underline">
+                  <a
+                    href={entryHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold underline"
+                  >
                     Open the latest version in a new tab
                   </a>
                 )}
@@ -627,10 +1098,18 @@ export default function EntryEditor({
             <button
               type="button"
               onClick={save}
-              disabled={!dirty || status.kind === "saving" || (creating && status.kind === "saved")}
+              disabled={
+                !dirty ||
+                status.kind === "saving" ||
+                (creating && status.kind === "saved")
+              }
               className="rounded-lg bg-[#0A0A0A] px-5 py-2.5 text-sm font-bold text-white disabled:opacity-40"
             >
-              {status.kind === "saving" ? "Saving…" : creating ? "Create and publish" : "Save and publish"}
+              {status.kind === "saving"
+                ? "Saving…"
+                : creating
+                  ? "Create and publish"
+                  : "Save and publish"}
             </button>
           )}
         </div>

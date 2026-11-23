@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
 import { canEdit, currentEditor } from "@/lib/admin/auth";
 import { enabledType, isCreatable, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
+import { formSections } from "@/lib/admin/entry-view";
 import { companionFaqId, nameIsFileName } from "@/lib/admin/rules";
 import { describeType, isValidSlug, parseEntry } from "@/lib/admin/schema";
 
@@ -30,7 +31,7 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
       <Link href={`/admin/content/${type.key}`} className="text-sm font-semibold text-[#A14A08] hover:underline">
         ← {type.label}
       </Link>
-      <h1 className="mt-2 text-3xl font-black">New: {type.label}</h1>
+      <h1 className="mt-2 text-3xl font-black">Add new: {type.label}</h1>
       <form method="get" className="mt-4 flex flex-wrap items-end gap-2 rounded-xl border border-[#E8E2D9] bg-white p-4 text-sm">
         <label className="min-w-[16rem] flex-1">
           <span className="block font-semibold">Start from a copy of</span>
@@ -54,6 +55,7 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
         slug=""
         mode="create"
         fields={fields}
+        sections={formSections(type)}
         initialState={state}
         initialSha=""
         choices={await relationshipOptions(fields)}

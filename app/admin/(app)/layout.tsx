@@ -20,13 +20,18 @@ function Shell({ editor, children }: { editor: Editor | null; children: React.Re
               <Link href="/admin/activity" className="hover:text-[#0A0A0A]">
                 Activity
               </Link>
+              {editor.role === "admin" && (
+                <Link href="/admin/editors" className="hover:text-[#0A0A0A]">
+                  Editors
+                </Link>
+              )}
             </nav>
           )}
           <div className="ml-auto flex items-center gap-3 text-sm">
             {editor && (
-              <span className="text-[#52525B]">
+              <Link href="/admin/account" className="text-[#52525B] hover:text-[#0A0A0A]" title="Change my password">
                 {editor.name} <span className="rounded-full bg-[#F8F6F2] px-2 py-0.5 text-xs font-semibold text-[#71675E]">{editor.role}</span>
-              </span>
+              </Link>
             )}
             {!isLocalDevMode() && (
               <form action="/api/admin/auth/logout" method="post">

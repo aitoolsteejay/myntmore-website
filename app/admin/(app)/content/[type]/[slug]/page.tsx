@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
 import { canEdit, canView, currentEditor } from "@/lib/admin/auth";
+import { catalogEntry } from "@/lib/admin/catalog";
 import { enabledType, loadEntry, relationshipOptions } from "@/lib/admin/entries";
-import { entryTitle, FileProblems } from "@/lib/admin/entry-view";
+import { EntryHeader, entryTitle, FileProblems, formSections, humanize, liveUrl } from "@/lib/admin/entry-view";
 import { nameIsFileName } from "@/lib/admin/rules";
 import { describeType, isValidSlug } from "@/lib/admin/schema";
 
 export async function generateMetadata({ params }: { params: { type: string; slug: string } }): Promise<Metadata> {
-  return { title: `${params.slug} · ${enabledType(params.type)?.label ?? "Content"}` };
+  return { title: `${humanize(params.slug)} · ${enabledType(params.type)?.label ?? "Content"}` };
 }
 
 export default async function EditEntry({ params, searchParams }: { params: { type: string; slug: string }; searchParams: { created?: string } }) {
@@ -21,13 +21,13 @@ export default async function EditEntry({ params, searchParams }: { params: { ty
   const entry = await loadEntry(type, params.slug);
   if (!entry) notFound();
   const fields = describeType(type);
+  const name = entryTitle(entry.state, type.slugField) ?? params.slug;
+  const title = name === params.slug ? humanize(params.slug) : name;
+  const url = liveUrl(type, params.slug, name);
+  const cat = catalogEntry(type.key, type.label);
   return (
     <>
-      <Link href={`/admin/content/${type.key}`} className="text-sm font-semibold text-[#A14A08] hover:underline">
-        ← {type.label}
-      </Link>
-      <h1 className="mt-2 text-3xl font-black">{entryTitle(entry.state, type.slugField) ?? params.slug}</h1>
-      <p className="mt-1 font-mono text-xs text-[#71675E]">{params.slug}</p>
+      <EntryHeader back={{ href: `/admin/content/${type.key}`, label: cat.title }} title={title} subtitle={url ? `myntmore.com${url}` : cat.title} url={url} />
       {searchParams.created && (
         <p role="status" className="mt-4 rounded-lg border border-[#BBE5C8] bg-[#ECFDF3] p-3 text-sm text-[#166534]">
           Created. The page goes live with the next deploy, usually in about 2 minutes.
@@ -38,6 +38,7 @@ export default async function EditEntry({ params, searchParams }: { params: { ty
         typeKey={type.key}
         slug={params.slug}
         fields={fields}
+        sections={formSections(type)}
         initialState={entry.state}
         initialSha={entry.sha}
         choices={await relationshipOptions(fields)}

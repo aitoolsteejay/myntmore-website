@@ -2,37 +2,68 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
+import FilterList from "@/components/admin/FilterList";
 import { canEdit, canView, currentEditor } from "@/lib/admin/auth";
-import { enabledType, isCreatable, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
-import { FileProblems } from "@/lib/admin/entry-view";
-import { describeType, singletonSlug } from "@/lib/admin/schema";
+import { catalogEntry } from "@/lib/admin/catalog";
+import { allTypes, enabledType, isCreatable, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
+import { EntryHeader, FileProblems, formSections, humanize, liveUrl } from "@/lib/admin/entry-view";
+import { contentType, describeType, singletonSlug } from "@/lib/admin/schema";
+
+/** The long-form case studies are one file each; this virtual type lists them together. */
+const LONG_CASES = "longCaseStudies";
 
 export async function generateMetadata({ params }: { params: { type: string } }): Promise<Metadata> {
-  return { title: enabledType(params.type)?.label ?? "Content" };
+  if (params.type === LONG_CASES) return { title: "Long-form case studies" };
+  const t = enabledType(params.type);
+  return { title: t ? catalogEntry(t.key, t.label).title : "Content" };
 }
 
-// A collection shows its list of entries; a singleton (one file, e.g. the cold email service copy) opens straight in the editor.
+// A collection shows its list of entries; a single page (e.g. the cold email service page) opens straight in the editor.
 export default async function TypePage({ params }: { params: { type: string } }) {
   const editor = (await currentEditor())!;
+
+  if (params.type === LONG_CASES) {
+    const items = allTypes()
+      .filter((t) => t.enabled && t.key.startsWith("caseLong") && canView(editor, t.key))
+      .map((t) => {
+        const type = contentType(t.key)!;
+        return { href: `/admin/content/${t.key}`, title: catalogEntry(t.key, t.label).title, url: liveUrl(type, singletonSlug(type), "") };
+      })
+      .sort((a, b) => a.title.localeCompare(b.title));
+    return (
+      <>
+        <EntryHeader back={{ href: "/admin", label: "Content" }} title="Long-form case studies" subtitle={`${items.length} case studies, each with its own layout`} />
+        <div className="mt-6">
+          <FilterList items={items.map((i) => ({ ...i, detail: i.url ? `myntmore.com${i.url}` : undefined }))} placeholder="Filter case studies" />
+        </div>
+      </>
+    );
+  }
+
   const type = enabledType(params.type);
   if (!type || !canView(editor, type.key)) notFound();
+  const cat = catalogEntry(type.key, type.label);
 
   if (type.kind === "singleton") {
     const entry = await loadEntry(type);
     if (!entry) notFound();
     const fields = describeType(type);
+    const url = liveUrl(type, singletonSlug(type), "");
+    const isLong = type.key.startsWith("caseLong");
     return (
       <>
-        <Link href="/admin" className="text-sm font-semibold text-[#A14A08] hover:underline">
-          ← Content
-        </Link>
-        <h1 className="mt-2 text-3xl font-black">{type.label}</h1>
-        <p className="mt-1 font-mono text-xs text-[#71675E]">{type.path}.json</p>
+        <EntryHeader
+          back={isLong ? { href: `/admin/content/${LONG_CASES}`, label: "Long-form case studies" } : { href: "/admin", label: "Content" }}
+          title={cat.title}
+          subtitle={url ? `myntmore.com${url}` : cat.description}
+          url={url}
+        />
         <FileProblems errors={entry.errors} />
         <EntryEditor
           typeKey={type.key}
           slug={singletonSlug(type)}
           fields={fields}
+          sections={formSections(type)}
           initialState={entry.state}
           initialSha={entry.sha}
           choices={await relationshipOptions(fields)}
@@ -45,36 +76,24 @@ export default async function TypePage({ params }: { params: { type: string } })
 
   const entries = await listEntries(type);
   const canCreate = isCreatable(type) && canEdit(editor, type.key);
+  const items = entries.map((e) => {
+    const url = liveUrl(type, e.slug, e.title);
+    return { href: `/admin/content/${type.key}/${e.slug}`, title: e.title === e.slug ? humanize(e.slug) : e.title, detail: url ? `myntmore.com${url}` : undefined, url };
+  });
   return (
     <>
-      <Link href="/admin" className="text-sm font-semibold text-[#A14A08] hover:underline">
-        ← Content
-      </Link>
-      <div className="mt-2 flex flex-wrap items-end justify-between gap-3">
-        <h1 className="text-3xl font-black">{type.label}</h1>
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <EntryHeader back={{ href: "/admin", label: "Content" }} title={cat.title} subtitle={cat.description} />
         {canCreate && (
           <Link href={`/admin/content/${type.key}/new`} className="rounded-lg bg-[#0A0A0A] px-4 py-2 text-sm font-bold text-white hover:bg-[#27272A]">
-            + New
+            + Add new
           </Link>
         )}
       </div>
-      <p className="mt-1 text-sm text-[#52525B]">
-        {entries.length} entries, read from the latest version on GitHub.
-        {!isCreatable(type) && " New ones need a code change, so a developer adds them."}
-      </p>
-      <ul className="mt-6 divide-y divide-[#E8E2D9] rounded-xl border border-[#E8E2D9] bg-white">
-        {entries.map((e) => (
-          <li key={e.slug}>
-            <Link
-              href={`/admin/content/${type.key}/${e.slug}`}
-              className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 py-3 hover:bg-[#FEF9EC]"
-            >
-              <span className="font-semibold">{e.title}</span>
-              <span className="font-mono text-xs text-[#71675E]">{e.slug}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-6">
+        <FilterList items={items} placeholder={`Filter ${entries.length} ${entries.length === 1 ? "entry" : "entries"}`} />
+      </div>
+      {!isCreatable(type) && <p className="mt-3 text-[13px] text-[#71675E]">New ones need a code change, so a developer adds them.</p>}
     </>
   );
 }
