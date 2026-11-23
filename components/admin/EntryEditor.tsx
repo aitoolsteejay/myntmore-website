@@ -6,6 +6,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { FieldDescriptor } from "@/lib/admin/schema";
 import type { Section } from "@/lib/admin/sections";
+import ArticleEditor from "./ArticleEditor";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Path = (string | number)[];
@@ -118,6 +119,8 @@ interface Ctx {
   nameIsFileName: boolean;
   /** Text being searched for: list items containing it open by themselves. */
   query: string;
+  /** Blog posts: the article text and its setter. */
+  body?: { value: string; set: (v: string) => void };
 }
 
 function Field({
@@ -447,6 +450,16 @@ function Field({
           ctx={ctx}
         />
       );
+    case "body":
+      return ctx.body ? (
+        <div>
+          <Label text={desc.label} required />
+          <Help text={desc.description} />
+          <div className="mt-1.5">
+            <ArticleEditor value={ctx.body.value} onChange={ctx.body.set} error={error} readOnly={readOnly} />
+          </div>
+        </div>
+      ) : null;
     case "unsupported":
       return (
         <div>
@@ -642,6 +655,7 @@ export default function EntryEditor({
   needsFaq = false,
   nameIsFileName = false,
   sections,
+  initialBody,
 }: {
   typeKey: string;
   /** The entry's file name (for a singleton, the file it is saved as). Empty while creating. */
@@ -660,9 +674,13 @@ export default function EntryEditor({
   nameIsFileName?: boolean;
   /** The form's sections, in page order (lib/admin/sections.ts). */
   sections: Section[];
+  /** Blog posts: the article (Markdoc). */
+  initialBody?: string;
 }) {
   const creating = mode === "create";
   const [state, setState] = useState(initialState);
+  const [article, setArticle] = useState(initialBody ?? "");
+  const [savedArticle, setSavedArticle] = useState(initialBody ?? "");
   const [faq, setFaq] = useState({ question: "", answer: "" });
   const [saved, setSaved] = useState(() => JSON.stringify(initialState));
   const [sha, setSha] = useState(initialSha);
@@ -674,8 +692,8 @@ export default function EntryEditor({
     () => (sections[0] ? { [sections[0].id]: true } : {}),
   );
   const dirty = useMemo(
-    () => creating || JSON.stringify(state) !== saved,
-    [creating, state, saved],
+    () => creating || JSON.stringify(state) !== saved || article !== savedArticle,
+    [creating, state, saved, article, savedArticle],
   );
 
   useEffect(() => {
@@ -704,7 +722,9 @@ export default function EntryEditor({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
-          creating ? { state, faq: needsFaq ? faq : null } : { state, sha },
+          creating
+            ? { state, faq: needsFaq ? faq : null, body: initialBody === undefined ? undefined : article }
+            : { state, sha, body: initialBody === undefined ? undefined : article },
         ),
       },
     ).catch(() => null);
@@ -754,6 +774,7 @@ export default function EntryEditor({
       return;
     }
     setSaved(JSON.stringify(state));
+    setSavedArticle(article);
     if (body.unchanged)
       return setStatus({
         kind: "saved",
@@ -780,6 +801,16 @@ export default function EntryEditor({
     creating,
     nameIsFileName,
     query: query.trim(),
+    body:
+      initialBody === undefined
+        ? undefined
+        : {
+            value: article,
+            set: (v: string) => {
+              setArticle(v);
+              if (status.kind === "saved") setStatus({ kind: "idle" });
+            },
+          },
   };
   const errorCount = Object.keys(errors).length;
   const entryErrors = errors[""];
@@ -789,7 +820,8 @@ export default function EntryEditor({
   const fieldMatches = (k: string) => {
     if (q.length < 2) return true;
     const d = fields[k] as any;
-    return `${d?.label ?? ""} ${d?.description ?? ""} ${JSON.stringify((state as any)[k] ?? "")}`
+    const value = d?.kind === "body" ? article : JSON.stringify((state as any)[k] ?? "");
+    return `${d?.label ?? ""} ${d?.description ?? ""} ${value}`
       .toLowerCase()
       .includes(q);
   };

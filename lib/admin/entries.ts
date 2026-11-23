@@ -19,20 +19,24 @@ import {
   type FieldChange,
   type FieldError,
 } from "./schema";
+import YAML from "yaml";
+import { parsePost, POSTS_DIR, postPath, serializePost, splitPost, validatePost } from "./posts";
 import { buildRuleErrors, companionFaqId } from "./rules";
 import { blobSha, ConflictError, getStore, type FileChange } from "./store";
 
-/** Every JSON content type is editable here. Blog posts (Markdoc) come in phase 3. */
+/** Every JSON content type is editable here, and blog posts (Markdoc, see posts.ts). */
 export function isEnabled(typeKey: string): boolean {
-  return contentType(typeKey)?.format === "json";
+  return contentType(typeKey)?.format === "json" || typeKey === "posts";
 }
+
+export const isPosts = (type: ContentType) => type.key === "posts";
 
 /**
  * Collections where a new file is all a new page needs: a generator builds the page, its sitemap entry
  * and any index from the JSON. Service pages need a hand-written component and market pages a code
  * change, so new ones are added by a developer.
  */
-export const CREATABLE_TYPES = ["landingPages", "cityPages", "industryCityPages", "events", "caseStudies", "caseStudyPages", "glossaryTerms", "careers", "homepageFaqs", "pageFaqs", "pageSeo"];
+export const CREATABLE_TYPES = ["posts", "landingPages", "cityPages", "industryCityPages", "events", "caseStudies", "caseStudyPages", "glossaryTerms", "careers", "homepageFaqs", "pageFaqs", "pageSeo"];
 
 export function isCreatable(type: ContentType): boolean {
   return type.kind === "collection" && CREATABLE_TYPES.includes(type.key);
@@ -62,6 +66,24 @@ export interface EntrySummary {
 
 /** Entries of a collection with a readable title (the slug field's name), read from master in one go. */
 export async function listEntries(type: ContentType): Promise<EntrySummary[]> {
+  if (isPosts(type)) {
+    const posts = (await (await getStore()).readDir(POSTS_DIR)).filter((f) => f.path.endsWith(".mdoc"));
+    return posts
+      .map((file) => {
+        const slug = file.path.slice(POSTS_DIR.length + 1, -5);
+        let title = slug;
+        let draft = false;
+        try {
+          const data = YAML.parse(splitPost(file.text)?.front ?? "") ?? {};
+          if (typeof data.title === "string" && data.title) title = data.title;
+          draft = data.published !== true;
+        } catch {
+          // Shown by its file name; the editor reports the problem.
+        }
+        return { slug, title: draft ? `${title} (draft)` : title };
+      })
+      .sort((a, b) => a.title.localeCompare(b.title));
+  }
   const files = (await (await getStore()).readDir(collectionDir(type))).filter((f) => f.path.endsWith(".json"));
   return files
     .map((file) => {
@@ -97,12 +119,20 @@ export async function relationshipOptions(fields: Record<string, unknown>): Prom
 
 export interface LoadedEntry {
   state: Record<string, unknown>;
+  /** Blog posts: the article (Markdoc). */
+  body?: string;
   /** Blob SHA of the file as opened; sent back with a save to detect edits made in the meantime. */
   sha: string;
   errors: FieldError[];
 }
 
 export async function loadEntry(type: ContentType, slug?: string): Promise<LoadedEntry | null> {
+  if (isPosts(type)) {
+    const file = await (await getStore()).readFile(postPath(slug!));
+    if (!file) return null;
+    const post = parsePost(file.text, slug!);
+    return { state: post.state, body: post.body, sha: file.sha, errors: post.errors };
+  }
   const file = await (await getStore()).readFile(entryFilePath(type, slug));
   if (!file) return null;
   const { state, errors } = parseEntry(type, file.text, slug);
@@ -250,6 +280,48 @@ export async function createEntry(type: ContentType, state: Record<string, unkno
 
   const result = await commitAndLog(type, slug, "create", files, `Create ${type.label}: ${slug}`, diffEntries(null, text), editor);
   if (!result.ok) return result.status === 409 ? { ...result, message: `Someone created "${slug}" a moment ago. Choose another file name.` } : result;
+  if (result.unchanged) throw new Error("unreachable");
+  return { ok: true, slug, commitUrl: result.commitUrl, logWarning: result.logWarning, local: result.local };
+}
+
+/** A post as JSON text, for the activity log's field-by-field changes (the article counts as one field). */
+function postForDiff(text: string): string {
+  const parts = splitPost(text);
+  return JSON.stringify({ ...((parts && YAML.parse(parts.front)) || {}), article: parts?.body ?? text });
+}
+
+/** Save an edited blog post. */
+export async function savePostEntry(slug: string, state: Record<string, unknown>, body: string, openedSha: string, editor: Editor): Promise<SaveResult> {
+  const type = contentType("posts")!;
+  const store = await getStore();
+  const path = postPath(slug);
+  const errors = validatePost(state, body);
+  if (errors.length) return { ok: false, status: 422, message: NEEDS_ATTENTION, errors };
+  if (slugOf(type, state) !== slug) {
+    return { ok: false, status: 422, message: "Renaming a post is not available yet.", errors: [{ path: ["title"], message: "The web address cannot be changed here." }] };
+  }
+  const current = await store.readFile(path);
+  if (!current) return { ok: false, status: 404, message: "This post no longer exists. It may have been deleted." };
+  if (current.sha !== openedSha) return { ok: false, status: 409, message: new ConflictError(path, await store.lastChange(path).catch(() => null)).message };
+  const text = serializePost(state, body, current.text);
+  if (text === current.text) return { ok: true, unchanged: true };
+  return commitAndLog(type, slug, "update", [{ path, text, expectedSha: openedSha }], `Update blog post: ${slug}`, diffEntries(postForDiff(current.text), postForDiff(text)), editor);
+}
+
+/** Create a blog post. It starts as a draft unless "Published" is ticked. */
+export async function createPostEntry(state: Record<string, unknown>, body: string, editor: Editor): Promise<CreateResult> {
+  const type = contentType("posts")!;
+  const store = await getStore();
+  const existing = new Set((await store.listDir(POSTS_DIR)).filter((f) => f.endsWith(".mdoc")).map((f) => f.slice(0, -5)));
+  const errors = validatePost(state, body, existing);
+  const slug = slugOf(type, state);
+  if (!errors.some((e) => e.path[0] === "title") && (!slug || !NEW_SLUG.test(slug))) {
+    errors.push({ path: ["title"], message: "The web address must be lowercase words joined by hyphens." });
+  }
+  if (errors.length || !slug) return { ok: false, status: 422, message: NEEDS_ATTENTION, errors };
+  const text = serializePost(state, body, null);
+  const result = await commitAndLog(type, slug, "create", [{ path: postPath(slug), text, expectedSha: null }], `Create blog post: ${slug}`, diffEntries(null, postForDiff(text)), editor);
+  if (!result.ok) return result.status === 409 ? { ...result, message: `A post with the address "${slug}" was created a moment ago. Change the title.` } : result;
   if (result.unchanged) throw new Error("unreachable");
   return { ok: true, slug, commitUrl: result.commitUrl, logWarning: result.logWarning, local: result.local };
 }

@@ -40,6 +40,7 @@ export default async function EditEntry({ params, searchParams }: { params: { ty
         fields={fields}
         sections={formSections(type)}
         initialState={entry.state}
+        initialBody={entry.body}
         initialSha={entry.sha}
         choices={await relationshipOptions(fields)}
         entryHref={`/admin/content/${type.key}/${params.slug}`}

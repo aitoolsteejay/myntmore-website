@@ -36,6 +36,12 @@ const ADVANCED: Rule = {
 };
 
 const TYPE_SECTIONS: Record<string, Rule[]> = {
+  posts: [
+    { title: "Article", help: "The title, the opening summary and the article itself", match: ["title", "category", "summary", "content"] },
+    { title: "Publishing", help: "Draft or live, dates and read time", match: ["published", "datePublished", "dateModified", "readTime"] },
+    { title: "End of the article", help: "Questions and answers, related reading and the call to action", match: ["faqs", "relatedLinks", "cta", "toolCallouts"] },
+    { title: "Card on the blog page", match: ["description", "excerpt", "indexTags", "indexOrder"] },
+  ],
   landingPages: [
     { title: "Top of the page", help: "Badge, headline, intro and buttons", match: ["badge", "h1*", "heroSubheading", "primaryCta", "secondaryCta", "heroNote"] },
     { title: "Stats row", match: ["statsCaption", "stats"] },
@@ -132,13 +138,15 @@ export function sectionsFor(typeKey: string, fields: { key: string; kind: string
 
   // Settings first, so a page's "title" or "page" is not claimed by them unless they are settings for that type.
   const settings: Section[] = [];
-  const adv = take(ADVANCED.match.filter((p) => !entryNameKey || p !== entryNameKey || nameIsFileName));
+  const claimed = (k: string) => rules.some((r) => matches(k, r.match));
+  const adv = take(ADVANCED.match.filter((p) => (!entryNameKey || p !== entryNameKey || nameIsFileName) && !claimed(p)));
   const seo = take(SEO.match);
   const design = take(DESIGN.match);
 
   const content: Section[] = [];
   // An entry's own name (a FAQ's question, a page's title) belongs with its text, first.
-  const first: string[] = entryNameKey && !nameIsFileName && !taken.has(entryNameKey) ? (taken.add(entryNameKey), [entryNameKey]) : [];
+  const ruled = !!entryNameKey && rules.some((r) => matches(entryNameKey, r.match));
+  const first: string[] = entryNameKey && !nameIsFileName && !ruled && !taken.has(entryNameKey) ? (taken.add(entryNameKey), [entryNameKey]) : [];
 
   for (const r of rules) {
     const keys = take(r.match);

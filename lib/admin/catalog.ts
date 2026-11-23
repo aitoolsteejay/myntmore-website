@@ -6,7 +6,7 @@ export interface CatalogEntry {
   title: string;
   /** One line on what this is and where it shows. */
   description: string;
-  group: "pages" | "caseStudies" | "services" | "faqs";
+  group: "blog" | "pages" | "caseStudies" | "services" | "faqs";
   /** The live page for an entry, if it has one. */
   url?: (slug: string, title: string) => string | null;
 }
@@ -14,6 +14,7 @@ export interface CatalogEntry {
 const fromTitle = (title: string) => /\((\/[^)\s]*)\)\s*$/.exec(title)?.[1] ?? null;
 
 export const CATALOG: Record<string, CatalogEntry> = {
+  posts: { title: "Blog posts", description: "Articles at myntmore.com/resources/blogs. New posts start as drafts.", group: "blog", url: (s) => `/resources/blogs/${s}` },
   landingPages: { title: "Industry pages", description: "One page per industry we serve, e.g. Pharma, SaaS, Insurance (myntmore.com/lp/…)", group: "pages", url: (s) => `/lp/${s}` },
   servicePages: { title: "Service pages", description: "ABM, AI lead generation, GTM strategy, personal branding, sales intelligence (myntmore.com/services/…)", group: "services", url: (s) => `/services/${s}` },
   serviceCopyColdEmail: { title: "Cold email service page", description: "myntmore.com/services/cold-email", group: "services", url: () => "/services/cold-email" },
@@ -42,6 +43,7 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
 }
 
 export const GROUPS: { key: CatalogEntry["group"]; title: string; description: string }[] = [
+  { key: "blog", title: "Blog", description: "Write and edit articles" },
   { key: "pages", title: "Website pages", description: "Industry, city, country, event, job and glossary pages" },
   { key: "services", title: "Service pages", description: "Every page under myntmore.com/services" },
   { key: "caseStudies", title: "Case studies", description: "Client stories, short and long" },

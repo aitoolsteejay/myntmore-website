@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { canEdit, currentEditor } from "@/lib/admin/auth";
-import { createEntry, enabledType, isCreatable } from "@/lib/admin/entries";
+import { createEntry, createPostEntry, enabledType, isCreatable, isPosts } from "@/lib/admin/entries";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest, { params }: { params: { type: strin
     body.faq && typeof body.faq === "object" ? { question: String(body.faq.question ?? ""), answer: String(body.faq.answer ?? "") } : null;
 
   try {
-    const result = await createEntry(type, body.state, faq, editor);
+    const result = isPosts(type) ? await createPostEntry(body.state, typeof body.body === "string" ? body.body : "", editor) : await createEntry(type, body.state, faq, editor);
     if (!result.ok) return NextResponse.json({ error: result.message, errors: result.errors }, { status: result.status });
     return NextResponse.json(result);
   } catch (err) {
