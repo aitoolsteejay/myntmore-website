@@ -1,7 +1,7 @@
 "use client";
 
-import { Phone } from "lucide-react";
-import { useRef, useEffect } from "react";
+import { ChevronDown, Phone } from "lucide-react";
+import { useId, useRef, useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
@@ -140,6 +140,39 @@ const WORLD_CITY_LINKS = [
   { label: "Toronto", href: "/b2b-lead-generation-toronto" },
 ];
 
+// One footer column. From the lg breakpoint it is a plain heading with its links; on phones the
+// heading becomes a toggle that opens and closes the links. The links are always in the page's HTML
+// (a closed panel is only hidden with CSS), so crawlers read them the same either way.
+function FooterGroup({ title, titleHref, className = "", desktopTitle = true, children }: { title: string; titleHref?: string; className?: string; desktopTitle?: boolean; children: ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const panelId = useId();
+  return (
+    <div className={className}>
+      {desktopTitle && (
+        <h3 className="mb-4 hidden text-xs font-bold uppercase tracking-[0.18em] lg:block">
+          {titleHref ? (
+            <Link href={titleHref} className="text-[#3D3D3D] transition-colors duration-200 hover:text-[#0a0a0a]">{title}</Link>
+          ) : (
+            <span style={{ color: "#3D3D3D" }}>{title}</span>
+          )}
+        </h3>
+      )}
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={panelId}
+        onClick={() => setOpen((o) => !o)}
+        className="flex min-h-[48px] w-full items-center justify-between border-b text-xs font-bold uppercase tracking-[0.18em] lg:hidden"
+        style={{ color: "#3D3D3D", borderColor: "#E8E2D9" }}
+      >
+        {title}
+        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+      </button>
+      <div id={panelId} className={`${open ? "block" : "hidden"} pt-1 lg:block lg:pt-0`}>{children}</div>
+    </div>
+  );
+}
+
 export default function Footer() {
   const ctaHref = "/book-a-call";
   const breathRef = useRef<HTMLDivElement>(null);
@@ -217,19 +250,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4">
-              <Link
-                href="/services"
-                className="transition-colors duration-200"
-                style={{ color: "#3D3D3D" }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#3D3D3D"; }}
-              >
-                Services
-              </Link>
-            </h3>
-            <ul className="space-y-0 lg:space-y-2" role="list">
+          <FooterGroup title="Services" titleHref="/services" className="col-span-2 lg:col-span-1">
+            <ul className="grid grid-cols-2 gap-x-4 lg:block lg:space-y-2" role="list">
               {SERVICES_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
@@ -241,11 +263,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FooterGroup>
 
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>Company</h3>
-            <ul className="space-y-0 lg:space-y-2" role="list">
+          <FooterGroup title="Company" className="col-span-2 lg:col-span-1">
+            <ul className="grid grid-cols-2 gap-x-4 lg:block lg:space-y-2" role="list">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
@@ -257,10 +278,9 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FooterGroup>
 
-          <div className="col-span-2 lg:col-span-1">
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>We Work With</h3>
+          <FooterGroup title="We Work With" className="col-span-2 lg:col-span-1">
             <ul className="grid grid-cols-2 gap-x-4 lg:block lg:space-y-2" role="list">
               {ICP_LINKS.map((link) => (
                 <li key={link.label}>
@@ -273,7 +293,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FooterGroup>
 
           <div className="col-span-2 lg:col-span-1">
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>Get in Touch</h3>
@@ -292,35 +312,37 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
-          <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>B2B Lead Generation In:</span>
-          {CITY_LINKS.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-x-2">
-              <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
-              >
-                {link.label}
-              </Link>
-              {i < CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
-            </span>
-          ))}
-        </div>
+        <FooterGroup title="B2B lead generation by city" desktopTitle={false}>
+          <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
+            <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>B2B Lead Generation In:</span>
+            {CITY_LINKS.map((link, i) => (
+              <span key={link.href} className="flex items-center gap-x-2">
+                <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
+                >
+                  {link.label}
+                </Link>
+                {i < CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
+              </span>
+            ))}
+          </div>
 
-        <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
-          <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>Worldwide:</span>
-          {WORLD_CITY_LINKS.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-x-2">
-              <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
-              >
-                {link.label}
-              </Link>
-              {i < WORLD_CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
-            </span>
-          ))}
-        </div>
+          <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
+            <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>Worldwide:</span>
+            {WORLD_CITY_LINKS.map((link, i) => (
+              <span key={link.href} className="flex items-center gap-x-2">
+                <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
+                >
+                  {link.label}
+                </Link>
+                {i < WORLD_CITY_LINKS.length - 1 && <span aria-hidden="true" style={{ color: "#E8E2D9" }}>&middot;</span>}
+              </span>
+            ))}
+          </div>
+        </FooterGroup>
 
         <div className="py-3 lg:py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs" style={{ color: "#71675E" }}>&copy; 2026 Myntmore. Built in Mumbai.</p>
