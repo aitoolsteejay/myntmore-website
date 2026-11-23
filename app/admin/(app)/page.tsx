@@ -1,58 +1,85 @@
 import Link from "next/link";
+import FilterList, { type ListItem } from "@/components/admin/FilterList";
 import { canView, currentEditor } from "@/lib/admin/auth";
+import { catalogEntry, GROUPS } from "@/lib/admin/catalog";
 import { allTypes } from "@/lib/admin/entries";
+import { humanize, liveUrl } from "@/lib/admin/entry-view";
+import { collectionDir, contentType, singletonSlug } from "@/lib/admin/schema";
+import { getStore } from "@/lib/admin/store";
 
-type T = ReturnType<typeof allTypes>[number];
-
-// Groups for the home page, in the order editors look for things. Anything not listed lands in "Other".
-const GROUPS: { title: string; match: (t: T) => boolean }[] = [
-  { title: "Pages", match: (t) => ["landingPages", "cityPages", "industryCityPages", "marketPages", "servicePages", "events", "careers", "glossaryTerms"].includes(t.key) },
-  { title: "Case studies", match: (t) => ["caseStudies", "caseStudyPages"].includes(t.key) },
-  { title: "Long-form case studies", match: (t) => t.key.startsWith("caseLong") },
-  { title: "Service page copy", match: (t) => t.key.startsWith("serviceCopy") },
-  { title: "FAQs and search titles", match: (t) => ["pageFaqs", "homepageFaqs", "pageSeo"].includes(t.key) },
-];
-
-function Card({ t }: { t: T }) {
-  return (
-    <li>
-      <Link href={`/admin/content/${t.key}`} className="block h-full rounded-xl border border-[#E8E2D9] bg-white p-4 hover:border-[#A14A08]">
-        <span className="font-bold">{t.label}</span>
-        <span className="mt-0.5 block text-[13px] text-[#71675E]">{t.kind === "collection" ? "List of entries" : "One page"}</span>
-      </Link>
-    </li>
-  );
-}
+type Card = { href: string; title: string; description: string; count?: string };
 
 export default async function AdminHome() {
   const editor = (await currentEditor())!;
-  const types = allTypes().filter((t) => canView(editor, t.key));
-  const ready = types.filter((t) => t.enabled);
-  const later = types.filter((t) => !t.enabled);
-  const grouped = GROUPS.map((g) => ({ title: g.title, items: ready.filter(g.match) }));
-  const other = ready.filter((t) => !GROUPS.some((g) => g.match(t)));
-  if (other.length) grouped.push({ title: "Other", items: other });
+  const types = allTypes().filter((t) => t.enabled && canView(editor, t.key));
+  const store = await getStore();
+
+  // Everything editable, by name and address, for the search box. File names only: one request per folder.
+  const lists = await Promise.all(
+    types.map(async (t) => {
+      const type = contentType(t.key)!;
+      const cat = catalogEntry(t.key, t.label);
+      if (type.kind === "singleton") {
+        const url = liveUrl(type, singletonSlug(type), "");
+        return { t, count: 1, items: [{ href: `/admin/content/${t.key}`, title: cat.title, detail: `${t.key.startsWith("caseLong") ? "Long-form case study" : "Page"}${url ? ` · myntmore.com${url}` : ""}`, url }] as ListItem[] };
+      }
+      const slugs = (await store.listDir(collectionDir(type))).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
+      const items = slugs.map((s) => {
+        const url = liveUrl(type, s, "");
+        return { href: `/admin/content/${t.key}/${s}`, title: humanize(s), detail: `${cat.title}${url ? ` · myntmore.com${url}` : ""}`, url };
+      });
+      return { t, count: slugs.length, items };
+    }),
+  );
+  const everything = lists.flatMap((l) => l.items);
+
+  const longCases = lists.filter((l) => l.t.key.startsWith("caseLong"));
+  const cards = (group: string): Card[] => {
+    const out: Card[] = lists
+      .filter((l) => !l.t.key.startsWith("caseLong") && catalogEntry(l.t.key, l.t.label).group === group)
+      .map((l) => {
+        const cat = catalogEntry(l.t.key, l.t.label);
+        return { href: `/admin/content/${l.t.key}`, title: cat.title, description: cat.description, count: l.t.kind === "collection" ? `${l.count} ${l.count === 1 ? "entry" : "entries"}` : undefined };
+      });
+    if (group === "caseStudies" && longCases.length)
+      out.push({ href: "/admin/content/longCaseStudies", title: "Long-form case studies", description: "In-depth client stories, each with its own layout", count: `${longCases.length} case studies` });
+    return out;
+  };
+
   return (
     <>
-      <h1 className="text-3xl font-black">Content</h1>
-      <p className="mt-1 text-sm text-[#52525B]">Every save is checked against the same rules as the site build, then published, usually within about two minutes.</p>
-      {grouped
-        .filter((g) => g.items.length)
-        .map((g) => (
-          <section key={g.title} className="mt-8">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-[#71675E]">{g.title}</h2>
-            <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {g.items.map((t) => (
-                <Card key={t.key} t={t} />
+      <h1 className="text-3xl font-black">What would you like to edit?</h1>
+      <p className="mt-1 text-sm text-[#52525B]">Search by page name or address, or pick a section below. Saved changes go live in about two minutes.</p>
+      <div className="mt-5">
+        <FilterList items={everything} placeholder="Search, e.g. pharma, mumbai, cold email, /lp/saas-founders" emptyText="No page matches. Try another word." hideUntilTyped autoFocus />
+      </div>
+
+      {GROUPS.map((g) => {
+        const list = cards(g.key);
+        if (!list.length) return null;
+        return (
+          <section key={g.key} className="mt-10">
+            <h2 className="text-lg font-black">{g.title}</h2>
+            <p className="text-sm text-[#71675E]">{g.description}</p>
+            <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+              {list.map((c) => (
+                <li key={c.href}>
+                  <Link href={c.href} className="flex h-full flex-col rounded-xl border border-[#E8E2D9] bg-white p-4 hover:border-[#A14A08]">
+                    <span className="flex items-baseline justify-between gap-3">
+                      <span className="font-bold">{c.title}</span>
+                      {c.count && <span className="shrink-0 text-xs text-[#71675E]">{c.count}</span>}
+                    </span>
+                    {c.description && <span className="mt-1 text-[13px] leading-snug text-[#71675E]">{c.description}</span>}
+                  </Link>
+                </li>
               ))}
             </ul>
           </section>
-        ))}
-      {later.length > 0 && (
-        <p className="mt-10 text-sm text-[#52525B]">
-          {later.map((t) => t.label).join(", ")}: still edited in <a href="/keystatic" className="font-semibold underline">Keystatic</a> for now.
-        </p>
-      )}
+        );
+      })}
+      <p className="mt-10 text-sm text-[#71675E]">
+        Blog posts and the other pages of the site (homepage, About, Plans and so on) are being added here next.
+      </p>
     </>
   );
 }
