@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FAQ_ITEMS, type FAQItem } from "@/lib/faq-data";
+import home from "@/content/site-copy/home.json";
 
 interface AccordionItemProps {
   item: FAQItem;
@@ -119,16 +120,16 @@ export default function FAQ() {
               background: "#FEF9EC",
             }}
           >
-            FAQ
+            {home.faqSection.eyebrow}
           </span>
           <h2
             id="faq-heading"
             className="text-3xl sm:text-5xl font-black text-[#0a0a0a] tracking-tight"
           >
-            Common Questions
+            {home.faqSection.heading}
           </h2>
           <p className="mt-4 text-[#52525B] text-lg">
-            Everything you need to know before getting started.
+            {home.faqSection.intro}
           </p>
         </div>
 
@@ -148,13 +149,13 @@ export default function FAQ() {
         {/* Still have questions nudge */}
         <div className="mt-12 text-center">
           <p className="text-neutral-600 text-sm mb-4">
-            Still have questions? We&rsquo;re happy to chat.
+            {home.faqSection.nudge}
           </p>
           <a
             href="/book-a-call"
             className="btn-ghost px-6 py-3 text-sm font-semibold inline-flex items-center gap-2"
           >
-            Talk to our team
+            {home.faqSection.link}
             <svg
               className="w-3.5 h-3.5"
               fill="none"

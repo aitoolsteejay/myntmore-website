@@ -1,0 +1,65 @@
+{
+  "badge": "About Myntmore",
+  "heading": "Built by a founder who figured outbound out the hard way",
+  "lead": "Tejas Jhaveri is a TEDx speaker, angel investor, and B2B growth expert based in Mumbai, with over 10 years of lead generation experience. He founded Myntmore in 2019, and the team has since booked 12K+ meetings and generated $120M+ in pipeline for 130+ B2B companies.",
+  "credentials": [
+    {
+      "stat": "12K+",
+      "label": "Meetings booked"
+    },
+    {
+      "stat": "$120M+",
+      "label": "Pipeline generated"
+    },
+    {
+      "stat": "130+",
+      "label": "B2B companies served"
+    },
+    {
+      "stat": "10+",
+      "label": "Years in lead generation"
+    }
+  ],
+  "photoAlt": "Tejas Jhaveri, Founder of Myntmore",
+  "name": "Tejas Jhaveri",
+  "nameLine": "Founder, Myntmore · TEDx Speaker · Angel Investor",
+  "linkedinButton": "Connect on LinkedIn",
+  "linkedinUrl": "https://linkedin.com/in/tejasjhaveri",
+  "bio": [
+    "Tejas Jhaveri founded Myntmore in Mumbai in 2019, originally as an e-commerce and growth agency helping D2C brands build and run their online storefronts. Between 2023 and 2024, the team repositioned entirely around B2B outbound: cold email, LinkedIn outreach, and account-based marketing for founders and sales teams who need a predictable pipeline without hiring an in-house SDR team.",
+    "Tejas himself is a TEDx speaker, angel investor, and B2B growth expert with over 10 years of lead generation experience. As a growth educator, he has taught B2B methodologies at IIT and IIM, helping shape the next generation of growth professionals in India.",
+    "Myntmore is a premier [B2B lead generation company in Mumbai](/b2b-lead-generation-mumbai). Headquartered in BKC, we build and run cold email, LinkedIn outreach, and ABM systems that book qualified meetings. 12K+ meetings booked. $120M+ pipeline generated."
+  ],
+  "philosophyHeading": "Company Philosophy",
+  "philosophy": "We're not a generalist agency. We specialise in one thing: building B2B pipelines that don't depend on luck, referrals, or one brilliant SDR. Our philosophy is that outbound is an engineering problem, not a hustle problem.",
+  "quote": "“Stop treating outbound like an art form. Build it like a software product.”",
+  "quoteBy": "- Tejas Jhaveri, Founder",
+  "expertiseHeading": "Core Expertise",
+  "expertise": [
+    {
+      "label": "AI Lead Generation",
+      "href": "/services/ai-lead-generation"
+    },
+    {
+      "label": "LinkedIn Strategy",
+      "href": "/services/linkedin-outreach"
+    },
+    {
+      "label": "Personal Branding",
+      "href": "/services/personal-branding"
+    },
+    {
+      "label": "Cold Email Infrastructure",
+      "href": "/services/cold-email"
+    },
+    {
+      "label": "B2B Pipeline Engineering",
+      "href": "/services"
+    }
+  ],
+  "ctaHeading": "Let's talk about your pipeline",
+  "ctaText": "Book a 30-minute strategy call. We'll audit your outreach, map your ICP, and tell you exactly what's holding your pipeline back.",
+  "ctaButton": "Book a Free Strategy Call",
+  "ctaEmailButton": "Email Directly",
+  "ctaNote": "No commitments. No agency pitch decks. Just a real conversation about your pipeline."
+}

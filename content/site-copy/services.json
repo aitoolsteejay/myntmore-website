@@ -1,0 +1,206 @@
+{
+  "badge": "B2B Lead Generation Services",
+  "headingLine1": "Seven systems",
+  "headingLine2": "One growth engine",
+  "intro": "Every service is productized, scoped, and runs on proven infrastructure, not promises. We build the architecture, you close the deals.",
+  "services": [
+    {
+      "title": "LinkedIn Outreach & Automation",
+      "tagline": "Conversations happening in your LinkedIn inbox. Every week.",
+      "description": "Multi-touch sequences that mimic human behaviour and generate replies from the right people. We manage everything from profile audit to reply handoff.",
+      "href": "/services/linkedin-outreach",
+      "stats": [
+        {
+          "value": "48%",
+          "label": "Avg acceptance rate"
+        },
+        {
+          "value": "21%",
+          "label": "Avg reply rate"
+        }
+      ]
+    },
+    {
+      "title": "Cold Email Infrastructure",
+      "tagline": "Cold email that actually lands in the inbox.",
+      "description": "The full technical stack built and managed for you. Domain setup, warmup, deliverability, AI-personalised sequences. 98.5% inbox rate target.",
+      "href": "/services/cold-email",
+      "stats": [
+        {
+          "value": "98.5%",
+          "label": "Inbox rate"
+        },
+        {
+          "value": "<0.2%",
+          "label": "Spam rate"
+        }
+      ]
+    },
+    {
+      "title": "ICP Mapping & Lead Scoring",
+      "tagline": "Know exactly who is ready to buy. Before your competitors do.",
+      "description": "We map your ideal customer profile against 40+ real-world intent signals. Trigger-based lists updated daily. You stop wasting reps on bad-fit prospects.",
+      "href": "/services/sales-intelligence",
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Intent signals"
+        },
+        {
+          "value": "Daily",
+          "label": "List refresh"
+        }
+      ]
+    },
+    {
+      "title": "AI Lead Generation",
+      "tagline": "Your pipeline shouldn't depend on how much time your team has.",
+      "description": "Custom AI agents research, qualify, and prioritise leads at scale. 80% reduction in manual research time. 300–1500 scored, research-enriched leads per month.",
+      "href": "/services/ai-lead-generation",
+      "stats": [
+        {
+          "value": "80%",
+          "label": "Less manual research"
+        },
+        {
+          "value": "35%",
+          "label": "Avg LinkedIn reply rate"
+        }
+      ]
+    },
+    {
+      "title": "Account-Based Marketing",
+      "tagline": "Stop marketing to everyone. Go all-in on the accounts that matter.",
+      "description": "Coordinated multi-channel campaigns across email and LinkedIn engage the entire buying committee at your highest-value target accounts, so your AE isn't the first name they've seen.",
+      "href": "/services/account-based-marketing",
+      "stats": [
+        {
+          "value": "6.4x",
+          "label": "Higher deal size"
+        },
+        {
+          "value": "3+",
+          "label": "Channels orchestrated"
+        }
+      ]
+    },
+    {
+      "title": "Personal Branding",
+      "tagline": "Your buyers are on LinkedIn every day. Are they seeing you?",
+      "description": "We ghostwrite content that positions you as the authority in your space. 4–8 posts/month from monthly voice interviews. Inbound finds you instead of you chasing it.",
+      "href": "/services/personal-branding",
+      "stats": [
+        {
+          "value": "10x",
+          "label": "Profile visit increase"
+        },
+        {
+          "value": "2x",
+          "label": "Reply rate boost"
+        }
+      ]
+    },
+    {
+      "title": "GTM Strategy",
+      "tagline": "A go-to-market plan built to be run, not filed away.",
+      "description": "ICP, positioning, and channel mix, built by the same team that executes it across cold email, LinkedIn, ABM, or personal branding. Reviewed and adjusted monthly against real data.",
+      "href": "/services/gtm-strategy",
+      "stats": [
+        {
+          "value": "18",
+          "label": "Days to campaign launch"
+        },
+        {
+          "value": "130+",
+          "label": "B2B companies"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "Frequently asked questions",
+  "locationsBadge": "Locations",
+  "locationsHeading": "B2B Outbound Services Across India",
+  "locationsText": "From BKC, we run [B2B lead generation in Mumbai](/b2b-lead-generation-mumbai) and manage outbound campaigns for teams across India.",
+  "cities": [
+    {
+      "city": "Mumbai",
+      "href": "/b2b-lead-generation-mumbai",
+      "blurb": "BFSI, Media & SaaS"
+    },
+    {
+      "city": "Bengaluru",
+      "href": "/b2b-lead-generation-bengaluru",
+      "blurb": "Tech & B2B SaaS"
+    },
+    {
+      "city": "Delhi NCR",
+      "href": "/b2b-lead-generation-delhi",
+      "blurb": "Enterprise & D2C Supply"
+    },
+    {
+      "city": "Gurugram",
+      "href": "/b2b-lead-generation-gurugram",
+      "blurb": "SaaS, Fintech & Staffing"
+    },
+    {
+      "city": "Noida",
+      "href": "/b2b-lead-generation-noida",
+      "blurb": "IT Services & Electronics"
+    },
+    {
+      "city": "Pune",
+      "href": "/b2b-lead-generation-pune",
+      "blurb": "Auto, IT & Industrial"
+    },
+    {
+      "city": "Hyderabad",
+      "href": "/b2b-lead-generation-hyderabad",
+      "blurb": "Pharma & Enterprise Tech"
+    },
+    {
+      "city": "Chennai",
+      "href": "/b2b-lead-generation-chennai",
+      "blurb": "SaaS & Manufacturing"
+    },
+    {
+      "city": "Ahmedabad",
+      "href": "/b2b-lead-generation-ahmedabad",
+      "blurb": "Chemicals & Export"
+    },
+    {
+      "city": "Kolkata",
+      "href": "/b2b-lead-generation-kolkata",
+      "blurb": "Industrial & Healthcare"
+    },
+    {
+      "city": "Jaipur",
+      "href": "/b2b-lead-generation-jaipur",
+      "blurb": "Gems, Jewellery & IT"
+    },
+    {
+      "city": "Indore",
+      "href": "/b2b-lead-generation-indore",
+      "blurb": "IT, Pharma & Auto"
+    },
+    {
+      "city": "Surat",
+      "href": "/b2b-lead-generation-surat",
+      "blurb": "Diamonds & Textiles"
+    },
+    {
+      "city": "Coimbatore",
+      "href": "/b2b-lead-generation-coimbatore",
+      "blurb": "Pumps, Textiles & IT"
+    },
+    {
+      "city": "Dubai",
+      "href": "/b2b-lead-generation-dubai",
+      "blurb": "UAE B2B & Market Entry"
+    },
+    {
+      "city": "Abu Dhabi",
+      "href": "/b2b-lead-generation-abu-dhabi",
+      "blurb": "Enterprise & Energy"
+    }
+  ]
+}

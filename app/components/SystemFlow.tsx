@@ -2,45 +2,43 @@
 
 import { useEffect, useRef } from "react";
 import { textTone } from "@/lib/colors";
+import home from "@/content/site-copy/home.json";
 
-const STEPS = [
+// The step titles and descriptions are edited in the admin (Homepage > The Myntmore system); the
+// layout has exactly six positions, each with its own number, icon and colour.
+const STEP_LOOKS = [
   {
-    number: "01", title: "ICP & Strategy", phase: "Strategy",
-    description: "Define who you're targeting, their pain points, and build the messaging strategy around them.",
+    number: "01",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>,
     color: "#a855f7",
   },
   {
-    number: "02", title: "Build & Enrich Lists", phase: "Research",
-    description: "Scrape verified prospects from LinkedIn and Apollo, enriched with intent data and buying signals.",
+    number: "02",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
     color: "#3b82f6",
   },
   {
-    number: "03", title: "Prepare Assets", phase: "Assets",
-    description: "Create lead magnets, case studies, playbooks, and LinkedIn content that warms up your ICP before outreach.",
+    number: "03",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>,
     color: "#F5B731",
   },
   {
-    number: "04", title: "Launch Outbound", phase: "Execute",
-    description: "Cold email and LinkedIn sequences go live simultaneously with full deliverability infrastructure.",
+    number: "04",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>,
     color: "#ff6b35",
   },
   {
-    number: "05", title: "Follow Up & Nurture", phase: "Execute",
-    description: "Persistent multi-touch follow-ups sharing assets, insights, and social proof until they reply.",
+    number: "05",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>,
     color: "#ff6b35",
   },
   {
-    number: "06", title: "Book Meetings", phase: "Results",
-    description: "Warm replies convert into qualified calls on your calendar every meeting comes with full context.",
+    number: "06",
     icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>,
     color: "#22c55e",
   },
 ];
+const STEPS = STEP_LOOKS.map((look, i) => ({ ...look, ...home.systemFlow.steps[i] }));
 
 // ─── Traveling dot on a horizontal arrow ─────────────────────────────────────
 function HDot({ fromColor, toColor, delay, duration }: { fromColor: string; toColor: string; delay: string; duration: string }) {
@@ -249,21 +247,17 @@ export default function SystemFlow() {
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-black uppercase tracking-widest" style={{ color:"#0a66c2" }}>Running in Parallel</span>
+              <span className="text-xs font-black uppercase tracking-widest" style={{ color:"#0a66c2" }}>{home.systemFlow.brandEyebrow}</span>
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold" style={{ background:"rgba(10,102,194,0.1)", color:"#0a66c2" }}>
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse inline-block" style={{ background:"#0a66c2" }} />
-                Active throughout
+                {home.systemFlow.brandBadge}
               </span>
             </div>
-            <p className="text-[#0a0a0a] font-bold text-sm sm:text-base mt-0.5">LinkedIn Personal Brand Building</p>
+            <p className="text-[#0a0a0a] font-bold text-sm sm:text-base mt-0.5">{home.systemFlow.brandTitle}</p>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {[
-            { icon:"✦", title:"Profile Optimisation", desc:"Headline, banner, about section and featured posts crafted to build instant credibility with your ICP." },
-            { icon:"✦", title:"Content Creation", desc:"Regular posts, carousels, and insights that warm up your target audience before outreach even starts." },
-            { icon:"✦", title:"Thought Leadership", desc:"Position you as the go-to expert in your space so prospects already trust you when they get your message." },
-          ].map((item) => (
+          {home.systemFlow.brandItems.map((b) => ({ icon: "✦", title: b.title, desc: b.description })).map((item) => (
             <div key={item.title} className="flex items-start gap-2.5 p-3 rounded-xl" style={{ background:"rgba(10,102,194,0.05)" }}>
               <span className="text-xs mt-0.5 flex-shrink-0" style={{ color:"#0a66c2" }}>{item.icon}</span>
               <div>
@@ -296,11 +290,11 @@ export default function SystemFlow() {
       <div className="relative z-10">
         <div className="text-3xl mb-2">💰</div>
         <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border mb-3" style={{ color:"#A14A08", borderColor:"rgba(245,183,49,0.4)", background:"rgba(245,183,49,0.08)" }}>
-          The Result
+          {home.systemFlow.resultEyebrow}
         </span>
-        <h3 className="text-xl sm:text-2xl font-black text-[#0a0a0a] mb-2">The force behind your growth</h3>
+        <h3 className="text-xl sm:text-2xl font-black text-[#0a0a0a] mb-2">{home.systemFlow.resultHeading}</h3>
         <p className="text-[#52525B] text-sm max-w-lg mx-auto">
-          Your team closes. Revenue compounds. Repeat the system, scale the results this is what a full-stack outbound engine looks like when it&rsquo;s firing on all cylinders.
+          {home.systemFlow.resultText}
         </p>
       </div>
     </div>
@@ -322,15 +316,15 @@ export default function SystemFlow() {
         {/* Heading */}
         <div className="text-center mb-14">
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 px-3 py-1 rounded-full border" style={{ color:"#A14A08", borderColor:"rgba(245,183,49,0.35)", background:"#FEF9EC" }}>
-            The Myntmore System
+            {home.systemFlow.eyebrow}
           </span>
           <h2 id="system-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#0a0a0a]">
-            From Zero to Pipeline
+            {home.systemFlow.headingLine1}
             <br />
-            <span style={{ color:"#A14A08" }}>Every Single Time</span>
+            <span style={{ color:"#A14A08" }}>{home.systemFlow.headingLine2}</span>
           </h2>
           <p className="mt-4 text-[#52525B] text-base sm:text-lg max-w-xl mx-auto">
-            A repeatable 6-step system that turns cold lists into qualified meetings and closed revenue.
+            {home.systemFlow.intro}
           </p>
         </div>
 

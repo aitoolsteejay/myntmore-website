@@ -2,39 +2,43 @@
 
 import { useState } from "react";
 import { textTone } from "@/lib/colors";
+import home from "@/content/site-copy/home.json";
 
-const PILLS: { label: string; color: string; delay: string; duration: string }[] = [
-  { label: "B2B SaaS",             color: "#3B82F6", delay: "0s",    duration: "4.2s" },
-  { label: "B2B Manufacturing",    color: "#F97316", delay: "0.6s",  duration: "5.0s" },
-  { label: "Financial Services",   color: "#14B8A6", delay: "1.1s",  duration: "4.6s" },
-  { label: "Private Equity",       color: "#F5B731", delay: "0.3s",  duration: "3.8s" },
-  { label: "Venture Capital",      color: "#F5B731", delay: "1.8s",  duration: "4.4s" },
-  { label: "Recruitment",          color: "#A855F7", delay: "0.4s",  duration: "5.2s" },
-  { label: "Marketing Agencies",   color: "#A855F7", delay: "1.5s",  duration: "4.0s" },
-  { label: "Tech Consulting",      color: "#3B82F6", delay: "0.9s",  duration: "4.8s" },
-  { label: "FinTech",              color: "#14B8A6", delay: "2.1s",  duration: "3.6s" },
-  { label: "PropTech",             color: "#10B981", delay: "0.7s",  duration: "5.4s" },
-  { label: "Professional Services",color: "#A855F7", delay: "1.3s",  duration: "4.2s" },
-  { label: "Asset Management",     color: "#F5B731", delay: "0.2s",  duration: "4.6s" },
-  { label: "SaaS Platforms",       color: "#3B82F6", delay: "1.7s",  duration: "3.9s" },
-  { label: "HealthTech",           color: "#10B981", delay: "0.8s",  duration: "4.5s" },
-  { label: "EdTech",               color: "#3B82F6", delay: "1.4s",  duration: "5.1s" },
-  { label: "Logistics & Supply",   color: "#F97316", delay: "2.0s",  duration: "3.7s" },
-  { label: "Accounting Firms",     color: "#14B8A6", delay: "0.5s",  duration: "4.9s" },
-  { label: "Law Firms",            color: "#A855F7", delay: "1.6s",  duration: "4.3s" },
-  { label: "InsurTech",            color: "#14B8A6", delay: "0.1s",  duration: "5.5s" },
-  { label: "Cybersecurity",        color: "#3B82F6", delay: "1.9s",  duration: "4.1s" },
-  { label: "HR Tech",              color: "#A855F7", delay: "0.6s",  duration: "3.8s" },
-  { label: "Data & Analytics",     color: "#F97316", delay: "1.2s",  duration: "5.0s" },
-  { label: "Real Estate",          color: "#10B981", delay: "0.3s",  duration: "4.7s" },
-  { label: "Investment Banking",   color: "#F5B731", delay: "2.2s",  duration: "4.0s" },
-  { label: "Media & Publishing",   color: "#F97316", delay: "1.0s",  duration: "5.3s" },
-  { label: "Clean Energy",         color: "#10B981", delay: "1.5s",  duration: "3.9s" },
-  { label: "Construction Tech",    color: "#F97316", delay: "1.8s",  duration: "5.1s" },
-  { label: "RegTech",              color: "#14B8A6", delay: "0.7s",  duration: "4.2s" },
-  { label: "Corporate Gifting",    color: "#F97316", delay: "2.4s",  duration: "4.6s" },
-  { label: "Jewellery",            color: "#EC4899", delay: "1.2s",  duration: "4.1s" },
+// The sectors and their colours are edited in the admin (Homepage > Industries); each pill floats on
+// its own rhythm, taken from this list in order.
+const RHYTHMS: { delay: string; duration: string }[] = [
+  { delay: "0s", duration: "4.2s" },
+  { delay: "0.6s", duration: "5.0s" },
+  { delay: "1.1s", duration: "4.6s" },
+  { delay: "0.3s", duration: "3.8s" },
+  { delay: "1.8s", duration: "4.4s" },
+  { delay: "0.4s", duration: "5.2s" },
+  { delay: "1.5s", duration: "4.0s" },
+  { delay: "0.9s", duration: "4.8s" },
+  { delay: "2.1s", duration: "3.6s" },
+  { delay: "0.7s", duration: "5.4s" },
+  { delay: "1.3s", duration: "4.2s" },
+  { delay: "0.2s", duration: "4.6s" },
+  { delay: "1.7s", duration: "3.9s" },
+  { delay: "0.8s", duration: "4.5s" },
+  { delay: "1.4s", duration: "5.1s" },
+  { delay: "2.0s", duration: "3.7s" },
+  { delay: "0.5s", duration: "4.9s" },
+  { delay: "1.6s", duration: "4.3s" },
+  { delay: "0.1s", duration: "5.5s" },
+  { delay: "1.9s", duration: "4.1s" },
+  { delay: "0.6s", duration: "3.8s" },
+  { delay: "1.2s", duration: "5.0s" },
+  { delay: "0.3s", duration: "4.7s" },
+  { delay: "2.2s", duration: "4.0s" },
+  { delay: "1.0s", duration: "5.3s" },
+  { delay: "1.5s", duration: "3.9s" },
+  { delay: "1.8s", duration: "5.1s" },
+  { delay: "0.7s", duration: "4.2s" },
+  { delay: "2.4s", duration: "4.6s" },
+  { delay: "1.2s", duration: "4.1s" },
 ];
+const PILLS: { label: string; color: string; delay: string; duration: string }[] = home.industries.pills.map((p, i) => ({ ...p, ...RHYTHMS[i % RHYTHMS.length] }));
 
 function Pill({ label, color, delay, duration }: typeof PILLS[0]) {
   const [hovered, setHovered] = useState(false);
@@ -93,17 +97,17 @@ export default function Industries() {
             className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-5 px-3 py-1 rounded-full border"
             style={{ color: "#A14A08", borderColor: "rgba(245,183,49,0.35)", background: "#FEF9EC" }}
           >
-            Industries We Serve
+            {home.industries.eyebrow}
           </span>
           <h2
             id="industries-heading"
             className="text-3xl sm:text-5xl font-black tracking-tight text-[#0a0a0a]"
           >
-            Every B2B sector.{" "}
-            <span style={{ color: "#A14A08" }}>One outbound engine</span>
+            {home.industries.headingPlain}{" "}
+            <span style={{ color: "#A14A08" }}>{home.industries.headingAccent}</span>
           </h2>
           <p className="mt-4 text-lg text-[#71675E] max-w-xl mx-auto">
-            If you sell to businesses, we know how to reach your buyers regardless of vertical.
+            {home.industries.intro}
           </p>
         </div>
 
@@ -116,13 +120,13 @@ export default function Industries() {
 
         {/* Footer note */}
         <p className="text-center text-sm text-[#71675E] mt-10">
-          Don&rsquo;t see your sector?{" "}
+          {home.industries.footerText}{" "}
           <a
             href="/book-a-call"
             className="font-semibold underline underline-offset-2"
             style={{ color: "#A14A08" }}
           >
-            Let&rsquo;s talk we&rsquo;ve probably done it.
+            {home.industries.footerLink}
           </a>
         </p>
       </div>

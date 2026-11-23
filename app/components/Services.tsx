@@ -1,10 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import home from "@/content/site-copy/home.json";
+import { countUpFormat } from "@/lib/count-up";
 import { textTone } from "@/lib/colors";
 
 // ─── Service data ─────────────────────────────────────────────────────────────
-const SERVICES = [
+// Each card's words are edited in the admin (Homepage > Services); its number, colour and icon stay in
+// code, in order.
+const LOOKS = [
   {
     number: "01",
     accentColor: "#F5B731",
@@ -13,16 +17,6 @@ const SERVICES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    title: "Cold Email Outreach",
-    description:
-      "We build and run cold email campaigns that land in inboxes and get replies. Every sequence is written for your specific ICP sharp subject lines, personalised openers, and CTAs that convert cold strangers into booked meetings.",
-    features: [
-      "Domain warm-up & deliverability infrastructure",
-      "Hyper-personalised copy per ICP segment",
-      "A/B tested subject lines and opening hooks",
-      "Multi-step sequences optimised for reply rate",
-    ],
-    metric: { value: "47%", label: "Avg. Open Rate" },
   },
   {
     number: "02",
@@ -34,16 +28,6 @@ const SERVICES = [
         <circle cx="4" cy="4" r="2" />
       </svg>
     ),
-    title: "LinkedIn Outreach",
-    description:
-      "We turn LinkedIn into a consistent meeting-booking machine. From connection requests to follow-up messages, every touchpoint starts real conversations with decision-makers not just adds to your connection count.",
-    features: [
-      "Targeted ICP outreach at scale",
-      "Personalised connection + message sequences",
-      "Profile optimisation to build instant credibility",
-      "Coordinated with email for multi-channel impact",
-    ],
-    metric: { value: "35%", label: "Reply Rate" },
   },
   {
     number: "03",
@@ -55,18 +39,16 @@ const SERVICES = [
         <circle cx="12" cy="12" r="2" />
       </svg>
     ),
-    title: "Account-Based Marketing",
-    description:
-      "We identify your highest-value target accounts and run coordinated campaigns across email and LinkedIn to engage the entire buying committee so when your AE reaches out, the account already knows your name.",
-    features: [
-      "ICP-matched target account lists",
-      "Intent data & buying signal tracking",
-      "Multi-threaded buying committee engagement",
-      "Account-level pipeline reporting & attribution",
-    ],
-    metric: { value: "6.4×", label: "Higher Deal Size" },
   },
 ];
+
+const SERVICES = home.services.cards.map((c, i) => ({
+  ...LOOKS[i % LOOKS.length],
+  title: c.title,
+  description: c.description,
+  features: c.features,
+  metric: { value: c.metricValue, label: c.metricLabel },
+}));
 
 // ─── Card ─────────────────────────────────────────────────────────────────────
 function ServiceCard({
@@ -168,11 +150,12 @@ export default function Services() {
     const container = statsRef.current;
     if (!container) return;
 
-    const STATS = [
-      { ref: stat1Ref, target: 3.2,  duration: 1600, format: (n: number) => `${n.toFixed(1)}x` },
-      { ref: stat2Ref, target: 18,   duration: 1400, format: (n: number) => `${Math.round(n)} days` },
-      { ref: stat3Ref, target: 120,  duration: 1800, format: (n: number) => `${Math.round(n)}+` },
-    ];
+    // Each figure counts up to the number written in it (edited in the admin).
+    const durations = [1600, 1400, 1800];
+    const STATS = [stat1Ref, stat2Ref, stat3Ref].flatMap((ref, i) => {
+      const figure = countUpFormat(home.services.stats[i]?.value ?? "");
+      return figure ? [{ ref, target: figure.target, duration: durations[i], format: figure.format }] : [];
+    });
 
     // Declared in the effect's own scope (not the IntersectionObserver
     // callback's) so the effect's cleanup can actually reach and cancel
@@ -263,15 +246,15 @@ export default function Services() {
             className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-5 px-3 py-1 rounded-full border"
             style={{ color: "#A14A08", borderColor: "rgba(245,183,49,0.35)", background: "#FEF9EC" }}
           >
-            Our Services
+            {home.services.eyebrow}
           </span>
           <h2
             id="services-heading"
             className="text-3xl sm:text-5xl font-black text-[#0a0a0a] tracking-tight"
           >
-            Three Channels. One Goal.
+            {home.services.headingLine1}
             <br />
-            <span style={{ color: "#A14A08" }}>Meetings on Your Calendar</span>
+            <span style={{ color: "#A14A08" }}>{home.services.headingLine2}</span>
           </h2>
           {/* Wavy gold underline */}
           <div className="flex justify-center -mt-1 mb-1" aria-hidden="true">
@@ -280,8 +263,7 @@ export default function Services() {
             </svg>
           </div>
           <p className="mt-4 text-[#52525B] text-lg max-w-2xl mx-auto">
-            Cold email, LinkedIn outreach, and ABM working together to get your brand
-            in front of the right people and convert them into qualified pipeline.
+            {home.services.intro}
           </p>
         </div>
 
@@ -299,14 +281,14 @@ export default function Services() {
             className="btn-dark inline-flex items-center gap-2 px-8 py-4 text-base font-bold justify-center"
             style={{ borderRadius: "9999px" }}
           >
-            Book a Free Strategy Call
+            {home.services.button}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <p className="text-sm text-[#71675E]">No commitment · 30-minute call · Live in 18 days</p>
-          <a href="/b2b-lead-generation-mumbai" className="text-sm font-semibold text-[#52525B] underline underline-offset-2">
-            Our B2B lead generation agency in Mumbai
+          <p className="text-sm text-[#71675E]">{home.services.buttonNote}</p>
+          <a href={home.services.linkHref} className="text-sm font-semibold text-[#52525B] underline underline-offset-2">
+            {home.services.linkText}
           </a>
         </div>
 
@@ -316,11 +298,7 @@ export default function Services() {
           className="mt-10 rounded-2xl grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x overflow-hidden"
           style={{ background: "#ffffff", border: "1px solid #E8E2D9", boxShadow: "0 2px 16px rgba(0,0,0,0.04)", borderColor: "#E8E2D9" }}
         >
-          {[
-            { ref: stat1Ref, stat: "3.2x",   label: "Higher reply rate than industry average" },
-            { ref: stat2Ref, stat: "18 days", label: "Average time to campaign launch" },
-            { ref: stat3Ref, stat: "130+",    label: "B2B companies trust Myntmore" },
-          ].map((item, i) => (
+          {[stat1Ref, stat2Ref, stat3Ref].slice(0, home.services.stats.length).map((ref, i) => ({ ref, stat: home.services.stats[i].value, label: home.services.stats[i].label })).map((item, i) => (
             <div
               key={item.stat}
               className="flex flex-col items-center text-center px-8 py-7"

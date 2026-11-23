@@ -1,0 +1,98 @@
+{
+  "badge": "1-on-1 Growth Consultation · Free GTM Audit",
+  "headlineStart": "Get absolute clarity on your",
+  "headlineHighlight": "pipeline.",
+  "headlineEnd": "In 30 minutes.",
+  "intro": "Choose a time with our senior growth team. We will audit your outbound systems, stress-test your ICP, and map high-converting angles with zero sales pressure.",
+  "host1PhotoAlt": "Enwil Fernandes, Head of Sales at Myntmore",
+  "host2PhotoAlt": "Tejas Jhaveri, Founder of Myntmore",
+  "hostsEyebrow": "Conducted by Senior Growth Team",
+  "hostsNames": "Enwil Fernandes & Tejas Jhaveri",
+  "hostsRole": "B2B Outbound Specialists",
+  "chipLength": "30 Min",
+  "chipPlace": "Google Meet",
+  "chipPrice": "100% Free",
+  "agendaHeading": "What we cover on the call",
+  "agenda": [
+    {
+      "title": "Outbound Stack & Deliverability Audit",
+      "description": "Secondary domains, SPF/DKIM/DMARC checks, and mailbox warming to keep you out of spam."
+    },
+    {
+      "title": "ICP & Offer Angle Validation",
+      "description": "Why enterprise decision-makers ignore generic pitches, and how to position your offer to demand attention."
+    },
+    {
+      "title": "90-Day Pipeline Action Plan",
+      "description": "A structured blueprint to scale to 15-30+ qualified sales conversations every single month."
+    }
+  ],
+  "stats": [
+    {
+      "value": "130+",
+      "label": "B2B Companies Scaled"
+    },
+    {
+      "value": "12,000+",
+      "label": "Meetings Booked"
+    },
+    {
+      "value": "$120M+",
+      "label": "Pipeline Generated"
+    },
+    {
+      "value": "35%",
+      "label": "Avg. LinkedIn Reply Rate"
+    }
+  ],
+  "trust1Bold": "Zero Pitch:",
+  "trust1Text": "Actionable diagnostic session.",
+  "trust2Bold": "100% Private:",
+  "trust2Text": "Strict confidentiality.",
+  "calendarHeading": "Select a Date & Time",
+  "calendarOpenNew": "Open in new window",
+  "calendarLoading": "Loading Zoho calendar slots...",
+  "calendarPrefer": "Prefer opening in full window?",
+  "calendarOpenTab": "Open Zoho Calendar in new tab",
+  "helpText": "Questions or special scheduling needs?",
+  "helpWhatsapp": "Message on WhatsApp",
+  "helpOrEmail": "or email",
+  "stepsBadge": "Simple 2-Step Process",
+  "stepsHeading": "How the strategy session works",
+  "stepsIntro": "We value your time. No generic slide decks. Just immediate, actionable engineering for your outbound funnel.",
+  "steps": [
+    {
+      "title": "Select Your Time Slot",
+      "description": "Pick a convenient 30-minute calendar window on Google Meet. Calendar invites and reminders are sent immediately."
+    },
+    {
+      "title": "Get Your 90-Day Roadmap",
+      "description": "Walk away with an exact diagnosis of your pipeline leakages and high-leverage steps to hit predictable meeting volume."
+    }
+  ],
+  "faqBadge": "FAQ",
+  "faqHeading": "Frequently asked questions",
+  "faqIntro": "Everything you need to know about the 30-minute growth audit.",
+  "faqs": [
+    {
+      "question": "Who is this strategy session best suited for?",
+      "answer": "B2B founders, CEOs, heads of sales and GTM leaders selling high-ticket services, SaaS or complex enterprise solutions, who want a predictable, repeatable outbound pipeline without relying on luck or spam. It suits teams that have some customers already and want more of the same kind, in India or overseas."
+    },
+    {
+      "question": "Is this call really 100% free? What is the catch?",
+      "answer": "Yes, it is completely free with zero catch. We do not do high-pressure sales pitches. We treat this as an honest diagnostic session to see if our systems can help you. If we're a mutual fit, we can discuss working together; if not, you still walk away with an actionable 90-day outbound roadmap."
+    },
+    {
+      "question": "What should I bring to the call?",
+      "answer": "A quick overview of your ideal customer profile (ICP), the outbound or inbound channels you use today and your monthly revenue goals. If you have live outbound copy or campaign metrics you'd like us to review, have them ready. A rough version of each is fine; working it out is part of the call."
+    },
+    {
+      "question": "Can I bring my co-founder or Head of Sales along?",
+      "answer": "Yes. Forward the Google Meet calendar invite to anyone on your leadership, sales or marketing team who is involved in generating pipeline. It often helps to have whoever owns your targeting and whoever takes the sales calls in the same conversation, so the plan we discuss fits both."
+    },
+    {
+      "question": "What if none of the available slots work for my timezone?",
+      "answer": "Reach out directly on WhatsApp at +91 81693 18951 or email growth@myntmore.com, and we'll find a time that suits your schedule. We work with companies in India and overseas, so calls outside Indian business hours can usually be arranged. Mention your time zone and a few times that work."
+    }
+  ]
+}

@@ -6,7 +6,7 @@ export interface CatalogEntry {
   title: string;
   /** One line on what this is and where it shows. */
   description: string;
-  group: "blog" | "pages" | "caseStudies" | "services" | "faqs";
+  group: "main" | "blog" | "pages" | "caseStudies" | "services" | "faqs";
   /** The live page for an entry, if it has one. */
   url?: (slug: string, title: string) => string | null;
 }
@@ -14,6 +14,11 @@ export interface CatalogEntry {
 const fromTitle = (title: string) => /\((\/[^)\s]*)\)\s*$/.exec(title)?.[1] ?? null;
 
 export const CATALOG: Record<string, CatalogEntry> = {
+  siteHome: { title: "Homepage", description: "myntmore.com: every section from the top of the page to the closing call to action", group: "main", url: () => "/" },
+  siteAbout: { title: "About page", description: "myntmore.com/about-us", group: "main", url: () => "/about-us" },
+  siteServices: { title: "Services overview page", description: "myntmore.com/services: the seven service cards and city links", group: "main", url: () => "/services" },
+  siteBookACall: { title: "Book a call page", description: "myntmore.com/book-a-call: hosts, agenda, figures and questions around the calendar", group: "main", url: () => "/book-a-call" },
+  siteContact: { title: "Contact page", description: "myntmore.com/contact-us: contact cards, form wording, office address", group: "main", url: () => "/contact-us" },
   posts: { title: "Blog posts", description: "Articles at myntmore.com/resources/blogs. New posts start as drafts.", group: "blog", url: (s) => `/resources/blogs/${s}` },
   landingPages: { title: "Industry pages", description: "One page per industry we serve, e.g. Pharma, SaaS, Insurance (myntmore.com/lp/…)", group: "pages", url: (s) => `/lp/${s}` },
   servicePages: { title: "Service pages", description: "ABM, AI lead generation, GTM strategy, personal branding, sales intelligence (myntmore.com/services/…)", group: "services", url: (s) => `/services/${s}` },
@@ -43,6 +48,7 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
 }
 
 export const GROUPS: { key: CatalogEntry["group"]; title: string; description: string }[] = [
+  { key: "main", title: "Main pages", description: "The homepage and the site's main pages" },
   { key: "blog", title: "Blog", description: "Write and edit articles" },
   { key: "pages", title: "Website pages", description: "Industry, city, country, event, job and glossary pages" },
   { key: "services", title: "Service pages", description: "Every page under myntmore.com/services" },

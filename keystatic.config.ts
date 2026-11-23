@@ -1,5 +1,7 @@
 import { collection, config, singleton } from "@keystatic/core";
 import { fields } from "./lib/admin/fields";
+import { homeCopySchema } from "./content/site-copy/schemas/home";
+import { aboutCopySchema, bookACallCopySchema, contactCopySchema, servicesHubCopySchema } from "./content/site-copy/schemas/pages";
 import { coldEmailCopySchema } from "./content/service-copy/schemas/cold-email";
 import { linkedinOutreachCopySchema } from "./content/service-copy/schemas/linkedin-outreach";
 import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-yourself";
@@ -1315,6 +1317,36 @@ export default config({
   // The three bespoke service pages keep their own layouts, so each has its own page-copy file
   // (the search and share metadata for all eight services is in the Service pages collection).
   singletons: {
+    siteHome: singleton({
+      label: "Homepage",
+      path: "content/site-copy/home",
+      format: "json",
+      schema: homeCopySchema,
+    }),
+    siteAbout: singleton({
+      label: "About page",
+      path: "content/site-copy/about",
+      format: "json",
+      schema: aboutCopySchema,
+    }),
+    siteServices: singleton({
+      label: "Services overview page",
+      path: "content/site-copy/services",
+      format: "json",
+      schema: servicesHubCopySchema,
+    }),
+    siteContact: singleton({
+      label: "Contact page",
+      path: "content/site-copy/contact",
+      format: "json",
+      schema: contactCopySchema,
+    }),
+    siteBookACall: singleton({
+      label: "Book a call page",
+      path: "content/site-copy/book-a-call",
+      format: "json",
+      schema: bookACallCopySchema,
+    }),
     serviceCopyColdEmail: singleton({
       label: "Service copy: Cold email",
       path: "content/service-copy/cold-email",
