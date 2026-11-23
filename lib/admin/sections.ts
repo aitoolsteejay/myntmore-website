@@ -36,6 +36,36 @@ const ADVANCED: Rule = {
 };
 
 const TYPE_SECTIONS: Record<string, Rule[]> = {
+  siteAbout: [
+    { title: "Top of the page", match: ["badge", "heading", "lead"] },
+    { title: "Figures strip", match: ["credentials"] },
+    { title: "Founder and story", match: ["photoAlt", "name", "nameLine", "linkedinButton", "linkedinUrl", "bio"] },
+    { title: "Philosophy and quote", match: ["philosophy*", "quote*"] },
+    { title: "Expertise chips", match: ["expertise*"] },
+    { title: "Closing section", match: ["cta*"] },
+  ],
+  siteServices: [
+    { title: "Top of the page", match: ["badge", "headingLine1", "headingLine2", "intro"] },
+    { title: "Service cards", match: ["services"] },
+    { title: "Questions heading", match: ["faqHeading"] },
+    { title: "Locations", match: ["locations*", "cities"] },
+  ],
+  siteContact: [
+    { title: "Top of the page", match: ["badge", "headingLine1", "headingLine2", "intro"] },
+    { title: "Contact cards", match: ["cards"] },
+    { title: "Form", match: ["formHeading", "formIntro", "form"] },
+    { title: "What happens next", match: ["next*"] },
+    { title: "Office", match: ["office*"] },
+  ],
+  siteBookACall: [
+    { title: "Top of the page", match: ["badge", "headline*", "intro"] },
+    { title: "Hosts and format", match: ["host*", "chip*"] },
+    { title: "What we cover", match: ["agenda*"] },
+    { title: "Figures and reassurance", match: ["stats", "trust*"] },
+    { title: "Calendar and help line", match: ["calendar*", "help*"] },
+    { title: "How it works", match: ["steps*"] },
+    { title: "Questions and answers", match: ["faq*"] },
+  ],
   posts: [
     { title: "Article", help: "The title, the opening summary and the article itself", match: ["title", "category", "summary", "content"] },
     { title: "Publishing", help: "Draft or live, dates and read time", match: ["published", "datePublished", "dateModified", "readTime"] },

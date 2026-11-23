@@ -1,0 +1,63 @@
+{
+  "badge": "Get in Touch",
+  "headingLine1": "Stop guessing",
+  "headingLine2": "Start closing",
+  "intro": "Book a 30-minute strategy call. We'll audit your outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
+  "cards": [
+    {
+      "icon": "📅",
+      "title": "Free GTM Audit",
+      "value": "30-minute strategy call",
+      "href": "/book-a-call",
+      "cta": "Book free call"
+    },
+    {
+      "icon": "✉️",
+      "title": "Email Directly",
+      "value": "growth@myntmore.com",
+      "href": "mailto:growth@myntmore.com",
+      "cta": "Send email"
+    },
+    {
+      "icon": "📞",
+      "title": "Call Us",
+      "value": "+91 81693 18951",
+      "href": "tel:+918169318951",
+      "cta": "Call now"
+    }
+  ],
+  "formHeading": "Let's build your AI engine",
+  "formIntro": "Fill out the form and we'll get back to you within 24 hours with a custom GTM strategy.",
+  "form": {
+    "nameLabel": "Full Name *",
+    "namePlaceholder": "Amara Okafor",
+    "designationLabel": "Designation *",
+    "designationPlaceholder": "Founder / Head of Sales",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Northbridge Consulting",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+1 617 555 0134",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "amara@northbridge.co",
+    "submit": "Get Your Custom Strategy",
+    "note": "No commitments. No agency pitch decks. Just clarity."
+  },
+  "nextHeading": "What happens next",
+  "nextSteps": [
+    "Submit your details above or book a call directly on our calendar",
+    "We review your current outreach setup before the call",
+    "30-min GTM audit: ICP mapping, outreach review, pipeline blockers",
+    "Custom action plan sent within 24 hours"
+  ],
+  "officeHeading": "Our office",
+  "officeLinkText": "Lead generation company in Mumbai",
+  "officeLinkHref": "/b2b-lead-generation-mumbai",
+  "officeAddress": [
+    "WeWork Enam Sambhav",
+    "C - 20, G Block Rd, G Block BKC,",
+    "Bandra Kurla Complex, Bandra East,",
+    "Mumbai, Maharashtra 400051"
+  ],
+  "officeMapUrl": "https://www.google.com/maps/search/?api=1&query=WeWork%20Enam%20Sambhav%2C%20C%20-%2020%2C%20G%20Block%20Rd%2C%20G%20Block%20BKC%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+  "officeMapLabel": "View WeWork Enam Sambhav BKC on Google Maps"
+}

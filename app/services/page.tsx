@@ -10,6 +10,8 @@ import { textTone } from "@/lib/colors";
 import { pageFaqsQA } from "@/lib/page-faqs";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
+import servicesHub from "@/content/site-copy/services.json";
+import RichText from "@/components/RichText";
 
 export const metadata: Metadata = withPageSeo("/services", {
   title: "AI-Powered B2B Lead Generation Services",
@@ -25,15 +27,26 @@ export const metadata: Metadata = withPageSeo("/services", {
   },
 });
 
-const SERVICES = [
-  { number: "01", title: "LinkedIn Outreach & Automation", tagline: "Conversations happening in your LinkedIn inbox. Every week.", desc: "Multi-touch sequences that mimic human behaviour and generate replies from the right people. We manage everything from profile audit to reply handoff.", href: "/services/linkedin-outreach", hoverClass: "card-hover-linkedin", accentColor: "#0077b5", stats: [{ v: "48%", l: "Avg acceptance rate" }, { v: "21%", l: "Avg reply rate" }] },
-  { number: "02", title: "Cold Email Infrastructure", tagline: "Cold email that actually lands in the inbox.", desc: "The full technical stack built and managed for you. Domain setup, warmup, deliverability, AI-personalised sequences. 98.5% inbox rate target.", href: "/services/cold-email", hoverClass: "card-hover-green", accentColor: "#16a34a", stats: [{ v: "98.5%", l: "Inbox rate" }, { v: "<0.2%", l: "Spam rate" }] },
-  { number: "03", title: "ICP Mapping & Lead Scoring", tagline: "Know exactly who is ready to buy. Before your competitors do.", desc: "We map your ideal customer profile against 40+ real-world intent signals. Trigger-based lists updated daily. You stop wasting reps on bad-fit prospects.", href: "/services/sales-intelligence", hoverClass: "card-hover-purple", accentColor: "#a855f7", stats: [{ v: "40+", l: "Intent signals" }, { v: "Daily", l: "List refresh" }] },
-  { number: "04", title: "AI Lead Generation", tagline: "Your pipeline shouldn't depend on how much time your team has.", desc: "Custom AI agents research, qualify, and prioritise leads at scale. 80% reduction in manual research time. 300–1500 scored, research-enriched leads per month.", href: "/services/ai-lead-generation", hoverClass: "card-hover-blue", accentColor: "#3b82f6", stats: [{ v: "80%", l: "Less manual research" }, { v: "35%", l: "Avg LinkedIn reply rate" }] },
-  { number: "05", title: "Account-Based Marketing", tagline: "Stop marketing to everyone. Go all-in on the accounts that matter.", desc: "Coordinated multi-channel campaigns across email and LinkedIn engage the entire buying committee at your highest-value target accounts, so your AE isn't the first name they've seen.", href: "/services/account-based-marketing", hoverClass: "card-hover-indigo", accentColor: "#6366f1", stats: [{ v: "6.4x", l: "Higher deal size" }, { v: "3+", l: "Channels orchestrated" }] },
-  { number: "06", title: "Personal Branding", tagline: "Your buyers are on LinkedIn every day. Are they seeing you?", desc: "We ghostwrite content that positions you as the authority in your space. 4–8 posts/month from monthly voice interviews. Inbound finds you instead of you chasing it.", href: "/services/personal-branding", hoverClass: "card-hover-warm", accentColor: "#D97706", stats: [{ v: "10x", l: "Profile visit increase" }, { v: "2x", l: "Reply rate boost" }] },
-  { number: "07", title: "GTM Strategy", tagline: "A go-to-market plan built to be run, not filed away.", desc: "ICP, positioning, and channel mix, built by the same team that executes it across cold email, LinkedIn, ABM, or personal branding. Reviewed and adjusted monthly against real data.", href: "/services/gtm-strategy", hoverClass: "card-hover-teal", accentColor: "#0891b2", stats: [{ v: "18", l: "Days to campaign launch" }, { v: "130+", l: "B2B companies" }] },
+// The service cards are edited in the admin (Services overview page); each card's number, hover style
+// and colour stay here, in order.
+const copy = servicesHub;
+const LOOKS = [
+  { number: "01", hoverClass: "card-hover-linkedin", accentColor: "#0077b5" },
+  { number: "02", hoverClass: "card-hover-green", accentColor: "#16a34a" },
+  { number: "03", hoverClass: "card-hover-purple", accentColor: "#a855f7" },
+  { number: "04", hoverClass: "card-hover-blue", accentColor: "#3b82f6" },
+  { number: "05", hoverClass: "card-hover-indigo", accentColor: "#6366f1" },
+  { number: "06", hoverClass: "card-hover-warm", accentColor: "#D97706" },
+  { number: "07", hoverClass: "card-hover-teal", accentColor: "#0891b2" },
 ];
+const SERVICES = copy.services.map((c, i) => ({
+  ...LOOKS[i % LOOKS.length],
+  title: c.title,
+  tagline: c.tagline,
+  desc: c.description,
+  href: c.href,
+  stats: c.stats.map((st) => ({ v: st.value, l: st.label })),
+}));
 
 const FAQ = pageFaqsQA("service-overview");
 
@@ -46,14 +59,14 @@ export default function Services() {
           <Breadcrumbs items={[{ label: "Services", href: "/services" }]} />
           <div className="mb-4">
             <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full" style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
-              B2B Lead Generation Services
+              {copy.badge}
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-            Seven systems<br />One growth engine
+            {copy.headingLine1}<br />{copy.headingLine2}
           </h1>
           <p className="text-lg sm:text-xl max-w-2xl" style={{ color: "#52525B" }}>
-            Every service is productized, scoped, and runs on proven infrastructure, not promises. We build the architecture, you close the deals.
+            {copy.intro}
           </p>
         </div>
       </section>
@@ -88,7 +101,7 @@ export default function Services() {
 
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black mb-10" style={{ color: "#0a0a0a" }}>Frequently asked questions</h2>
+          <h2 className="text-3xl font-black mb-10" style={{ color: "#0a0a0a" }}>{copy.faqHeading}</h2>
           <div className="space-y-6">
             {FAQ.map((item) => (
               <div key={item.q} className="rounded-2xl border p-6" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
@@ -105,34 +118,17 @@ export default function Services() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
             <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full" style={{ backgroundColor: "#FEF9EC", color: "#A14A08", border: "1px solid rgba(245,183,49,0.3)" }}>
-              Locations
+              {copy.locationsBadge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black mt-3 mb-2" style={{ color: "#0a0a0a" }}>
-              B2B Outbound Services Across India
+              {copy.locationsHeading}
             </h2>
             <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#52525B" }}>
-              From BKC, we run <Link href="/b2b-lead-generation-mumbai" className="underline underline-offset-2">B2B lead generation in Mumbai</Link> and manage outbound campaigns for teams across India.
+              <RichText text={copy.locationsText} linkClassName="underline underline-offset-2" />
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { city: "Mumbai", href: "/b2b-lead-generation-mumbai", blurb: "BFSI, Media & SaaS" },
-              { city: "Bengaluru", href: "/b2b-lead-generation-bengaluru", blurb: "Tech & B2B SaaS" },
-              { city: "Delhi NCR", href: "/b2b-lead-generation-delhi", blurb: "Enterprise & D2C Supply" },
-              { city: "Gurugram", href: "/b2b-lead-generation-gurugram", blurb: "SaaS, Fintech & Staffing" },
-              { city: "Noida", href: "/b2b-lead-generation-noida", blurb: "IT Services & Electronics" },
-              { city: "Pune", href: "/b2b-lead-generation-pune", blurb: "Auto, IT & Industrial" },
-              { city: "Hyderabad", href: "/b2b-lead-generation-hyderabad", blurb: "Pharma & Enterprise Tech" },
-              { city: "Chennai", href: "/b2b-lead-generation-chennai", blurb: "SaaS & Manufacturing" },
-              { city: "Ahmedabad", href: "/b2b-lead-generation-ahmedabad", blurb: "Chemicals & Export" },
-              { city: "Kolkata", href: "/b2b-lead-generation-kolkata", blurb: "Industrial & Healthcare" },
-              { city: "Jaipur", href: "/b2b-lead-generation-jaipur", blurb: "Gems, Jewellery & IT" },
-              { city: "Indore", href: "/b2b-lead-generation-indore", blurb: "IT, Pharma & Auto" },
-              { city: "Surat", href: "/b2b-lead-generation-surat", blurb: "Diamonds & Textiles" },
-              { city: "Coimbatore", href: "/b2b-lead-generation-coimbatore", blurb: "Pumps, Textiles & IT" },
-              { city: "Dubai", href: "/b2b-lead-generation-dubai", blurb: "UAE B2B & Market Entry" },
-              { city: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi", blurb: "Enterprise & Energy" },
-            ].map((c) => (
+            {copy.cities.map((c) => (
               <Link
                 key={c.href}
                 href={c.href}
