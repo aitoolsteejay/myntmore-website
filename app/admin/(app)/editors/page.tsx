@@ -14,7 +14,7 @@ export default async function EditorsPage() {
     <>
       <h1 className="text-3xl font-black">Editors</h1>
       <p className="mt-1 max-w-2xl text-sm text-[#52525B]">
-        Who can sign in to this admin. Invited people get an email with a sign-in link; afterwards they sign in at /admin with their email. Every change here is recorded in Activity.
+        Only the people listed here can sign in to this admin, with their Myntmore email and password. Having a Myntmore login is not enough on its own. Every change here is recorded in Activity.
       </p>
       <EditorsManager initial={editors} roles={ROLES} me={me.email} />
     </>

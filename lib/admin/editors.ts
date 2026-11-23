@@ -1,13 +1,14 @@
 // Managing who may use the admin: list, invite, change role, remove access. Admins only (checked by the
 // callers). Rows live in Supabase admin_editors; in local development they are kept in memory.
 //
-// An invite adds the person to admin_editors and emails them a sign-in link, the same link the sign-in
-// page sends (Supabase "Confirm signup" for a new address, "Magic link" for one that signed in before).
-// If the email cannot be sent (Supabase's built-in mailer allows only a few an hour), the person is still
-// added and can request a link themselves at /admin/login.
+// Sign-in uses the team's existing Myntmore logins (Supabase email + password accounts). Having a login is
+// not enough: only people listed here (admin_editors, active) get in. Adding someone who already has a
+// login leaves their password alone; for someone new, a login is created and the admin gets the password
+// to pass on. No email is ever sent.
 import "server-only";
 import { recordActivity } from "./activity";
 import type { Editor, Role } from "./auth";
+import { ensureAccount, generatePassword, passwordProblem, setAccountPassword } from "./passwords";
 import { isLocalDevMode } from "./store";
 
 export interface EditorRow {
@@ -59,22 +60,6 @@ async function upsert(row: Omit<EditorRow, "created_at">): Promise<void> {
   if (error) throw new Error(`Could not save the editor: ${error.message}`);
 }
 
-/** Emails a sign-in link. Returns a problem to show, or null when sent. */
-async function sendLink(email: string, origin: string): Promise<string | null> {
-  if (isLocalDevMode()) return "Local development: no email is sent.";
-  // A stateless client, so sending someone else a link leaves the admin's own session cookies alone.
-  const { createClient } = await import("@supabase/supabase-js");
-  const client = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
-    auth: { persistSession: false, autoRefreshToken: false, flowType: "implicit" },
-  });
-  const { error } = await client.auth.signInWithOtp({ email, options: { emailRedirectTo: `${origin}/admin/auth/callback?next=/admin`, shouldCreateUser: true } });
-  if (!error) return null;
-  console.error("admin invite: could not send link", error.message);
-  return /rate|limit|too many/i.test(error.message)
-    ? "Supabase's email limit was reached, so no email went out this time."
-    : `The email could not be sent (${error.message}).`;
-}
-
 async function log(by: Editor, action: "create" | "update" | "delete", email: string, changes: { path: string; before: unknown; after: unknown }[]) {
   try {
     await recordActivity({
@@ -95,33 +80,45 @@ async function log(by: Editor, action: "create" | "update" | "delete", email: st
   }
 }
 
-export type EditorResult = { ok: true; message: string; warning?: string } | { ok: false; status: 400 | 404 | 409; message: string };
+export type EditorResult = { ok: true; message: string; warning?: string; password?: string } | { ok: false; status: 400 | 404 | 409; message: string };
 
-/** Add someone (or re-activate them) and email them a sign-in link. */
-export async function inviteEditor(input: { email: string; name: string; role: Role }, by: Editor, origin: string): Promise<EditorResult> {
+/** The password to use: the one the admin typed, or a generated one. */
+function choosePassword(typed: string | undefined): { password: string } | { problem: string } {
+  const password = typed?.trim() ? typed : generatePassword();
+  const problem = passwordProblem(password);
+  return problem ? { problem } : { password };
+}
+
+/** Add someone (or re-activate them) with a password the admin passes on. */
+export async function inviteEditor(input: { email: string; name: string; role: Role; password?: string }, by: Editor): Promise<EditorResult> {
   const email = input.email.trim().toLowerCase();
   const name = input.name.trim();
   if (!EMAIL.test(email) || email.length > 254) return { ok: false, status: 400, message: "Enter a valid email address." };
   if (!ROLES.some((r) => r.value === input.role)) return { ok: false, status: 400, message: "Choose a role." };
   const existing = await getRow(email);
-  if (existing?.active) return { ok: false, status: 409, message: `${email} already has access. Use "Send sign-in link" next to their name to email them again.` };
+  if (existing?.active) return { ok: false, status: 409, message: `${email} already has access. Use "Set new password" next to their name if they need a new one.` };
+  const chosen = choosePassword(input.password);
+  if ("problem" in chosen) return { ok: false, status: 400, message: chosen.problem };
+  const { created } = isLocalDevMode() ? { created: true } : await ensureAccount(email, chosen.password);
 
   await upsert({ email, name: name || existing?.name || "", role: input.role, allowed_types: existing?.allowed_types ?? null, active: true });
   await log(by, existing ? "update" : "create", email, [
     ...(existing ? [{ path: "active", before: false, after: true }] : []),
     { path: "role", before: existing?.role ?? null, after: input.role },
   ]);
-  const problem = await sendLink(email, origin);
-  return problem
-    ? { ok: true, message: `Added ${email}.`, warning: `${problem} They can sign in at /admin with their email to get a link.` }
-    : { ok: true, message: `Invited ${email}. They will get an email with a sign-in link.` };
+  if (!created) return { ok: true, message: `Added ${email}. They already have a Myntmore login, so they sign in at myntmore.com/admin with their usual email and password.` };
+  return { ok: true, message: `Added ${email} and created a login for them. Send them the address myntmore.com/admin, their email and this password:`, password: chosen.password };
 }
 
-export async function resendLink(email: string, origin: string): Promise<EditorResult> {
+/** Set a new password for someone (they forgot theirs, or it should be changed). */
+export async function resetPassword(email: string, typed: string | undefined, by: Editor): Promise<EditorResult> {
   const row = await getRow(email.toLowerCase());
   if (!row || !row.active) return { ok: false, status: 404, message: "This person does not have access." };
-  const problem = await sendLink(row.email, origin);
-  return problem ? { ok: true, message: "Not sent.", warning: problem } : { ok: true, message: `Sign-in link sent to ${row.email}.` };
+  const chosen = choosePassword(typed);
+  if ("problem" in chosen) return { ok: false, status: 400, message: chosen.problem };
+  if (!isLocalDevMode()) await setAccountPassword(row.email, chosen.password);
+  await log(by, "update", row.email, [{ path: "password", before: "(old password)", after: "(new password set)" }]);
+  return { ok: true, message: `New password for ${row.email}. Their old password no longer works here or in other Myntmore tools that use the same login. Send them this one:`, password: chosen.password };
 }
 
 /** Change someone's role or name, or remove / restore their access. */

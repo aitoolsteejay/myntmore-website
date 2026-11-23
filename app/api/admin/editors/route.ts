@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { currentEditor, type Role } from "@/lib/admin/auth";
-import { inviteEditor, resendLink, updateEditor } from "@/lib/admin/editors";
+import { inviteEditor, resetPassword, updateEditor } from "@/lib/admin/editors";
 
 export const dynamic = "force-dynamic";
 
-// Editor management, admins only. POST { action: "invite" | "resend" | "update", ... }.
+// Editor management, admins only. POST { action: "invite" | "password" | "update", ... }.
 export async function POST(req: NextRequest) {
   const editor = await currentEditor().catch(() => null);
   if (!editor) return NextResponse.json({ error: "Sign in first." }, { status: 401 });
@@ -12,13 +12,12 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json().catch(() => null);
   if (!body || typeof body !== "object") return NextResponse.json({ error: "The form data was incomplete." }, { status: 400 });
-  const origin = new URL(req.url).origin;
   const str = (v: unknown) => (typeof v === "string" ? v : "");
 
   try {
     let result;
-    if (body.action === "invite") result = await inviteEditor({ email: str(body.email), name: str(body.name), role: str(body.role) as Role }, editor, origin);
-    else if (body.action === "resend") result = await resendLink(str(body.email), origin);
+    if (body.action === "invite") result = await inviteEditor({ email: str(body.email), name: str(body.name), role: str(body.role) as Role, password: str(body.password) }, editor);
+    else if (body.action === "password") result = await resetPassword(str(body.email), str(body.password), editor);
     else if (body.action === "update")
       result = await updateEditor(
         str(body.email),

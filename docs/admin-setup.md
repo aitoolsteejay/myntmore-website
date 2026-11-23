@@ -1,6 +1,6 @@
 # Content admin (/admin): setup and how it works
 
-`/admin` is Myntmore's own content editor. Editors sign in with their work email; every save becomes one commit on `master` with the editor as the author, and Vercel deploys it like any other push. Git stays the single source of truth; Supabase only holds sign-ins, editor roles and the activity log.
+`/admin` is Myntmore's own content editor. Editors sign in with their Myntmore email and password (the same Supabase logins the team's other tools use), and only people on the admin's Editors list get in. Every save becomes one commit on `master` with the editor as the author, and Vercel deploys it like any other push. Git stays the single source of truth; Supabase only holds sign-ins, editor roles and the activity log.
 
 ```
 Editor's browser ──▶ Vercel function ──▶ GitHub (master) ──▶ Vercel build ──▶ live site
@@ -43,13 +43,7 @@ Use the same Supabase project the site already uses.
    ```sql
    insert into public.admin_editors (email, name, role) values ('you@myntmore.com', 'Your Name', 'admin');
    ```
-2. **Authentication → URL Configuration:** Site URL `https://www.myntmore.com`; add `https://www.myntmore.com/admin/auth/callback` to Redirect URLs (and `http://localhost:3000/admin/auth/callback` for local testing).
-3. **Authentication → Email Templates** (recommended, so the sign-in link works on any device, not only in the browser that asked for it). In both **Magic Link** and **Confirm signup**, replace the link with:
-   ```
-   {{ .SiteURL }}/admin/auth/callback?token_hash={{ .TokenHash }}&type=email
-   ```
-   The site does not use Supabase sign-in anywhere else, so these templates only affect the admin.
-4. **Authentication → Emails → SMTP:** Supabase's built-in email is limited to a few messages an hour. For day-to-day use, connect your own SMTP (e.g. the Zoho mailbox).
+2. **Authentication → Providers → Email:** must be enabled (it is by default). Sign-in uses email and password; the admin sends no emails, so the email templates and Supabase's email limits do not matter for it.
 
 ### 3. Vercel environment variables (Production only)
 
@@ -73,11 +67,11 @@ Redeploy once after adding the variables.
 
 ### 4. Sign in
 
-Go to `https://www.myntmore.com/admin`, enter your email, and click the link in the email.
+Go to `https://www.myntmore.com/admin` and sign in with your Myntmore email and password. If you have no Supabase login yet, create one in Supabase (**Authentication → Users → Add user**, tick **Auto Confirm User**).
 
 ## Managing editors
 
-Admins manage people on the **Editors** page (`/admin/editors`): invite someone by email with a role, change a role, remove or restore access. An invite emails a sign-in link (Supabase's "Confirm signup" email for a new address). Supabase's built-in mailer sends only a few emails an hour; if an invite email is not sent, the person is still added and can request a link at `/admin` with their email. Every change is recorded in Activity. There is always at least one admin, and admins cannot remove their own admin access.
+Admins manage people on the **Editors** page (`/admin/editors`): add someone with a role, change a role, set a new password, remove or restore access. Someone who already has a Myntmore login keeps their password; for anyone else a login is created and the admin is shown the password once, to pass on. "Set new password" changes that person's password everywhere the login is used. Everyone can change their own password by clicking their name, top right. Every change is recorded in Activity. There is always at least one admin, and admins cannot remove their own admin access.
 
 The same can be done in the Supabase SQL editor:
 
@@ -100,7 +94,7 @@ Roles: **admin** (everything), **editor** (edit the allowed content types), **vi
 - The App key and the Supabase service-role key live only in server environment variables.
 - Middleware turns away anyone not signed in from `/admin` and `/api/admin`; every page and every save then checks the editor's role on the server.
 - The editors and activity tables have row-level security with no policies: the browser cannot read or change them.
-- Sign-in links go only to active editors, and the form answers the same way for any email, so it does not reveal who has access. Requests are rate limited.
+- Only active editors can sign in; a valid login that is not on the Editors list gets the same "wrong email or password" answer, so the form does not reveal who has access. Attempts are rate limited per IP and per email.
 - `/admin` is `noindex`, disallowed in `robots.txt`, and hidden from `/site-audit`.
 
 ## Local development
