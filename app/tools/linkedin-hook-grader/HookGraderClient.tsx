@@ -9,6 +9,10 @@ import { LandingPage } from "@/components/tools/hook-grader/LandingPage";
 import { HandUnderline, PillBadge } from "@/components/cold-email-roi/HandUnderline";
 import { FOLD_CHARACTERS, MAX_HOOK_CHARACTERS, gradeHook, type HookScore, type HookVerdict } from "@/lib/hook-grader";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolLinkedinHookGrader.json";
+
+// This page's text is edited in the admin ("LinkedIn Hook Grader") and lives in content/page-copy/toolLinkedinHookGrader.json.
+const copy = pageCopy;
 
 type FlowStep = "landing" | "lead" | "input" | "results";
 
@@ -39,9 +43,9 @@ function ScoreCard({ score }: { score: HookScore }) {
     <div className="rounded-2xl border bg-white p-6 sm:p-8" style={{ borderColor: BORDER, borderTop: `3px solid ${GOLD}` }}>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>Your hook score</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t01}</p>
           <p className="mt-1 text-6xl font-black tabular-nums" style={{ color: INK }}>
-            {score.total}<span className="text-2xl font-bold" style={{ color: MUTED }}>/100</span>
+            {score.total}<span className="text-2xl font-bold" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t02}</span>
           </p>
         </div>
         <span className="rounded-full border px-4 py-1.5 text-sm font-black" style={{ backgroundColor: "rgba(245,183,49,0.18)", borderColor: "rgba(245,183,49,0.7)", color: "#7A5200" }}>
@@ -124,7 +128,7 @@ export default function HookGraderClient() {
     }
   };
 
-  const copy = async (text: string, index: number) => {
+  const copyToClipboard = async (text: string, index: number) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(index);
@@ -153,13 +157,10 @@ export default function HookGraderClient() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6">
         <header className="pb-10 text-center">
-          <div className="mb-5"><PillBadge>Free LinkedIn Tool</PillBadge></div>
-          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-5xl">
-            LinkedIn <HandUnderline>Hook Grader</HandUnderline>
+          <div className="mb-5"><PillBadge>{copy.HookGraderClient_s02.t03}</PillBadge></div>
+          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-5xl">{copy.HookGraderClient_s02.t04}<HandUnderline>{copy.HookGraderClient_s02.t05}</HandUnderline>
           </h1>
-          <p className="mx-auto max-w-xl text-base font-medium" style={{ color: MUTED }}>
-            Paste the first two lines of your post. You get a score out of 100, and three rewrites graded by the same rules.
-          </p>
+          <p className="mx-auto max-w-xl text-base font-medium" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t06}</p>
         </header>
 
         {step === "lead" && (
@@ -171,7 +172,7 @@ export default function HookGraderClient() {
             <div className="absolute left-0 top-0 h-1 w-full" style={{ backgroundColor: GOLD, opacity: 0.6 }} />
             <div className="space-y-8">
               <div className="space-y-3">
-                <label htmlFor="hook" className="block text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>Your hook (the first two lines)</label>
+                <label htmlFor="hook" className="block text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t07}</label>
                 <textarea
                   id="hook"
                   rows={5}
@@ -188,14 +189,14 @@ export default function HookGraderClient() {
                 </p>
               </div>
               <div className="space-y-3">
-                <label htmlFor="audience" className="block text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>Who is the post for? (optional)</label>
+                <label htmlFor="audience" className="block text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t08}</label>
                 <input
                   id="audience"
                   type="text"
                   maxLength={150}
                   value={audience}
                   onChange={(e) => setAudience(e.target.value)}
-                  placeholder="e.g. Founders of Series A SaaS companies"
+                  placeholder={copy.HookGraderClient_s02.t09}
                   className="w-full rounded-lg border bg-white px-4 py-3 text-base text-black outline-none transition-colors placeholder:text-gray-400 focus:border-[#F5B731]"
                   style={{ borderColor: BORDER }}
                 />
@@ -208,7 +209,7 @@ export default function HookGraderClient() {
               className="mt-10 flex min-h-[56px] w-full items-center justify-center gap-3 rounded-xl text-base font-bold uppercase tracking-widest transition-all disabled:cursor-not-allowed disabled:opacity-50"
               style={canGrade || loading ? { backgroundColor: GOLD, color: INK } : { backgroundColor: "#F1EEE8", color: "#A1A1AA" }}
             >
-              {loading ? (<><span className="h-5 w-5 animate-spin rounded-full border-2 border-black border-t-transparent" aria-hidden="true" />Grading...</>) : "Grade my hook"}
+              {loading ? (<><span className="h-5 w-5 animate-spin rounded-full border-2 border-black border-t-transparent" aria-hidden="true" />{copy.HookGraderClient_s02.t10}</>) : "Grade my hook"}
             </button>
             {error && <p role="alert" className="mt-4 text-center text-sm font-medium" style={{ color: "#B91C1C" }}>{error}</p>}
           </div>
@@ -217,14 +218,14 @@ export default function HookGraderClient() {
         {step === "results" && score && (
           <div className="space-y-8">
             <div className="rounded-2xl border bg-white p-6 sm:p-8" style={{ borderColor: BORDER }}>
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>Your hook</p>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em]" style={{ color: MUTED }}>{copy.HookGraderClient_s02.t11}</p>
               <p className="whitespace-pre-line text-lg font-medium leading-relaxed">{graded}</p>
             </div>
 
             <ScoreCard score={score} />
 
             <section aria-labelledby="alts-title">
-              <h2 id="alts-title" className="mb-5 text-2xl font-black">Three rewrites to choose from</h2>
+              <h2 id="alts-title" className="mb-5 text-2xl font-black">{copy.HookGraderClient_s03.t01}</h2>
               {alternatives && alternatives.length > 0 ? (
                 <div className="space-y-5">
                   {alternatives.map((a, i) => {
@@ -233,77 +234,68 @@ export default function HookGraderClient() {
                     return (
                       <div key={i} className="rounded-2xl border bg-white p-6 sm:p-8" style={{ borderColor: BORDER, borderTop: `3px solid ${i === 0 ? GOLD : i === 1 ? ORANGE : "#D97706"}` }}>
                         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                          <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: GOLD_TEXT }}>Option {i + 1}{a.angle ? ` · ${prettyAngle(a.angle)}` : ""}</p>
+                          <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: GOLD_TEXT }}>{copy.HookGraderClient_s03.t02}{i + 1}{a.angle ? ` · ${prettyAngle(a.angle)}` : ""}</p>
                           <div className="flex items-center gap-3">
                             {s && (
-                              <span className="text-sm font-black tabular-nums" title="Scored with the same six rules as your hook">
-                                {s.total}/100{" "}
+                              <span className="text-sm font-black tabular-nums" title={copy.HookGraderClient_s03.t03}>
+                                {s.total}{copy.HookGraderClient_s03.t04}{" "}
                                 <span className="text-xs font-bold" style={{ color: diff >= 0 ? "#9A3412" : MUTED }}>({diff >= 0 ? "+" : ""}{diff})</span>
                               </span>
                             )}
                             <button
                               type="button"
-                              onClick={() => copy(a.hook, i)}
+                              onClick={() => copyToClipboard(a.hook, i)}
                               aria-label={`Copy option ${i + 1}`}
                               className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border bg-white px-3.5 text-xs font-bold transition-colors hover:bg-[#F8F6F2]"
                               style={{ borderColor: BORDER, color: INK }}
                             >
-                              {copied === i ? (<><Check className="h-3.5 w-3.5" style={{ color: ORANGE }} aria-hidden="true" /> Copied</>) : (<><Copy className="h-3.5 w-3.5" aria-hidden="true" /> Copy</>)}
+                              {copied === i ? (<><Check className="h-3.5 w-3.5" style={{ color: ORANGE }} aria-hidden="true" />{copy.HookGraderClient_s03.t05}</>) : (<><Copy className="h-3.5 w-3.5" aria-hidden="true" />{copy.HookGraderClient_s03.t06}</>)}
                             </button>
                           </div>
                         </div>
                         <p className="whitespace-pre-line text-xl font-bold leading-snug">{a.hook}</p>
-                        {a.why && <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}><strong style={{ color: INK }}>Why it works: </strong>{a.why}</p>}
+                        {a.why && <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}><strong style={{ color: INK }}>{copy.HookGraderClient_s03.t07}</strong>{a.why}</p>}
                       </div>
                     );
                   })}
-                  <p className="text-xs" style={{ color: MUTED }}>Check any [bracketed] placeholders before you post, and make sure every claim is true for you. The AI never invents numbers.</p>
+                  <p className="text-xs" style={{ color: MUTED }}>{copy.HookGraderClient_s03.t08}</p>
                 </div>
               ) : (
                 <div className="rounded-2xl border bg-white p-6 text-sm" style={{ borderColor: BORDER, color: MUTED }}>
                   <p role="alert" className="font-bold" style={{ color: "#B91C1C" }}>{error ?? "No rewrites came back."}</p>
-                  <p className="mt-2">Your score above is still valid. It is calculated from the rules, not by the AI. Try again for rewrites.</p>
-                  <button type="button" onClick={() => { setStep("input"); }} className="mt-4 inline-flex min-h-[44px] items-center rounded-lg border bg-white px-4 text-sm font-bold" style={{ borderColor: BORDER, color: INK }}>Try again</button>
+                  <p className="mt-2">{copy.HookGraderClient_s03.t09}</p>
+                  <button type="button" onClick={() => { setStep("input"); }} className="mt-4 inline-flex min-h-[44px] items-center rounded-lg border bg-white px-4 text-sm font-bold" style={{ borderColor: BORDER, color: INK }}>{copy.HookGraderClient_s03.t10}</button>
                 </div>
               )}
             </section>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
               <button type="button" onClick={reset} className="inline-flex min-h-[44px] items-center gap-2 rounded-full border bg-white px-6 text-sm font-bold transition-colors hover:bg-[#F8F6F2]" style={{ borderColor: BORDER, color: INK }}>
-                <RotateCcw className="h-4 w-4" aria-hidden="true" /> Grade another hook
-              </button>
+                <RotateCcw className="h-4 w-4" aria-hidden="true" />{copy.HookGraderClient_s03.t11}</button>
               <a
                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent("https://www.myntmore.com/tools/linkedin-hook-grader")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-full px-6 text-sm font-bold text-white transition-opacity hover:opacity-90"
                 style={{ backgroundColor: "#0A66C2" }}
-              >
-                Share on LinkedIn
-              </a>
+              >{copy.HookGraderClient_s03.t12}</a>
             </div>
 
             <div className="rounded-2xl border bg-white p-6 text-center sm:p-8" style={{ borderColor: BORDER }}>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: GOLD_TEXT }}>Turn Views into Pipeline</p>
-              <h3 className="text-xl font-black mb-2">Want the full system to turn LinkedIn content into sales calls?</h3>
-              <p className="text-sm mb-4" style={{ color: MUTED }}>
-                Hooks capture attention, but converting readers into qualified discovery calls takes a structured daily routine.
-              </p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: GOLD_TEXT }}>{copy.HookGraderClient_s03.t13}</p>
+              <h3 className="text-xl font-black mb-2">{copy.HookGraderClient_s04.t01}</h3>
+              <p className="text-sm mb-4" style={{ color: MUTED }}>{copy.HookGraderClient_s04.t02}</p>
               <Link
                 href="/resources/guides/linkedin-content-to-calls-starter-kit"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-full border px-6 text-sm font-bold hover:bg-[#F8F6F2] transition-colors"
                 style={{ borderColor: BORDER, color: INK }}
-              >
-                Read the LinkedIn Content-to-Calls Starter Kit &rarr;
-              </Link>
+              >{copy.HookGraderClient_s04.t03}</Link>
             </div>
 
             <div className="rounded-[28px] border p-8 text-center sm:p-12" style={{ borderColor: "rgba(245,183,49,0.45)", background: "linear-gradient(135deg,#FEF9EC 0%,#FFFFFF 100%)" }}>
-              <h2 className="mx-auto max-w-2xl text-3xl font-black leading-tight sm:text-4xl">Want a LinkedIn presence that brings you meetings?</h2>
-              <p className="mx-auto mt-4 max-w-xl text-base" style={{ color: MUTED }}>A good hook gets the click. Myntmore builds the profile, the posting rhythm and the outreach behind it.</p>
-              <Link href="/book-a-call" className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-full px-8 text-sm font-bold" style={{ backgroundColor: GOLD, color: INK }}>
-                Book a Call
-              </Link>
+              <h2 className="mx-auto max-w-2xl text-3xl font-black leading-tight sm:text-4xl">{copy.HookGraderClient_s05.t01}</h2>
+              <p className="mx-auto mt-4 max-w-xl text-base" style={{ color: MUTED }}>{copy.HookGraderClient_s05.t02}</p>
+              <Link href="/book-a-call" className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-full px-8 text-sm font-bold" style={{ backgroundColor: GOLD, color: INK }}>{copy.HookGraderClient_s05.t03}</Link>
             </div>
           </div>
         )}

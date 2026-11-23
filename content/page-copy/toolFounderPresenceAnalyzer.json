@@ -1,0 +1,91 @@
+{
+  "s01": {
+    "t01": "Free Tools",
+    "t02": "Founder Presence Analyzer"
+  },
+  "FounderPresenceClient_s02": {
+    "t01": "<20 likes",
+    "t02": "20–50 likes",
+    "t03": "50–100 likes",
+    "t04": "100–250 likes",
+    "t05": "250+ likes",
+    "t06": "Hiring / Recruiting",
+    "t07": "Recruiting Operations",
+    "t08": "AI & Automation",
+    "t09": "Product Updates",
+    "t10": "Industry Insights",
+    "t11": "Founder Journey",
+    "t12": "Customer Stories",
+    "t13": "Leadership & Culture",
+    "t14": "Founder Presence Analyzer",
+    "t15": "LinkedIn Competitor Analysis for Founders",
+    "t16": "Benchmark your founder presence: see how your LinkedIn posting frequency and engagement stack up against up to 5 competitors."
+  },
+  "FounderPresenceClient_s03": {
+    "t01": "Your Activity",
+    "t02": "Start with your own LinkedIn footprint in the last 30 days.",
+    "t03": "How many LinkedIn posts have you published?",
+    "t04": "What is your average engagement per post?",
+    "t05": "Continue to Competitors"
+  },
+  "FounderPresenceClient_s04": {
+    "t01": "Competitors",
+    "t02": "Add up to 5 key competitors you're benchmarking against.",
+    "t03": "Competitor ",
+    "t04": "Company or Founder Name",
+    "t05": "Frequency",
+    "t06": " posts",
+    "t07": "Engagement",
+    "t08": "Add Another Competitor",
+    "t09": "Back",
+    "t10": "Continue to Narrative"
+  },
+  "FounderPresenceClient_s05": {
+    "t01": "Content Themes",
+    "t02": "Map out the narrative overlap and gaps.",
+    "t03": "What topics do you mostly post about?",
+    "t04": "What topics do competitors mostly post about?",
+    "t05": "Back",
+    "t06": "Review Analysis Ready"
+  },
+  "FounderPresenceClient_s06": {
+    "t01": "Ready for Analysis",
+    "t02": "Thanks, ",
+    "t03": ". We're ready to calculate your competitive gap.",
+    "t04": "Analyze My Competitive Presence",
+    "t05": "Analysis Dashboard",
+    "t06": "Detailed breakdown for "
+  },
+  "FounderPresenceClient_s07": {
+    "t01": "Founder Presence Score"
+  },
+  "FounderPresenceClient_s08": {
+    "t01": "Posting Frequency Comparison",
+    "t02": "Company",
+    "t03": "Frequency",
+    "t04": "Avg Engagement",
+    "t05": "You",
+    "t06": " / mo",
+    "t07": " / mo"
+  },
+  "FounderPresenceClient_s09": {
+    "t01": "Engagement Gap Chart"
+  },
+  "FounderPresenceClient_s10": {
+    "t01": "Key Opportunity Areas"
+  },
+  "FounderPresenceClient_s11": {
+    "t01": "Positioning Recommendation"
+  },
+  "FounderPresenceClient_s12": {
+    "t01": "Updated Founder Headline Suggestions",
+    "t02": "Category Leadership",
+    "t03": "ICP Clarity",
+    "t04": "Bold Differentiation",
+    "t05": "Copy Headline"
+  },
+  "FounderPresenceClient_s13": {
+    "t01": "Let Myntmore build your entire founder presence + pipeline engine",
+    "t02": "Book a Strategy Call"
+  }
+}

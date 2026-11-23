@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import ColdEmailRoiPageClient from "./ColdEmailRoiPageClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolColdEmailRoiCalculator.json";
+
+// This page's text is edited in the admin ("Cold Email ROI Calculator") and lives in content/page-copy/toolColdEmailRoiCalculator.json.
+const copy = pageCopy;
 
 const TITLE = "Cold Email ROI Calculator";
 const DESCRIPTION = "Free cold email ROI calculator: enter your sends, reply and close rates, or start from 2026 benchmarks, and see meetings, pipeline and ROI calculate live.";
@@ -38,7 +42,7 @@ export default function ColdEmailRoiCalculatorPage() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-7xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "Cold Email ROI Calculator", href: PATH }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: PATH }]} />
         </div>
       </div>
       <ColdEmailRoiPageClient />

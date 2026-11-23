@@ -131,5 +131,103 @@
     "group": "guides",
     "route": "/resources/guides/smartlead-setup",
     "dir": "app/resources/guides/smartlead-setup"
+  },
+  {
+    "key": "toolColdEmailInboxCalculator",
+    "title": "Cold Email Inbox Calculator",
+    "group": "tools",
+    "route": "/tools/cold-email-inbox-calculator",
+    "dir": "app/tools/cold-email-inbox-calculator"
+  },
+  {
+    "key": "toolColdEmailRoiCalculator",
+    "title": "Cold Email ROI Calculator",
+    "group": "tools",
+    "route": "/tools/cold-email-roi-calculator",
+    "dir": "app/tools/cold-email-roi-calculator"
+  },
+  {
+    "key": "toolBattleCardGenerator",
+    "title": "Competitive Battlecard Generator",
+    "group": "tools",
+    "route": "/tools/battle-card-generator",
+    "dir": "app/tools/battle-card-generator"
+  },
+  {
+    "key": "toolCaseStudyGenerator",
+    "title": "B2B Case Study Generator",
+    "group": "tools",
+    "route": "/tools/case-study-generator",
+    "dir": "app/tools/case-study-generator"
+  },
+  {
+    "key": "toolDmAngleGenerator",
+    "title": "Cold DM Angle Generator",
+    "group": "tools",
+    "route": "/tools/dm-angle-generator",
+    "dir": "app/tools/dm-angle-generator"
+  },
+  {
+    "key": "toolFounderPresenceAnalyzer",
+    "title": "Founder Presence Analyzer",
+    "group": "tools",
+    "route": "/tools/founder-presence-analyzer",
+    "dir": "app/tools/founder-presence-analyzer"
+  },
+  {
+    "key": "toolIcpBuilder",
+    "title": "Interactive ICP Builder",
+    "group": "tools",
+    "route": "/tools/icp-builder",
+    "dir": "app/tools/icp-builder"
+  },
+  {
+    "key": "toolLeadMagnetIdeas",
+    "title": "B2B Lead Magnet Idea Generator",
+    "group": "tools",
+    "route": "/tools/lead-magnet-ideas",
+    "dir": "app/tools/lead-magnet-ideas"
+  },
+  {
+    "key": "toolLinkedinHookGrader",
+    "title": "LinkedIn Hook Grader",
+    "group": "tools",
+    "route": "/tools/linkedin-hook-grader",
+    "dir": "app/tools/linkedin-hook-grader"
+  },
+  {
+    "key": "toolLinkedinOptimizer",
+    "title": "LinkedIn Profile Optimizer",
+    "group": "tools",
+    "route": "/tools/linkedin-optimizer",
+    "dir": "app/tools/linkedin-optimizer"
+  },
+  {
+    "key": "toolPostingRhythmBuilder",
+    "title": "LinkedIn Posting Rhythm Builder",
+    "group": "tools",
+    "route": "/tools/posting-rhythm-builder",
+    "dir": "app/tools/posting-rhythm-builder"
+  },
+  {
+    "key": "toolProspectResearch",
+    "title": "Free Prospect Research Tool",
+    "group": "tools",
+    "route": "/tools/prospect-research",
+    "dir": "app/tools/prospect-research"
+  },
+  {
+    "key": "toolRoiCalculator",
+    "title": "B2B Outbound ROI Calculator",
+    "group": "tools",
+    "route": "/tools/roi-calculator",
+    "dir": "app/tools/roi-calculator"
+  },
+  {
+    "key": "toolHub",
+    "title": "Free Growth Tools",
+    "group": "tools",
+    "route": "/resources/tools",
+    "dir": "app/resources/tools"
   }
 ]

@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import FounderPresenceClient from "./FounderPresenceClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolFounderPresenceAnalyzer.json";
+
+// This page's text is edited in the admin ("Founder Presence Analyzer") and lives in content/page-copy/toolFounderPresenceAnalyzer.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/founder-presence-analyzer", {
   title: "LinkedIn Competitor Analysis Tool (Free)",
@@ -44,7 +48,7 @@ export default function FounderPresenceAnalyzer() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "Founder Presence Analyzer", href: "/tools/founder-presence-analyzer" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/founder-presence-analyzer" }]} />
         </div>
       </div>
       <FounderPresenceClient />

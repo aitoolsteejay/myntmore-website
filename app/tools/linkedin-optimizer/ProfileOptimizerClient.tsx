@@ -10,6 +10,10 @@ import ResultsSection from "@/components/tools/profile-optimizer/ResultsSection"
 import CTASection from "@/components/tools/profile-optimizer/CTASection";
 import { toast } from "sonner";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolLinkedinOptimizer.json";
+
+// This page's text is edited in the admin ("LinkedIn Profile Optimizer") and lives in content/page-copy/toolLinkedinOptimizer.json.
+const copy = pageCopy;
 
 interface OptimizationResults {
   score: number;
@@ -204,9 +208,9 @@ export default function ProfileOptimizerClient() {
         ],
         aboutSection: data.aboutSection || "Unable to generate about section",
         positioningAngles: [
-          { title: "Authority", description: data.positioningAngles?.authority || "Position yourself as an expert" },
-          { title: "Problem Solver", description: data.positioningAngles?.problemSolver || "Focus on solutions you provide" },
-          { title: "Social Proof", description: data.positioningAngles?.socialProof || "Leverage your track record" },
+          { title: copy.ProfileOptimizerClient_s02.t01, description: data.positioningAngles?.authority || "Position yourself as an expert" },
+          { title: copy.ProfileOptimizerClient_s02.t02, description: data.positioningAngles?.problemSolver || "Focus on solutions you provide" },
+          { title: copy.ProfileOptimizerClient_s02.t03, description: data.positioningAngles?.socialProof || "Leverage your track record" },
         ],
         keywordScore,
         detectedKeywords,
@@ -261,7 +265,7 @@ export default function ProfileOptimizerClient() {
 
       <footer className="py-12 px-6 border-t border-border bg-secondary/10">
         <div className="max-w-4xl mx-auto text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} Myntmore LinkedIn Profile Optimizer. Built for professionals who want more inbound.</p>
+          <p>© {new Date().getFullYear()}{copy.ProfileOptimizerClient_s02.t04}</p>
         </div>
       </footer>
     </div>

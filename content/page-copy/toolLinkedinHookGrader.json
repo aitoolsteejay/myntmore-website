@@ -1,0 +1,44 @@
+{
+  "s01": {
+    "t01": "Free Tools",
+    "t02": "LinkedIn Hook Grader"
+  },
+  "HookGraderClient_s02": {
+    "t01": "Your hook score",
+    "t02": "/100",
+    "t03": "Free LinkedIn Tool",
+    "t04": "LinkedIn ",
+    "t05": "Hook Grader",
+    "t06": "Paste the first two lines of your post. You get a score out of 100, and three rewrites graded by the same rules.",
+    "t07": "Your hook (the first two lines)",
+    "t08": "Who is the post for? (optional)",
+    "t09": "e.g. Founders of Series A SaaS companies",
+    "t10": "Grading...",
+    "t11": "Your hook"
+  },
+  "HookGraderClient_s03": {
+    "t01": "Three rewrites to choose from",
+    "t02": "Option ",
+    "t03": "Scored with the same six rules as your hook",
+    "t04": "/100",
+    "t05": " Copied",
+    "t06": " Copy",
+    "t07": "Why it works: ",
+    "t08": "Check any [bracketed] placeholders before you post, and make sure every claim is true for you. The AI never invents numbers.",
+    "t09": "Your score above is still valid. It is calculated from the rules, not by the AI. Try again for rewrites.",
+    "t10": "Try again",
+    "t11": " Grade another hook",
+    "t12": "Share on LinkedIn",
+    "t13": "Turn Views into Pipeline"
+  },
+  "HookGraderClient_s04": {
+    "t01": "Want the full system to turn LinkedIn content into sales calls?",
+    "t02": "Hooks capture attention, but converting readers into qualified discovery calls takes a structured daily routine.",
+    "t03": "Read the LinkedIn Content-to-Calls Starter Kit →"
+  },
+  "HookGraderClient_s05": {
+    "t01": "Want a LinkedIn presence that brings you meetings?",
+    "t02": "A good hook gets the click. Myntmore builds the profile, the posting rhythm and the outreach behind it.",
+    "t03": "Book a Call"
+  }
+}

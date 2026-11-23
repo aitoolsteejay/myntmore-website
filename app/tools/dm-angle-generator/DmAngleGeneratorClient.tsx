@@ -8,6 +8,10 @@ import type { DMAngle } from "@/components/tools/dm-angles/DMCard";
 import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { toast } from "sonner";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolDmAngleGenerator.json";
+
+// This page's text is edited in the admin ("Cold DM Angle Generator") and lives in content/page-copy/toolDmAngleGenerator.json.
+const copy = pageCopy;
 
 export default function DmAngleGeneratorClient() {
   const [leadData, setLeadData] = useState<LeadData | null>(null);
@@ -139,7 +143,7 @@ export default function DmAngleGeneratorClient() {
       {leadData && (
         <div className="min-h-screen py-16 px-6">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl font-black text-center mb-10">Generate Your Angles</h1>
+            <h1 className="text-2xl sm:text-3xl font-black text-center mb-10">{copy.DmAngleGeneratorClient_s02.t01}</h1>
             <InputPanel onGenerate={generateAngles} isLoading={isLoading} />
           </div>
 

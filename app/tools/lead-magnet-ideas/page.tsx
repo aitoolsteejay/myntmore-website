@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import LeadMagnetIdeasClient from "./LeadMagnetIdeasClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolLeadMagnetIdeas.json";
+
+// This page's text is edited in the admin ("B2B Lead Magnet Idea Generator") and lives in content/page-copy/toolLeadMagnetIdeas.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/lead-magnet-ideas", {
   title: "Free Lead Magnet Idea Generator for B2B",
@@ -43,7 +47,7 @@ export default function LeadMagnetIdeas() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "Lead Magnet Idea Generator", href: "/tools/lead-magnet-ideas" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/lead-magnet-ideas" }]} />
         </div>
       </div>
       <LeadMagnetIdeasClient />

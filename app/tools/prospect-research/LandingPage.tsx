@@ -5,20 +5,24 @@ import { ArrowRight, CalendarClock, FileSearch, ListChecks, Scale } from "lucide
 import type { Account, Verdict } from "@/lib/research-types";
 import { ACCOUNTS as SAMPLE_ACCOUNTS, SNAPSHOT_LABEL } from "@/app/research/myntmore/data";
 import { BORDER, GOLD, GOLD_TEXT, INK, MUTED, ORANGE, GoldBadge } from "@/components/tools/prospect-research/ui";
+import pageCopy from "@/content/page-copy/toolProspectResearch.json";
+
+// This page's text is edited in the admin ("Free Prospect Research Tool") and lives in content/page-copy/toolProspectResearch.json.
+const copy = pageCopy;
 
 const TIER_LABEL: Record<Account["tier"], string> = { T1: "Contact now", T2: "High priority", T3: "Worth nurturing" };
 
 const GETS = [
-  { icon: FileSearch, title: "Ten companies with a recent signal", body: "Companies that match your ideal customer and did something in the last 12 months that suggests they may buy now: raised money, hired for the problem you solve, named a new leader, or launched something new." },
-  { icon: ListChecks, title: "Seven questions, each with a dated source", body: "Every answer links to the public page it came from, with a date. If nothing was found, it says \"No evidence found\". The links are checked automatically before you see them." },
-  { icon: Scale, title: "Scores you can check", body: "Fit out of 100 and timing out of 10 are worked out from the answers by fixed rules, not by the AI. Open any company to see exactly why it scored the way it did." },
+  { icon: FileSearch, title: copy.LandingPage_s02.t01, body: copy.LandingPage_s02.t02 },
+  { icon: ListChecks, title: copy.LandingPage_s02.t03, body: copy.LandingPage_s02.t04 },
+  { icon: Scale, title: copy.LandingPage_s02.t05, body: copy.LandingPage_s02.t06 },
 ];
 
 const STEPS = [
-  ["Tell us about your company", "Your website and what you sell in a sentence. Add who you sell to and anyone to leave out, if you like."],
-  ["Check what we understood", "We read your homepage and show you the ideal customer we will search for. Edit anything before we start."],
-  ["We research ten companies", "AI with Google Search finds companies with a recent signal, then answers seven questions about each. It takes about two minutes."],
-  ["Open the evidence", "Each company shows its sources, a suggested opening line and the role that usually owns the problem. Download it all as a CSV."],
+  [copy.LandingPage_s02.t07, copy.LandingPage_s02.t08],
+  [copy.LandingPage_s02.t09, copy.LandingPage_s02.t10],
+  [copy.LandingPage_s02.t11, copy.LandingPage_s02.t12],
+  [copy.LandingPage_s02.t13, copy.LandingPage_s02.t14],
 ];
 
 function SampleDot({ verdict }: { verdict: Verdict }) {
@@ -38,40 +42,34 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
         <div aria-hidden="true" className="pointer-events-none absolute -left-40 -top-36 h-[600px] w-[600px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(245,183,49,0.26) 0%, rgba(255,160,0,0.09) 40%, transparent 68%)" }} />
         <div aria-hidden="true" className="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(234,88,12,0.13) 0%, rgba(245,183,49,0.06) 40%, transparent 68%)" }} />
         <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <div className="mb-6"><GoldBadge>Free Prospect Research</GoldBadge></div>
-          <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[1.08] sm:text-5xl" style={{ letterSpacing: "-0.03em", textWrap: "balance" }}>
-            Ten companies that may buy from you, <span style={{ color: GOLD_TEXT }}>and why now.</span>
+          <div className="mb-6"><GoldBadge>{copy.LandingPage_s02.t15}</GoldBadge></div>
+          <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[1.08] sm:text-5xl" style={{ letterSpacing: "-0.03em", textWrap: "balance" }}>{copy.LandingPage_s02.t16}<span style={{ color: GOLD_TEXT }}>{copy.LandingPage_s02.t17}</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: MUTED }}>
-            Enter your company. The tool finds ten companies that match your ideal customer and show a recent public sign they are ready to buy, then researches each one with a dated source for every answer.
-          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: MUTED }}>{copy.LandingPage_s02.t18}</p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <button type="button" onClick={onStart} className="btn-dark inline-flex min-h-[48px] items-center gap-2 px-8 py-3.5 text-base">
-              Find my prospects <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            <button type="button" onClick={onStart} className="btn-dark inline-flex min-h-[48px] items-center gap-2 px-8 py-3.5 text-base">{copy.LandingPage_s02.t19}<ArrowRight className="h-4 w-4" aria-hidden="true" />
             </button>
-            <Link href="/research/myntmore" className="btn-ghost inline-flex min-h-[48px] items-center gap-2 px-7 py-3.5 text-base font-bold">
-              See a sample report
-            </Link>
+            <Link href="/research/myntmore" className="btn-ghost inline-flex min-h-[48px] items-center gap-2 px-7 py-3.5 text-base font-bold">{copy.LandingPage_s02.t20}</Link>
           </div>
-          <p className="mt-5 text-sm" style={{ color: MUTED }}>Free. About two minutes. Two searches a day.</p>
+          <p className="mt-5 text-sm" style={{ color: MUTED }}>{copy.LandingPage_s02.t21}</p>
         </div>
       </section>
 
       {/* Sample */}
       <section className="px-4 pb-20" aria-labelledby="sample-title">
         <div className="mx-auto max-w-5xl">
-          <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: GOLD_TEXT }}>A sample of the output</p>
-          <h2 id="sample-title" className="mb-6 text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>What you get back</h2>
+          <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: GOLD_TEXT }}>{copy.LandingPage_s02.t22}</p>
+          <h2 id="sample-title" className="mb-6 text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>{copy.LandingPage_s03.t01}</h2>
           <div className="overflow-hidden rounded-2xl border bg-white" style={{ borderColor: BORDER, boxShadow: "0 24px 70px rgba(15,15,20,0.06)" }}>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                 <thead>
                   <tr className="text-xs font-bold uppercase tracking-wider" style={{ color: MUTED }}>
-                    <th scope="col" className="px-4 py-3">Company</th>
-                    <th scope="col" className="px-2 py-3">Buying window</th>
-                    <th scope="col" className="px-2 py-3">Tier</th>
-                    <th scope="col" className="px-2 py-3">Fit</th>
-                    <th scope="col" className="px-4 py-3">Q1 to Q7</th>
+                    <th scope="col" className="px-4 py-3">{copy.LandingPage_s03.t02}</th>
+                    <th scope="col" className="px-2 py-3">{copy.LandingPage_s03.t03}</th>
+                    <th scope="col" className="px-2 py-3">{copy.LandingPage_s03.t04}</th>
+                    <th scope="col" className="px-2 py-3">{copy.LandingPage_s03.t05}</th>
+                    <th scope="col" className="px-4 py-3">{copy.LandingPage_s03.t06}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -93,9 +91,8 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
                 </tbody>
               </table>
             </div>
-            <p className="border-t px-4 py-3 text-sm" style={{ borderColor: BORDER, color: MUTED }}>
-              Three rows from Myntmore&apos;s own sample research (snapshot {SNAPSHOT_LABEL}).{" "}
-              <Link href="/research/myntmore" className="inline-flex min-h-[44px] items-center font-bold underline underline-offset-4" style={{ color: GOLD_TEXT }}>Open the full sample report</Link>
+            <p className="border-t px-4 py-3 text-sm" style={{ borderColor: BORDER, color: MUTED }}>{copy.LandingPage_s03.t07}{SNAPSHOT_LABEL}).{" "}
+              <Link href="/research/myntmore" className="inline-flex min-h-[44px] items-center font-bold underline underline-offset-4" style={{ color: GOLD_TEXT }}>{copy.LandingPage_s03.t08}</Link>
             </p>
           </div>
         </div>
@@ -104,7 +101,7 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
       {/* What you get */}
       <section className="px-4 py-20" style={{ backgroundColor: "#F2EEE7" }}>
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>Research you can check, not a list you have to trust</h2>
+          <h2 className="mb-12 text-center text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>{copy.LandingPage_s04.t01}</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {GETS.map((g) => (
               <div key={g.title} className="rounded-2xl border bg-white p-7" style={{ borderColor: BORDER, borderTop: `3px solid ${GOLD}` }}>
@@ -120,7 +117,7 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
       {/* How it works */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em" }}>How it works</h2>
+          <h2 className="mb-10 text-center text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em" }}>{copy.LandingPage_s05.t01}</h2>
           <ol className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {STEPS.map(([title, body], i) => (
               <li key={title} className="flex gap-4 rounded-2xl border bg-white p-6" style={{ borderColor: BORDER }}>
@@ -135,17 +132,15 @@ export function LandingPage({ onStart }: { onStart: () => void }) {
           <div className="mt-10 flex items-start gap-3 rounded-2xl border p-5 text-sm leading-relaxed" style={{ borderColor: "rgba(245,183,49,0.45)", backgroundColor: "#FEF9EC", color: MUTED }}>
             <CalendarClock className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: GOLD_TEXT }} aria-hidden="true" />
             <p>
-              <strong style={{ color: INK }}>Good to know.</strong> AI research can be wrong, so check a source before you act on it. Signals older than 18 months are ignored. Contact names are never included; you get the role that usually owns the problem instead.
-            </p>
+              <strong style={{ color: INK }}>{copy.LandingPage_s05.t02}</strong>{copy.LandingPage_s05.t03}</p>
           </div>
         </div>
       </section>
 
       {/* Second CTA */}
       <section className="px-4 pb-24 pt-4 text-center">
-        <h2 className="mx-auto mb-8 max-w-3xl text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>See who looks ready to buy this month</h2>
-        <button type="button" onClick={onStart} className="btn-dark inline-flex min-h-[48px] items-center gap-2 px-8 py-3.5 text-base">
-          Find my prospects <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        <h2 className="mx-auto mb-8 max-w-3xl text-3xl font-black sm:text-4xl" style={{ letterSpacing: "-0.02em", textWrap: "balance" }}>{copy.LandingPage_s06.t01}</h2>
+        <button type="button" onClick={onStart} className="btn-dark inline-flex min-h-[48px] items-center gap-2 px-8 py-3.5 text-base">{copy.LandingPage_s06.t02}<ArrowRight className="h-4 w-4" aria-hidden="true" />
         </button>
       </section>
     </div>

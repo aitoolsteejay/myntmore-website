@@ -8,6 +8,10 @@ import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { LandingPage } from "@/components/tools/founder-presence/LandingPage";
 import { ScoreRing } from "@/components/tools/founder-presence/ScoreRing";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolFounderPresenceAnalyzer.json";
+
+// This page's text is edited in the admin ("Founder Presence Analyzer") and lives in content/page-copy/toolFounderPresenceAnalyzer.json.
+const copy = pageCopy;
 
 // GapChart pulls in recharts (~5MB of source), so it's kept out of this
 // route's initial bundle and only fetched once results are actually shown.
@@ -46,18 +50,24 @@ interface AIAnalysisResult {
 }
 
 const FREQUENCY_OPTIONS: FrequencyOption[] = ["0", "1–2", "3–5", "6–10", "10+"];
-const ENGAGEMENT_OPTIONS: EngagementOption[] = ["<20 likes", "20–50 likes", "50–100 likes", "100–250 likes", "250+ likes"];
+const ENGAGEMENT_OPTIONS: EngagementOption[] = [
+  copy.FounderPresenceClient_s02.t01 as EngagementOption,
+  copy.FounderPresenceClient_s02.t02 as EngagementOption,
+  copy.FounderPresenceClient_s02.t03 as EngagementOption,
+  copy.FounderPresenceClient_s02.t04 as EngagementOption,
+  copy.FounderPresenceClient_s02.t05 as EngagementOption,
+];
 
 const TOPIC_OPTIONS = [
-  "Hiring / Recruiting",
-  "Recruiting Operations",
-  "AI & Automation",
-  "Product Updates",
-  "Industry Insights",
-  "Founder Journey",
-  "Customer Stories",
+  copy.FounderPresenceClient_s02.t06,
+  copy.FounderPresenceClient_s02.t07,
+  copy.FounderPresenceClient_s02.t08,
+  copy.FounderPresenceClient_s02.t09,
+  copy.FounderPresenceClient_s02.t10,
+  copy.FounderPresenceClient_s02.t11,
+  copy.FounderPresenceClient_s02.t12,
   "Fundraising",
-  "Leadership & Culture",
+  copy.FounderPresenceClient_s02.t13,
 ];
 
 const FREQUENCY_MAP: Record<FrequencyOption, number> = { "0": 0, "1–2": 1.5, "3–5": 4, "6–10": 8, "10+": 12 };
@@ -181,19 +191,15 @@ export default function FounderPresenceClient() {
               style={{ background: "rgba(245,183,49,0.07)", borderColor: "rgba(245,183,49,0.35)" }}
             >
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#D97706" }} aria-hidden="true" />
-              <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#0F766E" }}>Founder Presence Analyzer</span>
+              <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#0F766E" }}>{copy.FounderPresenceClient_s02.t14}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-              <span className="relative inline-block">
-                LinkedIn Competitor Analysis for Founders
-                <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
+              <span className="relative inline-block">{copy.FounderPresenceClient_s02.t15}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                   <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#D97706" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
-            <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-              Benchmark your founder presence: see how your LinkedIn posting frequency and engagement stack up against up to 5 competitors.
-            </p>
+            <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">{copy.FounderPresenceClient_s02.t16}</p>
           </header>
         )}
 
@@ -219,11 +225,11 @@ export default function FounderPresenceClient() {
             {/* Step: Your Activity */}
             {step === "activity" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h2 className="text-3xl sm:text-4xl font-black mb-2">Your Activity</h2>
-                <p className="text-muted-foreground mb-10">Start with your own LinkedIn footprint in the last 30 days.</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-2">{copy.FounderPresenceClient_s03.t01}</h2>
+                <p className="text-muted-foreground mb-10">{copy.FounderPresenceClient_s03.t02}</p>
                 <div className="space-y-8">
                   <div>
-                    <label className="block text-sm font-semibold mb-4 text-foreground/80">How many LinkedIn posts have you published?</label>
+                    <label className="block text-sm font-semibold mb-4 text-foreground/80">{copy.FounderPresenceClient_s03.t03}</label>
                     <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                       {FREQUENCY_OPTIONS.map((opt) => (
                         <button
@@ -239,7 +245,7 @@ export default function FounderPresenceClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-4 text-foreground/80">What is your average engagement per post?</label>
+                    <label className="block text-sm font-semibold mb-4 text-foreground/80">{copy.FounderPresenceClient_s03.t04}</label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {ENGAGEMENT_OPTIONS.map((opt) => (
                         <button
@@ -256,9 +262,7 @@ export default function FounderPresenceClient() {
                   </div>
                 </div>
                 <div className="mt-12">
-                  <button onClick={() => setStep("competitors")} className="w-full py-4 lp-tool-accent-bg text-black font-bold rounded-xl hover:brightness-110 transition-all active:scale-[0.98]">
-                    Continue to Competitors
-                  </button>
+                  <button onClick={() => setStep("competitors")} className="w-full py-4 lp-tool-accent-bg text-black font-bold rounded-xl hover:brightness-110 transition-all active:scale-[0.98]">{copy.FounderPresenceClient_s03.t05}</button>
                 </div>
               </div>
             )}
@@ -266,13 +270,13 @@ export default function FounderPresenceClient() {
             {/* Step: Competitors */}
             {step === "competitors" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h2 className="text-3xl sm:text-4xl font-black mb-2">Competitors</h2>
-                <p className="text-muted-foreground mb-10">Add up to 5 key competitors you&apos;re benchmarking against.</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-2">{copy.FounderPresenceClient_s04.t01}</h2>
+                <p className="text-muted-foreground mb-10">{copy.FounderPresenceClient_s04.t02}</p>
                 <div className="space-y-6">
                   {formData.competitors.map((comp, idx) => (
                     <div key={comp.id} className="p-6 rounded-2xl bg-gray-50 space-y-4" style={{ border: "1px solid #E8E2D9" }}>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-widest lp-tool-accent-text">Competitor {idx + 1}</span>
+                        <span className="text-xs font-bold uppercase tracking-widest lp-tool-accent-text">{copy.FounderPresenceClient_s04.t03}{idx + 1}</span>
                         {formData.competitors.length > 1 && (
                           <button onClick={() => removeCompetitor(comp.id)} aria-label="Remove competitor" className="-m-2 p-2 text-muted-foreground hover:text-red-500 transition-colors">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -283,7 +287,7 @@ export default function FounderPresenceClient() {
                       </div>
                       <input
                         type="text"
-                        placeholder="Company or Founder Name"
+                        placeholder={copy.FounderPresenceClient_s04.t04}
                         value={comp.name}
                         onChange={(e) => {
                           const newComps = [...formData.competitors];
@@ -295,7 +299,7 @@ export default function FounderPresenceClient() {
                       />
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="text-xs uppercase tracking-wider text-muted-foreground mb-1 block">Frequency</label>
+                          <label className="text-xs uppercase tracking-wider text-muted-foreground mb-1 block">{copy.FounderPresenceClient_s04.t05}</label>
                           <select
                             value={comp.frequency}
                             onChange={(e) => {
@@ -308,13 +312,12 @@ export default function FounderPresenceClient() {
                           >
                             {FREQUENCY_OPTIONS.map((o) => (
                               <option key={o} value={o}>
-                                {o} posts
-                              </option>
+                                {o}{copy.FounderPresenceClient_s04.t06}</option>
                             ))}
                           </select>
                         </div>
                         <div>
-                          <label className="text-xs uppercase tracking-wider text-muted-foreground mb-1 block">Engagement</label>
+                          <label className="text-xs uppercase tracking-wider text-muted-foreground mb-1 block">{copy.FounderPresenceClient_s04.t07}</label>
                           <select
                             value={comp.engagement}
                             onChange={(e) => {
@@ -343,22 +346,16 @@ export default function FounderPresenceClient() {
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-                      </svg>
-                      Add Another Competitor
-                    </button>
+                      </svg>{copy.FounderPresenceClient_s04.t08}</button>
                   )}
                 </div>
                 <div className="mt-12 flex gap-4">
-                  <button onClick={() => setStep("activity")} className="flex-1 py-4 text-muted-foreground font-bold rounded-xl hover:bg-gray-50 transition-all" style={{ border: "1px solid #E8E2D9" }}>
-                    Back
-                  </button>
+                  <button onClick={() => setStep("activity")} className="flex-1 py-4 text-muted-foreground font-bold rounded-xl hover:bg-gray-50 transition-all" style={{ border: "1px solid #E8E2D9" }}>{copy.FounderPresenceClient_s04.t09}</button>
                   <button
                     onClick={() => setStep("themes")}
                     disabled={formData.competitors.some((c) => !c.name.trim())}
                     className="flex-[2] py-4 lp-tool-accent-bg text-black font-bold rounded-xl hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all"
-                  >
-                    Continue to Narrative
-                  </button>
+                  >{copy.FounderPresenceClient_s04.t10}</button>
                 </div>
               </div>
             )}
@@ -366,11 +363,11 @@ export default function FounderPresenceClient() {
             {/* Step: Content Themes */}
             {step === "themes" && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h2 className="text-3xl sm:text-4xl font-black mb-2">Content Themes</h2>
-                <p className="text-muted-foreground mb-10">Map out the narrative overlap and gaps.</p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-2">{copy.FounderPresenceClient_s05.t01}</h2>
+                <p className="text-muted-foreground mb-10">{copy.FounderPresenceClient_s05.t02}</p>
                 <div className="space-y-12">
                   <div>
-                    <label className="block text-sm font-semibold mb-4 text-foreground/80">What topics do you mostly post about?</label>
+                    <label className="block text-sm font-semibold mb-4 text-foreground/80">{copy.FounderPresenceClient_s05.t03}</label>
                     <div className="flex flex-wrap gap-3">
                       {TOPIC_OPTIONS.map((topic) => (
                         <button
@@ -387,7 +384,7 @@ export default function FounderPresenceClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-4 text-foreground/80">What topics do competitors mostly post about?</label>
+                    <label className="block text-sm font-semibold mb-4 text-foreground/80">{copy.FounderPresenceClient_s05.t04}</label>
                     <div className="flex flex-wrap gap-3">
                       {TOPIC_OPTIONS.map((topic) => (
                         <button
@@ -405,12 +402,8 @@ export default function FounderPresenceClient() {
                   </div>
                 </div>
                 <div className="mt-12 flex gap-4">
-                  <button onClick={() => setStep("competitors")} className="flex-1 py-4 text-muted-foreground font-bold rounded-xl hover:bg-gray-50 transition-all" style={{ border: "1px solid #E8E2D9" }}>
-                    Back
-                  </button>
-                  <button onClick={() => setStep("ready")} className="flex-[2] py-4 lp-tool-accent-bg text-black font-bold rounded-xl hover:brightness-110 transition-all">
-                    Review Analysis Ready
-                  </button>
+                  <button onClick={() => setStep("competitors")} className="flex-1 py-4 text-muted-foreground font-bold rounded-xl hover:bg-gray-50 transition-all" style={{ border: "1px solid #E8E2D9" }}>{copy.FounderPresenceClient_s05.t05}</button>
+                  <button onClick={() => setStep("ready")} className="flex-[2] py-4 lp-tool-accent-bg text-black font-bold rounded-xl hover:brightness-110 transition-all">{copy.FounderPresenceClient_s05.t06}</button>
                 </div>
               </div>
             )}
@@ -423,16 +416,14 @@ export default function FounderPresenceClient() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-black mb-4">Ready for Analysis</h2>
-                <p className="text-muted-foreground max-w-md mx-auto mb-12">
-                  Thanks, {leadData?.name.split(" ")[0]}. We&apos;re ready to calculate your competitive gap.
-                </p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-4">{copy.FounderPresenceClient_s06.t01}</h2>
+                <p className="text-muted-foreground max-w-md mx-auto mb-12">{copy.FounderPresenceClient_s06.t02}{leadData?.name.split(" ")[0]}{copy.FounderPresenceClient_s06.t03}</p>
                 <button
                   onClick={handleRunAnalysis}
                   disabled={loading}
                   className="w-full py-5 lp-tool-accent-bg text-black text-xl font-black rounded-2xl hover:brightness-110 transition-all disabled:opacity-50 relative overflow-hidden"
                 >
-                  <span className={loading ? "opacity-0" : "opacity-100"}>Analyze My Competitive Presence</span>
+                  <span className={loading ? "opacity-0" : "opacity-100"}>{copy.FounderPresenceClient_s06.t04}</span>
                   {loading && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-6 h-6 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
@@ -448,13 +439,13 @@ export default function FounderPresenceClient() {
         {step === "results" && analysis && (
           <div className="animate-in fade-in zoom-in-95 duration-1000 space-y-12">
             <header className="text-center mb-16">
-              <h1 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">Analysis Dashboard</h1>
-              <p className="text-muted-foreground text-lg">Detailed breakdown for {leadData?.name}.</p>
+              <h1 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">{copy.FounderPresenceClient_s06.t05}</h1>
+              <p className="text-muted-foreground text-lg">{copy.FounderPresenceClient_s06.t06}{leadData?.name}.</p>
             </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-1 rounded-2xl p-8 flex flex-col items-center text-center bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-                <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-8">Founder Presence Score</h2>
+                <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-8">{copy.FounderPresenceClient_s07.t01}</h2>
                 <ScoreRing score={calculated.finalPresenceScore} />
                 <div className="mt-10 p-4 bg-white rounded-2xl" style={{ border: "1px solid #E8E2D9" }}>
                   <p className="text-foreground/80 italic text-sm leading-relaxed">&quot;{analysis.scoreInsight}&quot;</p>
@@ -463,20 +454,20 @@ export default function FounderPresenceClient() {
 
               <div className="lg:col-span-2 space-y-8">
                 <div className="rounded-2xl p-8 bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-                  <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-6">Posting Frequency Comparison</h2>
+                  <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-6">{copy.FounderPresenceClient_s08.t01}</h2>
                   <div className="overflow-x-auto">
                     <table className="w-full text-left">
                       <thead>
                         <tr style={{ borderBottom: "1px solid #E8E2D9" }}>
-                          <th className="pb-4 font-bold text-foreground/80">Company</th>
-                          <th className="pb-4 font-bold text-foreground/80">Frequency</th>
-                          <th className="pb-4 font-bold text-foreground/80">Avg Engagement</th>
+                          <th className="pb-4 font-bold text-foreground/80">{copy.FounderPresenceClient_s08.t02}</th>
+                          <th className="pb-4 font-bold text-foreground/80">{copy.FounderPresenceClient_s08.t03}</th>
+                          <th className="pb-4 font-bold text-foreground/80">{copy.FounderPresenceClient_s08.t04}</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y" style={{ borderColor: "#E8E2D9" }}>
                         <tr className="lp-tool-accent-bg text-black">
-                          <td className="py-4 px-3 font-bold rounded-l-xl">You</td>
-                          <td className="py-4 px-3 font-medium">{formData.frequency} / mo</td>
+                          <td className="py-4 px-3 font-bold rounded-l-xl">{copy.FounderPresenceClient_s08.t05}</td>
+                          <td className="py-4 px-3 font-medium">{formData.frequency}{copy.FounderPresenceClient_s08.t06}</td>
                           <td className="py-4 px-3 font-medium rounded-r-xl">{formData.engagement}</td>
                         </tr>
                         {formData.competitors
@@ -484,7 +475,7 @@ export default function FounderPresenceClient() {
                           .map((comp) => (
                             <tr key={comp.id} className="text-muted-foreground">
                               <td className="py-4 px-3">{comp.name}</td>
-                              <td className="py-4 px-3">{comp.frequency} / mo</td>
+                              <td className="py-4 px-3">{comp.frequency}{copy.FounderPresenceClient_s08.t07}</td>
                               <td className="py-4 px-3">{comp.engagement}</td>
                             </tr>
                           ))}
@@ -493,7 +484,7 @@ export default function FounderPresenceClient() {
                   </div>
                 </div>
                 <div className="rounded-2xl p-8 bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-                  <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-6">Engagement Gap Chart</h2>
+                  <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-6">{copy.FounderPresenceClient_s09.t01}</h2>
                   <GapChart userAvg={calculated.userEngScore} compAvg={calculated.compAvgEngScore} />
                 </div>
               </div>
@@ -501,7 +492,7 @@ export default function FounderPresenceClient() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="rounded-2xl p-8 bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-                <h2 className="text-sm uppercase tracking-widest lp-tool-accent-text font-bold mb-6">Key Opportunity Areas</h2>
+                <h2 className="text-sm uppercase tracking-widest lp-tool-accent-text font-bold mb-6">{copy.FounderPresenceClient_s10.t01}</h2>
                 <ul className="space-y-4">
                   {analysis.opportunityAreas.map((area, idx) => (
                     <li key={idx} className="flex gap-3 text-foreground/80">
@@ -516,18 +507,18 @@ export default function FounderPresenceClient() {
                 </ul>
               </div>
               <div className="rounded-2xl p-8 bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-                <h2 className="text-sm uppercase tracking-widest lp-tool-accent-text font-bold mb-6">Positioning Recommendation</h2>
+                <h2 className="text-sm uppercase tracking-widest lp-tool-accent-text font-bold mb-6">{copy.FounderPresenceClient_s11.t01}</h2>
                 <p className="text-foreground/80 text-sm leading-relaxed">{analysis.narrativePositioning}</p>
               </div>
             </div>
 
             <div className="rounded-2xl p-8 bg-gray-50" style={{ border: "1px solid #E8E2D9" }}>
-              <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-8 text-center">Updated Founder Headline Suggestions</h2>
+              <h2 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-8 text-center">{copy.FounderPresenceClient_s12.t01}</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { label: "Category Leadership", content: analysis.headlineSuggestions.categoryLeadership },
-                  { label: "ICP Clarity", content: analysis.headlineSuggestions.icpClarity },
-                  { label: "Bold Differentiation", content: analysis.headlineSuggestions.boldDifferentiation },
+                  { label: copy.FounderPresenceClient_s12.t02, content: analysis.headlineSuggestions.categoryLeadership },
+                  { label: copy.FounderPresenceClient_s12.t03, content: analysis.headlineSuggestions.icpClarity },
+                  { label: copy.FounderPresenceClient_s12.t04, content: analysis.headlineSuggestions.boldDifferentiation },
                 ].map((item, idx) => (
                   <div key={idx} className="p-6 bg-white rounded-2xl hover:border-[#FFC947]/50 transition-colors flex flex-col justify-between group" style={{ border: "1px solid #E8E2D9" }}>
                     <div>
@@ -539,9 +530,7 @@ export default function FounderPresenceClient() {
                         navigator.clipboard.writeText(item.content);
                       }}
                       className="mt-6 flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Copy Headline
-                    </button>
+                    >{copy.FounderPresenceClient_s12.t05}</button>
                   </div>
                 ))}
               </div>
@@ -549,10 +538,8 @@ export default function FounderPresenceClient() {
 
             <section className="mt-20">
               <div className="p-12 rounded-2xl bg-white text-center relative overflow-hidden" style={{ border: "2px solid #FFC947", boxShadow: "0 0 40px rgba(255,201,71,0.1)" }}>
-                <h2 className="text-3xl md:text-4xl font-black mb-6">Let Myntmore build your entire founder presence + pipeline engine</h2>
-                <Link href="/book-a-call" className="inline-block px-10 py-5 lp-tool-accent-bg text-black font-black text-lg rounded-2xl hover:scale-105 transition-all">
-                  Book a Strategy Call
-                </Link>
+                <h2 className="text-3xl md:text-4xl font-black mb-6">{copy.FounderPresenceClient_s13.t01}</h2>
+                <Link href="/book-a-call" className="inline-block px-10 py-5 lp-tool-accent-bg text-black font-black text-lg rounded-2xl hover:scale-105 transition-all">{copy.FounderPresenceClient_s13.t02}</Link>
               </div>
             </section>
           </div>

@@ -5,6 +5,10 @@ import Link from "next/link";
 import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { LandingPage } from "@/components/tools/posting-rhythm/LandingPage";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolPostingRhythmBuilder.json";
+
+// This page's text is edited in the admin ("LinkedIn Posting Rhythm Builder") and lives in content/page-copy/toolPostingRhythmBuilder.json.
+const copy = pageCopy;
 
 type FounderLifestyle =
   | "I can post daily"
@@ -49,15 +53,15 @@ interface AppState {
 }
 
 const LIFESTYLE_OPTIONS: FounderLifestyle[] = [
-  "I can post daily",
-  "4–5 days/week",
+  copy.PostingRhythmClient_s02.t01 as FounderLifestyle,
+  copy.PostingRhythmClient_s02.t02 as FounderLifestyle,
   "3 days/week",
-  "Weekends only",
-  "Mornings only",
-  "Nights only",
+  copy.PostingRhythmClient_s02.t03 as FounderLifestyle,
+  copy.PostingRhythmClient_s02.t04 as FounderLifestyle,
+  copy.PostingRhythmClient_s02.t05 as FounderLifestyle,
 ];
 
-const TONE_OPTIONS: Tone[] = ["Authoritative", "Professional & Warm", "Sharp & Direct", "Friendly", "Visionary"];
+const TONE_OPTIONS: Tone[] = ["Authoritative", copy.PostingRhythmClient_s02.t06 as Tone, copy.PostingRhythmClient_s02.t07 as Tone, "Friendly", "Visionary"];
 
 const STRENGTH_COLORS: Record<ContentStrength, string> = {
   Educational: "#EA580C",
@@ -164,20 +168,16 @@ export default function PostingRhythmClient() {
             style={{ background: "rgba(245,183,49,0.07)", borderColor: "rgba(245,183,49,0.35)" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#D97706" }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Posting Rhythm Builder</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>{copy.PostingRhythmClient_s02.t08}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-            LinkedIn Posting{" "}
+          <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">{copy.PostingRhythmClient_s02.t09}{" "}
             <span className="relative inline-block">
-              <span className="lp-tool-accent-text">Schedule</span> Planner
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden>
+              <span className="lp-tool-accent-text">{copy.PostingRhythmClient_s02.t10}</span>{copy.PostingRhythmClient_s02.t11}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q75 2 150 6 Q225 10 298 5" stroke="#D97706" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
-          <p className="text-gray-700 text-sm md:text-base mb-6 max-w-xl mx-auto font-medium">
-            Find how often to post on LinkedIn and the weekly schedule to keep, based on your goals and your week.
-          </p>
+          <p className="text-gray-700 text-sm md:text-base mb-6 max-w-xl mx-auto font-medium">{copy.PostingRhythmClient_s02.t12}</p>
         </header>
 
         <div>
@@ -197,16 +197,14 @@ export default function PostingRhythmClient() {
               <div className="absolute top-0 left-0 w-full h-1 lp-tool-accent-bg opacity-50"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                 <div className="space-y-3">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Founder Lifestyle</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.PostingRhythmClient_s02.t13}</label>
                   <select
                     className="w-full bg-white rounded-lg px-4 py-3 text-black focus:border-[#FFC947] outline-none transition-colors appearance-none cursor-pointer"
                     style={{ border: "1px solid #E8E2D9" }}
                     value={formData.lifestyle || ""}
                     onChange={(e) => setFormData({ ...formData, lifestyle: e.target.value as FounderLifestyle })}
                   >
-                    <option value="" disabled>
-                      Select lifestyle...
-                    </option>
+                    <option value="" disabled>{copy.PostingRhythmClient_s02.t14}</option>
                     {LIFESTYLE_OPTIONS.map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
@@ -216,16 +214,14 @@ export default function PostingRhythmClient() {
                 </div>
 
                 <div className="space-y-3">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Preferred Tone</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.PostingRhythmClient_s02.t15}</label>
                   <select
                     className="w-full bg-white rounded-lg px-4 py-3 text-black focus:border-[#FFC947] outline-none transition-colors appearance-none cursor-pointer"
                     style={{ border: "1px solid #E8E2D9" }}
                     value={formData.tone || ""}
                     onChange={(e) => setFormData({ ...formData, tone: e.target.value as Tone })}
                   >
-                    <option value="" disabled>
-                      Select tone...
-                    </option>
+                    <option value="" disabled>{copy.PostingRhythmClient_s02.t16}</option>
                     {TONE_OPTIONS.map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
@@ -235,19 +231,19 @@ export default function PostingRhythmClient() {
                 </div>
 
                 <div className="md:col-span-2 space-y-3">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Ideal Customer Profile (ICP)</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.PostingRhythmClient_s02.t17}</label>
                   <input
                     type="text"
                     className="w-full bg-white rounded-lg px-4 py-4 text-black focus:border-[#FFC947] outline-none transition-colors placeholder:text-gray-400"
                     style={{ border: "1px solid #E8E2D9" }}
-                    placeholder="e.g. Sales Leaders at Series B SaaS companies"
+                    placeholder={copy.PostingRhythmClient_s02.t18}
                     value={formData.icp}
                     onChange={(e) => setFormData({ ...formData, icp: e.target.value })}
                   />
                 </div>
 
                 <div className="md:col-span-2 space-y-4">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Content Strengths</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.PostingRhythmClient_s02.t19}</label>
                   <div className="flex flex-wrap gap-2">
                     {STRENGTH_OPTIONS.map((strength) => {
                       const active = formData.strengths.includes(strength);
@@ -282,9 +278,7 @@ export default function PostingRhythmClient() {
               >
                 {loading ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                    Generating Strategy...
-                  </>
+                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>{copy.PostingRhythmClient_s02.t20}</>
                 ) : (
                   "Build My Rhythm"
                 )}
@@ -298,7 +292,7 @@ export default function PostingRhythmClient() {
             <div id="results-section" className="space-y-12 animate-in fade-in slide-in-from-bottom-10 duration-700">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                 <div className="bg-white rounded-2xl p-8 md:p-10 flex flex-col shadow-sm" style={{ borderTop: "3px solid #F5B731", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-6" style={{ color: "#A14A08" }}>Best Posting Days</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-6" style={{ color: "#A14A08" }}>{copy.PostingRhythmClient_s03.t01}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">{strategy.bestPostingDays.explanation}</p>
                   <div className="space-y-4 mb-10">
                     {strategy.bestPostingDays.days.map((day) => (
@@ -309,13 +303,13 @@ export default function PostingRhythmClient() {
                     ))}
                   </div>
                   <div className="pt-8 mt-auto" style={{ borderTop: "1px solid #E8E2D9" }}>
-                    <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">Best Time Window</p>
+                    <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">{copy.PostingRhythmClient_s03.t02}</p>
                     <p className="text-2xl font-black tracking-tight">{strategy.bestPostingDays.timeWindow}</p>
                   </div>
                 </div>
 
                 <div className="bg-white rounded-2xl p-8 md:p-10 flex flex-col shadow-sm" style={{ borderTop: "3px solid #EA580C", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8" style={{ color: "#C2410C" }}>Topic Cadence</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8" style={{ color: "#C2410C" }}>{copy.PostingRhythmClient_s04.t01}</h3>
                   <div className="space-y-8 mb-10 flex-grow">
                     {strategy.topicCadence.schedule.map((item) => (
                       <div key={item.day} className="grid grid-cols-[120px_1fr] gap-4 items-start pb-4 last:border-0" style={{ borderBottom: "1px solid #F0EDE7" }}>
@@ -331,7 +325,7 @@ export default function PostingRhythmClient() {
               </div>
 
               <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm" style={{ borderTop: "3px solid #D97706", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-10" style={{ color: "#A14A08" }}>Weekly Posting System</h3>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-10" style={{ color: "#A14A08" }}>{copy.PostingRhythmClient_s05.t01}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {strategy.weeklySystem.routine.map((item) => (
                     <div key={item.day} className="bg-[#FAFAFA] p-6 rounded-xl group transition-colors" style={{ border: "1px solid #E8E2D9" }}>
@@ -345,7 +339,7 @@ export default function PostingRhythmClient() {
               </div>
 
               <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm" style={{ borderTop: "3px solid #A14A08", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-10" style={{ color: "#9A3412" }}>High Probability Post Ideas</h3>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-10" style={{ color: "#9A3412" }}>{copy.PostingRhythmClient_s06.t01}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                   {strategy.postIdeas.map((idea, idx) => (
                     <div key={idx} className="group border-l-2 pl-8 py-1 transition-all duration-300" style={{ borderColor: "rgba(161,74,8,0.25)" }}>
@@ -360,7 +354,7 @@ export default function PostingRhythmClient() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm" style={{ borderTop: "3px solid #F97316", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-center" style={{ color: "#9A3412" }}>Scroll-Stopping Hooks</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-center" style={{ color: "#9A3412" }}>{copy.PostingRhythmClient_s07.t01}</h3>
                   <div className="space-y-8">
                     {strategy.hooks.map((hook, idx) => (
                       <div key={idx} className="flex gap-6 group">
@@ -373,7 +367,7 @@ export default function PostingRhythmClient() {
                   </div>
                 </div>
                 <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm" style={{ borderTop: "3px solid #B8860B", borderLeft: "1px solid #E8E2D9", borderRight: "1px solid #E8E2D9", borderBottom: "1px solid #E8E2D9" }}>
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-center" style={{ color: "#7A5200" }}>Low-Friction CTAs</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-center" style={{ color: "#7A5200" }}>{copy.PostingRhythmClient_s08.t01}</h3>
                   <div className="space-y-8">
                     {strategy.ctas.map((cta, idx) => (
                       <div key={idx} className="flex gap-6 group">
@@ -388,7 +382,7 @@ export default function PostingRhythmClient() {
               </div>
 
               <div className="bg-white rounded-2xl p-12 text-center shadow-sm" style={{ border: "1px solid #E8E2D9" }}>
-                <h3 className="text-2xl font-black mb-8">Ready to execute your new rhythm?</h3>
+                <h3 className="text-2xl font-black mb-8">{copy.PostingRhythmClient_s09.t01}</h3>
                 <button
                   onClick={handleDownload}
                   className="inline-flex items-center gap-4 px-10 py-5 border-2 text-black font-bold rounded-full hover:bg-[#F5B731] hover:border-[#F5B731] transition-all active:scale-[0.98] uppercase text-sm tracking-widest"
@@ -396,9 +390,7 @@ export default function PostingRhythmClient() {
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  Download Full Operating Pack
-                </button>
+                  </svg>{copy.PostingRhythmClient_s09.t02}</button>
               </div>
 
               <div className="relative group overflow-hidden bg-white rounded-2xl p-12 md:p-20 text-center shadow-sm" style={{ border: "2px solid #FFC947" }}>
@@ -407,18 +399,12 @@ export default function PostingRhythmClient() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" />
                   </svg>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-black mb-6 relative z-10 leading-tight">
-                  We can execute your content engine for you
-                </h2>
-                <p className="text-gray-600 mb-12 max-w-2xl mx-auto relative z-10 text-lg font-normal leading-relaxed">
-                  Myntmore handles the complete content cycle: Strategy, Copywriting, and Daily Distribution for elite B2B founders.
-                </p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6 relative z-10 leading-tight">{copy.PostingRhythmClient_s10.t01}</h2>
+                <p className="text-gray-600 mb-12 max-w-2xl mx-auto relative z-10 text-lg font-normal leading-relaxed">{copy.PostingRhythmClient_s10.t02}</p>
                 <Link
                   href="/book-a-call"
                   className="inline-block lp-tool-accent-bg text-black font-black px-12 py-5 rounded-full text-lg uppercase tracking-[0.2em] hover:shadow-[0_0_30px_rgba(255,201,71,0.4)] transition-all active:scale-[0.98] relative z-10"
-                >
-                  Book A Call
-                </Link>
+                >{copy.PostingRhythmClient_s10.t03}</Link>
               </div>
             </div>
           )}

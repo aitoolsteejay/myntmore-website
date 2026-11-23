@@ -9,6 +9,10 @@ import { BattleCardResults } from "@/components/tools/battle-card-generator/Batt
 import type { BattleCardInput, BattleCardOutput } from "@/components/tools/battle-card-generator/types";
 import { textTone } from "@/lib/colors";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolBattleCardGenerator.json";
+
+// This page's text is edited in the admin ("Competitive Battlecard Generator") and lives in content/page-copy/toolBattleCardGenerator.json.
+const copy = pageCopy;
 
 const ACCENT = "#ef4444";
 
@@ -74,19 +78,15 @@ export default function BattleCardGeneratorClient() {
                 style={{ background: "rgba(239,68,68,0.07)", borderColor: "rgba(239,68,68,0.35)" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: ACCENT }} aria-hidden="true" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>Free AI Sales Tool</span>
+                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: textTone(ACCENT) }}>{copy.BattleCardGeneratorClient_s02.t01}</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-                <span className="relative inline-block">
-                  Competitor Battle Card Generator
-                  <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
+                <span className="relative inline-block">{copy.BattleCardGeneratorClient_s02.t02}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                     <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke={ACCENT} strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>
               </h1>
-              <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-                Never lose a deal to a competitor. Paste a competitor&apos;s name and get what they do, their pricing if public, their real strengths and gaps, and how to position against them.
-              </p>
+              <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">{copy.BattleCardGeneratorClient_s02.t03}</p>
             </header>
             <LeadGate
               source="battle_card_generator"

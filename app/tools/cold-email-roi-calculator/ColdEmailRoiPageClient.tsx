@@ -4,6 +4,10 @@ import { ArrowRight, Calculator, CircleCheckBig, CircleHelp, MousePointer, Trend
 import { Button } from "@/components/cold-email-roi/ui/button";
 import { ColdEmailRoiCalculator } from "@/components/cold-email-roi/calculator/ColdEmailRoiCalculator";
 import { HandUnderline, PillBadge } from "@/components/cold-email-roi/HandUnderline";
+import pageCopy from "@/content/page-copy/toolColdEmailRoiCalculator.json";
+
+// This page's text is edited in the admin ("Cold Email ROI Calculator") and lives in content/page-copy/toolColdEmailRoiCalculator.json.
+const copy = pageCopy;
 
 const BORDER = "#E8E2D9";
 
@@ -17,38 +21,38 @@ const PROBLEMS = [
   {
     icon: CircleHelp,
     color: "#EA580C",
-    title: "No idea what a booked meeting is worth",
-    body: "Without the funnel math, every decision about volume, lists and budget is a guess dressed up as strategy.",
+    title: copy.ColdEmailRoiPageClient_s02.t01,
+    body: copy.ColdEmailRoiPageClient_s02.t02,
   },
   {
     icon: Calculator,
     color: "#EA580C",
-    title: "Budgets approved on gut feeling",
-    body: "\"Replies look good\" doesn't hold up in a budget review. You need the projected meetings, pipeline and return.",
+    title: copy.ColdEmailRoiPageClient_s02.t03,
+    body: copy.ColdEmailRoiPageClient_s02.t04,
   },
   {
     icon: TrendingUp,
     color: "#A14A08",
-    title: "Can't set expectations before you spend",
-    body: "Leadership wants a number before they sign off on domains, tools and a team. \"We'll see\" isn't an answer.",
+    title: copy.ColdEmailRoiPageClient_s02.t05,
+    body: copy.ColdEmailRoiPageClient_s02.t06,
   },
 ];
 
 const STEPS = [
-  { icon: MousePointer, color: "#EA580C", title: "Enter your funnel numbers", body: "Emails per day or prospects per month, then reply, meeting and close rates, deal size and cost. Each rate is checked against 2026 benchmarks." },
-  { icon: Zap, color: "#EA580C", title: "Watch it calculate live", body: "Meetings, deals, revenue and ROI update instantly as you move a slider." },
-  { icon: CircleCheckBig, color: "#B8860B", title: "Export it as a PDF", body: "A clean report you can bring to a budget conversation or a client call." },
+  { icon: MousePointer, color: "#EA580C", title: copy.ColdEmailRoiPageClient_s02.t07, body: copy.ColdEmailRoiPageClient_s02.t08 },
+  { icon: Zap, color: "#EA580C", title: copy.ColdEmailRoiPageClient_s02.t09, body: copy.ColdEmailRoiPageClient_s02.t10 },
+  { icon: CircleCheckBig, color: "#B8860B", title: copy.ColdEmailRoiPageClient_s02.t11, body: copy.ColdEmailRoiPageClient_s02.t12 },
 ];
 
 const WHY = [
-  { color: "#EA580C", title: "Benchmarks built in", lead: "Every rate is checked against published 2026 data", body: "See where your numbers sit, from below average to elite, with the sources one click away." },
-  { color: "#EA580C", title: "The full funnel", lead: "From emails sent all the way to revenue and ROI", body: "See exactly where meetings and deals are won or lost, not just the final close rate." },
-  { color: "#D97706", title: "Built to share", lead: "Export a clean PDF for stakeholders or clients", body: "Bring real numbers into your next budget or pitch conversation." },
+  { color: "#EA580C", title: copy.ColdEmailRoiPageClient_s02.t13, lead: copy.ColdEmailRoiPageClient_s02.t14, body: copy.ColdEmailRoiPageClient_s02.t15 },
+  { color: "#EA580C", title: copy.ColdEmailRoiPageClient_s02.t16, lead: copy.ColdEmailRoiPageClient_s02.t17, body: copy.ColdEmailRoiPageClient_s02.t18 },
+  { color: "#D97706", title: copy.ColdEmailRoiPageClient_s02.t19, lead: copy.ColdEmailRoiPageClient_s02.t20, body: copy.ColdEmailRoiPageClient_s02.t21 },
 ];
 
 const NEXT = [
-  { title: "Competitor Battle Card Generator", body: "See exactly how you stack up against any competitor", href: "/tools/battle-card-generator" },
-  { title: "ICP Builder & Value Proposition Generator", body: "Define exactly who to sell to, and what to say", href: "/tools/icp-builder" },
+  { title: copy.ColdEmailRoiPageClient_s02.t22, body: copy.ColdEmailRoiPageClient_s02.t23, href: "/tools/battle-card-generator" },
+  { title: copy.ColdEmailRoiPageClient_s02.t24, body: copy.ColdEmailRoiPageClient_s02.t25, href: "/tools/icp-builder" },
 ];
 
 export default function ColdEmailRoiPageClient() {
@@ -61,20 +65,15 @@ export default function ColdEmailRoiPageClient() {
           <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-24 h-[600px] w-[600px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(168,139,250,0.22) 0%, rgba(139,92,246,0.08) 40%, transparent 68%)" }} />
           <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
             <div className="mb-6">
-              <PillBadge>ROI Calculator</PillBadge>
+              <PillBadge>{copy.ColdEmailRoiPageClient_s02.t26}</PillBadge>
             </div>
-            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Cold Email <HandUnderline>ROI Calculator</HandUnderline>
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">{copy.ColdEmailRoiPageClient_s02.t27}<HandUnderline>{copy.ColdEmailRoiPageClient_s02.t28}</HandUnderline>
             </h1>
-            <p className="mb-10 max-w-3xl text-lg text-muted-foreground sm:text-xl">
-              See what your cold email is worth. Plug in your funnel numbers or start from 2026 industry benchmarks, and watch your meetings, pipeline and ROI calculate live.
-            </p>
-            <Button variant="hero" size="hero" onClick={scrollToCalculator}>
-              Calculate My ROI <ArrowRight aria-hidden="true" />
+            <p className="mb-10 max-w-3xl text-lg text-muted-foreground sm:text-xl">{copy.ColdEmailRoiPageClient_s02.t29}</p>
+            <Button variant="hero" size="hero" onClick={scrollToCalculator}>{copy.ColdEmailRoiPageClient_s02.t30}<ArrowRight aria-hidden="true" />
             </Button>
-            <p className="mt-5 text-sm text-muted-foreground">
-              Running LinkedIn outreach instead?{" "}
-              <a href="/tools/roi-calculator" className="font-bold underline" style={{ color: "#A14A08" }}>Switch to the LinkedIn lead generation calculator</a>
+            <p className="mt-5 text-sm text-muted-foreground">{copy.ColdEmailRoiPageClient_s02.t31}{" "}
+              <a href="/tools/roi-calculator" className="font-bold underline" style={{ color: "#A14A08" }}>{copy.ColdEmailRoiPageClient_s02.t32}</a>
             </p>
           </div>
         </section>
@@ -89,7 +88,7 @@ export default function ColdEmailRoiPageClient() {
         {/* Problem */}
         <section className="bg-[hsl(var(--secondary)/0.3)] px-6 py-24">
           <div className="mx-auto max-w-6xl text-center">
-            <h2 className="mb-16 text-3xl font-black sm:text-5xl">You're Sending Cold Email Without The Math</h2>
+            <h2 className="mb-16 text-3xl font-black sm:text-5xl">{copy.ColdEmailRoiPageClient_s03.t01}</h2>
             <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-3">
               {PROBLEMS.map((p) => (
                 <div key={p.title} className="rounded-2xl bg-white p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${p.color}` }}>
@@ -107,18 +106,15 @@ export default function ColdEmailRoiPageClient() {
         {/* Full funnel */}
         <section className="bg-white px-6 py-24">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-8 text-3xl font-black sm:text-5xl">See The Full Funnel, Not Just A Guess</h2>
-            <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Follow every prospect from first email and follow ups to delivered, replies, positive replies, meetings booked, meetings held
-              and deals, all the way through to revenue and ROI. Then export it as a PDF to share.
-            </p>
+            <h2 className="mb-8 text-3xl font-black sm:text-5xl">{copy.ColdEmailRoiPageClient_s04.t01}</h2>
+            <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">{copy.ColdEmailRoiPageClient_s04.t02}</p>
           </div>
         </section>
 
         {/* How it works */}
         <section className="bg-[hsl(var(--secondary)/0.3)] px-6 py-24">
           <div className="mx-auto max-w-5xl">
-            <h2 className="mb-16 text-center text-3xl font-black sm:text-5xl">How It Works</h2>
+            <h2 className="mb-16 text-center text-3xl font-black sm:text-5xl">{copy.ColdEmailRoiPageClient_s05.t01}</h2>
             <ol className="grid grid-cols-1 gap-12 md:grid-cols-3">
               {STEPS.map((s) => (
                 <li key={s.title} className="flex flex-col items-center text-center">
@@ -136,7 +132,7 @@ export default function ColdEmailRoiPageClient() {
         {/* Why this works */}
         <section className="bg-white px-6 py-24">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-16 text-center text-3xl font-black sm:text-5xl">Why This Works</h2>
+            <h2 className="mb-16 text-center text-3xl font-black sm:text-5xl">{copy.ColdEmailRoiPageClient_s06.t01}</h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {WHY.map((w) => (
                 <div key={w.title} className="flex flex-col rounded-2xl bg-[hsl(var(--secondary)/0.2)] p-8" style={{ borderLeft: `4px solid ${w.color}` }}>
@@ -151,10 +147,9 @@ export default function ColdEmailRoiPageClient() {
 
         {/* CTA */}
         <section className="bg-white px-6 py-24 text-center" style={{ borderTop: `1px solid ${BORDER}` }}>
-          <h2 className="mb-10 text-3xl font-black sm:text-5xl">Ready to see the real math behind your outreach?</h2>
+          <h2 className="mb-10 text-3xl font-black sm:text-5xl">{copy.ColdEmailRoiPageClient_s07.t01}</h2>
           <Button asChild variant="hero" size="hero">
-            <a href="/book-a-call">
-              Book a Call <ArrowRight aria-hidden="true" />
+            <a href="/book-a-call">{copy.ColdEmailRoiPageClient_s07.t02}<ArrowRight aria-hidden="true" />
             </a>
           </Button>
         </section>
@@ -162,7 +157,7 @@ export default function ColdEmailRoiPageClient() {
         {/* Try this next */}
         <section className="bg-[hsl(var(--secondary)/0.2)] px-6 py-20" style={{ borderTop: `1px solid ${BORDER}` }}>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center text-2xl font-black sm:text-3xl">Try this next</h2>
+            <h2 className="mb-10 text-center text-2xl font-black sm:text-3xl">{copy.ColdEmailRoiPageClient_s08.t01}</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {NEXT.map((n) => (
                 <a key={n.href} href={n.href} className="group flex flex-col justify-between rounded-2xl border bg-white p-6 transition-all duration-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" style={{ borderColor: BORDER }}>
@@ -170,8 +165,7 @@ export default function ColdEmailRoiPageClient() {
                     <h3 className="mb-2 text-base font-black">{n.title}</h3>
                     <p className="text-sm text-muted-foreground">{n.body}</p>
                   </div>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: "#A14A08" }}>
-                    Try it free <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: "#A14A08" }}>{copy.ColdEmailRoiPageClient_s08.t02}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                   </span>
                 </a>
               ))}

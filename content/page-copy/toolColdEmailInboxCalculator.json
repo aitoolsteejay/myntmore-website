@@ -1,0 +1,57 @@
+{
+  "s01": {
+    "t01": "Emails per sending day",
+    "t02": "Prospects per month times emails per prospect, divided by your sending days in a month. Follow-ups count: a 5-email sequence to 5,000 prospects is 25,000 emails.",
+    "t03": "Inboxes",
+    "t04": "Daily emails divided by what one inbox should send. We keep live sending at about 30 per inbox per day and never over 40, so volume comes from more inboxes, not harder-working ones.",
+    "t05": "Domains",
+    "t06": "Inboxes divided by inboxes per domain (we use 4), plus about 10% spare, at least one, so a domain whose reputation dips can rest without stopping the campaign.",
+    "t07": "Go-live date",
+    "t08": "Every new inbox warms up for 14 to 21 days before its first live email, starting at 3 to 5 warm-up emails a day and ramping to 20 to 30.",
+    "t09": "Cold email infrastructure setup",
+    "t10": "Buy the domains, create the inboxes and add the four DNS records.",
+    "t11": "How to set up Smartlead",
+    "t12": "Connect the inboxes, warm them up and launch the first sequence.",
+    "t13": "Cold Email ROI Calculator",
+    "t14": "Turn the same volume into meetings, pipeline and ROI.",
+    "t15": "Free Tools",
+    "t16": "Free calculator",
+    "t17": "How many domains and inboxes do you need for cold email?",
+    "t18": "Enter the volume you want to send. You get the domains to buy, the inboxes to create, the emails each one sends per day and the date you can send your first live email, using the same numbers we set up for every client."
+  },
+  "s02": {
+    "t01": "How the numbers are worked out",
+    "t02": "Nothing hidden: four steps, each using a number we publish and use on client campaigns.",
+    "t03": "Step ",
+    "t04": "Common questions"
+  },
+  "s03": {
+    "t01": "Next: set it up"
+  },
+  "s04": {
+    "t01": "Rather have it built for you?",
+    "t02": "Our cold email service sets up the domains, inboxes, DNS and warm-up, then runs the campaigns. Campaigns usually go live about 18 days after onboarding.",
+    "t03": "See the Cold Email Service",
+    "t04": "Book a Free Audit"
+  },
+  "InboxCalculator_s05": {
+    "t01": "Start from",
+    "t02": "Prospects per month",
+    "t03": "Emails per day",
+    "t04": "Add spare domains",
+    "t05": " (about 10%, at least one), so a domain can rest without stopping the campaign.",
+    "t06": "Add your own costs (optional)",
+    "t07": "Ready for the first live email",
+    "t08": "Between ",
+    "t09": " and ",
+    "t10": ", after 14 to 21 days of warm-up. Start well under ",
+    "t11": " a day per inbox in the first week, then raise it as replies come in and bounces stay low.",
+    "t12": "Pick a date to see when you can start sending.",
+    "t13": "Replies to expect each month",
+    "t14": " to ",
+    "t15": " replies, at least a fifth of them positive. That is the 1% to 3% reply rate we see across Myntmore-managed campaigns; your list and offer move it either way.",
+    "t16": "Infrastructure cost per month",
+    "t17": " in your currency: inboxes plus domains spread over 12 months. Sending tool, data and verification costs are extra.",
+    "t18": "For reference, our standard client setup is 10 domains with 4 inboxes each: 40 inboxes sending up to about 1,200 emails a day."
+  }
+}

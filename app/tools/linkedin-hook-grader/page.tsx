@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import HookGraderClient from "./HookGraderClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolLinkedinHookGrader.json";
+
+// This page's text is edited in the admin ("LinkedIn Hook Grader") and lives in content/page-copy/toolLinkedinHookGrader.json.
+const copy = pageCopy;
 
 const DESCRIPTION = "Free LinkedIn hook grader and generator: paste your post's first two lines, get a score out of 100 and three rewritten hooks graded by the same rules.";
 
@@ -42,7 +46,7 @@ export default function LinkedinHookGrader() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "LinkedIn Hook Grader", href: "/tools/linkedin-hook-grader" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/linkedin-hook-grader" }]} />
         </div>
       </div>
       <HookGraderClient />

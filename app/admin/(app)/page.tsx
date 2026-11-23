@@ -21,7 +21,7 @@ export default async function AdminHome() {
       const cat = catalogEntry(t.key, t.label);
       if (type.kind === "singleton") {
         const url = liveUrl(type, singletonSlug(type), "");
-        return { t, count: 1, items: [{ href: `/admin/content/${t.key}`, title: cat.title, detail: `${t.key.startsWith("caseLong") ? "Long-form case study" : t.key.startsWith("guide") ? "Resource guide" : "Page"}${url ? ` · myntmore.com${url}` : ""}`, url }] as ListItem[] };
+        return { t, count: 1, items: [{ href: `/admin/content/${t.key}`, title: cat.title, detail: `${t.key.startsWith("caseLong") ? "Long-form case study" : t.key.startsWith("guide") ? "Resource guide" : t.key.startsWith("tool") ? "Interactive tool" : "Page"}${url ? ` · myntmore.com${url}` : ""}`, url }] as ListItem[] };
       }
       const ext = type.format === "mdoc" ? ".mdoc" : ".json";
       const slugs = (await store.listDir(collectionDir(type))).filter((f) => f.endsWith(ext)).map((f) => f.slice(0, -ext.length));
@@ -36,15 +36,18 @@ export default async function AdminHome() {
 
   const longCases = lists.filter((l) => l.t.key.startsWith("caseLong"));
   const guides = lists.filter((l) => l.t.key.startsWith("guide"));
+  const tools = lists.filter((l) => l.t.key.startsWith("tool"));
   const cards = (group: string): Card[] => {
     const out: Card[] = lists
-      .filter((l) => !l.t.key.startsWith("caseLong") && !l.t.key.startsWith("guide") && catalogEntry(l.t.key, l.t.label).group === group)
+      .filter((l) => !l.t.key.startsWith("caseLong") && !l.t.key.startsWith("guide") && !l.t.key.startsWith("tool") && catalogEntry(l.t.key, l.t.label).group === group)
       .map((l) => {
         const cat = catalogEntry(l.t.key, l.t.label);
         return { href: `/admin/content/${l.t.key}`, title: cat.title, description: cat.description, count: l.t.kind === "collection" ? `${l.count} ${l.count === 1 ? "entry" : "entries"}` : undefined };
       });
     if (group === "pages" && guides.length)
       out.push({ href: "/admin/content/guides", title: "Resource guides", description: "In-depth guides at myntmore.com/resources/guides/…", count: `${guides.length} guides` });
+    if (group === "pages" && tools.length)
+      out.push({ href: "/admin/content/tools", title: "Interactive tools", description: "Calculators and generators at myntmore.com/tools/…", count: `${tools.length} tools` });
     if (group === "caseStudies" && longCases.length)
       out.push({ href: "/admin/content/longCaseStudies", title: "Long-form case studies", description: "In-depth client stories, each with its own layout", count: `${longCases.length} case studies` });
     return out;

@@ -77,3 +77,21 @@ describe("resource guides in admin", () => {
     }
   });
 });
+
+describe("interactive tools in admin", () => {
+  it("registers all 14 interactive tools as singletons with live URLs", async () => {
+    const { contentTypes } = await import("./schema");
+    const { catalogEntry } = await import("./catalog");
+    const { liveUrl } = await import("./entry-view");
+    const tools = contentTypes().filter((t) => t.key.startsWith("tool"));
+    expect(tools.length).toBe(14);
+    for (const t of tools) {
+      const cat = catalogEntry(t.key, t.label);
+      expect(cat.title).toBeTruthy();
+      expect(cat.description).toBe("Interactive tool");
+      expect(cat.group).toBe("pages");
+      const url = liveUrl(t, t.key, "");
+      expect(url).toMatch(/^\/(tools|resources\/tools)/);
+    }
+  });
+});

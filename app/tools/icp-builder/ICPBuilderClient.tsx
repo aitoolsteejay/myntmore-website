@@ -8,6 +8,10 @@ import { IntakeScreen } from "@/components/tools/icp-builder/IntakeScreen";
 import { DEFAULT_ICP_COUNT } from "@/components/tools/icp-builder/constants";
 import type { IntakeData, IcpInput, GeneratedIcp, ValuePropResult, Screen } from "@/components/tools/icp-builder/types";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolIcpBuilder.json";
+
+// This page's text is edited in the admin ("Interactive ICP Builder") and lives in content/page-copy/toolIcpBuilder.json.
+const copy = pageCopy;
 
 // ScreenTransition wraps framer-motion, which only ever renders once the
 // wizard itself is showing (after the landing page and lead-gate): loading
@@ -46,9 +50,9 @@ function newIcp(icpType: "B2B" | "D2C" | null): IcpInput {
 }
 
 const STEP_LABELS: { key: Screen; label: string }[] = [
-  { key: "intake", label: "Intake" },
-  { key: "icp", label: "ICP Builder" },
-  { key: "valueprop", label: "Value Proposition" },
+  { key: "intake", label: copy.ICPBuilderClient_s02.t01 },
+  { key: "icp", label: copy.ICPBuilderClient_s02.t02 },
+  { key: "valueprop", label: copy.ICPBuilderClient_s02.t03 },
 ];
 
 export default function ICPBuilderClient() {
@@ -109,19 +113,15 @@ export default function ICPBuilderClient() {
               style={{ background: "rgba(249,115,22,0.07)", borderColor: "rgba(249,115,22,0.35)" }}
             >
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#F97316" }} aria-hidden="true" />
-              <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#9A3412" }}>ICP Builder</span>
+              <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#9A3412" }}>{copy.ICPBuilderClient_s02.t04}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-              <span className="relative inline-block">
-                Ideal Customer Profile Generator
-                <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
+              <span className="relative inline-block">{copy.ICPBuilderClient_s02.t05}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                   <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#F97316" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
-            <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">
-              Build your ICP and value prop in one go: describe your business, get deep customer profiles, and a value proposition for each one.
-            </p>
+            <p className="text-gray-700 text-sm md:text-base max-w-xl mx-auto font-medium">{copy.ICPBuilderClient_s02.t06}</p>
           </header>
 
           <LeadGate
@@ -149,19 +149,15 @@ export default function ICPBuilderClient() {
             style={{ background: "rgba(249,115,22,0.07)", borderColor: "rgba(249,115,22,0.35)" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#F97316" }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#9A3412" }}>ICP Builder</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#9A3412" }}>{copy.ICPBuilderClient_s02.t07}</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-            <span className="relative inline-block">
-              Ideal Customer Profile Generator
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
+            <span className="relative inline-block">{copy.ICPBuilderClient_s02.t08}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 460 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q115 2 230 6 Q345 10 458 5" stroke="#F97316" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
-          <p className="text-gray-700 text-sm md:text-base mb-8 max-w-xl mx-auto font-medium">
-            Build your ICP and value prop in one go: describe your business, get deep customer profiles, and a value proposition for each one.
-          </p>
+          <p className="text-gray-700 text-sm md:text-base mb-8 max-w-xl mx-auto font-medium">{copy.ICPBuilderClient_s02.t09}</p>
 
           {/* Step indicator */}
           <div className="flex items-center justify-center gap-2">

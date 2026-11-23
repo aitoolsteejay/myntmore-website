@@ -1,0 +1,29 @@
+{
+  "s01": {
+    "t01": "Free Tools",
+    "t02": "ROI Calculator"
+  },
+  "RoiCalculatorClient_s02": {
+    "t01": "Connection Requests",
+    "t02": "Accepted Connections",
+    "t03": "Total Replies",
+    "t04": "Positive Responses",
+    "t05": "Negative Responses",
+    "t06": "Meetings Booked",
+    "t07": "Deals Closed",
+    "t08": "ROI Calculator",
+    "t09": "LinkedIn Outreach ",
+    "t10": "ROI Calculator",
+    "t11": "Calculate your LinkedIn outreach ROI in real time",
+    "t12": "Export Results"
+  },
+  "RoiCalculatorClient_s03": {
+    "t01": "Your Inputs"
+  },
+  "RoiCalculatorSwitcher_s04": {
+    "t01": "LinkedIn lead generation",
+    "t02": "Cold email",
+    "t03": "Choose your channel",
+    "t04": "Cold Email ROI Calculator"
+  }
+}

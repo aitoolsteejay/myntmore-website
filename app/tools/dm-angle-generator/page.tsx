@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import DmAngleGeneratorClient from "./DmAngleGeneratorClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolDmAngleGenerator.json";
+
+// This page's text is edited in the admin ("Cold DM Angle Generator") and lives in content/page-copy/toolDmAngleGenerator.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/dm-angle-generator", {
   title: "Free DM Angle Generator for B2B Outreach",
@@ -43,7 +47,7 @@ export default function DmAngleGenerator() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "DM Angle Generator", href: "/tools/dm-angle-generator" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/dm-angle-generator" }]} />
         </div>
       </div>
       <DmAngleGeneratorClient />

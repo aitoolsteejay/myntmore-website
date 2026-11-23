@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import RoiCalculatorClient from "./RoiCalculatorClient";
+import pageCopy from "@/content/page-copy/toolRoiCalculator.json";
+
+// This page's text is edited in the admin ("B2B Outbound ROI Calculator") and lives in content/page-copy/toolRoiCalculator.json.
+const copy = pageCopy;
 
 // The cold email calculator brings recharts and the PDF export with it, so it is only
 // fetched when the visitor switches to it.
@@ -14,8 +18,8 @@ const ColdEmailRoiCalculator = dynamic(
 type Tool = "linkedin" | "cold-email";
 
 const OPTIONS: { id: Tool; label: string }[] = [
-  { id: "linkedin", label: "LinkedIn lead generation" },
-  { id: "cold-email", label: "Cold email" },
+  { id: "linkedin", label: copy.RoiCalculatorSwitcher_s04.t01 },
+  { id: "cold-email", label: copy.RoiCalculatorSwitcher_s04.t02 },
 ];
 
 const BORDER = "#E8E2D9";
@@ -49,7 +53,7 @@ export default function RoiCalculatorSwitcher() {
     <>
       <div className="px-4 pb-8 pt-6" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-2 sm:items-start">
-          <p id="roi-toggle-label" className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#52525B" }}>Choose your channel</p>
+          <p id="roi-toggle-label" className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#52525B" }}>{copy.RoiCalculatorSwitcher_s04.t03}</p>
           <div role="group" aria-labelledby="roi-toggle-label" className="inline-flex rounded-full border bg-white p-1" style={{ borderColor: BORDER }}>
             {OPTIONS.map((o) => {
               const active = tool === o.id;
@@ -80,7 +84,7 @@ export default function RoiCalculatorSwitcher() {
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 left-[20%] h-[500px] w-[500px] rounded-full blur-[55px]" style={{ background: "radial-gradient(circle, rgba(234,88,12,0.14) 0%, rgba(234,88,12,0.05) 40%, transparent 68%)" }} />
           <div className="relative z-10">
           {/* The calculator draws its own visible "ROI Calculator" heading, so this one is for the outline and screen readers. */}
-          <h1 className="sr-only">Cold Email ROI Calculator</h1>
+          <h1 className="sr-only">{copy.RoiCalculatorSwitcher_s04.t04}</h1>
           <section aria-label="Cold email ROI calculator">
             <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
               <ColdEmailRoiCalculator />

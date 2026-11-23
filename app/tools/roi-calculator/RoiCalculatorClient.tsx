@@ -13,6 +13,10 @@ import { toast } from "sonner";
 import { LeadData } from "@/components/tools/shared/LeadGate";
 import { HandUnderline, PillBadge } from "@/components/cold-email-roi/HandUnderline";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolRoiCalculator.json";
+
+// This page's text is edited in the admin ("B2B Outbound ROI Calculator") and lives in content/page-copy/toolRoiCalculator.json.
+const copy = pageCopy;
 
 // RevenueChart pulls in recharts (~5MB of source), so it's kept out of this
 // route's initial bundle and only fetched once the calculator is actually
@@ -83,13 +87,13 @@ export default function RoiCalculatorClient() {
   const currencySymbol = currencies[currency as keyof typeof currencies];
 
   const funnelData = [
-    { label: "Connection Requests", value: totalRequests, percentage: 100, previousValue: totalRequests },
-    { label: "Accepted Connections", value: acceptedConnections, percentage: acceptanceRate, previousValue: totalRequests },
-    { label: "Total Replies", value: replies, percentage: replies > 0 ? (replies / acceptedConnections) * 100 : 0, previousValue: acceptedConnections },
-    { label: "Positive Responses", value: positiveReplies, percentage: positiveResponseRate, previousValue: replies },
-    { label: "Negative Responses", value: negativeReplies, percentage: 100 - positiveResponseRate, previousValue: replies },
-    { label: "Meetings Booked", value: meetings, percentage: positiveReplies > 0 ? (meetings / positiveReplies) * 100 : 0, previousValue: positiveReplies },
-    { label: "Deals Closed", value: deals, percentage: meetings > 0 ? (deals / meetings) * 100 : 0, previousValue: meetings },
+    { label: copy.RoiCalculatorClient_s02.t01, value: totalRequests, percentage: 100, previousValue: totalRequests },
+    { label: copy.RoiCalculatorClient_s02.t02, value: acceptedConnections, percentage: acceptanceRate, previousValue: totalRequests },
+    { label: copy.RoiCalculatorClient_s02.t03, value: replies, percentage: replies > 0 ? (replies / acceptedConnections) * 100 : 0, previousValue: acceptedConnections },
+    { label: copy.RoiCalculatorClient_s02.t04, value: positiveReplies, percentage: positiveResponseRate, previousValue: replies },
+    { label: copy.RoiCalculatorClient_s02.t05, value: negativeReplies, percentage: 100 - positiveResponseRate, previousValue: replies },
+    { label: copy.RoiCalculatorClient_s02.t06, value: meetings, percentage: positiveReplies > 0 ? (meetings / positiveReplies) * 100 : 0, previousValue: positiveReplies },
+    { label: copy.RoiCalculatorClient_s02.t07, value: deals, percentage: meetings > 0 ? (deals / meetings) * 100 : 0, previousValue: meetings },
   ];
 
   // Loads an image via the normal async <img> path (not jsPDF's own
@@ -267,29 +271,24 @@ export default function RoiCalculatorClient() {
         <div className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <div className="mb-4">
-              <PillBadge>ROI Calculator</PillBadge>
+              <PillBadge>{copy.RoiCalculatorClient_s02.t08}</PillBadge>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-3 leading-tight">
-              LinkedIn Outreach <HandUnderline>ROI Calculator</HandUnderline>
+            <h1 className="text-4xl sm:text-5xl font-black text-foreground mb-3 leading-tight">{copy.RoiCalculatorClient_s02.t09}<HandUnderline>{copy.RoiCalculatorClient_s02.t10}</HandUnderline>
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Calculate your LinkedIn outreach ROI in real time
-            </p>
+            <p className="text-lg text-muted-foreground">{copy.RoiCalculatorClient_s02.t11}</p>
           </div>
           <Button
             onClick={handleExportClick}
             className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold"
           >
-            <Download className="w-4 h-4 mr-2" />
-            Export Results
-          </Button>
+            <Download className="w-4 h-4 mr-2" />{copy.RoiCalculatorClient_s02.t12}</Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Panel - Inputs */}
           <div className="lg:col-span-4">
             <div className="bg-card border border-border rounded-2xl p-6 lg:sticky lg:top-24">
-              <h2 className="text-2xl font-black text-foreground mb-6">Your Inputs</h2>
+              <h2 className="text-2xl font-black text-foreground mb-6">{copy.RoiCalculatorClient_s03.t01}</h2>
               <CalculatorInputs
                 currency={currency}
                 setCurrency={setCurrency}

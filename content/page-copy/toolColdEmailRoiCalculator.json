@@ -1,0 +1,61 @@
+{
+  "s01": {
+    "t01": "Free Tools",
+    "t02": "Cold Email ROI Calculator"
+  },
+  "ColdEmailRoiPageClient_s02": {
+    "t01": "No idea what a booked meeting is worth",
+    "t02": "Without the funnel math, every decision about volume, lists and budget is a guess dressed up as strategy.",
+    "t03": "Budgets approved on gut feeling",
+    "t04": "\"Replies look good\" doesn't hold up in a budget review. You need the projected meetings, pipeline and return.",
+    "t05": "Can't set expectations before you spend",
+    "t06": "Leadership wants a number before they sign off on domains, tools and a team. \"We'll see\" isn't an answer.",
+    "t07": "Enter your funnel numbers",
+    "t08": "Emails per day or prospects per month, then reply, meeting and close rates, deal size and cost. Each rate is checked against 2026 benchmarks.",
+    "t09": "Watch it calculate live",
+    "t10": "Meetings, deals, revenue and ROI update instantly as you move a slider.",
+    "t11": "Export it as a PDF",
+    "t12": "A clean report you can bring to a budget conversation or a client call.",
+    "t13": "Benchmarks built in",
+    "t14": "Every rate is checked against published 2026 data",
+    "t15": "See where your numbers sit, from below average to elite, with the sources one click away.",
+    "t16": "The full funnel",
+    "t17": "From emails sent all the way to revenue and ROI",
+    "t18": "See exactly where meetings and deals are won or lost, not just the final close rate.",
+    "t19": "Built to share",
+    "t20": "Export a clean PDF for stakeholders or clients",
+    "t21": "Bring real numbers into your next budget or pitch conversation.",
+    "t22": "Competitor Battle Card Generator",
+    "t23": "See exactly how you stack up against any competitor",
+    "t24": "ICP Builder & Value Proposition Generator",
+    "t25": "Define exactly who to sell to, and what to say",
+    "t26": "ROI Calculator",
+    "t27": "Cold Email ",
+    "t28": "ROI Calculator",
+    "t29": "See what your cold email is worth. Plug in your funnel numbers or start from 2026 industry benchmarks, and watch your meetings, pipeline and ROI calculate live.",
+    "t30": "Calculate My ROI ",
+    "t31": "Running LinkedIn outreach instead?",
+    "t32": "Switch to the LinkedIn lead generation calculator"
+  },
+  "ColdEmailRoiPageClient_s03": {
+    "t01": "You're Sending Cold Email Without The Math"
+  },
+  "ColdEmailRoiPageClient_s04": {
+    "t01": "See The Full Funnel, Not Just A Guess",
+    "t02": "Follow every prospect from first email and follow ups to delivered, replies, positive replies, meetings booked, meetings held and deals, all the way through to revenue and ROI. Then export it as a PDF to share."
+  },
+  "ColdEmailRoiPageClient_s05": {
+    "t01": "How It Works"
+  },
+  "ColdEmailRoiPageClient_s06": {
+    "t01": "Why This Works"
+  },
+  "ColdEmailRoiPageClient_s07": {
+    "t01": "Ready to see the real math behind your outreach?",
+    "t02": "Book a Call "
+  },
+  "ColdEmailRoiPageClient_s08": {
+    "t01": "Try this next",
+    "t02": "Try it free "
+  }
+}

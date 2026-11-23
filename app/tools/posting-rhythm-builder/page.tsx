@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import PostingRhythmClient from "./PostingRhythmClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolPostingRhythmBuilder.json";
+
+// This page's text is edited in the admin ("LinkedIn Posting Rhythm Builder") and lives in content/page-copy/toolPostingRhythmBuilder.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/posting-rhythm-builder", {
   title: "Free LinkedIn Posting Schedule Planner",
@@ -42,7 +46,7 @@ export default function PostingRhythmBuilder() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "Posting Rhythm Builder", href: "/tools/posting-rhythm-builder" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/posting-rhythm-builder" }]} />
         </div>
       </div>
       <PostingRhythmClient />

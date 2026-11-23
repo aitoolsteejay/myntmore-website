@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import ICPBuilderClient from "./ICPBuilderClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolIcpBuilder.json";
+
+// This page's text is edited in the admin ("Interactive ICP Builder") and lives in content/page-copy/toolIcpBuilder.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/icp-builder", {
   title: "Free Ideal Customer Profile (ICP) Generator",
@@ -43,7 +47,7 @@ export default function ICPBuilder() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "ICP Builder & Value Proposition Generator", href: "/tools/icp-builder" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/icp-builder" }]} />
         </div>
       </div>
       <ICPBuilderClient />

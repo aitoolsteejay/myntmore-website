@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import pageCopy from "@/content/page-copy/toolColdEmailInboxCalculator.json";
+
+// This page's text is edited in the admin ("Cold Email Inbox Calculator") and lives in content/page-copy/toolColdEmailInboxCalculator.json.
+const copy = pageCopy;
 
 // Works out the sending infrastructure a cold email programme needs. Every default is a number Myntmore
 // already publishes: about 30 live emails per inbox per day (never over 40), 4 inboxes per domain, a
@@ -108,9 +112,9 @@ export default function InboxCalculator() {
     <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
       <form className="rounded-2xl border p-6 sm:p-8 space-y-6" style={{ backgroundColor: "#ffffff", borderColor: LINE }} onSubmit={(e) => e.preventDefault()}>
         <fieldset>
-          <legend className="text-sm font-bold mb-2" style={{ color: INK }}>Start from</legend>
+          <legend className="text-sm font-bold mb-2" style={{ color: INK }}>{copy.InboxCalculator_s05.t01}</legend>
           <div className="grid grid-cols-2 gap-2" role="radiogroup">
-            {([["prospects", "Prospects per month"], ["daily", "Emails per day"]] as const).map(([m, label]) => (
+            {([["prospects", copy.InboxCalculator_s05.t02], ["daily", copy.InboxCalculator_s05.t03]] as const).map(([m, label]) => (
               <button
                 key={m}
                 type="button"
@@ -161,7 +165,7 @@ export default function InboxCalculator() {
 
         <label className="flex items-start gap-3 text-sm cursor-pointer" style={{ color: MUTED }}>
           <input type="checkbox" checked={spares} onChange={(e) => setSpares(e.target.checked)} className="mt-1 h-4 w-4 accent-[#A14A08]" />
-          <span><strong style={{ color: INK }}>Add spare domains</strong> (about 10%, at least one), so a domain can rest without stopping the campaign.</span>
+          <span><strong style={{ color: INK }}>{copy.InboxCalculator_s05.t04}</strong>{copy.InboxCalculator_s05.t05}</span>
         </label>
 
         <Field id="start" label="Date you buy the domains" hint="Warm-up starts once DNS is set up, usually the same day or the next.">
@@ -169,7 +173,7 @@ export default function InboxCalculator() {
         </Field>
 
         <details className="rounded-xl border p-4" style={{ borderColor: LINE, backgroundColor: CREAM }}>
-          <summary className="cursor-pointer text-sm font-bold" style={{ color: INK }}>Add your own costs (optional)</summary>
+          <summary className="cursor-pointer text-sm font-bold" style={{ color: INK }}>{copy.InboxCalculator_s05.t06}</summary>
           <div className="grid gap-5 sm:grid-cols-2 mt-4">
             <Field id="inboxCost" label="Cost per inbox per month" hint="Your email provider's price per user.">
               <input id="inboxCost" type="number" inputMode="decimal" min={0} placeholder="e.g. your plan price" value={inboxCost} onChange={(e) => setInboxCost(e.target.value)} className={inputClass} style={inputStyle} />
@@ -190,35 +194,29 @@ export default function InboxCalculator() {
         </div>
 
         <div className="rounded-2xl border p-5" style={{ backgroundColor: "#ffffff", borderColor: LINE }}>
-          <div className="text-sm font-bold mb-1" style={{ color: INK }}>Ready for the first live email</div>
+          <div className="text-sm font-bold mb-1" style={{ color: INK }}>{copy.InboxCalculator_s05.t07}</div>
           {r.earliest && r.safer ? (
-            <p className="text-base leading-relaxed" style={{ color: MUTED }}>
-              Between <strong style={{ color: INK }}>{fmtDate(r.earliest)}</strong> and <strong style={{ color: INK }}>{fmtDate(r.safer)}</strong>, after 14 to 21 days of warm-up. Start well under {perInbox} a day per inbox in the first week, then raise it as replies come in and bounces stay low.
-            </p>
+            <p className="text-base leading-relaxed" style={{ color: MUTED }}>{copy.InboxCalculator_s05.t08}<strong style={{ color: INK }}>{fmtDate(r.earliest)}</strong>{copy.InboxCalculator_s05.t09}<strong style={{ color: INK }}>{fmtDate(r.safer)}</strong>{copy.InboxCalculator_s05.t10}{perInbox}{copy.InboxCalculator_s05.t11}</p>
           ) : (
-            <p className="text-sm" style={{ color: MUTED }}>Pick a date to see when you can start sending.</p>
+            <p className="text-sm" style={{ color: MUTED }}>{copy.InboxCalculator_s05.t12}</p>
           )}
         </div>
 
         <div className="rounded-2xl border p-5" style={{ backgroundColor: "#ffffff", borderColor: LINE }}>
-          <div className="text-sm font-bold mb-1" style={{ color: INK }}>Replies to expect each month</div>
+          <div className="text-sm font-bold mb-1" style={{ color: INK }}>{copy.InboxCalculator_s05.t13}</div>
           <p className="text-base leading-relaxed" style={{ color: MUTED }}>
-            <strong style={{ color: INK }}>{fmt(r.repliesLow)} to {fmt(r.repliesHigh)}</strong> replies, at least a fifth of them positive. That is the 1% to 3% reply rate we see across Myntmore-managed campaigns; your list and offer move it either way.
-          </p>
+            <strong style={{ color: INK }}>{fmt(r.repliesLow)}{copy.InboxCalculator_s05.t14}{fmt(r.repliesHigh)}</strong>{copy.InboxCalculator_s05.t15}</p>
         </div>
 
         {r.hasCost && (
           <div className="rounded-2xl border p-5" style={{ backgroundColor: "#ffffff", borderColor: LINE }}>
-            <div className="text-sm font-bold mb-1" style={{ color: INK }}>Infrastructure cost per month</div>
+            <div className="text-sm font-bold mb-1" style={{ color: INK }}>{copy.InboxCalculator_s05.t16}</div>
             <p className="text-base leading-relaxed" style={{ color: MUTED }}>
-              <strong style={{ color: INK }}>{r.monthlyCost.toLocaleString("en-IN", { maximumFractionDigits: 0 })}</strong> in your currency: inboxes plus domains spread over 12 months. Sending tool, data and verification costs are extra.
-            </p>
+              <strong style={{ color: INK }}>{r.monthlyCost.toLocaleString("en-IN", { maximumFractionDigits: 0 })}</strong>{copy.InboxCalculator_s05.t17}</p>
           </div>
         )}
 
-        <p className="text-xs leading-relaxed" style={{ color: "#71675E" }}>
-          For reference, our standard client setup is 10 domains with 4 inboxes each: 40 inboxes sending up to about 1,200 emails a day.
-        </p>
+        <p className="text-xs leading-relaxed" style={{ color: "#71675E" }}>{copy.InboxCalculator_s05.t18}</p>
       </div>
     </div>
   );

@@ -8,20 +8,24 @@ import { Lightbulb, TrendingUp, Send, Copy, Check } from "lucide-react";
 import { toast } from "sonner";
 import { textTone } from "@/lib/colors";
 import { saveLeadResult } from "@/lib/save-lead-result";
+import pageCopy from "@/content/page-copy/toolLeadMagnetIdeas.json";
+
+// This page's text is edited in the admin ("B2B Lead Magnet Idea Generator") and lives in content/page-copy/toolLeadMagnetIdeas.json.
+const copy = pageCopy;
 
 const INDUSTRY_OPTIONS = [
-  "B2B SaaS",
+  copy.LeadMagnetIdeasClient_s02.t01,
   "Manufacturing",
-  "Financial Services",
-  "Professional Services / Agencies",
+  copy.LeadMagnetIdeasClient_s02.t02,
+  copy.LeadMagnetIdeasClient_s02.t03,
   "E-commerce",
-  "Healthcare / HealthTech",
-  "Real Estate",
-  "Recruitment / Staffing",
+  copy.LeadMagnetIdeasClient_s02.t04,
+  copy.LeadMagnetIdeasClient_s02.t05,
+  copy.LeadMagnetIdeasClient_s02.t06,
   "Other",
 ];
 
-const TONE_OPTIONS = ["Authoritative", "Professional & Warm", "Sharp & Direct", "Friendly", "Visionary"];
+const TONE_OPTIONS = ["Authoritative", copy.LeadMagnetIdeasClient_s02.t07, copy.LeadMagnetIdeasClient_s02.t08, "Friendly", "Visionary"];
 
 interface LeadMagnetIdea {
   title: string;
@@ -137,20 +141,16 @@ export default function LeadMagnetIdeasClient() {
             style={{ background: "rgba(234,88,12,0.07)", borderColor: "rgba(234,88,12,0.35)" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#EA580C" }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C2410C" }}>Free AI Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C2410C" }}>{copy.LeadMagnetIdeasClient_s02.t09}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">
-            Lead Magnet{" "}
+          <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight">{copy.LeadMagnetIdeasClient_s02.t10}{" "}
             <span className="relative inline-block">
-              <span className="text-primary">Idea</span> Generator
-              <svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden>
+              <span className="text-primary">{copy.LeadMagnetIdeasClient_s02.t11}</span>{copy.LeadMagnetIdeasClient_s02.t12}<svg className="absolute -bottom-1 left-0 w-full overflow-visible" height="10" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 7 Q75 2 150 6 Q225 10 298 5" stroke="#EA580C" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h1>
-          <p className="text-gray-700 text-sm md:text-base mb-6 max-w-xl mx-auto font-medium">
-            Tell us what your business does and we&apos;ll suggest lead magnets tailored to your ICP that you can actually use in outreach.
-          </p>
+          <p className="text-gray-700 text-sm md:text-base mb-6 max-w-xl mx-auto font-medium">{copy.LeadMagnetIdeasClient_s02.t13}</p>
         </header>
 
         <div>
@@ -171,12 +171,12 @@ export default function LeadMagnetIdeasClient() {
 
               <div className="space-y-8 mb-10">
                 <div className="space-y-3">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">What does your business do?</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.LeadMagnetIdeasClient_s02.t14}</label>
                   <textarea
                     className="w-full bg-white rounded-lg px-4 py-4 text-black focus:border-[#F5B731] outline-none transition-colors placeholder:text-gray-400 resize-none"
                     style={{ border: "1px solid #E8E2D9" }}
                     rows={4}
-                    placeholder="e.g. We help mid-market SaaS companies set up and run cold email outbound to book qualified sales meetings."
+                    placeholder={copy.LeadMagnetIdeasClient_s02.t15}
                     value={formData.businessDescription}
                     onChange={(e) => setFormData({ ...formData, businessDescription: e.target.value })}
                   />
@@ -184,28 +184,26 @@ export default function LeadMagnetIdeasClient() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Target Audience / ICP</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.LeadMagnetIdeasClient_s02.t16}</label>
                     <input
                       type="text"
                       className="w-full bg-white rounded-lg px-4 py-3 text-black focus:border-[#F5B731] outline-none transition-colors placeholder:text-gray-400"
                       style={{ border: "1px solid #E8E2D9" }}
-                      placeholder="e.g. VP of Sales at Series B SaaS companies"
+                      placeholder={copy.LeadMagnetIdeasClient_s02.t17}
                       value={formData.icp}
                       onChange={(e) => setFormData({ ...formData, icp: e.target.value })}
                     />
                   </div>
 
                   <div className="space-y-3">
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Industry</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.LeadMagnetIdeasClient_s02.t18}</label>
                     <select
                       className="w-full bg-white rounded-lg px-4 py-3 text-black focus:border-[#F5B731] outline-none transition-colors appearance-none cursor-pointer"
                       style={{ border: "1px solid #E8E2D9" }}
                       value={formData.industry}
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value, customIndustry: "" })}
                     >
-                      <option value="" disabled>
-                        Select industry...
-                      </option>
+                      <option value="" disabled>{copy.LeadMagnetIdeasClient_s02.t19}</option>
                       {INDUSTRY_OPTIONS.map((opt) => (
                         <option key={opt} value={opt}>
                           {opt}
@@ -217,7 +215,7 @@ export default function LeadMagnetIdeasClient() {
                         type="text"
                         className="w-full bg-white rounded-lg px-4 py-3 text-black focus:border-[#F5B731] outline-none transition-colors placeholder:text-gray-400 mt-3"
                         style={{ border: "1px solid #E8E2D9" }}
-                        placeholder="Enter your industry"
+                        placeholder={copy.LeadMagnetIdeasClient_s02.t20}
                         value={formData.customIndustry}
                         onChange={(e) => setFormData({ ...formData, customIndustry: e.target.value })}
                       />
@@ -226,7 +224,7 @@ export default function LeadMagnetIdeasClient() {
                 </div>
 
                 <div className="space-y-3">
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Preferred Tone</label>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">{copy.LeadMagnetIdeasClient_s02.t21}</label>
                   <div className="flex flex-wrap gap-2">
                     {TONE_OPTIONS.map((tone) => {
                       const active = formData.tone === tone;
@@ -261,9 +259,7 @@ export default function LeadMagnetIdeasClient() {
               >
                 {loading ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                    Generating Ideas...
-                  </>
+                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>{copy.LeadMagnetIdeasClient_s02.t22}</>
                 ) : (
                   "Generate Ideas"
                 )}
@@ -291,8 +287,7 @@ export default function LeadMagnetIdeasClient() {
                         >
                           <Lightbulb className="w-4 h-4" style={{ color }} />
                         </div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: textTone(color) }}>
-                          Idea {idx + 1}
+                        <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: textTone(color) }}>{copy.LeadMagnetIdeasClient_s02.t23}{idx + 1}
                         </p>
                       </div>
                       <button
@@ -302,14 +297,10 @@ export default function LeadMagnetIdeasClient() {
                       >
                         {copiedIndex === idx ? (
                           <>
-                            <Check className="w-3.5 h-3.5" style={{ color }} />
-                            Copied
-                          </>
+                            <Check className="w-3.5 h-3.5" style={{ color }} />{copy.LeadMagnetIdeasClient_s02.t24}</>
                         ) : (
                           <>
-                            <Copy className="w-3.5 h-3.5" />
-                            Copy
-                          </>
+                            <Copy className="w-3.5 h-3.5" />{copy.LeadMagnetIdeasClient_s02.t25}</>
                         )}
                       </button>
                     </div>
@@ -318,16 +309,12 @@ export default function LeadMagnetIdeasClient() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6" style={{ borderTop: "1px solid #F0EDE7" }}>
                       <div>
                         <p className="flex items-center gap-1.5 text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">
-                          <TrendingUp className="w-3.5 h-3.5" />
-                          Why It Works
-                        </p>
+                          <TrendingUp className="w-3.5 h-3.5" />{copy.LeadMagnetIdeasClient_s02.t26}</p>
                         <p className="text-gray-600 text-sm leading-relaxed">{idea.whyItWorks}</p>
                       </div>
                       <div>
                         <p className="flex items-center gap-1.5 text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">
-                          <Send className="w-3.5 h-3.5" />
-                          How to Use It
-                        </p>
+                          <Send className="w-3.5 h-3.5" />{copy.LeadMagnetIdeasClient_s02.t27}</p>
                         <p className="text-gray-600 text-sm leading-relaxed">{idea.distribution}</p>
                       </div>
                     </div>
@@ -336,19 +323,13 @@ export default function LeadMagnetIdeasClient() {
               })}
 
               <div className="relative group overflow-hidden bg-white rounded-2xl p-12 md:p-20 text-center shadow-sm" style={{ border: "2px solid #F5B731" }}>
-                <h2 className="text-3xl sm:text-4xl font-black mb-6 relative z-10 leading-tight">
-                  We can build and run these for you
-                </h2>
-                <p className="text-gray-600 mb-12 max-w-2xl mx-auto relative z-10 text-lg font-normal leading-relaxed">
-                  Myntmore designs, builds, and distributes lead magnets as part of a full outbound system for elite B2B founders.
-                </p>
+                <h2 className="text-3xl sm:text-4xl font-black mb-6 relative z-10 leading-tight">{copy.LeadMagnetIdeasClient_s03.t01}</h2>
+                <p className="text-gray-600 mb-12 max-w-2xl mx-auto relative z-10 text-lg font-normal leading-relaxed">{copy.LeadMagnetIdeasClient_s03.t02}</p>
                 <Link
                   href="/book-a-call"
                   className="inline-block text-black font-black px-12 py-5 rounded-full text-lg uppercase tracking-[0.2em] hover:shadow-[0_0_30px_rgba(245,183,49,0.4)] transition-all active:scale-[0.98] relative z-10"
                   style={{ backgroundColor: "#F5B731" }}
-                >
-                  Book A Call
-                </Link>
+                >{copy.LeadMagnetIdeasClient_s03.t03}</Link>
               </div>
             </div>
           )}

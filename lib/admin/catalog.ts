@@ -56,6 +56,15 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
       url: route ? () => route : undefined,
     };
   }
+  if (key.startsWith("tool")) {
+    const route = guideRoutes.get(key);
+    return {
+      title: label.replace(/^Tool:\s*/i, ""),
+      description: "Interactive tool",
+      group: "pages",
+      url: route ? () => route : undefined,
+    };
+  }
   return { title: label, description: "", group: "pages" };
 }
 

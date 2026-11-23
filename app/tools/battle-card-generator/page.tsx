@@ -6,6 +6,10 @@ import { buildWebApplicationSchema } from "@/lib/schema";
 import { buildToolSocialMetadata } from "@/lib/tool-social-metadata";
 import BattleCardGeneratorClient from "./BattleCardGeneratorClient";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/toolBattleCardGenerator.json";
+
+// This page's text is edited in the admin ("Competitive Battlecard Generator") and lives in content/page-copy/toolBattleCardGenerator.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/tools/battle-card-generator", {
   title: "Free Competitor Battle Card Generator (AI)",
@@ -44,7 +48,7 @@ export default function BattleCardGeneratorPage() {
       <JsonLd data={APP_SCHEMA} />
       <div className="pt-32 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
-          <Breadcrumbs items={[{ label: "Free Tools", href: "/resources/tools" }, { label: "Competitor Battle Card Generator", href: "/tools/battle-card-generator" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/battle-card-generator" }]} />
         </div>
       </div>
       <BattleCardGeneratorClient />
