@@ -12,6 +12,10 @@ import Underline from "./Underline";
 import { textTone } from "@/lib/colors";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/guide80UsMeetingsAiAgents.json";
+
+// This page's text is edited in the admin ("80+ US Meetings Booked in 1 Month with AI Agents") and lives in content/page-copy/guide80UsMeetingsAiAgents.json.
+const copy = pageCopy;
 
 export const metadata: Metadata = withPageSeo("/resources/guides/80-us-meetings-ai-agents", {
   title: "80+ US Meetings Booked in 1 Month with AI Agents",
@@ -43,10 +47,10 @@ export const metadata: Metadata = withPageSeo("/resources/guides/80-us-meetings-
 });
 
 const HERO_STATS = [
-  { v: "800", l: "Connection requests / mo" },
-  { v: "80+", l: "US meetings booked / mo" },
-  { v: "4", l: "New clients / mo" },
-  { v: "90%", l: "Fully automated" },
+  { v: "800", l: copy.s01.t01 },
+  { v: "80+", l: copy.s01.t02 },
+  { v: "4", l: copy.s01.t03 },
+  { v: "90%", l: copy.s01.t04 },
 ];
 
 function Chip({ text, accent, accentBg }: { text: string; accent: string; accentBg: string }) {
@@ -150,8 +154,7 @@ function StepSection({
         <FadeIn>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-3xl font-black" style={{ color: textTone(accent) }}>{number}</span>
-            <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: accentBg, color: textTone(accent), border: `1px solid ${accent}30` }}>
-              Step {number}
+            <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: accentBg, color: textTone(accent), border: `1px solid ${accent}30` }}>{copy.s01.t05}{number}
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black mb-2 leading-tight" style={{ color: "#0a0a0a" }}>
@@ -184,25 +187,16 @@ export default function AiAgentsMeetingsBlueprint() {
       {/* Hero */}
       <section className="pt-32 pb-14 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto">
-          <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Guides", href: "/resources/guides" }, { label: "80+ US Meetings with AI Agents", href: "/resources/guides/80-us-meetings-ai-agents" }]} />
-          <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4 hero-fade" style={{ backgroundColor: "#FEF3EC", color: "#9A3412", border: "1px solid rgba(249,115,22,0.3)" }}>
-            Free Guide
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-black mb-5 leading-tight hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            80+ US Meetings Booked In 1 Month{" "}
-            <span className="relative inline-block">
-              with AI Agents
-              <Underline color="#F97316" />
+          <Breadcrumbs items={[{ label: copy.s01.t06, href: "/resources" }, { label: copy.s01.t07, href: "/resources/guides" }, { label: copy.s01.t08, href: "/resources/guides/80-us-meetings-ai-agents" }]} />
+          <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4 hero-fade" style={{ backgroundColor: "#FEF3EC", color: "#9A3412", border: "1px solid rgba(249,115,22,0.3)" }}>{copy.s01.t09}</span>
+          <h1 className="text-4xl sm:text-5xl font-black mb-5 leading-tight hero-fade-d1" style={{ color: "#0a0a0a" }}>{copy.s01.t10}{" "}
+            <span className="relative inline-block">{copy.s01.t11}<Underline color="#F97316" />
             </span>
           </h1>
-          <p className="text-base sm:text-lg font-semibold mb-5 hero-fade-d1" style={{ color: "#9A3412" }}>
-            80+ US B2B Meetings/Month, Fully AI-Driven. A step-by-step blueprint you can copy, tweak, and run tomorrow.
-          </p>
+          <p className="text-base sm:text-lg font-semibold mb-5 hero-fade-d1" style={{ color: "#9A3412" }}>{copy.s01.t12}</p>
           <p className="text-base leading-relaxed hero-fade-d2 mb-8" style={{ color: "#52525B" }}>
-            <a href="https://www.linkedin.com/in/tejasjhaveri/" target="_blank" rel="noopener noreferrer" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>Tejas</a>{" "}
-            isn&apos;t your average marketer. He&apos;s a 4x entrepreneur who built Flintstop, a D2C eCommerce brand, into a $6M-a-year machine, shipping out 8,000 orders a day before selling the business in 2020. At{" "}
-            <a href="https://www.myntmore.com/" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>Myntmore</a>, his B2B outbound agency, he&apos;s helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He&apos;s a TEDx speaker, angel investor, and has taught B2B growth methodologies at IIT and IIM. Now, he&apos;s here to do it for you.
-          </p>
+            <a href="https://www.linkedin.com/in/tejasjhaveri/" target="_blank" rel="noopener noreferrer" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>{copy.s01.t13}</a>{" "}{copy.s01.t14}{" "}
+            <a href="https://www.myntmore.com/" className="link-subtle font-semibold" style={{ color: "#0a0a0a" }}>{copy.s01.t15}</a>{copy.s01.t16}</p>
 
           <FadeIn delay={150}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl border" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
@@ -218,79 +212,75 @@ export default function AiAgentsMeetingsBlueprint() {
       </section>
 
       {/* Step 1: Foundations */}
-      <StepSection number="1" icon={Target} title="Foundations (Before Automation)" accent="#F97316" accentBg="rgba(249,115,22,0.08)">
+      <StepSection number="1" icon={Target} title={copy.s01.t17} accent="#F97316" accentBg="rgba(249,115,22,0.08)">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="rounded-xl border p-5" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
-            <h4 className="flex items-center gap-1.5 text-sm font-black mb-3" style={{ color: "#9A3412" }}><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />ICP Locked</h4>
+            <h4 className="flex items-center gap-1.5 text-sm font-black mb-3" style={{ color: "#9A3412" }}><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />{copy.s01.t18}</h4>
             <div className="space-y-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>Roles</p>
-                <ChipGroup items={["Founders", "CEOs", "COOs", "Partners", "VP Sales"]} accent="#F97316" accentBg="rgba(249,115,22,0.08)" />
+                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>{copy.s01.t19}</p>
+                <ChipGroup items={["Founders", "CEOs", "COOs", "Partners", copy.s01.t20]} accent="#F97316" accentBg="rgba(249,115,22,0.08)" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>Industries</p>
+                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>{copy.s01.t21}</p>
                 <ChipGroup items={["SaaS", "Consulting", "Manufacturing", "Recruitment"]} accent="#F97316" accentBg="rgba(249,115,22,0.08)" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>Geo</p>
-                <ChipGroup items={["United States"]} accent="#F97316" accentBg="rgba(249,115,22,0.08)" />
+                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: "#71675E" }}>{copy.s01.t22}</p>
+                <ChipGroup items={[copy.s01.t23]} accent="#F97316" accentBg="rgba(249,115,22,0.08)" />
               </div>
             </div>
           </div>
 
           <MiniCard
-            title={<><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />Triggers</>}
-            items={["Scaling teams", "Launching new products", "Hiring aggressively", "Active on LinkedIn"]}
+            title={<><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />{copy.s01.t24}</>}
+            items={[copy.s01.t25, copy.s01.t26, copy.s01.t27, copy.s01.t28]}
             accent="#F97316"
           />
 
           <div className="rounded-xl p-5 flex flex-col justify-center" style={{ backgroundColor: "rgba(249,115,22,0.08)", border: "1px solid rgba(249,115,22,0.3)" }}>
-            <h4 className="flex items-center gap-1.5 text-sm font-black mb-3" style={{ color: "#9A3412" }}><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />Value Proposition</h4>
-            <p className="text-sm italic leading-relaxed" style={{ color: "#0a0a0a" }}>
-              &quot;We help B2B founders book predictable sales meetings using AI agents + laser-targeted outbound.&quot;
-            </p>
+            <h4 className="flex items-center gap-1.5 text-sm font-black mb-3" style={{ color: "#9A3412" }}><Check className="w-4 h-4 flex-shrink-0" strokeWidth={3} aria-hidden="true" />{copy.s01.t29}</h4>
+            <p className="text-sm italic leading-relaxed" style={{ color: "#0a0a0a" }}>{copy.s01.t30}</p>
           </div>
         </div>
       </StepSection>
 
       {/* Step 2: Prospect Discovery Engine */}
-      <StepSection number="2" icon={Search} title="Prospect Discovery Engine" subtitle="n8n + Apollo/Clay" accent="#16a34a" accentBg="rgba(34,197,94,0.08)">
+      <StepSection number="2" icon={Search} title={copy.s01.t31} subtitle="n8n + Apollo/Clay" accent="#16a34a" accentBg="rgba(34,197,94,0.08)">
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#71675E" }}>Daily automated lead pull, 6 AM IST</p>
-          <FlowChips steps={["n8n", "Apollo/Clay API", "Airtable/Sheet"]} accent="#16a34a" />
+          <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#71675E" }}>{copy.s01.t32}</p>
+          <FlowChips steps={["n8n", copy.s01.t33, "Airtable/Sheet"]} accent="#16a34a" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>Filters</h4>
-            <ChipGroup items={["US-based", "Founder/CXO-level", "5–200 employees", "Relevant industries"]} accent="#16a34a" accentBg="rgba(34,197,94,0.08)" />
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t34}</h4>
+            <ChipGroup items={["US-based", "Founder/CXO-level", copy.s01.t35, copy.s01.t36]} accent="#16a34a" accentBg="rgba(34,197,94,0.08)" />
           </div>
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>Nodes in the workflow</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t37}</h4>
             <NumberedList
-              items={["Cron Node, triggers daily run", "HTTP Request Node (Apollo/Clay API)", "Set Node, clean fields", "IF Node, remove duplicates", "Airtable/Google Sheet Node, store leads"]}
+              items={[copy.s01.t38, copy.s01.t39, copy.s01.t40, copy.s01.t41, copy.s01.t42]}
               accent="#16a34a"
               accentBg="rgba(34,197,94,0.08)"
             />
           </div>
         </div>
 
-        <Callout accent="#16a34a" accentBg="rgba(34,197,94,0.08)">
-          Your day&apos;s prospect list is fully ready by the time you wake up.
-        </Callout>
+        <Callout accent="#16a34a" accentBg="rgba(34,197,94,0.08)">{copy.s01.t43}</Callout>
       </StepSection>
 
       {/* Step 3: AI Background Enrichment */}
-      <StepSection number="3" icon={Brain} title="AI Background Enrichment" subtitle="Profile + Website + News" accent="#a855f7" accentBg="rgba(168,85,247,0.08)">
-        <p className="text-sm sm:text-base" style={{ color: "#3D3D3D" }}>For each new lead, n8n runs 3 parallel scrapes:</p>
+      <StepSection number="3" icon={Brain} title={copy.s01.t44} subtitle="Profile + Website + News" accent="#a855f7" accentBg="rgba(168,85,247,0.08)">
+        <p className="text-sm sm:text-base" style={{ color: "#3D3D3D" }}>{copy.s01.t45}</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <MiniCard title="a) LinkedIn Activity Scrape" items={["Recent posts", "Topics they talk about", "About section", "Featured links"]} accent="#a855f7" />
-          <MiniCard title="b) Website Intelligence Scrape" items={["Homepage messaging", "What they sell", "ICP", "Offer positioning"]} accent="#a855f7" />
-          <MiniCard title="c) Company News Signals" items={["Funding", "Hiring", "Product launches"]} accent="#a855f7" />
+          <MiniCard title={copy.s01.t46} items={[copy.s01.t47, copy.s01.t48, copy.s01.t49, copy.s01.t50]} accent="#a855f7" />
+          <MiniCard title={copy.s01.t51} items={[copy.s01.t52, copy.s01.t53, "ICP", copy.s01.t54]} accent="#a855f7" />
+          <MiniCard title={copy.s01.t55} items={["Funding", "Hiring", copy.s01.t56]} accent="#a855f7" />
         </div>
 
         <div>
-          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>AI Agent (OpenAI/Gemini) prompt</h4>
+          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t57}</h4>
           <CopyBlock
             accent="#a855f7"
             label="Copy this prompt"
@@ -298,103 +288,93 @@ export default function AiAgentsMeetingsBlueprint() {
           />
         </div>
 
-        <Callout accent="#a855f7" accentBg="rgba(168,85,247,0.08)">
-          &quot;Noticed you&apos;re scaling US sales hiring, personalised outbound could compound that momentum.&quot;
-        </Callout>
-        <p className="text-sm" style={{ color: "#71675E" }}>This becomes the spine of your messaging.</p>
+        <Callout accent="#a855f7" accentBg="rgba(168,85,247,0.08)">{copy.s01.t58}</Callout>
+        <p className="text-sm" style={{ color: "#71675E" }}>{copy.s01.t59}</p>
       </StepSection>
 
       {/* Step 4: Hyper-Personalised Outreach Generator */}
-      <StepSection number="4" icon={MessageSquare} title="Hyper-Personalised Outreach Generator" accent="#D97706" accentBg="rgba(217,119,6,0.08)">
-        <p className="text-sm sm:text-base" style={{ color: "#3D3D3D" }}>AI generates all 5 messages for every lead:</p>
+      <StepSection number="4" icon={MessageSquare} title={copy.s01.t60} accent="#D97706" accentBg="rgba(217,119,6,0.08)">
+        <p className="text-sm sm:text-base" style={{ color: "#3D3D3D" }}>{copy.s01.t61}</p>
         <NumberedList
           accent="#D97706"
           accentBg="rgba(217,119,6,0.08)"
           items={[
-            "Connection Note, personalised in 300 characters based on their post + website + your value prop",
-            "Follow-up #1, light context + credibility",
-            "Follow-up #2, a micro-insight from their website",
-            "Follow-up #3, soft ask: \"Worth exploring?\"",
-            "Final Nudge, polite push + Calendly CTA",
+            copy.s01.t62,
+            copy.s01.t63,
+            copy.s01.t64,
+            copy.s01.t65,
+            copy.s01.t66,
           ]}
         />
         <div>
-          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>Nodes</h4>
-          <ChipGroup items={["AI Agent Node, message generation", "Set Node, store final sequence", "Database Node, push to CRM"]} accent="#D97706" accentBg="rgba(217,119,6,0.08)" />
+          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t67}</h4>
+          <ChipGroup items={[copy.s01.t68, copy.s01.t69, copy.s01.t70]} accent="#D97706" accentBg="rgba(217,119,6,0.08)" />
         </div>
-        <Callout accent="#D97706" accentBg="rgba(217,119,6,0.08)">
-          Outcome: a unique outreach sequence for every single prospect.
-        </Callout>
+        <Callout accent="#D97706" accentBg="rgba(217,119,6,0.08)">{copy.s01.t71}</Callout>
       </StepSection>
 
       {/* Step 5: LinkedIn Outreach Automation */}
-      <StepSection number="5" icon={Rocket} title="LinkedIn Outreach Automation" subtitle="800 requests / month, using n8n" accent="#0077b5" accentBg="rgba(0,119,181,0.08)">
+      <StepSection number="5" icon={Rocket} title={copy.s01.t72} subtitle="800 requests / month, using n8n" accent="#0077b5" accentBg="rgba(0,119,181,0.08)">
         <NumberedList
           accent="#0077b5"
           accentBg="rgba(0,119,181,0.08)"
           items={[
-            "Fetch personalised messages",
-            "Match message + prospect + step",
-            "Send via tool API",
-            "Log status: sent, accepted, replied",
-            "Auto-tag positives",
+            copy.s01.t73,
+            copy.s01.t74,
+            copy.s01.t75,
+            copy.s01.t76,
+            copy.s01.t77,
           ]}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="rounded-xl p-5 text-center" style={{ backgroundColor: "rgba(0,119,181,0.08)", border: "1px solid rgba(0,119,181,0.3)" }}>
-            <div className="text-xl font-black" style={{ color: "#0a0a0a" }}>~26/day = 800/month</div>
+            <div className="text-xl font-black" style={{ color: "#0a0a0a" }}>{copy.s01.t78}</div>
           </div>
           <div className="rounded-xl p-5 text-center" style={{ backgroundColor: "rgba(0,119,181,0.08)", border: "1px solid rgba(0,119,181,0.3)" }}>
-            <div className="text-xl font-black" style={{ color: "#0a0a0a" }}>4 auto follow-ups after acceptance</div>
+            <div className="text-xl font-black" style={{ color: "#0a0a0a" }}>{copy.s01.t79}</div>
           </div>
         </div>
-        <Callout accent="#0077b5" accentBg="rgba(0,119,181,0.08)">
-          This is the backbone of the 80-meetings engine.
-        </Callout>
+        <Callout accent="#0077b5" accentBg="rgba(0,119,181,0.08)">{copy.s01.t80}</Callout>
       </StepSection>
 
       {/* Step 6: Call Booking Autopilot */}
-      <StepSection number="6" icon={CalendarCheck} title="Call Booking Autopilot" subtitle="n8n + Calendly" accent="#14B8A6" accentBg="rgba(20,184,166,0.08)">
-        <p className="text-sm sm:text-base font-semibold" style={{ color: "#3D3D3D" }}>When someone replies:</p>
+      <StepSection number="6" icon={CalendarCheck} title={copy.s01.t81} subtitle="n8n + Calendly" accent="#14B8A6" accentBg="rgba(20,184,166,0.08)">
+        <p className="text-sm sm:text-base font-semibold" style={{ color: "#3D3D3D" }}>{copy.s01.t82}</p>
         <NumberedList
           accent="#14B8A6"
           accentBg="rgba(20,184,166,0.08)"
           items={[
-            "LinkedIn Inbox API sends the reply to n8n",
-            "AI Sentiment Node classifies the reply",
-            "If \"positive\": auto-send the Calendly link, add to the Hot Lead pipeline",
-            "Auto-create a CRM entry",
-            "Send a confirmation message",
+            copy.s01.t83,
+            copy.s01.t84,
+            copy.s01.t85,
+            copy.s01.t86,
+            copy.s01.t87,
           ]}
         />
-        <Callout accent="#14B8A6" accentBg="rgba(20,184,166,0.08)">
-          &quot;Great, here&apos;s my calendar, pick a time that works.&quot;
-        </Callout>
+        <Callout accent="#14B8A6" accentBg="rgba(20,184,166,0.08)">{copy.s01.t88}</Callout>
       </StepSection>
 
       {/* Step 7: Self-Optimising Weekly Report */}
-      <StepSection number="7" icon={ChartColumn} title="Self-Optimising Weekly Report" subtitle="Every Friday evening" accent="#6366f1" accentBg="rgba(99,102,241,0.08)">
+      <StepSection number="7" icon={ChartColumn} title={copy.s01.t89} subtitle="Every Friday evening" accent="#6366f1" accentBg="rgba(99,102,241,0.08)">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>Pull all metrics</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t90}</h4>
             <ChipGroup
-              items={["Connection acceptance rate", "Reply rate", "Positive reply rate", "Meetings booked", "Show-up rate"]}
+              items={[copy.s01.t91, copy.s01.t92, copy.s01.t93, copy.s01.t94, copy.s01.t95]}
               accent="#6366f1"
               accentBg="rgba(99,102,241,0.08)"
             />
           </div>
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>AI Agent analyses</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s01.t96}</h4>
             <ChipGroup
-              items={["Best-responding ICP segment", "Highest-replying message", "Winning personalisation angle", "What to change next week"]}
+              items={[copy.s01.t97, copy.s01.t98, copy.s01.t99, copy.s01.t100]}
               accent="#6366f1"
               accentBg="rgba(99,102,241,0.08)"
             />
           </div>
         </div>
-        <Callout accent="#6366f1" accentBg="rgba(99,102,241,0.08)">
-          n8n automatically updates next week&apos;s templates. This is how the system gets sharper every week.
-        </Callout>
+        <Callout accent="#6366f1" accentBg="rgba(99,102,241,0.08)">{copy.s01.t101}</Callout>
       </StepSection>
 
       {/* Step 8: Results */}
@@ -402,23 +382,20 @@ export default function AiAgentsMeetingsBlueprint() {
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl font-black" style={{ color: "#BE185D" }}>8</span>
-              <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(236,72,153,0.08)", color: "#BE185D", border: "1px solid rgba(236,72,153,0.3)" }}>
-                Step 8
-              </span>
+              <span className="text-3xl font-black" style={{ color: "#BE185D" }}>{copy.s01.t102}</span>
+              <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(236,72,153,0.08)", color: "#BE185D", border: "1px solid rgba(236,72,153,0.3)" }}>{copy.s01.t103}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-              <Trophy className="inline-block w-7 h-7 mr-2 -mt-1 align-middle" style={{ color: "#A14A08" }} strokeWidth={2.25} aria-hidden="true" />Results (real)
-            </h2>
+              <Trophy className="inline-block w-7 h-7 mr-2 -mt-1 align-middle" style={{ color: "#A14A08" }} strokeWidth={2.25} aria-hidden="true" />{copy.s02.t01}</h2>
           </FadeIn>
 
           <FadeIn delay={100}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 sm:p-8 rounded-2xl" style={{ backgroundColor: "#FEF9EC", border: "1px solid rgba(245,183,49,0.3)" }}>
               {[
-                { v: "800", l: "Connection requests / month" },
-                { v: "80+", l: "US meetings booked / month" },
-                { v: "4", l: "New clients / month, at $2,000 each" },
-                { v: "90%", l: "Of the system fully automated" },
+                { v: "800", l: copy.s02.t02 },
+                { v: "80+", l: copy.s02.t03 },
+                { v: "4", l: copy.s02.t04 },
+                { v: "90%", l: copy.s02.t05 },
               ].map((s) => (
                 <div key={s.l} className="text-center">
                   <div className="text-3xl sm:text-4xl font-black mb-1" style={{ color: "#0a0a0a" }}><StatTicker value={s.v} /></div>
@@ -426,9 +403,7 @@ export default function AiAgentsMeetingsBlueprint() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-sm sm:text-base font-semibold mt-5" style={{ color: "#71675E" }}>
-              You only show up for calls.
-            </p>
+            <p className="text-center text-sm sm:text-base font-semibold mt-5" style={{ color: "#71675E" }}>{copy.s02.t06}</p>
           </FadeIn>
         </div>
       </section>
@@ -438,14 +413,10 @@ export default function AiAgentsMeetingsBlueprint() {
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl font-black" style={{ color: "#9A3412" }}>9</span>
-              <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(249,115,22,0.08)", color: "#9A3412", border: "1px solid rgba(249,115,22,0.3)" }}>
-                Step 9
-              </span>
+              <span className="text-3xl font-black" style={{ color: "#9A3412" }}>{copy.s02.t07}</span>
+              <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(249,115,22,0.08)", color: "#9A3412", border: "1px solid rgba(249,115,22,0.3)" }}>{copy.s02.t08}</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black mb-5 leading-tight" style={{ color: "#0a0a0a" }}>
-              Check out the AI Agents in action
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-black mb-5 leading-tight" style={{ color: "#0a0a0a" }}>{copy.s03.t01}</h2>
             <a
               href="https://www.loom.com/share/143c7b6ae41242bbbad797539987d214?sid=2c7fb593-ef70-4933-ac6f-8a518eb65803"
               target="_blank"
@@ -455,13 +426,11 @@ export default function AiAgentsMeetingsBlueprint() {
             >
               <PlayCircle className="w-10 h-10 flex-shrink-0" style={{ color: "#9A3412" }} />
               <div>
-                <p className="text-sm sm:text-base font-black" style={{ color: "#0A0A0A" }}>Watch the walkthrough on Loom</p>
-                <p className="text-xs sm:text-sm" style={{ color: "#71675E" }}>See the full agent workflow, live</p>
+                <p className="text-sm sm:text-base font-black" style={{ color: "#0A0A0A" }}>{copy.s03.t02}</p>
+                <p className="text-xs sm:text-sm" style={{ color: "#71675E" }}>{copy.s03.t03}</p>
               </div>
             </a>
-            <p className="text-sm sm:text-base leading-relaxed mt-5" style={{ color: "#3D3D3D" }}>
-              Our AI Agents are custom-built to act like your silent growth team, working 24/7 behind the scenes to analyse, identify, and act with precision.
-            </p>
+            <p className="text-sm sm:text-base leading-relaxed mt-5" style={{ color: "#3D3D3D" }}>{copy.s03.t04}</p>
           </FadeIn>
         </div>
       </section>
@@ -471,7 +440,7 @@ export default function AiAgentsMeetingsBlueprint() {
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="rounded-2xl p-8 sm:p-12 text-center" style={{ background: "linear-gradient(135deg, #FEF9EC 0%, #FFFFFF 100%)", border: "1px solid rgba(245,183,49,0.35)", boxShadow: "0 8px 30px rgba(0,0,0,0.04)" }}>
-              <h2 className="text-2xl sm:text-3xl font-black mb-6 text-[#0A0A0A]">More playbooks like this</h2>
+              <h2 className="text-2xl sm:text-3xl font-black mb-6 text-[#0A0A0A]">{copy.s04.t01}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
                 <a
                   href="https://www.instagram.com/tejas_jhaveri/"
@@ -481,8 +450,8 @@ export default function AiAgentsMeetingsBlueprint() {
                   style={{ border: "1px solid #E8E2D9", backgroundColor: "#FFFFFF" }}
                 >
                   <span className="flex justify-center mb-2" style={{ color: "#A14A08" }}><Camera className="w-6 h-6" aria-hidden="true" /></span>
-                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">Follow along</span>
-                  <span className="block text-xs" style={{ color: "#71675E" }}>@tejas_jhaveri</span>
+                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">{copy.s04.t02}</span>
+                  <span className="block text-xs" style={{ color: "#71675E" }}>{copy.s04.t03}</span>
                 </a>
                 <a
                   href="/book-a-call"
@@ -490,8 +459,8 @@ export default function AiAgentsMeetingsBlueprint() {
                   style={{ border: "1px solid #E8E2D9", backgroundColor: "#FFFFFF" }}
                 >
                   <span className="flex justify-center mb-2" style={{ color: "#A14A08" }}><CalendarCheck className="w-6 h-6" aria-hidden="true" /></span>
-                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">Book a call</span>
-                  <span className="block text-xs" style={{ color: "#71675E" }}>Complimentary strategy session</span>
+                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">{copy.s04.t04}</span>
+                  <span className="block text-xs" style={{ color: "#71675E" }}>{copy.s04.t05}</span>
                 </a>
                 <a
                   href="mailto:founder@myntmore.com"
@@ -499,13 +468,11 @@ export default function AiAgentsMeetingsBlueprint() {
                   style={{ border: "1px solid #E8E2D9", backgroundColor: "#FFFFFF" }}
                 >
                   <span className="flex justify-center mb-2" style={{ color: "#A14A08" }}><Mail className="w-6 h-6" aria-hidden="true" /></span>
-                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">Email us</span>
-                  <span className="block text-xs" style={{ color: "#71675E" }}>founder@myntmore.com</span>
+                  <span className="block text-sm font-bold text-[#0A0A0A] mb-1">{copy.s04.t06}</span>
+                  <span className="block text-xs" style={{ color: "#71675E" }}>{copy.s04.t07}</span>
                 </a>
               </div>
-              <Link href="/resources/guides/58-meetings-600-linkedin-connections" className="inline-block mt-6 text-sm font-semibold underline underline-offset-4" style={{ color: "#A14A08" }}>
-                Prefer the manual version? 58 meetings from 600 LinkedIn connections
-              </Link>
+              <Link href="/resources/guides/58-meetings-600-linkedin-connections" className="inline-block mt-6 text-sm font-semibold underline underline-offset-4" style={{ color: "#A14A08" }}>{copy.s04.t08}</Link>
             </div>
           </FadeIn>
         </div>

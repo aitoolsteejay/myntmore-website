@@ -1,0 +1,82 @@
+{
+  "s01": {
+    "t01": "Subject: Saw your raise, here's a shortcut\n\nHey [First Name],\n\nCongrats on the Seed round. Saw you're leading your first team at [Company].\n\nWe helped another founder in your spot reduce onboarding time by 40% without adding headcount. Happy to share how if you're open to it.\n\n[Your Name]",
+    "t02": "Subject: Quick case study, might be useful\n\nHey [First Name],\n\nFollowing up. Thought you might find this useful: a breakdown of how we helped [Founder] at [Company] navigate their post-Seed GTM sprint.\n\nLet me know if you'd like the PDF. Happy to send.",
+    "t03": "Find B2B SaaS companies founded less than 2 years ago, raised Seed in the past 90 days, are hiring growth roles, use HubSpot, and are led by a first-time founder.\n\nEnrich with job posts, LinkedIn posts, team-size changes, and a summary of recent founder activity.",
+    "t04": "Company age under 2 years",
+    "t05": "Urgent to prove traction and likely under-resourced",
+    "t06": "Seed or Series A funded",
+    "t07": "Cash has landed and growth is expected",
+    "t08": "First-time founder",
+    "t09": "Less internal infrastructure and more openness to help",
+    "t10": "Hiring sales or operations roles",
+    "t11": "They know they need systems but do not have them yet",
+    "t12": "Raised Seed or Series A funding in the last 60 to 90 days",
+    "t13": "Hired a Head of Sales or Marketing",
+    "t14": "Posted two or more new GTM roles",
+    "t15": "Launched a product or earned a recent press mention",
+    "t16": "Founder was promoted or changed titles",
+    "t17": "Crunchbase or PitchBook",
+    "t18": "Confirm funding details",
+    "t19": "LinkedIn growth trends",
+    "t20": "See whether the team is expanding",
+    "t21": "Reveal the technology stack",
+    "t22": "Open roles",
+    "t23": "Identify growth and operational need",
+    "t24": "LinkedIn or X posts",
+    "t25": "Understand what the founder is discussing",
+    "t26": "AI summaries",
+    "t27": "Generate insights and useful first drafts",
+    "t28": "Resources",
+    "t29": "Guides",
+    "t30": "ICP & Targeting Guide",
+    "t31": "The Golden ICP",
+    "t32": "Framework",
+    "t33": "Stop defining buyers by job title alone. Build prospect lists around pressure, timing, and real buying signals so even a simple message earns attention.",
+    "t34": "Tejas Jhaveri, Founder of Myntmore"
+  },
+  "s02": {
+    "t01": "From Tejas Jhaveri, founder to founder",
+    "t02": "Tejas is a four-time entrepreneur who built Flintstop into a $6M-a-year D2C business before selling it in 2020. At Myntmore, he has helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He is also a TEDx speaker and has taught B2B growth methodologies at IIT and IIM.",
+    "t03": "If your cold emails are not landing, the problem may not be the tool, subject line, or follow-up. It may be who you are sending to.",
+    "t04": "This framework helps you reach the right people at the right moment. It is the same approach Myntmore uses to help founders book sales conversations without relying on daily posting or broad, volume-heavy outreach.",
+    "t05": "Step 01"
+  },
+  "s03": {
+    "t01": "Redefine your ICP using pressure, not personas",
+    "t02": "“Marketing manager at a 20 to 500-person SaaS company” tells you who somebody is, but not what they are under pressure to achieve. Go beyond identity and identify the commercial pressure shaping what they care about now.",
+    "t03": "When your list is full of people under pressure to solve the problem you solve, replies get easier.",
+    "t04": "Step 02"
+  },
+  "s04": {
+    "t01": "Use buying triggers, not job titles",
+    "t02": "Buyers do not always look like buyers until something changes. That change is your trigger. Triggers turn static lists into real-time context.",
+    "t03": "“Just saw you raised and hired a Head of Sales. Sounds like you are gearing up GTM. We helped another founder in the same window streamline onboarding before hiring their first reps.”",
+    "t04": "Step 03"
+  },
+  "s05": {
+    "t01": "Turn ICP and triggers into a living prospect list",
+    "t02": "Smartlead remains Myntmore's go-to sending platform because it is fast, flexible, and built for scale. Clay is not simply a scraping tool. Used well, it becomes the strategy and enrichment layer behind the campaign."
+  },
+  "s06": {
+    "t01": "Enrichments that add context",
+    "t02": "Step 04"
+  },
+  "s07": {
+    "t01": "Write emails that feel like timing, not pitching",
+    "t02": "Send while the trigger is still fresh. Do not overthink surface-level personalisation. Relevance is the real personal touch.",
+    "t03": "Step 05"
+  },
+  "s08": {
+    "t01": "Follow up with credibility, not pressure",
+    "t02": "If the first message demonstrates timing, the second should demonstrate perspective. Follow-up is not about nagging. It is about returning with something useful and real.",
+    "t03": "Final insight"
+  },
+  "s09": {
+    "t01": "Your list is your leverage",
+    "t02": "Most founders try to write clever messages. The best build lists so dialled in that a simple, timely note earns a reply. Golden ICP means founder-to-founder empathy at scale.",
+    "t03": "Explore Cold Email Services",
+    "t04": "Book a Strategy Call",
+    "t05": "founder@myntmore.com"
+  }
+}

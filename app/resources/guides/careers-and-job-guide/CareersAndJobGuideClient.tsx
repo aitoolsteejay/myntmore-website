@@ -6,6 +6,10 @@ import FadeIn from "@/app/components/FadeIn";
 import StatTicker from "@/app/components/StatTicker";
 import InnerLayout from "@/app/components/InnerLayout";
 import { textTone } from "@/lib/colors";
+import pageCopy from "@/content/page-copy/guideCareersAndJobGuide.json";
+
+// This page's text is edited in the admin ("Career Jumpstart Toolkit") and lives in content/page-copy/guideCareersAndJobGuide.json.
+const copy = pageCopy;
 
 /* ─── Types ───────────────────────────────────────────────────────── */
 interface Tool {
@@ -24,115 +28,115 @@ interface Tip {
 /* ─── Content ─────────────────────────────────────────────────────── */
 
 const PROFILE_PICTURE_CHECKLIST: Tip[] = [
-  { text: "Clear, good-quality photo." },
-  { text: "Looking at the camera." },
-  { text: "The same profile picture across every social channel, it's your logo, don't change it often." },
+  { text: copy.CareersAndJobGuideClient_s01.t01 },
+  { text: copy.CareersAndJobGuideClient_s01.t02 },
+  { text: copy.CareersAndJobGuideClient_s01.t03 },
 ];
 
 const ABOUT_SECTION_CHECKLIST: Tip[] = [
-  { text: "Write in 1st person." },
-  { text: "Who are you." },
-  { text: "What are you interested in." },
-  { text: "What you've done, or are working on right now." },
+  { text: copy.CareersAndJobGuideClient_s01.t04 },
+  { text: copy.CareersAndJobGuideClient_s01.t05 },
+  { text: copy.CareersAndJobGuideClient_s01.t06 },
+  { text: copy.CareersAndJobGuideClient_s01.t07 },
 ];
 
 const FEATURED_SECTION_CHECKLIST: Tip[] = [
-  { text: "Add a link to a resume website, make one in an afternoon with Claude Code or Lovable." },
-  { text: "Make a Loom video introducing yourself and how you can help in your area of expertise." },
-  { text: "Pin a post where you've shared real thoughts on a topic you care about." },
+  { text: copy.CareersAndJobGuideClient_s01.t08 },
+  { text: copy.CareersAndJobGuideClient_s01.t09 },
+  { text: copy.CareersAndJobGuideClient_s01.t10 },
 ];
 
 const NO_EXPERIENCE_CHECKLIST: Tip[] = [
-  { text: "An internship, even a short or unpaid one." },
-  { text: "College fests you helped organize or ran a stall for." },
-  { text: "Freelance gigs, however small." },
-  { text: "A self-started project, built for no one but yourself." },
-  { text: "Even a newsletter or one genuinely good piece of content counts." },
+  { text: copy.CareersAndJobGuideClient_s01.t11 },
+  { text: copy.CareersAndJobGuideClient_s01.t12 },
+  { text: copy.CareersAndJobGuideClient_s01.t13 },
+  { text: copy.CareersAndJobGuideClient_s01.t14 },
+  { text: copy.CareersAndJobGuideClient_s01.t15 },
 ];
 
 const OUTREACH_SEQUENCE: { step: string; title: string; delay: string }[] = [
-  { step: "", title: "Visit the profile", delay: "Day 0" },
-  { step: "", title: "Like & comment on their last post", delay: "Same day" },
-  { step: "", title: "Send a hyper-personalised connection note", delay: "+1 day" },
-  { step: "1", title: "Ask an open-ended question", delay: "+1 day" },
-  { step: "2", title: "Build trust with a Loom video or voice note", delay: "+3 days" },
-  { step: "3", title: "Come to the point, how you can help", delay: "+5 days" },
-  { step: "4", title: "Share a free resource", delay: "+7 days" },
-  { step: "", title: "Withdraw the request and retarget later", delay: "+15 days" },
+  { step: "", title: copy.CareersAndJobGuideClient_s01.t16, delay: "Day 0" },
+  { step: "", title: copy.CareersAndJobGuideClient_s01.t17, delay: "Same day" },
+  { step: "", title: copy.CareersAndJobGuideClient_s01.t18, delay: "+1 day" },
+  { step: "1", title: copy.CareersAndJobGuideClient_s01.t19, delay: "+1 day" },
+  { step: "2", title: copy.CareersAndJobGuideClient_s01.t20, delay: "+3 days" },
+  { step: "3", title: copy.CareersAndJobGuideClient_s01.t21, delay: "+5 days" },
+  { step: "4", title: copy.CareersAndJobGuideClient_s01.t22, delay: "+7 days" },
+  { step: "", title: copy.CareersAndJobGuideClient_s01.t23, delay: "+15 days" },
 ];
 
 const OUTREACH_LIMITS: Tip[] = [
-  { label: "Connection requests", text: "40-50 a day. Warm, established accounts can stretch to around 70." },
-  { label: "Messages", text: "150-200 a day." },
-  { label: "InMails", text: "Use every credited InMail you get (Premium: 15-18, Sales Nav: 50), plus any free InMails available." },
-  { label: "Always ramp up gradually", text: "No sudden spikes. Over-automated outreach is the single most common reason a LinkedIn account gets banned outright." },
+  { label: copy.CareersAndJobGuideClient_s01.t24, text: copy.CareersAndJobGuideClient_s01.t25 },
+  { label: copy.CareersAndJobGuideClient_s01.t26, text: "150-200 a day." },
+  { label: copy.CareersAndJobGuideClient_s01.t27, text: copy.CareersAndJobGuideClient_s01.t28 },
+  { label: copy.CareersAndJobGuideClient_s01.t29, text: copy.CareersAndJobGuideClient_s01.t30 },
 ];
 
 const TOOLS: Record<ToolCategory, Tool[]> = {
   jobs: [
-    { name: "LinkedIn", blurb: "Network + the broadest listings.", url: "https://www.linkedin.com/jobs" },
-    { name: "Indeed", blurb: "Volume across every industry.", url: "https://www.indeed.com" },
-    { name: "Wellfound", blurb: "Startup roles, salaries upfront.", url: "https://wellfound.com" },
-    { name: "Remote OK", blurb: "Remote-only, no location filter.", url: "https://remoteok.com" },
-    { name: "Y Combinator", blurb: "Work at a Startup job board.", url: "https://www.ycombinator.com/jobs" },
+    { name: copy.CareersAndJobGuideClient_s01.t31, blurb: "Network + the broadest listings.", url: "https://www.linkedin.com/jobs" },
+    { name: copy.CareersAndJobGuideClient_s01.t32, blurb: "Volume across every industry.", url: "https://www.indeed.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t33, blurb: "Startup roles, salaries upfront.", url: "https://wellfound.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t34, blurb: "Remote-only, no location filter.", url: "https://remoteok.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t35, blurb: "Work at a Startup job board.", url: "https://www.ycombinator.com/jobs" },
   ],
   resume: [
-    { name: "Teal", blurb: "Tailors your resume to each job post.", url: "https://www.tealhq.com" },
-    { name: "Novoresume", blurb: "Tight, clean one-page templates.", url: "https://novoresume.com" },
-    { name: "Kickresume", blurb: "AI drafting plus cover letters.", url: "https://www.kickresume.com" },
-    { name: "Canva Resume", blurb: "Design-led, but watch the ATS.", url: "https://www.canva.com/resumes/" },
-    { name: "FlowCV", blurb: "Free, with a clean PDF export.", url: "https://flowcv.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t36, blurb: "Tailors your resume to each job post.", url: "https://www.tealhq.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t37, blurb: "Tight, clean one-page templates.", url: "https://novoresume.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t38, blurb: "AI drafting plus cover letters.", url: "https://www.kickresume.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t39, blurb: "Design-led, but watch the ATS.", url: "https://www.canva.com/resumes/" },
+    { name: copy.CareersAndJobGuideClient_s01.t40, blurb: "Free, with a clean PDF export.", url: "https://flowcv.com" },
   ],
   interview: [
-    { name: "LeetCode", blurb: "Coding drills.", url: "https://leetcode.com" },
-    { name: "HackerRank", blurb: "The employer test format.", url: "https://www.hackerrank.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t41, blurb: "Coding drills.", url: "https://leetcode.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t42, blurb: "The employer test format.", url: "https://www.hackerrank.com" },
     { name: "interviewing.io", blurb: "Mock rounds with real engineers.", url: "https://interviewing.io" },
-    { name: "Exponent", blurb: "PM, data, and system design prep.", url: "https://www.tryexponent.com" },
-    { name: "Glassdoor", blurb: "Reviews plus reported questions.", url: "https://www.glassdoor.com" },
-    { name: "Levels.fyi", blurb: "Comp data before you negotiate.", url: "https://www.levels.fyi" },
+    { name: copy.CareersAndJobGuideClient_s01.t43, blurb: "PM, data, and system design prep.", url: "https://www.tryexponent.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t44, blurb: "Reviews plus reported questions.", url: "https://www.glassdoor.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t45, blurb: "Comp data before you negotiate.", url: "https://www.levels.fyi" },
   ],
   portfolio: [
-    { name: "GitHub", blurb: "Code, plus a real README.", url: "https://github.com" },
-    { name: "Kaggle", blurb: "Notebooks and competitions.", url: "https://www.kaggle.com" },
-    { name: "Hugging Face", blurb: "Spaces demos and models.", url: "https://huggingface.co" },
-    { name: "Devpost", blurb: "Hackathon projects, dated.", url: "https://devpost.com" },
-    { name: "Notion Portfolio", blurb: "Free templates, one shareable link.", url: "https://www.notion.so" },
-    { name: "Vercel", blurb: "Deploy a live demo URL.", url: "https://vercel.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t46, blurb: "Code, plus a real README.", url: "https://github.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t47, blurb: "Notebooks and competitions.", url: "https://www.kaggle.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t48, blurb: "Spaces demos and models.", url: "https://huggingface.co" },
+    { name: copy.CareersAndJobGuideClient_s01.t49, blurb: "Hackathon projects, dated.", url: "https://devpost.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t50, blurb: "Free templates, one shareable link.", url: "https://www.notion.so" },
+    { name: copy.CareersAndJobGuideClient_s01.t51, blurb: "Deploy a live demo URL.", url: "https://vercel.com" },
   ],
   learn: [
-    { name: "Coursera", blurb: "Google & Meta certificates.", url: "https://www.coursera.org" },
-    { name: "edX", blurb: "University courses, auditable free.", url: "https://www.edx.org" },
-    { name: "DeepLearning.AI", blurb: "Short AI courses, free.", url: "https://www.deeplearning.ai" },
-    { name: "freeCodeCamp", blurb: "Free and project-based.", url: "https://www.freecodecamp.org" },
-    { name: "LinkedIn Learning", blurb: "Badges land right on your profile.", url: "https://www.linkedin.com/learning" },
-    { name: "Udacity", blurb: "Nanodegrees with real reviews.", url: "https://www.udacity.com" },
-    { name: "Udemy", blurb: "Cheap on sale, tool-specific.", url: "https://www.udemy.com" },
-    { name: "DataCamp", blurb: "SQL, Python, and analytics.", url: "https://www.datacamp.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t52, blurb: "Google & Meta certificates.", url: "https://www.coursera.org" },
+    { name: copy.CareersAndJobGuideClient_s01.t53, blurb: "University courses, auditable free.", url: "https://www.edx.org" },
+    { name: copy.CareersAndJobGuideClient_s01.t54, blurb: "Short AI courses, free.", url: "https://www.deeplearning.ai" },
+    { name: copy.CareersAndJobGuideClient_s01.t55, blurb: "Free and project-based.", url: "https://www.freecodecamp.org" },
+    { name: copy.CareersAndJobGuideClient_s01.t56, blurb: "Badges land right on your profile.", url: "https://www.linkedin.com/learning" },
+    { name: copy.CareersAndJobGuideClient_s01.t57, blurb: "Nanodegrees with real reviews.", url: "https://www.udacity.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t58, blurb: "Cheap on sale, tool-specific.", url: "https://www.udemy.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t59, blurb: "SQL, Python, and analytics.", url: "https://www.datacamp.com" },
   ],
   reviews: [
-    { name: "Glassdoor", blurb: "Interview questions are the gold here.", url: "https://www.glassdoor.com" },
-    { name: "AmbitionBox", blurb: "The deepest data on Indian firms.", url: "https://www.ambitionbox.com" },
-    { name: "Indeed Reviews", blurb: "Reviews sit right next to the listing.", url: "https://www.indeed.com/companies" },
-    { name: "Comparably", blurb: "Culture and leadership, US-skewed.", url: "https://www.comparably.com" },
-    { name: "Blind", blurb: "Anonymous, blunt, tech-heavy.", url: "https://www.teamblind.com" },
-    { name: "Fishbowl", blurb: "Industry chatter, sorted by field.", url: "https://www.fishbowlapp.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t60, blurb: "Interview questions are the gold here.", url: "https://www.glassdoor.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t61, blurb: "The deepest data on Indian firms.", url: "https://www.ambitionbox.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t62, blurb: "Reviews sit right next to the listing.", url: "https://www.indeed.com/companies" },
+    { name: copy.CareersAndJobGuideClient_s01.t63, blurb: "Culture and leadership, US-skewed.", url: "https://www.comparably.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t64, blurb: "Anonymous, blunt, tech-heavy.", url: "https://www.teamblind.com" },
+    { name: copy.CareersAndJobGuideClient_s01.t65, blurb: "Industry chatter, sorted by field.", url: "https://www.fishbowlapp.com" },
   ],
 };
 
 const CATEGORIES: { key: ToolCategory; label: string }[] = [
-  { key: "jobs", label: "Find Jobs" },
-  { key: "resume", label: "Resume" },
-  { key: "interview", label: "Interview Prep" },
-  { key: "portfolio", label: "Portfolio" },
-  { key: "learn", label: "Learn Skills" },
-  { key: "reviews", label: "Reviews & Culture" },
+  { key: "jobs", label: copy.CareersAndJobGuideClient_s01.t66 },
+  { key: "resume", label: copy.CareersAndJobGuideClient_s01.t67 },
+  { key: "interview", label: copy.CareersAndJobGuideClient_s01.t68 },
+  { key: "portfolio", label: copy.CareersAndJobGuideClient_s01.t69 },
+  { key: "learn", label: copy.CareersAndJobGuideClient_s01.t70 },
+  { key: "reviews", label: copy.CareersAndJobGuideClient_s01.t71 },
 ];
 
 const ABOUT_FAQ = [
-  { q: "Who is this toolkit for?", a: "Anyone early in their career: students and recent graduates looking for internships, jobs or their first real break, who want a practical, no-fluff starting point. It assumes no prior experience with LinkedIn, cold outreach or AI tools, and every section can be used on its own." },
-  { q: "Do I need an existing LinkedIn presence or portfolio?", a: "No. Every fix and tool here is meant to be usable the same day, whether you're starting from a blank profile or already have one you want to sharpen. If you are starting from zero, begin with the LinkedIn profile section, because recruiters usually check it before replying to you." },
-  { q: "Is this list exhaustive?", a: "No. It is intentionally a quick-start, not a full course: a solid set of starting points across six areas, not the final word on any one tool. Pick the area where you are weakest, use it for a week, and come back for the next one once that habit sticks." },
-  { q: "Who put this together?", a: "Myntmore, a B2B outbound agency based in Mumbai. It grew out of a college workshop we ran on LinkedIn, cold outreach and the AI tools that speed up a job search. The same principles we use to start sales conversations for clients apply to starting conversations with employers." },
+  { q: copy.CareersAndJobGuideClient_s01.t72, a: copy.CareersAndJobGuideClient_s01.t73 },
+  { q: copy.CareersAndJobGuideClient_s01.t74, a: copy.CareersAndJobGuideClient_s01.t75 },
+  { q: copy.CareersAndJobGuideClient_s01.t76, a: copy.CareersAndJobGuideClient_s01.t77 },
+  { q: copy.CareersAndJobGuideClient_s01.t78, a: copy.CareersAndJobGuideClient_s01.t79 },
 ];
 
 /* ─── Small building blocks ───────────────────────────────────────── */
@@ -409,20 +413,16 @@ export default function CareersAndJobGuideClient() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 hero-fade" style={{ borderColor: "rgba(245,183,49,0.35)", backgroundColor: "rgba(245,183,49,0.07)" }}>
             <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#F5B731", animation: "lp-radar-ping 2.4s cubic-bezier(0.22,1,0.36,1) infinite" }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>A Myntmore career guide</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>{copy.CareersAndJobGuideClient_s01.t80}</span>
           </div>
-          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-6xl hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            Career Jumpstart Toolkit
-          </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: "#52525B" }}>
-            A practical playbook for landing internships, jobs, and your first break: LinkedIn fixes, an outreach playbook, and a curated job-search tool directory.
-          </p>
+          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-6xl hero-fade-d1" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s01.t81}</h1>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: "#52525B" }}>{copy.CareersAndJobGuideClient_s01.t82}</p>
 
           <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-4 hero-fade-d3">
             {[
-              { v: String(totalTools) + "+", l: "Tools curated" },
-              { v: "6", l: "Categories" },
-              { v: "3 weeks", l: "Outreach cadence" },
+              { v: String(totalTools) + "+", l: copy.CareersAndJobGuideClient_s01.t83 },
+              { v: "6", l: copy.CareersAndJobGuideClient_s01.t84 },
+              { v: "3 weeks", l: copy.CareersAndJobGuideClient_s01.t85 },
             ].map((s) => (
               <div key={s.l} className="lp-stat">
                 <StatTicker value={s.v} className="text-3xl font-black" style={{ color: "#0a0a0a" }} />
@@ -437,23 +437,19 @@ export default function CareersAndJobGuideClient() {
       <section className="px-4 py-14">
         <FadeIn className="mx-auto block max-w-4xl">
           <SectionEyebrow num="01" label="Fix your profile first" accent="#3b82f6" />
-          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>
-            Make your LinkedIn profile shiny
-          </h2>
-          <p className="mb-2 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>
-            None of the outreach tactics below matter if the profile someone lands on afterward looks unfinished. Fix these five things first.
-          </p>
+          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s02.t01}</h2>
+          <p className="mb-2 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>{copy.CareersAndJobGuideClient_s02.t02}</p>
 
-          <ProfileSubsection num="1" title="Profile picture" tips={PROFILE_PICTURE_CHECKLIST} accent="#3b82f6" />
+          <ProfileSubsection num="1" title={copy.CareersAndJobGuideClient_s02.t03} tips={PROFILE_PICTURE_CHECKLIST} accent="#3b82f6" />
           <ProfileSubsection
             num="2"
-            title="Banner & headline"
+            title={copy.CareersAndJobGuideClient_s02.t04}
             intro="Your banner is a billboard, not decoration: lead with what you do and the outcome you create, no guesswork. Your headline should stack role, expertise, and one notable credential."
-            tips={[{ text: "Example structure: Role @ Company | Your specific expertise | A notable credential (an exit, a school, a title) | What you're open to." }]}
+            tips={[{ text: copy.CareersAndJobGuideClient_s02.t05 }]}
             accent="#3b82f6"
           />
-          <ProfileSubsection num="3" title="The About section" tips={ABOUT_SECTION_CHECKLIST} accent="#3b82f6" />
-          <ProfileSubsection num="4" title="The Featured section" tips={FEATURED_SECTION_CHECKLIST} accent="#3b82f6" />
+          <ProfileSubsection num="3" title={copy.CareersAndJobGuideClient_s02.t06} tips={ABOUT_SECTION_CHECKLIST} accent="#3b82f6" />
+          <ProfileSubsection num="4" title={copy.CareersAndJobGuideClient_s02.t07} tips={FEATURED_SECTION_CHECKLIST} accent="#3b82f6" />
           <ProfileSubsection
             num="5"
             title={"Experience, projects, and the “I haven't done anything yet” problem"}
@@ -468,20 +464,16 @@ export default function CareersAndJobGuideClient() {
       <section className="border-t px-4 py-14" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <FadeIn className="mx-auto block max-w-4xl">
           <SectionEyebrow num="02" label="The outreach playbook" accent="#a855f7" />
-          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>
-            How to actually get a reply
-          </h2>
-          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>
-            A polished profile gets you noticed. These are the tactics that get you a reply once you've reached out.
-          </p>
+          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s03.t01}</h2>
+          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>{copy.CareersAndJobGuideClient_s03.t02}</p>
 
           <FadeIn className="mb-8 block">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
-                { icon: "🎙️", title: "Voice notes", text: "A 20-second personalised voice note can push reply rates from 30% up to 75%." },
-                { icon: "🎥", title: "Loom video edge", text: "A problem statement plus a 45-second Loom video on how you can help gets 3x the click-through of text alone, and roughly 1 in 3 viewers book a call." },
-                { icon: "😄", title: "Pattern disruption", text: "A well-placed, personalised meme or bit of humour after a couple of unanswered follow-ups can be exactly the pattern-interrupt that finally gets a reply." },
-                { icon: "⏰", title: "The timing advantage", text: "It's not just what you send, it's when. Hitting someone's \"morning scroll window,\" coffee, commute, or meeting prep, instead of just whenever you're free, can roughly double reply rates." },
+                { icon: "🎙️", title: copy.CareersAndJobGuideClient_s03.t03, text: copy.CareersAndJobGuideClient_s03.t04 },
+                { icon: "🎥", title: copy.CareersAndJobGuideClient_s03.t05, text: copy.CareersAndJobGuideClient_s03.t06 },
+                { icon: "😄", title: copy.CareersAndJobGuideClient_s03.t07, text: copy.CareersAndJobGuideClient_s03.t08 },
+                { icon: "⏰", title: copy.CareersAndJobGuideClient_s03.t09, text: copy.CareersAndJobGuideClient_s03.t10 },
               ].map((card, i) => (
                 <div
                   key={card.title}
@@ -499,19 +491,17 @@ export default function CareersAndJobGuideClient() {
           </FadeIn>
 
           <FadeIn className="mb-8 block">
-            <h3 className="mb-4 text-lg font-black" style={{ color: "#0a0a0a" }}>A full outreach sequence, timed out</h3>
+            <h3 className="mb-4 text-lg font-black" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s04.t01}</h3>
             <div className="grid grid-cols-1 gap-3">
               {OUTREACH_SEQUENCE.map((item, i) => (
                 <SequenceRow key={item.title} item={item} delay={i * 45} />
               ))}
             </div>
-            <p className="mt-5 max-w-2xl text-xs leading-relaxed" style={{ color: "#71675E" }}>
-              If a withdrawn request still gets no response, wait roughly three weeks, then retarget from the top.
-            </p>
+            <p className="mt-5 max-w-2xl text-xs leading-relaxed" style={{ color: "#71675E" }}>{copy.CareersAndJobGuideClient_s04.t02}</p>
           </FadeIn>
 
           <FadeIn className="block">
-            <h3 className="mb-4 text-lg font-black" style={{ color: "#0a0a0a" }}>Daily limits worth respecting</h3>
+            <h3 className="mb-4 text-lg font-black" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s05.t01}</h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {OUTREACH_LIMITS.map((tip, i) => (
                 <div
@@ -532,12 +522,8 @@ export default function CareersAndJobGuideClient() {
       <section className="px-4 py-14">
         <FadeIn className="mx-auto block max-w-4xl">
           <SectionEyebrow num="03" label="The job-search toolkit" accent="#10b981" />
-          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>
-            A curated tool directory, by category
-          </h2>
-          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>
-            Every tool below was picked for a reason, not just a long list. Pick a category to jump in.
-          </p>
+          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>{copy.CareersAndJobGuideClient_s06.t01}</h2>
+          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>{copy.CareersAndJobGuideClient_s06.t02}</p>
 
           <div className="mb-8">
             <TabGroup tabs={CATEGORIES} active={category} onChange={setCategory} ariaLabel="Choose a tool category" />
@@ -559,7 +545,7 @@ export default function CareersAndJobGuideClient() {
       </section>
 
       {/* ─── About this toolkit (accordion) ───────────────────── */}
-      <Faq badge="Good to know" title="About this toolkit" items={ABOUT_FAQ} />
+      <Faq badge="Good to know" title={copy.CareersAndJobGuideClient_s06.t03} items={ABOUT_FAQ} />
     </div>
     </InnerLayout>
   );

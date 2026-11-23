@@ -1,0 +1,55 @@
+{
+  "s01": {
+    "t01": "Resources",
+    "t02": "Guides",
+    "t03": "How to Choose an Outbound Agency",
+    "t04": "Buyer's Guide · 6 min read",
+    "t05": "How to choose a B2B outbound agency",
+    "t06": "Most outbound agencies pitch the same three promises: more meetings, done for you, fast. What actually separates a real system from a list-and-pray operation shows up in the questions they'd rather you not ask. Here's what to ask before you sign anything."
+  },
+  "s02": {
+    "t01": "1. Ask what happens to your data if you leave",
+    "t02": "Whatever gets built during the engagement, your ICP definition, sequences, messaging, and prospect lists, should be yours to take with you, documented and transferable. If an agency can't clearly explain what you'd walk away with if you ended the contract tomorrow, you're not buying a system. You're renting access to one, with no plan for what happens after."
+  },
+  "s03": {
+    "t01": "2. Ask who owns deliverability infrastructure",
+    "t02": "Domain warm-up, SPF/DKIM/DMARC authentication, and dedicated sending domains are the unglamorous work that decides whether your emails land in an inbox or a spam folder before a single word of copy matters. Ask specifically whose domains are being used, how warm-up is handled, and what inbox placement rate they actually maintain, not what they promise."
+  },
+  "s04": {
+    "t01": "3. Ask for a real reply-rate range, not a highlight reel",
+    "t02": "A single client's best month tells you nothing about what to expect. A credible agency can tell you the range they typically see across accounts, by channel, and explain what moves a campaign toward the top or bottom of that range. If the only proof on offer is one glowing testimonial, ask why there isn't a spread of real numbers behind it. See the results we have delivered, with the numbers behind them, in our ",
+    "t03": "case studies"
+  },
+  "s05": {
+    "t01": "4. Ask how they actually define your ICP",
+    "t02": "\"We target founders and CXOs at mid-sized companies\" is not an ICP, it's a demographic. A real methodology looks at firmographics, buying triggers (funding, hiring, tooling changes), and the specific persona's day-to-day pressure, not just title and company size. Ask whether your ICP gets refined from real campaign data over time, or defined once and never revisited."
+  },
+  "s06": {
+    "t01": "5. Ask about contract length and ramp-up time",
+    "t02": "Find out how long the minimum commitment is, and how many weeks pass before the first real sending window starts. A short ramp-up with a reasonable minimum term (commonly around 3 months in this industry) lets you judge results before you're locked in for a year. A long contract paired with a vague ramp-up timeline shifts the risk entirely onto you."
+  },
+  "s07": {
+    "t01": "6. Ask what happens during a bad month",
+    "t02": "Every outbound engine has slow stretches. What matters is whether the agency treats a drop in performance as a diagnostic signal, checking inbox placement, list quality, and messaging, or just keeps sending at the same volume and hoping it recovers. Ask directly: \"walk me through the last time a campaign underperformed, and what you changed.\" The answer tells you more than any pitch deck."
+  },
+  "s08": {
+    "t01": "The six questions, in one place",
+    "t02": "What do we own, and what can we take with us, if we leave?",
+    "t03": "Whose sending domains are we using, and what's your real inbox placement rate?",
+    "t04": "What's your reply-rate range across accounts, not your single best result?",
+    "t05": "How exactly do you define and refine our ICP?",
+    "t06": "What's the minimum contract length, and how fast is ramp-up to first send?",
+    "t07": "What did you change the last time a campaign underperformed?",
+    "t08": "Still deciding between an agency and hiring in-house at all? See the full",
+    "t09": "agency vs. in-house comparison",
+    "t10": "Hiring in India? Read",
+    "t11": "how to choose a B2B lead generation agency in India",
+    "t12": ", which covers DPDP and TRAI rules, local data sources and pricing with GST.",
+    "t13": "Common questions"
+  },
+  "s09": {
+    "t01": "Ask us these exact questions",
+    "t02": "Book a free 30-minute call and run this checklist on us directly. If we're not a fit, we'll tell you.",
+    "t03": "Book a Call"
+  }
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "key": "guide58Meetings600LinkedinConnections",
+    "title": "58 Meetings Booked from 600 LinkedIn Connections in 1 Month",
+    "group": "guides",
+    "route": "/resources/guides/58-meetings-600-linkedin-connections",
+    "dir": "app/resources/guides/58-meetings-600-linkedin-connections"
+  },
+  {
+    "key": "guide80UsMeetingsAiAgents",
+    "title": "80+ US Meetings Booked in 1 Month with AI Agents",
+    "group": "guides",
+    "route": "/resources/guides/80-us-meetings-ai-agents",
+    "dir": "app/resources/guides/80-us-meetings-ai-agents"
+  },
+  {
+    "key": "guideAiTechStackJewellery",
+    "title": "AI Tech Stack for Jewellery Brands",
+    "group": "guides",
+    "route": "/resources/guides/ai-tech-stack-jewellery",
+    "dir": "app/resources/guides/ai-tech-stack-jewellery"
+  },
+  {
+    "key": "guideCareersAndJobGuide",
+    "title": "Career Jumpstart Toolkit",
+    "group": "guides",
+    "route": "/resources/guides/careers-and-job-guide",
+    "dir": "app/resources/guides/careers-and-job-guide"
+  },
+  {
+    "key": "guideClaudeSalesCallPrompts",
+    "title": "5 Claude Prompts for Sales Calls",
+    "group": "guides",
+    "route": "/resources/guides/claude-sales-call-prompts",
+    "dir": "app/resources/guides/claude-sales-call-prompts"
+  },
+  {
+    "key": "guideClaudeSkillsGuide",
+    "title": "The 6 Claude Skills Guide",
+    "group": "guides",
+    "route": "/resources/guides/claude-skills-guide",
+    "dir": "app/resources/guides/claude-skills-guide"
+  },
+  {
+    "key": "guideColdEmailInfrastructureSetup",
+    "title": "Cold Email Infrastructure Setup: Domains, Inboxes & DNS",
+    "group": "guides",
+    "route": "/resources/guides/cold-email-infrastructure-setup",
+    "dir": "app/resources/guides/cold-email-infrastructure-setup"
+  },
+  {
+    "key": "guideColdEmailTechStack",
+    "title": "The Cold Email Stack Behind an Extra $7,000 in Revenue",
+    "group": "guides",
+    "route": "/resources/guides/cold-email-tech-stack",
+    "dir": "app/resources/guides/cold-email-tech-stack"
+  },
+  {
+    "key": "guideDosAndDontsOfOutreach",
+    "title": "Pattern Disruption: The Do's and Don'ts of Cold Outreach",
+    "group": "guides",
+    "route": "/resources/guides/dos-and-donts-of-outreach",
+    "dir": "app/resources/guides/dos-and-donts-of-outreach"
+  },
+  {
+    "key": "guideEducationGuide",
+    "title": "AI Quick-Start Guide",
+    "group": "guides",
+    "route": "/resources/guides/education-guide",
+    "dir": "app/resources/guides/education-guide"
+  },
+  {
+    "key": "guideGoldenIcpFramework",
+    "title": "The Golden ICP Framework",
+    "group": "guides",
+    "route": "/resources/guides/golden-icp-framework",
+    "dir": "app/resources/guides/golden-icp-framework"
+  },
+  {
+    "key": "guideHowToChooseAnOutboundAgency",
+    "title": "How to Choose a B2B Outbound Agency",
+    "group": "guides",
+    "route": "/resources/guides/how-to-choose-an-outbound-agency",
+    "dir": "app/resources/guides/how-to-choose-an-outbound-agency"
+  },
+  {
+    "key": "guideHowToChooseB2bLeadGenerationAgencyIndia",
+    "title": "How to Choose a B2B Lead Generation Agency in India",
+    "group": "guides",
+    "route": "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
+    "dir": "app/resources/guides/how-to-choose-b2b-lead-generation-agency-india"
+  },
+  {
+    "key": "guideHowToSetUpVibeProspecting",
+    "title": "How to Set Up Vibe Prospecting on Claude for B2B Leads",
+    "group": "guides",
+    "route": "/resources/guides/how-to-set-up-vibe-prospecting",
+    "dir": "app/resources/guides/how-to-set-up-vibe-prospecting"
+  },
+  {
+    "key": "guideJobApplicationsSalesFunnel",
+    "title": "Job Applications Are a Sales Funnel",
+    "group": "guides",
+    "route": "/resources/guides/job-applications-sales-funnel",
+    "dir": "app/resources/guides/job-applications-sales-funnel"
+  },
+  {
+    "key": "guideLeadsOnAutopilotGuide",
+    "title": "Leads on Autopilot: A Step-by-Step Framework",
+    "group": "guides",
+    "route": "/resources/guides/leads-on-autopilot-guide",
+    "dir": "app/resources/guides/leads-on-autopilot-guide"
+  },
+  {
+    "key": "guideLinkedinContentToCallsStarterKit",
+    "title": "The LinkedIn Content-to-Calls Starter Kit",
+    "group": "guides",
+    "route": "/resources/guides/linkedin-content-to-calls-starter-kit",
+    "dir": "app/resources/guides/linkedin-content-to-calls-starter-kit"
+  },
+  {
+    "key": "guideOutboundMemePromptKit",
+    "title": "The Outbound Meme Prompt Kit",
+    "group": "guides",
+    "route": "/resources/guides/outbound-meme-prompt-kit",
+    "dir": "app/resources/guides/outbound-meme-prompt-kit"
+  },
+  {
+    "key": "guideSmartleadSetup",
+    "title": "How to Set Up Smartlead for Cold Email",
+    "group": "guides",
+    "route": "/resources/guides/smartlead-setup",
+    "dir": "app/resources/guides/smartlead-setup"
+  }
+]

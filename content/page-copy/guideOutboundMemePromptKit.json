@@ -1,0 +1,64 @@
+{
+  "s01": {
+    "t01": "Pick a meme",
+    "t02": "Choose the format that fits your point. Each one is built around a real outreach feeling.",
+    "t03": "Upload your photo",
+    "t04": "Use a clear, front-facing photo with good lighting. Attach it to your image tool along with the prompt.",
+    "t05": "Swap the brackets",
+    "t06": "Change the parts in [square brackets]: your caption, outfit and details. Generate, check the spelling, post.",
+    "t07": "The Graveyard",
+    "t08": "Using my uploaded photo as the face reference, create a meme-style image.\n\nScene: an underwater cartoon seabed graveyard in a classic animated sea-cartoon style, with painterly blue-teal water, coral, sand dollars and faint outlined flower-shaped clouds in the background.\n\nA large rounded tombstone sits on the left with a small black [ghost icon] on top and the text “[your caption, e.g. Paying respects to my previous follow-ups.]” in bold black sans-serif, centred. A small patch of white flowers sits at its base.\n\nI am crouching beside the tombstone on the right in a [black puffer jacket], smiling and making a peace sign at the camera.\n\nKeep my face realistic and recognisable while the rest of the scene stays cartoon. Add a white bar above and below the image so it fits a 4:5 frame.",
+    "t09": "The Reject and Approve",
+    "t10": "Using my uploaded photo as the face reference, create a two-panel vertical meme in the classic “reject and approve” format.\n\nLeft column: two photo panels on a bright yellow background, with me wearing a [bright orange puffer jacket]. Top panel: I look away with a hand raised in rejection. Bottom panel: I smile with my eyes closed and point approvingly at the camera.\n\nRight column: two white panels separated by thick black lines, each with centred bold black sans-serif text.\nTop text: “[the thing you reject, e.g. Another awkward follow-up]”\nBottom text: “[the thing you prefer, e.g. A simple “let’s talk later”]”\n\nClean, high contrast, square format.",
+    "t11": "The Astronaut",
+    "t12": "Using my uploaded photo as the face reference, create a meme image.\n\nI am an astronaut in a [white and blue] spacesuit, waving one gloved hand, my face clearly visible through the helmet visor with a friendly smile.\n\nBackground: deep space with stars, small distant planets and a large Earth on the right. Realistic, cinematic style.\n\nAbove the image, add a plain white banner with the text “[your caption, e.g. Still searching the universe for your reply.]” in bold black sans-serif, centred on one line.\n\nLandscape image placed inside a 4:5 frame with white space above and below.",
+    "t13": "The Conspiracy Board",
+    "t14": "Using my uploaded photo as the face reference, create a meme image.\n\nBackground: a cork board covered in pinned printouts, sticky notes, charts, newspaper clippings and red string connecting them all. Add bold headline cards reading “[problem 1, e.g. Pipeline stuck!]”, “[problem 2, e.g. LinkedIn ghosting?]”, “[problem 3, e.g. Outbound not working?]” and “[problem 4]”.\n\nIn the foreground, me in a [white blazer over a black t-shirt], looking frustrated and confused with both hands raised in front of my face and eyebrows furrowed. A table with a coffee mug sits behind me.\n\nAbove the image, add a white banner with the text “[your caption, e.g. Figuring out why I still haven’t gotten a reply]” in bold black sans-serif.\n\nPortrait 4:5 format.",
+    "t15": "Use a sharp reference photo.",
+    "t16": "Front-facing, good light, no sunglasses. It keeps your face recognisable across every format.",
+    "t17": "Keep the caption short.",
+    "t18": "One line where possible. Short text is far less likely to come back misspelled.",
+    "t19": "Check the text every time.",
+    "t20": "Image tools slip on spelling. Read the caption before you post, and regenerate if needed.",
+    "t21": "Stay consistent.",
+    "t22": "The same banner style and bold black font across every meme makes your feed look like a series.",
+    "t23": "LinkedIn Content-to-Calls Starter Kit",
+    "t24": "Post templates, CTAs and a 10-minute daily routine.",
+    "t25": "How to Write a LinkedIn Hook",
+    "t26": "Six patterns for the first line of every post.",
+    "t27": "LinkedIn Hook Grader",
+    "t28": "Score your opening line before you post it.",
+    "t29": "Cold Email Follow-Up Sequence",
+    "t30": "What to send when the first email gets no reply.",
+    "t31": "Resources",
+    "t32": "Guides",
+    "t33": "LinkedIn Content · Prompt Kit",
+    "t34": "The Outbound",
+    "t35": "Meme",
+    "t36": "Prompt Kit",
+    "t37": "Four copy-paste prompts that turn the pain of cold outreach into memes people actually share. Upload your photo, swap the brackets, post."
+  },
+  "s02": {
+    "t01": "How it works",
+    "t02": " / 04",
+    "t03": "Best for:",
+    "t04": "Swap:"
+  },
+  "s03": {
+    "t01": "Before you generate"
+  },
+  "s04": {
+    "t01": "Keep the momentum going",
+    "t02": "Want outbound that earns the memes?"
+  },
+  "s05": {
+    "t01": "Let's break it down for your business.",
+    "t02": "Follow along for more AI tools and growth systems for B2B teams, or book a free strategy call and we'll break it down for your business.",
+    "t03": "Book a Complimentary Strategy Call",
+    "t04": "Follow @tejas_jhaveri",
+    "t05": "founder@myntmore.com",
+    "t06": "Tejas Jhaveri, Founder of Myntmore",
+    "t07": "Tejas Jhaveri",
+    "t08": " is a 4x entrepreneur, TEDx speaker and angel investor. He built the D2C brand Flintstop to 8,000 orders a day before selling it in 2020, and now leads Myntmore, a B2B outbound agency. He has taught B2B growth methodologies at IIT and IIM."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "s01": {
+    "t01": "Meeting Prep Brief",
+    "t02": "You are my meeting prep assistant.\nProspect: [Name] | Company: [URL] | LinkedIn: [URL]\n\nGive me:\n- What the company does (2 lines)\n- Team size + approx revenue\n- Number of salespeople\n- Recent PR, funding, or news\n- Their role + tenure\n- One personal hook for my first 2 minutes\n\nUnder 200 words. I have a call in 10 minutes.",
+    "t03": "Discovery Questions",
+    "t04": "I sell AI-led B2B outbound services.\nMy prospect is a [industry] founder/sales head\nat a [stage] company.\n\nGive me 7 discovery questions that uncover:\n- Their current outbound setup\n- What's broken\n- Whether they're ready to buy\n\nPrioritise questions that make them think,\nnot just answer.",
+    "t05": "Objection Prep",
+    "t06": "I'm getting on a sales call with a [industry]\ncompany of [size] employees.\nThey're considering outsourcing B2B outreach.\n\nGive me the 5 most likely objections\nthey'll raise and a one-line response to each.\nBe direct. No fluff.",
+    "t07": "Call Opening Lines",
+    "t08": "I have a sales call with [Name], [Title]\nat [Company]. They came via [source].\n\nWrite 3 ways to open the call that feel\nwarm but get to business fast.\n\nAvoid: 'How are you', 'Did you get a chance to',\nor anything that sounds scripted.",
+    "t09": "Post-Call Follow-Up",
+    "t10": "I just finished a sales call.\nHere's what happened: [paste your notes]\n\nWrite a follow-up email that:\n- Recaps what we discussed in 3 bullets\n- Confirms the next step we agreed on\n- Has one line that keeps the energy warm\n\nSubject line included. Under 120 words.",
+    "t11": "Before the call",
+    "t12": "Four prompts, about 8 minutes in total.",
+    "t13": "After the call",
+    "t14": "One prompt to keep the deal moving.",
+    "t15": "The Reply Isn't the Win: Handling Cold Email Replies",
+    "t16": "What to say in the first hour after a prospect responds.",
+    "t17": "Cold Email Sequence Templates",
+    "t18": "A full 5-email sequence, from first touch to breakup email.",
+    "t19": "The 6 Claude Skills Guide",
+    "t20": "Six ready-to-use Claude skills for founders and marketers.",
+    "t21": "Multi-Threading B2B Deals",
+    "t22": "Why one champion is never enough to close a deal.",
+    "t23": "Resources",
+    "t24": "Guides",
+    "t25": "Sales · Claude Prompts",
+    "t26": "I use Claude before every sales call. These are the",
+    "t27": "5 prompts",
+    "t28": "that changed how I sell.",
+    "t29": "Each one takes under 3 minutes. Copy any prompt straight into Claude, then swap the bracketed parts for your details.",
+    "t30": "Tejas Jhaveri, Founder of Myntmore"
+  },
+  "s02": {
+    "t01": "From one growth team to another",
+    "t02": "Tejas isn't your average marketer. He's a 4x entrepreneur who built Flintstop, a D2C eCommerce brand, into a $6M-a-year machine, shipping out 8,000 orders a day before selling the business in 2020. At Myntmore, his B2B outbound agency, he's helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He's a TEDx speaker, angel investor, and has taught B2B growth methodologies at IIT and IIM. Now, he's here to do it for you.",
+    "t03": "A good sales call is mostly won before it starts. These five prompts cover the whole loop: who you're talking to, what to ask, what pushback to expect, how to open, and what to send afterwards."
+  },
+  "s03": {
+    "t01": "Keep the momentum going",
+    "t02": "What's next?"
+  },
+  "s04": {
+    "t01": "Implement everything.",
+    "t02": "If you're looking to optimise your LinkedIn profile and turn it into a growth engine, you're in the right place. Whether you're a founder, CXO, or consultant, LinkedIn can become your #1 inbound channel.",
+    "t03": "Want to know how I generated over $3M through LinkedIn? See what we do, how we do it, and why it works.",
+    "t04": "Explore Our LinkedIn Personal Branding Services",
+    "t05": "Book a Complimentary Strategy Call",
+    "t06": "founder@myntmore.com",
+    "t07": "Made by Tejas Jhaveri. Follow",
+    "t08": "@tejas_jhaveri",
+    "t09": "on Instagram for more prompts like these."
+  }
+}

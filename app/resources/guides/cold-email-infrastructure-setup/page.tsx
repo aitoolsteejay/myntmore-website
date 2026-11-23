@@ -3,6 +3,10 @@ import SetupGuide, { type SetupGuideData } from "@/components/guides/SetupGuide"
 import { buildArticleSchema } from "@/lib/schema";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/guideColdEmailInfrastructureSetup.json";
+
+// This page's text is edited in the admin ("Cold Email Infrastructure Setup: Domains, Inboxes & DNS") and lives in content/page-copy/guideColdEmailInfrastructureSetup.json.
+const copy = pageCopy;
 
 const PATH = "/resources/guides/cold-email-infrastructure-setup";
 const URL = `https://www.myntmore.com${PATH}`;
@@ -37,99 +41,99 @@ const ARTICLE_SCHEMA = buildArticleSchema({
 
 const DATA: SetupGuideData = {
   slug: "cold-email-infrastructure-setup",
-  badge: "Cold Email · Setup Guide",
+  badge: copy.s01.t01,
   h1Lead: "Set up cold email domains and inboxes",
   h1Underlined: "the right way",
   intro:
-    "The setup that runs before any campaign: separate sending domains, Google Workspace inboxes, and the four DNS records that decide whether your email reaches the inbox. It is the same order we follow for every client, using Spaceship for domains and Google for inboxes.",
+    copy.s01.t02,
   numbers: [
-    { value: "10", label: "Sending domains" },
-    { value: "4", label: "Inboxes per domain" },
-    { value: "~30", label: "Emails per inbox per day" },
-    { value: "14-21", label: "Days of warm-up first" },
+    { value: "10", label: copy.s01.t03 },
+    { value: "4", label: copy.s01.t04 },
+    { value: "~30", label: copy.s01.t05 },
+    { value: "14-21", label: copy.s01.t06 },
   ],
   numbersNote: "Our standard setup: 40 inboxes sending up to about 1,200 emails a day. Scale it down to your own volume.",
   steps: [
     {
-      title: "Buy separate domains for sending",
+      title: copy.s01.t07,
       body: [
-        "Never send cold email from your main domain. If a campaign hurts sender reputation, it hurts the domain your team, clients and invoices depend on. Buy a few secondary domains that are close variations of your brand, such as getbrand.com, trybrand.com or brandhq.com.",
-        "Stick to .com where you can, and avoid hyphens and numbers. Any registrar works; we use Spaceship. To size it, divide your daily email target by about 30 per inbox, then by 4 inboxes per domain.",
+        copy.s01.t08,
+        copy.s01.t09,
       ],
-      tip: "Buy one or two extra domains up front. If one domain's reputation drops, you can rest it without stopping the campaign.",
+      tip: copy.s01.t10,
     },
     {
-      title: "Redirect every sending domain to your website",
+      title: copy.s01.t11,
       body: [
-        "Prospects who check out a sending domain should land on your real website, not a parked page. At your registrar, set a permanent (301) redirect from each secondary domain to your main site.",
+        copy.s01.t12,
       ],
     },
     {
-      title: "Add the domains to Google Workspace and create inboxes",
+      title: copy.s01.t13,
       body: [
-        "In the Google Admin console, add each sending domain as a secondary domain of your existing Workspace account, then verify it with the TXT record Google gives you. Menu names in the console change from time to time, but domain settings sit under Account, then Domains.",
-        "Create inboxes on each domain as real users with real names, like the person who will reply. We use 4 per domain. Each one is a paid Workspace user, so budget for it. Add a profile photo and a plain signature to every inbox.",
+        copy.s01.t14,
+        copy.s01.t15,
       ],
-      tip: "Aliases are not separate inboxes. Each sending address needs its own user so it has its own sending limit and reputation.",
+      tip: copy.s01.t16,
     },
     {
-      title: "Add the MX record so the inbox can receive replies",
+      title: copy.s01.t17,
       body: [
-        "Without an MX record, replies bounce. Google's current setup for new domains uses a single MX record. Older setups list five aspmx records instead; both work, but don't mix them.",
+        copy.s01.t18,
       ],
-      copy: [{ label: "MX record", text: "Type: MX\nHost: @\nValue: smtp.google.com\nPriority: 1" }],
+      copy: [{ label: copy.s01.t19, text: copy.s01.t20 }],
     },
     {
-      title: "Add SPF",
+      title: copy.s01.t21,
       body: [
-        "SPF lists the servers allowed to send for the domain. A domain can have only one SPF record, so if one already exists, add Google's include to it rather than creating a second. If your sending tool connects to Google inboxes directly, mail still goes out through Google and this record covers it.",
+        copy.s01.t22,
       ],
-      copy: [{ label: "SPF record", text: "Type: TXT\nHost: @\nValue: v=spf1 include:_spf.google.com ~all" }],
+      copy: [{ label: copy.s01.t23, text: copy.s01.t24 }],
     },
     {
-      title: "Turn on DKIM",
+      title: copy.s01.t25,
       body: [
-        "DKIM signs every email so receiving servers can check it wasn't changed. In the Admin console, open the Gmail settings for email authentication, pick the sending domain, and generate a new record with a 2048-bit key. Google gives you the host name and a long TXT value.",
-        "Add that TXT record at your registrar, wait for it to publish, then return to the Admin console and start authentication. DNS changes usually show up within minutes to a few hours, and can take up to 48 hours.",
+        copy.s01.t26,
+        copy.s01.t27,
       ],
-      copy: [{ label: "DKIM record (value comes from Google)", text: "Type: TXT\nHost: google._domainkey\nValue: v=DKIM1; k=rsa; p=<the key Google generates>" }],
+      copy: [{ label: copy.s01.t28, text: copy.s01.t29 }],
     },
     {
-      title: "Add DMARC, starting with p=none",
+      title: copy.s01.t30,
       body: [
-        "DMARC tells receiving servers what to do with mail that fails SPF and DKIM, and sends you reports. Start with p=none, which monitors without blocking. Once the reports show every legitimate sender passing, move to p=quarantine.",
-        "Send reports to an address on the same domain, or to a DMARC reporting tool that gives you an address to use. Sending them to a different domain needs an extra authorisation record on that domain.",
+        copy.s01.t31,
+        copy.s01.t32,
       ],
-      copy: [{ label: "DMARC record", text: "Type: TXT\nHost: _dmarc\nValue: v=DMARC1; p=none; rua=mailto:dmarc@yoursendingdomain.com" }],
+      copy: [{ label: copy.s01.t33, text: copy.s01.t34 }],
     },
     {
-      title: "Check it worked",
+      title: copy.s01.t35,
       body: [
-        "Send a test email from each new inbox to a personal Gmail account. Open it, choose Show original from the message menu, and check that SPF, DKIM and DMARC all say PASS. Fix any that don't before moving on.",
-        "Then connect the inboxes to your sending tool and warm them up for 14 to 21 days before the first live email. Our Smartlead setup guide covers that part.",
+        copy.s01.t36,
+        copy.s01.t37,
       ],
     },
   ],
   checklist: [
-    "Cold email goes out from secondary domains only, never your main domain.",
-    "Every sending domain redirects to your main website.",
-    "Each inbox is a real Workspace user with a name, photo and signature.",
-    "MX, SPF, DKIM and DMARC are set on every sending domain, and a test email shows PASS for all three checks.",
-    "Inboxes have warmed up for 14 to 21 days, and live sending starts at well under 30 emails per inbox per day.",
-    "Your list is verified, and you have a way to honour unsubscribe requests within 2 days.",
+    copy.s01.t38,
+    copy.s01.t39,
+    copy.s01.t40,
+    copy.s01.t41,
+    copy.s01.t42,
+    copy.s01.t43,
   ],
   related: [
-    { label: "Cold email infrastructure explained", href: "/resources/blogs/cold-email-infrastructure-explained", note: "Deep dive into SPF, DKIM, DMARC records and custom tracking domains." },
-    { label: "How to set up Smartlead", href: "/resources/guides/smartlead-setup", note: "Connect these inboxes, warm them up and launch the first campaign." },
-    { label: "Gmail and Yahoo sender requirements", href: "/resources/blogs/gmail-and-yahoo-sender-requirements", note: "Authentication, spam rate and unsubscribe rules, in plain English." },
-    { label: "Inbox & domain calculator", href: "/tools/cold-email-inbox-calculator", note: "Work out how many domains and inboxes your volume needs, and your go-live date." },
-    { label: "Cold email deliverability guide", href: "/resources/blogs/cold-email-deliverability-guide", note: "Why emails land in spam, and how to fix it before you scale." },
+    { label: copy.s01.t44, href: "/resources/blogs/cold-email-infrastructure-explained", note: copy.s01.t45 },
+    { label: copy.s01.t46, href: "/resources/guides/smartlead-setup", note: copy.s01.t47 },
+    { label: copy.s01.t48, href: "/resources/blogs/gmail-and-yahoo-sender-requirements", note: copy.s01.t49 },
+    { label: copy.s01.t50, href: "/tools/cold-email-inbox-calculator", note: copy.s01.t51 },
+    { label: copy.s01.t52, href: "/resources/blogs/cold-email-deliverability-guide", note: copy.s01.t53 },
   ],
   cta: {
-    heading: "We set up and run the whole thing for you",
-    body: "Our cold email service covers domains, inboxes, DNS, warm-up, lists, copy and reporting. Campaigns usually go live about 18 days after onboarding.",
+    heading: copy.s01.t54,
+    body: copy.s01.t55,
     href: "/services/cold-email",
-    label: "See the Cold Email Service",
+    label: copy.s01.t56,
   },
 };
 

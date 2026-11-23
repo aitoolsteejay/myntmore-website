@@ -59,3 +59,21 @@ describe("new files", () => {
     expect(Object.keys(fresh)).toEqual(expect.arrayContaining(Object.keys(JSON.parse(pharmaText))));
   });
 });
+
+describe("resource guides in admin", () => {
+  it("registers all 19 resource guides as singletons with live URLs", async () => {
+    const { contentTypes } = await import("./schema");
+    const { catalogEntry } = await import("./catalog");
+    const { liveUrl } = await import("./entry-view");
+    const guides = contentTypes().filter((t) => t.key.startsWith("guide"));
+    expect(guides.length).toBe(19);
+    for (const g of guides) {
+      const cat = catalogEntry(g.key, g.label);
+      expect(cat.title).toBeTruthy();
+      expect(cat.description).toBe("Resource guide");
+      expect(cat.group).toBe("pages");
+      const url = liveUrl(g, g.key, "");
+      expect(url).toMatch(/^\/resources\/guides\//);
+    }
+  });
+});

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-23T11:19:54.411Z",
+  "generatedAt": "2026-11-23T15:00:05.341Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 355,
+    "total": 356,
     "linked": 314,
-    "orphan": 41,
+    "orphan": 42,
     "noindex": 35,
-    "notInXmlSitemap": 46,
-    "privateHidden": 13
+    "notInXmlSitemap": 47,
+    "privateHidden": 14
   },
   "pages": [
     {
@@ -72,10 +72,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -87,10 +86,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -115,11 +113,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
       ],
-      "inboundCount": 4,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -170,10 +167,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -185,10 +181,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -200,14 +195,13 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/ai-vs-traditional-lead-generation",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
         "/resources/blogs/founder-led-sales-before-scaling",
         "/resources/blogs/predictable-b2b-lead-gen-engine"
       ],
-      "inboundCount": 7,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -232,10 +226,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -273,10 +266,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -301,11 +293,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers"
       ],
-      "inboundCount": 4,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -317,10 +308,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -384,10 +374,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -399,11 +388,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/how-kolkata-healthcare-suppliers-reach-hospital-buyers"
       ],
-      "inboundCount": 4,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -455,16 +443,16 @@
       "section": "other",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
-        "/contact-us",
         "/resources/guides/how-to-choose-b2b-lead-generation-agency-india",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/ai-vs-traditional-lead-generation",
-        "/resources/blogs/b2b-outbound-benchmark-report-2026"
+        "/resources/blogs/b2b-outbound-benchmark-report-2026",
+        "/resources/blogs/founder-led-sales-before-scaling",
+        "/resources/blogs/predictable-b2b-lead-gen-engine",
+        "/services/cold-email"
       ],
-      "inboundCount": 13,
+      "inboundCount": 10,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -490,10 +478,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -558,11 +545,10 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts",
         "/resources/blogs/how-pune-manufacturers-find-b2b-buyers"
       ],
-      "inboundCount": 4,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -614,10 +600,9 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/services",
         "lib/city-links.ts"
       ],
-      "inboundCount": 3,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -697,12 +682,12 @@
         "/about-us",
         "/case-studies",
         "/",
-        "/contact-us",
         "/events",
         "/marketing-automation",
-        "/myntmore-framework"
+        "/myntmore-framework",
+        "/research/kmspharma"
       ],
-      "inboundCount": 97,
+      "inboundCount": 96,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -4682,16 +4667,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
         "/marketing-automation",
         "/resources/glossary/inbound-vs-outbound",
         "/resources/guides/ai-tech-stack-jewellery",
         "/seo",
         "/services/account-based-marketing",
-        "/services/ai-lead-generation"
+        "/services/ai-lead-generation",
+        "/services/do-it-yourself"
       ],
-      "inboundCount": 18,
+      "inboundCount": 17,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4706,12 +4691,12 @@
         "/resources/glossary/abm",
         "/resources/glossary/account-penetration",
         "/resources/glossary/sales-pipeline",
-        "/services",
         "/resources/blogs/account-targeting-strategy",
         "/resources/blogs/icp-mapping-b2b",
-        "/resources/blogs/multi-threading-b2b-buying-committee"
+        "/resources/blogs/multi-threading-b2b-buying-committee",
+        "/resources/blogs/tam-trap-vague-targeting"
       ],
-      "inboundCount": 10,
+      "inboundCount": 9,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4722,16 +4707,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
         "/marketing-automation",
         "/resources/glossary/b2b-lead-generation",
         "/resources/glossary/cold-lead",
         "/resources/glossary/hot-lead",
         "/resources/glossary/sales-pipeline",
-        "/resources/glossary/sdr"
+        "/resources/glossary/sdr",
+        "/resources/blogs/ai-personalization-cold-outreach"
       ],
-      "inboundCount": 18,
+      "inboundCount": 16,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4742,16 +4727,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
         "/marketing-automation",
         "/resources/glossary/can-spam-act",
         "/resources/glossary/cold-email",
         "/resources/glossary/domain-warmup",
         "/resources/glossary/gdpr-cold-outreach",
-        "/resources/glossary/response-rate"
+        "/resources/glossary/response-rate",
+        "/resources/glossary/sender-reputation"
       ],
-      "inboundCount": 31,
+      "inboundCount": 29,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4788,10 +4773,10 @@
         "/resources/glossary/gtm-execution",
         "/resources/glossary/gtm-strategy",
         "/resources/glossary/value-proposition",
-        "/services",
-        "/resources/blogs/5-second-hero-section-test"
+        "/resources/blogs/5-second-hero-section-test",
+        "/resources/blogs/founder-led-sales-before-scaling"
       ],
-      "inboundCount": 15,
+      "inboundCount": 14,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4802,16 +4787,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
         "/marketing-automation",
         "/myntmore-framework",
         "/resources/glossary/3-second-rule",
         "/resources/glossary/existing-connection-nurturing",
         "/resources/glossary/linkedin-outreach",
-        "/resources/glossary/warm-lead"
+        "/resources/glossary/warm-lead",
+        "/resources/guides/58-meetings-600-linkedin-connections"
       ],
-      "inboundCount": 31,
+      "inboundCount": 29,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4822,16 +4807,16 @@
       "section": "services",
       "status": "linked",
       "linkedFrom": [
-        "/about-us",
         "/",
         "/resources/glossary/founder-led-sales",
         "/resources/glossary/lead-magnet",
         "/resources/glossary/signal-heavy-structuring",
         "/resources/glossary/social-selling",
         "/resources/glossary/vanity-metrics",
-        "/resources/guides/claude-sales-call-prompts"
+        "/resources/guides/claude-sales-call-prompts",
+        "/resources/guides/leads-on-autopilot-guide"
       ],
-      "inboundCount": 22,
+      "inboundCount": 20,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4849,9 +4834,9 @@
         "/resources/glossary/icp",
         "/resources/glossary/lead-scoring",
         "/resources/glossary/total-conversional-market",
-        "/services"
+        "lib/case-study-library.ts"
       ],
-      "inboundCount": 23,
+      "inboundCount": 22,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -5129,6 +5114,18 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },

@@ -17,6 +17,27 @@ import { heritageJewelleryValuationPipelineCaseSchema } from "./content/case-stu
 import { leadershipDevelopmentMessagingShiftCaseSchema } from "./content/case-study-long/schemas/leadership-development-messaging-shift";
 import { retailStrategyDesignPipelineCaseSchema } from "./content/case-study-long/schemas/retail-strategy-design-pipeline";
 import { wealthManagementPmsPipelineCaseSchema } from "./content/case-study-long/schemas/wealth-management-pms-pipeline";
+import {
+  guide58Meetings600LinkedinConnectionsSchema,
+  guide80UsMeetingsAiAgentsSchema,
+  guideAiTechStackJewellerySchema,
+  guideCareersAndJobGuideSchema,
+  guideClaudeSalesCallPromptsSchema,
+  guideClaudeSkillsGuideSchema,
+  guideColdEmailInfrastructureSetupSchema,
+  guideColdEmailTechStackSchema,
+  guideDosAndDontsOfOutreachSchema,
+  guideEducationGuideSchema,
+  guideGoldenIcpFrameworkSchema,
+  guideHowToChooseAnOutboundAgencySchema,
+  guideHowToChooseB2bLeadGenerationAgencyIndiaSchema,
+  guideHowToSetUpVibeProspectingSchema,
+  guideJobApplicationsSalesFunnelSchema,
+  guideLeadsOnAutopilotGuideSchema,
+  guideLinkedinContentToCallsStarterKitSchema,
+  guideOutboundMemePromptKitSchema,
+  guideSmartleadSetupSchema,
+} from "./content/page-copy/schemas";
 import industryKeys from "./lib/industry-keys.json";
 
 // Content lives as files in the repo.
@@ -1438,6 +1459,121 @@ export default config({
       path: "content/case-study-long/wealth-management-pms-pipeline",
       format: "json",
       schema: wealthManagementPmsPipelineCaseSchema,
+    }),
+    // The nineteen resource guides, each with its own sections.
+    guide58Meetings600LinkedinConnections: singleton({
+      label: "Guide: 58 Meetings Booked from 600 LinkedIn Connections in 1 Month",
+      path: "content/page-copy/guide58Meetings600LinkedinConnections",
+      format: "json",
+      schema: guide58Meetings600LinkedinConnectionsSchema,
+    }),
+    guide80UsMeetingsAiAgents: singleton({
+      label: "Guide: 80+ US Meetings Booked in 1 Month with AI Agents",
+      path: "content/page-copy/guide80UsMeetingsAiAgents",
+      format: "json",
+      schema: guide80UsMeetingsAiAgentsSchema,
+    }),
+    guideAiTechStackJewellery: singleton({
+      label: "Guide: AI Tech Stack for Jewellery Brands",
+      path: "content/page-copy/guideAiTechStackJewellery",
+      format: "json",
+      schema: guideAiTechStackJewellerySchema,
+    }),
+    guideCareersAndJobGuide: singleton({
+      label: "Guide: Career Jumpstart Toolkit",
+      path: "content/page-copy/guideCareersAndJobGuide",
+      format: "json",
+      schema: guideCareersAndJobGuideSchema,
+    }),
+    guideClaudeSalesCallPrompts: singleton({
+      label: "Guide: 5 Claude Prompts for Sales Calls",
+      path: "content/page-copy/guideClaudeSalesCallPrompts",
+      format: "json",
+      schema: guideClaudeSalesCallPromptsSchema,
+    }),
+    guideClaudeSkillsGuide: singleton({
+      label: "Guide: The 6 Claude Skills Guide",
+      path: "content/page-copy/guideClaudeSkillsGuide",
+      format: "json",
+      schema: guideClaudeSkillsGuideSchema,
+    }),
+    guideColdEmailInfrastructureSetup: singleton({
+      label: "Guide: Cold Email Infrastructure Setup: Domains, Inboxes & DNS",
+      path: "content/page-copy/guideColdEmailInfrastructureSetup",
+      format: "json",
+      schema: guideColdEmailInfrastructureSetupSchema,
+    }),
+    guideColdEmailTechStack: singleton({
+      label: "Guide: The Cold Email Stack Behind an Extra $7,000 in Revenue",
+      path: "content/page-copy/guideColdEmailTechStack",
+      format: "json",
+      schema: guideColdEmailTechStackSchema,
+    }),
+    guideDosAndDontsOfOutreach: singleton({
+      label: "Guide: Pattern Disruption: The Do's and Don'ts of Cold Outreach",
+      path: "content/page-copy/guideDosAndDontsOfOutreach",
+      format: "json",
+      schema: guideDosAndDontsOfOutreachSchema,
+    }),
+    guideEducationGuide: singleton({
+      label: "Guide: AI Quick-Start Guide",
+      path: "content/page-copy/guideEducationGuide",
+      format: "json",
+      schema: guideEducationGuideSchema,
+    }),
+    guideGoldenIcpFramework: singleton({
+      label: "Guide: The Golden ICP Framework",
+      path: "content/page-copy/guideGoldenIcpFramework",
+      format: "json",
+      schema: guideGoldenIcpFrameworkSchema,
+    }),
+    guideHowToChooseAnOutboundAgency: singleton({
+      label: "Guide: How to Choose a B2B Outbound Agency",
+      path: "content/page-copy/guideHowToChooseAnOutboundAgency",
+      format: "json",
+      schema: guideHowToChooseAnOutboundAgencySchema,
+    }),
+    guideHowToChooseB2bLeadGenerationAgencyIndia: singleton({
+      label: "Guide: How to Choose a B2B Lead Generation Agency in India",
+      path: "content/page-copy/guideHowToChooseB2bLeadGenerationAgencyIndia",
+      format: "json",
+      schema: guideHowToChooseB2bLeadGenerationAgencyIndiaSchema,
+    }),
+    guideHowToSetUpVibeProspecting: singleton({
+      label: "Guide: How to Set Up Vibe Prospecting on Claude for B2B Leads",
+      path: "content/page-copy/guideHowToSetUpVibeProspecting",
+      format: "json",
+      schema: guideHowToSetUpVibeProspectingSchema,
+    }),
+    guideJobApplicationsSalesFunnel: singleton({
+      label: "Guide: Job Applications Are a Sales Funnel",
+      path: "content/page-copy/guideJobApplicationsSalesFunnel",
+      format: "json",
+      schema: guideJobApplicationsSalesFunnelSchema,
+    }),
+    guideLeadsOnAutopilotGuide: singleton({
+      label: "Guide: Leads on Autopilot: A Step-by-Step Framework",
+      path: "content/page-copy/guideLeadsOnAutopilotGuide",
+      format: "json",
+      schema: guideLeadsOnAutopilotGuideSchema,
+    }),
+    guideLinkedinContentToCallsStarterKit: singleton({
+      label: "Guide: The LinkedIn Content-to-Calls Starter Kit",
+      path: "content/page-copy/guideLinkedinContentToCallsStarterKit",
+      format: "json",
+      schema: guideLinkedinContentToCallsStarterKitSchema,
+    }),
+    guideOutboundMemePromptKit: singleton({
+      label: "Guide: The Outbound Meme Prompt Kit",
+      path: "content/page-copy/guideOutboundMemePromptKit",
+      format: "json",
+      schema: guideOutboundMemePromptKitSchema,
+    }),
+    guideSmartleadSetup: singleton({
+      label: "Guide: How to Set Up Smartlead for Cold Email",
+      path: "content/page-copy/guideSmartleadSetup",
+      format: "json",
+      schema: guideSmartleadSetupSchema,
     }),
   },
 });

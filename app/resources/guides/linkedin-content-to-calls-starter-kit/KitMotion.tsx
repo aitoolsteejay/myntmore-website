@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { textTone } from "@/lib/colors";
+import pageCopy from "@/content/page-copy/guideLinkedinContentToCallsStarterKit.json";
+
+// This page's text is edited in the admin ("The LinkedIn Content-to-Calls Starter Kit") and lives in content/page-copy/guideLinkedinContentToCallsStarterKit.json.
+const copy = pageCopy;
 
 const ACCENT = "#EA580C";
 
@@ -110,8 +114,8 @@ export function RoutineTimeline({ steps }: { steps: { time: string; task: string
   return (
     <div ref={ref}>
       <div className="flex items-end justify-between mb-3">
-        <p className="text-xs font-black uppercase tracking-widest" style={{ color: "#71675E" }}>Your daily 10 minutes</p>
-        <p className="text-sm font-black tabular-nums" style={{ color: textTone(ACCENT) }}>{minute} / {total} min</p>
+        <p className="text-xs font-black uppercase tracking-widest" style={{ color: "#71675E" }}>{copy.KitMotion_s14.t01}</p>
+        <p className="text-sm font-black tabular-nums" style={{ color: textTone(ACCENT) }}>{minute} / {total}{copy.KitMotion_s14.t02}</p>
       </div>
       <div className="flex gap-1.5 mb-5" role="img" aria-label="Three blocks adding up to ten minutes">
         {steps.map((s, i) => (

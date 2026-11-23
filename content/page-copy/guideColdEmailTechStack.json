@@ -1,0 +1,67 @@
+{
+  "s01": {
+    "t01": "Apify",
+    "t02": "IGleads.io",
+    "t03": "Listkit",
+    "t04": "Clay",
+    "t05": "BounceBan",
+    "t06": "Google",
+    "t07": "Spaceship",
+    "t08": "Smartlead",
+    "t09": "Trello",
+    "t10": "The opener",
+    "t11": "Four variants of the first touch, each opening on a creator the prospect already follows.",
+    "t12": "Hi {{first_name}}\n\nI came across your LinkedIn profile & saw you were following [Creator Name]. I assumed you might be interested in growing your LinkedIn audience without ever recording a single video.\n\nIn the last 30 days, I published content daily, tripled my audience, booked 15+ inbound calls, and saved over 30 hours by automating everything.\n\nInterested in discussing some LinkedIn growth strategies?",
+    "t13": "Hi {{first_name}}\n\nI came across your LinkedIn profile & saw you were following [Creator Name].\n\nWhat if you could produce content of yourself similar to [Creator Name] without ever recording videos & go viral on LinkedIn?\n\nI recorded a quick video going over the same, mind if I share it here?",
+    "t14": "Hi {{first_name}},\n\nI came across your LinkedIn profile & saw you were following [Creator Name].\n\nWe can bring massive visibility for {{first_name}}'s account on LinkedIn - without you ever having to record videos.\n\nI recorded a quick video going over the same, mind if I share it here?",
+    "t15": "Hi {{first_name}},\n\nI came across your LinkedIn profile & saw you were following [Creator Name].\n\nWhat if I told you AI could create content that looks & sounds exactly like you, without you recording a thing?\n\nMind if I send over a few AI-generated videos? Let's see if you can tell the difference.",
+    "t16": "The follow-up",
+    "t17": "Two variants: one restates the result, one explains the system behind it.",
+    "t18": "Hi {{first_name}},\n\nDid I mention that in the last 30 days, I published content daily without ever recording a single video, tripled my audience, booked 15+ inbound calls, and saved over 30 hours by automating everything.\n\nCan help you do the same. Interested in discussing some LinkedIn growth strategies?",
+    "t19": "Hi {{first_name}},\n\nI've built an AI-powered content system that replicates your unique look, style, and voice, so you can create endless videos without filming.\n\nWant me to send over a quick video explaining how it works?",
+    "t20": "The value close",
+    "t21": "Two variants: lead with ready-made scripts, or with the time and calls saved.",
+    "t22": "Hi {{first_name}},\n\nI wrote a couple of video scripts for you & you won't even have to record these videos yourself.\n\nWe recently produced 30 videos in just 3 hours using a hyper-realistic AI avatar and booked 15 sales calls through [Client]'s account on Instagram.\n\nMind if I share the scripts here?",
+    "t23": "Hi {{first_name}},\n\nI can help you create content of yourself, without ever recording any videos and book 10+ inbound sales calls, + free up over 30 hours every month.\n\nWould you be interested in discussing some LinkedIn growth strategies?",
+    "t24": "Cold email deliverability guide",
+    "t25": "Why emails land in spam, and how to fix it before you scale.",
+    "t26": "Cold email sequence templates",
+    "t27": "A full 5-email sequence, from first touch to breakup email.",
+    "t28": "Domain warm-up",
+    "t29": "Ramping new sending domains so inbox providers trust them.",
+    "t30": "SPF, DKIM & DMARC",
+    "t31": "The DNS records that decide inbox vs. spam.",
+    "t32": "Resources",
+    "t33": "Guides",
+    "t34": "Cold Email · Stack & Sequence",
+    "t35": "The cold email stack that got us an extra",
+    "t36": "$7,000 in revenue",
+    "t37": "Not fancy hacks or creative copywriting. The backend: the exact tools and email sequence we use at Myntmore to scale cold outreach, from scraping leads to booking qualified calls.",
+    "t38": "Tejas Jhaveri, Founder of Myntmore"
+  },
+  "s02": {
+    "t01": "From one growth team to another",
+    "t02": "Tejas isn't your average marketer. He's a 4x entrepreneur who built Flintstop, a D2C eCommerce brand, into a $6M-a-year machine, shipping out 8,000 orders a day before selling the business in 2020. At Myntmore, his B2B outbound agency, he's helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He's a TEDx speaker, angel investor, and has taught B2B growth methodologies at IIT and IIM. Now, he's here to do it for you.",
+    "t03": "Your tools don't just send emails. They decide whether your emails get seen, replied to, or land in spam. Everything below is battle-tested: use it, adapt it, or steal it entirely.",
+    "t04": "Part 01"
+  },
+  "s03": {
+    "t01": "The tech stack",
+    "t02": "Part 02"
+  },
+  "s04": {
+    "t01": "The email sequence",
+    "t02": "Three emails, each with variants to test against each other. Replace the bracketed placeholders before sending."
+  },
+  "s05": {
+    "t01": "Before you send at volume",
+    "t02": "What's next?"
+  },
+  "s06": {
+    "t01": "Want a scalable outreach machine, without the guesswork?",
+    "t02": "We've tested, failed, and optimized cold emails over 100,000+ times, and now use that playbook to help founders like you consistently drive meetings at scale.",
+    "t03": "Explore Our Cold Email Services",
+    "t04": "Book a Free Strategy Call",
+    "t05": "founder@myntmore.com"
+  }
+}

@@ -36,6 +36,10 @@ import AskYourAI from "@/app/components/AskYourAI";
 import NewsletterForm from "@/app/components/NewsletterForm";
 import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import pageCopy from "@/content/page-copy/guideDosAndDontsOfOutreach.json";
+
+// This page's text is edited in the admin ("Pattern Disruption: The Do's and Don'ts of Cold Outreach") and lives in content/page-copy/guideDosAndDontsOfOutreach.json.
+const copy = pageCopy;
 
 /* ─── Site tokens ─────────────────────────────────────────────── */
 const T = {
@@ -78,56 +82,56 @@ const AI_RESOURCES = [PAGE_URL, `${SITE_URL}/services/linkedin-outreach`, `${SIT
 
 /* ─── Content ──────────────────────────────────────────────────── */
 const GUIDE_INDEX = [
-  { href: "#makeover", label: "See a message get fixed" },
-  { href: "#interrupts", label: "Six ways to break the pattern" },
-  { href: "#channels", label: "LinkedIn vs. cold email" },
-  { href: "#subjects", label: "Subject lines that get opened" },
-  { href: "#enrichment", label: "What enrichment actually is" },
-  { href: "#score", label: "Score your last message" },
+  { href: "#makeover", label: copy.DosAndDontsClient_s01.t01 },
+  { href: "#interrupts", label: copy.DosAndDontsClient_s01.t02 },
+  { href: "#channels", label: copy.DosAndDontsClient_s01.t03 },
+  { href: "#subjects", label: copy.DosAndDontsClient_s01.t04 },
+  { href: "#enrichment", label: copy.DosAndDontsClient_s01.t05 },
+  { href: "#score", label: copy.DosAndDontsClient_s01.t06 },
 ];
 
 const MAKEOVER = {
   before: {
-    label: "Typical",
-    text: "Hi Priya, I came across your profile and was really impressed by what you're building at Acme. We help companies like yours scale outbound with AI. Would you be open to a quick 15-minute call this week to explore synergies?",
-    tags: ["Generic opener", "Pitch on message one", "Ask for a call"],
+    label: copy.DosAndDontsClient_s01.t07,
+    text: copy.DosAndDontsClient_s01.t08,
+    tags: [copy.DosAndDontsClient_s01.t09, copy.DosAndDontsClient_s01.t10, copy.DosAndDontsClient_s01.t11],
     readTime: "11 sec",
   },
   after: {
-    label: "Disrupted",
-    text: "Priya, your pricing page still says “Coming soon” under the Enterprise tier. Spotted it while looking at how Acme positions the team plan. On purpose, or did it slip?",
-    tags: ["Specific observation", "One real question", "Zero pitch"],
+    label: copy.DosAndDontsClient_s01.t12,
+    text: copy.DosAndDontsClient_s01.t13,
+    tags: [copy.DosAndDontsClient_s01.t14, copy.DosAndDontsClient_s01.t15, copy.DosAndDontsClient_s01.t16],
     readTime: "4 sec",
   },
 };
 
 const INTERRUPTS: { icon: LucideIcon; title: string; body: string }[] = [
-  { icon: Smile, title: "Send a relevant meme", body: "Signals you're a person, not a sequence. Read the room first: playful cultures love it, formal ones can miss completely." },
-  { icon: Mic, title: "Drop a 20-second voice note", body: "Nobody expects a voice from a stranger, and an actual tone builds trust text never quite manages." },
-  { icon: Camera, title: "Screenshot something you noticed", body: "Proves you actually looked, instead of blasting the same line down a list of five hundred names." },
-  { icon: MessageCircleQuestion, title: "Ask one question, not another pitch", body: "A real question invites a real answer. A pitch just invites a scroll." },
-  { icon: Gift, title: "Give before you ask", body: "No strings, no follow-up demand, just something worth having whether they ever reply or not." },
-  { icon: PenLine, title: "Share a handwritten note", body: "In a world of typed everything, a few real handwritten lines feel almost personal." },
+  { icon: Smile, title: copy.DosAndDontsClient_s01.t17, body: copy.DosAndDontsClient_s01.t18 },
+  { icon: Mic, title: copy.DosAndDontsClient_s01.t19, body: copy.DosAndDontsClient_s01.t20 },
+  { icon: Camera, title: copy.DosAndDontsClient_s01.t21, body: copy.DosAndDontsClient_s01.t22 },
+  { icon: MessageCircleQuestion, title: copy.DosAndDontsClient_s01.t23, body: copy.DosAndDontsClient_s01.t24 },
+  { icon: Gift, title: copy.DosAndDontsClient_s01.t25, body: copy.DosAndDontsClient_s01.t26 },
+  { icon: PenLine, title: copy.DosAndDontsClient_s01.t27, body: copy.DosAndDontsClient_s01.t28 },
 ];
 
 const LESSONS = [
   {
     n: "01",
-    title: "It's not a hack, it's physics",
-    summary: "Interrupts work because the brain is built to notice what breaks a pattern.",
-    body: "These aren't clever tricks. They interrupt a pattern the brain has learned to ignore. The moment something doesn't fit the shape a prospect skims past, their attention holds for half a second longer. That half second is the whole game.",
+    title: copy.DosAndDontsClient_s01.t29,
+    summary: copy.DosAndDontsClient_s01.t30,
+    body: copy.DosAndDontsClient_s01.t31,
   },
   {
     n: "02",
-    title: "Attention and replies are two different jobs",
-    summary: "Earn attention first. The reply gets ten times easier after that.",
-    body: "For years I measured outbound purely on reply rate. A screenshot pointing out a typo on a prospect's pricing page didn't sell anything. It proved I'd actually looked. Once someone believes that, the sales conversation gets ten times easier.",
+    title: copy.DosAndDontsClient_s01.t32,
+    summary: copy.DosAndDontsClient_s01.t33,
+    body: copy.DosAndDontsClient_s01.t34,
   },
   {
     n: "03",
-    title: "Rare, deliberate, placed with intent",
-    summary: "One interrupt per sequence. If every email is a meme, the meme is the new template.",
-    body: "We build one deliberate break into almost every sequence we run, a point where the message stops sounding like a sequence. Not every message needs to be an interrupt. If every email is a meme, the meme becomes the new template. It works because it's rare.",
+    title: copy.DosAndDontsClient_s01.t35,
+    summary: copy.DosAndDontsClient_s01.t36,
+    body: copy.DosAndDontsClient_s01.t37,
   },
 ];
 
@@ -137,15 +141,15 @@ const CHANNEL_TIPS: { channel: string; icon: LucideIcon; accent: string; dos: st
     icon: Linkedin,
     accent: "#0077b5",
     dos: [
-      "Warm up first, a like or comment before the connection request",
-      "Send blank connection requests, a note this early often reads as a pitch",
-      "Reference something real, a post, a role change, company news",
-      "Run it as a sequence over days, not one message and done",
+      copy.DosAndDontsClient_s01.t38,
+      copy.DosAndDontsClient_s01.t39,
+      copy.DosAndDontsClient_s01.t40,
+      copy.DosAndDontsClient_s01.t41,
     ],
     donts: [
-      "“I came across your profile and was impressed”",
-      "A pitch deck or calendar link on message one",
-      "The identical note to everyone on the list",
+      copy.DosAndDontsClient_s01.t42,
+      copy.DosAndDontsClient_s01.t43,
+      copy.DosAndDontsClient_s01.t44,
     ],
   },
   {
@@ -153,78 +157,78 @@ const CHANNEL_TIPS: { channel: string; icon: LucideIcon; accent: string; dos: st
     icon: Mail,
     accent: "#D97706",
     dos: [
-      "A subject line that reads like a real email, not a broadcast",
-      "Short enough to read on a phone in five seconds",
-      "One specific observation, then one specific question",
-      "Every follow-up adds something new, never just “bumping this”",
+      copy.DosAndDontsClient_s01.t45,
+      copy.DosAndDontsClient_s01.t46,
+      copy.DosAndDontsClient_s01.t47,
+      copy.DosAndDontsClient_s01.t48,
     ],
     donts: [
-      "“Hope this email finds you well”",
-      "Every feature, listed, in message one",
-      "More than two or three follow-ups with nothing new to say",
+      copy.DosAndDontsClient_s01.t49,
+      copy.DosAndDontsClient_s01.t50,
+      copy.DosAndDontsClient_s01.t51,
     ],
   },
 ];
 
 const SUBJECT_LINES: { text: string; why: string }[] = [
-  { text: "the founder who cracked global outreach", why: "Story hook, no ask" },
-  { text: "re: your expansion plans", why: "Reads like a reply" },
-  { text: "quick one on your expansion plans", why: "Short and specific" },
-  { text: "not sure if this is relevant to you", why: "Low pressure" },
-  { text: "why your last hire changes things", why: "Trigger event" },
-  { text: "re: growing outside India", why: "Reads like a reply" },
-  { text: "saw this and thought of you", why: "Personal, not promotional" },
-  { text: "this might be bad timing", why: "Disarming" },
-  { text: "one question before I let this go", why: "Last touch" },
-  { text: "random thought after seeing your funding news", why: "Trigger event" },
+  { text: "the founder who cracked global outreach", why: copy.DosAndDontsClient_s01.t52 },
+  { text: "re: your expansion plans", why: copy.DosAndDontsClient_s01.t53 },
+  { text: "quick one on your expansion plans", why: copy.DosAndDontsClient_s01.t54 },
+  { text: "not sure if this is relevant to you", why: copy.DosAndDontsClient_s01.t55 },
+  { text: "why your last hire changes things", why: copy.DosAndDontsClient_s01.t56 },
+  { text: copy.DosAndDontsClient_s01.t57, why: copy.DosAndDontsClient_s01.t58 },
+  { text: "saw this and thought of you", why: copy.DosAndDontsClient_s01.t59 },
+  { text: "this might be bad timing", why: copy.DosAndDontsClient_s01.t60 },
+  { text: copy.DosAndDontsClient_s01.t61, why: copy.DosAndDontsClient_s01.t62 },
+  { text: "random thought after seeing your funding news", why: copy.DosAndDontsClient_s01.t63 },
 ];
 
 const DECOY_SUBJECTS = [
-  { from: "Growth Team", subject: "Partnership opportunity for Acme", preview: "Hope this email finds you well. We help companies like yours..." },
-  { from: "Sales Dept", subject: "Quick 15-min call this week?", preview: "Just following up on my previous email regarding our..." },
+  { from: "Growth Team", subject: copy.DosAndDontsClient_s01.t64, preview: "Hope this email finds you well. We help companies like yours..." },
+  { from: "Sales Dept", subject: copy.DosAndDontsClient_s01.t65, preview: "Just following up on my previous email regarding our..." },
 ];
 
 const ENRICHED_FIELDS: { icon: LucideIcon; label: string; value: string }[] = [
-  { icon: Users, label: "Company size", value: "180 employees" },
-  { icon: TrendingUp, label: "Funding", value: "Series B, raised 8 months ago" },
-  { icon: Wrench, label: "Tech stack", value: "HubSpot, Segment, Intercom" },
-  { icon: MailCheck, label: "Verified email", value: "p.shah@acme.example" },
-  { icon: Sparkles, label: "Signal", value: "Hiring 3 SDRs this month" },
+  { icon: Users, label: copy.DosAndDontsClient_s01.t66, value: "180 employees" },
+  { icon: TrendingUp, label: copy.DosAndDontsClient_s01.t67, value: copy.DosAndDontsClient_s01.t68 },
+  { icon: Wrench, label: copy.DosAndDontsClient_s01.t69, value: copy.DosAndDontsClient_s01.t70 },
+  { icon: MailCheck, label: copy.DosAndDontsClient_s01.t71, value: copy.DosAndDontsClient_s01.t72 },
+  { icon: Sparkles, label: copy.DosAndDontsClient_s01.t73, value: copy.DosAndDontsClient_s01.t74 },
 ];
 
 const ENRICHMENT_TOOLS = [
-  { name: "Apollo.io", body: "Prospecting database with enrichment built in." },
-  { name: "Clay", body: "Waterfall enrichment across many sources at once." },
-  { name: "Clearbit", body: "Company firmographics appended via API." },
-  { name: "Hunter.io", body: "Finds and verifies email addresses." },
-  { name: "ZoomInfo / Lusha", body: "Larger paid databases for teams at scale." },
+  { name: copy.DosAndDontsClient_s01.t75, body: copy.DosAndDontsClient_s01.t76 },
+  { name: copy.DosAndDontsClient_s01.t77, body: copy.DosAndDontsClient_s01.t78 },
+  { name: copy.DosAndDontsClient_s01.t79, body: copy.DosAndDontsClient_s01.t80 },
+  { name: copy.DosAndDontsClient_s01.t81, body: copy.DosAndDontsClient_s01.t82 },
+  { name: copy.DosAndDontsClient_s01.t83, body: copy.DosAndDontsClient_s01.t84 },
 ];
 
 const TOOLS = [
   {
     href: "/tools/icp-builder",
-    name: "ICP & Value Proposition Generator",
+    name: copy.DosAndDontsClient_s01.t85,
     accent: "#7C3AED",
     plain: "Tell it what your business does, and it hands you back who to sell to and what to say to them.",
     useCase: "Before writing a single message, so every line is aimed at someone real.",
   },
   {
     href: "/tools/dm-angle-generator",
-    name: "DM Angle Generator",
+    name: copy.DosAndDontsClient_s01.t86,
     accent: "#0077b5",
     plain: "Type in your offer, get back five different ways to open a message.",
     useCase: "When your reply rate goes quiet and the opening line is the likely culprit.",
   },
   {
     href: "/tools/roi-calculator",
-    name: "ROI Calculator",
+    name: copy.DosAndDontsClient_s01.t87,
     accent: "#16A34A",
     plain: "Plug in sends, replies, and deal value. See what your outreach is actually worth.",
     useCase: "Before committing budget or time, so the return is a number, not a guess.",
   },
   {
     href: "/tools/lead-magnet-ideas",
-    name: "Lead Magnet Idea Generator",
+    name: copy.DosAndDontsClient_s01.t88,
     accent: "#D97706",
     plain: "Turns your business and ICP into concrete, specific things you could give away for free.",
     useCase: "When you like the “give before you ask” idea but can't think what to give.",
@@ -232,24 +236,24 @@ const TOOLS = [
 ];
 
 const DONTS = [
-  "Long messages that take more than 10 seconds to read",
-  "Salesy language: “game-changing”, “revolutionary”, “synergy”",
-  "Copy that obviously sounds AI-written",
-  "Text-only, every single time, forever",
-  "Generic openers like “Hope this finds you well”",
-  "More than one ask in a single message",
-  "Following up repeatedly with nothing new to say",
+  copy.DosAndDontsClient_s01.t89,
+  copy.DosAndDontsClient_s01.t90,
+  copy.DosAndDontsClient_s01.t91,
+  copy.DosAndDontsClient_s01.t92,
+  copy.DosAndDontsClient_s01.t93,
+  copy.DosAndDontsClient_s01.t94,
+  copy.DosAndDontsClient_s01.t95,
 ];
 
 const DOS = [
-  "Crisp, short enough to read at a glance",
-  "No beating around the bush, the point in line one",
-  "Voice notes, when it fits the relationship",
-  "Videos, a face is harder to ignore than text",
-  "Loom videos, especially for a quick walkthrough",
-  "Reference something specific and real about them",
-  "One clear, low-friction next step",
-  "Give something before you ask for something",
+  copy.DosAndDontsClient_s01.t96,
+  copy.DosAndDontsClient_s01.t97,
+  copy.DosAndDontsClient_s01.t98,
+  copy.DosAndDontsClient_s01.t99,
+  copy.DosAndDontsClient_s01.t100,
+  copy.DosAndDontsClient_s01.t101,
+  copy.DosAndDontsClient_s01.t102,
+  copy.DosAndDontsClient_s01.t103,
 ];
 
 /* ─── Reading progress bar (sits just above the fixed navbar) ──── */
@@ -333,15 +337,14 @@ function MessageMakeover() {
             );
           })}
         </div>
-        <p className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: T.muted }}>
-          Read time <span className="tabular-nums" style={{ color: accent }}>{m.readTime}</span>
+        <p className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t104}<span className="tabular-nums" style={{ color: accent }}>{m.readTime}</span>
         </p>
       </div>
 
       <div className="px-5 sm:px-8 py-5 sm:py-6">
         <div key={m.label} className="card-fade-up">
           <div className="flex items-start gap-3">
-            <span aria-hidden="true" className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-black" style={{ backgroundColor: T.purpleSoft, color: T.purple }}>You</span>
+            <span aria-hidden="true" className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-black" style={{ backgroundColor: T.purpleSoft, color: T.purple }}>{copy.DosAndDontsClient_s01.t105}</span>
             <div className="relative rounded-2xl rounded-tl-md px-5 py-4 max-w-xl" style={{ backgroundColor: T.bg, border: `1px solid ${T.hairline}` }}>
               <p className="text-[15px] leading-relaxed" style={{ color: T.ink }}>{m.text}</p>
             </div>
@@ -358,7 +361,7 @@ function MessageMakeover() {
       </div>
 
       <div className="px-5 sm:px-8 py-4 border-t flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
-        <p className="text-sm" style={{ color: T.muted }}>Same prospect, same product. Only the shape of the message changed.</p>
+        <p className="text-sm" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t106}</p>
         <button
           type="button"
           onClick={() => setFixed((f) => !f)}
@@ -501,7 +504,7 @@ function ChannelTabs() {
         <div className="h-1" style={{ background: `linear-gradient(90deg,${c.accent},${c.accent}66)` }} />
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="p-5 sm:p-9 md:border-r" style={{ borderColor: T.hairline }}>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: T.doText }}>Do</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: T.doText }}>{copy.DosAndDontsClient_s01.t107}</p>
             <ul className="space-y-4">
               {c.dos.map((d) => (
                 <li key={d} className="flex items-start gap-3 text-[15px] leading-relaxed" style={{ color: T.ink2 }}>
@@ -512,7 +515,7 @@ function ChannelTabs() {
             </ul>
           </div>
           <div className="p-5 sm:p-9 border-t md:border-t-0" style={{ borderColor: T.hairline }}>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: T.dontText }}>Don&apos;t</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: T.dontText }}>{copy.DosAndDontsClient_s01.t108}</p>
             <ul className="space-y-4">
               {c.donts.map((d) => (
                 <li key={d} className="flex items-start gap-3 text-[15px] leading-relaxed" style={{ color: T.ink2 }}>
@@ -533,7 +536,7 @@ function SubjectLines() {
   const [picked, setPicked] = useState(0);
   const [copied, setCopied] = useState<number | "all" | null>(null);
 
-  async function copy(text: string, key: number | "all") {
+  async function copyToClipboard(text: string, key: number | "all") {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(key);
@@ -550,10 +553,10 @@ function SubjectLines() {
       {/* Swipe file */}
       <div className="lg:col-span-6 rounded-3xl overflow-hidden" style={{ backgroundColor: T.paper, border: `1px solid ${T.hairline}` }}>
         <div className="flex items-center justify-between gap-3 px-5 sm:px-6 pt-5 pb-3">
-          <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>Swipe file</p>
+          <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t109}</p>
           <button
             type="button"
-            onClick={() => copy(SUBJECT_LINES.map((l) => l.text).join("\n"), "all")}
+            onClick={() => copyToClipboard(SUBJECT_LINES.map((l) => l.text).join("\n"), "all")}
             className="inline-flex min-h-[44px] items-center gap-1.5 text-xs font-bold rounded-full px-4 py-2 transition-colors duration-200 cursor-pointer hover:bg-[#F8F6F2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1"
             style={{ color: T.ink, border: `1px solid ${T.hairline}` }}
           >
@@ -581,7 +584,7 @@ function SubjectLines() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => copy(l.text, i)}
+                    onClick={() => copyToClipboard(l.text, i)}
                     aria-label={copied === i ? "Copied" : `Copy subject line ${i + 1}`}
                     className="flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-200 cursor-pointer hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1"
                     style={{ color: copied === i ? T.doFill : T.muted }}
@@ -600,7 +603,7 @@ function SubjectLines() {
         <div className="rounded-3xl overflow-hidden" style={{ backgroundColor: T.paper, border: `1px solid ${T.hairline}` }}>
           <div className="flex items-center gap-2 px-5 py-3 border-b" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
             <Mail className="w-4 h-4" strokeWidth={2} style={{ color: T.muted }} />
-            <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>Their inbox, Tuesday 9:14 am</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t110}</p>
           </div>
           <ul>
             <li className="flex items-start gap-3 px-5 py-3.5 border-b" style={{ borderColor: T.hairline, color: T.muted }}>
@@ -610,8 +613,8 @@ function SubjectLines() {
             </li>
             <li key={line.text} className="card-fade-up flex items-start gap-3 px-5 py-3.5 border-b" style={{ borderColor: T.hairline, backgroundColor: T.amberSoft }}>
               <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: T.amber }} />
-              <span className="w-24 flex-shrink-0 text-sm font-black truncate" style={{ color: T.ink }}>Tejas Jhaveri</span>
-              <span className="min-w-0 flex-1 text-sm"><span className="font-black" style={{ color: T.ink }}>{line.text}</span> <span className="hidden sm:inline" style={{ color: T.muted }}>Priya, noticed something on your pricing page while looking at...</span></span>
+              <span className="w-24 flex-shrink-0 text-sm font-black truncate" style={{ color: T.ink }}>{copy.DosAndDontsClient_s01.t111}</span>
+              <span className="min-w-0 flex-1 text-sm"><span className="font-black" style={{ color: T.ink }}>{line.text}</span> <span className="hidden sm:inline" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t112}</span></span>
             </li>
             <li className="flex items-start gap-3 px-5 py-3.5" style={{ color: T.muted }}>
               <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: "transparent" }} />
@@ -621,8 +624,7 @@ function SubjectLines() {
           </ul>
           <div className="px-5 py-4 border-t" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
             <p className="text-sm leading-relaxed" style={{ color: T.ink2 }}>
-              <span className="font-bold" style={{ color: T.ink }}>All lowercase on purpose.</span> It reads like something a person typed on their phone, not a campaign. Pick a line on the left to see it sit between the broadcasts.
-            </p>
+              <span className="font-bold" style={{ color: T.ink }}>{copy.DosAndDontsClient_s01.t113}</span>{copy.DosAndDontsClient_s01.t114}</p>
           </div>
         </div>
       </div>
@@ -656,7 +658,7 @@ function EnrichDemo() {
       <div className="h-1" style={{ background: `linear-gradient(90deg,${T.amber},${T.amber}66)` }} />
       <div className="p-5 sm:p-7">
         <div className="flex items-center justify-between gap-4 mb-5">
-          <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>Example lead</p>
+          <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t115}</p>
           <span className="text-xs font-bold px-2.5 py-1 rounded-full transition-colors duration-300" style={{ backgroundColor: done ? T.doSoft : T.amberSoft, color: done ? T.doText : textTone(T.amber), border: `1px solid ${done ? "rgba(21,128,61,0.2)" : T.amberBorder}` }}>
             {done ? "Enriched" : running ? "Enriching" : "Raw"}
           </span>
@@ -667,8 +669,8 @@ function EnrichDemo() {
             <Building2 className="w-5 h-5" strokeWidth={1.8} />
           </span>
           <div>
-            <p className="text-base font-black" style={{ color: T.ink }}>Priya Shah</p>
-            <p className="text-sm" style={{ color: T.muted }}>Head of Revenue, Acme (example)</p>
+            <p className="text-base font-black" style={{ color: T.ink }}>{copy.DosAndDontsClient_s01.t116}</p>
+            <p className="text-sm" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t117}</p>
           </div>
         </div>
 
@@ -700,13 +702,9 @@ function EnrichDemo() {
             </button>
           ) : (
             <button type="button" onClick={reset} className="inline-flex items-center gap-2 text-sm font-bold rounded-full px-4 py-2.5 transition-colors duration-200 cursor-pointer hover:bg-[#F8F6F2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1" style={{ color: T.ink, border: `1px solid ${T.hairline}` }}>
-              <RotateCcw className="w-3.5 h-3.5" strokeWidth={2.5} />
-              Reset
-            </button>
+              <RotateCcw className="w-3.5 h-3.5" strokeWidth={2.5} />{copy.DosAndDontsClient_s01.t118}</button>
           )}
-          <p className="text-sm card-fade-up" style={{ color: T.muted, visibility: done ? "visible" : "hidden" }}>
-            Now the first line can be about the SDR hiring, not “Hope this finds you well”.
-          </p>
+          <p className="text-sm card-fade-up" style={{ color: T.muted, visibility: done ? "visible" : "hidden" }}>{copy.DosAndDontsClient_s01.t119}</p>
         </div>
       </div>
     </div>
@@ -737,8 +735,8 @@ function SelfAudit() {
   }
 
   const columns: { kind: "do" | "dont"; heading: string; hint: string; items: string[]; picked: Set<number>; set: (s: Set<number>) => void }[] = [
-    { kind: "do", heading: "Do", hint: "What your last message actually did", items: DOS, picked: dos, set: setDos },
-    { kind: "dont", heading: "Don't", hint: "What your last message was guilty of", items: DONTS, picked: donts, set: setDonts },
+    { kind: "do", heading: copy.DosAndDontsClient_s01.t120, hint: copy.DosAndDontsClient_s01.t121, items: DOS, picked: dos, set: setDos },
+    { kind: "dont", heading: copy.DosAndDontsClient_s01.t122, hint: copy.DosAndDontsClient_s01.t123, items: DONTS, picked: donts, set: setDonts },
   ];
 
   return (
@@ -746,7 +744,7 @@ function SelfAudit() {
       <div className="rounded-3xl p-5 sm:p-7 mb-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5" style={{ backgroundColor: T.amberSoft, border: `1px solid ${T.amberBorder}`, boxShadow: "0 8px 30px rgba(0,0,0,0.04)", color: T.ink }}>
         <div className="flex items-baseline gap-2 flex-shrink-0">
           <span className="text-5xl font-black leading-none tabular-nums" style={{ color: "#A14A08" }}>{doScore}</span>
-          <span className="text-sm font-semibold" style={{ color: "#71675E" }}>of {DOS.length} habits</span>
+          <span className="text-sm font-semibold" style={{ color: "#71675E" }}>{copy.DosAndDontsClient_s01.t124}{DOS.length}{copy.DosAndDontsClient_s01.t125}</span>
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-base font-semibold leading-snug">{verdict}</p>
@@ -761,9 +759,7 @@ function SelfAudit() {
             className="inline-flex items-center gap-1.5 text-xs font-bold self-start sm:self-auto rounded-full px-3 py-1.5 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B731]"
             style={{ color: "#0A0A0A", backgroundColor: "#FFFFFF", border: "1px solid #E8E2D9" }}
           >
-            <RotateCcw className="w-3.5 h-3.5" strokeWidth={2.5} />
-            Reset
-          </button>
+            <RotateCcw className="w-3.5 h-3.5" strokeWidth={2.5} />{copy.DosAndDontsClient_s01.t126}</button>
         )}
       </div>
 
@@ -815,30 +811,26 @@ export default function DosAndDontsClient() {
         <div aria-hidden="true" style={{ position: "absolute", top: "-100px", right: "-160px", width: "600px", height: "600px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.20) 0%, rgba(255,160,0,0.08) 40%, transparent 68%)", filter: "blur(55px)", pointerEvents: "none" }} />
 
         <div className="relative z-10 max-w-6xl mx-auto">
-          <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Guides", href: "/resources/guides" }, { label: "Pattern Disruption", href: "/resources/guides/dos-and-donts-of-outreach" }]} />
+          <Breadcrumbs items={[{ label: copy.DosAndDontsClient_s01.t127, href: "/resources" }, { label: copy.DosAndDontsClient_s01.t128, href: "/resources/guides" }, { label: copy.DosAndDontsClient_s01.t129, href: "/resources/guides/dos-and-donts-of-outreach" }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade" style={{ borderColor: T.purpleBorder, background: "rgba(124,58,237,0.07)" }}>
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: T.purple }} />
-                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: T.purple }}>Interactive guide &middot; 6 min</span>
+                <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: T.purple }}>{copy.DosAndDontsClient_s01.t130}</span>
               </div>
               <h1 className="hero-fade-d1 text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: T.ink }}>
-                <span style={{ color: T.purple }}>Pattern Disruption</span>
-                <br />
-                The Do&apos;s and Don&apos;ts of Cold Outreach
-              </h1>
-              <p className="hero-fade-d2 text-lg sm:text-xl leading-relaxed max-w-xl" style={{ color: T.muted }}>
-                Every prospect&apos;s inbox has trained them to skim past your message before they&apos;ve read a word of it. Here&apos;s what actually gets one read.
-              </p>
+                <span style={{ color: T.purple }}>{copy.DosAndDontsClient_s01.t131}</span>
+                <br />{copy.DosAndDontsClient_s01.t132}</h1>
+              <p className="hero-fade-d2 text-lg sm:text-xl leading-relaxed max-w-xl" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t133}</p>
               <div className="hero-fade-d3 flex items-center gap-3 mt-8 text-sm" style={{ color: T.muted }}>
-                <span aria-hidden="true" className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black" style={{ backgroundColor: T.purple, color: "#ffffff" }}>TJ</span>
-                <span><span className="font-semibold" style={{ color: T.ink }}>Tejas Jhaveri</span>, Founder of Myntmore</span>
+                <span aria-hidden="true" className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black" style={{ backgroundColor: T.purple, color: "#ffffff" }}>{copy.DosAndDontsClient_s01.t134}</span>
+                <span><span className="font-semibold" style={{ color: T.ink }}>{copy.DosAndDontsClient_s01.t135}</span>{copy.DosAndDontsClient_s01.t136}</span>
               </div>
             </div>
 
             <nav aria-label="In this guide" className="hero-fade-d3 lg:col-span-5 rounded-3xl p-2" style={{ backgroundColor: T.paper, border: `1px solid ${T.hairline}` }}>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] px-5 pt-4 pb-2" style={{ color: T.muted }}>In this guide</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] px-5 pt-4 pb-2" style={{ color: T.muted }}>{copy.DosAndDontsClient_s01.t137}</p>
               <ol>
                 {GUIDE_INDEX.map((item, i) => (
                   <li key={item.href}>
@@ -861,25 +853,19 @@ export default function DosAndDontsClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5">
               <FadeIn>
-                <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight mb-6" style={{ color: T.ink }}>The two seconds of silence</h2>
-                <p className="text-base sm:text-lg leading-relaxed" style={{ color: T.ink2 }}>
-                  I was DJing a set last year and dropped a song completely out of genre, just to see what would happen. The floor went quiet for two seconds, then louder than before. Not better, just unexpected.
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed mt-4" style={{ color: T.ink2 }}>
-                  Open any inbox and you already know what&apos;s coming. &ldquo;Thanks for connecting.&rdquo; &ldquo;Just following up.&rdquo; Read a thousand times, those lines stop registering as words. They register as noise, and noise gets deleted without guilt.
-                </p>
+                <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight mb-6" style={{ color: T.ink }}>{copy.DosAndDontsClient_s02.t01}</h2>
+                <p className="text-base sm:text-lg leading-relaxed" style={{ color: T.ink2 }}>{copy.DosAndDontsClient_s02.t02}</p>
+                <p className="text-base sm:text-lg leading-relaxed mt-4" style={{ color: T.ink2 }}>{copy.DosAndDontsClient_s02.t03}</p>
                 <figure className="relative mt-8 rounded-3xl border p-6 sm:p-7 overflow-hidden" style={{ backgroundColor: T.amberSoft, borderColor: T.amberBorder }}>
                   <span aria-hidden="true" className="absolute -top-5 right-5 text-8xl font-black opacity-10 select-none" style={{ color: T.amber }}>&ldquo;</span>
-                  <blockquote className="text-2xl sm:text-3xl font-black leading-tight tracking-tight" style={{ color: T.ink }}>
-                    Not better, just unexpected.
-                  </blockquote>
-                  <figcaption className="mt-3 text-xs font-bold uppercase tracking-[0.18em]" style={{ color: textTone(T.amber) }}>Tejas Jhaveri, Founder of Myntmore</figcaption>
+                  <blockquote className="text-2xl sm:text-3xl font-black leading-tight tracking-tight" style={{ color: T.ink }}>{copy.DosAndDontsClient_s02.t04}</blockquote>
+                  <figcaption className="mt-3 text-xs font-bold uppercase tracking-[0.18em]" style={{ color: textTone(T.amber) }}>{copy.DosAndDontsClient_s02.t05}</figcaption>
                 </figure>
               </FadeIn>
             </div>
             <div className="lg:col-span-7">
               <FadeIn delay={120}>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] mb-4" style={{ color: T.purple }}>Try it: fix a message</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] mb-4" style={{ color: T.purple }}>{copy.DosAndDontsClient_s02.t06}</p>
                 <MessageMakeover />
               </FadeIn>
             </div>
@@ -890,12 +876,12 @@ export default function DosAndDontsClient() {
             <div className="mt-10 sm:mt-14 max-w-3xl mx-auto rounded-2xl sm:rounded-3xl p-2.5 sm:p-4" style={{ backgroundColor: T.amberSoft, border: `1px solid ${T.amberBorder}`, boxShadow: "0 8px 30px rgba(0,0,0,0.04)" }}>
               <div className="flex items-center gap-2 px-3 pt-2 pb-4">
                 <Play className="w-3.5 h-3.5" strokeWidth={2.5} style={{ color: "#A14A08" }} fill="#A14A08" />
-                <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "#A14A08" }}>Watch Tejas break this down</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "#A14A08" }}>{copy.DosAndDontsClient_s02.t07}</p>
               </div>
               <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, borderRadius: "16px", overflow: "hidden" }}>
                 <iframe
                   src="https://www.loom.com/embed/143c7b6ae41242bbbad797539987d214"
-                  title="Tejas Jhaveri on pattern disruption in outbound"
+                  title={copy.DosAndDontsClient_s02.t08}
                   allow="fullscreen"
                   allowFullScreen
                   style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
@@ -910,22 +896,21 @@ export default function DosAndDontsClient() {
       <section id="interrupts" className="py-14 sm:py-20 px-4 border-t scroll-mt-24" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <SectionHeader n="01" eyebrow="Pattern disruption" title="Six ways to break the pattern" lede="Tap a card. Each one works for the same reason: it doesn't fit the shape a prospect has learned to skim past." />
+            <SectionHeader n="01" eyebrow="Pattern disruption" title={copy.DosAndDontsClient_s02.t09} lede="Tap a card. Each one works for the same reason: it doesn't fit the shape a prospect has learned to skim past." />
           </FadeIn>
           <InterruptCards />
 
           <FadeIn>
             <div className="mt-16">
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.purple }}>Three things I learned the hard way</span>
+                <span className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.purple }}>{copy.DosAndDontsClient_s02.t10}</span>
               </div>
               <LessonStepper />
               <div className="mt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-                <p className="text-sm" style={{ color: T.muted }}>
-                  This is how we run it at{" "}
-                  <a href="https://zcu.ge/M0W" target="_blank" rel="noopener noreferrer" className="font-bold underline-offset-4 hover:underline" style={{ color: T.purple }}>Myntmore</a>.
+                <p className="text-sm" style={{ color: T.muted }}>{copy.DosAndDontsClient_s02.t11}{" "}
+                  <a href="https://zcu.ge/M0W" target="_blank" rel="noopener noreferrer" className="font-bold underline-offset-4 hover:underline" style={{ color: T.purple }}>{copy.DosAndDontsClient_s02.t12}</a>.
                 </p>
-                <p className={`${caveat.className} text-3xl leading-none`} style={{ color: T.purple }}>Respectfully, Teejay</p>
+                <p className={`${caveat.className} text-3xl leading-none`} style={{ color: T.purple }}>{copy.DosAndDontsClient_s02.t13}</p>
               </div>
             </div>
           </FadeIn>
@@ -936,7 +921,7 @@ export default function DosAndDontsClient() {
       <section id="channels" className="py-14 sm:py-20 px-4 border-t scroll-mt-24" style={{ borderColor: T.hairline, backgroundColor: T.paper }}>
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <SectionHeader n="02" eyebrow="By channel" accent={T.linkedin} title={<>Same principle, <span style={{ color: T.linkedin }}>different channel</span></>} lede="What works on LinkedIn reads as a pitch in email, and vice versa. Pick one." />
+            <SectionHeader n="02" eyebrow="By channel" accent={T.linkedin} title={<>{copy.DosAndDontsClient_s02.t14}<span style={{ color: T.linkedin }}>{copy.DosAndDontsClient_s02.t15}</span></>} lede="What works on LinkedIn reads as a pitch in email, and vice versa. Pick one." />
             <ChannelTabs />
           </FadeIn>
         </div>
@@ -946,7 +931,7 @@ export default function DosAndDontsClient() {
       <section id="subjects" className="py-14 sm:py-20 px-4 border-t scroll-mt-24" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <SectionHeader n="03" eyebrow="Cold email" accent={T.amber} title="Ten subject lines that get opened" lede="Pulled from sequences that are running right now. Every one of them looks like a real email, not a broadcast." />
+            <SectionHeader n="03" eyebrow="Cold email" accent={T.amber} title={copy.DosAndDontsClient_s02.t16} lede="Pulled from sequences that are running right now. Every one of them looks like a real email, not a broadcast." />
             <SubjectLines />
           </FadeIn>
         </div>
@@ -958,15 +943,11 @@ export default function DosAndDontsClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5">
               <FadeIn>
-                <SectionHeader n="04" eyebrow="The unglamorous part" accent={T.amber} title="What is enrichment?" />
-                <p className="text-base leading-relaxed -mt-4" style={{ color: T.ink2 }}>
-                  A raw list of names isn&apos;t enough to write the kind of message this guide describes. <strong style={{ color: T.ink }}>Enrichment</strong> adds real details to a lead, so a message can reference something specific instead of guessing.
-                </p>
-                <p className="text-xl font-black leading-snug mt-6 pl-5 border-l-2" style={{ color: T.ink, borderColor: T.amber }}>
-                  Without it, personalisation is a merge field with a first name in it.
-                </p>
+                <SectionHeader n="04" eyebrow="The unglamorous part" accent={T.amber} title={copy.DosAndDontsClient_s02.t17} />
+                <p className="text-base leading-relaxed -mt-4" style={{ color: T.ink2 }}>{copy.DosAndDontsClient_s02.t18}<strong style={{ color: T.ink }}>{copy.DosAndDontsClient_s02.t19}</strong>{copy.DosAndDontsClient_s02.t20}</p>
+                <p className="text-xl font-black leading-snug mt-6 pl-5 border-l-2" style={{ color: T.ink, borderColor: T.amber }}>{copy.DosAndDontsClient_s02.t21}</p>
                 <div className="mt-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] mb-3" style={{ color: T.muted }}>Tools worth knowing</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] mb-3" style={{ color: T.muted }}>{copy.DosAndDontsClient_s02.t22}</p>
                   <ul className="flex flex-wrap gap-2">
                     {ENRICHMENT_TOOLS.map((t) => (
                       <li key={t.name} className="group relative">
@@ -995,7 +976,7 @@ export default function DosAndDontsClient() {
       <section className="py-14 sm:py-20 px-4 border-t" style={{ borderColor: T.hairline, backgroundColor: T.bg }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <SectionHeader n="05" eyebrow="Free tools" accent={T.green} title="Tools that do some of this for you" lede="No jargon, just what each one does and when to reach for it." />
+            <SectionHeader n="05" eyebrow="Free tools" accent={T.green} title={copy.DosAndDontsClient_s02.t23} lede="No jargon, just what each one does and when to reach for it." />
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {TOOLS.map((t, i) => (
@@ -1011,16 +992,14 @@ export default function DosAndDontsClient() {
                       <span className="flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105" style={{ backgroundColor: t.accent, color: "#ffffff" }}>
                         <ArrowUpRight className="w-5 h-5" strokeWidth={2.5} />
                       </span>
-                      <span className="text-xs font-black uppercase tracking-[0.18em] px-2.5 py-1 rounded-full" style={{ backgroundColor: T.paper, color: textTone(t.accent), border: `1px solid ${t.accent}55` }}>Free</span>
+                      <span className="text-xs font-black uppercase tracking-[0.18em] px-2.5 py-1 rounded-full" style={{ backgroundColor: T.paper, color: textTone(t.accent), border: `1px solid ${t.accent}55` }}>{copy.DosAndDontsClient_s02.t24}</span>
                     </div>
                     <h3 className="text-xl font-black leading-snug mb-2" style={{ color: T.ink }}>{t.name}</h3>
                     <p className="text-[15px] leading-relaxed mb-5" style={{ color: T.ink2 }}>{t.plain}</p>
                     <p className="text-sm leading-relaxed mt-auto pt-4 border-t" style={{ color: T.muted, borderColor: `${t.accent}33` }}>
-                      <span className="font-bold" style={{ color: T.ink }}>Use it when: </span>{t.useCase}
+                      <span className="font-bold" style={{ color: T.ink }}>{copy.DosAndDontsClient_s02.t25}</span>{t.useCase}
                     </p>
-                    <span className="mt-5 inline-flex items-center justify-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-bold text-white transition-transform duration-300 group-hover:translate-x-0.5" style={{ backgroundColor: textTone(t.accent), boxShadow: `0 6px 16px ${t.accent}55` }}>
-                      Try it free
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
+                    <span className="mt-5 inline-flex items-center justify-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-bold text-white transition-transform duration-300 group-hover:translate-x-0.5" style={{ backgroundColor: textTone(t.accent), boxShadow: `0 6px 16px ${t.accent}55` }}>{copy.DosAndDontsClient_s02.t26}<ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
                     </span>
                   </div>
                 </Link>
@@ -1034,7 +1013,7 @@ export default function DosAndDontsClient() {
       <section id="score" className="py-14 sm:py-20 px-4 border-t scroll-mt-24" style={{ borderColor: T.hairline, backgroundColor: T.paper }}>
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <SectionHeader n="06" eyebrow="Self-audit" title="Score your last message" />
+            <SectionHeader n="06" eyebrow="Self-audit" title={copy.DosAndDontsClient_s02.t27} />
             <SelfAudit />
           </FadeIn>
 
@@ -1045,11 +1024,9 @@ export default function DosAndDontsClient() {
           <FadeIn>
             <div className="mt-6 rounded-3xl p-5 sm:p-8 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:items-center" style={{ backgroundColor: T.amberSoft, border: `1px solid ${T.amberBorder}` }}>
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] mb-2" style={{ color: textTone(T.amber) }}>The Outbound Operator</p>
-                <h3 className="text-2xl font-black leading-tight mb-2" style={{ color: T.ink }}>One practical growth playbook, every week</h3>
-                <p className="text-sm leading-relaxed" style={{ color: T.muted }}>
-                  Outbound systems, AI prospecting, cold email, and LinkedIn tactics, built from real campaigns, not recycled theory.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] mb-2" style={{ color: textTone(T.amber) }}>{copy.DosAndDontsClient_s02.t28}</p>
+                <h3 className="text-2xl font-black leading-tight mb-2" style={{ color: T.ink }}>{copy.DosAndDontsClient_s03.t01}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: T.muted }}>{copy.DosAndDontsClient_s03.t02}</p>
               </div>
               <div className="md:min-w-[20rem]">
                 <NewsletterForm inputId="dos-donts-newsletter-email" compact />
@@ -1064,13 +1041,9 @@ export default function DosAndDontsClient() {
         <div className="max-w-2xl mx-auto">
           <FadeIn>
             <span aria-hidden="true" className="block h-px w-12 mx-auto mb-8" style={{ backgroundColor: T.purple }} />
-            <h2 className="text-[1.75rem] sm:text-5xl font-black leading-tight tracking-tight mb-5" style={{ color: T.ink }}>
-              Want this built into your own sequences?
-            </h2>
-            <p className="text-base sm:text-lg mb-10" style={{ color: T.muted }}>We bake pattern disruption into the outbound systems we build for clients. Let&apos;s talk about yours.</p>
-            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Book a Call
-              <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+            <h2 className="text-[1.75rem] sm:text-5xl font-black leading-tight tracking-tight mb-5" style={{ color: T.ink }}>{copy.DosAndDontsClient_s04.t01}</h2>
+            <p className="text-base sm:text-lg mb-10" style={{ color: T.muted }}>{copy.DosAndDontsClient_s04.t02}</p>
+            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{copy.DosAndDontsClient_s04.t03}<ArrowRight className="w-4 h-4" strokeWidth={2.5} />
             </a>
           </FadeIn>
         </div>

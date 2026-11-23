@@ -8,6 +8,10 @@ import StatTicker from "@/app/components/StatTicker";
 import InnerLayout from "@/app/components/InnerLayout";
 import CopyBlock from "@/app/components/CopyBlock";
 import { textTone } from "@/lib/colors";
+import pageCopy from "@/content/page-copy/guideEducationGuide.json";
+
+// This page's text is edited in the admin ("AI Quick-Start Guide") and lives in content/page-copy/guideEducationGuide.json.
+const copy = pageCopy;
 
 /* ─── Types ───────────────────────────────────────────────────────── */
 interface Tip {
@@ -35,188 +39,188 @@ type AudienceKey = "parents" | "educators" | "creators" | "leadership";
 
 const PARENTS_TIPS: Record<ParentEducatorStage, Tip[]> = {
   "pre-primary": [
-    { label: "Google Read Along", text: "AI-powered app that helps your child practice reading aloud, one on one." },
-    { label: "Claude/ChatGPT voice mode", text: "Speak a story idea out loud together, get a full bedtime story back instantly.", prompt: "You're a warm, gentle children's storyteller. Tell me a 3-minute bedtime story for a 4-year-old about a brave little elephant named Ellie who's scared of thunderstorms. Use simple words a toddler understands, include one repeated phrase she can join in on, and end with her realising the thunder is just the clouds clapping for the rain. Keep the tone soothing, not exciting, since this is for bedtime." },
-    { label: "Canva Magic Media", text: "Turn your child's favourite character or idea into a simple coloring page.", prompt: "A friendly, smiling cartoon dinosaur wearing a paper birthday hat, standing next to 3 balloons. Simple thick black outlines only, no shading or colour fill, big open spaces so a 4-year-old can colour it in easily with crayons. Square format, printable on A4." },
-    { text: "Ask AI big questions kids ask (\"why is the sky blue?\") in toddler language, then read the answer together." },
-    { text: "Ask AI for a rainy-day craft or activity idea using things you already have at home." },
-    { text: "Use AI to write a short, personalized birthday poem or card message for a sibling or friend." },
-    { label: "Golden rule at this age", isHabit: true, text: "Always use AI together with your child, never hand over the phone and walk away." },
-    { text: "Ask AI to explain a big feeling (\"why do I feel scared of the dark?\") in simple words, then talk about it together." },
-    { label: "ElevenLabs", text: "Turn a favourite story into an audio story read in a fun character voice.", prompt: "Read this story aloud in a warm, gentle grandmother's voice: slow pace, soft tone, a little extra warmth on the character names so a 4-year-old feels like she's being told the story by someone who loves her. Pause briefly at the end of each page so it feels like a real bedtime read-aloud, not a rushed narration: [paste your child's favourite story here]" },
-    { text: "Use AI to generate simple, printable flashcards for colors, shapes, or animal names." },
+    { label: copy.EducationGuideClient_s01.t01, text: copy.EducationGuideClient_s01.t02 },
+    { label: copy.EducationGuideClient_s01.t03, text: copy.EducationGuideClient_s01.t04, prompt: copy.EducationGuideClient_s01.t05 },
+    { label: copy.EducationGuideClient_s01.t06, text: copy.EducationGuideClient_s01.t07, prompt: copy.EducationGuideClient_s01.t08 },
+    { text: copy.EducationGuideClient_s01.t09 },
+    { text: copy.EducationGuideClient_s01.t10 },
+    { text: copy.EducationGuideClient_s01.t11 },
+    { label: copy.EducationGuideClient_s01.t12, isHabit: true, text: copy.EducationGuideClient_s01.t13 },
+    { text: copy.EducationGuideClient_s01.t14 },
+    { label: copy.EducationGuideClient_s01.t15, text: copy.EducationGuideClient_s01.t16, prompt: copy.EducationGuideClient_s01.t17 },
+    { text: copy.EducationGuideClient_s01.t18 },
   ],
   primary: [
-    { label: "ChatGPT/Claude/Gemini", text: "Get step-by-step homework help, not just the final answer.", prompt: "You're a patient primary school maths tutor. My 8-year-old is stuck on this problem: [paste the problem]. Walk me through the solution one step at a time, explaining the reasoning behind each step in language I can repeat to my child. Don't give the final answer up front, let me follow the logic first, then suggest one simple question I can ask her afterward to check she understood it, not just copied it down." },
-    { label: "Photomath", text: "Scan a math problem for a full step-by-step solve." },
-    { label: "NotebookLM", text: "Upload class notes or a textbook chapter, get instant flashcards for revision.", prompt: "Upload this week's science chapter. Create 10 flashcards covering the key terms and concepts, written in language an 8-year-old understands, and a separate 5-question quiz mixing recall questions with one 'explain it in your own words' question. Order the flashcards easiest to hardest, and add a one-line 'why this matters' fact to each card to keep it interesting." },
-    { text: "Ask AI to create a fun quiz on whatever your child is currently curious about (space, dinosaurs, etc)." },
-    { label: "Google Lens", text: "Point the camera at a plant or insect on a walk and learn about it together." },
-    { text: "Use AI to draft a leave letter or note to the teacher (you review and send it yourself)." },
-    { text: "Have your child narrate a story idea out loud, turn it into a written story, then have them illustrate it." },
-    { text: "Ask AI to explain a tricky topic using an analogy your child relates to (their favourite sport or cartoon)." },
-    { label: "Build the \"check it\" habit early", isHabit: true, text: "After any AI answer, ask \"how do you know this is true?\"" },
-    { text: "Use a language-learning app's AI feature for extra practice outside school hours." },
+    { label: copy.EducationGuideClient_s01.t19, text: copy.EducationGuideClient_s01.t20, prompt: copy.EducationGuideClient_s01.t21 },
+    { label: copy.EducationGuideClient_s01.t22, text: copy.EducationGuideClient_s01.t23 },
+    { label: copy.EducationGuideClient_s01.t24, text: copy.EducationGuideClient_s01.t25, prompt: copy.EducationGuideClient_s01.t26 },
+    { text: copy.EducationGuideClient_s01.t27 },
+    { label: copy.EducationGuideClient_s01.t28, text: copy.EducationGuideClient_s01.t29 },
+    { text: copy.EducationGuideClient_s01.t30 },
+    { text: copy.EducationGuideClient_s01.t31 },
+    { text: copy.EducationGuideClient_s01.t32 },
+    { label: copy.EducationGuideClient_s01.t33, isHabit: true, text: copy.EducationGuideClient_s01.t34 },
+    { text: copy.EducationGuideClient_s01.t35 },
   ],
   middle: [
-    { label: "Use AI as a tutor that quizzes, not tells", isHabit: true, text: "Ask it to test you instead of giving the answer." },
-    { label: "NotebookLM", text: "Upload notes ahead of an exam, generate flashcards and practice questions.", prompt: "Upload these exam notes for [subject]. Quiz me one question at a time, starting with easier recall questions and gradually moving to harder application questions. Don't reveal the correct answer until I've given my attempt, then tell me clearly whether I was right, and if I was wrong, explain the concept again a different way before moving on. Tell me my score at the end." },
-    { label: "Teach the prompt habit", isHabit: true, text: "\"Explain this like I'm in 7th grade\" gets a much better answer than a vague question." },
-    { text: "Use AI to help outline an essay, then have your child write it in their own words." },
-    { text: "Talk openly about what's okay to use AI for in schoolwork, and what isn't." },
-    { text: "Use AI to research project topics, but make it a rule to verify at least one source independently." },
-    { label: "Grammarly", text: "Check tone and grammar, without letting it rewrite the whole piece.", prompt: "Review the tone and grammar of this essay draft, written by a 7th grader. Don't rewrite any sentences for me, instead list each issue as a bullet point: quote the exact phrase, explain why it's an issue in one line, and pose the fix as a question rather than the answer, so my child makes the correction themselves: [paste essay]" },
-    { text: "Ask AI to explain a current news topic in a simple, balanced way." },
-    { label: "Canva / Adobe Firefly", text: "Generate visuals for a school project.", prompt: "A clean, colourful diagram of the water cycle for a 7th-grade science poster: label evaporation, condensation, precipitation, and collection with arrows showing the flow, use bright but not childish colours, include the sun and clouds, and leave space at the top for a title and at the bottom for a short caption." },
-    { label: "Set an \"AI or me\" rule", isHabit: true, text: "Big feelings and personal problems go to a parent conversation, not an AI chat." },
+    { label: copy.EducationGuideClient_s01.t36, isHabit: true, text: copy.EducationGuideClient_s01.t37 },
+    { label: copy.EducationGuideClient_s01.t38, text: copy.EducationGuideClient_s01.t39, prompt: copy.EducationGuideClient_s01.t40 },
+    { label: copy.EducationGuideClient_s01.t41, isHabit: true, text: copy.EducationGuideClient_s01.t42 },
+    { text: copy.EducationGuideClient_s01.t43 },
+    { text: copy.EducationGuideClient_s01.t44 },
+    { text: copy.EducationGuideClient_s01.t45 },
+    { label: copy.EducationGuideClient_s01.t46, text: copy.EducationGuideClient_s01.t47, prompt: copy.EducationGuideClient_s01.t48 },
+    { text: copy.EducationGuideClient_s01.t49 },
+    { label: copy.EducationGuideClient_s01.t50, text: copy.EducationGuideClient_s01.t51, prompt: copy.EducationGuideClient_s01.t52 },
+    { label: copy.EducationGuideClient_s01.t53, isHabit: true, text: copy.EducationGuideClient_s01.t54 },
   ],
   senior: [
-    { label: "CareerExplorer", text: "Turn your child's interests into a shortlist of real careers to research further (\"what careers use a love of biology and art?\")." },
-    { label: "Yoodli", text: "Practice mock interviews out loud and get instant feedback on pacing, filler words, and clarity.", prompt: "I'm preparing for a college admissions interview. Ask me: \"Tell me about a time you solved a difficult problem,\" then follow up with one probing question based on my answer, the way a real interviewer would. After I respond, give me specific feedback on my pacing, filler words, clarity, and whether my answer actually showed my thinking, not just the outcome." },
-    { label: "CollegeVine", text: "Brainstorm college essay angles, then have your child write the essay in their own voice.", prompt: "Here's my personal statement draft for [university/course]: [paste draft]. This currently reads generic. Suggest 3 completely different angles I could take instead, each built around a specific moment or detail from my life rather than a general trait, and write the opening two sentences for each so I can see how it would actually sound." },
-    { label: "NotebookLM / Quizlet AI", text: "Turn the syllabus into flashcards and self-quizzes for board exam prep.", prompt: "Upload this full board-exam syllabus. Turn every unit into a set of flashcards (term, definition, one example), then generate a 20-question mock test that mirrors the actual exam's mix of question types and difficulty, weighted more heavily toward the units that carry the most marks. Include an answer key with a one-line explanation for each answer." },
-    { label: "Teal", text: "Get a first round of AI feedback on a resume or college application draft." },
-    { label: "Set the rule", isHabit: true, text: "AI helps outline and check work, it doesn't write the assignment." },
-    { text: "Ask AI to lay out multiple sides of a debate topic before your child forms their own opinion." },
-    { text: "Build the habit of fact-checking anything AI says with at least one outside source." },
-    { text: "Talk openly about how AI is changing the field your child is interested in pursuing." },
-    { text: "Turn a rough voice note about a personal goal into a structured plan using AI." },
-    { label: "Discuss AI's downsides too", isHabit: true, text: "Bias and misinformation, as part of building critical thinking." },
+    { label: copy.EducationGuideClient_s01.t55, text: copy.EducationGuideClient_s01.t56 },
+    { label: copy.EducationGuideClient_s01.t57, text: copy.EducationGuideClient_s01.t58, prompt: copy.EducationGuideClient_s01.t59 },
+    { label: copy.EducationGuideClient_s01.t60, text: copy.EducationGuideClient_s01.t61, prompt: copy.EducationGuideClient_s01.t62 },
+    { label: copy.EducationGuideClient_s01.t63, text: copy.EducationGuideClient_s01.t64, prompt: copy.EducationGuideClient_s01.t65 },
+    { label: copy.EducationGuideClient_s01.t66, text: copy.EducationGuideClient_s01.t67 },
+    { label: copy.EducationGuideClient_s01.t68, isHabit: true, text: copy.EducationGuideClient_s01.t69 },
+    { text: copy.EducationGuideClient_s01.t70 },
+    { text: copy.EducationGuideClient_s01.t71 },
+    { text: copy.EducationGuideClient_s01.t72 },
+    { text: copy.EducationGuideClient_s01.t73 },
+    { label: copy.EducationGuideClient_s01.t74, isHabit: true, text: copy.EducationGuideClient_s01.t75 },
   ],
 };
 
 const EDUCATORS_TIPS: Record<ParentEducatorStage, Tip[]> = {
   "pre-primary": [
-    { label: "MagicSchool AI", text: "Quick activity and worksheet ideas for young learners.", prompt: "Create a 20-minute circle-time activity for a class of 20 four-year-olds on colours and shapes. Include a 3-minute attention-grabbing opener (song or chant), a 10-minute interactive teaching segment with a simple game, and a 7-minute hands-on craft that reinforces the lesson using only materials a classroom would already have (paper, crayons, glue). Note where I should pause to check the children are still engaged." },
-    { label: "Curipod", text: "Interactive, story-based lesson slides for circle time.", prompt: "Build an interactive, story-based lesson on 'sharing and taking turns' for pre-primary circle time. Use a simple 4-scene story with two relatable child characters and one toy, include one class poll asking what the character should do next, and end with a short, repeatable class chant the children can use whenever a real sharing conflict comes up during the day." },
-    { label: "Canva Magic Design", text: "Classroom posters and decor in minutes.", prompt: "A bright, welcoming classroom poster titled 'Our Class Rules' for a pre-primary classroom. Use exactly 5 rules, each shown as one simple icon with a 2-3 word label underneath, no full sentences. Warm, cheerful colour palette, big rounded shapes, and enough white space that it doesn't feel cluttered from across the room." },
-    { text: "Ask AI for simple story ideas tied to this week's classroom theme." },
-    { text: "Use AI to draft short daily observation notes for parents." },
-    { text: "Generate simple, printable phonics or number flashcards." },
-    { text: "Use text-to-speech tools for multilingual story time." },
-    { text: "Ask AI for practical classroom management tips for specific common behaviours." },
-    { text: "Use AI for simple, warm daily-update templates to send to parents." },
-    { text: "Generate step-by-step craft instructions matched to the week's theme." },
+    { label: copy.EducationGuideClient_s01.t76, text: copy.EducationGuideClient_s01.t77, prompt: copy.EducationGuideClient_s01.t78 },
+    { label: copy.EducationGuideClient_s01.t79, text: copy.EducationGuideClient_s01.t80, prompt: copy.EducationGuideClient_s01.t81 },
+    { label: copy.EducationGuideClient_s01.t82, text: copy.EducationGuideClient_s01.t83, prompt: copy.EducationGuideClient_s01.t84 },
+    { text: copy.EducationGuideClient_s01.t85 },
+    { text: copy.EducationGuideClient_s01.t86 },
+    { text: copy.EducationGuideClient_s01.t87 },
+    { text: copy.EducationGuideClient_s01.t88 },
+    { text: copy.EducationGuideClient_s01.t89 },
+    { text: copy.EducationGuideClient_s01.t90 },
+    { text: copy.EducationGuideClient_s01.t91 },
   ],
   primary: [
-    { label: "MagicSchool AI", text: "Lesson plans and worksheets in minutes, not hours.", prompt: "Create a 45-minute lesson plan introducing fractions for grade 3. Structure it as: a 5-minute hook connecting fractions to something kids already know (like sharing a pizza), a 15-minute direct teaching segment, a 15-minute hands-on activity using everyday objects, 5 minutes of guided practice, and a 5-minute exit ticket with 3 questions that tell me who needs re-teaching tomorrow." },
-    { label: "Diffit", text: "Turn one reading passage into three difficulty levels for a mixed-ability class.", prompt: "Paste this reading passage and generate 3 leveled versions for a mixed-ability grade 4 class: one simplified for struggling readers (shorter sentences, easier vocabulary, same core facts), one on grade level, and one extended for advanced readers with added detail and a higher-level comprehension question. Keep all 3 roughly the same length so I can hand them out without anyone noticing who got which version: [paste passage]" },
-    { label: "NotebookLM", text: "Turn a textbook chapter into ready-made quiz questions.", prompt: "Upload this textbook chapter. Generate 10 quiz questions mixing multiple-choice, fill-in-the-blank, and one short-answer question, ordered easiest to hardest, with an answer key that includes the page number where each answer can be found, so I can quickly point struggling students back to the right section." },
-    { label: "Curipod", text: "Interactive lesson slides with quizzes built in.", prompt: "Turn this topic into an interactive slide deck for grade 4: [topic]. Structure it as 6-8 slides, include one class poll to check understanding midway through and one open-ended discussion question near the end, and keep each slide to one core idea with a simple visual, no walls of text." },
-    { text: "Use AI to generate grading rubrics for projects." },
-    { label: "Otter.ai", text: "Transcribe and summarize staff meetings automatically." },
-    { text: "Turn quick, rough notes into well-worded report card comments." },
-    { text: "Generate differentiated homework sheets (easy/medium/hard) for the same topic." },
-    { text: "Ask AI for a creative analogy or story to explain a tricky concept." },
-    { label: "Canva / CapCut", text: "Class newsletters and quick video recaps of events.", prompt: "Create a 30-second recap video for our class trip to [location]. Use upbeat, kid-friendly background music, leave clearly marked space for 5 photos with a 2-second transition between each, add a title card at the start with the trip name and date, and end with a closing card that says 'See you next time!'" },
+    { label: copy.EducationGuideClient_s01.t92, text: copy.EducationGuideClient_s01.t93, prompt: copy.EducationGuideClient_s01.t94 },
+    { label: copy.EducationGuideClient_s01.t95, text: copy.EducationGuideClient_s01.t96, prompt: copy.EducationGuideClient_s01.t97 },
+    { label: copy.EducationGuideClient_s01.t98, text: copy.EducationGuideClient_s01.t99, prompt: copy.EducationGuideClient_s01.t100 },
+    { label: copy.EducationGuideClient_s01.t101, text: copy.EducationGuideClient_s01.t102, prompt: copy.EducationGuideClient_s01.t103 },
+    { text: copy.EducationGuideClient_s01.t104 },
+    { label: copy.EducationGuideClient_s01.t105, text: copy.EducationGuideClient_s01.t106 },
+    { text: copy.EducationGuideClient_s01.t107 },
+    { text: copy.EducationGuideClient_s01.t108 },
+    { text: copy.EducationGuideClient_s01.t109 },
+    { label: copy.EducationGuideClient_s01.t110, text: copy.EducationGuideClient_s01.t111, prompt: copy.EducationGuideClient_s01.t112 },
   ],
   middle: [
-    { label: "MagicSchool AI / Curipod", text: "Build interactive lesson content quickly.", prompt: "Build a debate-style lesson on [topic] for grade 7. Give me 3 strong arguments for each side, written at a level 12-year-olds can actually use in discussion, not textbook jargon, plus 2 follow-up questions I can ask to push students past their first surface-level point. Suggest how to split the class into teams fairly." },
-    { label: "NotebookLM", text: "Generate unit-based study guides straight from your syllabus.", prompt: "Upload this unit's syllabus. Build a study guide broken down by sub-topic, with a 2-3 sentence summary for each, one worked example where relevant, and a short list of common student mistakes on that sub-topic, so I know what to emphasise in class." },
-    { text: "Use AI to design project rubrics with clear, specific criteria." },
-    { text: "Ask AI to generate a debate topic with strong arguments on both sides for class discussion." },
-    { text: "Create quizzes at varying difficulty levels for differentiated assessment." },
-    { text: "Set and discuss a clear class policy on AI use for homework vs. assessments." },
-    { label: "Grammarly", text: "Model what good, specific writing feedback looks like.", prompt: "Give specific, actionable feedback on this middle-school-level paragraph. Don't say 'good job' or 'needs work': pick the 2 strongest sentences and explain exactly why they work, then pick the 2 weakest and explain precisely what's unclear or unsupported, with a suggested direction for improvement rather than the rewritten sentence itself: [paste paragraph]" },
-    { label: "Otter.ai", text: "Transcribe parent-teacher meeting notes." },
-    { text: "Draft a first pass of a tricky parent email, then personalize before sending." },
-    { text: "Use AI to brainstorm real-world examples that connect the curriculum to students' lives." },
+    { label: copy.EducationGuideClient_s01.t113, text: copy.EducationGuideClient_s01.t114, prompt: copy.EducationGuideClient_s01.t115 },
+    { label: copy.EducationGuideClient_s01.t116, text: copy.EducationGuideClient_s01.t117, prompt: copy.EducationGuideClient_s01.t118 },
+    { text: copy.EducationGuideClient_s01.t119 },
+    { text: copy.EducationGuideClient_s01.t120 },
+    { text: copy.EducationGuideClient_s01.t121 },
+    { text: copy.EducationGuideClient_s01.t122 },
+    { label: copy.EducationGuideClient_s01.t123, text: copy.EducationGuideClient_s01.t124, prompt: copy.EducationGuideClient_s01.t125 },
+    { label: copy.EducationGuideClient_s01.t126, text: copy.EducationGuideClient_s01.t127 },
+    { text: copy.EducationGuideClient_s01.t128 },
+    { text: copy.EducationGuideClient_s01.t129 },
   ],
   senior: [
-    { label: "Quizizz AI", text: "Generate board-exam-style practice questions instantly for any topic.", prompt: "Generate 15 board-exam-style multiple-choice questions on [topic], matching the actual exam board's question format and command words. Mix difficulty: 5 easy recall, 7 medium application, 3 hard analysis-based. Include an answer key that explains why the correct answer is right and why the most common wrong answer is tempting but incorrect." },
-    { label: "NotebookLM", text: "Build a full revision guide directly from the syllabus.", prompt: "Upload the full board-exam syllabus for [subject]. Build a complete revision guide organised unit by unit, with a one-paragraph summary, 3 key formulas or facts, and 2 likely exam-style questions per unit. Flag the 3 units that historically carry the most exam weight so students know where to focus first." },
-    { text: "Use AI to design real-world case studies or application-based questions." },
-    { text: "Set and clearly communicate an academic integrity policy around AI use." },
-    { label: "Turnitin", text: "Draft detailed, specific essay feedback, then review and personalize before sending." },
-    { text: "Draft a first version of a recommendation letter, then personalize it fully before sending." },
-    { text: "Use AI to explore how your subject connects to real careers, for career-guidance chats." },
-    { label: "Otter.ai / Grammarly", text: "Speed up admin: meeting notes, reports, emails.", prompt: "Draft a first-pass reply to this parent email. Keep the tone warm but firm: acknowledge their specific concern (not generically), state the school's position clearly in 2-3 sentences, and end with one concrete next step, a call, a meeting, or a follow-up date. I'll personalise the details before sending: [paste email]" },
-    { text: "Design mock interview or viva questions for senior projects." },
-    { label: "Teach AI literacy directly", isHabit: true, text: "How to question and verify AI output, not just use it." },
+    { label: copy.EducationGuideClient_s01.t130, text: copy.EducationGuideClient_s01.t131, prompt: copy.EducationGuideClient_s01.t132 },
+    { label: copy.EducationGuideClient_s01.t133, text: copy.EducationGuideClient_s01.t134, prompt: copy.EducationGuideClient_s01.t135 },
+    { text: copy.EducationGuideClient_s01.t136 },
+    { text: copy.EducationGuideClient_s01.t137 },
+    { label: copy.EducationGuideClient_s01.t138, text: copy.EducationGuideClient_s01.t139 },
+    { text: copy.EducationGuideClient_s01.t140 },
+    { text: copy.EducationGuideClient_s01.t141 },
+    { label: copy.EducationGuideClient_s01.t142, text: copy.EducationGuideClient_s01.t143, prompt: copy.EducationGuideClient_s01.t144 },
+    { text: copy.EducationGuideClient_s01.t145 },
+    { label: copy.EducationGuideClient_s01.t146, isHabit: true, text: copy.EducationGuideClient_s01.t147 },
   ],
 };
 
 const CREATORS_TIPS: Record<CreatorFormat, Tip[]> = {
   writing: [
-    { label: "ChatGPT/Claude", text: "Turn a rough voice note into a polished caption.", prompt: "Turn this rough voice note into a punchy, on-brand Instagram caption. Keep it under 150 characters, open with a hook in the first 5 words (not a greeting), match a confident-but-approachable brand voice, and end with a soft call-to-action, not a hard sell: [paste transcript]" },
-    { text: "Generate 3-4 caption variations and pick the one with the best tone." },
-    { text: "Fact-check any claims-heavy post using AI plus a web search before posting." },
-    { label: "Grammarly", text: "Polish tone and grammar without a full rewrite.", prompt: "Check the tone and grammar of this caption. Don't rewrite it in your own voice, just flag anything that sounds off: grammar errors, awkward phrasing, or a tone shift that breaks the casual, confident style I've been using. Explain in one line why each flag is an issue: [paste caption]" },
-    { label: "DeepL", text: "Translate captions accurately into other languages to widen your reach.", prompt: "Translate this caption into Hindi and Spanish. Don't do a literal word-for-word translation, adapt any idioms or humour so they land naturally in each language, keep the tone as casual and energetic as the English original, and flag anything that doesn't translate well so I can rework it instead: [paste caption]" },
-    { text: "Ask AI to turn a long event into a punchy 3-line recap for a story or post." },
-    { label: "Notion AI", text: "Plan and organize your content calendar.", prompt: "Build me a 30-day content calendar for [niche]. Mix content types across the month: roughly 50% educational, 30% behind-the-scenes/personal, 20% promotional, and never post two promotional posts back to back. For each day give me a one-line post idea and the format (Reel, carousel, single image), and flag 2-3 days that align with relevant trends or dates in [niche]." },
-    { text: "Draft consistent, on-brand replies to common DMs and comments." },
-    { label: "Jasper", text: "Brainstorm 10 hook lines for a post, then pick the strongest one.", prompt: "Give me 10 different hook lines for a post about [topic], each under 12 words. Use at least 3 different hook styles across the list: a bold claim, a relatable pain point, and a curiosity gap, so I have real variety to A/B test rather than 10 versions of the same idea." },
-    { label: "Ask AI directly", isHabit: true, text: "\"Does this sound engaging, or generic?\"" },
+    { label: copy.EducationGuideClient_s01.t148, text: copy.EducationGuideClient_s01.t149, prompt: copy.EducationGuideClient_s01.t150 },
+    { text: copy.EducationGuideClient_s01.t151 },
+    { text: copy.EducationGuideClient_s01.t152 },
+    { label: copy.EducationGuideClient_s01.t153, text: copy.EducationGuideClient_s01.t154, prompt: copy.EducationGuideClient_s01.t155 },
+    { label: copy.EducationGuideClient_s01.t156, text: copy.EducationGuideClient_s01.t157, prompt: copy.EducationGuideClient_s01.t158 },
+    { text: copy.EducationGuideClient_s01.t159 },
+    { label: copy.EducationGuideClient_s01.t160, text: copy.EducationGuideClient_s01.t161, prompt: copy.EducationGuideClient_s01.t162 },
+    { text: copy.EducationGuideClient_s01.t163 },
+    { label: copy.EducationGuideClient_s01.t164, text: copy.EducationGuideClient_s01.t165, prompt: copy.EducationGuideClient_s01.t166 },
+    { label: copy.EducationGuideClient_s01.t167, isHabit: true, text: copy.EducationGuideClient_s01.t168 },
   ],
   video: [
-    { label: "CapCut", text: "Auto-captions, jump-cut removal, and music suggestions, all from your phone.", prompt: "Write a 30-second video script about [topic]. Structure it second by second: a hook in the first 3 seconds that states the payoff upfront (not 'today I'll show you'), 3 quick supporting points in the middle with an on-screen text cue for each, and a one-line closing call-to-action. Flag exactly where a jump-cut or text overlay would land best." },
-    { label: "Opus Clip", text: "Turn one long video into several short, auto-captioned clips." },
-    { label: "Descript", text: "Edit a video by editing its text transcript.", prompt: "Clean up this transcript: remove all filler words ('um', 'like', 'you know'), cut awkward pauses and repeated phrases, and tighten the whole thing to under 90 seconds read aloud at a natural pace, without losing the core point of any sentence. Flag any sentence where cutting it changes the meaning, rather than silently deleting it: [paste transcript]" },
-    { label: "ElevenLabs", text: "AI voiceovers in different tones or languages.", prompt: "Read this script in an upbeat, confident voice, mid-paced, like a young founder explaining a genuinely useful tip to a friend over coffee, not pitching to an investor. Add natural emphasis on the 1-2 key words per sentence that matter most, and a short, natural pause before the final line so it lands: [paste script]" },
-    { text: "Write a tight script outline with AI before you start filming." },
-    { text: "Ask AI for trending formats or audio ideas relevant to your niche." },
-    { text: "Auto-generate subtitles for better accessibility and reach." },
-    { text: "Ask AI to suggest a strong thumbnail hook based on your video's content." },
-    { text: "Repurpose one video into a carousel post script." },
-    { text: "Feed AI your rough transcript and ask it to pull out the most quotable moments." },
+    { label: copy.EducationGuideClient_s01.t169, text: copy.EducationGuideClient_s01.t170, prompt: copy.EducationGuideClient_s01.t171 },
+    { label: copy.EducationGuideClient_s01.t172, text: copy.EducationGuideClient_s01.t173 },
+    { label: copy.EducationGuideClient_s01.t174, text: copy.EducationGuideClient_s01.t175, prompt: copy.EducationGuideClient_s01.t176 },
+    { label: copy.EducationGuideClient_s01.t177, text: copy.EducationGuideClient_s01.t178, prompt: copy.EducationGuideClient_s01.t179 },
+    { text: copy.EducationGuideClient_s01.t180 },
+    { text: copy.EducationGuideClient_s01.t181 },
+    { text: copy.EducationGuideClient_s01.t182 },
+    { text: copy.EducationGuideClient_s01.t183 },
+    { text: copy.EducationGuideClient_s01.t184 },
+    { text: copy.EducationGuideClient_s01.t185 },
   ],
   images: [
-    { label: "Adobe Firefly / Midjourney / Canva Magic Media", text: "Custom graphics instead of stock photos.", prompt: "A modern, minimalist flat-lay shot from directly above: a laptop, a cup of coffee with visible steam, and an open notebook with a pen, arranged with generous negative space on the right third of the frame for text overlay. Warm morning light from one side, soft shadows, muted neutral colour palette, for a productivity-themed post." },
-    { label: "remove.bg", text: "Clean up backgrounds or fix a photo in seconds." },
-    { text: "Build a consistent, branded template for recurring post types." },
-    { label: "Canva Magic Design", text: "Quick posters or announcement graphics.", prompt: "A bold announcement graphic for '[event name], this Saturday'. Use our brand colours [colour 1, colour 2, colour 3] as the primary palette, make the date and 'this Saturday' the largest text on the page since urgency is the point, leave space at the bottom for a small logo, and keep it readable at thumbnail size on a phone feed." },
-    { label: "Topaz Photo AI", text: "Sharpen low-res images with AI upscaling before posting." },
-    { text: "Generate a few style variations of one photo to A/B test which performs better." },
-    { label: "Piktochart", text: "Turn raw data or stats into a simple infographic using AI.", prompt: "Turn this data into a simple infographic. Pick the 4 most surprising or important stats and make each its own visual block with a big number, a short 5-word label, and one small icon, in that order of visual priority. Use a colourful but consistent palette across all 4 blocks, and leave the least important data out entirely rather than cramming it in: [paste stats]" },
-    { text: "Preview how a design looks on different platforms using AI mockups." },
-    { text: "Batch-generate a consistent icon set for a content series." },
-    { label: "Fotor", text: "Generate a scroll-stopping thumbnail from a template in seconds, no design skills needed.", prompt: "Generate 3 thumbnail options for a video titled '[video title]'. Each should use bold, high-contrast text (no more than 4 words on the image itself), a clear visual focal point that hints at the video's payoff without giving it away, and colours that pop against a typical feed background. Make the 3 options visibly different concepts, not just colour variations of one idea." },
-    { text: "Ask AI for quick composition or color feedback before you post." },
+    { label: copy.EducationGuideClient_s01.t186, text: copy.EducationGuideClient_s01.t187, prompt: copy.EducationGuideClient_s01.t188 },
+    { label: "remove.bg", text: copy.EducationGuideClient_s01.t189 },
+    { text: copy.EducationGuideClient_s01.t190 },
+    { label: copy.EducationGuideClient_s01.t191, text: copy.EducationGuideClient_s01.t192, prompt: copy.EducationGuideClient_s01.t193 },
+    { label: copy.EducationGuideClient_s01.t194, text: copy.EducationGuideClient_s01.t195 },
+    { text: copy.EducationGuideClient_s01.t196 },
+    { label: copy.EducationGuideClient_s01.t197, text: copy.EducationGuideClient_s01.t198, prompt: copy.EducationGuideClient_s01.t199 },
+    { text: copy.EducationGuideClient_s01.t200 },
+    { text: copy.EducationGuideClient_s01.t201 },
+    { label: copy.EducationGuideClient_s01.t202, text: copy.EducationGuideClient_s01.t203, prompt: copy.EducationGuideClient_s01.t204 },
+    { text: copy.EducationGuideClient_s01.t205 },
   ],
 };
 
 const LEADERSHIP_TIPS: Tip[] = [
-  { label: "Common Sense AI", text: "Ready-made frameworks and templates for publishing a clear, age-appropriate AI-use policy, shared openly with parents.", prompt: "Search Common Sense AI's resource library for an AI-use policy template suited to K-12 schools. Once you find the closest match, adapt it to our specific grade bands, pre-primary through senior, keep the plain-language tone so parents can read it without a glossary, and flag any section that seems built for a different country's context so I know what to localise." },
-  { text: "Train teachers on 3-4 recommended tools, rather than leaving it to \"figure it out yourself.\"" },
-  { label: "Otter.ai / Fireflies", text: "Transcribe and summarise leadership and staff meetings automatically.", prompt: "After the meeting, ask: \"Summarise the 3 most important decisions made in this meeting, list every action item with the specific person who owns it and a deadline if one was mentioned, and flag any point where two people seemed to disagree but it wasn't fully resolved.\"" },
-  { label: "DeepL / Google Translate", text: "Translate newsletters and circulars accurately into every language your parent community speaks.", prompt: "Translate this circular into Hindi and Marathi. Keep the tone formal but simple enough for any parent to understand regardless of their education level, preserve all dates, names, and numbers exactly as written, and flag any word or phrase without a clean equivalent so I can review it manually: [paste circular text]" },
-  { label: "CapCut", text: "Edit event highlight reels (Annual Day, Sports Day) for social media, right from a phone.", prompt: "Turn these 20 event photos and 3 short clips into a 45-second highlight reel for Annual Day. Open with the most energetic clip in the first 3 seconds, mix photos and video throughout rather than grouping all photos together, sync the cuts to the beat of upbeat, school-appropriate music, and end on a wide shot of the whole school community, not a single close-up." },
-  { text: "Run parent workshops that demystify AI, instead of just restricting it." },
-  { text: "Use AI-powered accessibility tools (text-to-speech, translation) to support differently-abled students." },
-  { text: "Design assessments that value reasoning and process, not just a final, AI-checkable answer." },
-  { text: "Build AI literacy into the curriculum across grades, not as a one-off session." },
-  { text: "Use AI to quickly analyze anonymized parent and staff feedback surveys." },
-  { label: "Draw a clear line", isHabit: true, text: "AI for admin and efficiency, never for serious pastoral care or wellbeing decisions." },
+  { label: copy.EducationGuideClient_s01.t206, text: copy.EducationGuideClient_s01.t207, prompt: copy.EducationGuideClient_s01.t208 },
+  { text: copy.EducationGuideClient_s01.t209 },
+  { label: copy.EducationGuideClient_s01.t210, text: copy.EducationGuideClient_s01.t211, prompt: copy.EducationGuideClient_s01.t212 },
+  { label: copy.EducationGuideClient_s01.t213, text: copy.EducationGuideClient_s01.t214, prompt: copy.EducationGuideClient_s01.t215 },
+  { label: copy.EducationGuideClient_s01.t216, text: copy.EducationGuideClient_s01.t217, prompt: copy.EducationGuideClient_s01.t218 },
+  { text: copy.EducationGuideClient_s01.t219 },
+  { text: copy.EducationGuideClient_s01.t220 },
+  { text: copy.EducationGuideClient_s01.t221 },
+  { text: copy.EducationGuideClient_s01.t222 },
+  { text: copy.EducationGuideClient_s01.t223 },
+  { label: copy.EducationGuideClient_s01.t224, isHabit: true, text: copy.EducationGuideClient_s01.t225 },
 ];
 
 /* ─── Config ──────────────────────────────────────────────────────── */
 
 const AUDIENCES: { key: AudienceKey; label: string; num: string; accent: string }[] = [
-  { key: "parents", label: "Parents", num: "01", accent: "#F5B731" },
-  { key: "educators", label: "Educators", num: "02", accent: "#3b82f6" },
-  { key: "creators", label: "Content Creators", num: "03", accent: "#a855f7" },
-  { key: "leadership", label: "Schools & Leadership", num: "04", accent: "#10b981" },
+  { key: "parents", label: copy.EducationGuideClient_s01.t226, num: "01", accent: "#F5B731" },
+  { key: "educators", label: copy.EducationGuideClient_s01.t227, num: "02", accent: "#3b82f6" },
+  { key: "creators", label: copy.EducationGuideClient_s01.t228, num: "03", accent: "#a855f7" },
+  { key: "leadership", label: copy.EducationGuideClient_s01.t229, num: "04", accent: "#10b981" },
 ];
 
 const STAGES: { key: ParentEducatorStage; label: string }[] = [
-  { key: "pre-primary", label: "Pre-Primary" },
-  { key: "primary", label: "Primary" },
-  { key: "middle", label: "Middle" },
-  { key: "senior", label: "Senior" },
+  { key: "pre-primary", label: copy.EducationGuideClient_s01.t230 },
+  { key: "primary", label: copy.EducationGuideClient_s01.t231 },
+  { key: "middle", label: copy.EducationGuideClient_s01.t232 },
+  { key: "senior", label: copy.EducationGuideClient_s01.t233 },
 ];
 
 const FORMATS: { key: CreatorFormat; label: string }[] = [
-  { key: "writing", label: "Writing" },
-  { key: "video", label: "Video" },
-  { key: "images", label: "Images" },
+  { key: "writing", label: copy.EducationGuideClient_s01.t234 },
+  { key: "video", label: copy.EducationGuideClient_s01.t235 },
+  { key: "images", label: copy.EducationGuideClient_s01.t236 },
 ];
 
 const HIGHLIGHT_TIP: Record<AudienceKey, { role: string; note: string }> = {
-  parents: { role: "The one rule that matters most", note: "Always use AI together with your child at the younger ages, never hand over the phone and walk away. As they get older, shift from doing it with them to teaching them to check it themselves." },
-  educators: { role: "The one rule that matters most", note: "Let AI speed up your admin, lesson plans, rubrics, differentiated worksheets, so you get more time for the part no tool can do: actually teaching the room." },
-  creators: { role: "The one rule that matters most", note: "AI should shorten your time to a first draft, not replace your judgement. Always ask yourself: does this sound engaging, or generic?" },
-  leadership: { role: "The one rule that matters most", note: "Draw a clear line early: AI is for admin and efficiency. It is never a substitute for serious pastoral care or wellbeing decisions." },
+  parents: { role: copy.EducationGuideClient_s01.t237, note: copy.EducationGuideClient_s01.t238 },
+  educators: { role: copy.EducationGuideClient_s01.t239, note: copy.EducationGuideClient_s01.t240 },
+  creators: { role: copy.EducationGuideClient_s01.t241, note: copy.EducationGuideClient_s01.t242 },
+  leadership: { role: copy.EducationGuideClient_s01.t243, note: copy.EducationGuideClient_s01.t244 },
 };
 
 const AUDIENCE_INTRO: Record<AudienceKey, string> = {
@@ -228,37 +232,37 @@ const AUDIENCE_INTRO: Record<AudienceKey, string> = {
 
 const PROMPT_PRINCIPLES = [
   {
-    title: "Be specific, not vague",
-    bad: "Help me with a lesson plan.",
-    good: "Give me a 40-minute lesson plan for teaching photosynthesis to 12-year-olds, with one hands-on activity.",
+    title: copy.EducationGuideClient_s01.t245,
+    bad: copy.EducationGuideClient_s01.t246,
+    good: copy.EducationGuideClient_s01.t247,
   },
   {
-    title: "Give it a role or an audience",
-    bad: "Explain black holes.",
-    good: "Explain black holes like you're talking to a curious 8-year-old, using an everyday analogy.",
+    title: copy.EducationGuideClient_s01.t248,
+    bad: copy.EducationGuideClient_s01.t249,
+    good: copy.EducationGuideClient_s01.t250,
   },
   {
-    title: "Show it what \"good\" looks like",
-    bad: "Write a caption for this event photo.",
-    good: "Write a caption in this style: short, warm, one line, and ends with a question.",
+    title: copy.EducationGuideClient_s01.t251,
+    bad: copy.EducationGuideClient_s01.t252,
+    good: copy.EducationGuideClient_s01.t253,
   },
   {
-    title: "Ask for a process, not just an answer",
-    bad: "What's the answer to this problem?",
-    good: "Walk me through solving this step by step, and check my understanding before giving the final answer.",
+    title: copy.EducationGuideClient_s01.t254,
+    bad: copy.EducationGuideClient_s01.t255,
+    good: copy.EducationGuideClient_s01.t256,
   },
   {
-    title: "Treat the first answer as a draft",
-    bad: "Accepting the first response as final.",
-    good: "That's a good start. Make it shorter, and cut the jargon.",
+    title: copy.EducationGuideClient_s01.t257,
+    bad: copy.EducationGuideClient_s01.t258,
+    good: copy.EducationGuideClient_s01.t259,
   },
 ];
 
 const ABOUT_FAQ = [
-  { q: "Who is this guide for?", a: "Anyone who wants a practical, no-fluff starting point for using AI well: parents, teachers, students who create content, and school leadership. Each audience has its own section, so you can skip straight to the part that applies to you without reading the whole guide." },
-  { q: "Do I need to already know these tools?", a: "No. Every tip is written to be usable the same day, whether you've never opened an AI tool before or already use one daily. Where a tip needs a specific tool, the guide names it and explains what it does, so you can try it without any setup beyond a free account." },
-  { q: "Is this list exhaustive?", a: "No. It is intentionally a quick-start, not a full course: 10 solid starting points per audience, not the final word on AI in education. AI tools change quickly, so treat the specific tools as examples and focus on the habits behind them, which last longer." },
-  { q: "Who put this together?", a: "Myntmore, a B2B outbound agency based in Mumbai that uses AI tools in its own daily work. The guide is based on the practical questions we hear most often from parents, educators and school leadership about using AI well, answered in plain language without technical jargon." },
+  { q: copy.EducationGuideClient_s01.t260, a: copy.EducationGuideClient_s01.t261 },
+  { q: copy.EducationGuideClient_s01.t262, a: copy.EducationGuideClient_s01.t263 },
+  { q: copy.EducationGuideClient_s01.t264, a: copy.EducationGuideClient_s01.t265 },
+  { q: copy.EducationGuideClient_s01.t266, a: copy.EducationGuideClient_s01.t267 },
 ];
 
 /* ─── Small building blocks ───────────────────────────────────────── */
@@ -536,11 +540,11 @@ function PromptPrincipleCard({ num, title, bad, good }: { num: string; title: st
       </div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <div className="rounded-xl p-4" style={{ backgroundColor: "rgba(220,38,38,0.05)", border: "1px solid rgba(220,38,38,0.18)" }}>
-          <p className="mb-1.5 text-xs font-bold uppercase tracking-widest" style={{ color: "#DC2626" }}>Instead of</p>
+          <p className="mb-1.5 text-xs font-bold uppercase tracking-widest" style={{ color: "#DC2626" }}>{copy.EducationGuideClient_s01.t268}</p>
           <p className="text-sm italic leading-relaxed" style={{ color: "#52525B" }}>&ldquo;{bad}&rdquo;</p>
         </div>
         <div className="rounded-xl p-4" style={{ backgroundColor: "rgba(16,163,74,0.06)", border: "1px solid rgba(16,163,74,0.22)" }}>
-          <p className="mb-1.5 text-xs font-bold uppercase tracking-widest" style={{ color: "#166534" }}>Try this</p>
+          <p className="mb-1.5 text-xs font-bold uppercase tracking-widest" style={{ color: "#166534" }}>{copy.EducationGuideClient_s01.t269}</p>
           <p className="text-sm leading-relaxed" style={{ color: "#0a0a0a" }}>&ldquo;{good}&rdquo;</p>
         </div>
       </div>
@@ -620,20 +624,16 @@ export default function EducationGuideClient() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 hero-fade" style={{ borderColor: "rgba(245,183,49,0.35)", backgroundColor: "rgba(245,183,49,0.07)" }}>
             <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#F5B731", animation: "lp-radar-ping 2.4s cubic-bezier(0.22,1,0.36,1) infinite" }} aria-hidden="true" />
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>A Myntmore AI guide</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>{copy.EducationGuideClient_s01.t270}</span>
           </div>
-          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-6xl hero-fade-d1" style={{ color: "#0a0a0a" }}>
-            AI Quick-Start Guide
-          </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: "#52525B" }}>
-            Practical AI tips for parents, educators, and creators.
-          </p>
+          <h1 className="mb-4 text-4xl font-black leading-tight sm:text-6xl hero-fade-d1" style={{ color: "#0a0a0a" }}>{copy.EducationGuideClient_s01.t271}</h1>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: "#52525B" }}>{copy.EducationGuideClient_s01.t272}</p>
 
           <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 gap-4 hero-fade-d3">
             {[
-              { v: String(totalTips) + "+", l: "Practical tips" },
-              { v: "5", l: "Content pillars" },
-              { v: "16", l: "Stages & formats" },
+              { v: String(totalTips) + "+", l: copy.EducationGuideClient_s01.t273 },
+              { v: "5", l: copy.EducationGuideClient_s01.t274 },
+              { v: "16", l: copy.EducationGuideClient_s01.t275 },
             ].map((s) => (
               <div key={s.l} className="lp-stat">
                 <StatTicker value={s.v} className="text-3xl font-black" style={{ color: "#0a0a0a" }} />
@@ -649,17 +649,17 @@ export default function EducationGuideClient() {
         <FadeIn className="mx-auto block max-w-4xl">
           <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-8 items-start">
             <div className="relative mx-auto h-40 w-40 flex-shrink-0 overflow-hidden rounded-2xl border sm:mx-0" style={{ backgroundColor: "#EDE9E4", borderColor: "#E8E2D9" }}>
-              <Image src="/tejas-2.png" alt="Tejas Jhaveri, Founder of Myntmore" fill sizes="160px" className="object-cover object-top" />
+              <Image src="/tejas-2.png" alt={copy.EducationGuideClient_s01.t276} fill sizes="160px" className="object-cover object-top" />
             </div>
             <div>
-              <p className="mb-1 text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>About Tejas</p>
-              <h2 className="mb-1 text-xl font-black" style={{ color: "#0a0a0a" }}>Tejas Jhaveri</h2>
-              <p className="mb-4 text-sm" style={{ color: "#71675E" }}>Founder, Myntmore &middot; TEDx Speaker &middot; Angel Investor</p>
+              <p className="mb-1 text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>{copy.EducationGuideClient_s01.t277}</p>
+              <h2 className="mb-1 text-xl font-black" style={{ color: "#0a0a0a" }}>{copy.EducationGuideClient_s02.t01}</h2>
+              <p className="mb-4 text-sm" style={{ color: "#71675E" }}>{copy.EducationGuideClient_s02.t02}</p>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "#52525B" }}>
-                <p>Tejas Jhaveri is a serial entrepreneur and the founder of Myntmore, an AI-first B2B lead generation company that builds intelligent outbound systems for LinkedIn and cold outreach at scale.</p>
-                <p>Over the past 12+ years, he has built and scaled outbound engines that have generated over $80 million in pipeline and revenue for companies globally. He has built, scaled, and exited multiple ventures, notably selling one of his companies through a cold-email outreach campaign itself.</p>
-                <p>He is also the founder of Blipper, an AI-powered suicide prevention platform that works with banks, police, and fire departments across the UK and US, using AI to detect vulnerability and distress in real time and help teams respond with greater empathy.</p>
-                <p>Beyond his ventures, he is a TEDx speaker, angel investor, and visiting professor, having taught AI, growth, and modern lead generation at institutions including IIM and ISB.</p>
+                <p>{copy.EducationGuideClient_s02.t03}</p>
+                <p>{copy.EducationGuideClient_s02.t04}</p>
+                <p>{copy.EducationGuideClient_s02.t05}</p>
+                <p>{copy.EducationGuideClient_s02.t06}</p>
               </div>
             </div>
           </div>
@@ -669,7 +669,7 @@ export default function EducationGuideClient() {
       {/* ─── Audience selector ────────────────────────────────── */}
       <section className="border-t px-4 py-10" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="mx-auto max-w-4xl">
-          <p className="mb-4 text-center text-xs font-bold uppercase tracking-widest" style={{ color: "#71675E" }}>Who are you here for?</p>
+          <p className="mb-4 text-center text-xs font-bold uppercase tracking-widest" style={{ color: "#71675E" }}>{copy.EducationGuideClient_s02.t07}</p>
           <div className="flex justify-center">
             <TabGroup tabs={AUDIENCES.map((a) => ({ key: a.key, label: a.label }))} active={audience} onChange={setAudience} ariaLabel="Choose your audience" />
           </div>
@@ -715,12 +715,8 @@ export default function EducationGuideClient() {
       <section className="border-t px-4 py-14" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <FadeIn className="mx-auto block max-w-4xl">
           <SectionEyebrow num="05" label="How to prompt effectively" accent="#0a0a0a" />
-          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>
-            How to write prompts that actually work
-          </h2>
-          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>
-            Every tip and example prompt above assumes you're talking to AI the right way. A vague prompt gets a vague answer. Here are five habits that make almost any AI tool noticeably better, starting today.
-          </p>
+          <h2 className="mb-3 text-2xl font-black sm:text-3xl" style={{ color: "#0a0a0a" }}>{copy.EducationGuideClient_s03.t01}</h2>
+          <p className="mb-8 max-w-2xl text-sm leading-relaxed" style={{ color: "#52525B" }}>{copy.EducationGuideClient_s03.t02}</p>
           <div className="grid grid-cols-1 gap-4">
             {PROMPT_PRINCIPLES.map((p, i) => (
               <FadeIn key={p.title} delay={i * 70}>
@@ -730,19 +726,15 @@ export default function EducationGuideClient() {
           </div>
 
           <div className="mt-8 rounded-2xl border p-6 sm:p-8" style={{ backgroundColor: "#FEF9EC", borderColor: "rgba(245,183,49,0.3)" }}>
-            <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>A formula worth memorising</p>
-            <p className="text-base font-semibold leading-relaxed" style={{ color: "#0a0a0a" }}>
-              Role or audience + specific task + format or constraints = a prompt that actually works.
-            </p>
-            <p className="mt-3 text-sm italic leading-relaxed" style={{ color: "#52525B" }}>
-              &ldquo;You're a Grade 6 science teacher. Write 5 quiz questions on the water cycle. Keep each question under 15 words.&rdquo;
-            </p>
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: "#A14A08" }}>{copy.EducationGuideClient_s03.t03}</p>
+            <p className="text-base font-semibold leading-relaxed" style={{ color: "#0a0a0a" }}>{copy.EducationGuideClient_s03.t04}</p>
+            <p className="mt-3 text-sm italic leading-relaxed" style={{ color: "#52525B" }}>{copy.EducationGuideClient_s03.t05}</p>
           </div>
         </FadeIn>
       </section>
 
       {/* ─── About this guide (accordion) ─────────────────────── */}
-      <Faq badge="Good to know" title="About this guide" items={ABOUT_FAQ} />
+      <Faq badge="Good to know" title={copy.EducationGuideClient_s03.t06} items={ABOUT_FAQ} />
     </div>
     </InnerLayout>
   );

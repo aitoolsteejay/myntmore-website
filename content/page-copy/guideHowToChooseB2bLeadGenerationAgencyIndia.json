@@ -1,0 +1,80 @@
+{
+  "s01": {
+    "t01": "Says plainly whether they sell data, calls, ads or outbound",
+    "t02": "Case studies in the country and buyer role you sell to",
+    "t03": "Names its sources and verifies every email before sending",
+    "t04": "Has a written answer on DPDP, TRAI and WhatsApp opt-in",
+    "t05": "Written definition: ICP fit, decision-maker, attended",
+    "t06": "Quote shows GST, setup and tool costs separately",
+    "t07": "You meet the people who write and send your campaigns",
+    "t08": "Results with numbers, plus a client you can call",
+    "t09": "Resources",
+    "t10": "Guides",
+    "t11": "Choosing a Lead Gen Agency in India",
+    "t12": "Buyer's Guide · 8 min read",
+    "t13": "How to choose a B2B lead generation agency in India",
+    "t14": "Search for a lead generation company in India and you'll get data vendors, call centres, ad agencies and outbound agencies on the same list. They sell very different things. This guide gives you eight criteria to tell them apart and pick the right one."
+  },
+  "s02": {
+    "t01": "The short answer",
+    "t02": "To choose a B2B lead generation agency in India, first confirm what kind of agency it is and whether it has results in the market you sell to. Then check how it sources data, how it handles DPDP and TRAI rules, how it defines a qualified meeting, what the full price is including GST, who does the work and what proof you can verify."
+  },
+  "s03": {
+    "t01": "1. Know which kind of \"lead generation company\" you're talking to",
+    "t02": "In India, four different businesses use the same label. Comparing a data vendor's per-record price with an outbound agency's retainer is like comparing the price of bricks with the price of a house. Decide which one you need before you shortlist anyone.",
+    "t03": "Type",
+    "t04": "What you get",
+    "t05": "Good for",
+    "t06": "Watch out for"
+  },
+  "s04": {
+    "t01": "2. Match the agency to where your buyers are",
+    "t02": "Selling to Indian companies and selling from India to the US, UK or Middle East are different jobs. Domestic B2B buying is relationship-heavy: LinkedIn, phone and WhatsApp (with opt-in) often matter as much as email, and decisions can involve a promoter or family owner as well as the functional head. Selling abroad needs copy that reads as native, sending windows in the buyer's time zone and compliance with laws like CAN-SPAM and GDPR. Ask for case studies in the country and buyer role you actually target, not just a total client count."
+  },
+  "s05": {
+    "t01": "3. Ask where the data comes from and how it's verified",
+    "t02": "Global B2B databases are often thinner on Indian mid-market and SME companies than on US ones, so an agency that relies on a single tool will hit gaps fast. A good agency combines sources, researches accounts by hand where needed, and verifies every email before it is sent, because bounces damage the sending domain for everyone on it. Ask which sources they use for your segment, how they verify contacts, and what bounce rate makes them pause a campaign."
+  },
+  "s06": {
+    "t01": "4. Check how they handle DPDP, TRAI and WhatsApp rules",
+    "t02": "India's Digital Personal Data Protection Act, 2023 governs how personal data is collected and used, including work emails and phone numbers. Its rules were notified on 13 November 2025, and most obligations for businesses apply from 13 May 2027, with penalties of up to ₹250 crore. Commercial calls and SMS also fall under TRAI's rules on unsolicited commercial communication, including the Do Not Disturb registry, and WhatsApp Business requires opt-in before a business messages someone. You don't need an agency with a legal team, but you do need one with a written answer. Our",
+    "t03": "cold email compliance guide",
+    "t04": " covers the rules by country. This is general information, not legal advice."
+  },
+  "s07": {
+    "t01": "5. Agree in writing what counts as a qualified lead or meeting",
+    "t02": "Most disputes with lead generation agencies come down to this one definition. A useful one names the company profile, the role of the person, and whether the meeting has to actually happen to count. Ask what happens when a prospect doesn't show up, whether no-shows are rebooked or replaced, and who qualifies the meeting before it reaches your calendar."
+  },
+  "s08": {
+    "t01": "6. Compare pricing models, then the full cost",
+    "t02": "Agencies in India usually charge a monthly retainer, a fee per qualified meeting, a fee per lead, or a mix. Each rewards the agency for something different: per-lead pricing rewards volume, per-meeting pricing rewards booked calls, and a retainer rewards running the whole system well. Then check the full cost. Services in India attract 18% GST, and setup work, sending domains, inboxes and tool subscriptions are often billed separately. Ask for one quote with every line shown, and compare agencies on cost per qualified meeting that actually happened."
+  },
+  "s09": {
+    "t01": "7. Find out who actually does the work",
+    "t02": "The person who pitches you is rarely the person who writes your emails. Ask who builds your list, who writes the copy, who watches deliverability and who you talk to every week, and whether they are employees or subcontractors. Ask to meet the account lead before you sign. An agency that runs a real system will be glad to show you the people running it."
+  },
+  "s10": {
+    "t01": "8. Ask for proof you can check",
+    "t02": "Look for case studies in your industry with numbers in them, a client reference you can call, and reviews on independent platforms. Then compare the agency's claims with published ranges: our",
+    "t03": "2026 B2B Outbound Benchmark Report",
+    "t04": " shows reply rates, inbox placement and time to first meeting across Myntmore's managed accounts. For the questions every outbound agency should answer, on data ownership, deliverability and contract terms, see",
+    "t05": "how to choose a B2B outbound agency",
+    "t06": ", or see how this works in practice for a",
+    "t07": "Mumbai lead generation company"
+  },
+  "s11": {
+    "t01": "The scorecard: good answers and red flags",
+    "t02": "Take this into every agency call. An agency doesn't need a perfect answer on every line, but two or more red flags is a reason to keep looking.",
+    "t03": "Criterion",
+    "t04": "Good answer",
+    "t05": "Red flag",
+    "t06": "Not sure an agency is the right move at all? See the",
+    "t07": "agency vs. in-house comparison",
+    "t08": "Common questions"
+  },
+  "s12": {
+    "t01": "Run the scorecard on us",
+    "t02": "Myntmore is a Mumbai-based outbound agency. Book a free 30-minute call and ask us every question on this page. If we're not the right fit, we'll tell you.",
+    "t03": "Book a Call"
+  }
+}

@@ -12,6 +12,10 @@ import { pageFaqs } from "@/lib/page-faqs";
 import { OG_BASE, ogImages } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/guideHowToChooseB2bLeadGenerationAgencyIndia.json";
+
+// This page's text is edited in the admin ("How to Choose a B2B Lead Generation Agency in India") and lives in content/page-copy/guideHowToChooseB2bLeadGenerationAgencyIndia.json.
+const copy = pageCopy;
 
 const PAGE_URL = `${SITE_URL}/resources/guides/how-to-choose-b2b-lead-generation-agency-india`;
 const TITLE = "How to Choose a B2B Lead Generation Agency in India";
@@ -84,14 +88,14 @@ const AGENCY_TYPES = [
 ];
 
 const SCORECARD = [
-  { criterion: "Agency type", good: "Says plainly whether they sell data, calls, ads or outbound", flag: "\"We do everything\" with no method behind it" },
-  { criterion: "Target market", good: "Case studies in the country and buyer role you sell to", flag: "Only domestic proof when you sell to the US, or the reverse" },
-  { criterion: "Data", good: "Names its sources and verifies every email before sending", flag: "Cannot say where the list comes from" },
-  { criterion: "Compliance", good: "Has a written answer on DPDP, TRAI and WhatsApp opt-in", flag: "\"Compliance isn't an issue in B2B\"" },
-  { criterion: "Meeting definition", good: "Written definition: ICP fit, decision-maker, attended", flag: "Counts any reply or booked slot as a lead" },
-  { criterion: "Pricing", good: "Quote shows GST, setup and tool costs separately", flag: "A low monthly fee with costs that appear later" },
-  { criterion: "Team", good: "You meet the people who write and send your campaigns", flag: "Work passed to unnamed freelancers" },
-  { criterion: "Proof", good: "Results with numbers, plus a client you can call", flag: "Screenshots of one client's best month" },
+  { criterion: "Agency type", good: copy.s01.t01, flag: "\"We do everything\" with no method behind it" },
+  { criterion: "Target market", good: copy.s01.t02, flag: "Only domestic proof when you sell to the US, or the reverse" },
+  { criterion: "Data", good: copy.s01.t03, flag: "Cannot say where the list comes from" },
+  { criterion: "Compliance", good: copy.s01.t04, flag: "\"Compliance isn't an issue in B2B\"" },
+  { criterion: "Meeting definition", good: copy.s01.t05, flag: "Counts any reply or booked slot as a lead" },
+  { criterion: "Pricing", good: copy.s01.t06, flag: "A low monthly fee with costs that appear later" },
+  { criterion: "Team", good: copy.s01.t07, flag: "Work passed to unnamed freelancers" },
+  { criterion: "Proof", good: copy.s01.t08, flag: "Screenshots of one client's best month" },
 ];
 
 const FAQ_ITEMS = pageFaqs("guide-how-to-choose-b2b-lead-generation-agency-india");
@@ -108,18 +112,14 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
         <div aria-hidden="true" style={{ position: "absolute", top: "-100px", right: "-160px", width: "600px", height: "600px", borderRadius: "50%", background: "radial-gradient(circle, rgba(249,115,22,0.16) 0%, rgba(234,88,12,0.06) 40%, transparent 68%)", filter: "blur(55px)", pointerEvents: "none" }} />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Guides", href: "/resources/guides" }, { label: "Choosing a Lead Gen Agency in India", href: "/resources/guides/how-to-choose-b2b-lead-generation-agency-india" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t09, href: "/resources" }, { label: copy.s01.t10, href: "/resources/guides" }, { label: copy.s01.t11, href: "/resources/guides/how-to-choose-b2b-lead-generation-agency-india" }]} />
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 hero-fade" style={{ borderColor: "rgba(245,183,49,0.45)", background: "rgba(245,183,49,0.08)" }}>
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#F5B731" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>Buyer&apos;s Guide · 8 min read</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>{copy.s01.t12}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-            How to choose a B2B lead generation agency in India
-          </h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{copy.s01.t13}</h1>
           <ArticleMeta schema={ARTICLE_SCHEMA} />
-          <p className="text-lg sm:text-xl max-w-2xl" style={{ color: "#52525B" }}>
-            Search for a lead generation company in India and you&apos;ll get data vendors, call centres, ad agencies and outbound agencies on the same list. They sell very different things. This guide gives you eight criteria to tell them apart and pick the right one.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl" style={{ color: "#52525B" }}>{copy.s01.t14}</p>
         </div>
       </section>
 
@@ -127,10 +127,8 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
         {/* Short answer */}
         <section className="pb-4 px-4" style={{ backgroundColor: "#F8F6F2" }}>
           <div className="max-w-3xl mx-auto rounded-2xl border p-6" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
-            <h2 className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>The short answer</h2>
-            <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-              To choose a B2B lead generation agency in India, first confirm what kind of agency it is and whether it has results in the market you sell to. Then check how it sources data, how it handles DPDP and TRAI rules, how it defines a qualified meeting, what the full price is including GST, who does the work and what proof you can verify.
-            </p>
+            <h2 className="text-sm font-black uppercase tracking-widest mb-3" style={{ color: "#71675E" }}>{copy.s02.t01}</h2>
+            <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s02.t02}</p>
           </div>
         </section>
 
@@ -139,18 +137,16 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
             <FadeIn>
               <div className="space-y-14">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>1. Know which kind of &quot;lead generation company&quot; you&apos;re talking to</h2>
-                  <p className="text-base leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>
-                    In India, four different businesses use the same label. Comparing a data vendor&apos;s per-record price with an outbound agency&apos;s retainer is like comparing the price of bricks with the price of a house. Decide which one you need before you shortlist anyone.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s03.t01}</h2>
+                  <p className="text-base leading-relaxed mb-6" style={{ color: "#3D3D3D" }}>{copy.s03.t02}</p>
                   <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: "#E8E2D9" }}>
                     <table className="w-full text-sm">
                       <thead>
                         <tr style={{ backgroundColor: "#F8F6F2" }}>
-                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>Type</th>
-                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>What you get</th>
-                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>Good for</th>
-                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>Watch out for</th>
+                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{copy.s03.t03}</th>
+                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{copy.s03.t04}</th>
+                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{copy.s03.t05}</th>
+                          <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{copy.s03.t06}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -168,55 +164,42 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>2. Match the agency to where your buyers are</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    Selling to Indian companies and selling from India to the US, UK or Middle East are different jobs. Domestic B2B buying is relationship-heavy: LinkedIn, phone and WhatsApp (with opt-in) often matter as much as email, and decisions can involve a promoter or family owner as well as the functional head. Selling abroad needs copy that reads as native, sending windows in the buyer&apos;s time zone and compliance with laws like CAN-SPAM and GDPR. Ask for case studies in the country and buyer role you actually target, not just a total client count.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s04.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s04.t02}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>3. Ask where the data comes from and how it&apos;s verified</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    Global B2B databases are often thinner on Indian mid-market and SME companies than on US ones, so an agency that relies on a single tool will hit gaps fast. A good agency combines sources, researches accounts by hand where needed, and verifies every email before it is sent, because bounces damage the sending domain for everyone on it. Ask which sources they use for your segment, how they verify contacts, and what bounce rate makes them pause a campaign.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s05.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s05.t02}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>4. Check how they handle DPDP, TRAI and WhatsApp rules</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    India&apos;s Digital Personal Data Protection Act, 2023 governs how personal data is collected and used, including work emails and phone numbers. Its rules were notified on 13 November 2025, and most obligations for businesses apply from 13 May 2027, with penalties of up to ₹250 crore. Commercial calls and SMS also fall under TRAI&apos;s rules on unsolicited commercial communication, including the Do Not Disturb registry, and WhatsApp Business requires opt-in before a business messages someone. You don&apos;t need an agency with a legal team, but you do need one with a written answer. Our{" "}
-                    <Link href="/resources/blogs/cold-email-compliance-guide" className="font-bold underline" style={{ color: "#A14A08" }}>cold email compliance guide</Link> covers the rules by country. This is general information, not legal advice.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s06.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s06.t02}{" "}
+                    <Link href="/resources/blogs/cold-email-compliance-guide" className="font-bold underline" style={{ color: "#A14A08" }}>{copy.s06.t03}</Link>{copy.s06.t04}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>5. Agree in writing what counts as a qualified lead or meeting</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    Most disputes with lead generation agencies come down to this one definition. A useful one names the company profile, the role of the person, and whether the meeting has to actually happen to count. Ask what happens when a prospect doesn&apos;t show up, whether no-shows are rebooked or replaced, and who qualifies the meeting before it reaches your calendar.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s07.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s07.t02}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>6. Compare pricing models, then the full cost</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    Agencies in India usually charge a monthly retainer, a fee per qualified meeting, a fee per lead, or a mix. Each rewards the agency for something different: per-lead pricing rewards volume, per-meeting pricing rewards booked calls, and a retainer rewards running the whole system well. Then check the full cost. Services in India attract 18% GST, and setup work, sending domains, inboxes and tool subscriptions are often billed separately. Ask for one quote with every line shown, and compare agencies on cost per qualified meeting that actually happened.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s08.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s08.t02}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>7. Find out who actually does the work</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    The person who pitches you is rarely the person who writes your emails. Ask who builds your list, who writes the copy, who watches deliverability and who you talk to every week, and whether they are employees or subcontractors. Ask to meet the account lead before you sign. An agency that runs a real system will be glad to show you the people running it.
-                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s09.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s09.t02}</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>8. Ask for proof you can check</h2>
-                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>
-                    Look for case studies in your industry with numbers in them, a client reference you can call, and reviews on independent platforms. Then compare the agency&apos;s claims with published ranges: our{" "}
-                    <Link href="/resources/blogs/b2b-outbound-benchmark-report-2026" className="font-bold underline" style={{ color: "#A14A08" }}>2026 B2B Outbound Benchmark Report</Link> shows reply rates, inbox placement and time to first meeting across Myntmore&apos;s managed accounts. For the questions every outbound agency should answer, on data ownership, deliverability and contract terms, see{" "}
-                    <Link href="/resources/guides/how-to-choose-an-outbound-agency" className="font-bold underline" style={{ color: "#A14A08" }}>how to choose a B2B outbound agency</Link>, or see how this works in practice for a{" "}
-                    <Link href="/b2b-lead-generation-mumbai" className="font-bold underline" style={{ color: "#A14A08" }}>Mumbai lead generation company</Link>.
+                  <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s10.t01}</h2>
+                  <p className="text-base leading-relaxed" style={{ color: "#3D3D3D" }}>{copy.s10.t02}{" "}
+                    <Link href="/resources/blogs/b2b-outbound-benchmark-report-2026" className="font-bold underline" style={{ color: "#A14A08" }}>{copy.s10.t03}</Link>{copy.s10.t04}{" "}
+                    <Link href="/resources/guides/how-to-choose-an-outbound-agency" className="font-bold underline" style={{ color: "#A14A08" }}>{copy.s10.t05}</Link>{copy.s10.t06}{" "}
+                    <Link href="/b2b-lead-generation-mumbai" className="font-bold underline" style={{ color: "#A14A08" }}>{copy.s10.t07}</Link>.
                   </p>
                 </div>
               </div>
@@ -228,17 +211,15 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
         <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
           <div className="max-w-3xl mx-auto">
             <FadeIn>
-              <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>The scorecard: good answers and red flags</h2>
-              <p className="text-base leading-relaxed mb-6" style={{ color: "#52525B" }}>
-                Take this into every agency call. An agency doesn&apos;t need a perfect answer on every line, but two or more red flags is a reason to keep looking.
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-black mb-3" style={{ color: "#0a0a0a" }}>{copy.s11.t01}</h2>
+              <p className="text-base leading-relaxed mb-6" style={{ color: "#52525B" }}>{copy.s11.t02}</p>
               <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
                 <table className="w-full text-sm">
                   <thead>
                     <tr style={{ backgroundColor: "#FEF9EC" }}>
-                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>Criterion</th>
-                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#047857" }}>Good answer</th>
-                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#B91C1C" }}>Red flag</th>
+                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#0a0a0a" }}>{copy.s11.t03}</th>
+                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#047857" }}>{copy.s11.t04}</th>
+                      <th scope="col" className="text-left p-4 font-black" style={{ color: "#B91C1C" }}>{copy.s11.t05}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -252,9 +233,8 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-sm mt-6" style={{ color: "#52525B" }}>
-                Not sure an agency is the right move at all? See the{" "}
-                <Link href="/resources/blogs/agency-vs-in-house" className="font-bold" style={{ color: "#A14A08" }}>agency vs. in-house comparison</Link>.
+              <p className="text-sm mt-6" style={{ color: "#52525B" }}>{copy.s11.t06}{" "}
+                <Link href="/resources/blogs/agency-vs-in-house" className="font-bold" style={{ color: "#A14A08" }}>{copy.s11.t07}</Link>.
               </p>
             </FadeIn>
           </div>
@@ -268,7 +248,7 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
       </article>
 
       {/* FAQ */}
-      <Faq badge="FAQ" title="Common questions" items={FAQ_ITEMS.map((f) => ({ q: f.question, a: f.answer }))} />
+      <Faq badge="FAQ" title={copy.s11.t08} items={FAQ_ITEMS.map((f) => ({ q: f.question, a: f.answer }))} />
 
       {/* Final CTA */}
       <CityLinks heading="B2B lead generation agencies by Indian city" intro="What outbound looks like in each city we cover, by the industries that cluster there." />
@@ -276,13 +256,9 @@ export default function HowToChooseLeadGenAgencyIndiaPage() {
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-2xl p-8 sm:p-12 text-center" style={{ background: "linear-gradient(135deg, #FEF9EC 0%, #FFFFFF 100%)", border: "1px solid rgba(245,183,49,0.35)", boxShadow: "0 8px 30px rgba(0,0,0,0.04)" }}>
-            <h2 className="text-2xl sm:text-3xl font-black mb-4 text-[#0A0A0A]">Run the scorecard on us</h2>
-            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: "#71675E" }}>
-              Myntmore is a Mumbai-based outbound agency. Book a free 30-minute call and ask us every question on this page. If we&apos;re not the right fit, we&apos;ll tell you.
-            </p>
-            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Book a Call
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            <h2 className="text-2xl sm:text-3xl font-black mb-4 text-[#0A0A0A]">{copy.s12.t01}</h2>
+            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: "#71675E" }}>{copy.s12.t02}</p>
+            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{copy.s12.t03}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
           </div>
         </div>

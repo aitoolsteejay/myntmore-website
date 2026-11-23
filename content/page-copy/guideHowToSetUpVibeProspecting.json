@@ -1,0 +1,85 @@
+{
+  "s01": {
+    "t01": "Log into Claude",
+    "t02": "Head to ",
+    "t03": "claude.ai",
+    "t04": "Click the \"+\" icon",
+    "t05": "Bottom left of the chat interface.",
+    "t06": "Click \"Connectors\"",
+    "t07": "Opens the connectors tab.",
+    "t08": "Click \"Manage Connectors\"",
+    "t09": "Add \"Vibe Prospecting\"",
+    "t10": "Search for it: ",
+    "t11": "vibeprospecting.ai",
+    "t12": ". Hit connect.",
+    "t13": "Authorize Access",
+    "t14": "Complete the login / API connection. Takes 2 minutes.",
+    "t15": "Confirm It's Active",
+    "t16": "You'll see it toggled on under your connectors.",
+    "t17": "Funding-Based",
+    "t18": "Find 50 US SaaS startups that raised $10M–$50M in the last 12 months. Include: founder/CEO name, LinkedIn, verified email, total funding, latest round, investors, headcount, industry niche.",
+    "t19": "Recently Raised $30M+",
+    "t20": "Find 40 SaaS companies that raised $30M+ Series A or B recently. Target founders or CEOs. Include verified contact info and funding details.",
+    "t21": "YC-Backed",
+    "t22": "Find 50 Y Combinator-backed SaaS startups in the US. Include: founder names, batch year, LinkedIn, email, website, company description.",
+    "t23": "High-Growth (Headcount Signal)",
+    "t24": "Find 50 B2B SaaS companies that grew headcount by 30%+ in the last 6 months. Target founders, CEOs, Heads of Growth. Provide verified emails.",
+    "t25": "Revenue Range",
+    "t26": "Find 40 SaaS companies doing $1M–$10M ARR. Target founders. Include contact data and revenue estimate.",
+    "t27": "By Niche",
+    "t28": "Find 40 HR-tech SaaS founders in the US. Criteria: 10–100 employees, raised seed or Series A, selling to enterprises. Include full contact info and funding details.",
+    "t29": "By Tech Stack",
+    "t30": "Find 50 SaaS companies using HubSpot + Salesforce. Target VP Marketing or Founder. Provide verified emails and LinkedIn.",
+    "t31": "By Geography",
+    "t32": "Find 30 SaaS founders in New York and California. Company size 20–200 employees. Raised funding in the last 18 months.",
+    "t33": "By Hiring Signal",
+    "t34": "Find SaaS companies actively hiring for: AI Engineer, Growth Manager, or SDR. Include founder/CEO contact info.",
+    "t35": "Find [number] companies in [industry] located in [geography].\nCriteria:\n* Company size: [range]\n* Revenue: [range]\n* Funding stage: [stage]\n* Hiring signal: [role]\n* Tech stack: [tools]\n\nTarget decision-makers:\n* [role 1]\n* [role 2]\n\nInclude: full name, role, LinkedIn, verified email, phone (if available), company website, funding info.\nReturn in a structured table.",
+    "t36": "Resources",
+    "t37": "Guides",
+    "t38": "How to Set Up Vibe Prospecting",
+    "t39": "Free Guide",
+    "t40": "How to Set Up",
+    "t41": "Vibe Prospecting",
+    "t42": "on Claude",
+    "t43": "And actually use it for B2B leads. A Claude connector that pulls verified names, emails, and LinkedIn profiles straight into your chat, no separate tool to log into.",
+    "t44": "Tejas",
+    "t45": "isn't your average marketer. He's a 4x entrepreneur who built Flintstop, a D2C eCommerce brand, into a $6M-a-year machine, shipping out 8,000 orders a day before selling the business in 2020. At",
+    "t46": "Myntmore",
+    "t47": ", his B2B outbound agency, he's helped 130+ B2B companies book 12K+ meetings and generate $120M+ in pipeline. He's a TEDx speaker, angel investor, and has taught B2B growth methodologies at IIT and IIM. Now, he's here to do it for you."
+  },
+  "s02": {
+    "t01": "What is Vibe Prospecting?",
+    "t02": "Vibe Prospecting is a Claude connector for B2B lead sourcing. Once it is switched on, you describe the companies and people you want in plain English and Claude returns verified names, emails and LinkedIn profiles in the same chat, with no separate tool to log into.",
+    "t03": "The setup takes about 2 minutes and the steps are below. After that, the prompts further down show how to ask for lead lists by funding stage, tech stack or hiring signal."
+  },
+  "s03": {
+    "t01": "Step-by-Step Setup",
+    "t02": "7 steps. About 5 minutes.",
+    "t03": "You also get 400 free credits just for signing up. Done, you're ready to pull leads."
+  },
+  "s04": {
+    "t01": "First Prompt to Run",
+    "t02": "Start simple. Get a feel for the output format before going deep."
+  },
+  "s05": {
+    "t01": "Advanced Targeting Prompts"
+  },
+  "s06": {
+    "t01": "Hyper-Specific ICP Prompts"
+  },
+  "s07": {
+    "t01": "Master Prompt Template",
+    "t02": "Copy this, fill it in, run it.",
+    "t03": "Set it up, run a test prompt, and see what comes back. The funding + hiring signal combos tend to give the tightest lists."
+  },
+  "s08": {
+    "t01": "Keep the momentum going",
+    "t02": "Follow along",
+    "t03": "@tejas_jhaveri",
+    "t04": "Book a call",
+    "t05": "Complimentary strategy session",
+    "t06": "Email us",
+    "t07": "founder@myntmore.com"
+  }
+}

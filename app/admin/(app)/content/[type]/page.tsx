@@ -11,9 +11,12 @@ import { contentType, describeType, singletonSlug } from "@/lib/admin/schema";
 
 /** The long-form case studies are one file each; this virtual type lists them together. */
 const LONG_CASES = "longCaseStudies";
+/** The 19 resource guides each have their own sections; this virtual type lists them together. */
+const GUIDES = "guides";
 
 export async function generateMetadata({ params }: { params: { type: string } }): Promise<Metadata> {
   if (params.type === LONG_CASES) return { title: "Long-form case studies" };
+  if (params.type === GUIDES) return { title: "Resource guides" };
   const t = enabledType(params.type);
   return { title: t ? catalogEntry(t.key, t.label).title : "Content" };
 }
@@ -21,6 +24,24 @@ export async function generateMetadata({ params }: { params: { type: string } })
 // A collection shows its list of entries; a single page (e.g. the cold email service page) opens straight in the editor.
 export default async function TypePage({ params }: { params: { type: string } }) {
   const editor = (await currentEditor())!;
+
+  if (params.type === GUIDES) {
+    const items = allTypes()
+      .filter((t) => t.enabled && t.key.startsWith("guide") && canView(editor, t.key))
+      .map((t) => {
+        const type = contentType(t.key)!;
+        return { href: `/admin/content/${t.key}`, title: catalogEntry(t.key, t.label).title, url: liveUrl(type, singletonSlug(type), "") };
+      })
+      .sort((a, b) => a.title.localeCompare(b.title));
+    return (
+      <>
+        <EntryHeader back={{ href: "/admin", label: "Content" }} title="Resource guides" subtitle={`${items.length} guides, each with its own sections`} />
+        <div className="mt-6">
+          <FilterList items={items.map((i) => ({ ...i, detail: i.url ? `myntmore.com${i.url}` : undefined }))} placeholder="Filter guides" />
+        </div>
+      </>
+    );
+  }
 
   if (params.type === LONG_CASES) {
     const items = allTypes()
@@ -50,10 +71,11 @@ export default async function TypePage({ params }: { params: { type: string } })
     const fields = describeType(type);
     const url = liveUrl(type, singletonSlug(type), "");
     const isLong = type.key.startsWith("caseLong");
+    const isGuide = type.key.startsWith("guide");
     return (
       <>
         <EntryHeader
-          back={isLong ? { href: `/admin/content/${LONG_CASES}`, label: "Long-form case studies" } : { href: "/admin", label: "Content" }}
+          back={isLong ? { href: `/admin/content/${LONG_CASES}`, label: "Long-form case studies" } : isGuide ? { href: `/admin/content/${GUIDES}`, label: "Resource guides" } : { href: "/admin", label: "Content" }}
           title={cat.title}
           subtitle={url ? `myntmore.com${url}` : cat.description}
           url={url}

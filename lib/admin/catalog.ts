@@ -1,5 +1,8 @@
 // Plain-language names, descriptions and live addresses for the admin's content types, so editors can
 // find a page by what they see on the site rather than by how the files are organised.
+import pageCopyRegistry from "@/content/page-copy/registry.json";
+
+const guideRoutes = new Map(pageCopyRegistry.map((r: { key: string; route: string }) => [r.key, r.route]));
 
 export interface CatalogEntry {
   /** Short name on the admin home and in lists. */
@@ -43,6 +46,15 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
   if (CATALOG[key]) return CATALOG[key];
   if (key.startsWith("caseLong")) {
     return { title: label.replace(/^Long-form case study:\s*/i, ""), description: "Long-form case study", group: "caseStudies" };
+  }
+  if (key.startsWith("guide")) {
+    const route = guideRoutes.get(key);
+    return {
+      title: label.replace(/^Guide:\s*/i, ""),
+      description: "Resource guide",
+      group: "pages",
+      url: route ? () => route : undefined,
+    };
   }
   return { title: label, description: "", group: "pages" };
 }
