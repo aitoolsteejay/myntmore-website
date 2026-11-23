@@ -328,6 +328,7 @@ export type FieldDescriptor =
   | { kind: "relationship"; label: string; description?: string; required: boolean; collection: string }
   | { kind: "object"; label?: string; description?: string; fields: Record<string, FieldDescriptor> }
   | { kind: "array"; label: string; description?: string; element: FieldDescriptor; min?: number; max?: number }
+  | { kind: "body"; label: string; description?: string }
   | { kind: "unsupported"; label: string; type: string };
 
 function describe(field: Field, isEntryName = false): FieldDescriptor {
@@ -382,6 +383,9 @@ function describe(field: Field, isEntryName = false): FieldDescriptor {
       return { kind: info.type, label, description, required: !!opts.validation?.isRequired };
     case "relationship":
       return { kind: "relationship", label, description, required: !!opts.validation?.isRequired, collection: opts.collection };
+    case "document":
+    case "markdoc":
+      return { kind: "body", label: label || "Article", description };
     default:
       return { kind: "unsupported", label, type: info?.type ?? field.formKind ?? field.kind };
   }

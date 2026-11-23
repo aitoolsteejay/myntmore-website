@@ -23,7 +23,8 @@ export default async function AdminHome() {
         const url = liveUrl(type, singletonSlug(type), "");
         return { t, count: 1, items: [{ href: `/admin/content/${t.key}`, title: cat.title, detail: `${t.key.startsWith("caseLong") ? "Long-form case study" : "Page"}${url ? ` · myntmore.com${url}` : ""}`, url }] as ListItem[] };
       }
-      const slugs = (await store.listDir(collectionDir(type))).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
+      const ext = type.format === "mdoc" ? ".mdoc" : ".json";
+      const slugs = (await store.listDir(collectionDir(type))).filter((f) => f.endsWith(ext)).map((f) => f.slice(0, -ext.length));
       const items = slugs.map((s) => {
         const url = liveUrl(type, s, "");
         return { href: `/admin/content/${t.key}/${s}`, title: humanize(s), detail: `${cat.title}${url ? ` · myntmore.com${url}` : ""}`, url };
@@ -78,7 +79,7 @@ export default async function AdminHome() {
         );
       })}
       <p className="mt-10 text-sm text-[#71675E]">
-        Blog posts and the other pages of the site (homepage, About, Plans and so on) are being added here next.
+        The other pages of the site (homepage, About, Plans and so on) are being added here next.
       </p>
     </>
   );

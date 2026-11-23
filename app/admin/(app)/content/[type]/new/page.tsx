@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
 import { canEdit, currentEditor } from "@/lib/admin/auth";
-import { enabledType, isCreatable, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
+import { enabledType, isCreatable, isPosts, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
+import { postSettingsType } from "@/lib/admin/posts";
 import { formSections } from "@/lib/admin/entry-view";
 import { companionFaqId, nameIsFileName } from "@/lib/admin/rules";
 import { describeType, isValidSlug, parseEntry } from "@/lib/admin/schema";
@@ -21,7 +22,9 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
 
   const from = searchParams.from && isValidSlug(searchParams.from) ? searchParams.from : null;
   const source = from ? await loadEntry(type, from) : null;
-  const state = source && !source.errors.length ? source.state : parseEntry(type, "{}").state;
+  const state = source && !source.errors.length ? source.state : parseEntry(isPosts(type) ? postSettingsType() : type, "{}").state;
+  // A copied post keeps its layout but starts as a draft.
+  if (isPosts(type)) state.published = false;
   state[type.slugField] = { name: "", slug: "" };
 
   const fields = describeType(type);
@@ -57,6 +60,7 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
         fields={fields}
         sections={formSections(type)}
         initialState={state}
+        initialBody={isPosts(type) ? (source?.body ?? "") : undefined}
         initialSha=""
         choices={await relationshipOptions(fields)}
         entryHref={`/admin/content/${type.key}/new`}
