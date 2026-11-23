@@ -8,6 +8,7 @@ import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { LandingPage } from "@/components/tools/hook-grader/LandingPage";
 import { HandUnderline, PillBadge } from "@/components/cold-email-roi/HandUnderline";
 import { FOLD_CHARACTERS, MAX_HOOK_CHARACTERS, gradeHook, type HookScore, type HookVerdict } from "@/lib/hook-grader";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 type FlowStep = "landing" | "lead" | "input" | "results";
 
@@ -109,17 +110,7 @@ export default function HookGraderClient() {
       setStep("results");
 
       if (leadData?.id) {
-        void import("@/lib/supabase")
-          .then(({ supabase }) => {
-            supabase
-              .from("leads")
-              .update({ inputs: { hook: text, audience: audience.trim() }, outputs: { score: gradeHook(text).total, alternatives: result.alternatives } })
-              .eq("id", leadData.id)
-              .then(({ error: updateError }) => {
-                if (updateError) console.error("Supabase inputs/outputs update failed:", updateError);
-              });
-          })
-          .catch((e) => console.error("Supabase inputs/outputs update failed:", e));
+        saveLeadResult(leadData.id, { hook: text, audience: audience.trim() }, { score: gradeHook(text).total, alternatives: result.alternatives });
       }
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {

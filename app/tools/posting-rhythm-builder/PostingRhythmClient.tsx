@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { LandingPage } from "@/components/tools/posting-rhythm/LandingPage";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 type FounderLifestyle =
   | "I can post daily"
@@ -128,18 +129,7 @@ export default function PostingRhythmClient() {
       setStep("results");
 
       if (leadData?.id) {
-        // The Supabase client (~200 kB) is loaded on first use, not with the page.
-        void import("@/lib/supabase")
-          .then(({ supabase }) => {
-            supabase
-              .from("leads")
-              .update({ inputs: formData, outputs: result })
-              .eq("id", leadData.id)
-              .then(({ error }) => {
-                if (error) console.error("Supabase inputs/outputs update failed:", error);
-              });
-          })
-          .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+        saveLeadResult(leadData.id, formData, result);
       }
 
       window.scrollTo({ top: 0, behavior: "smooth" });

@@ -9,6 +9,7 @@ import LoadingState from "@/components/tools/profile-optimizer/LoadingState";
 import ResultsSection from "@/components/tools/profile-optimizer/ResultsSection";
 import CTASection from "@/components/tools/profile-optimizer/CTASection";
 import { toast } from "sonner";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 interface OptimizationResults {
   score: number;
@@ -216,18 +217,7 @@ export default function ProfileOptimizerClient() {
       setShowResults(true);
 
       if (leadData?.id) {
-        // The Supabase client (~200 kB) is loaded on first use, not with the page.
-        void import("@/lib/supabase")
-          .then(({ supabase }) => {
-            supabase
-              .from("leads")
-              .update({ inputs: profileData, outputs: finalResults })
-              .eq("id", leadData.id)
-              .then(({ error }) => {
-                if (error) console.error("Supabase inputs/outputs update failed:", error);
-              });
-          })
-          .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+        saveLeadResult(leadData.id, profileData, finalResults);
       }
 
       setTimeout(() => {
