@@ -5,10 +5,12 @@
   { "key": "chemical-manufacturing", "label": "Chemical Manufacturing" },
   { "key": "distributors", "label": "Distributors" },
   { "key": "exporters", "label": "Exporters" },
+  { "key": "financial-services", "label": "Financial Services" },
   { "key": "industrial-automation", "label": "Industrial Automation" },
   { "key": "insurance", "label": "Insurance" },
   { "key": "logistics", "label": "Logistics" },
   { "key": "pharma", "label": "Pharma" },
+  { "key": "pharma-distributors", "label": "Pharma Distributors" },
   { "key": "stone-marble-exporters", "label": "Stone & Marble Exporters" },
   { "key": "textile-manufacturing", "label": "Textile Manufacturing" }
 ]

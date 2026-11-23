@@ -7,6 +7,7 @@ import { OutputSection } from "@/components/tools/dm-angles/OutputSection";
 import type { DMAngle } from "@/components/tools/dm-angles/DMCard";
 import LeadGate, { LeadData } from "@/components/tools/shared/LeadGate";
 import { toast } from "sonner";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 export default function DmAngleGeneratorClient() {
   const [leadData, setLeadData] = useState<LeadData | null>(null);
@@ -19,18 +20,7 @@ export default function DmAngleGeneratorClient() {
 
   const saveOutputs = (inputs: { industry: string; icpRole: string; offer: string }, outputAngles: DMAngle[]) => {
     if (!leadData?.id) return;
-    // The Supabase client (~200 kB) is loaded on first use, not with the page.
-    void import("@/lib/supabase")
-      .then(({ supabase }) => {
-        supabase
-          .from("leads")
-          .update({ inputs, outputs: { angles: outputAngles } })
-          .eq("id", leadData.id)
-          .then(({ error }) => {
-            if (error) console.error("Supabase inputs/outputs update failed:", error);
-          });
-      })
-      .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+    saveLeadResult(leadData.id, inputs, { angles: outputAngles });
   };
 
   const scrollToTool = () => {

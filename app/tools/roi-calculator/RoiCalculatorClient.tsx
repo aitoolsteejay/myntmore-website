@@ -12,6 +12,7 @@ import { Download } from "lucide-react";
 import { toast } from "sonner";
 import { LeadData } from "@/components/tools/shared/LeadGate";
 import { HandUnderline, PillBadge } from "@/components/cold-email-roi/HandUnderline";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 // RevenueChart pulls in recharts (~5MB of source), so it's kept out of this
 // route's initial bundle and only fetched once the calculator is actually
@@ -244,21 +245,7 @@ export default function RoiCalculatorClient() {
     setShowGate(false);
 
     if (data.id) {
-      // The Supabase client (~200 kB) is loaded on first use, not with the page.
-      void import("@/lib/supabase")
-        .then(({ supabase }) => {
-          supabase
-            .from("leads")
-            .update({
-              inputs: { currency, connectionRequests, acceptanceRate, replyRate, positiveResponseRate, meetingRateFromPositive, closingRate, averageTicketPrice, transactionsPerYear, monthsCustomerStays, duration, monthlyCost },
-              outputs: { totalRequests, acceptedConnections, replies, positiveReplies, negativeReplies, meetings, deals, revenue, roi },
-            })
-            .eq("id", data.id)
-            .then(({ error }) => {
-              if (error) console.error("Supabase inputs/outputs update failed:", error);
-            });
-        })
-        .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+      saveLeadResult(data.id, { currency, connectionRequests, acceptanceRate, replyRate, positiveResponseRate, meetingRateFromPositive, closingRate, averageTicketPrice, transactionsPerYear, monthsCustomerStays, duration, monthlyCost }, { totalRequests, acceptedConnections, replies, positiveReplies, negativeReplies, meetings, deals, revenue, roi });
     }
 
     handleExport();

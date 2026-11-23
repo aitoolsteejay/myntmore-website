@@ -22,6 +22,12 @@ Deliberately not built:
 - Drafted [Buying Committee](../content/glossary/buying-committee.json) to cover the definition, stakeholder roles and a worked example alongside the existing multi-threading article.
 - The DMARC brief remains open. The current deliverability guide, SPF/DKIM/DMARC glossary entry and draft sender requirements article already cover much of its proposed outline. A separate page needs a distinct setup or troubleshooting focus.
 
+## Status, 2026-11-20
+
+- Published [Cold Email Infrastructure Explained: SPF, DKIM, and DMARC](../content/posts/cold-email-infrastructure-explained.mdoc), resolving the technical infrastructure and DMARC gap (`what is dmarc for cold email`). Added 3 contextual inbound links from the infrastructure setup guide, Smartlead guide, and Gmail/Yahoo post.
+- Verified [Gmail and Yahoo Sender Requirements](../content/posts/gmail-and-yahoo-sender-requirements.mdoc) and [B2B Lead Generation for IT Services](../content/posts/b2b-lead-generation-for-it-services.mdoc) live and indexed.
+- Registered the 10 international city pages in `keyword-map.md` with zero primary keyword collisions.
+
 ## Method
 
 Existing content answers "how do I do X" (tactics: sequences, deliverability, ICP mapping, lead magnets) and "why should I pick an agency" (agency-vs-in-house). It does not yet answer the questions a buyer asks in the two moments right before they convert or right after they start comparing options - pricing, legal risk, and channel choice - nor does it own the top-of-funnel definitional searches ("what is X") that a glossary/pillar strategy would normally capture. Gaps below are grouped by funnel stage.

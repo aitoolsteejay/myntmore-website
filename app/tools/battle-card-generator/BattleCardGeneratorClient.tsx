@@ -8,6 +8,7 @@ import { BattleCardForm } from "@/components/tools/battle-card-generator/BattleC
 import { BattleCardResults } from "@/components/tools/battle-card-generator/BattleCardResults";
 import type { BattleCardInput, BattleCardOutput } from "@/components/tools/battle-card-generator/types";
 import { textTone } from "@/lib/colors";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 const ACCENT = "#ef4444";
 
@@ -21,18 +22,7 @@ export default function BattleCardGeneratorClient() {
 
   const saveOutputs = (inputs: unknown, outputs: unknown) => {
     if (!leadData?.id) return;
-    // The Supabase client (~200 kB) is loaded on first use, not with the page.
-    void import("@/lib/supabase")
-      .then(({ supabase }) => {
-        supabase
-          .from("leads")
-          .update({ inputs, outputs })
-          .eq("id", leadData.id)
-          .then(({ error }) => {
-            if (error) console.error("Supabase inputs/outputs update failed:", error);
-          });
-      })
-      .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+    saveLeadResult(leadData.id, inputs, outputs);
   };
 
   const handleLeadComplete = (data: LeadData) => {

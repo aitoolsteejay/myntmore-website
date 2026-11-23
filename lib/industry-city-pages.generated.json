@@ -72,6 +72,18 @@
     "metaDescription": "Managed B2B lead generation for Kolkata & West Bengal exporters across leather, engineering goods, tea, jute, and castings. Book global buyer calls."
   },
   {
+    "slug": "financial-services-delhi",
+    "href": "/b2b-lead-generation-financial-services-delhi",
+    "citySlug": "delhi",
+    "cityName": "Delhi",
+    "industrySlug": "financial-services",
+    "industryName": "Financial Services",
+    "badge": "Financial Services · Delhi",
+    "emoji": "🏦",
+    "h1": "B2B Lead Generation for Financial Services Firms in Delhi",
+    "metaDescription": "Managed B2B lead generation for fintechs, wealth and advisory firms and finance service providers in Delhi NCR. Book qualified CFO meetings."
+  },
+  {
     "slug": "industrial-automation-pune",
     "href": "/b2b-lead-generation-industrial-automation-pune",
     "citySlug": "pune",
@@ -82,6 +94,18 @@
     "emoji": "🤖",
     "h1": "B2B Lead Generation for Industrial Automation in Pune",
     "metaDescription": "Managed B2B lead generation for industrial automation, robotics, PLC/SCADA, and SPM builders in Pune, Chakan & Pimpri-Chinchwad. Book plant-head meetings."
+  },
+  {
+    "slug": "insurance-delhi",
+    "href": "/b2b-lead-generation-insurance-delhi",
+    "citySlug": "delhi",
+    "cityName": "Delhi",
+    "industrySlug": "insurance",
+    "industryName": "Insurance",
+    "badge": "Insurance · Delhi",
+    "emoji": "🛡️",
+    "h1": "B2B Lead Generation for Insurance Companies in Delhi",
+    "metaDescription": "Managed B2B lead generation for corporate insurance brokers, benefits advisors and insurtechs in Delhi NCR. Book HR and CFO meetings."
   },
   {
     "slug": "insurance-gurugram",
@@ -118,6 +142,18 @@
     "emoji": "🚢",
     "h1": "B2B Lead Generation for Logistics Companies in Mumbai",
     "metaDescription": "Managed B2B lead generation for freight forwarders, 3PLs, cold chain, and logistics companies in Mumbai & JNPT. Book supply-chain & shipper meetings."
+  },
+  {
+    "slug": "pharma-distributors-delhi",
+    "href": "/b2b-lead-generation-pharma-distributors-delhi",
+    "citySlug": "delhi",
+    "cityName": "Delhi",
+    "industrySlug": "pharma-distributors",
+    "industryName": "Pharma Distributors",
+    "badge": "Pharma Distribution · Delhi",
+    "emoji": "💊",
+    "h1": "B2B Lead Generation for Pharma Distributors in Delhi",
+    "metaDescription": "Managed B2B lead generation for pharma distributors and manufacturers seeking distribution in Delhi NCR. Book qualified partner meetings."
   },
   {
     "slug": "pharma-hyderabad",

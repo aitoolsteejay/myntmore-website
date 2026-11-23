@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-20T12:44:26.124Z",
+  "generatedAt": "2026-11-20T12:53:08.451Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 349,
-    "linked": 310,
+    "total": 350,
+    "linked": 311,
     "orphan": 39,
     "noindex": 34,
     "notInXmlSitemap": 44,
@@ -663,7 +663,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 96,
+      "inboundCount": 97,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -2650,8 +2650,8 @@
       "linkedFrom": [
         "/",
         "/events",
-        "/resources/blogs/[slug]",
         "/resources/blogs",
+        "/resources/blogs/[slug]",
         "/resources/feed",
         "/resources/glossary",
         "/resources/guides/58-meetings-600-linkedin-connections",
@@ -2902,7 +2902,7 @@
         "/resources/guides/cold-email-tech-stack",
         "lib/internal-paths.ts"
       ],
-      "inboundCount": 15,
+      "inboundCount": 16,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2922,6 +2922,22 @@
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
       "inboundCount": 7,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/cold-email-infrastructure-explained",
+      "title": "What is DMARC for Cold Email? Setup and Rules",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/guides/smartlead-setup",
+        "/resources/blogs",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements"
+      ],
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3032,9 +3048,10 @@
       "linkedFrom": [
         "/resources/guides/cold-email-infrastructure-setup",
         "/resources/guides/smartlead-setup",
+        "/resources/blogs/cold-email-infrastructure-explained",
         "/resources/blogs"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4175,10 +4192,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-tech-stack",
+        "/resources/blogs/cold-email-infrastructure-explained",
         "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4371,9 +4389,10 @@
       "linkedFrom": [
         "/resources/guides",
         "/resources/guides/smartlead-setup",
-        "/tools/cold-email-inbox-calculator"
+        "/tools/cold-email-inbox-calculator",
+        "/resources/blogs/cold-email-infrastructure-explained"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4663,7 +4682,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 30,
+      "inboundCount": 31,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true

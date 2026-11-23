@@ -145,26 +145,27 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
     // The Supabase client (~200 kB) is loaded here, on submit, rather than with the page;
     // the 600 ms pause below hides the download. A failed chunk load is reported like any
     // other failed insert instead of leaving the form stuck on "Saving".
-    const [{ data: insertedLead, error }] = await Promise.all([
+    // The row id is generated here and the insert does not ask for the row back: the leads table
+    // has no anonymous read policy (visitors must not be able to read other people's details),
+    // and Postgres rejects an insert that returns the row when the role cannot read it.
+    const leadId = crypto.randomUUID();
+    const [{ error }] = await Promise.all([
       import("@/lib/supabase")
         .then(({ supabase }) =>
-          supabase
-            .from("leads")
-            .insert([
-              {
-                source,
-                name: `${d.firstName} ${d.lastName}`.trim(),
-                email: d.email || null,
-                phone: d.phone || null,
-                company_name: d.companyName || null,
-                linkedin_url: d.linkedinUrl || null,
-                metadata: { designation: d.designation },
-              },
-            ])
-            .select()
-            .single(),
+          supabase.from("leads").insert([
+            {
+              id: leadId,
+              source,
+              name: `${d.firstName} ${d.lastName}`.trim(),
+              email: d.email || null,
+              phone: d.phone || null,
+              company_name: d.companyName || null,
+              linkedin_url: d.linkedinUrl || null,
+              metadata: { designation: d.designation },
+            },
+          ]),
         )
-        .catch((err: unknown) => ({ data: null, error: err })),
+        .catch((err: unknown) => ({ error: err })),
       new Promise((resolve) => setTimeout(resolve, 600)),
     ]);
 
@@ -172,7 +173,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
 
     setIsSubmitting(false);
     onComplete({
-      id: insertedLead?.id,
+      id: error ? undefined : leadId,
       name: `${d.firstName} ${d.lastName}`.trim(),
       companyName: d.companyName || "",
       designation: d.designation,

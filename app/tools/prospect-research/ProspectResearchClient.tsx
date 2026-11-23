@@ -128,7 +128,6 @@ export default function ProspectResearchClient() {
     setError(null);
     setBusy(true);
     const started = Date.now();
-    let firstAt: number | null = null;
     setRunDate(new Date());
     setAccounts([]);
     setRows([]);
@@ -156,6 +155,14 @@ export default function ProspectResearchClient() {
       return;
     }
 
+    await researchAll(found.map((p) => p.domain), started, false);
+  };
+
+  // Researches the given companies (5 at a time, one retry each) and then saves the run. Used for the
+  // first pass and again for "Retry the ones that failed".
+  const researchAll = async (domains: string[], started: number, retry: boolean) => {
+    if (!lead?.id || !runId) return;
+    let firstAt: number | null = null;
     const researchOne = async (domain: string) => {
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
@@ -168,10 +175,9 @@ export default function ProspectResearchClient() {
       return null;
     };
 
-    const queue = [...found];
+    const queue = [...domains];
     const worker = async () => {
-      for (let p = queue.shift(); p; p = queue.shift()) {
-        const domain = p.domain;
+      for (let domain = queue.shift(); domain; domain = queue.shift()) {
         const account = await researchOne(domain);
         if (account) {
           firstAt ??= Date.now();
@@ -180,15 +186,25 @@ export default function ProspectResearchClient() {
         setRows((prev) => prev.map((r) => (r.domain === domain ? { ...r, state: account ? "done" : "failed" } : r)));
       }
     };
-    await Promise.all(Array.from({ length: Math.min(PARALLEL, found.length) }, worker));
+    await Promise.all(Array.from({ length: Math.min(PARALLEL, domains.length) }, worker));
 
     setPhase("done");
     setBusy(false);
     try {
-      await post("finish", { leadId: lead.id, runId, firstProspectMs: firstAt ? firstAt - started : null, totalMs: Date.now() - started });
+      await post("finish", { leadId: lead.id, runId, retry, firstProspectMs: firstAt ? firstAt - started : null, totalMs: Date.now() - started });
     } catch {
       /* the report is already on screen; saving it is best effort */
     }
+  };
+
+  const retryFailed = async () => {
+    const domains = rows.filter((r) => r.state === "failed").map((r) => r.domain);
+    if (!domains.length || busy) return;
+    setError(null);
+    setBusy(true);
+    setPhase("researching");
+    setRows((prev) => prev.map((r) => (r.state === "failed" ? { ...r, state: "pending" } : r)));
+    await researchAll(domains, Date.now(), true);
   };
 
   const startOver = () => {
@@ -263,6 +279,14 @@ export default function ProspectResearchClient() {
         <ResearchReport config={config} />
         {phase === "done" && (
           <div className="-mt-12 px-4 pb-20 text-center">
+            {failed.length > 0 && (
+              <div className="mb-4">
+                <button type="button" onClick={retryFailed} disabled={busy} className="btn-dark inline-flex min-h-[44px] items-center gap-2 px-6 py-2.5 text-sm font-bold disabled:opacity-60">
+                  <RotateCcw className="h-4 w-4" aria-hidden="true" /> Retry the {failed.length} that could not be researched
+                </button>
+                <p className="mt-2 text-xs" style={{ color: MUTED }}>Takes about a minute. They are added to the report as soon as each one is done.</p>
+              </div>
+            )}
             <button type="button" onClick={startOver} className="btn-ghost inline-flex min-h-[44px] items-center gap-2 px-6 py-2.5 text-sm font-bold">
               <RotateCcw className="h-4 w-4" aria-hidden="true" /> Run another search
             </button>

@@ -11,7 +11,7 @@ import type { Prospect, ResearchInputs } from "@/lib/prospect-research/types";
 // Step 2: find 15 to 20 companies with a recent dated signal, drop the visitor's own company, the
 // exclusions, duplicates and domains that do not resolve, and keep the best 10. This is the point where a
 // run counts against the daily limits. Typically 30 to 60 seconds.
-export const maxDuration = 120;
+export const maxDuration = 180;
 
 const DAY = 24 * 60 * 60 * 1000;
 
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
     claimedRunId = runId;
 
     const inputs = run.inputs as ResearchInputs;
-    const research = await callGemini({ runId, step: "discover_research", model: RESEARCH_MODEL, prompt: discoverResearchPrompt(profile, inputs.exclusions, inputs.website, startedAt), grounded: true, timeoutMs: 90_000 });
+    const research = await callGemini({ runId, step: "discover_research", model: RESEARCH_MODEL, prompt: discoverResearchPrompt(profile, inputs.exclusions, inputs.website, startedAt), grounded: true, timeoutMs: 120_000 });
     const formatted = await callGemini({ runId, step: "discover_format", model: FORMAT_MODEL, prompt: discoverFormatPrompt(research.text), schema: DISCOVER_SCHEMA, thinking: ThinkingLevel.LOW, timeoutMs: 25_000 });
     const raw = parseJson<{ companies?: Candidate[] }>(formatted.text).companies ?? [];
 

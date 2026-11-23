@@ -7,6 +7,7 @@ import { LandingPage } from "@/components/tools/icp-builder/LandingPage";
 import { IntakeScreen } from "@/components/tools/icp-builder/IntakeScreen";
 import { DEFAULT_ICP_COUNT } from "@/components/tools/icp-builder/constants";
 import type { IntakeData, IcpInput, GeneratedIcp, ValuePropResult, Screen } from "@/components/tools/icp-builder/types";
+import { saveLeadResult } from "@/lib/save-lead-result";
 
 // ScreenTransition wraps framer-motion, which only ever renders once the
 // wizard itself is showing (after the landing page and lead-gate): loading
@@ -76,21 +77,7 @@ export default function ICPBuilderClient() {
   // after ICPs (before Value Prop) is still captured with useful data.
   const saveProgress = (nextIcpResults: GeneratedIcp[] | null, nextValuePropResults: ValuePropResult[] | null) => {
     if (!leadData?.id) return;
-    // The Supabase client (~200 kB) is loaded on first use, not with the page.
-    void import("@/lib/supabase")
-      .then(({ supabase }) => {
-        supabase
-          .from("leads")
-          .update({
-            inputs: { intake, icps },
-            outputs: { icpResults: nextIcpResults, valuePropResults: nextValuePropResults },
-          })
-          .eq("id", leadData.id)
-          .then(({ error }) => {
-            if (error) console.error("Supabase inputs/outputs update failed:", error);
-          });
-      })
-      .catch((error) => console.error("Supabase inputs/outputs update failed:", error));
+    saveLeadResult(leadData.id, { intake, icps }, { icpResults: nextIcpResults, valuePropResults: nextValuePropResults });
   };
 
   const handleIcpResultsChange = (results: GeneratedIcp[] | null) => {
