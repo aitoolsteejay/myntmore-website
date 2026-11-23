@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-20T12:53:08.451Z",
+  "generatedAt": "2026-11-23T10:58:42.250Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 350,
-    "linked": 311,
-    "orphan": 39,
-    "noindex": 34,
-    "notInXmlSitemap": 44,
+    "total": 354,
+    "linked": 314,
+    "orphan": 40,
+    "noindex": 35,
+    "notInXmlSitemap": 45,
     "privateHidden": 12
   },
   "pages": [
@@ -254,6 +254,19 @@
       "inHtmlSitemap": false
     },
     {
+      "path": "/b2b-lead-generation-financial-services-delhi",
+      "title": "B2B Lead Generation for Financial Services, Delhi",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-delhi"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
       "path": "/b2b-lead-generation-gurugram",
       "title": "Lead Generation Company in Gurgaon (Gurugram)",
       "section": "other",
@@ -319,6 +332,19 @@
       "status": "linked",
       "linkedFrom": [
         "/b2b-lead-generation-pune"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/b2b-lead-generation-insurance-delhi",
+      "title": "B2B Lead Generation for Insurance in Delhi",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-delhi"
       ],
       "inboundCount": 1,
       "noindex": false,
@@ -485,6 +511,19 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-pharma-distributors-delhi",
+      "title": "Pharma Distribution Lead Generation in Delhi",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/b2b-lead-generation-delhi"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/b2b-lead-generation-pharma-hyderabad",
@@ -708,11 +747,12 @@
       "section": "calendar",
       "status": "orphan",
       "linkedFrom": [
+        "/cphi",
         "/enwilfernandes"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": true,
-      "referencedIn": "app/enwilfernandes/page.tsx",
+      "referencedIn": "app/cphi/page.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -1289,12 +1329,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1305,12 +1346,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1392,12 +1434,13 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1751,13 +1794,14 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1768,10 +1812,11 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/case-studies"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1796,13 +1841,14 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1845,11 +1891,12 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/resources/blogs/how-kolkata-healthcare-suppliers-reach-hospital-buyers",
         "/case-studies"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -1860,10 +1907,11 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/case-studies"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2150,13 +2198,14 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/case-studies",
         "case-studies/CaseStudyLayout.tsx",
         "case-studies/long/CaseStudyStoryCta.tsx",
         "case-studies/long/CaseStudyStoryQuote.tsx"
       ],
-      "inboundCount": 5,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -2231,11 +2280,12 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "lib/internal-paths.ts",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/case-studies"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2246,9 +2296,10 @@
       "section": "case-studies",
       "status": "linked",
       "linkedFrom": [
+        "/cphi",
         "/case-studies"
       ],
-      "inboundCount": 1,
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2267,6 +2318,17 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/cphi",
+      "title": "Cphi",
+      "section": "other",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
     },
     {
       "path": "/editorial-policy",
@@ -2425,11 +2487,12 @@
       "status": "linked",
       "linkedFrom": [
         "/",
+        "/cphi",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2490,13 +2553,14 @@
       "status": "linked",
       "linkedFrom": [
         "/",
+        "/cphi",
         "/resources/blogs/b2b-outbound-benchmark-report-2026",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/how-hyderabad-pharma-companies-find-b2b-buyers",
         "/resources/blogs/how-kolkata-healthcare-suppliers-reach-hospital-buyers",
         "/resources/blogs/relevance-beats-reach-b2b-outbound"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2650,8 +2714,8 @@
       "linkedFrom": [
         "/",
         "/events",
-        "/resources/blogs",
         "/resources/blogs/[slug]",
+        "/resources/blogs",
         "/resources/feed",
         "/resources/glossary",
         "/resources/guides/58-meetings-600-linkedin-connections",
@@ -2722,6 +2786,7 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/glossary/buying-signal",
         "/resources/glossary/target-account-strategy",
         "/resources/blogs",
         "/resources/blogs/b2b-lead-generation-for-corporate-gifting",
@@ -2729,7 +2794,7 @@
         "/resources/blogs/icp-mapping-b2b",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3058,7 +3123,7 @@
     },
     {
       "path": "/resources/blogs/handling-cold-email-replies",
-      "title": "How to Respond to Cold Email Replies: 4 Examples",
+      "title": "Cold Reply Meaning in Sales and How to Respond",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -3750,10 +3815,14 @@
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
+        "/resources/blogs/cold-email-follow-up-sequence",
+        "/resources/blogs/cold-email-sequence-templates",
         "/resources/blogs/handling-cold-email-replies",
+        "/resources/blogs/positive-reply-to-booked-meeting",
+        "/resources/blogs/reviving-closed-lost-leads",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 6,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -4657,12 +4726,12 @@
         "/",
         "/marketing-automation",
         "/resources/glossary/b2b-lead-generation",
-        "/resources/glossary/buying-signal",
         "/resources/glossary/cold-lead",
         "/resources/glossary/hot-lead",
-        "/resources/glossary/sales-pipeline"
+        "/resources/glossary/sales-pipeline",
+        "/resources/glossary/sdr"
       ],
-      "inboundCount": 19,
+      "inboundCount": 18,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
