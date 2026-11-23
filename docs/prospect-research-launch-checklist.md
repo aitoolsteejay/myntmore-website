@@ -4,14 +4,18 @@
 is not linked from any page and is not listed anywhere. This file lists what is still to do and every place a
 public tool is wired in, so launching is a short checklist.
 
+**Status on 23 Nov 2026:** working end to end. The database blocker from 12 Nov is fixed, the first real run
+finished (8 of 10 companies, $0.86, 5.6 minutes), and the timeouts and retry that run exposed are fixed. A second
+run is needed to confirm the fixes before launch (see "Still to do").
+
 ## How it works
 
 | Step | Route | What it does | Typical time |
 | --- | --- | --- | --- |
 | 1 | `POST /api/tools/prospect-research/profile` | Fetches the homepage, one grounded call to define the ideal customer, creates the run row | 15 to 30 s |
-| 2 | `POST /api/tools/prospect-research/discover` | Grounded call for 15 to 20 candidates, removes own company, exclusions, duplicates and dead domains, keeps 10. The run counts from here. | 30 to 60 s |
-| 3 | `POST /api/tools/prospect-research/account` | One per prospect, 5 at once, 1 retry: grounded research, format on Flash-Lite, link check in code, scores from `lib/research-scoring.ts`. Cached 7 days. | 25 to 60 s each |
-| 4 | `POST /api/tools/prospect-research/finish` | Saves accounts, timings and real cost on the run row and on the lead row | under 1 s |
+| 2 | `POST /api/tools/prospect-research/discover` | Grounded call for 15 to 20 candidates, removes own company, exclusions, duplicates and dead domains, keeps 10. The run counts from here. Limit 120 s. | 60 to 90 s (83 s measured) |
+| 3 | `POST /api/tools/prospect-research/account` | One per prospect, 5 at once, 1 retry: grounded research (limit 110 s), format on Flash-Lite, link check in code, scores from `lib/research-scoring.ts`. Cached 7 days. | 65 to 80 s each (measured) |
+| 4 | `POST /api/tools/prospect-research/finish` | Saves accounts, timings and real cost on the run row and on the lead row. Called again after "Retry the ones that failed" (`retry: true`), which keeps the first run's timings. | under 1 s |
 
 Code: `lib/prospect-research/` (core and net are pure and tested), `app/tools/prospect-research/`,
 `app/api/tools/prospect-research/`. Models: `PROSPECT_RESEARCH_MODEL` (default `gemini-3.8-flash`) and
@@ -30,6 +34,10 @@ Code: `lib/prospect-research/` (core and net are pure and tested), `app/tools/pr
   per-IP and global caps are the hard limits.
 - The server fetches visitor and model URLs through `safeFetch`, which refuses private and loopback addresses at
   every redirect hop.
+- The `leads` table has no anonymous read policy, on purpose (visitors must not read other people's details). The
+  lead form therefore creates the lead's id in the browser and inserts without asking for the row back
+  (`components/tools/shared/LeadGate.tsx`); an insert that returns the row is rejected by row level security.
+  Only the server, with the service role key, reads leads.
 
 ## Measure a run
 
@@ -55,6 +63,12 @@ from ai_usage_log where run_id = '<run id>'
 group by step order by step;
 ```
 
+First real run, 23 Nov 2026 (website `myntmore.com`): 40 searches, **$0.86**, 335 s in total, first company after 165 s.
+Profile $0.04, discovery $0.17, research $0.66 for the 8 that finished (about $0.08 each, range $0.03 to $0.14).
+10 companies found, 8 researched: `finpilot.ai` and `different.ai` timed out at the old 80 s limit on both tries (the ones
+that finished took 65 to 78 s), and discovery timed out once at the old 90 s limit and had to be started again.
+Failed calls log $0.00 here but Google may still bill part of them, so treat the cost as a floor.
+
 Cost is estimated at list price, with every search at $14 per 1,000 (the 5,000 free searches a month are not
 subtracted). 3.8 Flash token prices double on 1 Jan 2027; `lib/prospect-research/config.ts` already switches.
 If a run costs over $1.30 or takes over 2.5 minutes, the likely levers are: fewer searches per research call
@@ -62,15 +76,25 @@ If a run costs over $1.30 or takes over 2.5 minutes, the likely levers are: fewe
 
 ## Still to do before launch
 
-- [ ] **Blocker found 12 Nov 2026:** production `NEXT_PUBLIC_SUPABASE_URL` points to `ycdmczmtekhyfjivvhio.supabase.co`,
-      which no longer resolves (the project is gone). Every tool's Supabase lead insert fails silently, and this tool
-      refuses to run. Point `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY`
-      in Vercel at the live project (the one the SQL was run in), then redeploy.
-
-- [ ] Real runs measured (cost, searches, time to first prospect, total time, link-check downgrades).
+- [x] **Database blocker, fixed 23 Nov 2026.** Production pointed at `ycdmczmtekhyfjivvhio.supabase.co`
+      ("LeadMagnetData"), a project that had been paused, so every lead insert failed and this tool refused to run.
+      The live project is `gapaawxbkfmpthfesuyw` ("workupdatetracker", which also holds the client tracking and outreach
+      apps). `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel now point at it and production was
+      rebuilt; `SUPABASE_SERVICE_ROLE_KEY` was already valid for it. The old project holds 5 test leads from 27 and 28 Jul
+      and nothing else; it was restored by mistake while diagnosing, so pause or delete it when convenient.
+- [x] Lead form fixed for this project's row level security (commit `6e03ddf`, see Protection).
+- [x] Timeouts and retry from the first run (commits `ed3150e`, `839af9e`): research 80 s to 110 s per company, discovery
+      90 s to 120 s, function limits 150 s and 180 s, and a "Retry the N that could not be researched" button.
+- [ ] **Run it again** to confirm 10 of 10 and measure the time: the first run took 5.6 minutes (one discovery restart
+      included), against a 2.5 minute target. A clean run should be about 3 to 4 minutes. If speed matters, the levers are
+      listed above (fewer searches per company, lower thinking level, or 8 prospects instead of 10). Check
+      `ai_usage_log` for `AbortError` rows after the run.
+- [ ] More real runs measured (cost, searches, time to first prospect, total time, link-check downgrades).
 - [ ] The tool's own Zoho form: put its action URL in `ZOHO_FORM_ACTIONS.prospect_research` in
       `components/tools/shared/LeadGate.tsx`. Until then the lead is saved to Supabase only.
-- [ ] `SUPABASE_SERVICE_ROLE_KEY` in Vercel for Preview too (it is Production only), so branch previews work.
+- [ ] `SUPABASE_SERVICE_ROLE_KEY` in Vercel for Preview too (it is Production only), so branch previews work. Note
+      that the two `NEXT_PUBLIC_SUPABASE_*` variables are set for Preview as well, so a preview deploy writes real leads
+      to the live project.
 - [ ] Someone to handle `capacity` rows (status `capacity` in `prospect_research_runs`): the page promises an email.
 - [ ] Privacy policy: mention Gemini (Google) and Supabase.
 
@@ -91,3 +115,21 @@ If a run costs over $1.30 or takes over 2.5 minutes, the likely levers are: fewe
 - [ ] `scripts/generate-site-map.mjs`: remove `/tools/prospect-research` from `isPrivate` and the
       `/api/tools/prospect-research` filter on `apiRoutes`.
 - [ ] Navbar and footer: nothing to do. Both link only to the `/resources/tools` hub, not to single tools.
+
+## Supabase project notes (not launch blockers)
+
+The live project is shared with other apps, so these were left alone on purpose. Found 23 Nov 2026:
+
+- **Tool results are not being saved to the lead row.** The ten older tools update `leads.inputs` and `outputs` after
+  the form, but an anonymous update matches zero rows (no read policy), so nothing is stored. The code now calls
+  `public.save_lead_result(...)` through `lib/save-lead-result.ts` (commit `8c53769`), but that database function has not
+  been created, because the SQL was reviewed and not run. Until it is, those tools keep failing quietly. This tool is not
+  affected: it saves through the server with the service role key. The SQL is in commit `8c53769`
+  (`docs/supabase-lockdown-2026-11-23.sql`); its section 3 only touches `public.leads`, which the 24-hour request logs show only the website using.
+- **Six work-tracker tables in `public` have row level security off** (`app_users`, `project_tasks`, `task_folders`,
+  `daily_updates`, `task_comments`, `task_templates`). The anon key is public, so anyone can read or change them. Five are
+  empty; `app_users` has 2 rows whose passwords look unhashed. The logs show no use in 24 hours. Section 1 of the SQL locks
+  them; it stops the old tracker app, so check first.
+- **14 `SECURITY DEFINER` functions in the `myntmore` and `outreach` schemas can be run by anonymous visitors.** Section 2
+  of the SQL revokes this. Do not touch `get_invite_by_token` or `outreach.has_admin` without checking the sign-in flows.
+- Supabase Auth leaked-password protection is off (dashboard setting).
