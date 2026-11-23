@@ -24,7 +24,9 @@ export async function POST(req: NextRequest) {
       .maybeSingle();
     if (error) throw error;
     if (!run || run.lead_id !== lead.id) throw new ToolError(404, "This run has expired.");
-    if (run.status !== "running") return NextResponse.json({ ok: true });
+    // A run that is already saved is only saved again after the visitor retried failed companies.
+    const retry = body.retry === true;
+    if (run.status !== "running" && !(run.status === "done" && retry)) return NextResponse.json({ ok: true });
 
     const prospects = (run.prospects as Prospect[]) ?? [];
     const runDate = new Date(run.started_at);
@@ -49,10 +51,12 @@ export async function POST(req: NextRequest) {
     const totalCost = (usage ?? []).reduce((s, u) => s + Number(u.cost_usd || 0), 0);
     const totalSearches = (usage ?? []).reduce((s, u) => s + Number(u.searches || 0), 0);
 
+    const prevTimings = (run.timings as Record<string, unknown> | null) ?? {};
     const timings = {
-      ...(run.timings as Record<string, unknown> | null),
-      firstProspectMs: ms(body.firstProspectMs),
-      totalMs: ms(body.totalMs),
+      ...prevTimings,
+      // A retry keeps the first run's timings: it only measures the extra companies.
+      firstProspectMs: retry ? prevTimings.firstProspectMs ?? null : ms(body.firstProspectMs),
+      totalMs: retry ? prevTimings.totalMs ?? null : ms(body.totalMs),
       serverTotalMs: Date.now() - runDate.getTime(),
       failed: prospects.length - accounts.length,
     };
