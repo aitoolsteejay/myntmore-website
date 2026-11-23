@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "How do you create an aha moment in a cold email?", answer: "Name one specific problem the reader is likely facing right now, in the words they would use for it, and tie it to a visible trigger such as a new hire, an expansion or a tool change. Keep the product out of the first lines; the recognition comes from the problem, not the pitch." },
+  { question: "Why do most outbound messages fail to create an aha moment?", answer: "Most outbound messages describe the sender's product instead of the reader's situation. Generic benefits such as saving time or boosting growth could apply to anyone, so the reader feels targeted rather than understood. Without research into the prospect's trigger and language, there is nothing specific enough for them to recognise." },
+  { question: "Is an aha moment the same as a value proposition?", answer: "No. A value proposition is the outcome you promise to deliver. An aha moment is the reader's recognition of their own problem in what you wrote, which usually has to happen first. Once the prospect sees their situation described accurately, a value proposition becomes believable rather than sounding like another sales claim." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"The moment a cold message stops reading like a pitch and starts reading like someone finally gets it."}
       definition={"The point in an outbound message or conversation where a prospect suddenly recognizes their own problem in what's being described, and the outreach stops feeling like a pitch."}
-      body={"It doesn't happen by accident. It comes from referencing a specific, recognizable pain point rather than a generic benefit, so the prospect feels described rather than sold to. This is the same logic behind building content around a concrete, usable asset instead of branding copy."}
+      body={"It doesn't happen by accident. It comes from referencing a specific, recognisable pain point rather than a generic benefit, so the prospect feels described rather than sold to. The moment usually arrives when the message names a situation the reader is in right now, in words they would use themselves. Say an operations head receives two emails. One says a platform \"improves efficiency across your workflows\". The other says that after opening a second warehouse, stock counts between the two sites probably stopped matching by Friday each week. The second email can produce an aha moment, because it describes a problem the reader recognises instantly; the first describes nothing in particular. Getting there takes research before writing: knowing the prospect's industry, the trigger that makes the problem urgent, and the language their team uses for it. That is the same logic behind building content around a concrete, usable asset instead of branding copy. The common mistakes are leading with your product's features, guessing at a pain you have no evidence for, and stacking several problems into one message so none of them lands. One specific, accurate observation does more than a list of possible benefits."}
       sourceLabel={"Read the related term: Signal-Heavy Structuring"}
       sourceHref={"/resources/glossary/signal-heavy-structuring"}
       furtherLabel={"See the service: GTM Strategy"}
       furtherHref={"/services/gtm-strategy"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

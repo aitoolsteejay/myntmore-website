@@ -4,7 +4,7 @@ import CityLinks from "@/app/components/CityLinks";
 import JsonLd from "@/app/components/JsonLd";
 import { buildFaqSchema } from "@/lib/schema";
 import { pageFaqsQA } from "@/lib/page-faqs";
-import { UAE_CITY_LINKS } from "@/lib/city-links";
+import { MARKET_CITY_LINKS, UAE_CITY_LINKS } from "@/lib/city-links";
 import type { MarketPage } from "@/lib/market-pages";
 
 // The written half of a market page, shown under that market's case study cards: who it is for, what
@@ -90,6 +90,9 @@ export default function MarketGuide({ page, phrase }: { page: MarketPage; phrase
 
       {page.cities === "uae" && (
         <CityLinks cities={UAE_CITY_LINKS} heading="Based in the UAE?" intro="Our UAE city pages cover the local buyers and what outbound looks like there." />
+      )}
+      {page.cities === "market" && MARKET_CITY_LINKS[page.slug] && (
+        <CityLinks cities={MARKET_CITY_LINKS[page.slug]} heading={`B2B lead generation in ${phrase}, by city`} intro="Our city pages cover the local buyers, business districts and what outbound looks like there." />
       )}
       {page.cities === "india" && (
         <CityLinks heading="Where we run this in India" intro="City by city: the local industries we write for, and what outbound looks like there." />

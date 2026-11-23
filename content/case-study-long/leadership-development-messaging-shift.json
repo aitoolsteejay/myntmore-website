@@ -24,15 +24,36 @@
     "headline": "How a messaging shift tripled hot leads and helped achieve 60% LinkedIn acceptance for a leadership development brand",
     "intro": "Working in executive transformation and leadership development, our client offers immersive experiences designed to help founders, entrepreneurs, and senior leaders reflect on their purpose, priorities, and long-term direction. In July, shifting away from lengthy contextual explanations toward shorter, direct invitations **tripled hot leads from 5 to 15**. By September, refining audience-message fit delivered a **60% acceptance rate in Real Estate**, a **45% response rate in Interior Design**, and a peak **41% monthly response rate**.",
     "stats": [
-      { "value": "3x", "label": "Hot lead increase post-July" },
-      { "value": "60%", "label": "Real Estate CXO acceptance" },
-      { "value": "41%", "label": "Peak monthly response rate" }
+      {
+        "value": "3x",
+        "label": "Hot lead increase post-July"
+      },
+      {
+        "value": "60%",
+        "label": "Real Estate CXO acceptance"
+      },
+      {
+        "value": "41%",
+        "label": "Peak monthly response rate"
+      }
     ],
     "metricsStrip": [
-      { "value": "480", "label": "lifetime replies" },
-      { "value": "45%", "label": "Interior Design reply rate" },
-      { "value": "158", "label": "September replies (peak)" },
-      { "value": "3,826", "label": "total requests sent (41.0% acceptance)" }
+      {
+        "value": "480",
+        "label": "lifetime replies"
+      },
+      {
+        "value": "45%",
+        "label": "Interior Design reply rate"
+      },
+      {
+        "value": "158",
+        "label": "September replies (peak)"
+      },
+      {
+        "value": "3,826",
+        "label": "total requests sent (41.0% acceptance)"
+      }
     ]
   },
   "challenge": {
@@ -57,13 +78,48 @@
       "tag": "The Turning Point",
       "heading": "Simplicity Beats Explanation: The Shorter Invitation Test",
       "text": "Until July, messages had been long and explanatory. We stripped away the lengthy explanations and introduced short, direct connection invitations that communicated the purpose clearly without cognitive overload.",
-      "tableHeaders": ["Metric", "May to June", "July", "Net Shift"],
+      "tableHeaders": [
+        "Metric",
+        "May to June",
+        "July",
+        "Net Shift"
+      ],
       "rows": [
-        { "metric": "Connection requests sent", "before": "523", "after": "612", "shift": "+17%", "tone": "positive" },
-        { "metric": "Acceptance rate", "before": "42%", "after": "34%", "shift": "-8 pts (Higher intent filter)", "tone": "caution" },
-        { "metric": "Replies received", "before": "48", "after": "60", "shift": "+25%", "tone": "positive" },
-        { "metric": "Response rate", "before": "22%", "after": "29%", "shift": "+7 percentage points", "tone": "positive" },
-        { "metric": "Hot leads", "before": "5", "after": "15", "shift": "3x Increase", "tone": "highlight" }
+        {
+          "metric": "Connection requests sent",
+          "before": "523",
+          "after": "612",
+          "shift": "+17%",
+          "tone": "positive"
+        },
+        {
+          "metric": "Acceptance rate",
+          "before": "42%",
+          "after": "34%",
+          "shift": "-8 pts (Higher intent filter)",
+          "tone": "caution"
+        },
+        {
+          "metric": "Replies received",
+          "before": "48",
+          "after": "60",
+          "shift": "+25%",
+          "tone": "positive"
+        },
+        {
+          "metric": "Response rate",
+          "before": "22%",
+          "after": "29%",
+          "shift": "+7 percentage points",
+          "tone": "positive"
+        },
+        {
+          "metric": "Hot leads",
+          "before": "5",
+          "after": "15",
+          "shift": "3x Increase",
+          "tone": "highlight"
+        }
       ]
     },
     "momentum": {
@@ -81,14 +137,83 @@
     "eyebrow": "Historical Data",
     "heading": "Lifetime LinkedIn Outreach Performance (Feb–Sept 2026)",
     "intro": "Across the 7-month campaign period, Myntmore sent **3,826 connection requests**, generating **1,570 accepted connections (41.0% lifetime acceptance)**, **480 replies (30.6% lifetime response)**, and **89 reported hot leads**:",
-    "tableHeaders": ["Reporting Period", "Sent", "Accepted", "Acceptance", "Replies", "Response", "Hot Leads", "Meetings"],
+    "tableHeaders": [
+      "Reporting Period",
+      "Sent",
+      "Accepted",
+      "Acceptance",
+      "Replies",
+      "Response",
+      "Hot Leads",
+      "Meetings"
+    ],
     "periods": [
-      { "period": "Feb 15 to Mar 15", "sent": "580", "accepted": "247", "acceptance": "43%", "replies": "59", "response": "24%", "leads": "14", "meetings": "1", "highlight": false },
-      { "period": "Mar 15 to Apr 15", "sent": "548", "accepted": "220", "acceptance": "40%", "replies": "57", "response": "26%", "leads": "17", "meetings": "0", "highlight": false },
-      { "period": "May 15 to Jun 30", "sent": "523", "accepted": "219", "acceptance": "42%", "replies": "48", "response": "22%", "leads": "5", "meetings": "1", "highlight": false },
-      { "period": "July (Shift)", "sent": "612", "accepted": "208", "acceptance": "34%", "replies": "60", "response": "29%", "leads": "15", "meetings": "0", "highlight": true },
-      { "period": "August", "sent": "631", "accepted": "291", "acceptance": "46%", "replies": "98", "response": "34%", "leads": "19", "meetings": "3", "highlight": true },
-      { "period": "September", "sent": "932", "accepted": "385", "acceptance": "41.3%", "replies": "158", "response": "41%", "leads": "19", "meetings": "0", "highlight": true }
+      {
+        "period": "Feb 15 to Mar 15",
+        "sent": "580",
+        "accepted": "247",
+        "acceptance": "43%",
+        "replies": "59",
+        "response": "24%",
+        "leads": "14",
+        "meetings": "1",
+        "highlight": false
+      },
+      {
+        "period": "Mar 15 to Apr 15",
+        "sent": "548",
+        "accepted": "220",
+        "acceptance": "40%",
+        "replies": "57",
+        "response": "26%",
+        "leads": "17",
+        "meetings": "0",
+        "highlight": false
+      },
+      {
+        "period": "May 15 to Jun 30",
+        "sent": "523",
+        "accepted": "219",
+        "acceptance": "42%",
+        "replies": "48",
+        "response": "22%",
+        "leads": "5",
+        "meetings": "1",
+        "highlight": false
+      },
+      {
+        "period": "July (Shift)",
+        "sent": "612",
+        "accepted": "208",
+        "acceptance": "34%",
+        "replies": "60",
+        "response": "29%",
+        "leads": "15",
+        "meetings": "0",
+        "highlight": true
+      },
+      {
+        "period": "August",
+        "sent": "631",
+        "accepted": "291",
+        "acceptance": "46%",
+        "replies": "98",
+        "response": "34%",
+        "leads": "19",
+        "meetings": "3",
+        "highlight": true
+      },
+      {
+        "period": "September",
+        "sent": "932",
+        "accepted": "385",
+        "acceptance": "41.3%",
+        "replies": "158",
+        "response": "41%",
+        "leads": "19",
+        "meetings": "0",
+        "highlight": true
+      }
     ],
     "total": {
       "label": "Lifetime Total",
@@ -107,10 +232,22 @@
     "heading": "The Refined 4-Stage Messaging Sequence",
     "intro": "Instead of aggressive calendar pushing, the September sequence engaged founders as intellectual peers:",
     "steps": [
-      { "title": "Short Connection Invitation", "description": "Briefly noted shared leadership context without cognitive overload or forced sales hooks." },
-      { "title": "Situational Follow-Up", "description": "Framed around transitional dilemmas: rapid scaling, succession, decision fatigue, and next-phase alignment." },
-      { "title": "Personalized Voice Note", "description": "Acknowledged the founder's personal trajectory and highlighted that successful leaders often have clarity on their business but lack dedicated time for personal direction." },
-      { "title": "Low-Pressure Closing", "description": "Acknowledged timing sensitivities and left the door open for future cohorts without repetitive follow-up pressure." }
+      {
+        "title": "Short Connection Invitation",
+        "description": "Briefly noted shared leadership context without cognitive overload or forced sales hooks."
+      },
+      {
+        "title": "Situational Follow-Up",
+        "description": "Framed around transitional dilemmas: rapid scaling, succession, decision fatigue, and next-phase alignment."
+      },
+      {
+        "title": "Personalized Voice Note",
+        "description": "Acknowledged the founder's personal trajectory and highlighted that successful leaders often have clarity on their business but lack dedicated time for personal direction."
+      },
+      {
+        "title": "Low-Pressure Closing",
+        "description": "Acknowledged timing sensitivities and left the door open for future cohorts without repetitive follow-up pressure."
+      }
     ]
   },
   "takeaways": {
@@ -142,9 +279,18 @@
   "servicesUsed": {
     "heading": "Services used in this engagement",
     "links": [
-      { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" },
-      { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
-      { "name": "Personal Branding", "href": "/services/personal-branding" }
+      {
+        "name": "LinkedIn Outreach & Automation",
+        "href": "/services/linkedin-outreach"
+      },
+      {
+        "name": "ICP Mapping & Lead Scoring",
+        "href": "/services/sales-intelligence"
+      },
+      {
+        "name": "Personal Branding",
+        "href": "/services/personal-branding"
+      }
     ]
   },
   "cta": {

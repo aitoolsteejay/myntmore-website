@@ -4,6 +4,7 @@
 // Pass --check to fail if a generated file is out of date instead of writing it.
 import fs from "node:fs";
 import path from "node:path";
+import { checkEntry } from "./lib/content-rules.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const CHECK = process.argv.includes("--check");
@@ -32,7 +33,9 @@ const homepage = readDir("content/faqs/homepage")
 // Other pages: one file per page holding its list of questions, in the order the editor left them.
 const pages = {};
 for (const { id, data } of readDir("content/faqs/pages")) {
-  if (!data.items || !data.items.length) throw new Error(`content/faqs/pages/${id}.json has no questions`);
+  // Build rules shared with the content admin: scripts/lib/content-rules.mjs
+  const [first] = await checkEntry("pageFaqs", data, null);
+  if (first) throw new Error(`content/faqs/pages/${id}.json: ${first.message}`);
   pages[id] = data.items.map(cleanItem);
 }
 

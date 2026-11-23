@@ -298,7 +298,7 @@ export default function SystemFlow() {
         <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border mb-3" style={{ color:"#A14A08", borderColor:"rgba(245,183,49,0.4)", background:"rgba(245,183,49,0.08)" }}>
           The Result
         </span>
-        <h3 className="text-xl sm:text-2xl font-black text-[#0a0a0a] mb-2">Mynt More Money</h3>
+        <h3 className="text-xl sm:text-2xl font-black text-[#0a0a0a] mb-2">The force behind your growth</h3>
         <p className="text-[#52525B] text-sm max-w-lg mx-auto">
           Your team closes. Revenue compounds. Repeat the system, scale the results this is what a full-stack outbound engine looks like when it&rsquo;s firing on all cylinders.
         </p>

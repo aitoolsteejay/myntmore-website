@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A system for ranking leads by fit and engagement, so sales effort goes to the prospects most likely to convert first, instead of treating every lead identically.",
-  "body": "A basic score combines two inputs: how well the lead matches the ICP, and how much they've actually engaged (opens, replies, meeting requests). A lead that's a perfect ICP fit but silent scores lower than an imperfect fit who's actively replying, because engagement is the stronger near-term predictor of a closed deal.",
+  "body": "Lead scoring tells a sales team who to call first. A basic score combines two inputs: how well the lead matches the ICP, and how much they have actually engaged, through opens, replies or meeting requests. Fit answers whether the company could buy; engagement answers whether this person is paying attention now. A lead that is a perfect ICP fit but silent scores lower than an imperfect fit who is actively replying, because engagement is the stronger near-term predictor of a closed deal. Say a model gives up to 50 points for fit, such as the right industry, size and job title, and up to 50 for engagement, with a reply worth more than an open. A lead at a perfect-fit company who has opened three emails might score 60; a slightly smaller company whose head of sales replied asking for details might score 75, and gets called first. The common mistakes are counting email opens heavily, since privacy features make them unreliable, never revisiting the weights, and scoring so many factors that nobody trusts the result. A simple model that sales actually uses beats a complex one that sits ignored in the CRM.",
   "sourceLabel": "Read: The 7 B2B Lead Gen Metrics That Actually Matter",
   "sourceHref": "/resources/blogs/b2b-lead-gen-metrics",
   "furtherLabel": "See the service: ICP Mapping & Lead Scoring",
@@ -24,5 +24,18 @@
     "lead scoring definition",
     "how to score leads"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you build a simple lead scoring model?",
+      "answer": "Score two things: fit and engagement. Give points for how closely the company and role match your ideal customer profile, and more points for strong engagement signals such as replies and meeting requests than for weak ones such as opens. Review the scores against closed deals every quarter and adjust the weights."
+    },
+    {
+      "question": "What is the difference between lead scoring and lead qualification?",
+      "answer": "Lead scoring ranks leads automatically using data, so the team knows who to contact first. Lead qualification is the conversation that confirms whether a lead has a real need, budget, authority and timeline. Scoring decides priority before a conversation; qualification decides whether the opportunity is genuine once the conversation happens."
+    },
+    {
+      "question": "What signals should a B2B lead score include?",
+      "answer": "Fit signals such as industry, company size, role and location, and engagement signals such as replies, meeting requests and repeat website visits. Buying triggers, like funding, hiring or a new leader, are worth adding as fit boosters. Weight email opens lightly, because privacy features make them an unreliable sign of real interest."
+    }
+  ]
 }

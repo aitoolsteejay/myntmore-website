@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 
 export const doItYourselfCopySchema = {
   schema: fields.object(

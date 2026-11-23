@@ -29,9 +29,18 @@
     "headline": "LinkedIn brand drove 3x inbound in 90 days",
     "intro": "A successful consulting founder was entirely dependent on word-of-mouth referrals. Growth was highly volatile month-to-month with no predictable inbound funnel.",
     "stats": [
-      { "value": "3x", "label": "Inbound lead volume" },
-      { "value": "18K", "label": "New followers" },
-      { "value": "4.8%", "label": "Post engagement rate" }
+      {
+        "value": "3x",
+        "label": "Inbound lead volume"
+      },
+      {
+        "value": "18K",
+        "label": "New followers"
+      },
+      {
+        "value": "4.8%",
+        "label": "Post engagement rate"
+      }
     ]
   },
   "colors": {
@@ -45,23 +54,53 @@
   "solution": {
     "body": "We took over the founder's LinkedIn presence completely. Through weekly 30-minute interviews, we extracted their expertise and ghostwrote 3–4 native posts per week discussing highly technical teardowns of their industry. We rewrote their profile to act as an inbound conversion page.",
     "cards": [
-      { "title": "Voice Extraction", "description": "Monthly 30-min interviews capturing unique opinions, client experiences, and industry insights" },
-      { "title": "Content Strategy", "description": "Strategic mix of opinion posts, industry teardowns, and client success stories published 3–4x per week" },
-      { "title": "Profile Optimisation", "description": "Complete profile rewrite positioning the founder as the go-to authority in their niche" },
-      { "title": "Engagement Strategy", "description": "Targeted engagement with ideal prospects to expand reach into the right audience" }
+      {
+        "title": "Voice Extraction",
+        "description": "Monthly 30-min interviews capturing unique opinions, client experiences, and industry insights"
+      },
+      {
+        "title": "Content Strategy",
+        "description": "Strategic mix of opinion posts, industry teardowns, and client success stories published 3–4x per week"
+      },
+      {
+        "title": "Profile Optimisation",
+        "description": "Complete profile rewrite positioning the founder as the go-to authority in their niche"
+      },
+      {
+        "title": "Engagement Strategy",
+        "description": "Targeted engagement with ideal prospects to expand reach into the right audience"
+      }
     ]
   },
   "results": {
     "summary": "Within 90 days, the founder's inbound enquiry volume tripled. DMs from ideal prospects became a daily occurrence. The follower base grew by 18K with a highly engaged audience of the exact buyers they wanted to work with.",
     "figures": [
-      { "value": "3x", "label": "Inbound lead volume", "note": "In 90 days" },
-      { "value": "18K", "label": "New LinkedIn followers", "note": "Target ICP audience" },
-      { "value": "4.8%", "label": "Post engagement rate", "note": "vs ~1% platform average" }
+      {
+        "value": "3x",
+        "label": "Inbound lead volume",
+        "note": "In 90 days"
+      },
+      {
+        "value": "18K",
+        "label": "New LinkedIn followers",
+        "note": "Target ICP audience"
+      },
+      {
+        "value": "4.8%",
+        "label": "Post engagement rate",
+        "note": "vs ~1% platform average"
+      }
     ]
   },
   "services": [
-    { "name": "Personal Branding", "href": "/services/personal-branding" },
-    { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" }
+    {
+      "name": "Personal Branding",
+      "href": "/services/personal-branding"
+    },
+    {
+      "name": "LinkedIn Outreach & Automation",
+      "href": "/services/linkedin-outreach"
+    }
   ],
   "closingCta": {
     "heading": "Get predictable inbound from LinkedIn",

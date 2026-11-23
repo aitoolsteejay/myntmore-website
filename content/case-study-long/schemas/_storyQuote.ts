@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 
 // Page-copy fields for the long-form case studies that carry a client quote (layout: CaseStudyStoryQuote).
 const stat = fields.object(

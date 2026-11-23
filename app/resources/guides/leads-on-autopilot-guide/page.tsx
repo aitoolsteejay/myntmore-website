@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/app/components/JsonLd";
+import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import Image from "next/image";
 import Link from "next/link";
 import InnerLayout from "@/app/components/InnerLayout";
@@ -98,9 +100,18 @@ function DataTable({ rows }: { rows: string[][] }) {
   );
 }
 
+// Article schema. The first publication date is not on record, so only the last update (from lib/sitemap-dates.json) is given.
+const ARTICLE_SCHEMA = buildArticleSchema({
+  headline: "Leads on Autopilot: A LinkedIn Framework",
+  description: "A complete system to generate high-quality B2B leads on LinkedIn without cold pitching: audience, content, outreach, nurturing, and follow-ups.",
+  url: `${SITE_URL}/resources/guides/leads-on-autopilot-guide`,
+  dateModified: "2026-11-14T12:09:59+05:30",
+});
+
 export default function LeadsOnAutopilotGuide() {
   return (
     <InnerLayout>
+      <JsonLd data={ARTICLE_SCHEMA} />
       <section className="relative pt-32 pb-16 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>
         <div aria-hidden="true" style={{ position: "absolute", top: "-160px", left: "-180px", width: 680, height: 680, borderRadius: "50%", background: "radial-gradient(circle,rgba(0,119,181,0.2),rgba(0,119,181,0.06) 42%,transparent 70%)", filter: "blur(55px)" }} />
         <div aria-hidden="true" style={{ position: "absolute", top: "-120px", right: "-180px", width: 620, height: 620, borderRadius: "50%", background: "radial-gradient(circle,rgba(245,183,49,0.19),rgba(245,183,49,0.06) 42%,transparent 70%)", filter: "blur(55px)" }} />

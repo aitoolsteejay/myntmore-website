@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Check, X, ArrowRight } from "lucide-react";
 import InnerLayout from "@/app/components/InnerLayout";
 import FadeIn from "@/app/components/FadeIn";
@@ -130,31 +129,7 @@ export default function OrbitPlanClient() {
         {/* Main Content Container */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Sub-Header Branding Bar from Design Poster */}
-          <div className="hero-fade flex flex-wrap items-center justify-between gap-4 mb-12 sm:mb-16 pt-2">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3.5 group transition-transform duration-200 hover:scale-[1.02]"
-              aria-label="Myntmore home"
-            >
-              <Image
-                src="/logo.png"
-                alt="Myntmore"
-                width={150}
-                height={42}
-                className="h-8 sm:h-10 w-auto object-contain"
-                priority
-              />
-              <div className="h-7 w-[1px] bg-[#D4CDC3]" aria-hidden="true" />
-              <span
-                className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.24em] leading-[1.35]"
-                style={{ color: "#4A4A52" }}
-              >
-                Growth for
-                <br />
-                What&apos;s next
-              </span>
-            </Link>
-
+          <div className="hero-fade flex flex-wrap items-center justify-end gap-4 mb-12 sm:mb-16 pt-2">
             <div
               className="inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-white/85 border text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] shadow-sm backdrop-blur-sm transition-transform duration-200 hover:scale-105"
               style={{ borderColor: BORDER_COLOR, color: INK }}

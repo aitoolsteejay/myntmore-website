@@ -13,7 +13,7 @@
     "GTM"
   ],
   "definition": "The plan for bringing a product to market: which customers to target, what value to promise them, how to price it, and which sales and marketing channels will reach them.",
-  "body": "In B2B, a GTM strategy answers four questions before any campaign runs: who exactly is the buyer, what problem are they feeling right now, why choose you over the alternatives, and which channel reaches them best, whether that's cold email, LinkedIn, events, or partners. Skipping it is why so many outbound campaigns send plenty of messages and get very few replies.",
+  "body": "In B2B, a GTM strategy answers four questions before any campaign runs: who exactly is the buyer, what problem are they feeling right now, why choose you over the alternatives, and which channel reaches them best, whether that is cold email, LinkedIn, events or partners. Pricing and packaging sit alongside those answers, because they shape which buyers can say yes. A useful strategy is specific enough to act on. Say a SaaS company decides its first market is operations leaders at mid-sized logistics firms, its promise is fewer manual stock reconciliations, and its main channel is outbound email backed by founder content on LinkedIn. Every list, message and landing page can now be checked against that plan. The common mistakes are targeting everyone who could theoretically buy, choosing channels before understanding the buyer, and treating the strategy as a one-off document rather than something updated as replies and deals come in. Skipping it is why so many outbound campaigns send plenty of messages and get very few replies: the activity is real, but it is aimed at the wrong people with the wrong promise. A GTM strategy should be revisited whenever the company enters a new market, launches a new product or finds that a channel has stalled.",
   "sourceLabel": "See the service: GTM Strategy",
   "sourceHref": "/services/gtm-strategy",
   "furtherLabel": "Read the related term: Value Proposition",
@@ -28,5 +28,18 @@
     "gtm meaning b2b",
     "gtm strategy"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is included in a B2B GTM strategy?",
+      "answer": "A B2B go-to-market strategy defines the target customer, the problem they feel, the value you promise, how you price and package the offer, and the channels you use to reach buyers. It should also set how you will measure success, so each campaign can be judged against the plan rather than on activity alone."
+    },
+    {
+      "question": "What is the difference between a GTM strategy and a marketing plan?",
+      "answer": "A GTM strategy decides who to sell to, what to promise and through which channels, for a product or market. A marketing plan is the detailed schedule of campaigns and content that carries part of that strategy out. The strategy comes first; without it, a marketing plan has nothing specific to aim at."
+    },
+    {
+      "question": "How often should a GTM strategy be updated?",
+      "answer": "Review it whenever something important changes: a new market, a new product, a channel that stops working or a shift in who is actually buying. Many B2B teams also review it quarterly against real replies and closed deals, adjusting the target segment and message before scaling spend on what already works."
+    }
+  ]
 }

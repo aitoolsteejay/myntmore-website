@@ -6,8 +6,13 @@
   "accent": "#EF4444",
   "tagline": "Two meanings: a short, distant answer in a chat, or a prospect's first response to cold outreach.",
   "excerpt": "In chat, a short and distant answer like \"ok\". In sales, a prospect's first reply to an email or message they never asked for.",
-  "alsoKnownAs": ["Cold response", "Cold replies"],
-  "indexAliases": ["Cold response"],
+  "alsoKnownAs": [
+    "Cold response",
+    "Cold replies"
+  ],
+  "indexAliases": [
+    "Cold response"
+  ],
   "definitionLead": "Cold reply meaning:",
   "definition": "In a text or chat, a cold reply is a short, distant answer such as \"ok\", \"k\" or \"fine\" that shows little warmth or interest. In sales, a cold reply is a prospect's first response to a cold email or LinkedIn message they never asked for, whether it is interested, a brush-off or a question.",
   "body": "",
@@ -29,11 +34,32 @@
     {
       "heading": "Cold reply examples",
       "table": {
-        "columns": ["In chat", "In sales"],
+        "columns": [
+          "In chat",
+          "In sales"
+        ],
         "rows": [
-          { "label": "Typical wording", "cells": ["\"ok\", \"k\", \"hmm\", \"fine\"", "\"send me more info\", \"not right now\", \"who else do you work with?\""] },
-          { "label": "What it usually means", "cells": ["Busy, distracted or not very interested", "Some curiosity, a polite exit, or a request for proof"] },
-          { "label": "How to respond", "cells": ["Match their length, ask one open question, give them space", "Answer within an hour with one short, specific question, not a deck"] }
+          {
+            "label": "Typical wording",
+            "cells": [
+              "\"ok\", \"k\", \"hmm\", \"fine\"",
+              "\"send me more info\", \"not right now\", \"who else do you work with?\""
+            ]
+          },
+          {
+            "label": "What it usually means",
+            "cells": [
+              "Busy, distracted or not very interested",
+              "Some curiosity, a polite exit, or a request for proof"
+            ]
+          },
+          {
+            "label": "How to respond",
+            "cells": [
+              "Match their length, ask one open question, give them space",
+              "Answer within an hour with one short, specific question, not a deck"
+            ]
+          }
         ]
       }
     },

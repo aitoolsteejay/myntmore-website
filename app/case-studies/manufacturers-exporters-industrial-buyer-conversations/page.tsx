@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/manufacturers-exporters-indus
 
 export const metadata: Metadata = {
   title: "Industrial Manufacturer Case Study",
-  description: "18 International Buyer Conversations for an Industrial Manufacturer: 2 sample-stage commercial opportunities. A Myntmore Manufacturers & Exporters case study.",
+  description: "18 international buyer conversations for an industrial manufacturer: 6 technical specification requests and 2 sample-stage deals. A Myntmore case study.",
   keywords: [
     "industrial manufacturer lead generation",
     "industrial manufacturer case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "18 International Buyer Conversations for an Industrial Manufacturer",
-    description: "18 International Buyer Conversations for an Industrial Manufacturer: 2 sample-stage commercial opportunities. A Myntmore Manufacturers & Exporters case study.",
+    description: "18 international buyer conversations for an industrial manufacturer: 6 technical specification requests and 2 sample-stage deals. A Myntmore case study.",
     url: URL,
     images: ogImages("/case-studies/manufacturers-exporters-industrial-buyer-conversations"),
   },

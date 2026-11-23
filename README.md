@@ -6,6 +6,8 @@ This is a large, content-heavy marketing site: **165 routes** as of this writing
 
 ---
 
+For copy-and-paste Codex prompts by page type and task, see the [website prompt library](docs/website-prompt-library.md).
+
 ## Table of contents
 
 - [Tech stack](#tech-stack)
@@ -238,7 +240,7 @@ Key shared components (`app/components/*.tsx`, imported across many routes - tre
 | `schema.ts` | JSON-LD builders: `buildLocalBusinessSchema`, `buildFaqSchema`, `buildServiceSchema`, `buildWebApplicationSchema`, `buildDefinedTermSchema`, `buildBreadcrumbSchema`, `buildWebsiteSchema`, `buildHowToSchema`, `buildArticleSchema`, `buildEventSchema`, `buildJobPostingSchema`. Every new page should use whichever of these fits its content type - see the "Triggered" checklist in `docs/seo-aeo-geo-cadence.md`. |
 | `tools-registry.ts` | Single source of truth for the 9 free tools' slug/name/href/tagline (see [Free tools](#free-tools-toolss)). |
 | `faq-data.ts` | Shared FAQ content used by the `FAQ.tsx` component / `buildFaqSchema`. |
-| `events-data.ts` | Data backing `/events` and the `UpcomingEvents.tsx` component. |
+| `events-data.ts` | Data backing `/events`, the event pop-up and `UpcomingEvents.tsx`, read from `events.generated.json` (built from `content/events/`, edited in Keystatic). |
 | `tool-social-metadata.ts` | OG/social preview metadata specific to the tools. |
 | `mentiAuth.ts` | Simple password-based auth for the `/menti/room` admin flow. |
 | `supabase.ts` | Supabase client init (reads `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`). |
@@ -271,6 +273,8 @@ Zoho CRM is the primary lead record for each tool (a dedicated form per tool, or
 | `MENTI_ADMIN_PASSWORD` | Gates the `/menti/room` admin flow. **Required** -- there is no default; if unset, nobody can log in to the room |
 
 No `.env.example` is committed - set these in your local `.env.local` and in the Vercel project's environment settings.
+
+The content admin at `/admin` needs its own variables (`SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_GITHUB_APP_ID`, `ADMIN_GITHUB_APP_PRIVATE_KEY`, `ADMIN_GITHUB_INSTALLATION_ID`, `ADMIN_GITHUB_REPO`, and optionally `ADMIN_GITHUB_BRANCH` and `ADMIN_VERCEL_DEPLOY_HOOK_URL`). See [`docs/admin-setup.md`](docs/admin-setup.md); for local work, `ADMIN_LOCAL_DEV=1 npm run dev` needs none of them.
 
 ## SEO / AEO / GEO governance
 

@@ -13,7 +13,7 @@
     "New Business Development"
   ],
   "definition": "The work of creating new growth opportunities for a company, by finding new customers, opening new markets, and forming partnerships, as distinct from managing existing accounts.",
-  "body": "In many B2B teams, especially in India, business development is the title given to whoever runs outbound prospecting and early sales conversations, which overlaps heavily with the SDR role. New business development specifically means winning logos you don't have yet, which is why it relies on outbound rather than on upselling the customers you already serve.",
+  "body": "Business development covers the work of creating new growth for a company: finding new customers, opening new markets and forming partnerships, as distinct from managing and expanding the accounts it already has. In many B2B teams, especially in India, business development is also the job title given to whoever runs outbound prospecting and early sales conversations, which overlaps heavily with the SDR role. New business development specifically means winning logos you do not have yet, which is why it relies on outbound rather than on upselling the customers you already serve. The work is mostly upstream of the sale: choosing which accounts to pursue, researching them, starting conversations and qualifying interest before a closer takes over. In partnership-led businesses it also means finding distributors, resellers or referral partners who can bring in customers. Say a software firm wants to enter a new country. Its business development work is identifying the companies worth approaching there, the partners who could help, and the first conversations that test whether the market wants the product. The common mistakes are treating business development as general networking with no targets, and measuring it only on closed revenue, which hides whether the early-stage work is actually happening.",
   "sourceLabel": "Read the related term: SDR (Sales Development Rep)",
   "sourceHref": "/resources/glossary/sdr",
   "furtherLabel": "Read: Agency vs. In-House SDR for B2B Outbound",
@@ -28,5 +28,18 @@
     "new business development",
     "business development vs sales"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What does business development mean in B2B?",
+      "answer": "Business development is the work of creating new growth for a company by finding new customers, opening new markets and forming partnerships. It focuses on winning business the company does not have yet, as opposed to account management, which looks after and expands existing customers."
+    },
+    {
+      "question": "What is the difference between business development and sales?",
+      "answer": "Business development finds and opens new opportunities; sales converts qualified opportunities into revenue. In many teams, business development handles prospecting, outreach and first conversations, then hands qualified prospects to a salesperson who runs the deal through to a signed contract."
+    },
+    {
+      "question": "What does a business development executive do?",
+      "answer": "A business development executive researches target accounts, contacts prospects through email, LinkedIn and calls, qualifies interest and books meetings for the sales team. In many Indian B2B companies the title covers the same work as an SDR, focused on starting conversations with new customers."
+    }
+  ]
 }

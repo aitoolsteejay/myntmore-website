@@ -123,7 +123,7 @@ One page per country with two or more campaigns: the case studies there, what wo
 - [India](https://www.myntmore.com/case-studies/markets/india): Payroll, insurance partnership and doctor outreach campaigns inside India; DPDP Act and TRAI.
 
 ## Locations
-Myntmore serves B2B clients across India and in the UAE. City pages cover local market context, not separate offices.
+Myntmore serves B2B clients across India and abroad, from one office in Mumbai. City pages cover local market context, not separate offices; pages for cities outside India say where no local case study exists yet.
 - [B2B Lead Generation in Mumbai](https://www.myntmore.com/b2b-lead-generation-mumbai)
 - [B2B Lead Generation in Delhi](https://www.myntmore.com/b2b-lead-generation-delhi)
 - [B2B Lead Generation in Gurugram](https://www.myntmore.com/b2b-lead-generation-gurugram)
@@ -140,6 +140,16 @@ Myntmore serves B2B clients across India and in the UAE. City pages cover local 
 - [B2B Lead Generation in Coimbatore](https://www.myntmore.com/b2b-lead-generation-coimbatore)
 - [B2B Lead Generation in Dubai](https://www.myntmore.com/b2b-lead-generation-dubai)
 - [B2B Lead Generation in Abu Dhabi](https://www.myntmore.com/b2b-lead-generation-abu-dhabi)
+- [B2B Lead Generation in New York](https://www.myntmore.com/b2b-lead-generation-new-york)
+- [B2B Lead Generation in London](https://www.myntmore.com/b2b-lead-generation-london)
+- [B2B Lead Generation in Tokyo](https://www.myntmore.com/b2b-lead-generation-tokyo)
+- [B2B Lead Generation in Paris](https://www.myntmore.com/b2b-lead-generation-paris)
+- [B2B Lead Generation in Singapore](https://www.myntmore.com/b2b-lead-generation-singapore)
+- [B2B Lead Generation in Hong Kong](https://www.myntmore.com/b2b-lead-generation-hong-kong)
+- [B2B Lead Generation in Los Angeles](https://www.myntmore.com/b2b-lead-generation-los-angeles)
+- [B2B Lead Generation in Shanghai](https://www.myntmore.com/b2b-lead-generation-shanghai)
+- [B2B Lead Generation in Sydney](https://www.myntmore.com/b2b-lead-generation-sydney)
+- [B2B Lead Generation in Toronto](https://www.myntmore.com/b2b-lead-generation-toronto)
 
 ## About and contact
 - [About Myntmore & Tejas Jhaveri](https://www.myntmore.com/about-us)

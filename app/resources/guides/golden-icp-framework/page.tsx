@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/app/components/JsonLd";
+import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import Image from "next/image";
 import Link from "next/link";
 import InnerLayout from "@/app/components/InnerLayout";
@@ -94,9 +96,18 @@ function DataTable({ rows }: { rows: string[][] }) {
   );
 }
 
+// Article schema. The first publication date is not on record, so only the last update (from lib/sitemap-dates.json) is given.
+const ARTICLE_SCHEMA = buildArticleSchema({
+  headline: "The Golden ICP Framework for B2B Outbound",
+  description: "Build high-converting B2B prospect lists using pressure, buying triggers, Clay enrichment, and timely cold email. Get the complete Golden ICP Framework.",
+  url: `${SITE_URL}/resources/guides/golden-icp-framework`,
+  dateModified: "2026-11-14T12:09:59+05:30",
+});
+
 export default function GoldenICPFrameworkGuide() {
   return (
     <InnerLayout>
+      <JsonLd data={ARTICLE_SCHEMA} />
       <section className="relative pt-32 pb-16 px-4 overflow-hidden" style={{ backgroundColor: "#F8F6F2" }}>
         <div aria-hidden="true" style={{ position: "absolute", top: "-160px", left: "-180px", width: 680, height: 680, borderRadius: "50%", background: "radial-gradient(circle,rgba(245,183,49,0.24),rgba(245,183,49,0.07) 42%,transparent 70%)", filter: "blur(55px)" }} />
         <div aria-hidden="true" style={{ position: "absolute", top: "-120px", right: "-180px", width: 620, height: 620, borderRadius: "50%", background: "radial-gradient(circle,rgba(16,185,129,0.19),rgba(16,185,129,0.06) 42%,transparent 70%)", filter: "blur(55px)" }} />

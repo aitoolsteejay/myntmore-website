@@ -212,7 +212,8 @@ These pages describe local markets. They are not separate offices.
 | Library case studies (short format) | 50 | `content/case-studies/*.json` becomes `lib/case-study-library.json`, one generated page each | Keystatic: **Case studies** |
 | Detailed case studies (shared layout) | 20 | `content/case-study-pages/<slug>.json`, layout `components/case-studies/CaseStudyLayout.tsx`, page generated | Keystatic: **Case studies (detailed)** |
 | Long-form case studies (each has its own layout) | 12 | `content/case-study-long/<slug>.json`, layout in `components/case-studies/long/<slug>.tsx`, page generated | Keystatic: **Long-form case study: ...** (one singleton each) |
-| Index, market pages, filters | n/a | `app/case-studies/`, `lib/case-study-filters.ts`, `lib/case-study-markets.ts` | Code |
+| Index, filters | n/a | `app/case-studies/`, `lib/case-study-filters.ts`, `lib/case-study-markets.ts` | Code |
+| Market pages (India, UAE, UK, US, France, Singapore) | `/case-studies/markets/<market>` | `content/market-pages/<market>.json`, read by `lib/market-pages.ts` and checked by `scripts/check-market-pages.mjs` (run by prebuild). A new market also needs code in `lib/case-study-markets.ts` | Keystatic: **Market pages** |
 
 All case studies are real. Client names are withheld under confidentiality.
 
@@ -255,7 +256,7 @@ Each page carries `JobPosting` structured data with a `validThrough` date (a rol
 
 | Page | URL | Notes |
 | --- | --- | --- |
-| Events | `/events`, `/events/<slug>` | Event list in `lib/events-data.ts`. A past event shows as "Held" automatically (the page decides from the event's end time and refreshes hourly) |
+| Events | `/events`, `/events/<slug>` | `content/events/<slug>.json`, edited in Keystatic: **Events**. `npm run events:build` (run by prebuild) writes `lib/events.generated.json` and each thin page under `app/events/<slug>/` (rendered by `components/events/EventPage.tsx`); the sitemap reads the same list. A past event shows as "Held" automatically (the page decides from the event's end time and refreshes hourly), and its page switches from the registration link to the recording |
 | Digital visiting cards | `/tejasjhaveri`, `/jahnvijhaveri`, `/enwilfernandes` | Each has a download-contact route under `app/api/vcard/` |
 | Live Q&A | `/menti`, `/menti/room` | Small event polling tool, password protected |
 | Calendar pages | `/calendar/*` (14 pages) | Booking pages for specific people and campaigns, all noindex |
@@ -822,7 +823,7 @@ About 37 permanent redirects (308), grouped by reason: renamed pages (`/about` t
 | --- | --- |
 | 18 pages with a wrong Google canonical (e.g. `/services`) | Needs Search Console Test Live URL then Request Indexing by a person (10.5) |
 | Indexed-pages count for the 2 to 8 Nov week | Not finished; last count was 158 of 265 on 30 Oct |
-| Gmail and Yahoo sender-requirements post | Drafted in `content/posts/gmail-and-yahoo-sender-requirements.mdoc`, unpublished, needs a fact-check |
+| Gmail and Yahoo sender-requirements post | Published 20 Nov 2026 after a fact-check against Google's and Yahoo's sender pages |
 | How to describe LinkedIn automation | Owner decision pending; blocks one content brief |
 | Zoho Bookings may still have a 1-hour service | Check inside Zoho; cannot be seen from the repo |
 | Live Keystatic admin | Not confirmed switched on; screens not tested in a browser |
@@ -1111,7 +1112,7 @@ The path alias `@/*` points at the repo root (`@/lib/supabase`, `@/components/ui
 | `LeadSource` | `LeadSourceCapture` (mounted once in the root layout) remembers the first visit; `LeadSourceField` is the hidden `zf_referrer_name` input every Zoho form includes |
 | `SubmitButton` | A submit button that shows a "sending" label and blocks double clicks |
 | `ReelWidget` | The floating promo reel (below) |
-| `EventPopup` | A timed event popup. **Currently switched off** by a `POPUP_ENABLED = false` flag in the file, because no event is scheduled. It is still imported on the homepage |
+| `EventPopup` | A timed event popup. Shows the next upcoming event whose "Show the pop-up" box is ticked in Keystatic (**Events**); none is ticked today. It is still imported on the homepage |
 | `UpcomingEvents` | The events list block. Not placed on the homepage now |
 | `VisitingCard`, `ContactIcons` | The digital business-card layout and its icons |
 | `NotFoundRecovery` | The 404 page's smart suggestions: it looks at the broken address (tools, resources, case studies, services, careers, contact) and offers the matching section |
@@ -1347,7 +1348,7 @@ All routes live in `app/api/`. The tool routes are in A.4.4.
 | `faq-content.generated.json`, `page-faqs.generated.json` | Generated from the FAQ JSON files. Never edit |
 | `service-answers.ts` and `.json` | One definition per service, shown by `AnswerBlock` and reused word for word in `llms-full.txt` |
 | `internal-paths.ts` | The planned internal-link path for each service: service page, then a case study, then a guide or post, then the consultation page. The link audit fails if a link here goes stale |
-| `events-data.ts` | The events list and `isUpcoming()`. Adding an event also needs a page, a sitemap line and `POPUP_ENABLED` flipped back to true. A new event will not show on the homepage, because that block was removed on purpose |
+| `events-data.ts` | Reads `events.generated.json` (built from the Keystatic **Events** collection) and exports `EVENTS`, `eventBySlug()` and `isUpcoming()`. Adding an event needs no code change. A new event will not show on the homepage, because that block was removed on purpose |
 | `case-study-library.ts` and `case-study-library.json` | The 50 library case studies (5 in each of 10 industries) and the derived fields: accents, cards, numbers. Shown numbers can only be the numbers in `results`. Sample testimonial quotes in the source are deliberately not published |
 | `case-study-filters.ts`, `case-study-markets.ts` | The filter list on the case study index, and which country each case is about. A country gets its own page only when it has two or more cases |
 | `case-study-detail-cards.generated.json` | Cards for the 20 detailed case studies (generated) |

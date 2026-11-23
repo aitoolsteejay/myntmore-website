@@ -23,9 +23,18 @@
     "headline": "20+ qualified meetings per month for a UK pharma company",
     "intro": "A UK-based pharmaceutical company needed a more predictable way to reach the right B2B decision-makers in a specialised market without relying on broad, volume-heavy outreach.",
     "stats": [
-      { "value": "20+", "label": "Qualified meetings / month" },
-      { "value": "35%", "label": "Positive response rate" },
-      { "value": "£200K+", "label": "Potential pipeline generated" }
+      {
+        "value": "20+",
+        "label": "Qualified meetings / month"
+      },
+      {
+        "value": "35%",
+        "label": "Positive response rate"
+      },
+      {
+        "value": "£200K+",
+        "label": "Potential pipeline generated"
+      }
     ]
   },
   "problem": {
@@ -65,10 +74,26 @@
     "beforeLabel": "Before",
     "afterLabel": "After",
     "table": [
-      { "before": "3", "after": "20+", "label": "Qualified meetings / month" },
-      { "before": "5%", "after": "35%", "label": "Positive response rate" },
-      { "before": "1", "after": "11+", "label": "Qualified opportunities" },
-      { "before": "£18K", "after": "£200K+", "label": "Potential pipeline generated" }
+      {
+        "before": "3",
+        "after": "20+",
+        "label": "Qualified meetings / month"
+      },
+      {
+        "before": "5%",
+        "after": "35%",
+        "label": "Positive response rate"
+      },
+      {
+        "before": "1",
+        "after": "11+",
+        "label": "Qualified opportunities"
+      },
+      {
+        "before": "£18K",
+        "after": "£200K+",
+        "label": "Potential pipeline generated"
+      }
     ],
     "calloutHeadline": "Nearly 7X more meetings, 7X the positive response rate, 11X the qualified opportunities and 11X+ the potential pipeline.",
     "calloutBody": "More importantly, the growth did not come from simply contacting more people. It came from building a more precise system for identifying, reaching and converting the companies that actually mattered."
@@ -76,10 +101,22 @@
   "services": {
     "heading": "Services used in this engagement",
     "items": [
-      { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
-      { "name": "B2B Lead Generation", "href": "/services/ai-lead-generation" },
-      { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" },
-      { "name": "Outbound Strategy", "href": "/services" }
+      {
+        "name": "ICP Mapping & Lead Scoring",
+        "href": "/services/sales-intelligence"
+      },
+      {
+        "name": "B2B Lead Generation",
+        "href": "/services/ai-lead-generation"
+      },
+      {
+        "name": "LinkedIn Outreach & Automation",
+        "href": "/services/linkedin-outreach"
+      },
+      {
+        "name": "Outbound Strategy",
+        "href": "/services"
+      }
     ]
   }
 }

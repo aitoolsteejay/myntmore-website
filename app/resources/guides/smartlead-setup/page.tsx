@@ -117,6 +117,7 @@ const DATA: SetupGuideData = {
     "Replies stop the sequence, and opt-outs are honoured within 2 days.",
   ],
   related: [
+    { label: "Cold email infrastructure explained", href: "/resources/blogs/cold-email-infrastructure-explained", note: "Deep dive into SPF, DKIM, DMARC records and custom tracking domains." },
     { label: "Cold email infrastructure setup", href: "/resources/guides/cold-email-infrastructure-setup", note: "Domains, Google inboxes and the four DNS records, before Smartlead." },
     { label: "Our cold email tech stack", href: "/resources/guides/cold-email-tech-stack", note: "The 7 tools we use, and a 3-email sequence with copy-ready variants." },
     { label: "Cold email follow-up sequence", href: "/resources/blogs/cold-email-follow-up-sequence", note: "What to write on day 1, 3, 7, 12 and 18." },

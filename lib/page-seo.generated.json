@@ -103,10 +103,6 @@
   "title": "Sales Executive, Mumbai | Rs 4–7 LPA | Myntmore",
   "description": "Join Myntmore as Sales Executive in BKC, Mumbai. Rs 4-7 LPA. Prospect, build client relationships, and close deals. Apply now."
  },
- "/careers/systems-ai-automation-intern": {
-  "title": "AI Automation Intern, Mumbai | Rs 7-20K/mo | Myntmore",
-  "description": "Join Myntmore as Systems & AI Automation Intern in BKC, Mumbai. Build AI agents, n8n/Clay automations, and own SEO/AEO/GEO. WFO, apply now."
- },
  "/case-studies": {
   "title": "B2B Case Studies & Client Results | Myntmore",
   "description": "Real results in the CRM, not the deck. See how Myntmore's cold email, LinkedIn, and ABM systems booked meetings for real B2B clients."
@@ -144,7 +140,7 @@
   "description": "3 campaigns inside India: 24 payroll meetings, HR consultancy referral partners and doctor outreach across eight cities. DPDP Act and what worked."
  },
  "/case-studies/markets/singapore": {
-  "title": "B2B Lead Generation in Singapore: Case Studies | Myntmore",
+  "title": "Singapore B2B Outbound Case Studies | Myntmore",
   "description": "4 Singapore campaigns in finance, insurance, staffing and pharma licensing, 10 to 19 meetings each. PDPA, timing and what worked."
  },
  "/case-studies/markets/uae": {
@@ -190,10 +186,6 @@
  "/events": {
   "title": "B2B Outbound Events & Webinars | Myntmore",
   "description": "Live sessions on cold email, LinkedIn outreach, and B2B pipeline building from the team that has booked 12K+ meetings and generated $120M+ in pipeline."
- },
- "/events/predictable-pipeline-webinar": {
-  "title": "Free Webinar: Build a Predictable Lead Pipeline | Myntmore",
-  "description": "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings a month, across LinkedIn, cold email, targeting and automation."
  },
  "/feedback": {
   "title": "AI Marketing Workshop Feedback | Myntmore",
@@ -305,7 +297,7 @@
  },
  "/resources/guides/education-guide": {
   "title": "AI Quick-Start Guide | Myntmore",
-  "description": "Practical AI tips for parents, educators, and creators."
+  "description": "Practical AI tips for parents, teachers, students who create content and school leaders: ten starting points per audience, usable the same day."
  },
  "/resources/guides/golden-icp-framework": {
   "title": "The Golden ICP Framework for B2B Outbound | Myntmore",

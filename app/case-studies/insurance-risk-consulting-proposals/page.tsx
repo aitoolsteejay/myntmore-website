@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/insurance-risk-consulting-pro
 
 export const metadata: Metadata = {
   title: "Risk Consulting Firm Case Study",
-  description: "9 Proposal Opportunities for a Risk Consulting Firm: 18 qualified sales conversations. The challenge, approach and results from a Myntmore Insurance case study.",
+  description: "9 Proposal Opportunities for a Risk Consulting Firm. The challenge, approach and results from a Myntmore Insurance case study.",
   keywords: [
     "risk consulting firm lead generation",
     "risk consulting firm case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "9 Proposal Opportunities for a Risk Consulting Firm",
-    description: "9 Proposal Opportunities for a Risk Consulting Firm: 18 qualified sales conversations. The challenge, approach and results from a Myntmore Insurance case study.",
+    description: "9 Proposal Opportunities for a Risk Consulting Firm. The challenge, approach and results from a Myntmore Insurance case study.",
     url: URL,
     images: ogImages("/case-studies/insurance-risk-consulting-proposals"),
   },

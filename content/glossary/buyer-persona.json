@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A research-based profile of a specific job role describing its goals, daily frustrations, and likely objections, used to shape what a message says rather than who it's sent to.",
-  "body": "An ICP answers which companies and roles to target; a buyer persona answers what to actually say to them once they're on the list, by capturing how that role thinks and what convinces it. The two work together rather than replacing each other.",
+  "body": "An ICP answers which companies and roles to target; a buyer persona answers what to actually say to them once they're on the list, by capturing how that role thinks and what convinces it. A useful persona covers the role's goals, what they are measured on, the frustrations that fill their week, the objections they raise to new suppliers, and the language they use to describe their own problems. It should come from evidence: sales call notes, conversations with existing customers, and the questions prospects actually ask, not from guesses or invented personal details. Say a company sells software to finance teams. The finance director persona cares about month-end close and audit risk, while the operations manager persona cares about how much manual entry the tool removes. The product is the same, but the opening line, proof point and call to action change completely depending on who is reading. The two work together rather than replacing each other: the ICP decides who receives the message, and the persona shapes the message. The common mistakes are filling personas with fictional hobbies and names, writing one persona for a whole buying committee, and never updating them after the market changes.",
   "sourceLabel": "Read the related term: ICP (Ideal Customer Profile)",
   "sourceHref": "/resources/glossary/icp",
   "furtherLabel": "See the service: ICP Mapping & Lead Scoring",
@@ -24,5 +24,18 @@
     "buyer persona vs icp",
     "b2b buyer persona example"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between a buyer persona and an ICP?",
+      "answer": "An ICP describes the type of company most likely to buy, using traits such as industry, size and buying signals. A buyer persona describes a specific role inside that company: its goals, frustrations and objections. The ICP decides who to contact; the persona decides what to say to each person."
+    },
+    {
+      "question": "How do you create a B2B buyer persona?",
+      "answer": "Start from evidence. Review sales call notes, interview a few existing customers in the role, and list the questions and objections prospects raise. Capture the role's goals, what it is measured on, its main frustrations and the words it uses for them. Skip fictional details that do not change what you write."
+    },
+    {
+      "question": "How many buyer personas does a B2B company need?",
+      "answer": "One for each role that regularly influences the purchase, which for most B2B companies means two to four. Typical examples are the person who uses the product, the person who owns the budget and the person who evaluates risk. More than that usually means the personas are too thin to be useful."
+    }
+  ]
 }

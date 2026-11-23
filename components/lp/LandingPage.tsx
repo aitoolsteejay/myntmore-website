@@ -240,7 +240,11 @@ function StatsSection({ d }: { d: LandingPageData }) {
     <div key={i} className="lp-stat text-center">
       <div className="text-xl mb-1 lp-icon-bob" style={{ animationDelay: `${i * 0.25}s` }} aria-hidden="true">{s[i].icon}</div>
       <div className="text-4xl sm:text-5xl font-black mb-2" style={{ color: "#0a0a0a" }}>
-        <span ref={ref}>{`${s[i].prefix}0${s[i].suffix}`}</span>
+        {/* An invisible copy of the final value reserves its width, so the count-up cannot re-wrap the text and shift the page. */}
+        <span className="inline-grid">
+          <span aria-hidden="true" className="invisible" style={{ gridArea: "1 / 1" }}>{formatter(s[i].prefix, s[i].decimals, s[i].suffix)(s[i].target)}</span>
+          <span ref={ref} style={{ gridArea: "1 / 1" }}>{`${s[i].prefix}0${s[i].suffix}`}</span>
+        </span>
       </div>
       <div className="text-xs leading-snug" style={{ color: "#52525B" }}>{s[i].label}</div>
     </div>

@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is a target account strategy?", answer: "A target account strategy is a plan for which companies to pursue and how to approach each one. It defines the account list using fit and buying signals, ranks the accounts into tiers by value, and sets the stakeholders, message and channels for each tier before outreach begins." },
+  { question: "How do you build a target account list?", answer: "Start with your best existing customers and note what they share, such as industry, size and region. Find companies that match, then add timing signals like funding, hiring or expansion to see which ones may buy soon. Rank the result into tiers so effort follows value." },
+  { question: "How many target accounts should a B2B team have?", answer: "As many as the team can research and work properly. A common split is a small top tier of fully personalised accounts, a larger middle tier personalised by segment, and a broad tier reached with lighter sequences. The right size depends on deal value and team capacity." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -43,12 +49,13 @@ export default function GlossaryTermPage() {
       alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"Choosing a specific list of companies worth winning, and planning how to approach each one, before any outreach goes out."}
       definition={"Selecting a defined list of high-value companies to pursue and planning how to reach each one, based on fit, buying signals, and potential deal size."}
-      body={"It's the planning layer underneath ABM: before you can run account-based outreach, you need a short, ranked list of accounts and a reason each one belongs on it. Good lists are built from firmographic fit plus timing signals, then tiered so the highest-value accounts get the most research and personalization."}
+      body={"A target account strategy is the planning layer underneath account-based outreach: before you can run ABM, you need a short, ranked list of accounts and a reason each one belongs on it. The list is built from firmographic fit, such as industry, size, region and technology, plus timing signals like funding, hiring, leadership changes or expansion, then tiered so the highest-value accounts get the most research and personalisation. A common structure is three tiers: a small top tier that gets fully tailored outreach to several stakeholders, a middle tier personalised by segment, and a larger tier reached with lighter sequences. The strategy also sets what happens at each account: which roles to contact, what each one cares about, and which channel to use. Say a company can realistically research 20 accounts in depth each month. Its strategy decides which 20 deserve that effort and why, instead of spreading the same effort across 500 companies. The common mistakes are building the list from a wish list of famous logos instead of fit, never revisiting the tiers as signals change, and treating every account in the list identically, which removes the point of having a strategy."}
       sourceLabel={"Read the related term: ABM (Account-Based Marketing)"}
       sourceHref={"/resources/glossary/abm"}
       furtherLabel={"Read the full guide: Account Targeting Strategy, step by step"}
       furtherHref={"/resources/blogs/account-targeting-strategy"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

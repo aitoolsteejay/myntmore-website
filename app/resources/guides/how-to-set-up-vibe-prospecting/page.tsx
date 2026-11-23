@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/app/components/JsonLd";
+import { buildArticleSchema, SITE_URL } from "@/lib/schema";
 import Link from "next/link";
 import { Check, ArrowRight, Camera, CalendarCheck, Mail } from "lucide-react";
 import InnerLayout from "@/app/components/InnerLayout";
@@ -135,9 +137,18 @@ function PromptCard({ title, prompt }: { title: string; prompt: string }) {
   );
 }
 
+// Article schema. The first publication date is not on record, so only the last update (from lib/sitemap-dates.json) is given.
+const ARTICLE_SCHEMA = buildArticleSchema({
+  headline: "Vibe Prospecting: What It Is and How to Use It in Claude",
+  description: "Vibe Prospecting is a Claude connector that finds verified B2B leads right in your chat. What it is, the 7-step setup, and 10 prompts you can copy.",
+  url: `${SITE_URL}/resources/guides/how-to-set-up-vibe-prospecting`,
+  dateModified: "2026-11-14T12:09:59+05:30",
+});
+
 export default function VibeProspectingGuide() {
   return (
     <InnerLayout>
+      <JsonLd data={ARTICLE_SCHEMA} />
       {/* Hero */}
       <section className="pt-32 pb-14 px-4" style={{ backgroundColor: "#F8F6F2" }}>
         <div className="max-w-3xl mx-auto">

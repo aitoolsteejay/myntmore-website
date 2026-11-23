@@ -17,7 +17,7 @@
     "Qualified Meeting Generation"
   ],
   "definition": "Booking qualified sales meetings between prospects and a company's sales team, usually through outbound outreach, so closers spend their time in conversations with real buyers.",
-  "body": "The word that matters is qualified. A meeting only counts if the person fits the ICP, has the problem you solve, and has a say in buying; otherwise it just moves wasted time from the SDR's calendar to the closer's. That's why outbound teams track meeting-booked rate and show rate together, not booked meetings alone.",
+  "body": "Appointment setting is the part of outbound that turns interest into a booked meeting: finding the right prospects, starting the conversation, handling replies and putting a time in the calendar of the person who will run the sales call. The word that matters is qualified. A meeting only counts if the person fits the ICP, has the problem you solve and has a say in buying; otherwise it just moves wasted time from the SDR's calendar to the closer's. That is why outbound teams track meeting-booked rate and show rate together, not booked meetings alone. Good appointment setting also includes the handover: a short note on who the prospect is, what prompted the meeting and what they asked about, so the sales call starts from context instead of introductions. Say a team books 20 meetings in a month and 6 of them turn out to be the wrong company size. The headline number looks healthy, but nearly a third of the closer's time went to calls that could never close. The common mistakes are rewarding volume over fit, slow responses to positive replies, and booking meetings with people who agreed to talk but have no influence on the decision.",
   "sourceLabel": "Read the related term: Meeting-Booked Rate",
   "sourceHref": "/resources/glossary/meeting-booked-rate",
   "furtherLabel": "Read the related term: Lead Qualification",
@@ -33,5 +33,18 @@
     "qualified meeting generation",
     "b2b meeting booking"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is appointment setting in sales?",
+      "answer": "Appointment setting is booking qualified sales meetings between prospects and a company's sales team, usually through outbound outreach. The appointment setter finds and contacts prospects, handles replies and schedules the call, so the closer spends time only on conversations with people who fit the ideal customer profile."
+    },
+    {
+      "question": "What makes a booked meeting qualified?",
+      "answer": "A qualified meeting is with someone at a company that fits your ideal customer profile, who has the problem you solve and has a say in the buying decision. Many teams also check timing. A meeting that misses these tests uses a closer's time without any realistic chance of a deal."
+    },
+    {
+      "question": "Is appointment setting the same as lead generation?",
+      "answer": "No. Lead generation produces contacts or interest; appointment setting goes one step further and books a meeting with a qualified prospect. Lead generation can stop at a list or a form fill, while appointment setting is measured by meetings held with the right people."
+    }
+  ]
 }

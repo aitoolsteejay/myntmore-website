@@ -1,42 +1,45 @@
+import events from "./events.generated.json";
+
+// The events, edited in the Keystatic admin ("Events") as content/events/<slug>.json.
+// scripts/generate-event-pages.mjs (run by prebuild) turns them into lib/events.generated.json, working out the
+// ISO dates and display times, and writes each detail page under app/events/<slug>/. The /events page, the
+// event pop-up, UpcomingEvents and the sitemap all read this list, so adding an event needs no code change.
+//
+// Note: a new event will NOT appear on the homepage. The "Come see us live" section was deliberately removed from
+// app/page.tsx; UpcomingEvents still works and can be dropped back in there if that slot is ever wanted again.
 export interface EventItem {
   slug: string;
   tag: string;
   title: string;
-  description: string;
+  description: string; // the short card text
+  longDescription: string; // the detail page text and the Event schema
   isoDate: string;
+  isoStartDateTime: string;
   isoEndDateTime: string; // full ISO 8601 datetime with timezone offset, used to determine "upcoming" status
   displayDate: string;
+  longDate: string;
   time: string;
   format: string;
   accent: string;
+  breadcrumbLabel: string;
+  topics: string[];
+  registrationUrl: string;
+  recordingUrl: string;
+  showPopup: boolean; // the admin's "Show the pop-up" switch
+  metaTitle: string;
+  metaDescription: string;
+  ogTitle: string;
+  ogDescription: string;
 }
 
-// To add another event once one is scheduled:
-// 1. Add an entry here (slug becomes the URL: /events/{slug}).
-// 2. Create app/events/{slug}/page.tsx for its detail page, following the
-//    same pattern as app/resources/blogs/{slug}/page.tsx or app/case-studies/{slug}/page.tsx.
-//    Drop the `robots: { index: false }` line that past events carry.
-// 3. Add the new route to app/sitemap.ts.
-// 4. Flip POPUP_ENABLED back to true in app/components/EventPopup.tsx --
-//    the homepage popup is manually paused and will stay hidden otherwise.
-// Note: a new event will NOT appear on the homepage. The "Come see us live"
-// section was deliberately removed from app/page.tsx; UpcomingEvents still
-// works and can be dropped back in there if that slot is ever wanted again.
-// Events otherwise surface on /events and via the popup once re-enabled.
-export const EVENTS: EventItem[] = [
-  {
-    slug: "predictable-pipeline-webinar",
-    tag: "Live Webinar",
-    title: "We Create 200+ Meetings Every Month Through Cold Outreach. Let's Help You Build a More Predictable Lead Pipeline.",
-    description: "How Myntmore books 200+ meetings a month through cold outreach: LinkedIn, cold email, targeting, messaging, personal branding, and automation.",
-    isoDate: "2026-09-19",
-    isoEndDateTime: "2026-09-19T13:00:00+05:30",
-    displayDate: "Sep 19, 2026",
-    time: "11:30 AM – 1:00 PM IST",
-    format: "Online · Live Webinar",
-    accent: "#8b5cf6",
-  },
-];
+// Soonest first (the generator sorts them).
+export const EVENTS: EventItem[] = events as EventItem[];
+
+export function eventBySlug(slug: string): EventItem {
+  const e = EVENTS.find((x) => x.slug === slug);
+  if (!e) throw new Error(`No event "${slug}" in lib/events.generated.json; run npm run events:build`);
+  return e;
+}
 
 export function isUpcoming(e: EventItem): boolean {
   return new Date(e.isoEndDateTime).getTime() >= Date.now();

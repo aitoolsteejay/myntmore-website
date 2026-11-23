@@ -96,19 +96,5 @@
       "CRM-savvy (Zoho or similar)",
       "Confident, client-facing communicator"
     ]
-  },
-  {
-    "slug": "systems-ai-automation-intern",
-    "accent": "#14B8A6",
-    "tag": "Systems & AI",
-    "title": "Systems & AI Automation Intern",
-    "type": "Internship · Work from Office · BKC, Mumbai",
-    "location": "India",
-    "desc": "You'll build the internal and client-facing AI agents and automations that run Myntmore, and own SEO, AEO, and GEO along the way.",
-    "bullets": [
-      "Comfortable with n8n, Clay, or Python",
-      "SEO nerd, curious about AI search",
-      "Ownership mindset, ships fast"
-    ]
   }
 ]

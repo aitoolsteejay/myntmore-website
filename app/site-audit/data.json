@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-18T10:48:59.941Z",
+  "generatedAt": "2026-11-20T12:53:08.451Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 333,
-    "linked": 300,
-    "orphan": 33,
+    "total": 350,
+    "linked": 311,
+    "orphan": 39,
     "noindex": 34,
-    "notInXmlSitemap": 38,
-    "privateHidden": 8
+    "notInXmlSitemap": 44,
+    "privateHidden": 12
   },
   "pages": [
     {
@@ -269,6 +269,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-hong-kong",
+      "title": "B2B Lead Generation Company in Hong Kong",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-hyderabad",
       "title": "Lead Generation Company & Services in Hyderabad",
       "section": "other",
@@ -383,6 +396,34 @@
       "inHtmlSitemap": false
     },
     {
+      "path": "/b2b-lead-generation-london",
+      "title": "B2B Lead Generation Company in London",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-los-angeles",
+      "title": "B2B Lead Generation Company in Los Angeles",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-mumbai",
       "title": "AI B2B Lead Generation Agency in Mumbai",
       "section": "other",
@@ -403,6 +444,20 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-new-york",
+      "title": "B2B Lead Generation Company in New York",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-noida",
       "title": "B2B Lead Generation Company in Noida",
       "section": "other",
@@ -413,6 +468,20 @@
         "lib/city-links.ts"
       ],
       "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-paris",
+      "title": "B2B Lead Generation Company in Paris",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 2,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -460,6 +529,33 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/b2b-lead-generation-shanghai",
+      "title": "B2B Lead Generation Company in Shanghai",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-singapore",
+      "title": "B2B Lead Generation Company in Singapore",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/",
+        "lib/city-links.ts"
+      ],
+      "inboundCount": 2,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/b2b-lead-generation-stone-marble-exporters-jaipur",
       "title": "Lead Gen for Stone & Marble Exporters Jaipur",
       "section": "other",
@@ -483,6 +579,19 @@
         "lib/city-links.ts"
       ],
       "inboundCount": 3,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-sydney",
+      "title": "B2B Lead Generation Company in Sydney",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -514,6 +623,32 @@
       "inHtmlSitemap": false
     },
     {
+      "path": "/b2b-lead-generation-tokyo",
+      "title": "B2B Lead Generation Company in Tokyo",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/b2b-lead-generation-toronto",
+      "title": "B2B Lead Generation Company in Toronto",
+      "section": "other",
+      "status": "linked",
+      "linkedFrom": [
+        "/"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/book-a-call",
       "title": "Book A Call",
       "section": "other",
@@ -528,7 +663,7 @@
         "/marketing-automation",
         "/myntmore-framework"
       ],
-      "inboundCount": 94,
+      "inboundCount": 97,
       "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": true
@@ -623,6 +758,28 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/calendar/elg/page.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/calendar/ig",
+      "title": "Ig",
+      "section": "calendar",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": "/calendar/instagram",
+      "title": "Instagram",
+      "section": "calendar",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": true,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -799,19 +956,6 @@
       "inHtmlSitemap": true
     },
     {
-      "path": "/careers/systems-ai-automation-intern",
-      "title": "Systems Ai Automation Intern",
-      "section": "careers",
-      "status": "linked",
-      "linkedFrom": [
-        "/careers"
-      ],
-      "inboundCount": 1,
-      "noindex": false,
-      "inXmlSitemap": true,
-      "inHtmlSitemap": false
-    },
-    {
       "path": "/case-studies",
       "title": "Case Studies",
       "section": "case-studies",
@@ -826,7 +970,7 @@
         "/services/gtm-strategy",
         "/services/personal-branding"
       ],
-      "inboundCount": 26,
+      "inboundCount": 27,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -1051,9 +1195,10 @@
       "status": "linked",
       "linkedFrom": [
         "lib/internal-paths.ts",
+        "/resources/blogs/ecommerce-conversion-playbook",
         "/case-studies"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2155,7 +2300,7 @@
       "status": "linked",
       "linkedFrom": [
         "/",
-        "/events/predictable-pipeline-webinar"
+        "events/EventPage.tsx"
       ],
       "inboundCount": 2,
       "noindex": false,
@@ -2164,14 +2309,13 @@
     },
     {
       "path": "/events/predictable-pipeline-webinar",
-      "title": "Predictable Pipeline Webinar",
+      "title": "Free Webinar: Build a Predictable Lead Pipeline",
       "section": "events",
       "status": "linked",
       "linkedFrom": [
-        "/",
         "/events"
       ],
-      "inboundCount": 2,
+      "inboundCount": 1,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2506,8 +2650,8 @@
       "linkedFrom": [
         "/",
         "/events",
-        "/resources/blogs/[slug]",
         "/resources/blogs",
+        "/resources/blogs/[slug]",
         "/resources/feed",
         "/resources/glossary",
         "/resources/guides/58-meetings-600-linkedin-connections",
@@ -2653,10 +2797,10 @@
         "/resources/glossary/revenue-generation",
         "lib/internal-paths.ts",
         "/resources/blogs",
-        "/resources/blogs/handling-cold-email-replies",
-        "/resources/blogs/lead-scoring-b2b-outbound"
+        "/resources/blogs/conversations-not-impressions-outbound",
+        "/resources/blogs/handling-cold-email-replies"
       ],
-      "inboundCount": 9,
+      "inboundCount": 10,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2705,7 +2849,7 @@
         "/resources/blogs",
         "/resources/blogs/cold-email-sequence-templates"
       ],
-      "inboundCount": 16,
+      "inboundCount": 17,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2736,9 +2880,9 @@
         "/resources/blogs",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/cold-email-follow-up-sequence",
-        "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads"
+        "/resources/blogs/gmail-and-yahoo-sender-requirements"
       ],
-      "inboundCount": 10,
+      "inboundCount": 11,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2758,7 +2902,7 @@
         "/resources/guides/cold-email-tech-stack",
         "lib/internal-paths.ts"
       ],
-      "inboundCount": 13,
+      "inboundCount": 16,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -2771,19 +2915,36 @@
       "linkedFrom": [
         "/resources/guides/outbound-meme-prompt-kit",
         "/resources/guides/smartlead-setup",
+        "/resources/blogs/3-second-rule-cold-outreach",
         "/resources/blogs/ai-personalization-cold-outreach",
         "/resources/blogs",
         "/resources/blogs/cold-email-vs-linkedin-outreach",
         "/resources/blogs/positive-reply-to-booked-meeting"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/cold-email-infrastructure-explained",
+      "title": "What is DMARC for Cold Email? Setup and Rules",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/guides/smartlead-setup",
+        "/resources/blogs",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements"
+      ],
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
     },
     {
       "path": "/resources/blogs/cold-email-sequence-templates",
-      "title": "Cold Email Sequence Template: 5 Emails + Follow-Ups",
+      "title": "Cold Email Sequence Template: 5 Emails + Example",
       "section": "resources",
       "status": "linked",
       "linkedFrom": [
@@ -2871,7 +3032,24 @@
         "lib/internal-paths.ts",
         "/resources/blogs",
         "/resources/blogs/how-to-write-a-linkedin-hook",
-        "/resources/blogs/personal-branding-agency-vs-content-freelancer"
+        "/resources/blogs/personal-branding-agency-vs-content-freelancer",
+        "/resources/blogs/vanity-metrics-personal-brand-pipeline"
+      ],
+      "inboundCount": 5,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
+      "path": "/resources/blogs/gmail-and-yahoo-sender-requirements",
+      "title": "Gmail and Yahoo Sender Requirements Explained",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/guides/cold-email-infrastructure-setup",
+        "/resources/guides/smartlead-setup",
+        "/resources/blogs/cold-email-infrastructure-explained",
+        "/resources/blogs"
       ],
       "inboundCount": 4,
       "noindex": false,
@@ -2978,11 +3156,12 @@
         "lib/internal-paths.ts",
         "/resources/blogs/account-targeting-strategy",
         "/resources/blogs/ai-vs-traditional-lead-generation",
+        "/resources/blogs/conversations-not-impressions-outbound",
         "/resources/blogs/how-bangalore-saas-companies-get-b2b-leads",
         "/resources/blogs",
         "/resources/blogs/multi-threading-b2b-buying-committee"
       ],
-      "inboundCount": 7,
+      "inboundCount": 8,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3169,10 +3348,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/blogs/cold-email-follow-up-sequence",
+        "/resources/blogs/conversations-not-impressions-outbound",
         "/resources/blogs/handling-cold-email-replies",
         "/resources/blogs"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3227,12 +3407,13 @@
       "linkedFrom": [
         "/resources/glossary/3-second-rule",
         "/resources/glossary/cold-outreach",
+        "/resources/blogs/3-second-rule-cold-outreach",
         "/resources/blogs/ai-personalization-cold-outreach",
         "/resources/blogs/how-to-write-a-linkedin-hook",
         "/resources/blogs/outbound-offer-problem",
         "/resources/blogs"
       ],
-      "inboundCount": 6,
+      "inboundCount": 7,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3496,6 +3677,7 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/hot-lead",
+        "/resources/blogs/3-second-rule-cold-outreach",
         "/resources/blogs/account-targeting-strategy",
         "/resources/blogs/b2b-lead-generation-for-it-services",
         "/resources/blogs/lead-scoring-b2b-outbound",
@@ -3503,7 +3685,7 @@
         "/resources/blogs/what-is-b2b-outbound-sales",
         "/resources/glossary"
       ],
-      "inboundCount": 7,
+      "inboundCount": 8,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3583,9 +3765,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-tech-stack",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3778,10 +3961,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/appointment-setting",
+        "/resources/blogs/conversations-not-impressions-outbound",
         "/resources/blogs/handling-cold-email-replies",
         "/resources/glossary"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3948,9 +4132,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/spam-complaint-rate",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3962,9 +4147,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/aha-moment",
+        "/resources/blogs/value-premium-lead-magnets",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -3991,9 +4177,10 @@
         "/resources/blogs/cold-email-compliance-guide",
         "/resources/blogs/cold-email-deliverability-guide",
         "/resources/blogs/cold-email-follow-up-sequence",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 4,
+      "inboundCount": 5,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -4005,9 +4192,11 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/guides/cold-email-tech-stack",
+        "/resources/blogs/cold-email-infrastructure-explained",
+        "/resources/blogs/gmail-and-yahoo-sender-requirements",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4046,9 +4235,10 @@
       "status": "linked",
       "linkedFrom": [
         "/resources/glossary/gtm-strategy",
+        "/resources/blogs/value-premium-lead-magnets",
         "/resources/glossary"
       ],
-      "inboundCount": 2,
+      "inboundCount": 3,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4199,9 +4389,10 @@
       "linkedFrom": [
         "/resources/guides",
         "/resources/guides/smartlead-setup",
-        "/tools/cold-email-inbox-calculator"
+        "/tools/cold-email-inbox-calculator",
+        "/resources/blogs/cold-email-infrastructure-explained"
       ],
-      "inboundCount": 3,
+      "inboundCount": 4,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4491,7 +4682,7 @@
         "/resources/glossary/gdpr-cold-outreach",
         "/resources/glossary/response-rate"
       ],
-      "inboundCount": 29,
+      "inboundCount": 31,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4880,7 +5071,7 @@
       "status": "orphan",
       "linkedFrom": [],
       "inboundCount": 0,
-      "noindex": true,
+      "noindex": false,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -4892,7 +5083,55 @@
       "status": "orphan",
       "linkedFrom": [],
       "inboundCount": 0,
-      "noindex": true,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -5026,6 +5265,11 @@
       "permanent": true
     },
     {
+      "from": "/careers/systems-ai-automation-intern",
+      "to": "/careers",
+      "permanent": true
+    },
+    {
       "from": "/blog/multi-threading-b2b-outbound",
       "to": "/resources/blogs/multi-threading-b2b-buying-committee",
       "permanent": true
@@ -5128,6 +5372,18 @@
   ],
   "hiddenRedirects": 7,
   "rewrites": [
+    {
+      "from": "/calendar/IG",
+      "to": "/calendar/ig"
+    },
+    {
+      "from": "/calendly/IG",
+      "to": "/calendar/ig"
+    },
+    {
+      "from": "/calendly/ig",
+      "to": "/calendar/ig"
+    },
     {
       "from": "/tools/dm-angle-generator",
       "to": "https://mynt-more-angles.lovable.app"

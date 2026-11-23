@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "Is cold email legal?", answer: "Cold email to business contacts is legal in many countries when it follows the local rules. In the US, CAN-SPAM requires honest headers and subject lines, a physical address and a working opt-out. In the UK and EU, GDPR and related laws also apply. Check the rules for each market before sending." },
+  { question: "What is a good cold email reply rate?", answer: "Across Myntmore-managed campaigns, cold email runs at a 1% to 3% reply rate, with at least 20% of replies positive. Rather than chasing a single benchmark, compare your own campaigns over time and judge them on positive replies and meetings booked, since a smaller, well-targeted list often beats a larger generic one." },
+  { question: "How many follow-ups should a cold email have?", answer: "Four or five touches in total, spaced over two to three weeks, is enough for most B2B buyers. Each follow-up should add something new, such as a different angle, a short proof point or a useful resource. Beyond that, extra messages mostly train the prospect to ignore you and raise spam complaints." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -43,12 +49,13 @@ export default function GlossaryTermPage() {
       alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"The first message to someone who has never heard of you, sent to open a real conversation, not to blast a list."}
       definition={"An email sent to a prospect with no prior relationship to the sender, written to start a genuine sales conversation rather than announce a product."}
-      body={"Done well, cold email is permission-based and targeted: it goes to a narrow list matching a defined ICP, references something specific about the recipient, and is legally compliant with laws like CAN-SPAM and GDPR. Done poorly, it collapses into the same broad, generic blasting that gives the channel its bad name."}
+      body={"Done well, cold email is targeted and relevant: it goes to a narrow list matching a defined ICP, references something specific about the recipient, and complies with laws such as CAN-SPAM and GDPR. Done poorly, it collapses into the broad, generic blasting that gives the channel its bad name. A typical cold email programme sends a short first message followed by three or four follow-ups over two to three weeks, each adding a new angle rather than repeating the first. It runs from dedicated sending domains that have been warmed up, so the company's main domain is never put at risk. Say a team emails 500 carefully chosen operations leaders, each with a first line about a recent expansion at their company. Even at a modest reply rate, those replies come from the right people about a real problem, which is worth more than many replies from a generic list. The common mistakes are writing about the product instead of the reader, sending from an unprepared domain, ignoring opt-outs and judging success by opens rather than positive replies. As a reference point, managed cold email at Myntmore runs at a 1% to 3% reply rate, with at least 20% of those replies positive, so it is judged on meetings booked, not raw volume."}
       sourceLabel={"See the service: Cold Email"}
       sourceHref={"/services/cold-email"}
       furtherLabel={"Read: Cold Email Deliverability: Why Your Emails Land in Spam (And How to Fix It)"}
       furtherHref={"/resources/blogs/cold-email-deliverability-guide"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

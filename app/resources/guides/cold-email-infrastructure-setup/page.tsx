@@ -119,6 +119,7 @@ const DATA: SetupGuideData = {
     "Your list is verified, and you have a way to honour unsubscribe requests within 2 days.",
   ],
   related: [
+    { label: "Cold email infrastructure explained", href: "/resources/blogs/cold-email-infrastructure-explained", note: "Deep dive into SPF, DKIM, DMARC records and custom tracking domains." },
     { label: "How to set up Smartlead", href: "/resources/guides/smartlead-setup", note: "Connect these inboxes, warm them up and launch the first campaign." },
     { label: "Gmail and Yahoo sender requirements", href: "/resources/blogs/gmail-and-yahoo-sender-requirements", note: "Authentication, spam rate and unsubscribe rules, in plain English." },
     { label: "Inbox & domain calculator", href: "/tools/cold-email-inbox-calculator", note: "Work out how many domains and inboxes your volume needs, and your go-live date." },

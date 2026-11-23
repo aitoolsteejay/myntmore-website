@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "How do you accelerate a B2B sales pipeline?", answer: "Measure how long deals sit in each stage, then fix the slowest stage first. End every call with a dated next step, involve the wider buying committee early so one quiet contact cannot stall the deal, and follow up on a fixed cadence. Re-engage deals that have gone quiet before writing them off." },
+  { question: "What is sales velocity?", answer: "Sales velocity is a measure of how quickly a pipeline turns into revenue. It is usually calculated as the number of open deals, multiplied by win rate and average deal size, divided by the length of the sales cycle. Improving any of those four inputs, especially a shorter cycle, increases velocity." },
+  { question: "Why do B2B deals stall in the pipeline?", answer: "Deals usually stall because the deal rests on a single contact, nobody agreed a clear next step, or a decision-maker was never involved. Budget timing and competing priorities play a part too. Most stalls are visible early: a deal with no dated next step after a call is already at risk." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"Getting deals already in the pipeline to a decision faster, instead of only adding more at the top."}
       definition={"Shortening the time it takes open deals to move from first meeting to a closed decision, by removing the stalls between pipeline stages."}
-      body={"Most B2B deals don't die, they stall: one champion goes quiet, a second stakeholder was never involved, or nobody owns the next step. Acceleration tactics target those stalls directly, by multi-threading into the buying committee, following up on a fixed cadence, and re-engaging deals that went quiet before they're written off."}
+      body={"Most B2B deals don't die, they stall: one champion goes quiet, a second stakeholder was never involved, or nobody owns the next step. Pipeline acceleration starts with measuring how long deals sit in each stage, because the slowest stage is usually where the real problem is. If deals move quickly from first meeting to proposal but then wait weeks for a decision, the fix is in the decision stage, not in finding more leads. Say a team's deals average three weeks from first call to proposal and eight weeks from proposal to signature. Shaving even two weeks off the proposal stage frees up time and makes the forecast more reliable, without a single extra lead. Acceleration tactics target those stalls directly: multi-threading into the buying committee so a deal never rests on one person, agreeing a dated next step at the end of every call, following up on a fixed cadence, and re-engaging deals that went quiet before they're written off. The common mistakes are pushing harder with discounts instead of finding the blocker, letting deals sit without a next step, and treating a slow stage as the buyer's fault rather than as something the seller can change."}
       sourceLabel={"Read the related term: Multi-Threading"}
       sourceHref={"/resources/glossary/multi-threading"}
       furtherLabel={"Read the related term: Re-engagement Campaign"}
       furtherHref={"/resources/glossary/re-engagement-campaign"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

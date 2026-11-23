@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/ecommerce-tech-analytics-dema
 
 export const metadata: Metadata = {
   title: "eCommerce Analytics Case Study",
-  description: "Building Demand for an eCommerce Analytics Platform: 15 qualified sales meetings and 3 late-stage product opportunities. A Myntmore eCommerce Tech case study.",
+  description: "Building Demand for an eCommerce Analytics Platform. The challenge, approach and results from a Myntmore eCommerce Tech case study.",
   keywords: [
     "ecommerce analytics lead generation",
     "ecommerce analytics case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "Building Demand for an eCommerce Analytics Platform",
-    description: "Building Demand for an eCommerce Analytics Platform: 15 qualified sales meetings and 3 late-stage product opportunities. A Myntmore eCommerce Tech case study.",
+    description: "Building Demand for an eCommerce Analytics Platform. The challenge, approach and results from a Myntmore eCommerce Tech case study.",
     url: URL,
     images: ogImages("/case-studies/ecommerce-tech-analytics-demand"),
   },

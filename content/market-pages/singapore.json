@@ -30,21 +30,33 @@
       "tag": "Outsourced CFO · Singapore",
       "title": "Open on a specific finance need",
       "body": "A Singapore CFO and accounting firm contacted founders and finance leaders about specific needs, such as monthly management reports or senior finance support, instead of a service list.",
-      "results": ["19 meetings booked", "6 needs assessments", "3 proposals requested"],
+      "results": [
+        "19 meetings booked",
+        "6 needs assessments",
+        "3 proposals requested"
+      ],
       "href": "/case-studies/financial-services-singapore-outsourced-cfo"
     },
     {
       "tag": "Pharma · Licensing",
       "title": "Share a non-confidential summary first",
       "body": "An Indian specialty pharma developer reached business development and licensing leaders with an approved, non-confidential product summary. Confidentiality agreements came only once talks progressed.",
-      "results": ["10 licensing meetings", "4 confidential portfolio reviews", "16 positive replies"],
+      "results": [
+        "10 licensing meetings",
+        "4 confidential portfolio reviews",
+        "16 positive replies"
+      ],
       "href": "/case-studies/pharma-singapore-product-licensing"
     },
     {
       "tag": "Staffing · Contract",
       "title": "Ask about upcoming needs, not open roles",
       "body": "A Singapore staffing firm with uneven demand asked HR, finance and operations leaders about upcoming temporary staffing needs, then qualified by role, duration and start date.",
-      "results": ["17 meetings booked", "6 staffing requirements", "3 candidate submissions approved"],
+      "results": [
+        "17 meetings booked",
+        "6 staffing requirements",
+        "3 candidate submissions approved"
+      ],
       "href": "/case-studies/recruitment-singapore-contract-staffing"
     }
   ],
@@ -53,10 +65,22 @@
   "timingTitle": "Timing",
   "timingBody": "Singapore is 2.5 hours ahead of India. Messages go out on Singapore weekday mornings, which is early morning in India, and meetings fit easily into an Indian working day.",
   "industryLinks": [
-    { "label": "Accounting & CFO firms", "href": "/lp/accounting-cfo-firms" },
-    { "label": "Insurance brokers", "href": "/lp/insurance" },
-    { "label": "Pharma companies", "href": "/lp/pharma" },
-    { "label": "Recruitment & staffing", "href": "/lp/recruitment-firms" }
+    {
+      "label": "Accounting & CFO firms",
+      "href": "/lp/accounting-cfo-firms"
+    },
+    {
+      "label": "Insurance brokers",
+      "href": "/lp/insurance"
+    },
+    {
+      "label": "Pharma companies",
+      "href": "/lp/pharma"
+    },
+    {
+      "label": "Recruitment & staffing",
+      "href": "/lp/recruitment-firms"
+    }
   ],
-  "cities": null
+  "cities": "market"
 }

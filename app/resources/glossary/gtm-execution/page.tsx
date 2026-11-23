@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is the difference between GTM strategy and GTM execution?", answer: "GTM strategy decides who to target, what to say and through which channels; GTM execution is the work of doing it. Strategy produces the ideal customer profile, positioning and channel plan. Execution builds the lists, runs the outreach, books the meetings and feeds results back so the strategy can be corrected." },
+  { question: "How do you measure GTM execution?", answer: "Track each stage of the funnel separately: accounts contacted, reply rate, positive reply rate, meetings booked, meetings held and opportunities created. Watching each step shows where execution is breaking, whether in targeting, messaging or follow-up, instead of only seeing that revenue is short at the end of the quarter." },
+  { question: "Who owns GTM execution in a B2B company?", answer: "Usually sales and marketing together, with one person accountable for the pipeline target. In small companies that is often the founder. Larger teams split it across SDRs, account executives and marketing operations, or hand outbound execution to an agency while keeping strategy and closing in-house." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"Turning the go-to-market plan into campaigns that actually run every week, and measuring whether they work."}
       definition={"The day-to-day work of running a go-to-market plan: building lists, launching outreach, booking meetings, and adjusting targeting and messaging based on real results."}
-      body={"Strategy decides the target and the message; execution is where it meets real prospects. Good execution runs on short feedback loops: launch to a small segment, read reply and meeting-booked rates within a couple of weeks, and change the list or the message before scaling, rather than committing a full quarter to an untested plan."}
+      body={"GTM execution is the part of go-to-market work that happens every week rather than once a quarter. Strategy decides the target and the message; execution is where it meets real prospects. It covers building and verifying lists, setting up sending infrastructure, launching outreach across channels, handling replies, booking meetings and reporting on what happened. Good execution runs on short feedback loops: launch to a small segment, read reply and meeting-booked rates within a couple of weeks, and change the list or the message before scaling, rather than committing a full quarter to an untested plan. The most common failure is a gap between the plan and the people running it. Say a leadership team agrees to target operations heads at logistics companies, but the list that actually gets built is every manager at every logistics company. The plan was sound; execution diluted it. Another common failure is judging too early: a campaign usually needs a few weeks to produce steady conversations, so stopping after the first few days of silence throws away good work. Strong execution keeps a single owner for each stage, clear definitions of a qualified reply and a booked meeting, and a weekly review of the numbers."}
       sourceLabel={"See the service: GTM Strategy"}
       sourceHref={"/services/gtm-strategy"}
       furtherLabel={"Read: The 7 B2B Lead Gen Metrics That Actually Matter"}
       furtherHref={"/resources/blogs/b2b-lead-gen-metrics"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

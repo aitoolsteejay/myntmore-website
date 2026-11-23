@@ -31,21 +31,33 @@
       "tag": "Software development · India to US",
       "title": "Direct conversations instead of project marketplaces",
       "body": "An Indian software firm reached CTOs, engineering heads and operations leaders at mid-sized US retail and logistics companies. Each message introduced one relevant capability and asked for a short discovery call.",
-      "results": ["24 meetings booked", "7 project requirements shared", "4 proposals requested"],
+      "results": [
+        "24 meetings booked",
+        "7 project requirements shared",
+        "4 proposals requested"
+      ],
       "href": "/case-studies/agencies-it-usa-software-development"
     },
     {
       "tag": "Pharma · API supply",
       "title": "Open with the second-source question",
       "body": "An Indian API manufacturer had a broad list but couldn't tell who needed a supplier now. Outreach to US procurement and sourcing leaders asked one direct question about second-source evaluation.",
-      "results": ["16 sourcing meetings", "5 technical evaluations", "39 positive replies"],
+      "results": [
+        "16 sourcing meetings",
+        "5 technical evaluations",
+        "39 positive replies"
+      ],
       "href": "/case-studies/pharma-usa-api-second-source"
     },
     {
       "tag": "Recruitment · Data and analytics",
       "title": "Target employers with live vacancies",
       "body": "A data engineering recruiter contacted talent leaders and engineering managers at US companies already advertising relevant roles, then qualified on urgency and agency process.",
-      "results": ["20 meetings booked", "7 hiring briefs", "3 searches authorized"],
+      "results": [
+        "20 meetings booked",
+        "7 hiring briefs",
+        "3 searches authorized"
+      ],
       "href": "/case-studies/recruitment-usa-tech-recruitment"
     }
   ],
@@ -54,10 +66,22 @@
   "timingTitle": "Timing",
   "timingBody": "US time zones are 9.5 to 13.5 hours behind India. Messages are scheduled for the recipient's morning in their own time zone, and meetings land in US hours, which usually means evening calls for an India-based team.",
   "industryLinks": [
-    { "label": "IT services & agencies", "href": "/lp/agencies-it" },
-    { "label": "B2B SaaS", "href": "/lp/saas-founders" },
-    { "label": "Pharma companies", "href": "/lp/pharma" },
-    { "label": "Recruitment & staffing", "href": "/lp/recruitment-firms" }
+    {
+      "label": "IT services & agencies",
+      "href": "/lp/agencies-it"
+    },
+    {
+      "label": "B2B SaaS",
+      "href": "/lp/saas-founders"
+    },
+    {
+      "label": "Pharma companies",
+      "href": "/lp/pharma"
+    },
+    {
+      "label": "Recruitment & staffing",
+      "href": "/lp/recruitment-firms"
+    }
   ],
-  "cities": null
+  "cities": "market"
 }

@@ -8,6 +8,15 @@ import { caveat } from "@/app/fonts/caveat";
 // are hidden on mobile), so loading it site-wide would preload a font file on
 // every other page for a decoration those pages never render.
 
+// The rotating second line of the hero headline.
+const PHRASES = [
+  "You Close the Deals",
+  "You Hit Your Number",
+  "You Scale the Team",
+  "You Win Every Quarter",
+  "You Own the Market",
+];
+
 export default function Hero() {
   const blob1Ref = useRef<HTMLDivElement>(null);
   const blob2Ref = useRef<HTMLDivElement>(null);
@@ -147,14 +156,6 @@ export default function Hero() {
   useEffect(() => {
     const el = cycleRef.current;
     if (!el) return;
-
-    const PHRASES = [
-      "You Close the Deals",
-      "You Hit Your Number",
-      "You Scale the Team",
-      "You Win Every Quarter",
-      "You Own the Market",
-    ];
 
     let idx = 0;
     const timers: ReturnType<typeof setTimeout>[] = [];
@@ -446,11 +447,20 @@ export default function Hero() {
         {/* H1 */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[0.95] mb-6 text-[#0a0a0a]">
           <span className="block font-black">We Fill Your Pipeline</span>
-          <span
-            ref={cycleRef}
-            className="block mt-2 italic font-semibold"
-            style={{ color: "#3a3a3a", willChange: "transform, opacity" }}
-          >You Close the Deals</span>
+          {/* Every phrase sits invisibly in the same grid cell as the visible one (drawn from data-text by CSS, so the
+              heading's text is unchanged), and the line keeps the height of the longest phrase. The sizes on this line are
+              set so that every phrase fits on one line from 640px up (at 60px and 96px, "You Win Every Quarter" wrapped
+              and left an empty second line under the shorter phrases). On a phone some phrases wrap to two lines, and without this the whole hero grew and
+              shrank every few seconds, shifting the page below (a Core Web Vitals layout shift). */}
+          <span className="grid mt-2 italic font-semibold sm:text-[3.5rem] md:text-6xl lg:text-7xl xl:text-[5.5rem]">
+            {PHRASES.map((p) => (
+              <span key={p} aria-hidden="true" className="invisible reserve-text" data-text={p} style={{ gridArea: "1 / 1" }} />
+            ))}
+            <span
+              ref={cycleRef}
+              style={{ gridArea: "1 / 1", color: "#3a3a3a", willChange: "transform, opacity" }}
+            >{PHRASES[0]}</span>
+          </span>
         </h1>
 
         {/* Yellow wavy underline */}

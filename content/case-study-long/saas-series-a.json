@@ -29,9 +29,18 @@
     "headline": "40 qualified meetings in 8 weeks from a cold start",
     "intro": "A B2B SaaS company entering a new vertical had zero outbound infrastructure. Their AE was spending 60% of their day manually finding leads on LinkedIn instead of closing deals.",
     "stats": [
-      { "value": "40", "label": "Meetings in 8 weeks" },
-      { "value": "34%", "label": "Reply rate" },
-      { "value": "$1.2M", "label": "Pipeline generated" }
+      {
+        "value": "40",
+        "label": "Meetings in 8 weeks"
+      },
+      {
+        "value": "34%",
+        "label": "Reply rate"
+      },
+      {
+        "value": "$1.2M",
+        "label": "Pipeline generated"
+      }
     ]
   },
   "colors": {
@@ -45,24 +54,57 @@
   "solution": {
     "body": "We built a multi-channel engine running cold email and LinkedIn automation in parallel. We scraped active intent data, specifically companies currently hiring for roles that signalled readiness to buy, to trigger perfectly timed outreach sequences.",
     "cards": [
-      { "title": "ICP Mapping & Lead Scoring", "description": "ICP built around hiring signals and funding triggers specific to the target vertical" },
-      { "title": "Cold Email", "description": "3-step personalised sequences with intent-based first lines. A/B tested subject lines and CTAs" },
-      { "title": "LinkedIn Outreach", "description": "Parallel LinkedIn sequences reinforcing the cold email touch on the same prospects" }
+      {
+        "title": "ICP Mapping & Lead Scoring",
+        "description": "ICP built around hiring signals and funding triggers specific to the target vertical"
+      },
+      {
+        "title": "Cold Email",
+        "description": "3-step personalised sequences with intent-based first lines. A/B tested subject lines and CTAs"
+      },
+      {
+        "title": "LinkedIn Outreach",
+        "description": "Parallel LinkedIn sequences reinforcing the cold email touch on the same prospects"
+      }
     ]
   },
   "results": {
     "summary": "Within 8 weeks from a complete cold start, the system was generating 5+ qualified meetings per week. The AE was freed from manual prospecting entirely, spending 100% of their time on demos and follow-ups.",
     "figures": [
-      { "value": "40", "label": "Qualified meetings booked", "note": "In 8 weeks from zero" },
-      { "value": "34%", "label": "Email reply rate", "note": "vs 2–5% industry average" },
-      { "value": "$1.2M", "label": "Pipeline generated", "note": "Qualified opportunities created" }
+      {
+        "value": "40",
+        "label": "Qualified meetings booked",
+        "note": "In 8 weeks from zero"
+      },
+      {
+        "value": "34%",
+        "label": "Email reply rate",
+        "note": "vs 2–5% industry average"
+      },
+      {
+        "value": "$1.2M",
+        "label": "Pipeline generated",
+        "note": "Qualified opportunities created"
+      }
     ]
   },
   "services": [
-    { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
-    { "name": "AI Lead Generation", "href": "/services/ai-lead-generation" },
-    { "name": "Cold Email Infrastructure", "href": "/services/cold-email" },
-    { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" }
+    {
+      "name": "ICP Mapping & Lead Scoring",
+      "href": "/services/sales-intelligence"
+    },
+    {
+      "name": "AI Lead Generation",
+      "href": "/services/ai-lead-generation"
+    },
+    {
+      "name": "Cold Email Infrastructure",
+      "href": "/services/cold-email"
+    },
+    {
+      "name": "LinkedIn Outreach & Automation",
+      "href": "/services/linkedin-outreach"
+    }
   ],
   "closingCta": {
     "heading": "Get results like this for your pipeline",

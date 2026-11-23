@@ -127,14 +127,24 @@ export default function Promise() {
         {/* Typewriter heading. Opts out of the sitewide balanced wrapping:
             re-balancing on every typed letter made finished words jump lines. */}
         <h2 className="text-3xl sm:text-5xl font-black text-[#0a0a0a] tracking-tight leading-tight" style={{ textWrap: "wrap" }}>
-          We book{" "}
-          <span ref={typedRef} style={{ color: "#0a0a0a" }} />
-          <span
-            ref={cursorRef}
-            aria-hidden="true"
-            style={{ color: "#A14A08", marginLeft: "3px", fontWeight: 900 }}
-          >
-            |
+          {/* Each full phrase sits invisibly in the same grid cell as the typed one (drawn from data-text by CSS, so the
+              heading's text is unchanged), and the heading keeps the height of the longest phrase. On a phone the longer phrases wrap to a second line, and without this the section grew
+              and shrank as each phrase was typed, shifting the page below (a Core Web Vitals layout shift). */}
+          <span className="grid">
+            {PHRASES.map((p) => (
+              <span key={p} aria-hidden="true" className="invisible reserve-text with-cursor" data-text={`We book ${p}`} style={{ gridArea: "1 / 1" }} />
+            ))}
+            <span style={{ gridArea: "1 / 1" }}>
+              We book{" "}
+              <span ref={typedRef} style={{ color: "#0a0a0a" }} />
+              <span
+                ref={cursorRef}
+                aria-hidden="true"
+                style={{ color: "#A14A08", marginLeft: "3px", fontWeight: 900 }}
+              >
+                |
+              </span>
+            </span>
           </span>
         </h2>
 

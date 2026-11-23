@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/insurance-corporate-brokerage
 
 export const metadata: Metadata = {
   title: "Corporate Insurance Broker Case Study",
-  description: "21 Meetings for a Corporate Insurance Brokerage: 7 requests for policy or coverage reviews and 4 potential corporate accounts. A Myntmore Insurance case study.",
+  description: "21 Meetings for a Corporate Insurance Brokerage: 7 requests for policy or coverage reviews. A Myntmore Insurance case study.",
   keywords: [
     "corporate insurance broker lead generation",
     "corporate insurance broker case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "21 Meetings for a Corporate Insurance Brokerage",
-    description: "21 Meetings for a Corporate Insurance Brokerage: 7 requests for policy or coverage reviews and 4 potential corporate accounts. A Myntmore Insurance case study.",
+    description: "21 Meetings for a Corporate Insurance Brokerage: 7 requests for policy or coverage reviews. A Myntmore Insurance case study.",
     url: URL,
     images: ogImages("/case-studies/insurance-corporate-brokerage-meetings"),
   },

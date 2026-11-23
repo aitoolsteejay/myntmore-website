@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What makes a good B2B value proposition?", answer: "A good B2B value proposition names the buyer, the specific problem they face and the outcome you deliver, with a reason to believe it. It should be specific enough that the right buyer recognises themselves immediately and the wrong one does not, and it should not read the same on a competitor's website." },
+  { question: "What is the difference between a value proposition and a tagline?", answer: "A value proposition explains who you help, with what problem and to what result. A tagline is a short, memorable brand line that may not explain anything on its own. In outbound and on landing pages, the value proposition does the persuading; a tagline is optional decoration that supports brand recall." },
+  { question: "How do you test a value proposition in outbound?", answer: "Send two or three versions to similar segments and compare positive reply rates, keeping the list and the rest of the message the same. The version that earns more relevant replies is closer to what buyers care about. Read the replies too: objections often reveal which part of the promise buyers doubt." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"The specific answer to 'why you, why this, why now,' not a slogan about what the company generally does."}
       definition={"A clear statement of the specific result a buyer gets by using a product or service, and why that result matters more coming from you than from any alternative, including doing nothing."}
-      body={"“We help companies grow” describes an industry, not a value proposition; it could be the first line of almost any B2B company's homepage. A real one names the buyer, the specific problem, and the specific outcome, which is also what makes an outbound message land as relevant instead of generic. It's the written form of the same idea behind an aha moment."}
+      body={"'We help companies grow' describes an industry, not a value proposition; it could be the first line of almost any B2B company's homepage. A real value proposition names three things: the buyer, the specific problem they have, and the specific outcome you deliver, ideally with a reason to believe you can deliver it better than the alternatives, including doing nothing at all. In outbound, it is what decides whether a message lands as relevant or generic. Say an IT services firm writes 'We build custom software.' Compare that with 'We help mid-sized logistics companies connect their warehouse and order systems when they open a new site.' The second version lets the right reader recognise themselves in a single sentence, and lets everyone else ignore it, which is exactly what good targeting needs. The common mistakes are listing features instead of outcomes, trying to appeal to every possible buyer at once, and claiming results you cannot show. A useful test is whether a prospect could repeat it to a colleague after reading it once. If the line could sit unchanged on a competitor's website, it is not yet a value proposition. It is the written form of the same idea behind an aha moment."}
       sourceLabel={"Read the related term: Aha Moment"}
       sourceHref={"/resources/glossary/aha-moment"}
       furtherLabel={"See the service: GTM Strategy"}
       furtherHref={"/services/gtm-strategy"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

@@ -14,7 +14,7 @@
     "Account-Based Outreach"
   ],
   "definition": "Account-based marketing targets a short list of named companies directly, coordinating outreach across every relevant stakeholder inside each one, instead of messaging a broad, generic list.",
-  "body": "Where broad outbound optimises for volume across thousands of leads, ABM optimises for depth across a few dozen accounts that are individually worth the extra research and multi-threaded outreach it takes to win them.",
+  "body": "Where broad outbound optimises for volume across thousands of leads, ABM optimises for depth across a few dozen accounts that are individually worth the extra research and multi-threaded outreach it takes to win them. A typical ABM programme starts by choosing those accounts carefully, usually companies that closely match the ideal customer profile and would be worth a large or long contract. It then maps the buying committee inside each one, researches what each person cares about, and coordinates email, LinkedIn and sometimes events so every stakeholder hears a consistent story tailored to their role. Say a team picks thirty target accounts and identifies four relevant people in each. That is 120 contacts, few enough to research properly, and each message can reference something specific about the company and the person's responsibilities. ABM works best for high-value deals with long sales cycles, where winning one account justifies weeks of effort; it is a poor fit when the deal size is small and volume matters more than depth. The common mistakes are choosing too many accounts to research well, treating ABM as personalised spam to the same list, and judging it on short-term reply rates instead of account progress.",
   "sourceLabel": "See the service: Account-Based Marketing",
   "sourceHref": "/services/account-based-marketing",
   "furtherLabel": "Read: Single-Threaded Deals Die: Why You Need the Whole Buying Committee, Not One Champion",
@@ -30,5 +30,18 @@
     "account based marketing meaning",
     "account-based outreach"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between ABM and traditional outbound?",
+      "answer": "Traditional outbound reaches many prospects with messages tailored by segment, judged on volume metrics such as replies and meetings. ABM picks a short list of named accounts, reaches several people inside each with messages tailored to the company and role, and is judged on account progress, such as stakeholders engaged and opportunities opened."
+    },
+    {
+      "question": "How many accounts should an ABM programme target?",
+      "answer": "Few enough to research each one properly. A common starting point is 10 to 25 named accounts for the most personalised tier, then add a wider tier with lighter personalisation. The right number depends on deal size and how many accounts your team can genuinely research and follow up."
+    },
+    {
+      "question": "Is ABM worth it for small B2B companies?",
+      "answer": "Yes, when the deal size justifies the effort. A small company selling high-value contracts to a known set of large customers can run ABM well with a short list and careful research. If deals are small and the market is broad, segment-level outbound usually produces more pipeline for the same work."
+    }
+  ]
 }

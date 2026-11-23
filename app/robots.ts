@@ -7,7 +7,7 @@ import type { MetadataRoute } from "next";
 //   open-ended set of URLs that appear to be on this domain. The trailing slash leaves the base page
 //   crawlable.
 // - The CMS admin and its API.
-const DISALLOW = ["/tools/dm-angle-generator/", "/keystatic", "/api/keystatic"];
+const DISALLOW = ["/tools/dm-angle-generator/", "/keystatic", "/api/keystatic", "/admin", "/api/admin"];
 
 // AI search and assistant crawlers, named so it is explicit that each one is welcome. Being fetched by
 // these is how the site gets cited in ChatGPT, Claude, Perplexity, Gemini, Copilot and others. A crawler

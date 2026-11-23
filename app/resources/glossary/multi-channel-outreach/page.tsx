@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is multi-channel outreach?", answer: "Multi-channel outreach is reaching the same prospect through more than one channel, such as email, LinkedIn and phone, in a coordinated sequence. Each touch adds something new, and the channels support each other, so a prospect who ignores one channel can still be reached on another." },
+  { question: "Is multi-channel outreach better than single-channel?", answer: "Usually, because buyers prefer different channels and a second channel gives the message more credibility. It only works when the channels are coordinated, each touch adds something new, and a reply on one channel stops the sequence on the others. Get one channel working before adding more." },
+  { question: "How many touches should a multi-channel sequence have?", answer: "Most B2B sequences use between five and eight touches across two or three channels, spread over two to four weeks. Fewer touches leave interested prospects unreached; more tend to feel like pressure. The right number depends on deal size, with higher-value accounts justifying more research and more steps." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"Reaching the same prospect across email, LinkedIn, and phone in one coordinated sequence, instead of betting on a single channel."}
       definition={"An outreach sequence that contacts the same prospect across several channels, such as email, LinkedIn, and phone, in a coordinated order, rather than relying on one channel alone."}
-      body={"Prospects don't all live in the same inbox: some ignore email but answer LinkedIn messages, others are the reverse. A coordinated sequence, for example a LinkedIn connection, then an email, then a follow-up that references both, raises the odds of reaching each person, as long as every touch adds something new rather than repeating the same pitch louder."}
+      body={"Multi-channel outreach contacts the same prospect across several channels, such as email, LinkedIn and phone, in a planned order, instead of relying on one. Prospects do not all live in the same inbox: some ignore email but answer LinkedIn messages, others are the reverse, and senior buyers often check a sender's LinkedIn profile before replying to an email at all. A coordinated sequence, for example a LinkedIn connection, then an email, then a follow-up that references both, raises the odds of reaching each person, as long as every touch adds something new rather than repeating the same pitch louder. Coordination is the part teams get wrong most often. If email and LinkedIn run from separate tools with no shared view, a prospect can reply on one channel and keep receiving automated follow-ups on the other, which looks careless. Say a prospect accepts a connection request on Monday and replies to the email on Wednesday. Both sequences should stop, and one person should pick up the conversation. The other common mistakes are adding channels before the targeting and message work on one, sending identical copy on every channel, and contacting people so often across channels that it feels like pressure."}
       sourceLabel={"Read: Cold Email vs. LinkedIn Outreach for B2B Pipeline"}
       sourceHref={"/resources/blogs/cold-email-vs-linkedin-outreach"}
       furtherLabel={"Read: LinkedIn Outreach Sequences That Get Replies"}
       furtherHref={"/resources/blogs/linkedin-outreach-sequences"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

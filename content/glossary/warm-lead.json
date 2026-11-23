@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "A prospect who has engaged with outreach, opened, replied neutrally, connected, but hasn't shown clear buying intent yet, and is worth continued nurturing rather than a hard pitch.",
-  "body": "Pushing a warm lead too hard, too fast usually resets it back to cold: a premature pitch reads as exactly the pattern-matched sales behaviour they were starting to trust you weren't doing. The right move is another touch of genuine value, not an escalated ask, until a real signal shows up.",
+  "body": "A warm lead sits between a cold prospect and an active opportunity: they have noticed you, but they have not told you they have a problem worth solving now. In B2B outbound that usually means someone who accepted a connection request, replied with a neutral question, opened several emails or engaged with a post. The mistake most teams make is treating any engagement as buying intent. Pushing a warm lead too hard, too fast usually resets it back to cold, because a premature pitch reads as exactly the pattern-matched sales behaviour they were starting to trust you weren't doing. The better move is another touch of genuine value: a relevant example, a useful resource or a short question about their situation. Say a prospect replies 'not right now, but interesting' to a first email. That is a warm lead. Asking for a 30-minute call the next day treats it as hot; noting the reason, sending something useful in a few weeks and checking back when their timing changes treats it as warm. Track warm leads separately from cold and hot ones, with the date of their last engagement, so nobody forgets them and nobody pitches them before a real signal shows up.",
   "sourceLabel": "Read the related term: Sales Pipeline",
   "sourceHref": "/resources/glossary/sales-pipeline",
   "furtherLabel": "See the service: LinkedIn Outreach & Automation",
@@ -24,5 +24,18 @@
     "warm lead vs hot lead",
     "how to nurture a warm lead"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is the difference between a warm lead and a hot lead?",
+      "answer": "A warm lead has engaged with you but has not shown buying intent; a hot lead has. A connection accepted or a neutral reply makes someone warm. Asking about pricing, requesting a call or naming a timeline makes them hot. Warm leads need nurturing; hot leads need a fast, direct response from sales."
+    },
+    {
+      "question": "How do you convert a warm lead into a meeting?",
+      "answer": "Give them a reason to talk that is about their situation, not your product. Share a relevant example or resource, ask one short question about their current priorities, and wait for a real signal before asking for time. A low-commitment ask, such as a 15-minute review, converts better than a full sales call."
+    },
+    {
+      "question": "How long should you nurture a warm lead?",
+      "answer": "Until their situation changes or they ask you to stop. Most warm leads need several useful touches spread over weeks or months, timed to triggers such as a new hire, funding or a project starting. Record why each lead went warm, so every follow-up refers to something real rather than a generic check-in."
+    }
+  ]
 }

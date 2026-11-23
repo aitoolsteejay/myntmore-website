@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/professional-services-consult
 
 export const metadata: Metadata = {
   title: "Management Consulting Firm Case Study",
-  description: "Turning Expertise Into 16 Qualified Conversations for a Consulting Firm. The challenge, approach and results from a Myntmore Professional Services case study.",
+  description: "16 qualified conversations for a consulting firm: 4 potential retained engagements and 170% more profile visibility. A Myntmore case study.",
   keywords: [
     "management consulting firm lead generation",
     "management consulting firm case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "Management Consulting Firm Case Study | Myntmore",
-    description: "Turning Expertise Into 16 Qualified Conversations for a Consulting Firm. The challenge, approach and results from a Myntmore Professional Services case study.",
+    description: "16 qualified conversations for a consulting firm: 4 potential retained engagements and 170% more profile visibility. A Myntmore case study.",
     url: URL,
     images: ogImages("/case-studies/professional-services-consulting-conversations"),
   },

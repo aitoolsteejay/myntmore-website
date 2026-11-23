@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "The percentage of contacted prospects who book a meeting, the metric outbound teams actually optimize for, since replies alone don't fill a pipeline.",
-  "body": "A campaign can have a strong response rate and a weak meeting-booked rate if the ask is vague or the follow-through is slow, which is why the two are tracked separately rather than as one combined number. It is always lower than the reply rate, since only some replies turn into meetings, and it varies by ICP, offer and channel.",
+  "body": "Meeting-booked rate is the share of contacted prospects who go on to book a meeting, and it is the number outbound teams actually optimise for, since replies alone do not fill a pipeline. It is always lower than the reply rate, because only some replies are positive and only some positive replies turn into a scheduled call, and it varies by ICP, offer and channel. A campaign can have a strong reply rate and a weak meeting-booked rate if the ask is vague, the follow-through on positive replies is slow, or the prospect is offered a long call when they only agreed to a quick chat. Say a team contacts 1,000 people, gets 30 replies, 12 of them positive, and books 8 meetings. The reply rate is 3%, but the meeting-booked rate is 0.8%, and the gap between 12 positive replies and 8 meetings shows where to look first. Tracking the rate alongside the show rate, the share of booked meetings that actually happen, gives the full picture. The common mistakes are judging a campaign on opens or replies alone, counting meetings with people outside the ICP, and leaving positive replies unanswered for a day or more.",
   "sourceLabel": "Read: The 2026 B2B Outbound Benchmark Report",
   "sourceHref": "/resources/blogs/b2b-outbound-benchmark-report-2026",
   "furtherLabel": "Go deeper: What to do in the first hour after a prospect replies",
@@ -24,5 +24,18 @@
     "cold email meetings booked",
     "good meeting booked rate b2b"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you calculate meeting-booked rate?",
+      "answer": "Divide the number of meetings booked by the number of prospects contacted, then multiply by 100. If a campaign reaches 1,000 people and books 8 meetings, the meeting-booked rate is 0.8%. Count only meetings with prospects who fit your ideal customer profile, so the number reflects real pipeline."
+    },
+    {
+      "question": "Why is my reply rate high but my meeting-booked rate low?",
+      "answer": "Usually because something breaks after the reply: slow responses, a vague next step, too much back-and-forth over times, or asking for a longer call than the prospect agreed to. Answer positive replies quickly, offer specific times, and keep the first meeting short and clearly useful."
+    },
+    {
+      "question": "What is the difference between meeting-booked rate and show rate?",
+      "answer": "Meeting-booked rate measures how many contacted prospects schedule a meeting. Show rate measures how many of those booked meetings actually take place. Both matter: a high booking rate with a poor show rate usually means meetings were booked too far ahead or without enough context."
+    }
+  ]
 }

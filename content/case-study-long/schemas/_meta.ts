@@ -1,4 +1,4 @@
-import { fields } from "@keystatic/core";
+import { fields } from "../../../lib/admin/fields";
 
 // Search, share and article-schema fields every long-form case study has. Each page's own schema spreads this in
 // front of its page-copy fields: `{ ...longCaseMetaFields, ...copyFields }`. The JSON keys are read by

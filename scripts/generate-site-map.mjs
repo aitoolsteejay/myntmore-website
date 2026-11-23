@@ -46,6 +46,8 @@ const isPrivate = (p) =>
   p.startsWith("/cold-emailing-package") ||
   p === "/value-prop" ||
   p === "/master-icp" ||
+  p === "/admin" ||
+  p.startsWith("/admin/") ||
   // Hidden until launch: works at its URL but must not be listed anywhere. Remove at launch.
   p === "/tools/prospect-research";
 // Legacy redirects that point at (or stand in for) a private page.
@@ -269,6 +271,16 @@ if (exists(careersRolesFile)) {
   } catch {}
 }
 
+// The events hub (/events) lists every event in lib/events.generated.json (built from content/events/)
+const eventsFile = path.join(ROOT, "lib", "events.generated.json");
+if (exists(eventsFile)) {
+  try {
+    for (const e of JSON.parse(read(eventsFile))) {
+      edges.push({ from: "/events", fromFile: "app/events/page.tsx", to: `/events/${e.slug}` });
+    }
+  } catch {}
+}
+
 // Each city page (/b2b-lead-generation-<city>) links to its child industry x city pages
 const industryCityFile = path.join(ROOT, "lib", "industry-city-pages.generated.json");
 if (exists(industryCityFile)) {
@@ -453,7 +465,7 @@ const data = {
   hiddenRedirects,
   rewrites: rewrites.map((r) => ({ from: normalize(r.source), to: r.destination })),
   // The Prospect Research tool's API is withheld with the tool page until launch.
-  apiRoutes: appFiles.filter((f) => path.basename(f) === "route.ts").map((f) => dirToRoute(path.dirname(f))).filter((r) => !r.startsWith("/api/tools/prospect-research")).sort(),
+  apiRoutes: appFiles.filter((f) => path.basename(f) === "route.ts").map((f) => dirToRoute(path.dirname(f))).filter((r) => !r.startsWith("/api/tools/prospect-research") && !isPrivate(r) && !r.startsWith("/api/admin")).sort(),
   method:
     "A page is 'linked' if it can be reached by following internal links from the homepage. Links in the XML sitemap, the HTML /sitemap page and this audit page are ignored.",
 };

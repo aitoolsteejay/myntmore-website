@@ -1,0 +1,179 @@
+{
+  "slug": "paris",
+  "metaTitle": "B2B Lead Generation Company in Paris",
+  "metaDescription": "B2B lead generation company for Paris: outreach in French and English to French buyers in pharma, cosmetics, aerospace and SaaS, within GDPR.",
+  "keywords": [
+    "b2b lead generation company in paris",
+    "lead generation company in paris",
+    "lead generation agency in paris",
+    "lead generation services in paris",
+    "b2b lead generation paris",
+    "outbound sales agency paris",
+    "appointment setting services paris",
+    "cold email agency paris",
+    "linkedin lead generation agency paris",
+    "lead generation agency france",
+    "b2b lead generation france",
+    "how to find buyers in france"
+  ],
+  "ogTitle": "B2B Lead Generation Company in Paris | Myntmore",
+  "ogDescription": "B2B lead generation company for Paris: outreach in French and English to French buyers in pharma, cosmetics, aerospace and SaaS, within GDPR.",
+  "breadcrumbLabel": "Paris",
+  "country": "France",
+  "badge": "Paris, France",
+  "emoji": "🥐",
+  "floatingIcons": [
+    "🥐",
+    "💄",
+    "✈️",
+    "💼"
+  ],
+  "hubs": [
+    "La Défense",
+    "8th arrondissement",
+    "Opéra",
+    "Saint-Lazare",
+    "Station F",
+    "Boulogne-Billancourt",
+    "Issy-les-Moulineaux",
+    "Saint-Denis Pleyel"
+  ],
+  "h1": "B2B Lead Generation Company in Paris",
+  "intro": "Looking for a lead generation company in Paris? Myntmore runs cold email, LinkedIn outreach and ABM for B2B companies selling to French buyers, including Indian manufacturers, pharma companies and IT firms. We work remotely from Mumbai, campaigns go live within 18 days, and the first qualified conversations usually arrive in weeks 3 to 4.",
+  "primaryCta": "Book a Free GTM Audit",
+  "secondaryCta": "View All Services",
+  "whyTitle": "Why selling to Paris needs outbound",
+  "why": [
+    {
+      "icon": "💄",
+      "title": "Global brands with demanding buyers",
+      "desc": "Paris holds the headquarters of luxury, cosmetics, pharma and aerospace groups. Their sourcing and development teams expect suppliers who understand their category from the first message."
+    },
+    {
+      "icon": "🗣️",
+      "title": "Language changes reply rates",
+      "desc": "French buyers often read English, but a message in French as well shows the effort. Our French pharma campaign wrote in both languages."
+    },
+    {
+      "icon": "🎪",
+      "title": "More than the trade show",
+      "desc": "Many suppliers only meet French buyers at exhibitions. Outbound keeps conversations going between shows and reaches buyers who don't attend."
+    }
+  ],
+  "proofTitle": "Results from campaigns in France",
+  "proofIntro": "These are real campaigns that booked meetings with French buyers, in pharma contract manufacturing and cosmetics packaging.",
+  "proof": [
+    {
+      "label": "Contract manufacturing buyers in France",
+      "href": "/case-studies/pharma-france-contract-manufacturing",
+      "result": "18 buyer meetings held, 6 requests for quotation and 36 positive replies."
+    },
+    {
+      "label": "Packaging buyers at French cosmetics brands",
+      "href": "/case-studies/manufacturers-exporters-france-packaging",
+      "result": "18 meetings booked, 6 packaging briefs and 4 sample and quotation requests."
+    },
+    {
+      "label": "Industrial component buyers in Germany",
+      "href": "/case-studies/manufacturers-exporters-germany-industrial-components",
+      "result": "18 meetings booked with machinery makers, 6 requests for quotation and 3 sample requests."
+    }
+  ],
+  "proofNote": "Client names are withheld, and the clients are not all based in Paris: these campaigns reached buyers across France, plus one in Germany. See all [B2B case studies in France](/case-studies/markets/france).",
+  "servicesTitle": "Every service, one system",
+  "servicesIntro": "Seven productized services, built and managed for you, from outbound appointment setting over LinkedIn and cold email to account-based marketing and founder personal branding.",
+  "services": [
+    {
+      "title": "LinkedIn Outreach & Automation",
+      "href": "/services/linkedin-outreach",
+      "desc": "Multi-touch LinkedIn sequences that turn connections into conversations."
+    },
+    {
+      "title": "Cold Email Infrastructure",
+      "href": "/services/cold-email",
+      "desc": "Domain warm-up, deliverability, and AI-personalised sequences that land in the inbox."
+    },
+    {
+      "title": "ICP Mapping & Lead Scoring",
+      "href": "/services/sales-intelligence",
+      "desc": "40+ buying signals monitored daily so you reach in-market accounts first."
+    },
+    {
+      "title": "AI Lead Generation",
+      "href": "/services/ai-lead-generation",
+      "desc": "Custom AI agents research and prioritise leads so your team only talks to fits."
+    },
+    {
+      "title": "Account-Based Marketing",
+      "href": "/services/account-based-marketing",
+      "desc": "Coordinated campaigns targeting your highest-value target accounts."
+    },
+    {
+      "title": "Personal Branding",
+      "href": "/services/personal-branding",
+      "desc": "LinkedIn ghostwriting that builds authority for founders and execs."
+    },
+    {
+      "title": "GTM Strategy",
+      "href": "/services/gtm-strategy",
+      "desc": "ICP, positioning and channel mix, then run by the same team across every channel."
+    }
+  ],
+  "diffTitle": "Why Myntmore for Paris",
+  "differentiators": [
+    "Signal-based targeting instead of static, bought contact lists",
+    "A fully productized system, live in weeks, not a slow agency ramp-up",
+    "Transparent reporting on every meeting, reply, and touch",
+    "A monthly retainer: 3-month minimum, then month to month"
+  ],
+  "formTitle": "Get a free GTM audit for selling to Paris",
+  "formSubtitle": "We'll audit your current outreach, map your ICP, and tell you exactly what's holding your pipeline back. No pitch, no pressure.",
+  "segmentsTitle": "Who we generate leads for in Paris",
+  "segmentsIntro": "Our lead generation for Paris is built for companies that sell to other businesses there, whether they are based in Paris or selling in from India or elsewhere.",
+  "segments": [
+    {
+      "icon": "💊",
+      "title": "Pharma and contract manufacturers",
+      "desc": "Manufacturers offering dosage forms, APIs or contract manufacturing to French pharma companies, where sourcing and external manufacturing teams decide."
+    },
+    {
+      "icon": "💄",
+      "title": "Packaging and consumer-goods suppliers",
+      "desc": "Packaging, ingredient and component makers selling to French cosmetics, luxury and consumer brands through their development and procurement teams."
+    },
+    {
+      "icon": "💻",
+      "title": "SaaS and IT services companies",
+      "desc": "Software and IT firms selling to French enterprises and scale-ups, often from La Défense to Station F."
+    }
+  ],
+  "segmentsNote": "For your sector, see lead generation for [pharma companies](/lp/pharma), [manufacturers and exporters](/lp/manufacturers-exporters) and [IT services companies](/lp/agencies-it). Selling into the UK as well? See [B2B lead generation in London](/b2b-lead-generation-london).",
+  "healthcareTitle": "",
+  "healthcareIntro": "",
+  "healthcareBuyers": [],
+  "healthcareNote": "",
+  "stepsTitle": "How B2B lead generation works with us",
+  "steps": [
+    {
+      "when": "Week 1",
+      "title": "ICP and buying signals",
+      "desc": "We define who to target and which signals mean they are in-market: new product launches, capacity and supplier reviews, funding, hiring and leadership changes."
+    },
+    {
+      "when": "Weeks 1–2",
+      "title": "Lists, domains and copy",
+      "desc": "Verified contact lists, dedicated sending domains with warm-up, and copy written for French buyers, in French and English."
+    },
+    {
+      "when": "Within 18 days",
+      "title": "Campaigns go live",
+      "desc": "Cold email and LinkedIn sequences start sending in French business hours, with account-based plays for named brands and groups."
+    },
+    {
+      "when": "Weeks 3–8",
+      "title": "Conversations, then consistency",
+      "desc": "First qualified conversations usually come in weeks 3 to 4, and meeting volume becomes consistent by weeks 6 to 8 as we tune messaging on real replies."
+    }
+  ],
+  "stepsNote": "Outreach rules for this market: France applies GDPR, and its regulator, the CNIL, accepts B2B email prospecting without prior consent when the message relates to the recipient's job, they are told how their data is used, and they can opt out easily. Read our [cold email compliance guide](/resources/blogs/cold-email-compliance-guide). Comparing agencies? Use our [guide to choosing an outbound agency](/resources/guides/how-to-choose-an-outbound-agency)."
+}

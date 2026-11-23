@@ -68,6 +68,18 @@ export default function StatTicker({ value, className = "", style, duration = 14
     };
   }, [value, duration]);
 
+  // While it counts up, the number is narrower than its final value, so text can re-wrap and push the page below it
+  // (a layout shift, which counts against Core Web Vitals). For short animated values, an invisible copy of the final
+  // value reserves its space and the counter sits on top of it in the same grid cell. Long or non-numeric values render
+  // as plain text, as before.
+  if (parse(value) && value.length <= 20) {
+    return (
+      <span className={`inline-grid ${className}`} style={style}>
+        <span aria-hidden="true" className="invisible" style={{ gridArea: "1 / 1" }}>{value}</span>
+        <span ref={ref} style={{ gridArea: "1 / 1" }}>{value}</span>
+      </span>
+    );
+  }
   return (
     <span ref={ref} className={className} style={style}>
       {value}

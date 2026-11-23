@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "How do you build a sales pipeline from scratch?", answer: "Start by defining your ideal customer profile and four or five deal stages with clear exit rules. Then run a steady source of new conversations, such as outbound email and LinkedIn, log every qualified meeting as a deal, and review weekly which deals moved, which stalled, and what each needs next." },
+  { question: "What is the difference between a sales pipeline and a sales funnel?", answer: "A sales pipeline tracks individual deals and what the seller does to move each one forward, stage by stage. A sales funnel describes the buyer's journey in aggregate, showing how many prospects drop off between awareness and purchase. Teams use the pipeline to manage deals and forecast, and the funnel to spot conversion problems." },
+  { question: "How often should you review a sales pipeline?", answer: "Weekly is the usual rhythm for an active B2B team. A short weekly review catches deals with no next step before they go cold, while a monthly or quarterly review looks at conversion rates between stages and whether enough new deals are entering the pipeline to hit the revenue target." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -40,12 +46,13 @@ export default function GlossaryTermPage() {
       title={TITLE}
       tagline={"Every active deal a team is working, laid out by how close it is to closing."}
       definition={"The set of active deals moving through defined stages, from first contact to closed-won, used to forecast revenue and spot exactly where deals are getting stuck."}
-      body={"A pipeline is only as reliable as what feeds it. Inbound alone is unpredictable month to month, which is why most B2B teams treat consistent outbound as the mechanism that keeps the top of the pipeline full on a schedule, rather than leaving revenue to chance."}
+      body={"A pipeline is only as reliable as what feeds it. Each stage, such as first meeting, discovery, proposal and negotiation, should have a clear exit rule, so everyone agrees when a deal has really moved forward rather than when someone feels hopeful about it. That discipline is what makes the pipeline useful for forecasting: if you know roughly how many first meetings turn into proposals, and how many proposals close, you can work backwards from a revenue target to the number of new conversations you need each month. Say a team closes one deal for every ten first meetings and needs four new deals a quarter. It then needs about forty first meetings in that quarter, and a pipeline review shows straight away whether it is on track. Inbound alone is unpredictable month to month, which is why most B2B teams treat consistent outbound as the mechanism that keeps the top of the pipeline full on a schedule. The common mistakes are counting deals that have no agreed next step, leaving stale deals in the pipeline long after they have gone quiet, and judging the pipeline by its total value instead of by how fast deals move between stages."}
       sourceLabel={"See the service: AI Lead Generation"}
       sourceHref={"/services/ai-lead-generation"}
       furtherLabel={"See the service: Account-Based Marketing"}
       furtherHref={"/services/account-based-marketing"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

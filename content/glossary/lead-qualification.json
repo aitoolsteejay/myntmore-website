@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "Checking whether a lead fits your ideal customer profile and has a real need, budget, authority, and timeline, so sales only spends time on prospects who can actually buy.",
-  "body": "Lead scoring ranks leads by how likely they are to convert; qualification is the yes-or-no decision on whether one is worth pursuing at all. Frameworks like BANT (budget, authority, need, timeline) give it structure, but the most common failure is simpler: qualifying too late, after a closer has already spent an hour on a prospect who was never a fit.",
+  "body": "Lead qualification is the yes-or-no decision on whether a lead is worth pursuing at all. Lead scoring ranks leads by how likely they are to convert; qualification decides whether a closer should spend time on one. The usual tests are fit and readiness: does the company match your ideal customer profile, does the person have the problem you solve, and is there budget, authority and a timeline? Frameworks like BANT (budget, authority, need, timeline) give the conversation structure, but the most common failure is simpler: qualifying too late, after a closer has already spent an hour on a prospect who was never a fit. In outbound, qualification starts before the first message, when the list is built, and continues in the replies, where a short question about the prospect's current setup or timing separates real interest from politeness. Say a team receives 30 positive replies in a month. If it qualifies them before booking, it might book 18 meetings that matter instead of 30 calls of mixed value. The other common mistakes are treating every positive reply as qualified, and applying a rigid framework that disqualifies good prospects whose budget simply has not been allocated yet.",
   "sourceLabel": "Read the related term: Lead Scoring",
   "sourceHref": "/resources/glossary/lead-scoring",
   "furtherLabel": "Read the related term: ICP (Ideal Customer Profile)",
@@ -24,5 +24,18 @@
     "how to qualify b2b leads",
     "lead qualification vs lead scoring"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "What is lead qualification?",
+      "answer": "Lead qualification is deciding whether a lead is worth sales time, by checking that the company fits your ideal customer profile and the person has a real need, a say in buying and a plausible timeline. It filters out prospects who cannot buy before a closer spends time on them."
+    },
+    {
+      "question": "What is the BANT framework?",
+      "answer": "BANT is a lead qualification framework that checks four things: budget, authority, need and timeline. It gives sales teams a simple structure for discovery questions. Most teams use it as a guide rather than a strict test, since a good prospect may not have budget allocated yet."
+    },
+    {
+      "question": "What is the difference between lead scoring and lead qualification?",
+      "answer": "Lead scoring ranks leads by how likely they are to buy, usually with points for fit and engagement. Lead qualification is the yes-or-no decision on whether a specific lead is worth pursuing. Scoring helps decide who to look at first; qualification decides who gets a sales conversation."
+    }
+  ]
 }

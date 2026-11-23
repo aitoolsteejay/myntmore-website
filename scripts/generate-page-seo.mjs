@@ -6,6 +6,7 @@
 //   node scripts/generate-page-seo.mjs --check   exit 1 if it is stale
 import fs from "node:fs";
 import path from "node:path";
+import { checkEntry } from "./lib/content-rules.mjs";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const dir = path.join(root, "content/page-seo");
@@ -22,9 +23,9 @@ const entries = {};
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const e = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
   const where = `content/page-seo/${f}`;
-  if (typeof e.path !== "string" || !e.path.startsWith("/")) throw new Error(`${where}: "path" must start with /`);
-  if (!e.title?.trim()) throw new Error(`${where}: "title" is empty`);
-  if (!e.description?.trim()) throw new Error(`${where}: "description" is empty`);
+  // Build rules shared with the content admin: scripts/lib/content-rules.mjs
+  const [first] = await checkEntry("pageSeo", e, null);
+  if (first) throw new Error(`${where}: ${first.message}`);
   if (entries[e.path]) throw new Error(`${where}: a second entry for ${e.path}`);
   entries[e.path] = { title: e.title.trim(), description: e.description.trim() };
 }

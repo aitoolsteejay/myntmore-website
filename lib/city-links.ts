@@ -53,6 +53,25 @@ export const UAE_CITY_LINKS: CityLink[] = [
   { slug: "abu-dhabi", name: "Abu Dhabi", href: "/b2b-lead-generation-abu-dhabi", sectors: "Enterprise, energy, healthcare and finance buyers", industries: [] },
 ];
 
+// City pages outside India and the UAE, keyed by the market page (/case-studies/markets/<slug>) for the same
+// country. A market page set to show "this market's city pages" lists these. Tokyo, Hong Kong, Shanghai, Sydney
+// and Toronto have no market page yet, so they are reached from the footer and from each other.
+export const MARKET_CITY_LINKS: Record<string, CityLink[]> = {
+  "united-states": [
+    { slug: "new-york", name: "New York", href: "/b2b-lead-generation-new-york", sectors: "Financial services, SaaS, media and professional services", industries: [] },
+    { slug: "los-angeles", name: "Los Angeles", href: "/b2b-lead-generation-los-angeles", sectors: "E-commerce and D2C brands, media, aerospace and SaaS", industries: [] },
+  ],
+  "united-kingdom": [
+    { slug: "london", name: "London", href: "/b2b-lead-generation-london", sectors: "Financial services, fintech, professional services and SaaS", industries: [] },
+  ],
+  france: [
+    { slug: "paris", name: "Paris", href: "/b2b-lead-generation-paris", sectors: "Pharma, cosmetics, aerospace and SaaS", industries: [] },
+  ],
+  singapore: [
+    { slug: "singapore", name: "Singapore", href: "/b2b-lead-generation-singapore", sectors: "Finance, insurance, staffing and regional headquarters", industries: [] },
+  ],
+};
+
 // The cities whose pages are written for an industry, strongest match first (each city lists its industries in
 // order of weight). No industry: every city, in the order above.
 export function citiesFor(industry?: CityIndustry | null): CityLink[] {

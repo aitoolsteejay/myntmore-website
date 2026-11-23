@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  { question: "What is B2B lead generation?", answer: "B2B lead generation is the process of finding companies that match your ideal customer profile and starting conversations with the people inside them who can buy. It includes inbound methods, where buyers find you, and outbound methods such as cold email and LinkedIn outreach, where you contact them first." },
+  { question: "What is the difference between inbound and outbound lead generation?", answer: "Inbound lead generation attracts buyers who come to you through search, content or referrals. Outbound lead generation reaches buyers who have not found you yet, through cold email, LinkedIn or calls. Inbound compounds slowly and cannot be aimed at a named account; outbound is faster and lets you choose exactly whom to contact." },
+  { question: "How do you measure B2B lead generation?", answer: "Measure outcomes, not activity: positive replies, meetings booked, meetings held and the pipeline those meetings create. Contacts gathered and emails sent only show effort. Track each stage separately, so you can see whether a weak result comes from targeting, messaging or the handover to sales, and fix that stage first." },
+];
+
 const TERM_SCHEMA = buildDefinedTermSchema({
   name: TITLE,
   description: DESCRIPTION,
@@ -43,12 +49,13 @@ export default function GlossaryTermPage() {
       alsoKnownAs={ALSO_KNOWN_AS}
       tagline={"The work of finding businesses that fit your offer and turning them into conversations your sales team can actually work."}
       definition={"The process of identifying companies that match your ideal customer profile and starting conversations with the decision-makers inside them, so sales has qualified prospects to work."}
-      body={"Outbound lead generation is the proactive version: instead of waiting for inbound form fills, you build a targeted list, research it, and reach out first through cold email, LinkedIn, or both. The output that matters isn't the number of contacts gathered, it's how many of them turn into replies and booked meetings with people who can actually buy."}
+      body={"B2B lead generation covers everything that turns a list of possible customers into conversations sales can work with. Inbound lead generation attracts prospects who find you through search, content or referrals. Outbound lead generation is the proactive version: you build a targeted list, research it, and reach out first through cold email, LinkedIn, or both. The output that matters is not the number of contacts gathered, it is how many turn into replies and booked meetings with people who can actually buy. Say a team builds a list of 1,000 contacts and books 10 meetings, while another builds 300 carefully chosen contacts and books 12. The second team generated fewer leads but more pipeline, because its list matched the ideal customer profile and its messages gave each person a reason to reply. The common mistakes are buying large generic databases, judging success by volume sent, and handing sales every reply without checking whether the prospect is qualified. Good lead generation starts with a clear ICP, uses buying signals to decide who to contact now, tracks replies and meetings rather than sends, and passes sales only the conversations worth their time. It is the top of the sales pipeline, so weak lead generation shows up later as stalled deals."}
       sourceLabel={"See the service: AI Lead Generation"}
       sourceHref={"/services/ai-lead-generation"}
       furtherLabel={"Read: Building a Predictable B2B Lead Generation Engine"}
       furtherHref={"/resources/blogs/predictable-b2b-lead-gen-engine"}
       articleSchema={TERM_SCHEMA}
+      faqs={FAQS}
     />
   );
 }

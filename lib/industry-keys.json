@@ -1,0 +1,14 @@
+[
+  { "key": "automotive-manufacturing", "label": "Automotive & Auto Parts Manufacturing" },
+  { "key": "bfsi", "label": "BFSI" },
+  { "key": "brokers", "label": "Brokers" },
+  { "key": "chemical-manufacturing", "label": "Chemical Manufacturing" },
+  { "key": "distributors", "label": "Distributors" },
+  { "key": "exporters", "label": "Exporters" },
+  { "key": "industrial-automation", "label": "Industrial Automation" },
+  { "key": "insurance", "label": "Insurance" },
+  { "key": "logistics", "label": "Logistics" },
+  { "key": "pharma", "label": "Pharma" },
+  { "key": "stone-marble-exporters", "label": "Stone & Marble Exporters" },
+  { "key": "textile-manufacturing", "label": "Textile Manufacturing" }
+]

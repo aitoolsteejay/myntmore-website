@@ -24,15 +24,36 @@
     "headline": "Building a B2B pipeline for a 180-year-old heritage jewellery business",
     "intro": "With a family legacy spanning **180 years and five generations**, our client has spent more than 35 years specialising in antique jewellery, heirloom collections, professional valuations, and jewellery liquidation. As a government-approved valuer, the business helps families, advisors, and institutions assess valuable assets, document inherited collections, and navigate asset transfers. The objective was to extend its reach beyond traditional networks into **accounting, wealth management, private banking, insurance, and lending**.",
     "stats": [
-      { "value": "68", "label": "Hot leads generated" },
-      { "value": "43.7%", "label": "Overall response rate" },
-      { "value": "897", "label": "Accepted connections" }
+      {
+        "value": "68",
+        "label": "Hot leads generated"
+      },
+      {
+        "value": "43.7%",
+        "label": "Overall response rate"
+      },
+      {
+        "value": "897",
+        "label": "Accepted connections"
+      }
     ],
     "metricsStrip": [
-      { "value": "57.6%", "label": "Wealth Managers acceptance" },
-      { "value": "49.7%", "label": "Chartered Accountants response" },
-      { "value": "55.0%", "label": "Gold Loans acceptance" },
-      { "value": "9", "label": "meetings booked" }
+      {
+        "value": "57.6%",
+        "label": "Wealth Managers acceptance"
+      },
+      {
+        "value": "49.7%",
+        "label": "Chartered Accountants response"
+      },
+      {
+        "value": "55.0%",
+        "label": "Gold Loans acceptance"
+      },
+      {
+        "value": "9",
+        "label": "meetings booked"
+      }
     ]
   },
   "challenge": {
@@ -73,9 +94,18 @@
     "architecture": {
       "heading": "The 3-Stage Outreach Architecture",
       "stages": [
-        { "title": "1. Connection Request", "description": "Establish relevance through shared context, family business heritage, or specialist credentials." },
-        { "title": "2. First Follow-Up", "description": "Introduce a practical situation where valuation, liquidation, or documentation expertise assists their clients." },
-        { "title": "3. Relationship Nurture", "description": "Keep channels open with direct contact details and scheduling options without repeating a hard pitch." }
+        {
+          "title": "1. Connection Request",
+          "description": "Establish relevance through shared context, family business heritage, or specialist credentials."
+        },
+        {
+          "title": "2. First Follow-Up",
+          "description": "Introduce a practical situation where valuation, liquidation, or documentation expertise assists their clients."
+        },
+        {
+          "title": "3. Relationship Nurture",
+          "description": "Keep channels open with direct contact details and scheduling options without repeating a hard pitch."
+        }
       ]
     }
   },
@@ -83,7 +113,13 @@
     "eyebrow": "The Data Breakdown",
     "heading": "Outreach Results by Segment",
     "intro": "Across the broader campaign, Myntmore sent **2,298 connection requests**, generating **897 accepted connections, 392 responses, 68 hot leads, and 9 scheduled meetings**. The 5 detailed ICP segments below represent 1,197 targeted profiles:",
-    "tableHeaders": ["Segment", "Acceptance", "Response", "Hot Leads", "Strategic Notes"],
+    "tableHeaders": [
+      "Segment",
+      "Acceptance",
+      "Response",
+      "Hot Leads",
+      "Strategic Notes"
+    ],
     "segments": [
       {
         "name": "Chartered Accountants",
@@ -170,9 +206,18 @@
   "servicesUsed": {
     "heading": "Services used in this engagement",
     "links": [
-      { "name": "LinkedIn Outreach & Automation", "href": "/services/linkedin-outreach" },
-      { "name": "ICP Mapping & Lead Scoring", "href": "/services/sales-intelligence" },
-      { "name": "Personal Branding", "href": "/services/personal-branding" }
+      {
+        "name": "LinkedIn Outreach & Automation",
+        "href": "/services/linkedin-outreach"
+      },
+      {
+        "name": "ICP Mapping & Lead Scoring",
+        "href": "/services/sales-intelligence"
+      },
+      {
+        "name": "Personal Branding",
+        "href": "/services/personal-branding"
+      }
     ]
   },
   "cta": {

@@ -31,21 +31,33 @@
       "tag": "Pharma · Market entry",
       "title": "Shortlist distributors instead of blasting them",
       "body": "An Indian formulation company approached UAE distributors and importers about portfolio fit. Follow-ups asked about customer segments, existing product lines and support for market entry, so only real fits reached a meeting.",
-      "results": ["12 partner meetings", "3 distributors shortlisted", "20 positive replies"],
+      "results": [
+        "12 partner meetings",
+        "3 distributors shortlisted",
+        "20 positive replies"
+      ],
       "href": "/case-studies/pharma-uae-distribution-partners"
     },
     {
       "tag": "Insurance · Employee benefits",
       "title": "Reach employers before renewal, not during it",
       "body": "A UAE brokerage kept arriving after benefits renewals were decided. Outreach to HR directors, finance heads and owners at employers with 50 to 500 staff established renewal timing first.",
-      "results": ["20 meetings booked", "7 benefits reviews agreed", "4 quotation exercises"],
+      "results": [
+        "20 meetings booked",
+        "7 benefits reviews agreed",
+        "4 quotation exercises"
+      ],
       "href": "/case-studies/insurance-uae-employee-benefits"
     },
     {
       "tag": "Manufacturing · Distribution",
       "title": "Qualify partners on after-sales, not just interest",
       "body": "An Indian commercial kitchen equipment maker had enquiries from distributors with uneven coverage. Follow-ups checked customer segments, installation support and after-sales capability before any shortlist.",
-      "results": ["14 meetings booked", "4 distributors shortlisted", "2 commercial discussions"],
+      "results": [
+        "14 meetings booked",
+        "4 distributors shortlisted",
+        "2 commercial discussions"
+      ],
       "href": "/case-studies/manufacturers-exporters-uae-kitchen-equipment"
     }
   ],
@@ -54,10 +66,22 @@
   "timingTitle": "Timing",
   "timingBody": "UAE time is 1.5 hours behind India. Messages go out on weekday mornings UAE time, and we avoid Friday afternoons, when many companies keep shorter hours.",
   "industryLinks": [
-    { "label": "Pharma companies", "href": "/lp/pharma" },
-    { "label": "Manufacturers & exporters", "href": "/lp/manufacturers-exporters" },
-    { "label": "Insurance brokers", "href": "/lp/insurance" },
-    { "label": "IT services & agencies", "href": "/lp/agencies-it" }
+    {
+      "label": "Pharma companies",
+      "href": "/lp/pharma"
+    },
+    {
+      "label": "Manufacturers & exporters",
+      "href": "/lp/manufacturers-exporters"
+    },
+    {
+      "label": "Insurance brokers",
+      "href": "/lp/insurance"
+    },
+    {
+      "label": "IT services & agencies",
+      "href": "/lp/agencies-it"
+    }
   ],
   "cities": "uae"
 }

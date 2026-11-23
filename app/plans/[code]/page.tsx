@@ -8,9 +8,23 @@ import { withPageSeo } from "@/lib/page-seo";
 // distinguished only by an easy-to-say code rather than a region name in
 // the URL or on the page. Deliberately not linked from any nav, footer, or
 // sitemap, and kept out of search indexing via robots below.
-const PLANS: Record<string, Pick<GrowthPlansPricingProps, "currencyPrefix" | "currencySuffix" | "prices">> = {
+const EARTH_PRICES = {
+  starter: "99,999",
+  growth: "1,74,999",
+  leadGen: "1,44,999",
+  coldEmail: "1,54,999",
+  automation: "19,499",
+};
+
+const PLANS: Record<string, Pick<GrowthPlansPricingProps, "currencyPrefix" | "currencySuffix" | "prices" | "visual" | "layout">> = {
+  // Design options for the Earth pricing: the Stitch cards-and-matrix layout
+  // with an animated ecosystem hero instead of the planet. A = orbit, C = flywheel.
+  "earth-a": { currencyPrefix: "₹", currencySuffix: "+ GST", prices: EARTH_PRICES, visual: "orbit", layout: "stitch" },
+  "earth-c": { currencyPrefix: "₹", currencySuffix: "+ GST", prices: EARTH_PRICES, visual: "flywheel", layout: "stitch" },
   mars: {
     currencyPrefix: "$",
+    visual: "orbit",
+    layout: "stitch",
     prices: {
       starter: "999",
       growth: "1,799",
@@ -22,16 +36,14 @@ const PLANS: Record<string, Pick<GrowthPlansPricingProps, "currencyPrefix" | "cu
   earth: {
     currencyPrefix: "₹",
     currencySuffix: "+ GST",
-    prices: {
-      starter: "99,999",
-      growth: "1,74,999",
-      leadGen: "1,44,999",
-      coldEmail: "1,54,999",
-      automation: "19,499",
-    },
+    visual: "orbit",
+    layout: "stitch",
+    prices: EARTH_PRICES,
   },
   neptune: {
     currencyPrefix: "$",
+    visual: "orbit",
+    layout: "stitch",
     prices: {
       starter: "1,999",
       growth: "2,799",
@@ -56,5 +68,5 @@ export default function PlansPage({ params }: { params: { code: string } }) {
   const plan = PLANS[params.code];
   if (!plan) notFound();
 
-  return <GrowthPlansPricing pageTitle="Growth Plans" planet={params.code as PlanetKind} {...plan} />;
+  return <GrowthPlansPricing pageTitle="Growth Plans" planet={(params.code.startsWith("earth") ? "earth" : params.code) as PlanetKind} {...plan} />;
 }

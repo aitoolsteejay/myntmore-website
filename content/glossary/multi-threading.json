@@ -9,7 +9,7 @@
   "alsoKnownAs": [],
   "indexAliases": [],
   "definition": "Engaging several stakeholders inside a single target account at once, rather than relying on one internal champion to carry the deal alone.",
-  "body": "A single-threaded deal collapses the moment that one contact goes quiet, changes roles, or leaves the company. Multi-threading spreads the relationship across the economic buyer, the end user, and any technical evaluator, which is also what makes coordinated outreach at the account level, not just the individual level, so central to ABM.",
+  "body": "A single-threaded deal collapses the moment that one contact goes quiet, changes roles, or leaves the company. Multi-threading spreads the relationship across the economic buyer, the end user, and any technical evaluator, which is also what makes coordinated outreach at the account level, not just the individual level, so central to ABM. In practice it means mapping who influences the decision, then giving each person a reason to engage that relates to their own responsibilities. The finance lead hears about cost and risk, the end user hears about the daily problem being solved, and the technical evaluator hears about integration and security. Say a team is talking to one enthusiastic manager at a target company, and that manager moves to a new job mid-deal. Without other contacts, the deal starts again from zero; with two or three other stakeholders already engaged, it carries on. Multi-threading works best when it is transparent: telling your main contact you would like to involve their colleagues builds trust, while going around them can damage it. The common mistakes are sending the same message to everyone at the account, contacting too many people at once, and starting only after the deal has already stalled.",
   "sourceLabel": "Read the related term: ABM (Account-Based Marketing)",
   "sourceHref": "/resources/glossary/abm",
   "furtherLabel": "Go deeper: Single-Threaded Deals Die (the full buying-committee guide)",
@@ -24,5 +24,18 @@
     "single-threaded deal risk",
     "multi-threading vs abm"
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "How do you multi-thread a B2B deal?",
+      "answer": "Map who influences the decision, then reach each person with a message about their own concern rather than one generic pitch. Ask your main contact who else should be involved, coordinate email and LinkedIn so the story stays consistent, and start early in the deal rather than waiting until it stalls."
+    },
+    {
+      "question": "How many contacts should you multi-thread per account?",
+      "answer": "Start with two or three people for most mid-market deals: the person who uses the solution, the person who owns the outcome and the person who approves the budget. Add more for enterprise deals, where procurement, IT or legal often join before a decision and each needs its own reason to engage."
+    },
+    {
+      "question": "Is multi-threading the same as account-based marketing?",
+      "answer": "No. Multi-threading is a tactic: engaging several stakeholders inside one deal or account. Account-based marketing is a broader strategy that picks a short list of named accounts and coordinates research, messaging and channels around them. Multi-threading is one of the main tactics ABM relies on, but it is useful in ordinary deals too."
+    }
+  ]
 }

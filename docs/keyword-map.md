@@ -107,7 +107,7 @@ Primary keyword is the first entry in each page's `keywords`. The sitewide check
 | `/tools/linkedin-hook-grader` | linkedin hook grader |
 | `/case-studies/specialist-recruitment-linkedin-leads` | recruitment firm lead generation case study |
 | `/resources/glossary/spam-complaint-rate` | spam complaint rate |
-| `/resources/blogs/gmail-and-yahoo-sender-requirements` (DRAFT, `published: false`) | gmail and yahoo sender requirements |
+| `/resources/blogs/gmail-and-yahoo-sender-requirements` | gmail and yahoo sender requirements |
 
 ## Added 2026-11-02: accounting and CFO firms landing page, keyword expansion
 
@@ -137,8 +137,19 @@ The route scan found 268 first keywords across page metadata and published CMS p
 | `/b2b-lead-generation-noida` | b2b lead generation company in noida | Live |
 | `/b2b-lead-generation-surat` | b2b lead generation company in surat | Live |
 | `/careers/lead-gen-intern` | lead generation internship mumbai | Live |
-| `/resources/blogs/b2b-lead-generation-for-it-services` | b2b lead generation for it services | Draft |
-| `/resources/glossary/buying-committee` | buying committee | Draft |
+| `/resources/blogs/b2b-lead-generation-for-it-services` | b2b lead generation for it services | Live |
+| `/resources/glossary/buying-committee` | buying committee | Live |
+| `/resources/blogs/cold-email-infrastructure-explained` | what is dmarc for cold email | Live |
+| `/b2b-lead-generation-new-york` | b2b lead generation company in new york | Live |
+| `/b2b-lead-generation-london` | b2b lead generation company in london | Live |
+| `/b2b-lead-generation-paris` | b2b lead generation company in paris | Live |
+| `/b2b-lead-generation-singapore` | b2b lead generation company in singapore | Live |
+| `/b2b-lead-generation-tokyo` | b2b lead generation company in tokyo | Live |
+| `/b2b-lead-generation-hong-kong` | b2b lead generation company in hong kong | Live |
+| `/b2b-lead-generation-los-angeles` | b2b lead generation company in los angeles | Live |
+| `/b2b-lead-generation-shanghai` | b2b lead generation company in shanghai | Live |
+| `/b2b-lead-generation-sydney` | b2b lead generation company in sydney | Live |
+| `/b2b-lead-generation-toronto` | b2b lead generation company in toronto | Live |
 
 The IT services playbook covers how a team builds its own outbound pipeline. The existing `/lp/agencies-it` page addresses buyers evaluating Myntmore’s services. The Buying Committee entry defines stakeholder roles and links to the existing multi-threading guide for outreach tactics.
 

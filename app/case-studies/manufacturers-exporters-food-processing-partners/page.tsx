@@ -7,7 +7,7 @@ const URL = "https://www.myntmore.com/case-studies/manufacturers-exporters-food-
 
 export const metadata: Metadata = {
   title: "Food Processing Case Study",
-  description: "17 Qualified Partner Discussions for a Food Processing Manufacturer. The challenge, approach and results from a Myntmore Manufacturers & Exporters case study.",
+  description: "17 qualified partner discussions for a food processing manufacturer: 5 capability requests and 3 partnerships under evaluation. A Myntmore case study.",
   keywords: [
     "food processing lead generation",
     "food processing case study",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_BASE,
     title: "17 Qualified Partner Discussions for a Food Processing Manufacturer",
-    description: "17 Qualified Partner Discussions for a Food Processing Manufacturer. The challenge, approach and results from a Myntmore Manufacturers & Exporters case study.",
+    description: "17 qualified partner discussions for a food processing manufacturer: 5 capability requests and 3 partnerships under evaluation. A Myntmore case study.",
     url: URL,
     images: ogImages("/case-studies/manufacturers-exporters-food-processing-partners"),
   },
