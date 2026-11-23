@@ -165,13 +165,13 @@ export default function Footer() {
       <ParticleCanvas />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 py-14 border-b" style={{ borderColor: "#E8E2D9" }}>
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-8 lg:gap-10 py-8 lg:py-10 border-b" style={{ borderColor: "#E8E2D9" }}>
 
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center mb-5" aria-label="Myntmore home">
               <Image src="/logo.png" alt="Myntmore" width={200} height={56} className="h-10 sm:h-14 w-auto object-contain" />
             </Link>
-            <p className="text-sm leading-relaxed mb-4 max-w-xs" style={{ color: "#71675E" }}>
+            <p className="text-sm leading-relaxed mb-3 max-w-xs" style={{ color: "#71675E" }}>
               B2B growth systems for companies that want predictable pipeline, not more promises.
             </p>
             <a
@@ -189,7 +189,7 @@ export default function Footer() {
             </a>
             <a
               href="tel:+918169318951"
-              className="mb-6 inline-flex min-h-[44px] items-center gap-2.5 text-sm font-semibold transition-colors duration-200"
+              className="mb-3 inline-flex min-h-[44px] items-center gap-2.5 text-sm font-semibold transition-colors duration-200"
               style={{ color: "#3D3D3D" }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#3D3D3D"; }}
@@ -206,7 +206,7 @@ export default function Footer() {
                 { href: "https://instagram.com/myntmore", icon: <InstagramIcon />, label: "Myntmore on Instagram" },
                 { href: "https://youtube.com/@TJtheLeadGenExpert", icon: <YouTubeIcon />, label: "Myntmore on YouTube" },
               ].map((s) => (
-                <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-200" style={{ border: "1px solid #E8E2D9", color: "#71675E" }}
+                <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-200" style={{ border: "1px solid #E8E2D9", color: "#71675E" }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#A14A08"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(245,183,49,0.4)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E8E2D9"; }}
                   aria-label={s.label}
@@ -218,7 +218,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5">
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4">
               <Link
                 href="/services"
                 className="transition-colors duration-200"
@@ -229,10 +229,10 @@ export default function Footer() {
                 Services
               </Link>
             </h3>
-            <ul className="space-y-0 lg:space-y-3" role="list">
+            <ul className="space-y-0 lg:space-y-2" role="list">
               {SERVICES_LINKS.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
+                  <Link href={link.href} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
                   >
@@ -244,11 +244,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#3D3D3D" }}>Company</h3>
-            <ul className="space-y-0 lg:space-y-3" role="list">
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>Company</h3>
+            <ul className="space-y-0 lg:space-y-2" role="list">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
+                  <Link href={link.href} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
                   >
@@ -259,12 +259,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#3D3D3D" }}>We Work With</h3>
-            <ul className="space-y-0 lg:space-y-3" role="list">
+          <div className="col-span-2 lg:col-span-1">
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>We Work With</h3>
+            <ul className="grid grid-cols-2 gap-x-4 lg:block lg:space-y-2" role="list">
               {ICP_LINKS.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
+                  <Link href={link.href} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
                   >
@@ -275,15 +275,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#3D3D3D" }}>Get in Touch</h3>
-            <ul className="space-y-0 lg:space-y-3 mb-6" role="list">
-              <li><a href="mailto:growth@myntmore.com" className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>growth@myntmore.com</a></li>
-              <li><a href="tel:+918169318951" className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>+91 81693 18951</a></li>
-              <li><Link href={ctaHref} className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Book a Free GTM Audit</Link></li>
-              <li><Link href="/contact-us" className="inline-flex min-h-[44px] items-center text-sm transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Contact Page</Link></li>
+          <div className="col-span-2 lg:col-span-1">
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>Get in Touch</h3>
+            <ul className="space-y-0 lg:space-y-2 mb-4" role="list">
+              <li><a href="mailto:growth@myntmore.com" className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>growth@myntmore.com</a></li>
             </ul>
-            <div className="mb-4 p-4 rounded-xl border" style={{ background: "#FEF9EC", borderColor: "rgba(245,183,49,0.3)" }}>
+            <div className="mb-3 p-4 rounded-xl border" style={{ background: "#FEF9EC", borderColor: "rgba(245,183,49,0.3)" }}>
               <Link href="/newsletter-subscribe" className="inline-flex min-h-[44px] items-center text-xs font-semibold hover:underline lg:min-h-0 lg:mb-1" style={{ color: "#0a0a0a" }}>The Outbound Operator</Link>
               <p className="text-xs mb-3" style={{ color: "#71675E" }}>Weekly AI outbound insights. No fluff.</p>
               <NewsletterForm inputId="footer-newsletter-email" compact />
@@ -295,11 +292,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-4 lg:py-6 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-2 border-b" style={{ borderColor: "#E8E2D9" }}>
+        <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
           <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>B2B Lead Generation In:</span>
           {CITY_LINKS.map((link, i) => (
             <span key={link.href} className="flex items-center gap-x-2">
-              <Link href={link.href} className="inline-flex min-h-[44px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
+              <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
               >
@@ -310,11 +307,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="py-4 lg:py-6 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-2 border-b" style={{ borderColor: "#E8E2D9" }}>
+        <div className="py-2 lg:py-3 flex flex-wrap items-center gap-x-2 gap-y-0 lg:gap-y-1 border-b" style={{ borderColor: "#E8E2D9" }}>
           <span className="text-xs font-semibold uppercase tracking-wider mr-1" style={{ color: "#71675E" }}>Worldwide:</span>
           {WORLD_CITY_LINKS.map((link, i) => (
             <span key={link.href} className="flex items-center gap-x-2">
-              <Link href={link.href} className="inline-flex min-h-[44px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
+              <Link href={link.href} className="inline-flex min-h-[36px] items-center px-1 text-xs transition-colors lg:min-h-0 lg:px-0" style={{ color: "#71675E" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}
               >
@@ -325,15 +322,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="py-3 lg:py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs" style={{ color: "#71675E" }}>&copy; 2026 Myntmore. Built in Mumbai.</p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-0">
-            <Link href="/about-us" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>About</Link>
-            <Link href="/contact-us" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Contact</Link>
-            <Link href="/careers" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Careers</Link>
-            <Link href="/privacy-policy" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Privacy Policy</Link>
-            <Link href="/editorial-policy" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Editorial Policy</Link>
-            <Link href="/sitemap" className="inline-flex min-h-[44px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Site Map</Link>
+            <Link href="/privacy-policy" className="inline-flex min-h-[40px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Privacy Policy</Link>
+            <Link href="/editorial-policy" className="inline-flex min-h-[40px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Editorial Policy</Link>
+            <Link href="/sitemap" className="inline-flex min-h-[40px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Site Map</Link>
           </div>
         </div>
       </div>
