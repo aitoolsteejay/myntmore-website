@@ -77,7 +77,9 @@ Go to `https://www.myntmore.com/admin`, enter your email, and click the link in 
 
 ## Managing editors
 
-Until the admin has its own Editors page (phase 4), manage people in the Supabase SQL editor:
+Admins manage people on the **Editors** page (`/admin/editors`): invite someone by email with a role, change a role, remove or restore access. An invite emails a sign-in link (Supabase's "Confirm signup" email for a new address). Supabase's built-in mailer sends only a few emails an hour; if an invite email is not sent, the person is still added and can request a link at `/admin` with their email. Every change is recorded in Activity. There is always at least one admin, and admins cannot remove their own admin access.
+
+The same can be done in the Supabase SQL editor:
 
 ```sql
 -- Add an editor who may edit everything

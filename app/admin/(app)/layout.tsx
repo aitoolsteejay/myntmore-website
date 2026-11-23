@@ -20,6 +20,11 @@ function Shell({ editor, children }: { editor: Editor | null; children: React.Re
               <Link href="/admin/activity" className="hover:text-[#0A0A0A]">
                 Activity
               </Link>
+              {editor.role === "admin" && (
+                <Link href="/admin/editors" className="hover:text-[#0A0A0A]">
+                  Editors
+                </Link>
+              )}
             </nav>
           )}
           <div className="ml-auto flex items-center gap-3 text-sm">
