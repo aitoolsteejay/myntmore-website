@@ -1,35 +1,11 @@
-const ROW_1 = [
-  "Fill your pipeline",
-  "Book more meetings",
-  "Decrease cost per lead",
-  "Boost revenue growth",
-  "Reach relevant prospects",
-  "Increase pipeline",
-  "Stay ahead of competition",
-  "Shorten sales cycles",
-];
+import home from "@/content/site-copy/home.json";
 
-const ROW_2 = [
-  "Refine your ICP",
-  "Lead qualification on autopilot",
-  "Boost conversion rates",
-  "Scale outbound effortlessly",
-  "Land enterprise accounts",
-  "Reduce no-show rates",
-  "Increase reply rates",
-  "Dominate your niche",
-];
+// The benefit chips are edited in the admin (Homepage > Benefits strip).
+const ROW_1 = home.benefits.row1;
 
-const ROW_3 = [
-  "Operational efficiency",
-  "Save costs per acquisition",
-  "Targeted ABM campaigns",
-  "Outbound on autopilot",
-  "More SQLs every month",
-  "Predictable revenue",
-  "Consistent deal flow",
-  "Grow faster than competitors",
-];
+const ROW_2 = home.benefits.row2;
+
+const ROW_3 = home.benefits.row3;
 
 const CHIP_PALETTES = [
   { bg: "linear-gradient(135deg, #ffffff 0%, #FEF9EC 100%)", border: "rgba(245,183,49,0.35)", dot: "#D97706" },
@@ -100,10 +76,10 @@ export default function BenefitsMarquee() {
       {/* Heading */}
       <div className="text-center mb-12 px-4">
         <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: "#A14A08" }}>
-          What you unlock
+          {home.benefits.eyebrow}
         </p>
         <h2 className="text-2xl sm:text-4xl font-black text-[#0a0a0a]">
-          Everything your pipeline needs
+          {home.benefits.heading}
         </h2>
       </div>
 

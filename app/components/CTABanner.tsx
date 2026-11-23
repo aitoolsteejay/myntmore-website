@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import home from "@/content/site-copy/home.json";
 
 export default function CTABanner() {
   const yellowRef = useRef<HTMLDivElement>(null);
@@ -115,7 +116,7 @@ export default function CTABanner() {
         >
           <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#F5B731" }} aria-hidden="true" />
           <span className="text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#A14A08" }}>
-            Limited spots available
+            {home.closing.badge}
           </span>
         </div>
 
@@ -123,33 +124,31 @@ export default function CTABanner() {
           id="cta-heading"
           className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-[#0a0a0a] mb-6 leading-[0.95]"
         >
-          Let&apos;s Fill
+          {home.closing.headingLine1}
           <br />
-          <span style={{ color: "#A14A08" }}>Your Pipeline</span>
+          <span style={{ color: "#A14A08" }}>{home.closing.headingLine2}</span>
         </h2>
 
         <p className="text-lg sm:text-xl text-[#52525B] max-w-2xl mx-auto mb-10 leading-relaxed">
-          Join <span className="text-[#0a0a0a] font-semibold">130+ B2B companies</span> growing
-          with Myntmore. Book your free 30-minute strategy call today we&rsquo;ll map out
-          exactly how to generate pipeline for your business.
+          {home.closing.textBefore}<span className="text-[#0a0a0a] font-semibold">{home.closing.textBold}</span>{home.closing.textAfter}
         </p>
 
         <a
           href="/book-a-call"
           className="inline-flex items-center gap-2.5 px-10 py-5 rounded-full font-black text-lg group btn-dark"
         >
-          Book Your Free Strategy Call
+          {home.closing.button}
           <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
 
         <p className="mt-5 text-sm text-[#71675E]">
-          No commitment. No fluff. Just a real conversation about your growth.
+          {home.closing.note}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 pt-8 sm:pt-10 border-t" style={{ borderColor: "#E8E2D9" }}>
-          {["30-minute call, no sales pressure", "Custom strategy for your ICP", "Results or we make it right"].map((item) => (
+          {home.closing.ticks.map((item) => (
             <div key={item} className="flex items-center gap-2">
               <svg className="w-4 h-4 flex-shrink-0" style={{ color: "#A14A08" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />

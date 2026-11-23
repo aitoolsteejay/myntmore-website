@@ -1,13 +1,7 @@
-const COMPANIES = [
-  "Finstack",
-  "Proxima",
-  "Vaultline",
-  "Helio",
-  "Crescendo",
-  "Nexbridge",
-  "Strataflow",
-  "Orbis",
-];
+import home from "@/content/site-copy/home.json";
+
+// Edited in the admin (Homepage > Logo strip).
+const COMPANIES = home.logoStrip.companies;
 
 // Duplicate for infinite scroll
 const DOUBLED = [...COMPANIES, ...COMPANIES];
@@ -21,7 +15,7 @@ export default function LogoStrip() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <p className="text-center text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "#71675E" }}>
-          Trusted by fast-growing B2B teams
+          {home.logoStrip.heading}
         </p>
       </div>
 

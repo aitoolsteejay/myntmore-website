@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import home from "@/content/site-copy/home.json";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 type CardColor = "rose" | "sky" | "violet" | "mint" | "amber" | "blush";
@@ -13,92 +14,10 @@ interface Testimonial {
   rating?: number;
 }
 
-const ROW_1: Testimonial[] = [
-  {
-    name: "Sarah K.",
-    role: "VP of Sales",
-    company: "Finstack",
-    initials: "SK",
-    color: "sky",
-    quote: "We'd tried two other agencies before this. Both fizzled out after month one. Myntmore's cold email + LinkedIn combo actually held up, 41 demos in the first two months, and about a third of them were the kind of accounts we actually wanted.",
-  },
-  {
-    name: "Rohan Mehta",
-    role: "Founder",
-    company: "Kwikcart",
-    initials: "RM",
-    color: "amber",
-    quote: "Honestly wasn't sure outbound would work for a D2C-adjacent SaaS. Took roughly a month to find the right angle, but once it clicked we had two enterprise deals close straight out of the same sequence.",
-  },
-  {
-    name: "Priya M.",
-    role: "Head of Growth",
-    company: "Vaultline",
-    initials: "PM",
-    color: "rose",
-    quote: "What sold me wasn't the pitch, it was that they actually read our old sequences before proposing anything. Reply rates are up, but more than that, the replies are from people who fit our ICP instead of randoms.",
-    rating: 4,
-  },
-  {
-    name: "Alex T.",
-    role: "CRO",
-    company: "Helio",
-    initials: "AT",
-    color: "violet",
-    quote: "My reps used to burn a good chunk of the morning just prospecting on LinkedIn. That's gone now. Close rate is up too, though I'd credit that more to better-qualified meetings than any single tactic.",
-  },
-  {
-    name: "Ananya Iyer",
-    role: "RevOps Lead",
-    company: "Zylker Health",
-    initials: "AI",
-    color: "mint",
-    quote: "I run point on three vendor relationships and this is the only one where I don't have to chase a weekly update, it just shows up in our CRM. Small thing, but it's the reason we renewed.",
-  },
-];
+// The testimonials are edited in the admin (Homepage > Testimonials).
+const ROW_1: Testimonial[] = home.testimonials.row1 as Testimonial[];
 
-const ROW_2: Testimonial[] = [
-  {
-    name: "Tom W.",
-    role: "VP Marketing",
-    company: "Nexbridge",
-    initials: "TW",
-    color: "blush",
-    quote: "Didn't expect the personal branding side to matter much, thought it was a nice-to-have. Turned out half our inbound this quarter can be traced back to a post they wrote for our founder.",
-  },
-  {
-    name: "Lisa B.",
-    role: "Director of Sales",
-    company: "Strataflow",
-    initials: "LB",
-    color: "sky",
-    quote: "We'd gotten used to templated cold emails that read like every other vendor pitch we get. This didn't feel like that. Can't say every sequence was a home run, but the misses were rare.",
-  },
-  {
-    name: "Raj P.",
-    role: "CEO",
-    company: "Orbis",
-    initials: "RP",
-    color: "amber",
-    quote: "Campaign was live in 8 days, first meeting booked on day 9. What actually kept me around, though, is that someone from their team flags it themselves when a sequence underperforms instead of waiting for us to notice.",
-  },
-  {
-    name: "Karthik Subramaniam",
-    role: "Director of Sales",
-    company: "Brightleaf Traders",
-    initials: "KS",
-    color: "violet",
-    quote: "We export to a pretty niche set of buyers, so I went in expecting generic messaging. It wasn't. They spent the first two weeks just understanding our product before a single email went out.",
-  },
-  {
-    name: "Chris H.",
-    role: "VP Business Development",
-    company: "Proxima",
-    initials: "CH",
-    color: "mint",
-    quote: "Running email, LinkedIn, and ABM at once sounded like a lot to manage on our end. It wasn't, it genuinely felt like an SDR team had joined overnight, minus the ramp-up time and the headcount.",
-  },
-];
+const ROW_2: Testimonial[] = home.testimonials.row2 as Testimonial[];
 
 // ─── Star rating ──────────────────────────────────────────────────────────────
 function Stars({ color = "#F5B731", rating = 5 }: { color?: string; rating?: number }) {
@@ -269,21 +188,20 @@ export default function Testimonials() {
           id="testimonials-heading"
           className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#0a0a0a] tracking-tight"
         >
-          This is why clients
+          {home.testimonials.headingLine1}
           <br />
-          <span style={{ color: "#A14A08" }}>love working with us</span>
+          <span style={{ color: "#A14A08" }}>{home.testimonials.headingLine2}</span>
         </h2>
 
         <p className="mt-5 text-lg text-[#52525B] max-w-2xl mx-auto">
-          130+ B2B companies trust Myntmore to fill their pipeline. Here&rsquo;s
-          what they say after working with us.
+          {home.testimonials.intro}
         </p>
 
         {/* Rating badges */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
           <RatingBadge
-            score="4.9"
-            label="Client Satisfaction"
+            score={home.testimonials.badges[0]?.score ?? ""}
+            label={home.testimonials.badges[0]?.label ?? ""}
             icon={
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -291,8 +209,8 @@ export default function Testimonials() {
             }
           />
           <RatingBadge
-            score="92%"
-            label="Client Retention"
+            score={home.testimonials.badges[1]?.score ?? ""}
+            label={home.testimonials.badges[1]?.label ?? ""}
             icon={
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -300,8 +218,8 @@ export default function Testimonials() {
             }
           />
           <RatingBadge
-            score="3.2x"
-            label="Avg. Reply Rate vs Industry"
+            score={home.testimonials.badges[2]?.score ?? ""}
+            label={home.testimonials.badges[2]?.label ?? ""}
             icon={
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -318,7 +236,7 @@ export default function Testimonials() {
       </div>
 
       <p className="text-center text-xs text-neutral-600 mt-10 px-4">
-        Results vary by industry, deal size, and engagement scope. Testimonials reflect real anonymised client feedback.
+        {home.testimonials.note}
       </p>
     </section>
   );

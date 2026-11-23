@@ -1,14 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import home from "@/content/site-copy/home.json";
 
-const PHRASES = [
-  "meetings.",
-  "qualified demos.",
-  "real pipeline.",
-  "booked calls.",
-  "your next deal.",
-];
+// The typed endings are edited in the admin (Homepage > Our promise).
+const PHRASES = home.promise.typedEndings;
 
 // Scattered decorative gold dots
 const DOTS = [
@@ -121,7 +117,7 @@ export default function Promise() {
           className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-6 px-4 py-1.5 rounded-full border"
           style={{ color: "#A14A08", borderColor: "rgba(245,183,49,0.35)", background: "#FEF9EC" }}
         >
-          Our Promise to You
+          {home.promise.eyebrow}
         </span>
 
         {/* Typewriter heading. Opts out of the sitewide balanced wrapping:
@@ -132,10 +128,10 @@ export default function Promise() {
               and shrank as each phrase was typed, shifting the page below (a Core Web Vitals layout shift). */}
           <span className="grid">
             {PHRASES.map((p) => (
-              <span key={p} aria-hidden="true" className="invisible reserve-text with-cursor" data-text={`We book ${p}`} style={{ gridArea: "1 / 1" }} />
+              <span key={p} aria-hidden="true" className="invisible reserve-text with-cursor" data-text={`${home.promise.lead} ${p}`} style={{ gridArea: "1 / 1" }} />
             ))}
             <span style={{ gridArea: "1 / 1" }}>
-              We book{" "}
+              {home.promise.lead}{" "}
               <span ref={typedRef} style={{ color: "#0a0a0a" }} />
               <span
                 ref={cursorRef}

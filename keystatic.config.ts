@@ -1,5 +1,6 @@
 import { collection, config, singleton } from "@keystatic/core";
 import { fields } from "./lib/admin/fields";
+import { homeCopySchema } from "./content/site-copy/schemas/home";
 import { coldEmailCopySchema } from "./content/service-copy/schemas/cold-email";
 import { linkedinOutreachCopySchema } from "./content/service-copy/schemas/linkedin-outreach";
 import { doItYourselfCopySchema } from "./content/service-copy/schemas/do-it-yourself";
@@ -1315,6 +1316,12 @@ export default config({
   // The three bespoke service pages keep their own layouts, so each has its own page-copy file
   // (the search and share metadata for all eight services is in the Service pages collection).
   singletons: {
+    siteHome: singleton({
+      label: "Homepage",
+      path: "content/site-copy/home",
+      format: "json",
+      schema: homeCopySchema,
+    }),
     serviceCopyColdEmail: singleton({
       label: "Service copy: Cold email",
       path: "content/service-copy/cold-email",

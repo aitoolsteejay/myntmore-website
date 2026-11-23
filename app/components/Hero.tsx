@@ -2,20 +2,20 @@
 
 import { useRef, useEffect } from "react";
 import { caveat } from "@/app/fonts/caveat";
+import home from "@/content/site-copy/home.json";
+import { countUpFormat } from "@/lib/count-up";
 
 // Caveat is imported here rather than loaded in the root layout: it is only
 // used by the two handwritten annotations below (and only on desktop, they
 // are hidden on mobile), so loading it site-wide would preload a font file on
 // every other page for a decoration those pages never render.
 
+// The copy is edited in the admin (Homepage) and lives in content/site-copy/home.json.
+const copy = home.hero;
 // The rotating second line of the hero headline.
-const PHRASES = [
-  "You Close the Deals",
-  "You Hit Your Number",
-  "You Scale the Team",
-  "You Win Every Quarter",
-  "You Own the Market",
-];
+const PHRASES = copy.rotatingPhrases;
+// Count-up length for each stat in the row, in order.
+const STAT_DURATIONS = [1800, 1400, 2200];
 
 export default function Hero() {
   const blob1Ref = useRef<HTMLDivElement>(null);
@@ -110,11 +110,11 @@ export default function Hero() {
 
   // Number ticker animation fires after page load since hero is immediately visible
   useEffect(() => {
-    const stats = [
-      { ref: stat1Ref, target: 120,   duration: 1800, format: (n: number) => `$${Math.round(n)}M+` },
-      { ref: stat2Ref, target: 18,    duration: 1400, format: (n: number) => `${Math.round(n)} Days` },
-      { ref: stat3Ref, target: 12000, duration: 2200, format: (n: number) => `${Math.round(n / 1000)}K+` },
-    ];
+    // Each figure counts up from zero to the number written in it ("$120M+" counts 0 to 120).
+    const stats = [stat1Ref, stat2Ref, stat3Ref].flatMap((ref, i) => {
+      const figure = countUpFormat(copy.stats[i]?.value ?? "");
+      return figure ? [{ ref, target: figure.target, duration: STAT_DURATIONS[i] ?? 1800, format: figure.format }] : [];
+    });
 
     // The markup carries the real figures, so crawlers, no-JS visitors and
     // anyone who asked for reduced motion read them as-is; the count-up from
@@ -382,9 +382,9 @@ export default function Hero() {
             clipPath: "inset(0 100% 0 0)",
           }}
         >
-          <span>Human strategy</span>
+          <span>{copy.noteRightLine1}</span>
           <span style={{ fontSize: "13px", letterSpacing: "0.08em", fontWeight: 600, color: "#a855f7", fontFamily: "var(--font-caveat)" }}>+</span>
-          <span>AI Agent execution</span>
+          <span>{copy.noteRightLine2}</span>
         </div>
         {/* Arrow draws in after */}
         <svg width="52" height="44" viewBox="0 0 52 44" fill="none" style={{ transform: "scaleX(-1) rotate(-20deg)", marginBottom: "-4px", alignSelf: "flex-end", marginRight: "8px" }}>
@@ -413,8 +413,8 @@ export default function Hero() {
             clipPath: "inset(0 100% 0 0)",
           }}
         >
-          <span>12K+ meetings</span>
-          <span>booked & counting ✓</span>
+          <span>{copy.noteLeftLine1}</span>
+          <span>{copy.noteLeftLine2}</span>
         </div>
         {/* Arrow draws in after */}
         <svg width="48" height="30" viewBox="0 0 48 30" fill="none" style={{ marginTop: "2px", alignSelf: "flex-end" }}>
@@ -440,13 +440,13 @@ export default function Hero() {
             aria-hidden="true"
           />
           <span className="text-sm font-semibold text-[#0a0a0a]">
-            Trusted by <span style={{ color: "#A14A08" }}>130+</span> Companies Worldwide
+            {copy.badgeBefore}<span style={{ color: "#A14A08" }}>{copy.badgeHighlight}</span>{copy.badgeAfter}
           </span>
         </div>
 
         {/* H1 */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[0.95] mb-6 text-[#0a0a0a]">
-          <span className="block font-black">We Fill Your Pipeline</span>
+          <span className="block font-black">{copy.headline}</span>
           {/* Every phrase sits invisibly in the same grid cell as the visible one (drawn from data-text by CSS, so the
               heading's text is unchanged), and the line keeps the height of the longest phrase. The sizes on this line are
               set so that every phrase fits on one line from 640px up (at 60px and 96px, "You Win Every Quarter" wrapped
@@ -472,9 +472,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="max-w-2xl mx-auto text-base sm:text-xl leading-relaxed mb-8 sm:mb-10 font-normal" style={{ color: "#71675E" }}>
-          We run cold email, LinkedIn outreach, and ABM so your pipeline
-          fills itself and your sales team spends every hour closing,
-          not prospecting.
+          {copy.subheading}
         </p>
 
         {/* CTAs */}
@@ -483,13 +481,13 @@ export default function Hero() {
             href="/book-a-call"
             className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2 w-full sm:w-auto justify-center"
           >
-            Book Your Free Strategy Call
+            {copy.primaryButton}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
           <a href="#results" className="text-base font-semibold text-[#0a0a0a] hover:underline underline-offset-4 transition-all duration-200 w-full sm:w-auto text-center px-4 py-4">
-            See Our Results
+            {copy.secondaryButton}
           </a>
         </div>
 
@@ -499,11 +497,7 @@ export default function Hero() {
           className="inline-flex flex-col sm:flex-row items-center gap-0 sm:gap-0 rounded-2xl overflow-hidden"
           style={{ border: "1px solid #E8E2D9", background: "rgba(255,255,255,0.8)", boxShadow: "0 2px 16px rgba(0,0,0,0.06)", backdropFilter: "blur(8px)" }}
         >
-          {[
-            { ref: stat1Ref, value: "$120M+",  label: "Pipeline Created for Clients" },
-            { ref: stat2Ref, value: "18 Days",  label: "Avg. Days to Campaign Launch" },
-            { ref: stat3Ref, value: "12K+",     label: "Meetings Booked for Clients" },
-          ].map((stat, i) => (
+          {[stat1Ref, stat2Ref, stat3Ref].slice(0, copy.stats.length).map((ref, i) => ({ ref, ...copy.stats[i] })).map((stat, i) => (
             <div
               key={stat.label}
               className={`flex flex-col items-center px-8 py-5 w-full sm:w-auto ${i !== 2 ? "border-b sm:border-b-0 sm:border-r" : ""}`}

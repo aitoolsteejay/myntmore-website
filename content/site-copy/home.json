@@ -1,0 +1,560 @@
+{
+  "hero": {
+    "badgeBefore": "Trusted by ",
+    "badgeHighlight": "130+",
+    "badgeAfter": " Companies Worldwide",
+    "headline": "We Fill Your Pipeline",
+    "rotatingPhrases": [
+      "You Close the Deals",
+      "You Hit Your Number",
+      "You Scale the Team",
+      "You Win Every Quarter",
+      "You Own the Market"
+    ],
+    "subheading": "We run cold email, LinkedIn outreach, and ABM so your pipeline fills itself and your sales team spends every hour closing, not prospecting.",
+    "primaryButton": "Book Your Free Strategy Call",
+    "secondaryButton": "See Our Results",
+    "stats": [
+      {
+        "value": "$120M+",
+        "label": "Pipeline Created for Clients"
+      },
+      {
+        "value": "18 Days",
+        "label": "Avg. Days to Campaign Launch"
+      },
+      {
+        "value": "12K+",
+        "label": "Meetings Booked for Clients"
+      }
+    ],
+    "noteRightLine1": "Human strategy",
+    "noteRightLine2": "AI Agent execution",
+    "noteLeftLine1": "12K+ meetings",
+    "noteLeftLine2": "booked & counting ✓"
+  },
+  "logoStrip": {
+    "heading": "Trusted by fast-growing B2B teams",
+    "companies": [
+      "Finstack",
+      "Proxima",
+      "Vaultline",
+      "Helio",
+      "Crescendo",
+      "Nexbridge",
+      "Strataflow",
+      "Orbis"
+    ]
+  },
+  "whoWeHelp": {
+    "heading": "Built for every B2B growth team",
+    "intro": "Whether you’re a founder doing outbound yourself or a VP Sales scaling a team Myntmore has a playbook for you.",
+    "personas": [
+      {
+        "tab": "Founders",
+        "heading": "Stop being your own SDR.\nStart closing.",
+        "tagline": "You started a company to build, not to spend 4 hours a day on LinkedIn. Let Myntmore run the outbound engine.",
+        "cta": "Explore Founder solutions",
+        "benefits": [
+          {
+            "title": "Pipeline without headcount",
+            "description": "Run a full outbound motion without hiring an SDR or BDR. We do it end to end: strategy, copy, execution."
+          },
+          {
+            "title": "Live in 18 days",
+            "description": "Fast onboarding means fast results. Campaigns go live within 18 days, and most founders have their first qualified conversation in weeks 3 to 4."
+          },
+          {
+            "title": "Stay focused on building",
+            "description": "You close. We fill. That's the entire model. No distractions, no micromanaging sequences, just calendar invites."
+          }
+        ]
+      },
+      {
+        "tab": "Sales Leaders",
+        "heading": "Give your team a full calendar.\nEvery single week.",
+        "tagline": "Your reps are built to close, not prospect. Feed them a consistent flow of qualified, pre-warmed meetings.",
+        "cta": "Explore Sales Leader solutions",
+        "benefits": [
+          {
+            "title": "Predictable meeting volume",
+            "description": "Know exactly how many qualified meetings hit your team's calendar each week: no more feast or famine."
+          },
+          {
+            "title": "Reps close 40% more",
+            "description": "When reps stop prospecting and start closing, conversion rates climb. We've seen it across 130+ B2B companies."
+          },
+          {
+            "title": "Full pipeline visibility",
+            "description": "Every meeting, touchpoint, and reply reported to your team automatically. Zero manual tracking."
+          }
+        ]
+      },
+      {
+        "tab": "Marketing Heads",
+        "heading": "ABM that reaches the\nright accounts. Every time.",
+        "tagline": "Stop burning budget reaching the wrong people. Our ABM campaigns target your exact ICP with surgical precision.",
+        "cta": "Explore Marketing solutions",
+        "benefits": [
+          {
+            "title": "Account lists built for you",
+            "description": "We identify your highest-value target accounts and build targeted lists from scratch using intent data."
+          },
+          {
+            "title": "Multi-channel coordination",
+            "description": "Email + LinkedIn running in sync to hit the full buying committee so when your AE calls, they're already warm."
+          },
+          {
+            "title": "Campaigns live in 18 days",
+            "description": "From brief to first email sent in under three weeks. No 3-month ramp-up. No unnecessary delays."
+          }
+        ]
+      },
+      {
+        "tab": "RevOps Teams",
+        "heading": "Clean data. Tight sequences.\nReliable revenue.",
+        "tagline": "Every contact verified, every touchpoint tracked, every forecast built on data you can actually trust.",
+        "cta": "Explore RevOps solutions",
+        "benefits": [
+          {
+            "title": "99% data accuracy",
+            "description": "Every contact enriched and verified before outreach goes out. No more bounces, dead leads, or dirty data."
+          },
+          {
+            "title": "Reporting live in 48 hours",
+            "description": "Full outbound reporting and pipeline dashboards set up within 2 days, so you're tracking results from day one."
+          },
+          {
+            "title": "Forecasts you can trust",
+            "description": "With every meeting, reply, and touchpoint tracked and reported consistently, your pipeline numbers become genuinely reliable."
+          }
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industries We Serve",
+    "headingPlain": "Every B2B sector.",
+    "headingAccent": "One outbound engine",
+    "intro": "If you sell to businesses, we know how to reach your buyers regardless of vertical.",
+    "pills": [
+      {
+        "label": "B2B SaaS",
+        "color": "#3B82F6"
+      },
+      {
+        "label": "B2B Manufacturing",
+        "color": "#F97316"
+      },
+      {
+        "label": "Financial Services",
+        "color": "#14B8A6"
+      },
+      {
+        "label": "Private Equity",
+        "color": "#F5B731"
+      },
+      {
+        "label": "Venture Capital",
+        "color": "#F5B731"
+      },
+      {
+        "label": "Recruitment",
+        "color": "#A855F7"
+      },
+      {
+        "label": "Marketing Agencies",
+        "color": "#A855F7"
+      },
+      {
+        "label": "Tech Consulting",
+        "color": "#3B82F6"
+      },
+      {
+        "label": "FinTech",
+        "color": "#14B8A6"
+      },
+      {
+        "label": "PropTech",
+        "color": "#10B981"
+      },
+      {
+        "label": "Professional Services",
+        "color": "#A855F7"
+      },
+      {
+        "label": "Asset Management",
+        "color": "#F5B731"
+      },
+      {
+        "label": "SaaS Platforms",
+        "color": "#3B82F6"
+      },
+      {
+        "label": "HealthTech",
+        "color": "#10B981"
+      },
+      {
+        "label": "EdTech",
+        "color": "#3B82F6"
+      },
+      {
+        "label": "Logistics & Supply",
+        "color": "#F97316"
+      },
+      {
+        "label": "Accounting Firms",
+        "color": "#14B8A6"
+      },
+      {
+        "label": "Law Firms",
+        "color": "#A855F7"
+      },
+      {
+        "label": "InsurTech",
+        "color": "#14B8A6"
+      },
+      {
+        "label": "Cybersecurity",
+        "color": "#3B82F6"
+      },
+      {
+        "label": "HR Tech",
+        "color": "#A855F7"
+      },
+      {
+        "label": "Data & Analytics",
+        "color": "#F97316"
+      },
+      {
+        "label": "Real Estate",
+        "color": "#10B981"
+      },
+      {
+        "label": "Investment Banking",
+        "color": "#F5B731"
+      },
+      {
+        "label": "Media & Publishing",
+        "color": "#F97316"
+      },
+      {
+        "label": "Clean Energy",
+        "color": "#10B981"
+      },
+      {
+        "label": "Construction Tech",
+        "color": "#F97316"
+      },
+      {
+        "label": "RegTech",
+        "color": "#14B8A6"
+      },
+      {
+        "label": "Corporate Gifting",
+        "color": "#F97316"
+      },
+      {
+        "label": "Jewellery",
+        "color": "#EC4899"
+      }
+    ],
+    "footerText": "Don’t see your sector?",
+    "footerLink": "Let’s talk we’ve probably done it."
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "headingLine1": "Three Channels. One Goal.",
+    "headingLine2": "Meetings on Your Calendar",
+    "intro": "Cold email, LinkedIn outreach, and ABM working together to get your brand in front of the right people and convert them into qualified pipeline.",
+    "cards": [
+      {
+        "title": "Cold Email Outreach",
+        "description": "We build and run cold email campaigns that land in inboxes and get replies. Every sequence is written for your specific ICP sharp subject lines, personalised openers, and CTAs that convert cold strangers into booked meetings.",
+        "features": [
+          "Domain warm-up & deliverability infrastructure",
+          "Hyper-personalised copy per ICP segment",
+          "A/B tested subject lines and opening hooks",
+          "Multi-step sequences optimised for reply rate"
+        ],
+        "metricValue": "47%",
+        "metricLabel": "Avg. Open Rate"
+      },
+      {
+        "title": "LinkedIn Outreach",
+        "description": "We turn LinkedIn into a consistent meeting-booking machine. From connection requests to follow-up messages, every touchpoint starts real conversations with decision-makers not just adds to your connection count.",
+        "features": [
+          "Targeted ICP outreach at scale",
+          "Personalised connection + message sequences",
+          "Profile optimisation to build instant credibility",
+          "Coordinated with email for multi-channel impact"
+        ],
+        "metricValue": "35%",
+        "metricLabel": "Reply Rate"
+      },
+      {
+        "title": "Account-Based Marketing",
+        "description": "We identify your highest-value target accounts and run coordinated campaigns across email and LinkedIn to engage the entire buying committee so when your AE reaches out, the account already knows your name.",
+        "features": [
+          "ICP-matched target account lists",
+          "Intent data & buying signal tracking",
+          "Multi-threaded buying committee engagement",
+          "Account-level pipeline reporting & attribution"
+        ],
+        "metricValue": "6.4×",
+        "metricLabel": "Higher Deal Size"
+      }
+    ],
+    "button": "Book a Free Strategy Call",
+    "buttonNote": "No commitment · 30-minute call · Live in 18 days",
+    "linkText": "Our B2B lead generation agency in Mumbai",
+    "linkHref": "/b2b-lead-generation-mumbai",
+    "stats": [
+      {
+        "value": "3.2x",
+        "label": "Higher reply rate than industry average"
+      },
+      {
+        "value": "18 days",
+        "label": "Average time to campaign launch"
+      },
+      {
+        "value": "130+",
+        "label": "B2B companies trust Myntmore"
+      }
+    ]
+  },
+  "systemFlow": {
+    "eyebrow": "The Myntmore System",
+    "headingLine1": "From Zero to Pipeline",
+    "headingLine2": "Every Single Time",
+    "intro": "A repeatable 6-step system that turns cold lists into qualified meetings and closed revenue.",
+    "steps": [
+      {
+        "title": "ICP & Strategy",
+        "description": "Define who you're targeting, their pain points, and build the messaging strategy around them."
+      },
+      {
+        "title": "Build & Enrich Lists",
+        "description": "Scrape verified prospects from LinkedIn and Apollo, enriched with intent data and buying signals."
+      },
+      {
+        "title": "Prepare Assets",
+        "description": "Create lead magnets, case studies, playbooks, and LinkedIn content that warms up your ICP before outreach."
+      },
+      {
+        "title": "Launch Outbound",
+        "description": "Cold email and LinkedIn sequences go live simultaneously with full deliverability infrastructure."
+      },
+      {
+        "title": "Follow Up & Nurture",
+        "description": "Persistent multi-touch follow-ups sharing assets, insights, and social proof until they reply."
+      },
+      {
+        "title": "Book Meetings",
+        "description": "Warm replies convert into qualified calls on your calendar every meeting comes with full context."
+      }
+    ],
+    "brandEyebrow": "Running in Parallel",
+    "brandBadge": "Active throughout",
+    "brandTitle": "LinkedIn Personal Brand Building",
+    "brandItems": [
+      {
+        "title": "Profile Optimisation",
+        "description": "Headline, banner, about section and featured posts crafted to build instant credibility with your ICP."
+      },
+      {
+        "title": "Content Creation",
+        "description": "Regular posts, carousels, and insights that warm up your target audience before outreach even starts."
+      },
+      {
+        "title": "Thought Leadership",
+        "description": "Position you as the go-to expert in your space so prospects already trust you when they get your message."
+      }
+    ],
+    "resultEyebrow": "The Result",
+    "resultHeading": "The force behind your growth",
+    "resultText": "Your team closes. Revenue compounds. Repeat the system, scale the results this is what a full-stack outbound engine looks like when it’s firing on all cylinders."
+  },
+  "benefits": {
+    "eyebrow": "What you unlock",
+    "heading": "Everything your pipeline needs",
+    "row1": [
+      "Fill your pipeline",
+      "Book more meetings",
+      "Decrease cost per lead",
+      "Boost revenue growth",
+      "Reach relevant prospects",
+      "Increase pipeline",
+      "Stay ahead of competition",
+      "Shorten sales cycles"
+    ],
+    "row2": [
+      "Refine your ICP",
+      "Lead qualification on autopilot",
+      "Boost conversion rates",
+      "Scale outbound effortlessly",
+      "Land enterprise accounts",
+      "Reduce no-show rates",
+      "Increase reply rates",
+      "Dominate your niche"
+    ],
+    "row3": [
+      "Operational efficiency",
+      "Save costs per acquisition",
+      "Targeted ABM campaigns",
+      "Outbound on autopilot",
+      "More SQLs every month",
+      "Predictable revenue",
+      "Consistent deal flow",
+      "Grow faster than competitors"
+    ]
+  },
+  "testimonials": {
+    "headingLine1": "This is why clients",
+    "headingLine2": "love working with us",
+    "intro": "130+ B2B companies trust Myntmore to fill their pipeline. Here’s what they say after working with us.",
+    "badges": [
+      {
+        "score": "4.9",
+        "label": "Client Satisfaction"
+      },
+      {
+        "score": "92%",
+        "label": "Client Retention"
+      },
+      {
+        "score": "3.2x",
+        "label": "Avg. Reply Rate vs Industry"
+      }
+    ],
+    "row1": [
+      {
+        "name": "Sarah K.",
+        "role": "VP of Sales",
+        "company": "Finstack",
+        "initials": "SK",
+        "color": "sky",
+        "quote": "We'd tried two other agencies before this. Both fizzled out after month one. Myntmore's cold email + LinkedIn combo actually held up, 41 demos in the first two months, and about a third of them were the kind of accounts we actually wanted.",
+        "rating": 5
+      },
+      {
+        "name": "Rohan Mehta",
+        "role": "Founder",
+        "company": "Kwikcart",
+        "initials": "RM",
+        "color": "amber",
+        "quote": "Honestly wasn't sure outbound would work for a D2C-adjacent SaaS. Took roughly a month to find the right angle, but once it clicked we had two enterprise deals close straight out of the same sequence.",
+        "rating": 5
+      },
+      {
+        "name": "Priya M.",
+        "role": "Head of Growth",
+        "company": "Vaultline",
+        "initials": "PM",
+        "color": "rose",
+        "quote": "What sold me wasn't the pitch, it was that they actually read our old sequences before proposing anything. Reply rates are up, but more than that, the replies are from people who fit our ICP instead of randoms.",
+        "rating": 4
+      },
+      {
+        "name": "Alex T.",
+        "role": "CRO",
+        "company": "Helio",
+        "initials": "AT",
+        "color": "violet",
+        "quote": "My reps used to burn a good chunk of the morning just prospecting on LinkedIn. That's gone now. Close rate is up too, though I'd credit that more to better-qualified meetings than any single tactic.",
+        "rating": 5
+      },
+      {
+        "name": "Ananya Iyer",
+        "role": "RevOps Lead",
+        "company": "Zylker Health",
+        "initials": "AI",
+        "color": "mint",
+        "quote": "I run point on three vendor relationships and this is the only one where I don't have to chase a weekly update, it just shows up in our CRM. Small thing, but it's the reason we renewed.",
+        "rating": 5
+      }
+    ],
+    "row2": [
+      {
+        "name": "Tom W.",
+        "role": "VP Marketing",
+        "company": "Nexbridge",
+        "initials": "TW",
+        "color": "blush",
+        "quote": "Didn't expect the personal branding side to matter much, thought it was a nice-to-have. Turned out half our inbound this quarter can be traced back to a post they wrote for our founder.",
+        "rating": 5
+      },
+      {
+        "name": "Lisa B.",
+        "role": "Director of Sales",
+        "company": "Strataflow",
+        "initials": "LB",
+        "color": "sky",
+        "quote": "We'd gotten used to templated cold emails that read like every other vendor pitch we get. This didn't feel like that. Can't say every sequence was a home run, but the misses were rare.",
+        "rating": 5
+      },
+      {
+        "name": "Raj P.",
+        "role": "CEO",
+        "company": "Orbis",
+        "initials": "RP",
+        "color": "amber",
+        "quote": "Campaign was live in 8 days, first meeting booked on day 9. What actually kept me around, though, is that someone from their team flags it themselves when a sequence underperforms instead of waiting for us to notice.",
+        "rating": 5
+      },
+      {
+        "name": "Karthik Subramaniam",
+        "role": "Director of Sales",
+        "company": "Brightleaf Traders",
+        "initials": "KS",
+        "color": "violet",
+        "quote": "We export to a pretty niche set of buyers, so I went in expecting generic messaging. It wasn't. They spent the first two weeks just understanding our product before a single email went out.",
+        "rating": 5
+      },
+      {
+        "name": "Chris H.",
+        "role": "VP Business Development",
+        "company": "Proxima",
+        "initials": "CH",
+        "color": "mint",
+        "quote": "Running email, LinkedIn, and ABM at once sounded like a lot to manage on our end. It wasn't, it genuinely felt like an SDR team had joined overnight, minus the ramp-up time and the headcount.",
+        "rating": 5
+      }
+    ],
+    "note": "Results vary by industry, deal size, and engagement scope. Testimonials reflect real anonymised client feedback."
+  },
+  "promise": {
+    "eyebrow": "Our Promise to You",
+    "lead": "We book",
+    "typedEndings": [
+      "meetings.",
+      "qualified demos.",
+      "real pipeline.",
+      "booked calls.",
+      "your next deal."
+    ]
+  },
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "heading": "Common Questions",
+    "intro": "Everything you need to know before getting started.",
+    "nudge": "Still have questions? We’re happy to chat.",
+    "link": "Talk to our team"
+  },
+  "closing": {
+    "badge": "Limited spots available",
+    "headingLine1": "Let's Fill",
+    "headingLine2": "Your Pipeline",
+    "textBefore": "Join ",
+    "textBold": "130+ B2B companies",
+    "textAfter": " growing with Myntmore. Book your free 30-minute strategy call today we’ll map out exactly how to generate pipeline for your business.",
+    "button": "Book Your Free Strategy Call",
+    "note": "No commitment. No fluff. Just a real conversation about your growth.",
+    "ticks": [
+      "30-minute call, no sales pressure",
+      "Custom strategy for your ICP",
+      "Results or we make it right"
+    ]
+  }
+}
