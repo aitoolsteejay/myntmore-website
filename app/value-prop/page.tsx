@@ -6,6 +6,10 @@ import AnimatedDisclosure from "@/components/value-prop/AnimatedDisclosure";
 import ValuePropExplorer from "@/components/value-prop/ValuePropExplorer";
 import { DIRECTION, FLOW, ICPS, META, SECTIONS, STATUS_GROUPS, pad } from "@/lib/value-prop";
 import { withPageSeo } from "@/lib/page-seo";
+import pageCopy from "@/content/page-copy/valueProp.json";
+
+// This page's text is edited in the admin ("Value Proposition") and lives in content/page-copy/valueProp.json.
+const copy = pageCopy;
 
 // Internal strategy reference (the Notion value proposition template for all 29 ICPs).
 // Unlisted: noindex, not in the sitemap or any nav, and kept off /site-audit
@@ -36,32 +40,25 @@ export default function ValuePropPage() {
       {/* Hero section */}
       <section className="pt-32 pb-14 sm:pb-16 px-4 sm:px-6">
         <div className="mx-auto max-w-6xl">
-          <Breadcrumbs items={[{ label: "Value Proposition", href: "/value-prop" }]} />
+          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/value-prop" }]} />
 
           <div className="flex flex-wrap items-center gap-3 hero-fade">
             <span
               className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.18em]"
               style={{ borderColor: "rgba(245,183,49,0.3)", backgroundColor: "#FEF9EC", color: "#A14A08" }}
-            >
-              Strategy
-            </span>
-            <span className="text-xs" style={{ color: MUTED }}>
-              Last edited {META.lastEdited}
+            >{copy.s01.t02}</span>
+            <span className="text-xs" style={{ color: MUTED }}>{copy.s01.t03}{META.lastEdited}
             </span>
           </div>
 
-          <h1 className="mt-4 text-4xl font-black leading-[1.05] sm:text-6xl hero-fade-d1" style={{ color: INK }}>
-            Value Proposition
-          </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: BODY }}>
-            Customer pain, solution, benefit, proof and message, mapped for all 29 ICPs, with the provisional 2026 ICP direction.
-          </p>
+          <h1 className="mt-4 text-4xl font-black leading-[1.05] sm:text-6xl hero-fade-d1" style={{ color: INK }}>{copy.s01.t04}</h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed sm:text-lg hero-fade-d2" style={{ color: BODY }}>{copy.s01.t05}</p>
 
           <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 hero-fade-d3">
             {[
               ["ICPs", META.icps],
               ["Sections", META.sections],
-              ["Fields per ICP", META.fieldsPerIcp],
+              [copy.s01.t06, META.fieldsPerIcp],
             ].map(([k, v]) => (
               <div key={k} className="transition-transform duration-200 hover:-translate-y-0.5">
                 <dt className="text-xs font-medium" style={{ color: MUTED }}>
@@ -73,9 +70,7 @@ export default function ValuePropPage() {
               </div>
             ))}
             <div>
-              <dt className="text-xs font-medium" style={{ color: MUTED }}>
-                Source
-              </dt>
+              <dt className="text-xs font-medium" style={{ color: MUTED }}>{copy.s01.t07}</dt>
               <dd className="mt-1.5 text-sm font-semibold" style={{ color: INK }}>
                 {META.source}
               </dd>
@@ -83,9 +78,7 @@ export default function ValuePropPage() {
           </dl>
 
           <div className="mt-10 hero-fade-d4">
-            <p className="text-xs font-medium" style={{ color: MUTED }}>
-              This framework helps translate
-            </p>
+            <p className="text-xs font-medium" style={{ color: MUTED }}>{copy.s01.t08}</p>
             <ol className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-2">
               {FLOW.map((step, i) => (
                 <li key={step} className="flex items-center gap-2">
@@ -111,12 +104,8 @@ export default function ValuePropPage() {
         {/* 2026 direction */}
         <FadeIn>
           <section className="mt-6 sm:mt-8" aria-labelledby="direction-title">
-            <h2 id="direction-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>
-              2026 ICP direction
-            </h2>
-            <p className="mt-1 text-sm" style={{ color: MUTED }}>
-              Provisional, to validate against campaign/CRM results.
-            </p>
+            <h2 id="direction-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>{copy.s02.t01}</h2>
+            <p className="mt-1 text-sm" style={{ color: MUTED }}>{copy.s02.t02}</p>
 
             <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
               {STATUS_GROUPS.map((g) => (
@@ -150,8 +139,7 @@ export default function ValuePropPage() {
                           <span className="group-hover:underline">
                             {i.name}
                             {i.status.parent && (
-                              <span className="ml-1 whitespace-nowrap text-[11px]" style={{ color: MUTED }}>
-                                under ICP {i.status.parent}
+                              <span className="ml-1 whitespace-nowrap text-[11px]" style={{ color: MUTED }}>{copy.s02.t03}{i.status.parent}
                               </span>
                             )}
                           </span>
@@ -164,18 +152,17 @@ export default function ValuePropPage() {
             </div>
 
             <div className="mt-8 space-y-4">
-              <AnimatedDisclosure title="The full direction" meta="Which ICPs to focus, retain, test, fold in or pause, and why">
+              <AnimatedDisclosure title={copy.s02.t04} meta="Which ICPs to focus, retain, test, fold in or pause, and why">
                 <p className="max-w-3xl text-[15px] leading-relaxed" style={{ color: BODY }}>
                   {DIRECTION.text}
                 </p>
               </AnimatedDisclosure>
-              <AnimatedDisclosure title="Read before use: notes, terms and safeguards" meta="These apply to every ICP profile below">
+              <AnimatedDisclosure title={copy.s02.t05} meta="These apply to every ICP profile below">
                 <ul className="space-y-5">
                   {NOTES.map((n) => (
                     <li key={`${n.section.number}-${n.where}`} className="grid gap-1 sm:grid-cols-[220px_minmax(0,1fr)] sm:gap-6">
                       <p className="text-xs" style={{ color: MUTED }}>
-                        <span className="font-bold" style={{ color: INK }}>
-                          Section {pad(n.section.number)}
+                        <span className="font-bold" style={{ color: INK }}>{copy.s02.t06}{pad(n.section.number)}
                         </span>{" "}
                         · {n.section.title} · {n.where}
                       </p>
@@ -194,12 +181,8 @@ export default function ValuePropPage() {
         <FadeIn delay={60}>
           <section className="mt-16 sm:mt-20" aria-labelledby="profiles-title">
             <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
-              <h2 id="profiles-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>
-                The 29 ICP profiles
-              </h2>
-              <span className="text-xs" style={{ color: MUTED }}>
-                Deep-dive into core value propositions, angles, proof, objections, and messaging.
-              </span>
+              <h2 id="profiles-title" className="text-2xl font-black sm:text-3xl" style={{ color: INK }}>{copy.s03.t01}</h2>
+              <span className="text-xs" style={{ color: MUTED }}>{copy.s03.t02}</span>
             </div>
             <ValuePropExplorer />
           </section>
@@ -209,7 +192,7 @@ export default function ValuePropPage() {
         <FadeIn delay={90}>
           <section className="mt-16 sm:mt-20">
             <AnimatedDisclosure
-              title="Field guide: what each field answers"
+              title={copy.s03.t03}
               meta={`${META.fieldsPerIcp} fields in ${META.sections} sections`}
             >
               <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
@@ -243,9 +226,9 @@ export default function ValuePropPage() {
         {/* Provenance strip */}
         <div className="mt-16 pb-16">
           <div className="flex flex-wrap items-center justify-between gap-3 border-t pt-6 text-xs" style={{ borderColor: LINE, color: MUTED }}>
-            <span>Myntmore Strategy · Value Proposition Matrix</span>
+            <span>{copy.s03.t04}</span>
             <span>
-              {META.source} · Last edited {META.lastEdited}
+              {META.source}{copy.s03.t05}{META.lastEdited}
             </span>
           </div>
         </div>

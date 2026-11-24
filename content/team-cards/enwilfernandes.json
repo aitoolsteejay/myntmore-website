@@ -1,0 +1,23 @@
+{
+  "name": "enwilfernandes",
+  "fullName": "Enwil Fernandes",
+  "role": "Head of Sales, Myntmore",
+  "jobTitle": "Head of Sales",
+  "photoSrc": "/enwil.png",
+  "photoAlt": "Enwil Fernandes, Head of Sales at Myntmore",
+  "vCardHref": "/api/vcard/enwil-fernandes",
+  "whatsappUrl": "https://wa.me/918169318951",
+  "linkedinUrl": "https://www.linkedin.com/in/enwill-ferrnandes/",
+  "instagramUrl": "",
+  "newsletterUrl": "/newsletter-subscribe",
+  "phone": "+918169318951",
+  "email": "enwil@myntmore.com",
+  "intro": "If you are figuring out where your outbound pipeline is getting stuck, let us talk.",
+  "ctaHref": "/calendar/enwil",
+  "ctaLabel": "Book a call with Enwil",
+  "includeSignature": true,
+  "includeQuiz": true,
+  "metaTitle": "Enwil Fernandes",
+  "ogTitle": "Enwil Fernandes | Head of Sales, Myntmore",
+  "metaDescription": "Enwil Fernandes, Head of Sales at Myntmore. Connect on WhatsApp, LinkedIn, call, or email."
+}

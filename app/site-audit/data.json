@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-23T15:00:05.341Z",
+  "generatedAt": "2026-11-24T09:24:38.910Z",
   "site": "https://www.myntmore.com",
   "counts": {
-    "total": 356,
-    "linked": 314,
-    "orphan": 42,
+    "total": 360,
+    "linked": 316,
+    "orphan": 44,
     "noindex": 35,
-    "notInXmlSitemap": 47,
-    "privateHidden": 14
+    "notInXmlSitemap": 49,
+    "privateHidden": 16
   },
   "pages": [
     {
@@ -760,6 +760,7 @@
       "linkedFrom": [],
       "inboundCount": 0,
       "noindex": true,
+      "referencedIn": "components/calendar/EnwilCalendarClient.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -827,6 +828,7 @@
       "linkedFrom": [],
       "inboundCount": 0,
       "noindex": true,
+      "referencedIn": "components/calendar/CalendarPageClient.tsx",
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },
@@ -901,6 +903,19 @@
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
+    },
+    {
+      "path": "/careers/founders-office-intern",
+      "title": "Founders Office Intern",
+      "section": "careers",
+      "status": "linked",
+      "linkedFrom": [
+        "/careers"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": false
     },
     {
       "path": "/careers/gtm-strategist",
@@ -2706,7 +2721,7 @@
         "/resources/guides/58-meetings-600-linkedin-connections",
         "/resources/guides/80-us-meetings-ai-agents"
       ],
-      "inboundCount": 78,
+      "inboundCount": 79,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": false
@@ -3536,6 +3551,19 @@
       "inHtmlSitemap": true
     },
     {
+      "path": "/resources/blogs/why-booked-meetings-die-in-handoffs",
+      "title": "Why Booked Meetings Die in Handoffs",
+      "section": "resources",
+      "status": "linked",
+      "linkedFrom": [
+        "/resources/blogs"
+      ],
+      "inboundCount": 1,
+      "noindex": false,
+      "inXmlSitemap": true,
+      "inHtmlSitemap": true
+    },
+    {
       "path": "/resources/feed",
       "title": "Feed",
       "section": "resources",
@@ -4340,7 +4368,7 @@
         "/resources/guides/cold-email-tech-stack",
         "/resources/guides/dos-and-donts-of-outreach"
       ],
-      "inboundCount": 18,
+      "inboundCount": 19,
       "noindex": false,
       "inXmlSitemap": true,
       "inHtmlSitemap": true
@@ -4884,7 +4912,7 @@
       "status": "linked",
       "linkedFrom": [
         "/book-a-call",
-        "/calendar/th"
+        "calendar/CalendarPageClient.tsx"
       ],
       "inboundCount": 2,
       "noindex": true,
@@ -5114,6 +5142,30 @@
       "inboundCount": 0,
       "noindex": true,
       "referencedIn": "app/components/ReelWidget.tsx",
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
+      "inXmlSitemap": false,
+      "inHtmlSitemap": false
+    },
+    {
+      "path": null,
+      "private": true,
+      "title": "Private pricing / admin page (URL withheld)",
+      "section": "private",
+      "status": "orphan",
+      "linkedFrom": [],
+      "inboundCount": 0,
+      "noindex": false,
       "inXmlSitemap": false,
       "inHtmlSitemap": false
     },

@@ -27,7 +27,7 @@ const required = (d, keys) => keys.filter((k) => !d[k]).map((k) => problem(k, `"
 const exactly = (d, k, n) => (!Array.isArray(d[k]) || d[k].length !== n ? [problem(k, `"${k}" must have exactly ${n} items`)] : []);
 const emDash = (d) => {
   const raw = JSON.stringify(d);
-  return raw.includes("—") || raw.includes("&mdash;") ? [problem(null, "contains an em dash")] : [];
+  return raw.includes("\u2014") || raw.includes("&mdash;") ? [problem(null, "contains an em dash")] : [];
 };
 
 // ── Case study library (content/case-studies) ─────────────────────────────
@@ -300,6 +300,12 @@ export function nameProblems(typeKey, json, fileSlug) {
 /** Types where two entries may not share a name: the build refuses a second search title for one path. */
 export const UNIQUE_NAMES = { pageSeo: "path" };
 
+export const CALENDAR_REQUIRED = ["name", "client", "embedUrl", "badge", "heading", "description", "canonicalPath", "metaTitle", "metaDescription"];
+const calendarPages = (d) => required(d, CALENDAR_REQUIRED);
+
+export const TEAM_CARD_REQUIRED = ["name", "role", "photoSrc", "photoAlt", "vCardHref", "whatsappUrl", "linkedinUrl", "metaTitle", "metaDescription"];
+const teamCards = (d) => required(d, TEAM_CARD_REQUIRED);
+
 /** Rule sets by Keystatic content type key. Types not listed have no build rules beyond the schema. */
 export const RULES = {
   caseStudies,
@@ -316,6 +322,8 @@ export const RULES = {
   homepageFaqs,
   pageFaqs,
   marketPages,
+  calendarPages,
+  teamCards,
 };
 
 /** The long-form case study singletons (caseLong<Name>) share one rule set; their slug is the file name. */

@@ -5,6 +5,7 @@ import { useId, useRef, useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
+import { getSiteSettings } from "@/lib/site-settings";
 
 function ParticleCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -174,7 +175,8 @@ function FooterGroup({ title, titleHref, className = "", desktopTitle = true, ch
 }
 
 export default function Footer() {
-  const ctaHref = "/book-a-call";
+  const settings = getSiteSettings();
+  const ctaHref = settings.navbarCtaHref;
   const breathRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let animId: number;
@@ -208,17 +210,16 @@ export default function Footer() {
               B2B growth systems for companies that want predictable pipeline, not more promises.
             </p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=WeWork%20Enam%20Sambhav%2C%20C%20-%2020%2C%20G%20Block%20Rd%2C%20G%20Block%20BKC%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051"
+              href={settings.officeMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs mb-3 leading-relaxed block hover:underline transition-colors duration-200"
               style={{ color: "#71675E" }}
               aria-label="View WeWork Enam Sambhav BKC on Google Maps"
             >
-              WeWork Enam Sambhav<br />
-              C - 20, G Block Rd, G Block BKC,<br />
-              Bandra Kurla Complex, Bandra East,<br />
-              Mumbai, Maharashtra 400051
+              {settings.officeAddressLine1}<br />
+              {settings.officeAddressLine2}<br />
+              {settings.officeCity}
             </a>
             <a
               href="tel:+918169318951"
@@ -298,7 +299,7 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] mb-3 lg:mb-4" style={{ color: "#3D3D3D" }}>Get in Touch</h3>
             <ul className="space-y-0 lg:space-y-2 mb-4" role="list">
-              <li><a href="mailto:growth@myntmore.com" className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>growth@myntmore.com</a></li>
+              <li><a href={`mailto:${settings.companyEmail}`} className="inline-flex min-h-[40px] items-center text-sm leading-snug transition-colors duration-200 lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>{settings.companyEmail}</a></li>
             </ul>
             <div className="mb-3 p-4 rounded-xl border" style={{ background: "#FEF9EC", borderColor: "rgba(245,183,49,0.3)" }}>
               <Link href="/newsletter-subscribe" className="inline-flex min-h-[44px] items-center text-xs font-semibold hover:underline lg:min-h-0 lg:mb-1" style={{ color: "#0a0a0a" }}>The Outbound Operator</Link>
@@ -306,7 +307,7 @@ export default function Footer() {
               <NewsletterForm inputId="footer-newsletter-email" compact />
             </div>
             <Link href={ctaHref} className="btn-dark px-5 py-2.5 text-xs font-bold inline-flex items-center gap-1.5">
-              Book a Call
+              {settings.navbarCtaLabel}
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -345,7 +346,7 @@ export default function Footer() {
         </FooterGroup>
 
         <div className="py-3 lg:py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs" style={{ color: "#71675E" }}>&copy; 2026 Myntmore. Built in Mumbai.</p>
+          <p className="text-xs" style={{ color: "#71675E" }}>{settings.copyrightNotice}</p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-0">
             <Link href="/privacy-policy" className="inline-flex min-h-[40px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Privacy Policy</Link>
             <Link href="/editorial-policy" className="inline-flex min-h-[40px] items-center text-xs transition-colors lg:min-h-0" style={{ color: "#71675E" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#0a0a0a"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#71675E"; }}>Editorial Policy</Link>

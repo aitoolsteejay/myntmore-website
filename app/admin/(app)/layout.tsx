@@ -23,6 +23,9 @@ function Shell({ editor, children }: { editor: Editor | null; children: React.Re
               <Link href="/admin/activity" className="hover:text-[#0A0A0A]">
                 Activity
               </Link>
+              <Link href="/admin/health" className="hover:text-[#0A0A0A]">
+                Site health
+              </Link>
               {editor.role === "admin" && (
                 <Link href="/admin/editors" className="hover:text-[#0A0A0A]">
                   Editors

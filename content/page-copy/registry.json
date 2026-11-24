@@ -229,5 +229,47 @@
     "group": "tools",
     "route": "/resources/tools",
     "dir": "app/resources/tools"
+  },
+  {
+    "key": "myntmoreFramework",
+    "title": "The Myntmore Framework",
+    "group": "pages",
+    "route": "/myntmore-framework",
+    "dir": "app/myntmore-framework"
+  },
+  {
+    "key": "valueProp",
+    "title": "Value Proposition",
+    "group": "pages",
+    "route": "/value-prop",
+    "dir": "app/value-prop"
+  },
+  {
+    "key": "whoThisIsFor",
+    "title": "Who This Is For",
+    "group": "pages",
+    "route": "/who-this-is-for",
+    "dir": "app/who-this-is-for"
+  },
+  {
+    "key": "oneOnOneConsultation",
+    "title": "1-on-1 Consultation",
+    "group": "pages",
+    "route": "/1-on-1-consultation",
+    "dir": "app/1-on-1-consultation"
+  },
+  {
+    "key": "marketingAutomation",
+    "title": "Marketing Automation Services",
+    "group": "services",
+    "route": "/marketing-automation",
+    "dir": "app/marketing-automation"
+  },
+  {
+    "key": "cphi",
+    "title": "CPHI Outbound Showcase",
+    "group": "pages",
+    "route": "/cphi",
+    "dir": "app/cphi"
   }
 ]

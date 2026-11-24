@@ -7,6 +7,10 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { buildHowToSchema } from "@/lib/schema";
 import { textTone } from "@/lib/colors";
+import pageCopy from "@/content/page-copy/myntmoreFramework.json";
+
+// This page's text is edited in the admin ("The Myntmore Framework") and lives in content/page-copy/myntmoreFramework.json.
+const copy = pageCopy;
 
 /* ─── Icons (technical/glyph style, not emoji) ────────────────── */
 
@@ -103,19 +107,19 @@ const RAW_NODES: FNode[] = [
   /* ── Group A: prospect discovery ─────────────────────────── */
   N("sched1", "Schedule Trigger", "trigger.schedule", <IconClock />, C.yellow, 130, 300, "trigger", { meta: "Daily 08:00 IST" }),
   N("icp", "ICP Agent", "ai.agent", <IconTarget />, C.yellow, 300, 300, "ai", { narrative: true, meta: "Defines who we target",
-    desc: "Every campaign starts by defining exactly who you're targeting: industry, seniority, company size, and the buying signals that matter. The agent turns that into a structured search spec." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t01 }),
   N("model1", "OpenAI Chat Model", "ai.model", <IconSparkle />, C.emerald, 300, 440, "sub"),
   N("parser1", "Structured Output Parser", "ai.parser", <IconDocument />, C.indigo, 416, 440, "sub"),
   N("ratelimit", "Check Rate Limit", "api.rateLimit", <IconGauge />, C.cyan, 560, 300, "regular", { meta: "1,000 req/day" ,
-    desc: "Before anything runs, the pipeline checks it's within LinkedIn's API and usage limits, so it never pushes past what's safe." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t02 }),
   N("search", "Search LinkedIn", "linkedin.search", <IconSearch />, C.blue, 730, 300, "regular", { narrative: true, meta: "title + industry + headcount",
-    desc: "The automation searches LinkedIn against those ICP criteria and builds a live list of prospects who actually match." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t03 }),
   N("scrape", "Scrape Prospect List", "prospect.scrape", <IconDocument />, C.blue, 900, 300, "regular",
-    { desc: "Matching profiles are pulled into a structured list: name, title, company, and profile URL for every prospect found." }),
+    { desc: copy.MyntmoreFrameworkClient_s01.t04 }),
   N("normalize", "Normalize Data", "prospect.normalize", <IconFilter />, C.cyan, 1070, 300, "regular",
-    { desc: "Every field is cleaned and standardised before it's checked against the ICP." }),
+    { desc: copy.MyntmoreFrameworkClient_s01.t05 }),
   N("iffilter", "Matches ICP?", "icp.filter", <IconBranch />, C.amber, 1240, 300, "if",
-    { desc: "A check runs on every prospect against the ICP criteria before anything else happens." }),
+    { desc: copy.MyntmoreFrameworkClient_s01.t06 }),
   N("discard", "Discard Lead", "icp.discard", <IconStop />, C.grey, 1330, 470, "end"),
 
   /* ── Loop and four enrichment branches ───────────────────── */
@@ -148,12 +152,12 @@ const RAW_NODES: FNode[] = [
   /* ── Merge, score, personalize ───────────────────────────── */
   N("merge", "Merge", "merge.wait", <IconMerge />, C.grey, 2540, 405, "regular", { meta: "wait for all 4" }),
   N("leadscore", "Lead Score Agent", "ai.agent", <IconSparkle />, C.indigo, 2710, 405, "ai", { narrative: true, meta: "0 to 100",
-    desc: "Each prospect's profile, activity, company news, and mutual connections are read together and scored, so the outreach that follows is built around who they actually are, not a generic template." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t07 }),
   N("model2", "OpenAI Chat Model", "ai.model", <IconSparkle />, C.emerald, 2710, 545, "sub"),
   N("memory1", "Window Memory", "ai.memory", <IconMemory />, C.indigo, 2826, 545, "sub"),
   N("ifscore", "Score above 70?", "if.threshold", <IconBranch />, C.amber, 2960, 405, "if"),
   N("personalize", "Personalized Note Agent", "ai.agent", <IconSparkle />, C.purple, 3130, 405, "ai", { narrative: true, meta: "under 300 chars",
-    desc: "A personalized connection request note is generated for each individual prospect, based on their profile and the enrichment above, not copy-pasted across the list." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t08 }),
   N("model3", "OpenAI Chat Model", "ai.model", <IconSparkle />, C.emerald, 3130, 545, "sub"),
   N("queue", "Add to Send Queue", "sheet.append", <IconTable />, C.green, 3380, 405),
   N("archive1", "Archive Lead", "lead.archive", <IconStop />, C.grey, 3010, 640, "end"),
@@ -164,9 +168,9 @@ const RAW_NODES: FNode[] = [
   N("sort", "Sort by Score", "data.sort", <IconSort />, C.cyan, 470, 980),
   N("limit", "Limit 25 / day", "data.limit", <IconGauge />, C.cyan, 640, 980),
   N("safety", "Human Behaviour Engine", "safety.humanize", <IconShield />, C.green, 810, 980, "regular", { narrative: true, meta: "45 to 180 s jitter",
-    desc: "Every send, every delay, every pause is run through this layer so sending behaviour mimics a real human, keeping the LinkedIn account safe from bans." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t09 }),
   N("connect", "Send Connection Request", "linkedin.connect", <IconSend />, C.linkedin, 980, 980, "regular", { narrative: true,
-    desc: "The personalized note is sent as a connection request, on a schedule and pace set by the Human Behaviour Engine." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t10 }),
   N("updsent", "Update Status", "sheet.update", <IconTable />, C.green, 1150, 980),
   N("senderror", "Log Send Error", "error.log", <IconWarning />, C.red, 980, 1130, "end"),
 
@@ -174,11 +178,11 @@ const RAW_NODES: FNode[] = [
   N("sched3", "Schedule Trigger", "trigger.schedule", <IconClock />, C.yellow, 1510, 980, "trigger", { meta: "Every 6 h" }),
   N("getpending", "Get Pending Requests", "sheet.read", <IconTable />, C.green, 1680, 980),
   N("ifaccepted", "Connection Accepted?", "linkedin.checkStatus", <IconBranch />, C.amber, 1850, 980, "if",
-    { desc: "A check runs on whether the connection was actually accepted before any follow-up goes out." }),
+    { desc: copy.MyntmoreFrameworkClient_s01.t11 }),
   N("markacc", "Mark Accepted", "sheet.update", <IconCheckCircle />, C.green, 2020, 980),
   N("notify", "Notify Dashboard", "dashboard.event", <IconChart />, C.green, 2190, 980),
   N("wait", "Wait 24 h", "flow.wait", <IconHourglass />, C.linkedin, 1850, 1130, "regular", { meta: "re-check, max 14 days",
-    desc: "The workflow waits and re-checks before deciding what happens next, never firing off the next step blindly." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t12 }),
 
   /* ── Group D: follow-ups ─────────────────────────────────── */
   N("sched4", "Schedule Trigger", "trigger.schedule", <IconClock />, C.yellow, 2490, 980, "trigger", { meta: "Daily 10:00" }),
@@ -186,12 +190,12 @@ const RAW_NODES: FNode[] = [
   N("ifdays", "3 days passed?", "if.check", <IconBranch />, C.amber, 2830, 980, "if"),
   N("humanize", "Humanize Timing", "safety.humanize", <IconShield />, C.green, 3000, 980),
   N("followup1", "Send Follow-Up #1", "linkedin.followUp1", <IconClock />, C.orange, 3170, 980, "regular", { narrative: true,
-    desc: "Follow-up messages go out in a timely manner, on the same human-safe schedule, so no warm prospect gets forgotten." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t13 }),
   N("ifreplied", "Replied?", "if.check", <IconBranch />, C.amber, 3340, 980, "if"),
   N("followup2", "Send Follow-Up #2", "linkedin.followUp2", <IconClock />, C.orange, 3510, 980, "regular", { meta: "adds something new",
-    desc: "A second, later follow-up for prospects who haven't replied yet, still on the same human-safe timing." }),
+    desc: copy.MyntmoreFrameworkClient_s01.t14 }),
   N("log", "Log to Dashboard", "dashboard.log", <IconChart />, C.green, 3680, 980, "regular",
-    { desc: "Every request, reply, and acceptance is logged, so campaign and lifetime metrics stay accurate in real time." }),
+    { desc: copy.MyntmoreFrameworkClient_s01.t15 }),
   N("handoff", "Hand Off to Human", "crm.assign", <IconUser />, C.purple, 3340, 1130),
   N("slack", "Slack Alert", "slack.message", <IconSend />, C.green, 3510, 1130),
 
@@ -371,28 +375,28 @@ function connPath(c: FConn): string {
 
 interface Group { x: number; y: number; w: number; h: number; title: string; color: string; }
 const GROUPS: Group[] = [
-  { x: 80, y: 190, w: 1300, h: 400, title: "1 · Prospect discovery", color: "#B8860B" },
-  { x: 1600, y: 0, w: 900, h: 890, title: "2 · Enrichment, four parallel branches per prospect", color: "#16A34A" },
-  { x: 2500, y: 330, w: 1000, h: 380, title: "3 · Score and personalize", color: "#6366f1" },
-  { x: 70, y: 890, w: 1330, h: 300, title: "4 · Send connection requests", color: "#B8860B" },
-  { x: 1350, y: 866, w: 1040, h: 340, title: "5 · Check the connections", color: "#B8860B" },
-  { x: 2430, y: 872, w: 1440, h: 336, title: "6 · Follow-ups", color: "#B8860B" },
-  { x: 80, y: 1230, w: 900, h: 320, title: "7 · Conversation agent", color: "#B8860B" },
+  { x: 80, y: 190, w: 1300, h: 400, title: copy.MyntmoreFrameworkClient_s01.t16, color: "#B8860B" },
+  { x: 1600, y: 0, w: 900, h: 890, title: copy.MyntmoreFrameworkClient_s01.t17, color: "#16A34A" },
+  { x: 2500, y: 330, w: 1000, h: 380, title: copy.MyntmoreFrameworkClient_s01.t18, color: "#6366f1" },
+  { x: 70, y: 890, w: 1330, h: 300, title: copy.MyntmoreFrameworkClient_s01.t19, color: "#B8860B" },
+  { x: 1350, y: 866, w: 1040, h: 340, title: copy.MyntmoreFrameworkClient_s01.t20, color: "#B8860B" },
+  { x: 2430, y: 872, w: 1440, h: 336, title: copy.MyntmoreFrameworkClient_s01.t21, color: "#B8860B" },
+  { x: 80, y: 1230, w: 900, h: 320, title: copy.MyntmoreFrameworkClient_s01.t22, color: "#B8860B" },
 ];
 
 interface Sticky { x: number; y: number; w: number; h?: number; title?: string; text: string; color: "green" | "yellow" | "blue" | "grey"; rot?: number; }
 const STICKIES: Sticky[] = [
-  { x: 80, y: 20, w: 420, color: "grey", title: "LinkedIn Lead Automation Flow", text: "Seven linked workflows: discover, enrich, score, connect, verify, follow up, converse. Every send passes through the Human Behaviour Engine. Google Sheets is the shared state between them." },
-  { x: 1660, y: 40, w: 250, color: "green", title: "Research company website", text: "Homepage, about, pricing. Summarized to 3 lines." },
-  { x: 1940, y: 40, w: 250, color: "green", title: "Research recent posts", text: "Last 5 posts, what they care about right now." },
-  { x: 2220, y: 40, w: 250, color: "green", title: "Research company news", text: "Funding, hiring, launches in the last 90 days." },
-  { x: 2560, y: 40, w: 300, rot: 1.5, color: "grey", text: "TODO: delete the manual test branch before the client demo. Also the old v2 scorer is still here." },
-  { x: 1120, y: 1440, w: 300, rot: -1, color: "yellow", text: "Any failed send anywhere lands in #alerts within a minute." },
-  { x: 2560, y: 724, w: 320, rot: -0.6, color: "blue", text: "Each branch writes back to the lead row on its own. If one source is empty, the others still land." },
-  { x: 2960, y: 250, w: 260, rot: -2, color: "yellow", text: "Threshold is tuned per client. Below 70 goes to archive, not the bin, and is re-scored monthly." },
-  { x: 130, y: 1130, w: 420, rot: 1.2, color: "yellow", text: "Never more than 25 requests a day per seat, with 45 to 180 second gaps between sends." },
-  { x: 2020, y: 1120, w: 320, rot: -1.4, color: "blue", text: "We wait for a real acceptance before any follow-up. Pending requests are re-checked every 6 hours, for up to 14 days." },
-  { x: 100, y: 1258, w: 600, rot: 0.4, color: "blue", text: "Replies are drafted by the agent and approved by a human before anything goes back out." },
+  { x: 80, y: 20, w: 420, color: "grey", title: copy.MyntmoreFrameworkClient_s01.t23, text: copy.MyntmoreFrameworkClient_s01.t24 },
+  { x: 1660, y: 40, w: 250, color: "green", title: copy.MyntmoreFrameworkClient_s01.t25, text: copy.MyntmoreFrameworkClient_s01.t26 },
+  { x: 1940, y: 40, w: 250, color: "green", title: copy.MyntmoreFrameworkClient_s01.t27, text: copy.MyntmoreFrameworkClient_s01.t28 },
+  { x: 2220, y: 40, w: 250, color: "green", title: copy.MyntmoreFrameworkClient_s01.t29, text: copy.MyntmoreFrameworkClient_s01.t30 },
+  { x: 2560, y: 40, w: 300, rot: 1.5, color: "grey", text: copy.MyntmoreFrameworkClient_s01.t31 },
+  { x: 1120, y: 1440, w: 300, rot: -1, color: "yellow", text: copy.MyntmoreFrameworkClient_s01.t32 },
+  { x: 2560, y: 724, w: 320, rot: -0.6, color: "blue", text: copy.MyntmoreFrameworkClient_s01.t33 },
+  { x: 2960, y: 250, w: 260, rot: -2, color: "yellow", text: copy.MyntmoreFrameworkClient_s01.t34 },
+  { x: 130, y: 1130, w: 420, rot: 1.2, color: "yellow", text: copy.MyntmoreFrameworkClient_s01.t35 },
+  { x: 2020, y: 1120, w: 320, rot: -1.4, color: "blue", text: copy.MyntmoreFrameworkClient_s01.t36 },
+  { x: 100, y: 1258, w: 600, rot: 0.4, color: "blue", text: copy.MyntmoreFrameworkClient_s01.t37 },
 ];
 
 const STICKY_STYLE: Record<Sticky["color"], { bg: string; border: string; title: string; text: string }> = {
@@ -613,20 +617,14 @@ export default function MyntmoreFrameworkClient() {
         <div aria-hidden="true" style={{ position: "absolute", top: "-100px", right: "-160px", width: "550px", height: "550px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,183,49,0.18) 0%, rgba(255,160,0,0.07) 40%, transparent 68%)", filter: "blur(55px)", pointerEvents: "none" }} />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <Breadcrumbs items={[{ label: "The Myntmore Framework", href: "/myntmore-framework" }]} />
+          <Breadcrumbs items={[{ label: copy.MyntmoreFrameworkClient_s01.t38, href: "/myntmore-framework" }]} />
 
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6" style={{ backgroundColor: "rgba(124,58,237,0.08)", color: "#7C3AED", border: "1px solid rgba(124,58,237,0.2)" }}>
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#7C3AED" }} />
-            The Myntmore Framework
-          </span>
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#7C3AED" }} />{copy.MyntmoreFrameworkClient_s01.t39}</span>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>
-            The engine behind every campaign we run
-          </h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight" style={{ color: "#0a0a0a" }}>{copy.MyntmoreFrameworkClient_s01.t40}</h1>
 
-          <p className="text-lg sm:text-xl max-w-2xl leading-relaxed" style={{ color: "#52525B" }}>
-            Seven linked workflows, {NODES.length} nodes. We find your ICP, research every prospect from four angles at once, score them, write a note for each one, send through a human-behaviour engine that keeps the account safe, then follow up right on schedule.
-          </p>
+          <p className="text-lg sm:text-xl max-w-2xl leading-relaxed" style={{ color: "#52525B" }}>{copy.MyntmoreFrameworkClient_s01.t41}{NODES.length}{copy.MyntmoreFrameworkClient_s01.t42}</p>
         </div>
       </section>
 
@@ -639,8 +637,8 @@ export default function MyntmoreFrameworkClient() {
               <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FF5F57" }} />
               <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FEBC2E" }} />
               <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#28C840" }} />
-              <span className="ml-2 text-xs font-mono font-bold" style={{ color: "#0A0A0A" }}>myntmore-outbound-engine.workflow</span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded" style={{ backgroundColor: "#FFFFFF", color: "#52525B", border: "1px solid #E8E2D9" }}>v3.0.0</span>
+              <span className="ml-2 text-xs font-mono font-bold" style={{ color: "#0A0A0A" }}>{copy.MyntmoreFrameworkClient_s01.t43}</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded" style={{ backgroundColor: "#FFFFFF", color: "#52525B", border: "1px solid #E8E2D9" }}>{copy.MyntmoreFrameworkClient_s01.t44}</span>
               <div className="hidden md:flex items-center gap-1 ml-4 p-0.5 rounded-md" style={{ backgroundColor: "#F8F6F2", border: "1px solid #E8E2D9" }}>
                 {["Editor", "Executions", "Evaluations"].map((t, i) => (
                   <span key={t} className="text-[11px] font-semibold px-3 py-1 rounded" style={{ backgroundColor: i === 0 ? "#F5B731" : "transparent", color: i === 0 ? "#0A0A0A" : "#52525B" }}>{t}</span>
@@ -732,13 +730,13 @@ export default function MyntmoreFrameworkClient() {
                   <g className="font-mono" style={{ fontSize: labelPx, fontWeight: 700 }}>
                     {NODES.filter((n) => n.shape === "if").map((n) => (
                       <g key={n.id}>
-                        <text x={n.x + n.w + 8} y={n.y + n.h * 0.28 - labelPx * 0.5} fill="#166534">true</text>
-                        <text x={n.x + n.w + 8} y={n.y + n.h * 0.72 + labelPx * 1.1} fill="#B91C1C">false</text>
+                        <text x={n.x + n.w + 8} y={n.y + n.h * 0.28 - labelPx * 0.5} fill="#166534">{copy.MyntmoreFrameworkClient_s01.t45}</text>
+                        <text x={n.x + n.w + 8} y={n.y + n.h * 0.72 + labelPx * 1.1} fill="#B91C1C">{copy.MyntmoreFrameworkClient_s01.t46}</text>
                       </g>
                     ))}
-                    <text x={NODE_MAP.connect.x + NODE_MAP.connect.w / 2 + 8} y={NODE_MAP.connect.y + NODE_MAP.connect.h + 40} fill="#B91C1C">error</text>
-                    <text x={2410} y={868} fill="#6D28D9">next batch</text>
-                    <text x={1770} y={1306} fill="#6D28D9">re-check</text>
+                    <text x={NODE_MAP.connect.x + NODE_MAP.connect.w / 2 + 8} y={NODE_MAP.connect.y + NODE_MAP.connect.h + 40} fill="#B91C1C">{copy.MyntmoreFrameworkClient_s01.t47}</text>
+                    <text x={2410} y={868} fill="#6D28D9">{copy.MyntmoreFrameworkClient_s01.t48}</text>
+                    <text x={1770} y={1306} fill="#6D28D9">{copy.MyntmoreFrameworkClient_s01.t49}</text>
                   </g>
                 </svg>
 
@@ -793,7 +791,7 @@ export default function MyntmoreFrameworkClient() {
                           </>
                         )}
                         {isSub && <span aria-hidden="true" className="absolute w-2 h-2 rounded-full" style={{ left: "50%", top: -5, marginLeft: -4, backgroundColor: "#8B5CF6" }} />}
-                        {n.disabled && <span aria-hidden="true" className="absolute -top-2 -left-2 text-[8px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded" style={{ backgroundColor: "#E8E2D9", color: "#3D3D3D" }}>off</span>}
+                        {n.disabled && <span aria-hidden="true" className="absolute -top-2 -left-2 text-[8px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded" style={{ backgroundColor: "#E8E2D9", color: "#3D3D3D" }}>{copy.MyntmoreFrameworkClient_s01.t50}</span>}
                         {/* success badge */}
                         {isDone && (
                           <span aria-hidden="true" className="absolute -top-2 -right-2 w-4 h-4 rounded-full flex items-center justify-center" style={{ backgroundColor: "#16A34A" }}>
@@ -836,7 +834,7 @@ export default function MyntmoreFrameworkClient() {
                 >
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
                   {running ? `Running ${runStep + 1} / ${EXEC_ORDER.length}` : runStep === EXEC_ORDER.length ? "Completed" : "Execute workflow"}
-                  <span className="hidden sm:inline text-[10px] font-semibold opacity-70">from Schedule Trigger</span>
+                  <span className="hidden sm:inline text-[10px] font-semibold opacity-70">{copy.MyntmoreFrameworkClient_s01.t51}</span>
                 </button>
               </div>
 
@@ -854,7 +852,7 @@ export default function MyntmoreFrameworkClient() {
 
             {/* Bottom bar */}
             <div className="flex items-center justify-between px-5 py-2.5" style={{ backgroundColor: "#FEF9EC", borderTop: "1px solid #E8E2D9" }}>
-              <span className="text-xs font-mono" style={{ color: "#52525B" }}>{NODES.length} nodes &middot; {CONNECTIONS.length} connections &middot; 7 workflows</span>
+              <span className="text-xs font-mono" style={{ color: "#52525B" }}>{NODES.length}{copy.MyntmoreFrameworkClient_s01.t52}{CONNECTIONS.length}{copy.MyntmoreFrameworkClient_s01.t53}</span>
               <div className="flex items-center gap-1.5">
                 <button type="button" onClick={() => zoomButton(1 / 1.25)} aria-label="Zoom out" className="w-11 h-11 sm:w-7 sm:h-7 rounded-md flex items-center justify-center text-sm font-bold transition-colors cursor-pointer" style={{ backgroundColor: "#FFFFFF", color: "#0A0A0A", border: "1px solid #E8E2D9" }}>&minus;</button>
                 <button type="button" onClick={handleFitClick} aria-label="Fit to view" className="min-h-[44px] text-xs font-mono px-2 hover:underline cursor-pointer sm:min-h-0" style={{ color: "#52525B" }}>{Math.round(view.zoom * 100)}%</button>
@@ -862,7 +860,7 @@ export default function MyntmoreFrameworkClient() {
               </div>
             </div>
           </div>
-          <p className="text-center text-sm mt-4" style={{ color: "#71675E" }}>Scroll or pinch to zoom &middot; drag to pan &middot; tap a node to see what it does &middot; press Execute to watch a run</p>
+          <p className="text-center text-sm mt-4" style={{ color: "#71675E" }}>{copy.MyntmoreFrameworkClient_s01.t54}</p>
         </div>
       </section>
 
@@ -870,11 +868,9 @@ export default function MyntmoreFrameworkClient() {
       <section className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9", backgroundColor: "#F8F6F2" }}>
         <div className="max-w-5xl mx-auto">
           <div className="mb-10">
-            <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4" style={{ backgroundColor: "rgba(124,58,237,0.08)", color: "#7C3AED", border: "1px solid rgba(124,58,237,0.2)" }}>
-              How Every Step Works
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>What each key node actually does</h2>
-            <p className="text-base mt-3 max-w-2xl" style={{ color: "#52525B" }}>Tap a card to jump to that node on the canvas.</p>
+            <span className="inline-flex text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4" style={{ backgroundColor: "rgba(124,58,237,0.08)", color: "#7C3AED", border: "1px solid rgba(124,58,237,0.2)" }}>{copy.MyntmoreFrameworkClient_s01.t55}</span>
+            <h2 className="text-3xl sm:text-4xl font-black" style={{ color: "#0a0a0a" }}>{copy.MyntmoreFrameworkClient_s02.t01}</h2>
+            <p className="text-base mt-3 max-w-2xl" style={{ color: "#52525B" }}>{copy.MyntmoreFrameworkClient_s02.t02}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {NARRATIVE_NODES.map((n) => (
@@ -910,16 +906,12 @@ export default function MyntmoreFrameworkClient() {
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section className="py-20 px-4 border-t text-center" style={{ borderColor: "#E8E2D9", backgroundColor: "#ffffff" }}>
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-black mb-4" style={{ color: "#0a0a0a" }}>See it run on your own pipeline</h2>
-          <p className="text-base mb-8" style={{ color: "#52525B" }}>Book a call and we&apos;ll walk you through the framework live, against your own ICP.</p>
+          <h2 className="text-3xl sm:text-4xl font-black mb-4" style={{ color: "#0a0a0a" }}>{copy.MyntmoreFrameworkClient_s03.t01}</h2>
+          <p className="text-base mb-8" style={{ color: "#52525B" }}>{copy.MyntmoreFrameworkClient_s03.t02}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
-              Book a Call
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            <a href="/book-a-call" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">{copy.MyntmoreFrameworkClient_s03.t03}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <Link href="/services/linkedin-outreach" className="btn-ghost px-8 py-4 text-base font-bold">
-              See the Full Service
-            </Link>
+            <Link href="/services/linkedin-outreach" className="btn-ghost px-8 py-4 text-base font-bold">{copy.MyntmoreFrameworkClient_s03.t04}</Link>
           </div>
         </div>
       </section>

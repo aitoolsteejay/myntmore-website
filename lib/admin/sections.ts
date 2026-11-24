@@ -22,7 +22,7 @@ const matches = (key: string, pats: string[]) => pats.some((p) => (p.endsWith("*
 const SEO: Rule = {
   title: "Google and social sharing",
   help: "How this page appears in Google results and when the link is shared on LinkedIn or WhatsApp. Not shown on the page itself.",
-  match: ["metaTitle*", "metaDescription", "keywords", "ogTitle*", "ogDescription", "breadcrumbLabel", "schema*", "structuredData", "howToName", "datePublished", "dateModified", "indexAliases", "employmentType", "salary*", "datePosted", "validThrough"],
+  match: ["metaTitle*", "metaDescription", "keywords", "ogTitle*", "ogDescription", "breadcrumbLabel", "schema*", "structuredData", "howToName", "datePublished", "dateModified", "indexAliases", "employmentType", "salary*", "datePosted", "validThrough", "canonicalPath*"],
 };
 const DESIGN: Rule = {
   title: "Design options",
@@ -158,6 +158,20 @@ const TYPE_SECTIONS: Record<string, Rule[]> = {
     { title: "Plays", match: ["plays*"] },
     { title: "Rules and timing", match: ["rules*", "timing*"] },
     { title: "Links", match: ["industryLinks", "cities"] },
+  ],
+  calendarPages: [
+    { title: "Booking details", match: ["name", "client", "embedUrl", "duration"] },
+    { title: "Page header", match: ["badge", "heading", "description"] },
+  ],
+  teamCards: [
+    { title: "Profile details", match: ["name", "fullName", "role", "jobTitle", "photoSrc", "photoAlt", "vCardHref"] },
+    { title: "Contact links", match: ["whatsappUrl", "linkedinUrl", "instagramUrl", "newsletterUrl", "phone", "email"] },
+    { title: "Intro and actions", match: ["intro", "ctaHref", "ctaLabel", "includeSignature", "includeQuiz"] },
+  ],
+  siteSettings: [
+    { title: "Navbar and Announcement", match: ["navbarCtaLabel", "navbarCtaHref", "announcementEnabled", "announcementText", "announcementHref"] },
+    { title: "Company contact", match: ["companyEmail", "copyrightNotice"] },
+    { title: "Office address", match: ["officeAddressLine1", "officeAddressLine2", "officeCity", "officeMapsUrl"] },
   ],
 };
 

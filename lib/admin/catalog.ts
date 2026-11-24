@@ -40,6 +40,24 @@ export const CATALOG: Record<string, CatalogEntry> = {
   pageFaqs: { title: "FAQs on pages", description: "The questions and answers at the bottom of each page", group: "faqs", url: (_s, t) => fromTitle(t) },
   homepageFaqs: { title: "Homepage FAQs", description: "The questions and answers on the homepage", group: "faqs", url: () => "/" },
   pageSeo: { title: "Google titles and descriptions", description: "How other pages appear in Google search results", group: "faqs", url: (_s, t) => (t.startsWith("/") ? t : null) },
+  calendarPages: {
+    title: "Calendar booking pages",
+    description: "1-on-1 booking pages for Tejas and Enwil (Calendly and Zoho)",
+    group: "pages",
+    url: (slug) => `/calendar/${slug}`,
+  },
+  teamCards: {
+    title: "Team visiting cards",
+    description: "Digital visiting cards for founders and team (vCard, links, socials)",
+    group: "main",
+    url: (slug) => `/${slug}`,
+  },
+  siteSettings: {
+    title: "Global site settings & navbar",
+    description: "Navbar CTA button, announcement banner, contact info, and footer address",
+    group: "main",
+    url: () => "/",
+  },
 };
 
 /** Long-form case studies (one file each) share an entry: "caseLong…" keys. */
@@ -63,6 +81,16 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
       title: label.replace(/^Tool:\s*/i, ""),
       description: "Interactive tool",
       group: "pages",
+      url: route ? () => route : undefined,
+    };
+  }
+  const regEntry = (pageCopyRegistry as { key: string; title: string; group?: string; route?: string }[]).find((r) => r.key === key);
+  if (regEntry) {
+    const route = regEntry.route;
+    return {
+      title: regEntry.title,
+      description: label,
+      group: (regEntry.group as CatalogEntry["group"]) || "pages",
       url: route ? () => route : undefined,
     };
   }

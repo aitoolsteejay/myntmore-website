@@ -51,6 +51,12 @@ import {
   toolPostingRhythmBuilderSchema,
   toolProspectResearchSchema,
   toolRoiCalculatorSchema,
+  myntmoreFrameworkSchema,
+  valuePropSchema,
+  whoThisIsForSchema,
+  oneOnOneConsultationSchema,
+  marketingAutomationSchema,
+  cphiSchema,
 } from "./content/page-copy/schemas";
 import industryKeys from "./lib/industry-keys.json";
 
@@ -1445,6 +1451,100 @@ export default config({
         ogDescription: fields.text({ label: "Share Description", multiline: true, validation: { isRequired: true } }),
       },
     }),
+    calendarPages: collection({
+      label: "Calendar booking pages",
+      path: "content/calendar-pages/*",
+      format: "json",
+      slugField: "name",
+      columns: ["badge", "client"],
+      schema: {
+        name: fields.slug({
+          name: {
+            label: "Page name / address",
+            description: "The page lives at /calendar/<address>, e.g. cold-emailing or enwil-li",
+            validation: { isRequired: true },
+          },
+        }),
+        client: fields.select({
+          label: "Host / Calendar engine",
+          options: [
+            { label: "Tejas (Calendly)", value: "tejas" },
+            { label: "Enwil (Zoho)", value: "enwil" },
+          ],
+          defaultValue: "tejas",
+        }),
+        embedUrl: fields.text({
+          label: "Calendar embed URL (Calendly or Zoho Bookings portal embed)",
+          validation: { isRequired: true },
+        }),
+        badge: fields.text({
+          label: "Header badge",
+          validation: { isRequired: true },
+        }),
+        heading: fields.text({
+          label: "Page heading (H1)",
+          validation: { isRequired: true },
+        }),
+        description: fields.text({
+          label: "Intro description",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        duration: fields.text({
+          label: "Meeting duration (e.g. 30 Mins, 25 Mins)",
+          defaultValue: "30 Mins",
+        }),
+        canonicalPath: fields.text({
+          label: "Canonical Path (e.g. /calendar/cold-emailing)",
+          validation: { isRequired: true },
+        }),
+        metaTitle: fields.text({
+          label: "Meta title (Google & sharing)",
+          validation: { isRequired: true },
+        }),
+        metaDescription: fields.text({
+          label: "Meta description",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+      },
+    }),
+    teamCards: collection({
+      label: "Team visiting cards",
+      path: "content/team-cards/*",
+      format: "json",
+      slugField: "name",
+      columns: ["fullName", "role"],
+      schema: {
+        name: fields.slug({
+          name: {
+            label: "Card slug / URL path",
+            description: "The card lives at /<slug>, e.g. /tejasjhaveri, /enwilfernandes",
+            validation: { isRequired: true },
+          },
+        }),
+        fullName: fields.text({ label: "Full Name", validation: { isRequired: true } }),
+        role: fields.text({ label: "Headline / Role", validation: { isRequired: true } }),
+        jobTitle: fields.text({ label: "Schema Job Title", validation: { isRequired: true } }),
+        photoSrc: fields.text({ label: "Photo Image Path (e.g. /tejas-2.png)", validation: { isRequired: true } }),
+        photoAlt: fields.text({ label: "Photo Alt Text", validation: { isRequired: true } }),
+        vCardHref: fields.text({ label: "vCard Download API Path", validation: { isRequired: true } }),
+        whatsappUrl: fields.text({ label: "WhatsApp Direct URL", validation: { isRequired: true } }),
+        linkedinUrl: fields.text({ label: "LinkedIn Profile URL", validation: { isRequired: true } }),
+        instagramUrl: fields.text({ label: "Instagram Profile URL" }),
+        newsletterUrl: fields.text({ label: "Newsletter Link", defaultValue: "/newsletter-subscribe" }),
+        phone: fields.text({ label: "Phone Number (optional)" }),
+        email: fields.text({ label: "Email Address (optional)" }),
+        intro: fields.text({ label: "Intro text (optional)" }),
+        ctaHref: fields.text({ label: "CTA Button URL (optional)" }),
+        ctaLabel: fields.text({ label: "CTA Button Label (optional)" }),
+        includeSignature: fields.checkbox({ label: "Show Signature Mark", defaultValue: false }),
+        includeQuiz: fields.checkbox({ label: "Include Outbound Quiz Widget", defaultValue: false }),
+        metaTitle: fields.text({ label: "Page Title (SEO)", validation: { isRequired: true } }),
+        ogTitle: fields.text({ label: "OpenGraph Title" }),
+        metaDescription: fields.text({ label: "Meta Description", multiline: true, validation: { isRequired: true } }),
+      },
+    }),
   },
   // The three bespoke service pages keep their own layouts, so each has its own page-copy file
   // (the search and share metadata for all eight services is in the Service pages collection).
@@ -1770,6 +1870,60 @@ export default config({
       path: "content/page-copy/toolHub",
       format: "json",
       schema: toolHubSchema,
+    }),
+    siteSettings: singleton({
+      label: "Global site settings & navbar",
+      path: "content/site-settings/settings",
+      format: "json",
+      schema: {
+        navbarCtaLabel: fields.text({ label: "Navbar CTA button text", defaultValue: "Book a call" }),
+        navbarCtaHref: fields.text({ label: "Navbar CTA button link", defaultValue: "/book-a-call" }),
+        announcementEnabled: fields.checkbox({ label: "Show announcement banner at top of site", defaultValue: false }),
+        announcementText: fields.text({ label: "Announcement banner text", defaultValue: "" }),
+        announcementHref: fields.text({ label: "Announcement banner link", defaultValue: "" }),
+        companyEmail: fields.text({ label: "Primary contact email", defaultValue: "growth@myntmore.com" }),
+        officeAddressLine1: fields.text({ label: "Office address line 1", defaultValue: "WeWork Enam Sambhav BKC" }),
+        officeAddressLine2: fields.text({ label: "Office address line 2", defaultValue: "C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East" }),
+        officeCity: fields.text({ label: "Office city & postal code", defaultValue: "Mumbai, Maharashtra 400051" }),
+        officeMapsUrl: fields.text({ label: "Google Maps link", defaultValue: "https://www.google.com/maps/search/?api=1&query=WeWork%20Enam%20Sambhav%2C%20C%20-%2020%2C%20G%20Block%20Rd%2C%20G%20Block%20BKC%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051" }),
+        copyrightNotice: fields.text({ label: "Footer copyright line", defaultValue: "© 2026 Myntmore. Built in Mumbai." }),
+      },
+    }),
+    myntmoreFramework: singleton({
+      label: "Framework: The Myntmore Framework",
+      path: "content/page-copy/myntmoreFramework",
+      format: "json",
+      schema: myntmoreFrameworkSchema,
+    }),
+    valueProp: singleton({
+      label: "Page: Value Proposition",
+      path: "content/page-copy/valueProp",
+      format: "json",
+      schema: valuePropSchema,
+    }),
+    whoThisIsFor: singleton({
+      label: "Page: Who This Is For",
+      path: "content/page-copy/whoThisIsFor",
+      format: "json",
+      schema: whoThisIsForSchema,
+    }),
+    oneOnOneConsultation: singleton({
+      label: "Page: 1-on-1 Consultation",
+      path: "content/page-copy/oneOnOneConsultation",
+      format: "json",
+      schema: oneOnOneConsultationSchema,
+    }),
+    marketingAutomation: singleton({
+      label: "Service copy: Marketing Automation",
+      path: "content/page-copy/marketingAutomation",
+      format: "json",
+      schema: marketingAutomationSchema,
+    }),
+    cphi: singleton({
+      label: "Page: CPHI Outbound Showcase",
+      path: "content/page-copy/cphi",
+      format: "json",
+      schema: cphiSchema,
     }),
   },
 });
