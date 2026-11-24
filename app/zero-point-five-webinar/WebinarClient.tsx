@@ -8,9 +8,9 @@ import InnerLayout from "../components/InnerLayout";
 // Zoho Forms endpoint. The input `name` attributes below must match Zoho's field names exactly,
 // otherwise the submitted record comes through with empty values.
 const ZOHO_ACTION =
-  "https://forms.zohopublic.com/flintstop/form/ZeroPointFiveWebinar/formperma/N7fZCAkLR9HZ1JRbgI2gsDkYRdkL8LwfChJNNBBKbJk/htmlRecords/submit";
+  "https://forms.zohopublic.com/flintstop/form/ZeroPointFiveWebinar28thNovember2026/formperma/r456R8DogVFkZhFyaXUSjqUFBrdIeSLA4kZnqj6Is-U/htmlRecords/submit";
 
-const ROLES = ["New Startup", "Traditional Business", "Service Provider", "Aspiring Founder", "Investor", "Student"];
+const ROLES = ["New Startup", "Traditional Business", "Service Provider"];
 const INDUSTRIES = [
   "D2C/Consumer Brand",
   "Food & Beverage/Cafe",
@@ -27,8 +27,8 @@ const INDUSTRIES = [
   "Logistics",
   "Agriculture",
 ];
-const SIZES = ["1-10", "11-50", "51-100", "101-200", "201-500", "500+"];
-const CHANNELS = ["Cold Emailing", "Cold Calling", "LinkedIn Outreach", "Other (Please Specify)", "N/A"];
+const SIZES = ["0-10", "11-50", "51-100", "101-200", "201-500", "500+"];
+const CHANNELS = ["Cold Emailing", "Cold Calling", "LinkedIn Outreach"];
 
 const TAKEAWAYS = [
   "The right outbound channels for your stage",
@@ -93,8 +93,8 @@ export default function WebinarClient({ registered }: { registered: boolean }) {
     const next: Record<string, string> = {};
     const req = "This field is required.";
 
-    if (!fd.get("MultipleChoice")) next.MultipleChoice = req;
-    if (!fd.get("MultipleChoice1")) next.MultipleChoice1 = req;
+    if (!fd.get("Radio")) next.Radio = req;
+    if (!fd.get("Radio1")) next.Radio1 = req;
     if (!get("Name_First") || !get("Name_Last")) next.Name = "Enter your first and last name.";
     if (!get("PhoneNumber_countrycode")) next.Phone = req;
     if (!get("Email")) next.Email = req;
@@ -103,10 +103,9 @@ export default function WebinarClient({ registered }: { registered: boolean }) {
     else if (!/linkedin\.com\//i.test(get("Website"))) next.Website = "Enter your LinkedIn profile URL (linkedin.com/in/...).";
     if (!get("SingleLine")) next.SingleLine = req;
     if (!get("SingleLine1")) next.SingleLine1 = req;
-    for (const k of ["Dropdown1", "Dropdown2", "Dropdown"]) if (get(k) === "-Select-") next[k] = req;
-    if (!fd.get("Radio")) next.Radio = req;
-    if (fd.getAll("MultipleChoice2").length === 0) next.MultipleChoice2 = "Select at least one (choose N/A if none).";
-    if (!get("SingleLine3")) next.SingleLine3 = req;
+    for (const k of ["Dropdown", "Dropdown1", "Dropdown3", "Dropdown2"]) if (get(k) === "-Select-") next[k] = req;
+    if (!fd.get("Radio2")) next.Radio2 = req;
+    if (!get("SingleLine2")) next.SingleLine2 = req;
 
     setErrors(next);
     if (Object.keys(next).length > 0) {
@@ -223,12 +222,12 @@ export default function WebinarClient({ registered }: { registered: boolean }) {
                     <p className="text-sm mt-1" style={{ color: "#71675E" }}>All fields are required.</p>
                   </div>
 
-                  <Field label="Will you join the masterclass?" error={errors.MultipleChoice}>
-                    <RadioGroup name="MultipleChoice" options={["Yes", "No"]} label="Will you join the masterclass?" />
+                  <Field label="Will you join the masterclass?" error={errors.Radio}>
+                    <RadioGroup name="Radio" options={["Yes", "No"]} label="Will you join the masterclass?" />
                   </Field>
 
-                  <Field label="Are you already part of Zero Point Five Community?" error={errors.MultipleChoice1}>
-                    <RadioGroup name="MultipleChoice1" options={["Yes", "No"]} label="Already part of Zero Point Five Community?" />
+                  <Field label="Are you already part of Zero Point Five Community?" error={errors.Radio1}>
+                    <RadioGroup name="Radio1" options={["Yes", "No"]} label="Already part of Zero Point Five Community?" />
                   </Field>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -257,54 +256,46 @@ export default function WebinarClient({ registered }: { registered: boolean }) {
                     <Field label="Company name" htmlFor="SingleLine" error={errors.SingleLine}>
                       <input id="SingleLine" type="text" name="SingleLine" maxLength={255} autoComplete="organization" className={inputCls} style={borderStyle} />
                     </Field>
-                    <Field label="Designation" htmlFor="SingleLine1" error={errors.SingleLine1}>
+                    <Field label="Your designation" htmlFor="SingleLine1" error={errors.SingleLine1}>
                       <input id="SingleLine1" type="text" name="SingleLine1" maxLength={255} autoComplete="organization-title" className={inputCls} style={borderStyle} />
                     </Field>
                   </div>
 
-                  <Field label="Which best describes you?" htmlFor="Dropdown1" error={errors.Dropdown1}>
-                    <select id="Dropdown1" name="Dropdown1" defaultValue="-Select-" className={inputCls} style={borderStyle}>
+                  <Field label="Which best describes you?" htmlFor="Dropdown" error={errors.Dropdown}>
+                    <select id="Dropdown" name="Dropdown" defaultValue="-Select-" className={inputCls} style={borderStyle}>
                       <option value="-Select-">Select</option>
                       {ROLES.map((o) => <option key={o} value={o}>{o}</option>)}
                     </select>
                   </Field>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Field label="Industry" htmlFor="Dropdown2" error={errors.Dropdown2}>
-                      <select id="Dropdown2" name="Dropdown2" defaultValue="-Select-" className={inputCls} style={borderStyle}>
-                        <option value="-Select-">Select</option>
-                        {INDUSTRIES.map((o) => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                    <Field label="Company size (employees)" htmlFor="Dropdown" error={errors.Dropdown}>
-                      <select id="Dropdown" name="Dropdown" defaultValue="-Select-" className={inputCls} style={borderStyle}>
-                        <option value="-Select-">Select</option>
-                        {SIZES.map((o) => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    </Field>
-                  </div>
-
-                  <Field label="Have you done outbound outreach before?" error={errors.Radio}>
-                    <RadioGroup name="Radio" options={["Yes", "No"]} label="Done outbound outreach before?" />
+                  <Field label="Industry" htmlFor="Dropdown1" error={errors.Dropdown1}>
+                    <select id="Dropdown1" name="Dropdown1" defaultValue="-Select-" className={inputCls} style={borderStyle}>
+                      <option value="-Select-">Select</option>
+                      {INDUSTRIES.map((o) => <option key={o} value={o}>{o}</option>)}
+                    </select>
                   </Field>
 
-                  <Field label="If yes, which channels have you used?" error={errors.MultipleChoice2}>
-                    <div className="flex flex-wrap gap-3" role="group" aria-label="Channels used">
-                      {CHANNELS.map((o) => (
-                        <label
-                          key={o}
-                          className="inline-flex items-center gap-2 rounded-xl border bg-white px-4 py-2.5 text-sm font-medium cursor-pointer has-[:checked]:border-[#F5B731] has-[:checked]:bg-[#FEF9EC]"
-                          style={{ ...borderStyle, color: "#0A0A0A" }}
-                        >
-                          <input type="checkbox" name="MultipleChoice2" value={o} className="accent-[#D97706]" />
-                          <span style={{ color: "#0A0A0A" }}>{o}</span>
-                        </label>
-                      ))}
-                    </div>
+                  <Field label="How many employees does your company have?" htmlFor="Dropdown3" error={errors.Dropdown3}>
+                    <select id="Dropdown3" name="Dropdown3" defaultValue="-Select-" className={inputCls} style={borderStyle}>
+                      <option value="-Select-">Select</option>
+                      {SIZES.map((o) => <option key={o} value={o}>{o}</option>)}
+                    </select>
                   </Field>
 
-                  <Field label="What's one thing you'd like answered in this session?" htmlFor="SingleLine3" error={errors.SingleLine3}>
-                    <input id="SingleLine3" type="text" name="SingleLine3" maxLength={255} className={inputCls} style={borderStyle} />
+                  <Field label="Have you done outbound outreach before?" error={errors.Radio2}>
+                    <RadioGroup name="Radio2" options={["Yes", "No"]} label="Done outbound outreach before?" />
+                  </Field>
+
+                  <Field label="If yes, which channels have you used?" htmlFor="Dropdown2" error={errors.Dropdown2}>
+                    <select id="Dropdown2" name="Dropdown2" defaultValue="-Select-" className={inputCls} style={borderStyle}>
+                      <option value="-Select-">Select</option>
+                      {CHANNELS.map((o) => <option key={o} value={o}>{o}</option>)}
+                    </select>
+                    <p className="mt-1.5 text-xs" style={{ color: "#71675E" }}>If you answered No, pick the channel you are most curious about.</p>
+                  </Field>
+
+                  <Field label="What's one thing you'd like answered in this session?" htmlFor="SingleLine2" error={errors.SingleLine2}>
+                    <input id="SingleLine2" type="text" name="SingleLine2" maxLength={255} className={inputCls} style={borderStyle} />
                   </Field>
 
                   <button
