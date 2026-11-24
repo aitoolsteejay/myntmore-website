@@ -128,6 +128,12 @@ const TYPE_SECTIONS: Record<string, Rule[]> = {
     { title: "Description", match: ["cardDescription", "description", "topics"] },
     { title: "Registration and pop-up", match: ["registrationUrl", "recordingUrl", "showPopup"] },
   ],
+  resourceGuides: [
+    { title: "Top of the guide", match: ["title", "tag", "accent", "readTime", "excerpt", "intro"] },
+    { title: "The guide itself", match: ["sections"] },
+    { title: "Questions and answers", match: ["faqs"] },
+    { title: "Related reading and call to action", match: ["relatedLinks", "cta*"] },
+  ],
   glossaryTerms: [
     { title: "The term", match: ["title", "indexTitle", "tag", "tagline", "excerpt", "alsoKnownAs"] },
     { title: "Definition", match: ["definition*", "body"] },

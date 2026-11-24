@@ -36,7 +36,7 @@ export const isPosts = (type: ContentType) => type.key === "posts";
  * and any index from the JSON. Service pages need a hand-written component and market pages a code
  * change, so new ones are added by a developer.
  */
-export const CREATABLE_TYPES = ["posts", "landingPages", "cityPages", "industryCityPages", "events", "caseStudies", "caseStudyPages", "glossaryTerms", "careers", "homepageFaqs", "pageFaqs", "pageSeo"];
+export const CREATABLE_TYPES = ["posts", "landingPages", "cityPages", "industryCityPages", "events", "caseStudies", "caseStudyPages", "glossaryTerms", "resourceGuides", "careers", "homepageFaqs", "pageFaqs", "pageSeo"];
 
 export function isCreatable(type: ContentType): boolean {
   return type.kind === "collection" && CREATABLE_TYPES.includes(type.key);

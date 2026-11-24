@@ -32,6 +32,7 @@ export const CATALOG: Record<string, CatalogEntry> = {
   industryCityPages: { title: "Industry + city pages", description: "An industry in a city, e.g. BFSI in Gurugram (myntmore.com/b2b-lead-generation-bfsi-gurugram)", group: "pages", url: (s) => `/b2b-lead-generation-${s}` },
   marketPages: { title: "Country pages", description: "Case studies by country: UAE, US, UK, Singapore, France, India", group: "pages", url: (s) => `/case-studies/markets/${s}` },
   events: { title: "Events", description: "Webinars and events, with the pop-up on the site (myntmore.com/events/…)", group: "pages", url: (s) => `/events/${s}` },
+  resourceGuides: { title: "New guides", description: "Guides you write here, in one standard layout (myntmore.com/resources/guides/…). The older guides are edited under Guides below.", group: "pages", url: (s) => `/resources/guides/${s}` },
   careers: { title: "Job openings", description: "Roles on the careers page (myntmore.com/careers/…)", group: "pages", url: (s) => `/careers/${s}` },
   glossaryTerms: { title: "Glossary", description: "Sales and marketing terms explained (myntmore.com/resources/glossary/…)", group: "pages", url: (s) => `/resources/glossary/${s}` },
   caseStudyPages: { title: "Case studies (full pages)", description: "Detailed case study pages with challenge, approach and results", group: "caseStudies", url: (s) => `/case-studies/${s}` },
@@ -71,7 +72,7 @@ export function catalogEntry(key: string, label: string): CatalogEntry {
 export const GROUPS: { key: CatalogEntry["group"]; title: string; description: string }[] = [
   { key: "main", title: "Main pages", description: "The homepage and the site's main pages" },
   { key: "blog", title: "Blog", description: "Write and edit articles" },
-  { key: "pages", title: "Website pages", description: "Industry, city, country, event, job and glossary pages" },
+  { key: "pages", title: "Website pages", description: "Industry, city, country, event, job, guide and glossary pages" },
   { key: "services", title: "Service pages", description: "Every page under myntmore.com/services" },
   { key: "caseStudies", title: "Case studies", description: "Client stories, short and long" },
   { key: "faqs", title: "FAQs and Google settings", description: "Questions and answers, and how pages look in Google" },

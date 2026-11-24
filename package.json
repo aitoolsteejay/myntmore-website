@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-page-seo.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-event-pages.mjs && node scripts/check-market-pages.mjs && node scripts/generate-industry-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-case-study-long-pages.mjs && node scripts/generate-career-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
+    "prebuild": "node scripts/generate-faq-content.mjs && node scripts/generate-page-seo.mjs && node scripts/generate-case-study-content.mjs && node scripts/generate-case-study-pages.mjs && node scripts/generate-landing-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-glossary-pages.mjs && node scripts/generate-guide-pages.mjs && node scripts/generate-city-pages.mjs && node scripts/generate-event-pages.mjs && node scripts/check-market-pages.mjs && node scripts/generate-industry-city-pages.mjs && node scripts/generate-case-study-detail-pages.mjs && node scripts/generate-case-study-long-pages.mjs && node scripts/generate-career-pages.mjs && node scripts/generate-site-map.mjs && node scripts/generate-llms-full.mjs && (node scripts/generate-sitemap-dates.mjs --check || echo '[sitemap-dates] warning: lib/sitemap-dates.json is stale, run npm run sitemap:dates')",
     "faqs:build": "node scripts/generate-faq-content.mjs",
     "faqs:check": "node scripts/generate-faq-content.mjs --check",
     "careers:build": "node scripts/generate-career-pages.mjs",
@@ -32,6 +32,8 @@
     "case-study-pages:check": "node scripts/generate-case-study-detail-pages.mjs --check",
     "case-study-long:build": "node scripts/generate-case-study-long-pages.mjs",
     "case-study-long:check": "node scripts/generate-case-study-long-pages.mjs --check",
+    "guides:build": "node scripts/generate-guide-pages.mjs",
+    "guides:check": "node scripts/generate-guide-pages.mjs --check",
     "glossary:build": "node scripts/generate-glossary-pages.mjs",
     "glossary:check": "node scripts/generate-glossary-pages.mjs --check",
     "landing-pages:build": "node scripts/generate-landing-pages.mjs",

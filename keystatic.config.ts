@@ -82,6 +82,10 @@ import industryKeys from "./lib/industry-keys.json";
 //    term page, the A-Z index cards and the sitemap entries. All 51 terms are CMS terms; the longer-form ones use "Sections".
 //  - Events: one JSON file per event. `npm run events:build` (run by prebuild) writes lib/events.generated.json
 //    (read by /events, the pop-up and the sitemap) and the thin page under app/events/<slug>/.
+//  - New guides: one JSON file per guide in content/resource-guides/. `npm run guides:build` (run by prebuild) writes the thin
+//    page under app/resources/guides/<slug>/ (components/guides/GuidePage.tsx renders it), the card on the guides page
+//    (lib/guide-index.generated.json) and the sitemap entry. The 19 older guides keep their own layouts and are edited as
+//    "Guide: …" singletons.
 //  - Market pages: one JSON file per /case-studies/markets/<market> page, read by lib/market-pages.ts and checked
 //    by scripts/check-market-pages.mjs (run by prebuild).
 //  - Blog posts: .mdoc files read at build time by lib/cms-posts.ts and
@@ -996,6 +1000,93 @@ export default config({
           }),
           { label: "FAQs (optional, become FAQPage structured data)", itemLabel: (props) => props.fields.question.value }
         ),
+      },
+    }),
+
+    resourceGuides: collection({
+      label: "New guides",
+      path: "content/resource-guides/*",
+      format: "json",
+      slugField: "slug",
+      columns: ["tag", "datePublished"],
+      schema: {
+        slug: fields.slug({
+          name: {
+            label: "Guide address",
+            description: "The page lives at /resources/guides/<address>, e.g. cold-email-warmup-checklist. It cannot be changed after the first save. A new guide appears on the guides page and in the sitemap after the next deploy.",
+            validation: { isRequired: true },
+          },
+        }),
+        title: fields.text({ label: "Title (H1)", validation: { isRequired: true, length: { max: 110 } } }),
+        tag: fields.text({ label: "Tag (the pill above the title, e.g. Cold Email)", validation: { isRequired: true, length: { max: 40 } } }),
+        accent: fields.text({ label: "Accent colour (hex, e.g. #EA580C)", description: "Use the orange or gold family.", validation: { isRequired: true, pattern: { regex: /^#[0-9a-fA-F]{6}$/, message: "Use a hex colour like #EA580C" } } }),
+        readTime: fields.integer({ label: "Read time (minutes)", validation: { isRequired: true, min: 1, max: 60 } }),
+        excerpt: fields.text({ label: "Card text on the guides page (one or two sentences)", multiline: true, validation: { isRequired: true, length: { max: 220 } } }),
+        intro: fields.text({
+          label: "Intro / answer-first summary",
+          description: "Shown under the title. State what the guide covers and the main takeaway in the first sentence; search and AI engines quote it.",
+          multiline: true,
+          validation: { isRequired: true, length: { min: 60, max: 700 } },
+        }),
+        sections: fields.array(
+          fields.object({
+            heading: fields.text({ label: "Section heading", validation: { isRequired: true } }),
+            paragraphs: fields.array(fields.text({ label: "Paragraph", description: "Wrap words in **double asterisks** for bold. Write [link text](/page-address) for an internal link.", multiline: true }), { label: "Paragraphs", itemLabel: (props) => props.value.slice(0, 60) }),
+            steps: fields.array(
+              fields.object({
+                lead: fields.text({ label: "Bold lead-in", validation: { isRequired: true } }),
+                text: fields.text({ label: "Text after the lead-in", multiline: true, validation: { isRequired: true } }),
+              }),
+              { label: "Numbered list (optional)", itemLabel: (props) => props.fields.lead.value }
+            ),
+            copyBlocks: fields.array(
+              fields.object({
+                label: fields.text({ label: "Label on the box (e.g. Copy into Claude)", validation: { isRequired: true } }),
+                text: fields.text({ label: "Text readers can copy (a prompt, template or record)", multiline: true, validation: { isRequired: true } }),
+              }),
+              { label: "Copy-paste boxes (optional)", itemLabel: (props) => props.fields.label.value }
+            ),
+            table: fields.object(
+              {
+                columns: fields.array(fields.text({ label: "Column heading" }), { label: "Table (optional): column headings (the first, row-label column has no heading)", itemLabel: (props) => props.value }),
+                rows: fields.array(
+                  fields.object({
+                    label: fields.text({ label: "Row label", validation: { isRequired: true } }),
+                    cells: fields.array(fields.text({ label: "Cell", multiline: true }), { label: "Cells, one per column heading, in order", itemLabel: (props) => props.value.slice(0, 40) }),
+                  }),
+                  { label: "Table (optional): rows", itemLabel: (props) => props.fields.label.value }
+                ),
+              },
+              { label: "Table (leave empty for none)" }
+            ),
+          }),
+          { label: "Sections (the body of the guide, in order)", validation: { length: { min: 1 } }, itemLabel: (props) => props.fields.heading.value }
+        ),
+        faqs: fields.array(
+          fields.object({
+            question: fields.text({ label: "Question", validation: { isRequired: true } }),
+            answer: fields.text({ label: "Answer", multiline: true, validation: { isRequired: true } }),
+          }),
+          { label: "FAQs (optional, become FAQPage structured data)", itemLabel: (props) => props.fields.question.value }
+        ),
+        relatedLinks: fields.array(
+          fields.object({
+            label: fields.text({ label: "Link text", validation: { isRequired: true } }),
+            href: fields.text({ label: "Address, e.g. /services/cold-email-outreach", validation: { isRequired: true } }),
+          }),
+          { label: "Related reading (optional)", itemLabel: (props) => props.fields.label.value }
+        ),
+        ctaHeading: fields.text({ label: "Call-to-action box at the end: heading (leave empty to hide the box)" }),
+        ctaText: fields.text({ label: "Call-to-action box: text", multiline: true }),
+        ctaButtonLabel: fields.text({ label: "Call-to-action box: button label" }),
+        ctaButtonHref: fields.text({ label: "Call-to-action box: button address, e.g. /book-a-call" }),
+        metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
+        metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (one search phrase each)", itemLabel: (props) => props.value }),
+        ogTitle: fields.text({ label: "Share title (optional, LinkedIn and WhatsApp)", description: "Leave empty to use the search title." }),
+        ogDescription: fields.text({ label: "Share description (optional)", multiline: true, description: "Leave empty to use the search description." }),
+        datePublished: fields.date({ label: "Date published", validation: { isRequired: true } }),
+        dateModified: fields.date({ label: "Date last updated (optional)", description: "Leave empty if it has not changed since it was published." }),
       },
     }),
 

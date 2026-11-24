@@ -197,6 +197,29 @@ function glossaryTerms(d) {
   return out;
 }
 
+export const GUIDE_REQUIRED = ["title", "tag", "accent", "readTime", "excerpt", "intro", "metaTitle", "metaDescription", "datePublished"];
+
+function resourceGuides(d) {
+  const out = required(d, GUIDE_REQUIRED);
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(d.slug ?? "")) out.push(problem("slug", "the guide address must be lowercase letters, numbers and hyphens"));
+  if (d.accent && !/^#[0-9a-fA-F]{6}$/.test(d.accent)) out.push(problem("accent", `"accent" must be a hex colour like #EA580C`));
+  if (d.metaTitle && d.metaTitle.length > 49) out.push(problem("metaTitle", `search title is ${d.metaTitle.length} characters; the site adds " | Myntmore", so keep it to 49`));
+  if (d.metaDescription && d.metaDescription.length > 160) out.push(problem("metaDescription", `search description is ${d.metaDescription.length} characters, over 160`));
+  const sections = d.sections ?? [];
+  if (!sections.length) out.push(problem("sections", "a guide needs at least one section"));
+  for (const sec of sections) {
+    if (!sec.heading) out.push(problem("sections", "a section has no heading"));
+    if (!(sec.paragraphs?.length || sec.steps?.length || sec.copyBlocks?.length || sec.table?.rows?.length)) out.push(problem("sections", `section "${sec.heading}" is empty`));
+    for (const row of sec.table?.rows ?? []) if (row.cells.length !== sec.table.columns.length) out.push(problem("sections", `section "${sec.heading}": row "${row.label}" must have ${sec.table.columns.length} cells`));
+  }
+  const cta = [d.ctaHeading, d.ctaText, d.ctaButtonLabel, d.ctaButtonHref];
+  if (cta.some(Boolean) && !cta.every(Boolean)) out.push(problem("ctaHeading", "the call-to-action box needs all four parts (heading, text, button label, button address), or none"));
+  if (d.ctaButtonHref && !d.ctaButtonHref.startsWith("/") && !/^https?:\/\//.test(d.ctaButtonHref)) out.push(problem("ctaButtonHref", `"ctaButtonHref" must start with / or https://`));
+  for (const l of d.relatedLinks ?? []) if (!String(l.href ?? "").startsWith("/")) out.push(problem("relatedLinks", `related link "${l.label}" must start with /`));
+  out.push(...emDash(d));
+  return out;
+}
+
 export const CASE_DETAIL_REQUIRED = ["metaTitle", "metaDescription", "ogTitle", "ogDescription", "schemaHeadline", "schemaDescription", "datePublished", "dateModified", "tag", "accent", "title", "intro", "challengeTitle", "approachTitle", "outcomeTitle", "outcomeBody", "roleBody", "industry", "indexTitle", "excerpt"];
 
 function caseStudyPages(d) {
@@ -266,7 +289,7 @@ export const COMPANION_FAQS = { landingPages: "lp-", cityPages: "city-", marketP
  * Types whose pages use the entry's name as its id (e.g. pageFaqsQA(`lp-${d.slug}`)), so the name in the
  * file must be the file name itself. Keystatic's slug field allows them to differ; the site does not.
  */
-export const NAME_IS_FILE_NAME = ["landingPages", "servicePages", "cityPages", "industryCityPages", "events", "marketPages", "caseStudyPages", "caseStudies", "glossaryTerms", "careers"];
+export const NAME_IS_FILE_NAME = ["landingPages", "servicePages", "cityPages", "industryCityPages", "events", "marketPages", "caseStudyPages", "caseStudies", "glossaryTerms", "careers", "resourceGuides"];
 
 /** The name check above, on the file's own JSON (before `slug` is set to the file name). */
 export function nameProblems(typeKey, json, fileSlug) {
@@ -286,6 +309,7 @@ export const RULES = {
   events,
   careers,
   glossaryTerms,
+  resourceGuides,
   caseStudyPages,
   servicePages,
   pageSeo,

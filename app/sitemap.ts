@@ -217,6 +217,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/resources/glossary/vanity-metrics`, lastModified: lastMod("/resources/glossary/vanity-metrics"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/resources/glossary/warm-lead`, lastModified: lastMod("/resources/glossary/warm-lead"), changeFrequency: "monthly", priority: 0.6 },
     // END generated: glossary terms
+    // BEGIN generated: new guides (scripts/generate-guide-pages.mjs)
+    // END generated: new guides
     { url: `${base}/resources/feed`, lastModified: lastMod("/resources/feed"), changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/events`, lastModified: lastMod("/events"), changeFrequency: "weekly", priority: 0.7 },
     // BEGIN generated: events (scripts/generate-event-pages.mjs)

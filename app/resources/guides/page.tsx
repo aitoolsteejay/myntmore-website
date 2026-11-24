@@ -8,6 +8,7 @@ import { buildBreadcrumbSchema, buildCollectionPageSchema, SITE_URL } from "@/li
 import { textTone } from "@/lib/colors";
 import { OG_BASE, ogImages } from "@/lib/og";
 import { withPageSeo } from "@/lib/page-seo";
+import newGuides from "@/lib/guide-index.generated.json";
 
 const GUIDES_PAGE_SCHEMA = [
   buildBreadcrumbSchema([
@@ -50,7 +51,9 @@ export const metadata: Metadata = withPageSeo("/resources/guides", {
   },
 });
 
-const GUIDES = [
+// Guides written in the content admin ("New guides") come first; the older ones below have their own pages.
+const GUIDES: { href: string; tag: string; title: string; excerpt: string; readTime: string; accent: string }[] = [
+  ...newGuides,
   {
     href: "/resources/guides/outbound-meme-prompt-kit",
     tag: "LinkedIn Content",
