@@ -39,7 +39,7 @@ const TAKEAWAYS = [
 
 const inputCls =
   "w-full rounded-xl border bg-white px-4 py-3 text-sm text-[#0A0A0A] placeholder:text-[#9A9189] focus:outline-none focus:ring-2 focus:ring-[#F5B731]/50 focus:border-[#F5B731]";
-const borderStyle = { borderColor: "#D9D2C7" };
+const borderStyle = { borderColor: "#D9D2C7", color: "#0A0A0A" };
 
 function Field({ label, htmlFor, error, children }: { label: string; htmlFor?: string; error?: string; children: React.ReactNode }) {
   return (
@@ -64,10 +64,10 @@ function RadioGroup({ name, options, label }: { name: string; options: string[];
         <label
           key={o}
           className="inline-flex items-center gap-2 rounded-xl border bg-white px-4 py-2.5 text-sm font-medium cursor-pointer has-[:checked]:border-[#F5B731] has-[:checked]:bg-[#FEF9EC]"
-          style={borderStyle}
+          style={{ ...borderStyle, color: "#0A0A0A" }}
         >
           <input type="radio" name={name} value={o} className="accent-[#D97706]" />
-          {o}
+          <span style={{ color: "#0A0A0A" }}>{o}</span>
         </label>
       ))}
     </div>
@@ -294,10 +294,10 @@ export default function WebinarClient({ registered }: { registered: boolean }) {
                         <label
                           key={o}
                           className="inline-flex items-center gap-2 rounded-xl border bg-white px-4 py-2.5 text-sm font-medium cursor-pointer has-[:checked]:border-[#F5B731] has-[:checked]:bg-[#FEF9EC]"
-                          style={borderStyle}
+                          style={{ ...borderStyle, color: "#0A0A0A" }}
                         >
                           <input type="checkbox" name="MultipleChoice2" value={o} className="accent-[#D97706]" />
-                          {o}
+                          <span style={{ color: "#0A0A0A" }}>{o}</span>
                         </label>
                       ))}
                     </div>
