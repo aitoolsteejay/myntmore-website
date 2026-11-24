@@ -58,9 +58,14 @@ export default function EventPage({ slug }: { slug: string }) {
             </span>
           </div>
 
-          <p className="text-base sm:text-lg leading-relaxed mb-8" style={{ color: "#52525B" }}>
-            {e.longDescription}
-          </p>
+          {/* A blank line in the description starts a new paragraph. */}
+          <div className="mb-8 space-y-4">
+            {e.longDescription.split(/\n\s*\n/).map((para) => (
+              <p key={para} className="text-base sm:text-lg leading-relaxed" style={{ color: "#52525B" }}>
+                {para.trim()}
+              </p>
+            ))}
+          </div>
 
           {cta && (
             <a href={cta.href} target="_blank" rel="noopener noreferrer" className="btn-dark px-8 py-4 text-base font-bold inline-flex items-center gap-2">
