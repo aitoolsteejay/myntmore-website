@@ -223,6 +223,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/events`, lastModified: lastMod("/events"), changeFrequency: "weekly", priority: 0.7 },
     // BEGIN generated: events (scripts/generate-event-pages.mjs)
     { url: `${base}/events/predictable-pipeline-webinar`, lastModified: lastMod("/events/predictable-pipeline-webinar"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/events/five-point-webinar`, lastModified: lastMod("/events/five-point-webinar"), changeFrequency: "monthly", priority: 0.7 },
     // END generated: events
     { url: `${base}/newsletter-subscribe`, lastModified: lastMod("/newsletter-subscribe"), changeFrequency: "monthly", priority: 0.7 },
     // Free tools

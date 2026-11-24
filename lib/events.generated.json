@@ -29,5 +29,36 @@
     "metaDescription": "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings a month, across LinkedIn, cold email, targeting and automation.",
     "ogTitle": "We Create 200+ Meetings a Month Through Cold Outreach | Myntmore",
     "ogDescription": "A free live webinar on the cold outreach system Myntmore uses to create 200+ meetings every month. Sep 19, 2026 · 11:30 AM – 1:00 PM IST."
+  },
+  {
+    "slug": "five-point-webinar",
+    "tag": "Live Webinar",
+    "title": "Masterclass on LinkedIn Sales Outreach",
+    "description": "Zero Point Five’s LinkedIn Sales Outreach Masterclass with Tejas Jhaveri. Learn how to book 200+ meetings a month and scale your GTM.",
+    "longDescription": "A hands-on session for founders who need meetings on the calendar, not theory. It works for domestic and international outreach. Who this is for: founders and B2B businesses (entrepreneurs and CXOs who want a steady flow of conversations), marketing teams building a LinkedIn and cold email outreach engine, and anyone learning outreach, including students, employees and business owners curious about cold outreach.",
+    "isoDate": "2026-11-28",
+    "isoStartDateTime": "2026-11-28T12:00:00+05:30",
+    "isoEndDateTime": "2026-11-28T13:00:00+05:30",
+    "displayDate": "Nov 28, 2026",
+    "longDate": "November 28, 2026",
+    "time": "12:00 PM – 1:00 PM IST",
+    "format": "Online · Live Webinar",
+    "accent": "#EA580C",
+    "breadcrumbLabel": "LinkedIn Outreach Masterclass",
+    "topics": [
+      "200+ meetings a month",
+      "Choosing your GTM channels",
+      "LinkedIn profile setup",
+      "Messages that get replies",
+      "LinkedIn and cold email funnels",
+      "Outreach tips for more revenue"
+    ],
+    "registrationUrl": "https://www.myntmore.com/zero-point-five-webinar",
+    "recordingUrl": "",
+    "showPopup": true,
+    "metaTitle": "LinkedIn Sales Outreach Masterclass for Founders",
+    "metaDescription": "Live online masterclass on 28 Nov 2026, 12 to 1 pm IST. Learn LinkedIn profile setup, messaging and funnels that book meetings. Save your seat.",
+    "ogTitle": "LinkedIn Sales Outreach Masterclass for Founders | Myntmore",
+    "ogDescription": "Live online masterclass on 28 Nov 2026, 12 to 1 pm IST. Learn LinkedIn profile setup, messaging and funnels that book meetings. Save your seat."
   }
 ]
