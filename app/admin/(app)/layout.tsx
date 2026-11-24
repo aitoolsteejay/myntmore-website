@@ -17,6 +17,9 @@ function Shell({ editor, children }: { editor: Editor | null; children: React.Re
               <Link href="/admin" className="hover:text-[#0A0A0A]">
                 Content
               </Link>
+              <Link href="/admin/drafts" className="hover:text-[#0A0A0A]">
+                My drafts
+              </Link>
               <Link href="/admin/activity" className="hover:text-[#0A0A0A]">
                 Activity
               </Link>

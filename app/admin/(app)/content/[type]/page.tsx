@@ -5,6 +5,7 @@ import EntryEditor from "@/components/admin/EntryEditor";
 import FilterList from "@/components/admin/FilterList";
 import { canEdit, canView, currentEditor } from "@/lib/admin/auth";
 import { catalogEntry } from "@/lib/admin/catalog";
+import { findDraft } from "@/lib/admin/drafts";
 import { allTypes, enabledType, isCreatable, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
 import { EntryHeader, FileProblems, formSections, humanize, liveUrl } from "@/lib/admin/entry-view";
 import { contentType, describeType, singletonSlug } from "@/lib/admin/schema";
@@ -106,6 +107,7 @@ export default async function TypePage({ params }: { params: { type: string } })
         <EntryEditor
           typeKey={type.key}
           slug={singletonSlug(type)}
+          draft={await findDraft(editor.email, type.key, singletonSlug(type)).then((d) => d && { id: d.id, updatedAt: d.updated_at, state: d.state, body: d.body, baseSha: d.base_sha })}
           fields={fields}
           sections={formSections(type)}
           initialState={entry.state}

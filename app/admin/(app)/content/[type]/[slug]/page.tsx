@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
 import { canEdit, canView, currentEditor } from "@/lib/admin/auth";
 import { catalogEntry } from "@/lib/admin/catalog";
+import { findDraft } from "@/lib/admin/drafts";
 import { enabledType, loadEntry, relationshipOptions } from "@/lib/admin/entries";
 import { EntryHeader, entryTitle, FileProblems, formSections, humanize, liveUrl } from "@/lib/admin/entry-view";
 import { nameIsFileName } from "@/lib/admin/rules";
@@ -21,6 +22,7 @@ export default async function EditEntry({ params, searchParams }: { params: { ty
   const entry = await loadEntry(type, params.slug);
   if (!entry) notFound();
   const fields = describeType(type);
+  const draft = await findDraft(editor.email, type.key, params.slug);
   const name = entryTitle(entry.state, type.slugField) ?? params.slug;
   const title = name === params.slug ? humanize(params.slug) : name;
   const url = liveUrl(type, params.slug, name);
@@ -41,6 +43,7 @@ export default async function EditEntry({ params, searchParams }: { params: { ty
         sections={formSections(type)}
         initialState={entry.state}
         initialBody={entry.body}
+        draft={draft && { id: draft.id, updatedAt: draft.updated_at, state: draft.state, body: draft.body, baseSha: draft.base_sha }}
         initialSha={entry.sha}
         choices={await relationshipOptions(fields)}
         entryHref={`/admin/content/${type.key}/${params.slug}`}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import EntryEditor from "@/components/admin/EntryEditor";
 import { canEdit, currentEditor } from "@/lib/admin/auth";
+import { getDraft } from "@/lib/admin/drafts";
 import { enabledType, isCreatable, isPosts, listEntries, loadEntry, relationshipOptions } from "@/lib/admin/entries";
 import { postSettingsType } from "@/lib/admin/posts";
 import { formSections } from "@/lib/admin/entry-view";
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: { type: string } })
 
 // New entry. Most pages have many required parts with exact counts, so the form can start from a copy of
 // an existing entry (?from=<slug>) and only the name and file name start empty.
-export default async function NewEntry({ params, searchParams }: { params: { type: string }; searchParams: { from?: string } }) {
+export default async function NewEntry({ params, searchParams }: { params: { type: string }; searchParams: { from?: string; draft?: string } }) {
   const editor = (await currentEditor())!;
   const type = enabledType(params.type);
   if (!type || !isCreatable(type) || !type.slugField || !canEdit(editor, type.key)) notFound();
@@ -27,6 +28,8 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
   if (isPosts(type)) state.published = false;
   state[type.slugField] = { name: "", slug: "" };
 
+  const saved = searchParams.draft && /^[0-9a-f-]{36}$/i.test(searchParams.draft) ? await getDraft(editor.email, searchParams.draft) : null;
+  const draft = saved && saved.type_key === type.key ? saved : null;
   const fields = describeType(type);
   const entries = await listEntries(type);
   return (
@@ -53,7 +56,8 @@ export default async function NewEntry({ params, searchParams }: { params: { typ
         </p>
       </form>
       <EntryEditor
-        key={from ?? ""}
+        key={`${from ?? ""}-${draft?.id ?? ""}`}
+        draft={draft && { id: draft.id, updatedAt: draft.updated_at, state: draft.state, body: draft.body, baseSha: "" }}
         typeKey={type.key}
         slug=""
         mode="create"

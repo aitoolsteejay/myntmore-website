@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { canEdit, currentEditor } from "@/lib/admin/auth";
+import { clearDraftsFor } from "@/lib/admin/drafts";
 import { enabledType, isPosts, savePostEntry, saveEntry } from "@/lib/admin/entries";
 
 export const dynamic = "force-dynamic";
@@ -23,6 +24,7 @@ export async function POST(req: NextRequest, { params }: { params: { type: strin
       ? await savePostEntry(params.slug, body.state, typeof body.body === "string" ? body.body : "", body.sha, editor)
       : await saveEntry(type, params.slug, body.state, body.sha, editor);
     if (!result.ok) return NextResponse.json({ error: result.message, errors: result.errors }, { status: result.status });
+    await clearDraftsFor(editor.email, type.key, params.slug, typeof body.draftId === "string" ? body.draftId : undefined);
     return NextResponse.json(result);
   } catch (err) {
     console.error("admin save failed", err);

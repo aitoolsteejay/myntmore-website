@@ -442,6 +442,16 @@ function Field({
         </fieldset>
       );
     case "array":
+      // Keywords are typed as one comma-separated list; they are still saved as a list of phrases.
+      if (path[path.length - 1] === "keywords" && desc.element.kind === "text")
+        return (
+          <KeywordsField
+            desc={desc}
+            value={Array.isArray(value) ? value : []}
+            path={path}
+            ctx={ctx}
+          />
+        );
       return (
         <ArrayField
           desc={desc}
@@ -473,6 +483,58 @@ function Field({
         </div>
       );
   }
+}
+
+const splitKeywords = (text: string): string[] =>
+  text
+    .split(/[,\n]/)
+    .map((k) => k.trim())
+    .filter(Boolean);
+
+function KeywordsField({
+  desc,
+  value,
+  path,
+  ctx,
+}: {
+  desc: Extract<FieldDescriptor, { kind: "array" }>;
+  value: any[];
+  path: Path;
+  ctx: Ctx;
+}) {
+  const [raw, setRaw] = useState(() => value.join(", "));
+  // Follow outside changes (a restored draft, a reset) but never rewrite what is being typed.
+  useEffect(() => {
+    setRaw((r) =>
+      JSON.stringify(splitKeywords(r)) === JSON.stringify(value)
+        ? r
+        : value.join(", "),
+    );
+  }, [value]);
+  const count = splitKeywords(raw).length;
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-4">
+        <Label text={desc.label.replace(/\s*\(one search phrase each\)/i, "")} />
+        <span className="text-xs text-[#71675E]">
+          {count} keyword{count === 1 ? "" : "s"}
+        </span>
+      </div>
+      <Help text="Separate keywords with commas, for example: b2b lead generation, cold email agency, how to book more sales meetings." />
+      <ErrorText text={ctx.errors[key(path)]} />
+      <textarea
+        id={`f-${key(path)}`}
+        rows={3}
+        value={raw}
+        disabled={ctx.readOnly}
+        onChange={(e) => {
+          setRaw(e.target.value);
+          ctx.onChange(path, splitKeywords(e.target.value));
+        }}
+        className={`${INPUT} mt-1.5`}
+      />
+    </div>
+  );
 }
 
 function ArrayField({
@@ -656,6 +718,7 @@ export default function EntryEditor({
   nameIsFileName = false,
   sections,
   initialBody,
+  draft,
 }: {
   typeKey: string;
   /** The entry's file name (for a singleton, the file it is saved as). Empty while creating. */
@@ -676,14 +739,22 @@ export default function EntryEditor({
   sections: Section[];
   /** Blog posts: the article (Markdoc). */
   initialBody?: string;
+  /** This editor's private draft of the entry, if they saved one. */
+  draft?: { id: string; updatedAt: string; state: Record<string, unknown>; body: string | null; baseSha: string } | null;
 }) {
   const creating = mode === "create";
-  const [state, setState] = useState(initialState);
-  const [article, setArticle] = useState(initialBody ?? "");
+  const [state, setState] = useState(draft?.state ?? initialState);
+  const [article, setArticle] = useState(draft?.body ?? initialBody ?? "");
+  const [draftId, setDraftId] = useState<string | null>(draft?.id ?? null);
+  const [draftInfo, setDraftInfo] = useState<{ text: string; error?: boolean } | null>(
+    draft ? { text: `Draft restored (saved ${new Date(draft.updatedAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata", dateStyle: "medium", timeStyle: "short" })}). Only you can see it.` } : null,
+  );
+  const [savingDraft, setSavingDraft] = useState(false);
   const [savedArticle, setSavedArticle] = useState(initialBody ?? "");
   const [faq, setFaq] = useState({ question: "", answer: "" });
   const [saved, setSaved] = useState(() => JSON.stringify(initialState));
-  const [sha, setSha] = useState(initialSha);
+  // A draft keeps the version it started from, so publishing it still notices edits made since.
+  const [sha, setSha] = useState(draft?.baseSha || initialSha);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>({ kind: "idle" });
   const [query, setQuery] = useState("");
@@ -711,6 +782,45 @@ export default function EntryEditor({
     if (status.kind === "saved") setStatus({ kind: "idle" });
   };
 
+  const draftTitle = () => {
+    const s = state as any;
+    const name = s?.title ?? s?.name ?? s?.[Object.keys(s ?? {})[0]]?.name ?? s?.[Object.keys(s ?? {})[0]];
+    return String(typeof name === "string" ? name : slug).slice(0, 120) || slug || "Untitled";
+  };
+
+  async function saveDraft() {
+    setSavingDraft(true);
+    const res = await fetch("/api/admin/drafts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: draftId ?? undefined,
+        typeKey,
+        slug,
+        title: draftTitle(),
+        state,
+        body: initialBody === undefined ? null : article,
+        baseSha: sha,
+      }),
+    }).catch(() => null);
+    const out = await res?.json().catch(() => null);
+    setSavingDraft(false);
+    if (!res?.ok || !out?.id)
+      return setDraftInfo({ text: out?.error ?? "Could not save the draft. Your edits are still here.", error: true });
+    setDraftId(out.id);
+    setDraftInfo({ text: `Draft saved at ${new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit" })}. Only you can see it, and it is not published.` });
+  }
+
+  async function discardDraft() {
+    if (!window.confirm("Throw away your draft and go back to the saved version?")) return;
+    if (draftId) await fetch(`/api/admin/drafts?id=${draftId}`, { method: "DELETE" }).catch(() => null);
+    setDraftId(null);
+    setDraftInfo(null);
+    setState(initialState);
+    setArticle(initialBody ?? "");
+    setSha(initialSha);
+  }
+
   async function save() {
     setStatus({ kind: "saving" });
     setErrors({});
@@ -723,8 +833,8 @@ export default function EntryEditor({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           creating
-            ? { state, faq: needsFaq ? faq : null, body: initialBody === undefined ? undefined : article }
-            : { state, sha, body: initialBody === undefined ? undefined : article },
+            ? { state, faq: needsFaq ? faq : null, body: initialBody === undefined ? undefined : article, draftId }
+            : { state, sha, body: initialBody === undefined ? undefined : article, draftId },
         ),
       },
     ).catch(() => null);
@@ -1085,6 +1195,19 @@ export default function EntryEditor({
                 {creating ? "Checking and creating…" : "Saving and publishing…"}
               </span>
             )}
+            {draftInfo && status.kind !== "saved" && status.kind !== "saving" && (
+              <span className={`block ${draftInfo.error ? "text-[#9F1D1D]" : "text-[#52525B]"}`}>
+                {draftInfo.text}
+                {draftId && !draftInfo.error && (
+                  <>
+                    {" "}
+                    <button type="button" onClick={discardDraft} className="font-semibold text-[#A14A08] underline">
+                      Discard draft
+                    </button>
+                  </>
+                )}
+              </span>
+            )}
             {status.kind === "saved" && (
               <span className="text-[#166534]">
                 {status.text}{" "}
@@ -1126,6 +1249,17 @@ export default function EntryEditor({
               </span>
             )}
           </div>
+          {!readOnly && (
+            <button
+              type="button"
+              onClick={saveDraft}
+              disabled={savingDraft || status.kind === "saving" || (!draftId && !dirty)}
+              title="Keep your work for later. Only you can see drafts; nothing is published."
+              className="rounded-lg border border-[#C9BFB2] bg-white px-5 py-2.5 text-sm font-bold text-[#0A0A0A] hover:border-[#A14A08] disabled:opacity-40"
+            >
+              {savingDraft ? "Saving draft…" : "Save draft"}
+            </button>
+          )}
           {!readOnly && (
             <button
               type="button"
