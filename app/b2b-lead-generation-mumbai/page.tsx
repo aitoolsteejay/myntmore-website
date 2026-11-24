@@ -6,7 +6,7 @@ import data from "@/content/city-pages/mumbai.json";
 
 export const metadata: Metadata = {
   title: "AI B2B Lead Generation Agency in Mumbai",
-  description: "Lead generation company in Mumbai, based in BKC. We build verified B2B prospect lists, run cold email and LinkedIn outreach, and book qualified sales meetings.",
+  description: "Lead generation company in Mumbai, based in BKC. We build verified B2B prospect lists, run cold email and LinkedIn outreach, and book qualified meetings.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-mumbai" },
   keywords: ["b2b lead generation companies in mumbai","lead generation company in mumbai","b2b marketing company in mumbai","linkedin lead generation agency mumbai","b2b lead generation mumbai","outbound agency mumbai","linkedin outreach mumbai","cold email agency mumbai","account based marketing mumbai","ai lead generation mumbai","abm agency mumbai","sales intelligence mumbai","b2b lead generation for bfsi companies mumbai","lead generation for media and entertainment companies mumbai","b2b leads for professional services firms mumbai","demand generation agency mumbai","linkedin ghostwriting for founders mumbai","cold email agency bkc mumbai","best b2b outbound agency in mumbai","how to get b2b leads in mumbai","outbound agency for saas founders mumbai","b2b lead generation agency mumbai","lead generation agency in mumbai","lead generation services in mumbai","appointment setting services mumbai","outbound sales agency mumbai"],
   openGraph: {

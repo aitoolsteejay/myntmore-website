@@ -6,7 +6,7 @@ import data from "@/content/industry-city-pages/insurance-mumbai.json";
 
 export const metadata: Metadata = {
   title: "B2B Lead Generation for Insurance in Mumbai",
-  description: "Managed B2B lead generation for corporate insurance firms, TPAs, and insurtechs in Mumbai. Reach CFOs and HR heads before renewal windows. Book a free audit.",
+  description: "Managed B2B lead generation for corporate insurance firms, TPAs and insurtechs in Mumbai. Reach CFOs and HR heads before renewals. Book a free audit.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-insurance-mumbai" },
   keywords: ["b2b lead generation for insurance mumbai","corporate insurance lead generation mumbai","insurance agency lead generation mumbai","group health insurance leads mumbai","commercial insurance b2b leads mumbai","insurtech lead generation mumbai","outbound agency for insurance companies mumbai","b2b appointment setting insurance mumbai"],
   openGraph: {

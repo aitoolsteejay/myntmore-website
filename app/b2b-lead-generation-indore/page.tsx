@@ -6,7 +6,7 @@ import data from "@/content/city-pages/indore.json";
 
 export const metadata: Metadata = {
   title: "B2B Lead Generation Company in Indore",
-  description: "B2B lead generation company in Indore for IT services, pharma and auto-component firms: cold email, LinkedIn outreach and ABM that book meetings in 18 days.",
+  description: "B2B lead generation company in Indore for IT services, pharma and auto-component firms: cold email, LinkedIn outreach and ABM that book meetings.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-indore" },
   keywords: ["b2b lead generation company in indore","lead generation company in indore","lead generation agency in indore","lead generation services in indore","b2b lead generation agency indore","outbound sales agency indore","appointment setting services indore","sales outsourcing company in indore","cold email agency indore","linkedin lead generation agency indore","linkedin outreach agency indore","lead generation for it companies in indore","software development company lead generation indore","pharma lead generation indore"],
   openGraph: {

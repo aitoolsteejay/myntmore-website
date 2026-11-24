@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: ["b2b lead generation automotive manufacturing chennai","auto parts manufacturing lead generation chennai","automotive components export leads chennai","tier 1 tier 2 auto supplier lead generation chennai","b2b outbound agency oragadam sriperumbudur","find global oem buyers auto components india","ev component manufacturer lead generation chennai","manufacturing b2b leads ambattur chennai"],
   openGraph: {
     ...OG_BASE,
-    title: "B2B Lead Generation for Automotive & Auto Parts Makers in Chennai | Myntmore",
+    title: "Automotive & Auto Parts Lead Generation in Chennai | Myntmore",
     description: "Book qualified OEM sourcing, Tier-1 vendor development, and export RFQ meetings for Chennai's automotive and auto component manufacturers.",
     url: "https://www.myntmore.com/b2b-lead-generation-automotive-manufacturing-chennai",
     images: ogImages("/b2b-lead-generation-automotive-manufacturing-chennai"),

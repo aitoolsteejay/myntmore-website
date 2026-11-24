@@ -6,7 +6,7 @@ import data from "@/content/city-pages/gurugram.json";
 
 export const metadata: Metadata = {
   title: "Lead Generation Company in Gurgaon (Gurugram)",
-  description: "B2B lead generation company in Gurgaon (Gurugram) for SaaS, fintech, IT services and staffing firms: cold email, LinkedIn outreach and ABM, live in 18 days.",
+  description: "B2B lead generation company in Gurgaon (Gurugram) for SaaS, fintech, IT services and staffing firms: cold email, LinkedIn and ABM, live in 18 days.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-gurugram" },
   keywords: ["b2b lead generation company in gurgaon","b2b lead generation company in gurugram","lead generation company in gurgaon","lead generation agency in gurgaon","lead generation agency in gurugram","lead generation services in gurgaon","lead generation services in gurugram","b2b lead generation agency gurgaon","b2b lead generation agency gurugram","outbound sales agency gurugram","appointment setting services gurugram","sales outsourcing company in gurugram","cold email agency gurugram","linkedin lead generation agency gurugram","linkedin outreach agency gurugram","saas lead generation agency gurugram","lead generation for it companies in gurugram","lead generation for recruitment agencies in gurugram"],
   openGraph: {

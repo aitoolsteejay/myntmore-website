@@ -5,6 +5,7 @@ import FadeIn from "@/app/components/FadeIn";
 import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { buildFaqSchema, type FaqItem } from "@/lib/schema";
+import { relatedGlossaryTerms } from "@/lib/related";
 
 // One titled block of a longer-form term: paragraphs (use **double asterisks** for bold and [label](/path) for an
 // internal link), an optional numbered list
@@ -182,6 +183,8 @@ export default function GlossaryTerm({
             </div>
           )}
 
+          <RelatedTerms slug={slug} />
+
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "#E8E2D9" }}>
             <p className="text-sm mb-4" style={{ color: "#71675E" }}>Where this comes from</p>
             <Link href={sourceHref} className="inline-flex min-h-[44px] items-center gap-2 text-sm font-bold" style={{ color: textTone(accent) }}>
@@ -204,5 +207,28 @@ export default function GlossaryTerm({
         </div>
       </article>
     </InnerLayout>
+  );
+}
+
+// Other terms in the same area of the glossary (lib/related.ts), so each term is linked from several others.
+function RelatedTerms({ slug }: { slug: string }) {
+  const terms = relatedGlossaryTerms(slug);
+  if (!terms.length) return null;
+  return (
+    <nav aria-labelledby="related-terms" className="mt-12">
+      <h2 id="related-terms" className="text-xl font-black mb-4" style={{ color: "#0a0a0a" }}>
+        Related terms
+      </h2>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {terms.map((t) => (
+          <li key={t.href}>
+            <Link href={t.href} className="block h-full rounded-2xl border p-4 card-hover-warm" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
+              <span className="block text-sm font-black" style={{ color: "#0a0a0a" }}>{t.title}</span>
+              <span className="mt-1 block text-xs leading-relaxed" style={{ color: "#52525B" }}>{t.excerpt}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
