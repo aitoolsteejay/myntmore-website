@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "B2B Lead Generation Company in Singapore",
   description: "B2B lead generation company in Singapore: cold email, LinkedIn outreach and ABM that book meetings with Singapore firms and regional teams.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-singapore" },
-  keywords: ["b2b lead generation company in singapore","lead generation company in singapore","lead generation agency in singapore","lead generation services in singapore","b2b lead generation singapore","outbound sales agency singapore","appointment setting services singapore","cold email agency singapore","linkedin lead generation agency singapore","b2b lead generation singapore","lead generation services singapore","outsourced sdr singapore"],
+  keywords: ["b2b lead generation company in singapore","lead generation company in singapore","lead generation agency in singapore","lead generation services in singapore","b2b lead generation singapore","outbound sales agency singapore","appointment setting services singapore","cold email agency singapore","linkedin lead generation agency singapore","lead generation services singapore","outsourced sdr singapore"],
   openGraph: {
     ...OG_BASE,
     title: "B2B Lead Generation Company in Singapore | Myntmore",

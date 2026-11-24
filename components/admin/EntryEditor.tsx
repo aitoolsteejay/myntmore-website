@@ -767,15 +767,19 @@ export default function EntryEditor({
     [creating, state, saved, article, savedArticle],
   );
 
+  // Work kept in a saved draft is not lost by leaving, so only unsaved changes trigger the warning.
+  const [draftSnapshot, setDraftSnapshot] = useState<string | null>(draft ? JSON.stringify([draft.state, draft.body ?? initialBody ?? ""]) : null);
+  const unsavedElsewhere = !dirty ? false : JSON.stringify([state, article]) !== draftSnapshot;
+
   useEffect(() => {
-    if (!dirty || status.kind === "saved") return;
+    if (!unsavedElsewhere || status.kind === "saved") return;
     const warn = (e: BeforeUnloadEvent) => {
       e.preventDefault();
       e.returnValue = "";
     };
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
-  }, [dirty, status.kind]);
+  }, [unsavedElsewhere, status.kind]);
 
   const onChange = (path: Path, v: any) => {
     setState((s) => setIn(s, path, v));
@@ -808,6 +812,7 @@ export default function EntryEditor({
     if (!res?.ok || !out?.id)
       return setDraftInfo({ text: out?.error ?? "Could not save the draft. Your edits are still here.", error: true });
     setDraftId(out.id);
+    setDraftSnapshot(JSON.stringify([state, article]));
     setDraftInfo({ text: `Draft saved at ${new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit" })}. Only you can see it, and it is not published.` });
   }
 
@@ -815,6 +820,7 @@ export default function EntryEditor({
     if (!window.confirm("Throw away your draft and go back to the saved version?")) return;
     if (draftId) await fetch(`/api/admin/drafts?id=${draftId}`, { method: "DELETE" }).catch(() => null);
     setDraftId(null);
+    setDraftSnapshot(null);
     setDraftInfo(null);
     setState(initialState);
     setArticle(initialBody ?? "");

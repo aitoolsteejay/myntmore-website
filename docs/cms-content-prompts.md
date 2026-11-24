@@ -471,7 +471,7 @@ Why Join Myntmore:
 Accent Colour (hex):
 Header Info Cards: exactly 3 (Label + Value), e.g. Location, Type, CTC or Stipend.
 Google for Jobs Schema Description: 2 to 4 sentences describing the job.
-Employment Type: Full-Time, Internship, Full-Time & Intern, Part-Time or Contractor.
+Employment Type: Full-Time, Internship, Full-Time Intern (a full-time role held by an intern), Part-Time or Contractor.
 Base Salary Min (INR, numbers only):
 Base Salary Max (INR, numbers only):
 Salary Unit: Per Year or Per Month.
@@ -514,6 +514,7 @@ Accent colour (hex):
 Short name for the breadcrumb:
 Search title: max 49 (count).
 Search description: max 160 (count).
+Keywords (optional): 4 to 8 phrases, separated by commas on ONE line.
 Share title (optional):
 Share description (optional):
 Event address: slug, e.g. predictable-pipeline-webinar.

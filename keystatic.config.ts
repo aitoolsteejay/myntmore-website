@@ -711,6 +711,7 @@ export default config({
         }),
         metaTitle: fields.text({ label: "Search title", description: "Up to 49 characters: the site adds \" | Myntmore\" (11 characters), and Google cuts titles longer than about 60.", validation: { isRequired: true, length: { max: 49 } } }),
         metaDescription: fields.text({ label: "Search description", multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        keywords: fields.array(fields.text({ label: "Keyword" }), { label: "Keywords (optional, one search phrase each)", itemLabel: (props) => props.value }),
         ogTitle: fields.text({ label: "Share title (optional, LinkedIn and WhatsApp)", description: "Leave empty to use the search title." }),
         ogDescription: fields.text({ label: "Share description (optional)", multiline: true, description: "Leave empty to use the search description." }),
       },
@@ -1320,7 +1321,7 @@ export default config({
           options: [
             { label: "Full-Time (FULL_TIME)", value: "FULL_TIME" },
             { label: "Internship (INTERN)", value: "INTERN" },
-            { label: "Full-Time & Intern (FULL_TIME,INTERN)", value: "FULL_TIME,INTERN" },
+            { label: "Full-Time Intern (FULL_TIME,INTERN)", value: "FULL_TIME,INTERN" },
             { label: "Part-Time (PART_TIME)", value: "PART_TIME" },
             { label: "Contractor (CONTRACTOR)", value: "CONTRACTOR" },
           ],

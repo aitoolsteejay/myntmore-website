@@ -60,6 +60,7 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
     showPopup: Boolean(d.showPopup),
     metaTitle: d.metaTitle,
     metaDescription: d.metaDescription,
+    keywords: d.keywords ?? [],
     ogTitle: d.ogTitle || `${d.metaTitle} | Myntmore`,
     ogDescription: d.ogDescription || d.metaDescription,
   });
@@ -80,7 +81,7 @@ const URL = "https://www.myntmore.com/events/${e.slug}";
 
 export const metadata: Metadata = {
   title: ${j(e.metaTitle)},
-  description: ${j(e.metaDescription)},
+  description: ${j(e.metaDescription)},${e.keywords.length ? `\n  keywords: ${j(e.keywords)},` : ""}
   alternates: { canonical: URL },
   openGraph: {
     ...OG_BASE,
@@ -106,7 +107,8 @@ const write = (file, next) => {
   else if (CHECK) problems.push(`${path.relative(root, file)} is out of date`);
   else { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, next); wrote++; }
 };
-write(out, JSON.stringify(events, null, 2) + "\n");
+// Keywords only go into each page's metadata, not into the index the site reads.
+write(out, JSON.stringify(events.map(({ keywords, ...rest }) => rest), null, 2) + "\n");
 for (const e of events) write(path.join(root, "app/events", e.slug, "page.tsx"), page(e));
 
 const START = "    // BEGIN generated: events (scripts/generate-event-pages.mjs)";
