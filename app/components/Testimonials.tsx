@@ -174,6 +174,24 @@ function RatingBadge({ score, label, icon }: { score: string; label: string; ico
   );
 }
 
+const BADGE_ICONS = {
+  check: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  repeat: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>
+  ),
+  trend: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+  ),
+};
+
 // ─── Section ──────────────────────────────────────────────────────────────────
 export default function Testimonials() {
   return (
@@ -197,35 +215,11 @@ export default function Testimonials() {
           {home.testimonials.intro}
         </p>
 
-        {/* Rating badges */}
+        {/* Rating badges (edited in the admin; each picks one of the icons below) */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
-          <RatingBadge
-            score={home.testimonials.badges[0]?.score ?? ""}
-            label={home.testimonials.badges[0]?.label ?? ""}
-            icon={
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            }
-          />
-          <RatingBadge
-            score={home.testimonials.badges[1]?.score ?? ""}
-            label={home.testimonials.badges[1]?.label ?? ""}
-            icon={
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-            }
-          />
-          <RatingBadge
-            score={home.testimonials.badges[2]?.score ?? ""}
-            label={home.testimonials.badges[2]?.label ?? ""}
-            icon={
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#F5B731" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            }
-          />
+          {home.testimonials.badges.map((b) => (
+            <RatingBadge key={`${b.score} ${b.label}`} score={b.score} label={b.label} icon={BADGE_ICONS[b.icon as keyof typeof BADGE_ICONS] ?? BADGE_ICONS.check} />
+          ))}
         </div>
       </div>
 

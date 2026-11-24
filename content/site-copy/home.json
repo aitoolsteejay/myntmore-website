@@ -417,15 +417,13 @@
     "badges": [
       {
         "score": "4.9",
-        "label": "Client Satisfaction"
-      },
-      {
-        "score": "92%",
-        "label": "Client Retention"
+        "label": "Client Satisfaction",
+        "icon": "check"
       },
       {
         "score": "3.2x",
-        "label": "Avg. Reply Rate vs Industry"
+        "label": "Avg. Reply Rate vs Industry",
+        "icon": "trend"
       }
     ],
     "row1": [
