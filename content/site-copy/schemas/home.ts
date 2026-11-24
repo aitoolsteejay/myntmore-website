@@ -166,8 +166,17 @@ export const homeCopySchema = {
         fields.object({
           score: fields.text({ label: "Figure (verified numbers only)" }),
           label: fields.text({ label: "Label" }),
+          icon: fields.select({
+            label: "Icon",
+            options: [
+              { label: "Tick", value: "check" },
+              { label: "Arrows in a circle", value: "repeat" },
+              { label: "Rising line", value: "trend" },
+            ],
+            defaultValue: "check",
+          }),
         }),
-        { label: "Rating badges (3, each with its own icon)", validation: { length: { max: 3 } }, itemLabel: (props) => `${props.fields.score.value} ${props.fields.label.value}` },
+        { label: "Rating badges (up to 3)", validation: { length: { max: 3 } }, itemLabel: (props) => `${props.fields.score.value} ${props.fields.label.value}` },
       ),
       row1: fields.array(testimonial(), { label: "Testimonials, first scrolling row", itemLabel: (props) => `${props.fields.name.value}, ${props.fields.company.value}` }),
       row2: fields.array(testimonial(), { label: "Testimonials, second scrolling row", itemLabel: (props) => `${props.fields.name.value}, ${props.fields.company.value}` }),
