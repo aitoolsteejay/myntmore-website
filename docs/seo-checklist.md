@@ -187,7 +187,7 @@ Every threshold is relative to these numbers. Reset this table at each quarterly
   - **Why:** A page nothing links to is invisible to visitors and weakly signalled to Google.
   - **Steps:**
     1. Open `/site-audit` and click the Orphan filter.
-  - **Pass:** Orphans are only the allow-list: `/enwilfernandes`, `/jahnvijhaveri`, `/tejasjhaveri`, `/workshop`, `/feedback`, `/menti`, `/thank-you`, `/site-audit`.
+  - **Pass:** Orphans are only the allow-list: `/enwilfernandes`, `/jahnvijhaveri`, `/tejasjhaveri`, `/workshop`, `/feedback`, `/menti`, `/thank-you`, `/site-audit`, `/zero-point-five-webinar`.
   - **If it fails:** For any other orphan: link it from a relevant page, redirect it, or mark it noindex, within the cycle.
 
 ### Bi-weekly: Search performance
