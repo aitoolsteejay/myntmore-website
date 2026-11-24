@@ -117,7 +117,7 @@ const TYPE_SECTIONS: Record<string, Rule[]> = {
     { title: "Closing section", match: ["cta*"] },
   ],
   careers: [
-    { title: "Job card on the careers page", match: ["title", "tag", "badge", "cardDesc", "cardBullets"] },
+    { title: "Job card on the careers page", match: ["open", "title", "tag", "badge", "cardDesc", "cardBullets"] },
     { title: "About the role", match: ["about*", "primaryGoal"] },
     { title: "Responsibilities", match: ["responsibilities*"] },
     { title: "Who you are", match: ["whoYouAre*", "skills"] },

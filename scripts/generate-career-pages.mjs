@@ -27,7 +27,12 @@ const rolesList = [];
 let wrote = 0;
 let current = 0;
 
-const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+const allFiles = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+// A role with "Accepting applications" switched off in the admin is closed: no page, no hub card, no sitemap
+// entry (its file stays, so switching it back on brings everything back on the next build). Missing = open.
+const isOpen = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")).open !== false;
+const files = allFiles.filter(isOpen);
+const closed = allFiles.length - files.length;
 
 for (const f of files) {
   const slug = f.replace(/\.json$/, "");
@@ -162,4 +167,4 @@ if (problems.length) {
   process.exit(1);
 }
 
-console.log(`[careers] wrote ${wrote} page(s), ${current} already current (${files.length} active roles)`);
+console.log(`[careers] wrote ${wrote} page(s), ${current} already current (${files.length} active roles, ${closed} closed)`);

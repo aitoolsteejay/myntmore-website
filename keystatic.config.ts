@@ -1250,6 +1250,11 @@ export default config({
             validation: { isRequired: true },
           },
         }),
+        open: fields.checkbox({
+          label: "Accepting applications (role is live)",
+          description: "Turn this off to close the role: its page, its card on the careers page and its sitemap entry are removed on the next deploy. Everything you wrote is kept. Turn it back on and save to make it live again.",
+          defaultValue: true,
+        }),
         title: fields.text({
           label: "Job Title",
           description: "e.g. GTM Strategist, B2B Lead Generation Intern",

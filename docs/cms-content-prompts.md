@@ -448,6 +448,7 @@ TEXT:
 ```
 Turn the text below into a Myntmore CAREERS posting. Follow the shared rules. Fields, in order:
 
+Accepting applications (role is live): Yes (use No only to close a role; closing hides the page, the careers card and the sitemap entry, and it can be switched back on later).
 Job Title:
 Department Tag: choose one of: Outbound & GTM, Growth Marketing, Sales, People & Ops, Content & Branding, Systems & AI.
 Hero Badge:
