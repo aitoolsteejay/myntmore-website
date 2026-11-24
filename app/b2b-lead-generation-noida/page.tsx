@@ -6,7 +6,7 @@ import data from "@/content/city-pages/noida.json";
 
 export const metadata: Metadata = {
   title: "B2B Lead Generation Company in Noida",
-  description: "B2B lead generation company in Noida for IT services, software and electronics firms: cold email, LinkedIn outreach and ABM that book meetings, live in 18 days.",
+  description: "B2B lead generation company in Noida for IT services, software and electronics firms: cold email, LinkedIn outreach and ABM, live in 18 days.",
   alternates: { canonical: "https://www.myntmore.com/b2b-lead-generation-noida" },
   keywords: ["b2b lead generation company in noida","lead generation company in noida","lead generation agency in noida","lead generation services in noida","b2b lead generation agency noida","outbound sales agency noida","appointment setting services noida","sales outsourcing company in noida","cold email agency noida","linkedin lead generation agency noida","linkedin outreach agency noida","lead generation for it companies in noida","software development company lead generation noida","b2b lead generation greater noida"],
   openGraph: {

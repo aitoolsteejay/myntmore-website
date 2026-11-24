@@ -17,6 +17,7 @@ import { getCmsPost, getCmsPostSummaries } from "@/lib/cms-posts";
 import { OG_BASE, ogImages } from "@/lib/og";
 import CityLinks from "@/app/components/CityLinks";
 import { POSTS_WITH_CITY_LINKS } from "@/lib/city-links";
+import { pickRelated } from "@/lib/related";
 
 // Every blog post is written in the Keystatic admin (content/posts/*.mdoc) and rendered
 // here. Anything that is not a published post is a 404.
@@ -158,6 +159,13 @@ function renderers(accent: string) {
 
 export default async function CmsBlogPost({ params }: { params: { slug: string } }) {
   const post = await getCmsPost(params.slug);
+  // Three more posts, same category first (lib/related.ts), skipping any already in "Keep reading".
+  const summaries = await getCmsPostSummaries();
+  const morePosts = post
+    ? pickRelated(summaries, `/resources/blogs/${params.slug}`, (p) => p.category, 6)
+        .filter((p) => !post.relatedLinks.some((l) => l.href === p.href))
+        .slice(0, 3)
+    : [];
   if (!post) notFound();
 
   const url = `${SITE_URL}/resources/blogs/${post.slug}`;
@@ -213,6 +221,22 @@ export default async function CmsBlogPost({ params }: { params: { slug: string }
                 ))}
               </ul>
             </div>
+          )}
+
+          {morePosts.length > 0 && (
+            <nav aria-labelledby="more-posts" className="mt-12">
+              <h2 id="more-posts" className="text-xl font-black mb-4" style={{ color: INK }}>More from the blog</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {morePosts.map((p) => (
+                  <li key={p.href}>
+                    <a href={p.href} className="block h-full rounded-2xl border p-4 card-hover-warm" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
+                      <span className="block text-xs font-bold uppercase tracking-widest" style={{ color: "#71675E" }}>{p.category}</span>
+                      <span className="mt-1 block text-sm font-black leading-snug" style={{ color: INK }}>{p.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           )}
 
           {POSTS_WITH_CITY_LINKS.has(post.slug) && (

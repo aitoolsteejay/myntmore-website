@@ -8,6 +8,7 @@ import StatTicker from "@/app/components/StatTicker";
 import JsonLd from "@/app/components/JsonLd";
 import { textTone } from "@/lib/colors";
 import { marketOfCaseStudy } from "@/lib/case-study-markets";
+import { relatedCaseStudies } from "@/lib/related";
 
 export interface CaseStudyLayoutProps {
   slug: string;
@@ -138,6 +139,8 @@ export default function CaseStudyLayout({
         </div>
       </section>
 
+      <RelatedCaseStudies slug={slug} />
+
       <CityLinks
         industry={caseStudyIndustry(slug)}
         heading="Lead generation for this industry, by city"
@@ -156,5 +159,34 @@ export default function CaseStudyLayout({
         <div className="max-w-3xl mx-auto"><LeadCaptureForm /></div>
       </section>
     </InnerLayout>
+  );
+}
+
+// More case studies, same industry first (lib/related.ts), so every case study is linked from several others.
+function RelatedCaseStudies({ slug }: { slug: string }) {
+  const cases = relatedCaseStudies(slug);
+  if (!cases.length) return null;
+  return (
+    <section aria-labelledby="related-case-studies" className="py-16 px-4 border-t" style={{ borderColor: "#E8E2D9" }}>
+      <div className="max-w-4xl mx-auto">
+        <h2 id="related-case-studies" className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>
+          More case studies like this
+        </h2>
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {cases.map((c) => (
+            <li key={c.href}>
+              <Link href={c.href} className="flex h-full flex-col rounded-2xl border p-5 card-hover-warm" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
+                <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#71675E" }}>{c.tag}</span>
+                <span className="mt-2 text-base font-black leading-snug" style={{ color: "#0a0a0a" }}>{c.title}</span>
+                <span className="mt-2 text-sm leading-relaxed" style={{ color: "#52525B" }}>{c.excerpt}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Link href="/case-studies" className="mt-6 inline-flex min-h-[44px] items-center text-sm font-bold" style={{ color: "#71675E" }}>
+          All case studies &rarr;
+        </Link>
+      </div>
+    </section>
   );
 }

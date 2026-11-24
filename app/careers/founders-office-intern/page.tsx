@@ -8,7 +8,7 @@ import data from "@/content/careers/founders-office-intern.json";
 
 export const metadata: Metadata = withPageSeo("/careers/founders-office-intern", {
   title: "Founder's Office Intern, Mumbai | Myntmore",
-  description: "Paid founder's office internship in Mumbai. Work with Myntmore's founder on live B2B growth projects, systems, AI tools and outreach. Stipend ₹7K–15K/month.",
+  description: "Paid founder’s office internship in Mumbai: work with Myntmore’s founder on live B2B growth projects, systems, AI tools and outreach. ₹7K–15K/month.",
   keywords: ["founders office intern mumbai","founder's office internship india","business operations intern mumbai","startup internship mumbai","growth marketing intern india","chief of staff intern mumbai","b2b lead generation internship","paid internship mumbai"],
   alternates: { canonical: "https://www.myntmore.com/careers/founders-office-intern" },
   openGraph: {

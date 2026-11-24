@@ -129,8 +129,14 @@ function landingPages(d) {
 
 export const CITY_REQUIRED = ["metaTitle", "metaDescription", "ogTitle", "ogDescription", "breadcrumbLabel", "badge", "h1", "intro", "primaryCta", "secondaryCta", "whyTitle", "servicesTitle", "servicesIntro", "diffTitle", "formTitle", "formSubtitle"];
 
+// Search and share text limits, the same as the weekly SEO crawl checks (scripts/seo-crawl.py).
+const searchLimits = (d) => [
+  ...(d.metaDescription && d.metaDescription.length > 155 ? [problem("metaDescription", `search description is ${d.metaDescription.length} characters, over 155`)] : []),
+  ...(d.ogTitle && d.ogTitle.length > 70 ? [problem("ogTitle", `share title is ${d.ogTitle.length} characters, over 70`)] : []),
+];
+
 async function cityPages(d, ctx) {
-  const out = required(d, CITY_REQUIRED);
+  const out = [...required(d, CITY_REQUIRED), ...searchLimits(d)];
   for (const [k, n] of [["why", 3], ["services", 7], ["differentiators", 4]]) out.push(...exactly(d, k, n));
   if (!Array.isArray(d.proof)) out.push(problem("proof", `"proof" must be a list (empty hides the block)`));
   else {
@@ -161,7 +167,7 @@ async function industryCityPages(d, ctx) {
       if (!m || !(await ctx.caseStudyPageExists(m[1]))) out.push(problem("proof", `proof link ${p.href} is not a real case study page`));
     }
   }
-  if (d.metaDescription && d.metaDescription.length > 160) out.push(problem("metaDescription", `metaDescription is ${d.metaDescription.length} chars (over 160)`));
+  out.push(...searchLimits(d));
   return out;
 }
 
@@ -180,7 +186,7 @@ function events(d) {
 }
 
 export const CAREER_REQUIRED = ["title", "slug", "tag", "validThrough", "datePosted", "schemaDescription", "metaTitle", "metaDescription"];
-const careers = (d) => required(d, CAREER_REQUIRED);
+const careers = (d) => [...required(d, CAREER_REQUIRED), ...searchLimits(d)];
 
 export const GLOSSARY_REQUIRED = ["title", "tag", "accent", "tagline", "excerpt", "definition", "sourceLabel", "sourceHref", "schemaDescription", "metaTitleSuffix", "ogTitleSuffix", "metaDescription"];
 
