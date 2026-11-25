@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ThinkingLevel } from "@google/genai";
-import { buildQuestions, cleanProfile, filterCandidates, plainText, questionsHash, rankCandidates, type Candidate } from "@/lib/prospect-research/core";
+import { buildQuestions, cleanProfile, filterByLocation, filterCandidates, plainText, questionsHash, rankCandidates, type Candidate } from "@/lib/prospect-research/core";
 import { CAPACITY_MESSAGE, dailyRunCap, FORMAT_MODEL, PROSPECT_COUNT, RESEARCH_MODEL, RUN_MAX_AGE_MS, RUNS_PER_EMAIL, RUNS_PER_IP } from "@/lib/prospect-research/config";
 import { discoverFormatPrompt, discoverResearchPrompt, DISCOVER_SCHEMA } from "@/lib/prospect-research/prompts";
 import {
@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
     const formatted = await callGemini({ runId, step: "discover_format", model: FORMAT_MODEL, prompt: discoverFormatPrompt(research.text), schema: DISCOVER_SCHEMA, thinking: ThinkingLevel.LOW, timeoutMs: 25_000 });
     const raw = parseJson<{ companies?: Candidate[] }>(formatted.text).companies ?? [];
 
-    const filtered = filterCandidates(raw, inputs.website, profile.companyName, inputs.exclusions);
+    const filtered = filterByLocation(filterCandidates(raw, inputs.website, profile.companyName, inputs.exclusions), inputs.location);
     const live = (await Promise.all(filtered.map(async (c) => ((await resolves(c.domain)) ? c : null)))).filter((c): c is Candidate => !!c);
     const prospects: Prospect[] = rankCandidates(live, startedAt, PROSPECT_COUNT).map((c) => ({
       name: plainText(c.name).slice(0, 120),

@@ -164,3 +164,18 @@ describe("estimateCost", () => {
     expect(estimateCost("gemini-3.1-flash-lite", { ...u, promptTokens: 0, searches: 6 }, RUN)).toBe(0.084);
   });
 });
+
+describe("filterByLocation", () => {
+  const mk = (location: string) => ({ name: location, domain: "a.com", location, signal: "" });
+  it("keeps only matching companies when enough match", async () => {
+    const { filterByLocation } = await import("./core");
+    const list = ["Mumbai, India", "Pune, India", "Delhi, India", "Chennai, India", "Noida, India", "London, UK"].map(mk);
+    expect(filterByLocation(list, "India")).toHaveLength(5);
+  });
+  it("returns everything when too few match or no location is given", async () => {
+    const { filterByLocation } = await import("./core");
+    const list = ["Mumbai, India", "London, UK", "Paris, France"].map(mk);
+    expect(filterByLocation(list, "India")).toHaveLength(3);
+    expect(filterByLocation(list, "")).toHaveLength(3);
+  });
+});

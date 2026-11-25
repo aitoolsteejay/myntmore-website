@@ -113,6 +113,18 @@ export function filterCandidates(candidates: Candidate[], ownWebsite: string, ow
   return out;
 }
 
+/**
+ * Keeps candidates whose "city, country" mentions the location the visitor asked for ("India",
+ * "Dubai"). Used on top of the prompt's own filter. If fewer than `min` match (for example the
+ * visitor typed "Europe"), the list is returned unchanged so a broad region still works.
+ */
+export function filterByLocation<T extends { location?: string }>(candidates: T[], wanted: string | undefined, min = 5): T[] {
+  const tokens = (wanted || "").toLowerCase().split(/[,;/]|\band\b/).map((t) => t.trim()).filter((t) => t.length > 1);
+  if (!tokens.length) return candidates;
+  const matched = candidates.filter((c) => tokens.some((t) => (c.location || "").toLowerCase().includes(t)));
+  return matched.length >= min ? matched : candidates;
+}
+
 /** Best first: a stronger signal, then a more recent one. Signals with no readable date, or older than 12 months, go last. */
 export function rankCandidates(candidates: Candidate[], runDate: Date, limit: number): Candidate[] {
   const recency = (c: Candidate) => {
