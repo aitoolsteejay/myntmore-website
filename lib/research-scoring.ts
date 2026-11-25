@@ -52,10 +52,21 @@ export function ago(from: Date | null, snapshot: Date): string {
 
 const point = (a: Answer | undefined) => (a?.verdict === "yes" ? 1 : a?.verdict === "likely" ? 0.5 : 0);
 
-export function fitScore(answers: Answer[]): number {
-  const base = FIT_WEIGHTS.reduce((sum, w, i) => sum + w * point(answers[i]), 0);
+// The Prospect Research tool weights "does it match the ideal customer" (question 1) most, because a company
+// that raised money but is the wrong kind of buyer is not a lead. A "no" on question 1 caps the fit at 40
+// (Tier 3 at best); a "likely" caps it at 69 (never Tier 1).
+const STRICT_FIT_WEIGHTS = [40, 10, 15, 15, 10, 10] as const;
+
+export function fitScore(answers: Answer[], opts?: { strict?: boolean }): number {
+  const weights = opts?.strict ? STRICT_FIT_WEIGHTS : FIT_WEIGHTS;
+  const base = weights.reduce((sum, w, i) => sum + w * point(answers[i]), 0);
   const risk = RISK_PENALTY[answers[6]?.verdict ?? "no"];
-  return Math.max(0, Math.round(base - risk));
+  let fit = Math.max(0, Math.round(base - risk));
+  if (opts?.strict) {
+    if (answers[0]?.verdict !== "yes" && answers[0]?.verdict !== "likely") fit = Math.min(fit, 40);
+    else if (answers[0]?.verdict === "likely") fit = Math.min(fit, 69);
+  }
+  return fit;
 }
 
 export function timingScore(answers: Answer[], snapshot: Date): number {

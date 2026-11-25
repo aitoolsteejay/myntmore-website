@@ -163,6 +163,8 @@ Who: the job title at ${prospect.name} that usually owns this problem
 How to answer:
 - "yes" needs a public source and a date. "likely" means the evidence is older, indirect or only partly confirmed. With no source, answer "no" and write "No evidence found."
 - Signals older than 18 months do not count.
+- Use the date printed on the source. Never write today's date unless the source itself shows it; if you cannot see a date, write "Checked ${today}" instead.
+- Pitch and Who must be specific: Who is one job title at the company, and Pitch opens with the signal in one sentence.
 - Q7 is a risk: "yes" means you found that they already use a direct competitor or do this in-house.
 ${RULES}`;
 }

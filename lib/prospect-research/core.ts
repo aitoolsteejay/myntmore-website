@@ -147,7 +147,7 @@ const lower1 = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 
 /**
  * The seven questions, worded for this offer. The meaning of each slot is fixed, because
- * lib/research-scoring.ts weights them by position (Q1 fit 25, Q2 funding 15, ... Q7 risk).
+ * lib/research-scoring.ts weights them by position (Q1 fit 40, Q2 funding 10, ... Q7 risk; see fitScore).
  */
 export function buildQuestions(p: Profile): string[] {
   const icp = [p.industries, p.companySize, p.regions].filter(Boolean).join("; ");
@@ -219,8 +219,9 @@ export function scoreAccount(
   answers: Answer[],
   runDate: Date,
 ): Account {
-  const fit = fitScore(answers);
+  const fit = fitScore(answers, { strict: true });
   const timing = timingScore(answers, runDate);
+  const latest = latestSignalDate(answers);
   return {
     name: base.name,
     where: base.where,
@@ -231,7 +232,8 @@ export function scoreAccount(
     fit,
     timing,
     tier: tierFor(fit, timing),
-    when: ago(latestSignalDate(answers), runDate),
+    // A signal dated today or yesterday is often the model filling in the current date, so say to check it.
+    when: latest && daysBetween(latest, runDate) <= 1 ? "Very recent, verify the date" : ago(latest, runDate),
   };
 }
 

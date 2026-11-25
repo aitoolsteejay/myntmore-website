@@ -232,6 +232,7 @@ export default function ProspectResearchClient() {
     const runLabel = formatDay(runDate);
     const config: ReportConfig = {
       embedded: true,
+      showContact: true,
       preparedFor: profile.companyName,
       meta: `Prospect research · run ${runLabel}`,
       headline: copy.ProspectResearchClient_s07.t16,
@@ -257,7 +258,7 @@ export default function ProspectResearchClient() {
       ),
       leadWithLabel: `How ${profile.companyName} could open`,
       contactLabel: "Who usually owns this",
-      footnote: `Tier 1 means a fit of 70 or more and timing of 7 or more. Tier 2 means a fit of 55 or more. Tier 3 is the rest. Fit and timing are calculated from the answers by fixed rules, not by the AI. Times such as "5 weeks ago" are counted from ${runLabel}. Check any signal at its source before acting on it.`,
+      footnote: `Tier 1 means a fit of 70 or more and timing of 7 or more. Tier 2 means a fit of 55 or more. Tier 3 is the rest. Fit and timing are calculated from the answers by fixed rules, not by the AI. Fit counts mostly on whether the company matches your ideal customer, so a company that only raised money but is the wrong kind of buyer cannot reach Tier 1. Times such as "5 weeks ago" are counted from ${runLabel}. Check any signal at its source before acting on it.`,
       methodHeading: "How this report was built",
       method: (
         <>

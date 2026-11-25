@@ -58,3 +58,16 @@ describe("latestSignalDate", () => {
     expect(latestSignalDate([a("no")])).toBeNull();
   });
 });
+
+describe("fitScore strict mode", () => {
+  const a = (v: "yes" | "likely" | "no") => ({ verdict: v, text: "x" });
+  it("caps fit at 40 when the company does not match the ideal customer", () => {
+    const answers = [a("no"), a("yes"), a("yes"), a("yes"), a("yes"), a("yes"), a("no")];
+    expect(fitScore(answers, { strict: true })).toBe(40);
+    expect(fitScore(answers)).toBe(75);
+  });
+  it("never gives Tier 1 fit on a likely match", () => {
+    const answers = [a("likely"), a("yes"), a("yes"), a("yes"), a("yes"), a("yes"), a("no")];
+    expect(fitScore(answers, { strict: true })).toBeLessThan(70);
+  });
+});

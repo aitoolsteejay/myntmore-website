@@ -34,6 +34,8 @@ export interface ReportConfig {
   progress?: React.ReactNode;
   /** False while research is still running: the CSV download waits until every company is done. */
   csvReady?: boolean;
+  /** Adds "Who to contact" and "How to open" columns to the table. */
+  showContact?: boolean;
 }
 
 const INK = "#0a0a0a";
@@ -106,6 +108,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
       return next;
     });
 
+  const extra = config.showContact ? 2 : 0;
   const t1 = ACCOUNTS.filter((a) => a.tier === "T1").length;
   const t2 = ACCOUNTS.filter((a) => a.tier === "T2").length;
 
@@ -172,7 +175,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
             </div>
             <div className="flex items-center gap-3 text-sm" style={{ color: MUTED }}>
               <span>{rows.length} {rows.length === 1 ? "company" : "companies"}</span>
-              <button type="button" disabled={config.csvReady === false} title={config.csvReady === false ? "Available when the research has finished" : undefined} onClick={() => downloadCsv(rows, QUESTIONS, config.csvName)} className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border bg-white px-3.5 py-1.5 font-bold transition-colors hover:bg-[#F8F6F2] focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white" style={{ borderColor: BORDER, color: INK }}>
+              <button type="button" disabled={config.csvReady === false} title={config.csvReady === false ? "Available when the research has finished" : undefined} onClick={() => downloadCsv(rows, QUESTIONS, config.csvName)} className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border px-3.5 py-1.5 font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50" style={config.embedded ? { borderColor: INK, backgroundColor: INK, color: "#fff" } : { borderColor: BORDER, backgroundColor: "#fff", color: INK }}>
                 <Download className="h-4 w-4" aria-hidden="true" /> Download CSV ({rows.length})
               </button>
             </div>
@@ -212,12 +215,14 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[1080px] border-collapse text-left text-sm">
+            <table className={`w-full border-collapse text-left text-sm ${config.showContact ? "min-w-[1500px]" : "min-w-[1080px]"}`}>
               <thead>
                 <tr className="text-xs font-bold uppercase tracking-wider" style={{ color: MUTED }}>
                   <th scope="col" className="w-10 px-4 py-3">#</th>
                   <th scope="col" className="min-w-[200px] px-2 py-3">Company</th>
                   <th scope="col" className="min-w-[340px] px-2 py-3">Buying window</th>
+                  {config.showContact && <th scope="col" className="min-w-[160px] px-2 py-3">Who to contact</th>}
+                  {config.showContact && <th scope="col" className="min-w-[260px] px-2 py-3">How to open</th>}
                   <th scope="col" className="px-2 py-3">Tier</th>
                   <th scope="col" className="px-2 py-3">Timing</th>
                   <th scope="col" className="px-2 py-3">Fit</th>
@@ -247,6 +252,8 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                         <td className="px-2 py-4 leading-relaxed" style={{ color: MUTED }}>
                           <strong style={{ color: INK }}>{a.when}.</strong> {a.recent}
                         </td>
+                        {config.showContact && <td className="px-2 py-4 font-medium" style={{ color: INK }}>{a.who}</td>}
+                        {config.showContact && <td className="px-2 py-4 leading-relaxed" style={{ color: MUTED }}>{a.pitch}</td>}
                         <td className="px-2 py-4">
                           <span className="inline-block whitespace-nowrap rounded-md border px-2 py-0.5 text-xs font-bold" style={{ backgroundColor: ts.bg, color: ts.fg, borderColor: ts.border }}>{TIER_LABEL[a.tier]}</span>
                         </td>
@@ -262,7 +269,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                       </tr>
                       {isOpen && (
                         <tr id={panelId} style={{ backgroundColor: "#FDFBF7" }}>
-                          <td colSpan={7 + QUESTIONS.length} className="px-4 pb-8 pt-2 md:pl-14">
+                          <td colSpan={7 + extra + QUESTIONS.length} className="px-4 pb-8 pt-2 md:pl-14">
                             <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
                               <ul>
                                 {a.answers.map((x, i) => (
@@ -307,7 +314,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                       <span className="block text-xs" style={{ color: MUTED }}>{p.where}</span>
                     </td>
                     {p.failed ? (
-                      <td colSpan={5 + QUESTIONS.length} className="px-2 py-4" style={{ color: MUTED }}>
+                      <td colSpan={5 + extra + QUESTIONS.length} className="px-2 py-4" style={{ color: MUTED }}>
                         Could not research this company. It is left out of the scores and the CSV.
                       </td>
                     ) : (
@@ -317,7 +324,7 @@ export default function ResearchReport({ config }: { config: ReportConfig }) {
                           <span aria-hidden="true" className="block h-3 w-4/5 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F1EADD" }} />
                           <span aria-hidden="true" className="mt-2 block h-3 w-3/5 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F5EFE5" }} />
                         </td>
-                        {[0, 1, 2].map((k) => (
+                        {[0, 1, 2, ...(config.showContact ? [3, 4] : [])].map((k) => (
                           <td key={k} className="px-2 py-4"><span aria-hidden="true" className="block h-3 w-10 rounded-full motion-safe:animate-pulse" style={{ backgroundColor: "#F1EADD" }} /></td>
                         ))}
                         {QUESTIONS.map((q) => (

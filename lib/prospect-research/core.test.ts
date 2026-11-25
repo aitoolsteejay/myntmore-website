@@ -130,8 +130,8 @@ describe("scoreAccount", () => {
       { verdict: "likely", text: "", source: s, date: "Checked 12 Nov 2026" },
     ];
     const a = scoreAccount({ name: "Acme", where: "acme.com", recent: "Raised — a Series A", pitch: "p", who: "w" }, answers, RUN);
-    // 25 + 15 + 20 + 10 (half of 20) - 7 (likely risk)
-    expect(a.fit).toBe(63);
+    // strict weights: 40 + 10 + 15 + 7.5 (half of 15) - 7 (likely risk), rounded
+    expect(a.fit).toBe(66);
     // funding within 90 days 3 + invest 2 + hiring likely 1
     expect(a.timing).toBe(6);
     expect(a.tier).toBe("T2");
