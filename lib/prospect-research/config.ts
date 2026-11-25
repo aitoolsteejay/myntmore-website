@@ -26,6 +26,15 @@ export const CACHE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
 export const CAPACITY_MESSAGE = "We're at capacity today. We'll email your report tomorrow.";
 
+/**
+ * Emails listed in PROSPECT_RESEARCH_TEST_EMAILS (comma separated, set in Vercel) skip the per-email and
+ * per-IP daily limits, so the team can test the tool. The overall daily cap still applies to everyone.
+ */
+export function isTestEmail(email: string): boolean {
+  const list = (process.env.PROSPECT_RESEARCH_TEST_EMAILS || "").toLowerCase().split(",").map((e) => e.trim()).filter(Boolean);
+  return list.includes(email.trim().toLowerCase());
+}
+
 export function dailyRunCap(): number {
   const n = Number(process.env.PROSPECT_RESEARCH_DAILY_RUN_CAP);
   return Number.isFinite(n) && n > 0 ? Math.floor(n) : 30;

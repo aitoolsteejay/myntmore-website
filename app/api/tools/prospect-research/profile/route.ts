@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ThinkingLevel } from "@google/genai";
 import { buildQuestions, cleanProfile, normaliseDomain, validateInputs } from "@/lib/prospect-research/core";
-import { CAPACITY_MESSAGE, dailyRunCap, FORMAT_MODEL, PROFILES_PER_EMAIL, PROFILES_PER_IP, RESEARCH_MODEL } from "@/lib/prospect-research/config";
+import { CAPACITY_MESSAGE, dailyRunCap, FORMAT_MODEL, isTestEmail, PROFILES_PER_EMAIL, PROFILES_PER_IP, RESEARCH_MODEL } from "@/lib/prospect-research/config";
 import { pageText, safeFetch } from "@/lib/prospect-research/net";
 import { profileFormatPrompt, profileResearchPrompt, PROFILE_SCHEMA } from "@/lib/prospect-research/prompts";
 import {
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       countRuns("ip_hash", ip, ["profiled", "running", "done", "failed"], since),
       countRuns(null, null, ["running", "done"], startOfUtcDay()),
     ]);
-    if (byEmail >= PROFILES_PER_EMAIL || byIp >= PROFILES_PER_IP) {
+    if (!isTestEmail(lead.email) && (byEmail >= PROFILES_PER_EMAIL || byIp >= PROFILES_PER_IP)) {
       throw new ToolError(429, "You have reached today's limit for this tool. Please come back tomorrow.");
     }
     if (today >= dailyRunCap()) {

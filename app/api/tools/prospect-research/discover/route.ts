@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ThinkingLevel } from "@google/genai";
 import { buildQuestions, cleanProfile, filterByLocation, filterCandidates, plainText, questionsHash, rankCandidates, type Candidate } from "@/lib/prospect-research/core";
-import { CAPACITY_MESSAGE, dailyRunCap, FORMAT_MODEL, PROSPECT_COUNT, RESEARCH_MODEL, RUN_MAX_AGE_MS, RUNS_PER_EMAIL, RUNS_PER_IP } from "@/lib/prospect-research/config";
+import { CAPACITY_MESSAGE, dailyRunCap, isTestEmail, FORMAT_MODEL, PROSPECT_COUNT, RESEARCH_MODEL, RUN_MAX_AGE_MS, RUNS_PER_EMAIL, RUNS_PER_IP } from "@/lib/prospect-research/config";
 import { discoverFormatPrompt, discoverResearchPrompt, DISCOVER_SCHEMA } from "@/lib/prospect-research/prompts";
 import {
   callGemini, countRuns, db, errorResponse, ipHash, limitRequest, parseJson, readJson, requireLead, requireUuid, resolves, startOfUtcDay, ToolError,
@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
       countRuns("ip_hash", ip, ["running", "done"], since),
       countRuns(null, null, ["running", "done"], startOfUtcDay()),
     ]);
-    if (byEmail >= RUNS_PER_EMAIL || byIp >= RUNS_PER_IP) {
+    if (!isTestEmail(lead.email) && (byEmail >= RUNS_PER_EMAIL || byIp >= RUNS_PER_IP)) {
       throw new ToolError(429, `You can run ${RUNS_PER_EMAIL} searches a day. Please come back tomorrow, or book a call and we will run a bigger one for you.`);
     }
     const questions = buildQuestions(profile);
