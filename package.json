@@ -11,6 +11,8 @@
     "team-cards:check": "node scripts/generate-team-cards.mjs --check",
     "faqs:build": "node scripts/generate-faq-content.mjs",
     "faqs:check": "node scripts/generate-faq-content.mjs --check",
+    "cms-prompts:build": "vite-node --config vitest.config.ts scripts/generate-cms-prompts.ts",
+    "cms-prompts:check": "vite-node --config vitest.config.ts scripts/generate-cms-prompts.ts --check",
     "careers:build": "node scripts/generate-career-pages.mjs",
     "careers:check": "node scripts/generate-career-pages.mjs --check",
     "page-seo:build": "node scripts/generate-page-seo.mjs",

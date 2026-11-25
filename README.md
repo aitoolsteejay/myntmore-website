@@ -6,7 +6,7 @@ It is a large, content-driven site rather than a small brochure site. As of 23 N
 
 The site is actively developed with a heavy focus on SEO, AEO (answer engines) and GEO (generative engines). Read [SEO / AEO / GEO governance](#seo--aeo--geo-governance) before adding or changing pages.
 
-For copy-and-paste prompts by page type and task, see the [website prompt library](docs/website-prompt-library.md). For a full walk-through of every part of the site, see the [Website Bible](docs/website-bible.md).
+For copy-and-paste prompts by page type and task, see the [website prompt library](docs/website-prompt-library.md); for a prompt per CMS content type that turns rough text into the admin form's exact fields, see [`docs/cms-prompts/`](docs/cms-prompts/README.md). For a full walk-through of every part of the site, see the [Website Bible](docs/website-bible.md).
 
 ---
 
@@ -362,7 +362,7 @@ Run with `npm run <name>`. The `prebuild` step runs all generators and checks in
 | Group | Scripts |
 |---|---|
 | Develop and ship | `dev`, `build`, `start` |
-| Generators (each has a matching `:check`) | `faqs:build`, `page-seo:build`, `case-studies:content`, `case-studies:build`, `landing-pages:build`, `service-pages:build`, `glossary:build`, `city-pages:build`, `events:build`, `market-pages:check`, `industry-city:build`, `case-study-pages:build`, `case-study-long:build`, `careers:build`, `llms:build` |
+| Generators (each has a matching `:check`) | `cms-prompts:build` (writes `docs/cms-prompts/` from the admin forms), `faqs:build`, `page-seo:build`, `case-studies:content`, `case-studies:build`, `landing-pages:build`, `service-pages:build`, `glossary:build`, `city-pages:build`, `events:build`, `market-pages:check`, `industry-city:build`, `case-study-pages:build`, `case-study-long:build`, `careers:build`, `llms:build` |
 | Sitemap | `sitemap:dates`, `sitemap:check`, `indexnow` |
 | Audits | `audit:links` (internal links, redirects, canonicals, llms files), `audit:answers` (FAQ answer format), `audit:entity` (company facts), `audit:jobs` (JobPosting schema), `keywords:build` |
 | Tests | `test:roi` (runs every vitest file) |
