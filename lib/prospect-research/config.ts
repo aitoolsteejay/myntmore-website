@@ -30,7 +30,8 @@ export const CAPACITY_MESSAGE = "We're at capacity today. We'll email your repor
  * Emails listed in PROSPECT_RESEARCH_TEST_EMAILS (comma separated, set in Vercel) skip the per-email and
  * per-IP daily limits, so the team can test the tool. The overall daily cap still applies to everyone.
  */
-export function isTestEmail(email: string): boolean {
+export function isTestEmail(email: string | null | undefined): boolean {
+  if (!email) return false;
   const list = (process.env.PROSPECT_RESEARCH_TEST_EMAILS || "").toLowerCase().split(",").map((e) => e.trim()).filter(Boolean);
   return list.includes(email.trim().toLowerCase());
 }
