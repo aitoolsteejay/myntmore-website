@@ -7,7 +7,7 @@ import type { Profile, Prospect, ResearchInputs } from "./types";
 
 // ── Inputs ────────────────────────────────────────────────────────────────────────────────────────
 
-export const INPUT_LIMITS = { website: 200, offer: 400, audience: 400, exclusionLine: 120, exclusions: 50, profileField: 200 } as const;
+export const INPUT_LIMITS = { website: 200, offer: 400, audience: 400, location: 100, exclusionLine: 120, exclusions: 50, profileField: 200 } as const;
 
 const str = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/\s+/g, " ").trim().slice(0, max) : "");
 
@@ -39,10 +39,11 @@ export function validateInputs(body: Record<string, unknown>): { ok: true; input
   if (offer.length > INPUT_LIMITS.offer) return { ok: false, error: `Keep what you sell under ${INPUT_LIMITS.offer} characters.` };
   const audience = str(body.audience, INPUT_LIMITS.audience + 1);
   if (audience.length > INPUT_LIMITS.audience) return { ok: false, error: `Keep who you sell to under ${INPUT_LIMITS.audience} characters.` };
+  const location = str(body.location, INPUT_LIMITS.location).replace(/[`<>{}]/g, "");
   const rawExclusions = typeof body.exclusions === "string" ? body.exclusions.split(/\n|,/) : Array.isArray(body.exclusions) ? body.exclusions : [];
   const exclusions = rawExclusions.map((x) => str(x, INPUT_LIMITS.exclusionLine)).filter(Boolean);
   if (exclusions.length > INPUT_LIMITS.exclusions) return { ok: false, error: `List up to ${INPUT_LIMITS.exclusions} companies to exclude.` };
-  return { ok: true, inputs: { website, offer, audience, exclusions } };
+  return { ok: true, inputs: { website, offer, audience, exclusions, ...(location ? { location } : {}) } };
 }
 
 export const PROFILE_KEYS = ["companyName", "offer", "industries", "companySize", "regions", "buyerRole", "investArea", "hiringRoles", "competitors"] as const;

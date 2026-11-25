@@ -88,9 +88,9 @@ Today is ${formatDay(runDate)}. Use Google Search to find 15 to 20 real companie
 1. match the ideal customer above (industry, size and region), and
 2. have a dated public signal between ${formatDay(from)} and ${formatDay(runDate)}: raised funding; hiring for ${p.hiringRoles}; a new ${p.buyerRole}; a new product, market or region; or an expansion; or said it will invest in ${p.investArea}.
 
-Search for recent funding, hiring and expansion news in these industries and regions. Use no more than about 8 searches in total.
+Search for recent funding, hiring and expansion news in these industries and regions. Use no more than about 5 searches in total.
 Do not include ${p.companyName} itself, its direct competitors, or any of these companies: ${exclusions.length ? exclusions.join("; ") : "none"}.
-Prefer companies whose size fits. Do not list a company unless you found its signal in a search result.
+Prefer companies whose size fits.${p.regions ? `\nLocation filter: only list companies headquartered or with their main operations in: ${p.regions}. Skip any company outside it.` : ""} Do not list a company unless you found its signal in a search result.
 
 Write one line per company, in exactly this format:
 Company name | company's own website domain | city, country | the signal in one plain sentence | date of the signal like 6 Aug 2026 | strength 1, 2 or 3 (3 = a strong, direct sign they need this offer now)
@@ -144,20 +144,20 @@ ${prospect.name} (${prospect.domain}), ${prospect.location}
 Signal found earlier: ${prospect.signal}${prospect.signalDate ? ` (${prospect.signalDate})` : ""}
 ---END---
 
-Today is ${today}. Use Google Search, no more than about 6 searches. Prefer the company's own website, press releases, regulatory filings and reputable news.
+Today is ${today}. Use Google Search, no more than about 4 searches. Prefer the company's own website, press releases, regulatory filings and reputable news.
 
 Answer these seven questions about ${prospect.name}:
 ${questions.map((q, i) => `Q${i + 1}. ${q}`).join("\n")}
 
 For every question, write exactly this block:
 Q<number>: yes, likely or no
-Answer: one plain sentence with the specific fact you found
+Answer: one short sentence (under 15 words) with the specific fact you found
 Date: the date of the source, like 6 Aug 2026, Aug 2026 or 2026-08-06. For a careers, product or about page with no date, write "Checked ${today}".
 Source: the full URL of the page the fact came from
 
 Then write:
-Recent: one sentence on the strongest dated buying signal
-Pitch: one or two sentences on how ${p.companyName} should open with ${prospect.name}, tied to that signal
+Recent: one short sentence (under 18 words) on the strongest dated buying signal
+Pitch: one short sentence (under 25 words) on how ${p.companyName} should open with ${prospect.name}, tied to that signal
 Who: the job title at ${prospect.name} that usually owns this problem
 
 How to answer:
@@ -193,7 +193,7 @@ export const ACCOUNT_SCHEMA = {
 
 export function accountFormatPrompt(research: string): string {
   return `Turn this research into the JSON schema. "answers" must have exactly 7 items, Q1 to Q7 in order.
-Copy each verdict, date and source URL exactly as written. If a block has no source URL, use an empty string. Keep each "text" to one plain sentence. Do not add facts. No em dashes, no asterisks, no person's names.
+Copy each verdict, date and source URL exactly as written. If a block has no source URL, use an empty string. Keep each "text" to one short sentence, under 15 words. Do not add facts. No em dashes, no asterisks, no person's names.
 
 ---RESEARCH---
 ${research}

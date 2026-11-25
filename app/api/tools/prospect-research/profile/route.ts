@@ -56,6 +56,8 @@ export async function POST(req: NextRequest) {
     const formatted = await callGemini({ runId, step: "profile_format", model: FORMAT_MODEL, prompt: profileFormatPrompt(research.text), schema: PROFILE_SCHEMA, thinking: ThinkingLevel.LOW, timeoutMs: 20_000 });
     const profile = cleanProfile(parseJson(formatted.text));
     if (!profile) throw new ToolError(502, "We could not work out what your company sells. Please check the website and try again.");
+    // A location the visitor typed is a hard filter and replaces the regions the model guessed.
+    if (inputs.location) profile.regions = inputs.location;
 
     await db().from("prospect_research_runs").update({ profile, timings: { profileMs: research.ms + formatted.ms } }).eq("id", runId);
 

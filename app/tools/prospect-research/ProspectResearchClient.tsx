@@ -19,7 +19,7 @@ type Phase = "discovering" | "researching" | "done";
 interface ProspectRow { name: string; domain: string; location: string; state: "pending" | "done" | "failed" }
 
 const API = "/api/tools/prospect-research";
-const PARALLEL = 5;
+const PARALLEL = 10;
 
 const PROFILE_LABELS: Record<keyof Profile, { label: string; hint?: string; long?: boolean }> = {
   companyName: { label: copy.ProspectResearchClient_s07.t01 },
@@ -66,7 +66,7 @@ function Field({ id, label, hint, required, children }: { id: string; label: str
 export default function ProspectResearchClient() {
   const [step, setStep] = useState<Step>("landing");
   const [lead, setLead] = useState<LeadData | null>(null);
-  const [form, setForm] = useState({ website: "", offer: "", audience: "", exclusions: "" });
+  const [form, setForm] = useState({ website: "", offer: "", audience: "", location: "", exclusions: "" });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [capacityMessage, setCapacityMessage] = useState("");
@@ -126,7 +126,7 @@ export default function ProspectResearchClient() {
     }
   };
 
-  // Steps 2 to 4: discover, research each prospect (5 at a time, one retry), then save.
+  // Steps 2 to 4: discover, research each prospect (all at once, one retry), then save.
   const startResearch = async () => {
     if (!lead?.id || !runId || !profile) return;
     setError(null);
@@ -162,7 +162,7 @@ export default function ProspectResearchClient() {
     await researchAll(found.map((p) => p.domain), started, false);
   };
 
-  // Researches the given companies (5 at a time, one retry each) and then saves the run. Used for the
+  // Researches the given companies (all at once, one retry each) and then saves the run. Used for the
   // first pass and again for "Retry the ones that failed".
   const researchAll = async (domains: string[], started: number, retry: boolean) => {
     if (!lead?.id || !runId) return;
@@ -341,6 +341,9 @@ export default function ProspectResearchClient() {
                 </Field>
                 <Field id="audience" label="Who you sell to" hint="Industry, company size, regions. Leave it empty and we will work it out.">
                   <textarea id="audience" aria-describedby="audience-hint" rows={2} maxLength={INPUT_LIMITS.audience} placeholder={copy.ProspectResearchClient_s07.t38} value={form.audience} onChange={(e) => setForm({ ...form, audience: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
+                </Field>
+                <Field id="location" label="Location" hint="Only find companies in this country or city, for example India, Dubai or United Kingdom. Leave it empty for anywhere.">
+                  <input id="location" aria-describedby="location-hint" type="text" autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India" value={form.location} onChange={(e) => setForm({ ...form, location: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
                 <Field id="exclusions" label="Companies to leave out" hint="Existing clients or competitors, one per line. Names or websites both work.">
                   <textarea id="exclusions" aria-describedby="exclusions-hint" rows={3} maxLength={INPUT_LIMITS.exclusions * 60} placeholder={"acme.com\nGlobex"} value={form.exclusions} onChange={(e) => setForm({ ...form, exclusions: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />

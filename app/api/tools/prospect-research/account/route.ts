@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
     if ((calls ?? 0) >= ACCOUNT_CALLS_PER_RUN) throw new ToolError(429, "This run has used all its research calls.");
 
     // A: research with search grounding.
-    const research = await callGemini({ runId, step: "account_research", model: RESEARCH_MODEL, prompt: accountResearchPrompt(profile, questions, prospect, runDate), grounded: true, domain, timeoutMs: 110_000 });
+    const research = await callGemini({ runId, step: "account_research", model: RESEARCH_MODEL, prompt: accountResearchPrompt(profile, questions, prospect, runDate), grounded: true, thinking: ThinkingLevel.LOW, domain, timeoutMs: 110_000 });
     // B: format on the cheaper model.
     const formatted = await callGemini({ runId, step: "account_format", model: FORMAT_MODEL, prompt: accountFormatPrompt(research.text), schema: ACCOUNT_SCHEMA, thinking: ThinkingLevel.LOW, domain, timeoutMs: 25_000 });
     const parsed = parseJson<{ answers?: { verdict: string; text: string; date: string; source: string }[]; recent?: string; pitch?: string; who?: string }>(formatted.text);
