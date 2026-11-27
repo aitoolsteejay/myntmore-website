@@ -35,6 +35,16 @@ export interface CareerRoleData {
   skills?: string[];
   whatYoullLearn?: string[];
   whyJoin: string;
+  /** Optional "Our Non-Negotiables"-style section shown after "Who you are". */
+  nonNegotiablesTitle?: string;
+  nonNegotiables?: { title: string; desc: string }[];
+  /** What to put in the application email, shown in the "Ready to apply?" box. */
+  applyInclude?: string[];
+  /** Who the application goes to. Defaults to founder@ and growth@. */
+  applyTo?: string;
+  applyCc?: string[];
+  /** Fully remote: no office map link, and the job schema says remote. */
+  remote?: boolean;
   metaTitle: string;
   metaDescription: string;
   keywords: string[];
@@ -42,12 +52,23 @@ export interface CareerRoleData {
   ogDescription: string;
 }
 
+const DEFAULT_APPLY_TO = ["founder@myntmore.com", "growth@myntmore.com"];
+
+/** Who an application goes to, and a mailto link that fills in To, CC and the subject. */
+export function applyEmail(data: Pick<CareerRoleData, "applyTo" | "applyCc" | "applySubject" | "title">) {
+  const to = data.applyTo?.trim() ? data.applyTo.split(",").map((e) => e.trim()).filter(Boolean) : DEFAULT_APPLY_TO;
+  const cc = (data.applyCc ?? []).map((e) => e.trim()).filter(Boolean);
+  const subject = data.applySubject || `Application for ${data.title}`;
+  const query = [cc.length ? `cc=${cc.join(",")}` : "", `subject=${encodeURIComponent(subject)}`].filter(Boolean).join("&");
+  return { to, cc, mailtoUrl: `mailto:${to.join(",")}?${query}` };
+}
+
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("WeWork Enam Sambhav, C - 20, G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051")}`;
 
 export default function JobPostingPage({ data, schema }: { data: CareerRoleData; schema: Record<string, unknown> }) {
   const accent = data.accent || "#3b82f6";
   const applySubject = data.applySubject || `Application for ${data.title}`;
-  const mailtoUrl = `mailto:founder@myntmore.com,growth@myntmore.com?subject=${encodeURIComponent(applySubject)}`;
+  const { to: applyTo, cc: applyCc, mailtoUrl } = applyEmail(data);
 
   return (
     <InnerLayout>
@@ -78,7 +99,7 @@ export default function JobPostingPage({ data, schema }: { data: CareerRoleData;
             {data.grid.map((item) => (
               <div key={item.label} className="rounded-xl border p-4" style={{ backgroundColor: "#ffffff", borderColor: "#E8E2D9" }}>
                 <p className="text-xs mb-1" style={{ color: "#71675E" }}>{item.label}</p>
-                {item.label === "Location" ? (
+                {item.label.replace(/:$/, "") === "Location" && !data.remote ? (
                   <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-bold hover:underline" style={{ color: "#0a0a0a" }}>
                     {item.value} <span aria-hidden="true">↗</span>
                   </a>
@@ -96,7 +117,7 @@ export default function JobPostingPage({ data, schema }: { data: CareerRoleData;
             </svg>
           </a>
           <p className="mt-3 text-xs" style={{ color: "#71675E" }}>
-            Send to founder@myntmore.com and growth@myntmore.com with subject: {applySubject}
+            Send to {applyTo.join(" and ")}{applyCc.length > 0 && <>, CC {applyCc.join(" and ")},</>} with subject: {applySubject}
           </p>
         </div>
       </section>
@@ -189,6 +210,21 @@ export default function JobPostingPage({ data, schema }: { data: CareerRoleData;
             </div>
           )}
 
+          {/* Non-negotiables */}
+          {data.nonNegotiables && data.nonNegotiables.length > 0 && (
+            <div>
+              <h2 className="text-2xl font-black mb-6" style={{ color: "#0a0a0a" }}>{data.nonNegotiablesTitle || "Our non-negotiables"}</h2>
+              <div className="space-y-4">
+                {data.nonNegotiables.map((item) => (
+                  <div key={item.title} className="rounded-xl border p-5" style={{ backgroundColor: "#F8F6F2", borderColor: "#E8E2D9" }}>
+                    <h3 className="text-sm font-black mb-2" style={{ color: textTone(accent) }}>{item.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "#52525B" }}>{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Skills & mindset we value */}
           {data.skills && data.skills.length > 0 && (
             <div>
@@ -251,14 +287,36 @@ export default function JobPostingPage({ data, schema }: { data: CareerRoleData;
           {/* Ready to apply? */}
           <div className="rounded-2xl p-8 border" style={{ backgroundColor: "#FEF9EC", borderColor: "rgba(245,183,49,0.3)" }}>
             <h3 className="text-lg font-black mb-4" style={{ color: "#0a0a0a" }}>Ready to apply?</h3>
-            <div className="space-y-2 mb-6">
-              <a href={`mailto:founder@myntmore.com?subject=${encodeURIComponent(applySubject)}`} className="flex min-h-[44px] items-center text-sm font-semibold" style={{ color: "#A14A08" }}>
-                founder@myntmore.com
-              </a>
-              <a href={`mailto:growth@myntmore.com?subject=${encodeURIComponent(applySubject)}`} className="flex min-h-[44px] items-center text-sm font-semibold" style={{ color: "#A14A08" }}>
-                growth@myntmore.com
-              </a>
-            </div>
+            <dl className="space-y-1 mb-6 text-sm">
+              <div className="flex flex-wrap items-center gap-x-2">
+                <dt className="font-bold" style={{ color: "#0a0a0a" }}>To:</dt>
+                {applyTo.map((email) => (
+                  <dd key={email}>
+                    <a href={`mailto:${email}?subject=${encodeURIComponent(applySubject)}`} className="flex min-h-[44px] items-center font-semibold" style={{ color: "#A14A08" }}>{email}</a>
+                  </dd>
+                ))}
+              </div>
+              {applyCc.length > 0 && (
+                <div className="flex flex-wrap items-center gap-x-2">
+                  <dt className="font-bold" style={{ color: "#0a0a0a" }}>CC:</dt>
+                  {applyCc.map((email) => (
+                    <dd key={email} className="font-semibold" style={{ color: "#A14A08" }}>{email}</dd>
+                  ))}
+                </div>
+              )}
+              <div className="flex flex-wrap items-center gap-x-2 pt-1">
+                <dt className="font-bold" style={{ color: "#0a0a0a" }}>Subject:</dt>
+                <dd style={{ color: "#52525B" }}>{applySubject.replace(/^"|"$/g, "")}</dd>
+              </div>
+            </dl>
+            {data.applyInclude && data.applyInclude.length > 0 && (
+              <div className="mb-6">
+                <p className="text-sm font-bold mb-2" style={{ color: "#0a0a0a" }}>Please include:</p>
+                <ul className="space-y-1.5 list-disc pl-5 text-sm leading-relaxed" style={{ color: "#52525B" }}>
+                  {data.applyInclude.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            )}
             <a href={mailtoUrl} className="btn-dark px-6 py-3 text-sm font-bold inline-flex items-center gap-2">
               Apply Now
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

@@ -351,6 +351,8 @@ export interface JobPostingInput {
   addressLocality?: string;
   addressRegion?: string;
   postalCode?: string;
+  /** Fully remote role open to applicants in India: sets jobLocationType TELECOMMUTE instead of the office address. */
+  remote?: boolean;
 }
 
 // jobLocationType/applicantLocationRequirements aren't set here: every open
@@ -369,6 +371,7 @@ export function buildJobPostingSchema({
   addressLocality = "Mumbai",
   addressRegion = "Maharashtra",
   postalCode = "400051",
+  remote = false,
 }: JobPostingInput) {
   return {
     "@context": "https://schema.org",
@@ -385,17 +388,21 @@ export function buildJobPostingSchema({
       sameAs: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
     },
-    jobLocation: {
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress,
-        addressLocality,
-        addressRegion,
-        postalCode,
-        addressCountry: "IN",
-      },
-    },
+    ...(remote
+      ? { jobLocationType: "TELECOMMUTE", applicantLocationRequirements: { "@type": "Country", name: "India" } }
+      : {
+          jobLocation: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress,
+              addressLocality,
+              addressRegion,
+              postalCode,
+              addressCountry: "IN",
+            },
+          },
+        }),
     ...(baseSalary
       ? {
           baseSalary: {

@@ -259,7 +259,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/careers`, lastModified: lastMod("/careers"), changeFrequency: "monthly", priority: 0.6 },
     // BEGIN generated: career roles (scripts/generate-career-pages.mjs)
     { url: `${base}/careers/content-marketing-strategist-intern`, lastModified: lastMod("/careers/content-marketing-strategist-intern"), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/careers/founders-office-intern`, lastModified: lastMod("/careers/founders-office-intern"), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/careers/freelance-video-editor`, lastModified: lastMod("/careers/freelance-video-editor"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/gtm-strategist`, lastModified: lastMod("/careers/gtm-strategist"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/hr-operations-intern`, lastModified: lastMod("/careers/hr-operations-intern"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/careers/lead-gen-intern`, lastModified: lastMod("/careers/lead-gen-intern"), changeFrequency: "monthly", priority: 0.5 },

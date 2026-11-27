@@ -1305,6 +1305,20 @@ export default config({
           description: "Subject line prefilled in the mailto button, e.g. Application for GTM Strategist",
           validation: { isRequired: true },
         }),
+        applyTo: fields.text({
+          label: "Apply To (optional)",
+          description: "Email address(es) applications go to, comma separated. Leave empty for founder@myntmore.com and growth@myntmore.com.",
+        }),
+        applyCc: fields.array(fields.text({ label: "Email" }), {
+          label: "Apply CC (optional)",
+          description: "Addresses to CC on the application email.",
+          itemLabel: (props) => props.value,
+        }),
+        remote: fields.checkbox({
+          label: "Fully remote role",
+          description: "Turn on for remote roles: the Location card stops linking to the office map and Google for Jobs is told the job is remote (India).",
+          defaultValue: false,
+        }),
         grid: fields.array(
           fields.object({
             label: fields.text({ label: "Card Label (e.g. Location, Type, Commitment, Hours, CTC, Stipend)", validation: { isRequired: true } }),
@@ -1419,8 +1433,27 @@ export default config({
             itemLabel: (props) => props.fields.label.value,
           }
         ),
+        nonNegotiablesTitle: fields.text({
+          label: "Non-Negotiables Section Title (optional)",
+          description: "e.g. Our Non-Negotiables. Shown only when there are items below.",
+        }),
+        nonNegotiables: fields.array(
+          fields.object({
+            title: fields.text({ label: "Title", validation: { isRequired: true } }),
+            desc: fields.text({ label: "Description", multiline: true, validation: { isRequired: true } }),
+          }),
+          {
+            label: "Non-Negotiables (optional)",
+            itemLabel: (props) => props.fields.title.value,
+          }
+        ),
         skills: fields.array(fields.text({ label: "Skill / Mindset" }), {
           label: "Skills & Mindset We Value (optional)",
+          itemLabel: (props) => props.value,
+        }),
+        applyInclude: fields.array(fields.text({ label: "Item" }), {
+          label: "Please Include in Your Application (optional)",
+          description: "Shown in the Ready to apply box, e.g. portfolio, pricing, availability.",
           itemLabel: (props) => props.value,
         }),
         whatYoullLearn: fields.array(fields.text({ label: "Learning Outcome" }), {
