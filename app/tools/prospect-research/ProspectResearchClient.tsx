@@ -241,9 +241,19 @@ export default function ProspectResearchClient() {
   const changeLocation = async (e: React.FormEvent) => {
     e.preventDefault();
     const location = newLocation.trim();
-    if (!lead?.id || !runId || busy) return;
+    if (relocating || phase !== "done") return;
+    if (!lead?.id || !runId) {
+      setError("This search has expired. Please run a new search.");
+      return;
+    }
     if (!location) {
       setError("Enter a location to search, for example India, Dubai or United Kingdom.");
+      document.getElementById("results-location")?.focus({ preventScroll: true });
+      return;
+    }
+    if (location.toLowerCase() === (profile?.regions ?? "").trim().toLowerCase()) {
+      setError(`You are already seeing results for ${location}. Type a different country or city, then click Search this location.`);
+      document.getElementById("results-location")?.focus({ preventScroll: true });
       return;
     }
     setError(null);
@@ -300,10 +310,10 @@ export default function ProspectResearchClient() {
               <label htmlFor="results-location" className="flex items-center gap-1.5 text-sm font-semibold" style={{ color: INK }}>
                 <MapPin className="h-4 w-4" style={{ color: GOLD_TEXT }} aria-hidden="true" />Location
               </label>
-              <input id="results-location" type="text" required autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India, Dubai, United Kingdom" value={newLocation} onChange={(e) => setNewLocation(e.target.value)} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy || relocating} />
-              <p className="text-xs font-normal" style={{ color: MUTED }}>Try another country or city without starting over. It runs a new search and counts toward your two searches a day.</p>
+              <input id="results-location" type="text" required autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India, Dubai, United Kingdom" value={newLocation} onChange={(e) => { setNewLocation(e.target.value); setError(null); }} className={fieldClass} style={{ borderColor: BORDER }} />
+              <p className="text-xs font-normal" style={{ color: MUTED }}>Type a different country or city and click Search this location. It runs a new search and counts toward your two searches a day.</p>
             </div>
-            <button type="submit" disabled={busy || relocating || !newLocation.trim() || newLocation.trim().toLowerCase() === profile.regions.trim().toLowerCase()} className="btn-dark inline-flex min-h-[48px] items-center justify-center gap-2 px-6 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-50 sm:mb-[22px]">
+            <button type="submit" disabled={relocating || phase !== "done"} title={phase !== "done" ? "Available when this search has finished" : undefined} className="btn-dark inline-flex min-h-[48px] items-center justify-center gap-2 px-6 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-50 sm:mb-[22px]">
               Search this location<ArrowRight className="h-4 w-4" aria-hidden="true" />
             </button>
           </form>
