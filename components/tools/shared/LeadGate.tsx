@@ -38,6 +38,13 @@ const leadSchema = z.object({
   email: z.string().trim().min(1, "Email is required").email("Please enter a valid email").max(255),
 });
 
+// Used when a tool asks for every field (requireAll): company, phone and LinkedIn become required too.
+const strictLeadSchema = leadSchema.extend({
+  companyName: z.string().trim().min(1, "Company is required").max(255),
+  phone: z.string().trim().min(6, "Phone is required").max(20),
+  linkedinUrl: z.string().trim().min(1, "LinkedIn URL is required").max(2083).regex(/linkedin\.com\//i, "Enter your LinkedIn profile URL"),
+});
+
 export type LeadSource = "profile_optimizer" | "posting_rhythm_builder" | "lead_magnet_ideas" | "dm_angle_generator" | "founder_presence_analyzer" | "case_study_generator" | "battle_card_generator" | "icp_builder" | "roi_calculator" | "hook_grader" | "prospect_research";
 
 // Every tool except the ROI calculator sends what the visitor types to Google's
@@ -61,6 +68,8 @@ interface LeadGateProps {
   source: LeadSource;
   heading?: React.ReactNode;
   description?: string;
+  /** Makes company, phone and LinkedIn URL required as well. */
+  requireAll?: boolean;
 }
 
 const SHARED_ZOHO_FORM_ACTION =
@@ -102,7 +111,7 @@ const DEFAULT_HEADING = (
 );
 const DEFAULT_DESCRIPTION = "Audit your LinkedIn profile and get specific improvements to make it work harder for you.";
 
-const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description = DEFAULT_DESCRIPTION }: LeadGateProps) => {
+const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description = DEFAULT_DESCRIPTION, requireAll = false }: LeadGateProps) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormState>({
     firstName: "",
@@ -118,7 +127,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const result = leadSchema.safeParse(formData);
+    const result = (requireAll ? strictLeadSchema : leadSchema).safeParse(formData);
 
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -267,7 +276,7 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
 
           <div className="space-y-1.5">
             <label htmlFor="companyName" className="block text-sm font-medium text-foreground">
-              Company
+              Company {requireAll && <span className="text-[#A14A08]">*</span>}
             </label>
             <Input
               id="companyName"
@@ -277,13 +286,15 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
               placeholder="Brightloop"
               value={formData.companyName}
               onChange={(e) => updateField("companyName", e.target.value)}
+              className={errors.companyName ? "border-destructive focus:border-destructive focus:ring-destructive/20" : ""}
               disabled={isSubmitting}
             />
+            {errors.companyName && <p className="text-xs text-destructive">{errors.companyName}</p>}
           </div>
 
           <div className="space-y-1.5">
             <label htmlFor="phone" className="block text-sm font-medium text-foreground">
-              Phone
+              Phone {requireAll && <span className="text-[#A14A08]">*</span>}
             </label>
             <Input
               id="phone"
@@ -293,13 +304,15 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
               placeholder="+1 415 555 0182"
               value={formData.phone}
               onChange={(e) => updateField("phone", e.target.value)}
+              className={errors.phone ? "border-destructive focus:border-destructive focus:ring-destructive/20" : ""}
               disabled={isSubmitting}
             />
+            {errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
           </div>
 
           <div className="space-y-1.5">
             <label htmlFor="linkedinUrl" className="block text-sm font-medium text-foreground">
-              LinkedIn URL
+              LinkedIn URL {requireAll && <span className="text-[#A14A08]">*</span>}
             </label>
             <Input
               id="linkedinUrl"
@@ -309,8 +322,10 @@ const LeadGate = ({ onComplete, source, heading = DEFAULT_HEADING, description =
               placeholder="https://linkedin.com/in/sarahchen"
               value={formData.linkedinUrl}
               onChange={(e) => updateField("linkedinUrl", e.target.value)}
+              className={errors.linkedinUrl ? "border-destructive focus:border-destructive focus:ring-destructive/20" : ""}
               disabled={isSubmitting}
             />
+            {errors.linkedinUrl && <p className="text-xs text-destructive">{errors.linkedinUrl}</p>}
           </div>
 
           <div className="space-y-1.5">

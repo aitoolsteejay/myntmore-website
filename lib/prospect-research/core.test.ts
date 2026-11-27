@@ -20,8 +20,15 @@ describe("inputs", () => {
     expect(validateInputs({ website: "", offer: "x" })).toEqual({ ok: false, error: "Enter your company website." });
     expect(validateInputs({ website: "acme.com", offer: "short" }).ok).toBe(false);
     expect(validateInputs({ website: "acme.com", offer: "x".repeat(401) }).ok).toBe(false);
-    const ok = validateInputs({ website: " acme.com ", offer: "  We sell   robots to warehouses. ", exclusions: "Globex\n\n initech.com , Hooli" });
-    expect(ok).toEqual({ ok: true, inputs: { website: "https://acme.com", offer: "We sell robots to warehouses.", audience: "", exclusions: ["Globex", "initech.com", "Hooli"] } });
+    const base = { website: " acme.com ", offer: "  We sell   robots to warehouses. ", audience: "Warehouses", location: " India ", exclusions: "Globex\n\n initech.com , Hooli" };
+    expect(validateInputs(base)).toEqual({ ok: true, inputs: { website: "https://acme.com", offer: "We sell robots to warehouses.", audience: "Warehouses", location: "India", exclusions: ["Globex", "initech.com", "Hooli"] } });
+  });
+  it("requires who you sell to, a location and the exclusions", () => {
+    const base = { website: "acme.com", offer: "We sell robots to warehouses.", audience: "Warehouses", location: "India", exclusions: "None" };
+    expect(validateInputs(base)).toEqual({ ok: true, inputs: { website: "https://acme.com", offer: "We sell robots to warehouses.", audience: "Warehouses", location: "India", exclusions: [] } });
+    expect(validateInputs({ ...base, audience: "" }).ok).toBe(false);
+    expect(validateInputs({ ...base, location: "  " }).ok).toBe(false);
+    expect(validateInputs({ ...base, exclusions: "" }).ok).toBe(false);
   });
   it("needs the core profile fields", () => {
     expect(cleanProfile({ companyName: "Acme", offer: "Robots" })).toBeNull();

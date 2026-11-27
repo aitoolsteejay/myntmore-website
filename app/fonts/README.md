@@ -11,3 +11,8 @@ To refresh it: request
 browser User-Agent, copy the `src: url(...)` of the `/* latin */` block, and
 replace the file. Only the Latin subset is shipped, matching the previous
 `subsets: ["latin"]` setting.
+
+`PlusJakartaSans-latin-variable.woff2` is the Latin subset of Plus Jakarta Sans
+(variable, weights 200-800), SIL Open Font License 1.1, taken from the
+`@fontsource-variable/plus-jakarta-sans` npm package. Loaded by `jakarta.ts` for
+the Prospect Research tool.

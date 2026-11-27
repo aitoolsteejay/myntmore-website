@@ -5,7 +5,7 @@ export interface ResearchInputs {
   website: string; // normalised to https://host
   offer: string;
   audience: string;
-  location?: string; // optional hard location filter, e.g. "India" or "Dubai, UAE"
+  location?: string; // hard location filter, e.g. "India" or "Dubai, UAE"; required for new runs, missing on older rows
   exclusions: string[];
 }
 

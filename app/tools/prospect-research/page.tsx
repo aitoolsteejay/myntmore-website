@@ -3,6 +3,7 @@ import { withPageSeo } from "@/lib/page-seo";
 import InnerLayout from "../../components/InnerLayout";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import ProspectResearchClient from "./ProspectResearchClient";
+import { jakarta } from "../../fonts/jakarta";
 import pageCopy from "@/content/page-copy/toolProspectResearch.json";
 
 // This page's text is edited in the admin ("Free Prospect Research Tool") and lives in content/page-copy/toolProspectResearch.json.
@@ -20,12 +21,16 @@ export const metadata: Metadata = withPageSeo("/tools/prospect-research", {
 export default function ProspectResearchPage() {
   return (
     <InnerLayout>
-      <div className="px-4 pt-32">
-        <div className="mx-auto max-w-5xl">
-          <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/prospect-research" }]} />
+      {/* The tool uses Plus Jakarta Sans and calmer weights than the rest of the site: no 900-weight
+          headings and no wide-tracked capitals. The overrides below are scoped to this wrapper only. */}
+      <div className={`${jakarta.variable} pr-tool font-[family-name:var(--font-jakarta)] [&_.font-black]:font-bold [&_.tracking-widest]:tracking-wide [&_h1]:tracking-[-0.02em]`}>
+        <div className="px-4 pt-32">
+          <div className="mx-auto max-w-5xl">
+            <Breadcrumbs items={[{ label: copy.s01.t01, href: "/resources/tools" }, { label: copy.s01.t02, href: "/tools/prospect-research" }]} />
+          </div>
         </div>
+        <ProspectResearchClient />
       </div>
-      <ProspectResearchClient />
     </InnerLayout>
   );
 }

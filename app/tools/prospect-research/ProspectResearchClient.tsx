@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Check, Loader2, Pencil, RotateCcw } from "lucide-react";
+import { ArrowRight, Check, Loader2, MapPin, Pencil, RotateCcw } from "lucide-react";
 import LeadGate, { type LeadData } from "@/components/tools/shared/LeadGate";
 import ResearchReport, { type ReportConfig } from "@/components/research/ResearchReport";
 import { LandingPage } from "./LandingPage";
 import { BORDER, Card, GOLD, GOLD_TEXT, GoldBadge, INK, MUTED, Notice, fieldClass } from "@/components/tools/prospect-research/ui";
+import { LoadingOverlay } from "@/components/tools/prospect-research/LoadingOverlay";
 import type { Account } from "@/lib/research-types";
 import { buildQuestions, formatDay, INPUT_LIMITS, PROFILE_KEYS } from "@/lib/prospect-research/core";
 import type { Profile, ProspectResult } from "@/lib/prospect-research/types";
@@ -20,6 +21,14 @@ interface ProspectRow { name: string; domain: string; location: string; state: "
 
 const API = "/api/tools/prospect-research";
 const PARALLEL = 10;
+
+const INPUT_FIELDS = [
+  ["website", "your company website"],
+  ["offer", "what you sell"],
+  ["audience", "who you sell to"],
+  ["location", "a location"],
+  ["exclusions", "companies to leave out (or \"None\")"],
+] as const;
 
 const PROFILE_LABELS: Record<keyof Profile, { label: string; hint?: string; long?: boolean }> = {
   companyName: { label: copy.ProspectResearchClient_s07.t01 },
@@ -51,11 +60,12 @@ async function post<T>(path: string, body: unknown): Promise<T> {
   return data as T;
 }
 
-function Field({ id, label, hint, required, children }: { id: string; label: string; hint?: string; required?: boolean; children: React.ReactNode }) {
+// Every field in this tool is required.
+function Field({ id, label, hint, children }: { id: string; label: string; hint?: string; children: React.ReactNode }) {
   return (
     <div className="space-y-1.5">
-      <label htmlFor={id} className="block text-sm font-bold" style={{ color: INK }}>
-        {label} {required ? <span style={{ color: GOLD_TEXT }}>*</span> : <span className="font-medium" style={{ color: MUTED }}>{copy.ProspectResearchClient_s07.t14}</span>}
+      <label htmlFor={id} className="block text-sm font-semibold" style={{ color: INK }}>
+        {label} <span style={{ color: GOLD_TEXT }} aria-hidden="true">*</span>
       </label>
       {hint && <p id={`${id}-hint`} className="text-sm" style={{ color: MUTED }}>{hint}</p>}
       {children}
@@ -81,6 +91,8 @@ export default function ProspectResearchClient() {
   const [rows, setRows] = useState<ProspectRow[]>([]);
   const [accounts, setAccounts] = useState<Account[]>([]);
   const [runDate, setRunDate] = useState(() => new Date());
+  const [newLocation, setNewLocation] = useState("");
+  const [relocating, setRelocating] = useState(false);
   const topRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -100,6 +112,12 @@ export default function ProspectResearchClient() {
   // Step 1: read the homepage and work out the ideal customer.
   const submitInputs = async (e: React.FormEvent) => {
     e.preventDefault();
+    const missing = INPUT_FIELDS.filter(([k]) => !form[k].trim());
+    if (missing.length) {
+      setError(`Please fill in ${missing.map(([, label]) => label).join(", ")}.`);
+      document.getElementById(missing[0][0])?.focus();
+      return;
+    }
     if (!lead?.id) {
       setError("We could not save your details. Please fill in the form again.");
       setStep("lead");
@@ -127,21 +145,28 @@ export default function ProspectResearchClient() {
   };
 
   // Steps 2 to 4: discover, research each prospect (all at once, one retry), then save.
-  const startResearch = async () => {
-    if (!lead?.id || !runId || !profile) return;
+  const startResearch = async (useRunId = runId, useProfile = profile) => {
+    if (!lead?.id || !useRunId || !useProfile) return;
+    const empty = PROFILE_KEYS.filter((k) => !useProfile[k].trim());
+    if (empty.length) {
+      setEditing(true);
+      setError(`Please fill in ${empty.map((k) => PROFILE_LABELS[k].label.toLowerCase()).join(", ")} before searching.`);
+      return;
+    }
     setError(null);
     setBusy(true);
     const started = Date.now();
     setRunDate(new Date());
     setAccounts([]);
     setRows([]);
-    setQuestions(buildQuestions(profile));
+    setQuestions(buildQuestions(useProfile));
+    setNewLocation(useProfile.regions);
     setPhase("discovering");
     setStep("results");
 
     let found: { name: string; domain: string; location: string }[];
     try {
-      const d = await post<{ capacity?: boolean; message?: string; questions: string[]; prospects: { name: string; domain: string; location: string }[] }>("discover", { leadId: lead.id, runId, profile });
+      const d = await post<{ capacity?: boolean; message?: string; questions: string[]; prospects: { name: string; domain: string; location: string }[] }>("discover", { leadId: lead.id, runId: useRunId, profile: useProfile });
       if (d.capacity) {
         setCapacityMessage(d.message ?? "");
         setStep("capacity");
@@ -159,18 +184,18 @@ export default function ProspectResearchClient() {
       return;
     }
 
-    await researchAll(found.map((p) => p.domain), started, false);
+    await researchAll(found.map((p) => p.domain), started, false, useRunId);
   };
 
   // Researches the given companies (all at once, one retry each) and then saves the run. Used for the
   // first pass and again for "Retry the ones that failed".
-  const researchAll = async (domains: string[], started: number, retry: boolean) => {
-    if (!lead?.id || !runId) return;
+  const researchAll = async (domains: string[], started: number, retry: boolean, useRunId = runId) => {
+    if (!lead?.id || !useRunId) return;
     let firstAt: number | null = null;
     const researchOne = async (domain: string) => {
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
-          const r = await post<ProspectResult>("account", { leadId: lead.id, runId, domain });
+          const r = await post<ProspectResult>("account", { leadId: lead.id, runId: useRunId, domain });
           if (r.account) return r.account;
         } catch (err) {
           if (err instanceof ApiError && (err.status === 401 || err.status === 404 || err.status === 410 || err.status === 429)) break;
@@ -195,7 +220,7 @@ export default function ProspectResearchClient() {
     setPhase("done");
     setBusy(false);
     try {
-      await post("finish", { leadId: lead.id, runId, retry, firstProspectMs: firstAt ? firstAt - started : null, totalMs: Date.now() - started });
+      await post("finish", { leadId: lead.id, runId: useRunId, retry, firstProspectMs: firstAt ? firstAt - started : null, totalMs: Date.now() - started });
     } catch {
       /* the report is already on screen; saving it is best effort */
     }
@@ -209,6 +234,31 @@ export default function ProspectResearchClient() {
     setPhase("researching");
     setRows((prev) => prev.map((r) => (r.state === "failed" ? { ...r, state: "pending" } : r)));
     await researchAll(domains, Date.now(), true);
+  };
+
+  // The location filter on the results page: copy this run with the new location and search again,
+  // without going back through the form.
+  const changeLocation = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const location = newLocation.trim();
+    if (!lead?.id || !runId || busy) return;
+    if (!location) {
+      setError("Enter a location to search, for example India, Dubai or United Kingdom.");
+      return;
+    }
+    setError(null);
+    setRelocating(true);
+    try {
+      const data = await post<{ runId: string; profile: Profile }>("relocate", { leadId: lead.id, runId, location });
+      setRunId(data.runId);
+      setProfile(data.profile);
+      setForm((f) => ({ ...f, location }));
+      setRelocating(false);
+      await startResearch(data.runId, data.profile);
+    } catch (err) {
+      setRelocating(false);
+      handleError(err);
+    }
   };
 
   const startOver = () => {
@@ -245,6 +295,19 @@ export default function ProspectResearchClient() {
       csvReady: phase === "done",
       progress: (
         <div>
+          <form onSubmit={changeLocation} className="mb-4 flex flex-col gap-3 border-b pb-4 sm:flex-row sm:items-end" style={{ borderColor: BORDER }}>
+            <div className="flex-1 space-y-1.5">
+              <label htmlFor="results-location" className="flex items-center gap-1.5 text-sm font-semibold" style={{ color: INK }}>
+                <MapPin className="h-4 w-4" style={{ color: GOLD_TEXT }} aria-hidden="true" />Location
+              </label>
+              <input id="results-location" type="text" required autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India, Dubai, United Kingdom" value={newLocation} onChange={(e) => setNewLocation(e.target.value)} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy || relocating} />
+              <p className="text-xs font-normal" style={{ color: MUTED }}>Try another country or city without starting over. It runs a new search and counts toward your two searches a day.</p>
+            </div>
+            <button type="submit" disabled={busy || relocating || !newLocation.trim() || newLocation.trim().toLowerCase() === profile.regions.trim().toLowerCase()} className="btn-dark inline-flex min-h-[48px] items-center justify-center gap-2 px-6 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-50 sm:mb-[22px]">
+              Search this location<ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </button>
+          </form>
+          {error && <div className="mb-4"><Notice>{error}</Notice></div>}
           <p className="font-bold">
             {phase === "discovering" && "Finding companies with a recent public signal. This takes about a minute."}
             {phase === "researching" && `Researching ${Math.min(doneCount + 1, total)} of ${total}. Each company appears as soon as its research is done.`}
@@ -279,8 +342,10 @@ export default function ProspectResearchClient() {
       csvName: `prospect-research-${profile.companyName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "report"}.csv`,
       sourcesLine: `Sources: public web pages found with Google Search, as linked in each answer, checked automatically on ${runLabel}. Research by Myntmore's free Prospect Research tool.`,
     };
+    const searching = phase === "discovering" || relocating;
     return (
       <div ref={topRef} className="scroll-mt-28">
+        {searching && <LoadingOverlay mode="searching" location={relocating ? newLocation.trim() : profile.regions} />}
         <ResearchReport config={config} />
         {phase === "done" && (
           <div className="-mt-12 px-4 pb-20 text-center">
@@ -313,6 +378,7 @@ export default function ProspectResearchClient() {
             {error && <div className="mx-auto mt-8 max-w-md"><Notice>{error}</Notice></div>}
             <LeadGate
               source="prospect_research"
+              requireAll
               heading="First, tell us about you"
               description="We use this to send you the report and to keep the tool free."
               onComplete={(d) => {
@@ -326,6 +392,7 @@ export default function ProspectResearchClient() {
 
         {step === "input" && (
           <>
+            {busy && <LoadingOverlay mode="reading" />}
             <header className="mb-8 text-center">
               <p className="mb-3 text-xs font-bold uppercase tracking-widest" style={{ color: GOLD_TEXT }}>{copy.ProspectResearchClient_s07.t33}</p>
               <h1 className="text-4xl font-black leading-[1.08] sm:text-5xl" style={{ letterSpacing: "-0.03em", textWrap: "balance" }}>{copy.ProspectResearchClient_s07.t34}<span style={{ color: GOLD_TEXT }}>{copy.ProspectResearchClient_s07.t35}</span>
@@ -334,20 +401,20 @@ export default function ProspectResearchClient() {
             </header>
             <Card className="p-6 sm:p-8">
               <form onSubmit={submitInputs} className="space-y-6" noValidate>
-                <Field id="website" label="Your company website" required>
+                <Field id="website" label="Your company website">
                   <input id="website" type="text" inputMode="url" autoComplete="url" required maxLength={INPUT_LIMITS.website} placeholder="yourcompany.com" value={form.website} onChange={(e) => setForm({ ...form, website: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
-                <Field id="offer" label="What you sell, in a sentence" required>
+                <Field id="offer" label="What you sell, in a sentence">
                   <textarea id="offer" rows={3} required maxLength={INPUT_LIMITS.offer} placeholder={copy.ProspectResearchClient_s07.t37} value={form.offer} onChange={(e) => setForm({ ...form, offer: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
-                <Field id="audience" label="Who you sell to" hint="Industry, company size, regions. Leave it empty and we will work it out.">
-                  <textarea id="audience" aria-describedby="audience-hint" rows={2} maxLength={INPUT_LIMITS.audience} placeholder={copy.ProspectResearchClient_s07.t38} value={form.audience} onChange={(e) => setForm({ ...form, audience: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
+                <Field id="audience" label="Who you sell to" hint="Industry and company size.">
+                  <textarea id="audience" aria-describedby="audience-hint" rows={2} required maxLength={INPUT_LIMITS.audience} placeholder={copy.ProspectResearchClient_s07.t38} value={form.audience} onChange={(e) => setForm({ ...form, audience: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
-                <Field id="location" label="Location" hint="Only find companies in this country or city, for example India, Dubai or United Kingdom. Leave it empty for anywhere.">
-                  <input id="location" aria-describedby="location-hint" type="text" autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India" value={form.location} onChange={(e) => setForm({ ...form, location: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
+                <Field id="location" label="Location" hint="We only find companies in this country or city, for example India, Dubai or United Kingdom. You can change it on the results page too.">
+                  <input id="location" aria-describedby="location-hint" type="text" required autoComplete="off" maxLength={INPUT_LIMITS.location} placeholder="India" value={form.location} onChange={(e) => setForm({ ...form, location: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
-                <Field id="exclusions" label="Companies to leave out" hint="Existing clients or competitors, one per line. Names or websites both work.">
-                  <textarea id="exclusions" aria-describedby="exclusions-hint" rows={3} maxLength={INPUT_LIMITS.exclusions * 60} placeholder={"acme.com\nGlobex"} value={form.exclusions} onChange={(e) => setForm({ ...form, exclusions: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
+                <Field id="exclusions" label="Companies to leave out" hint="Existing clients or competitors, one per line. Names or websites both work. Write “None” if there are none.">
+                  <textarea id="exclusions" aria-describedby="exclusions-hint" rows={3} required maxLength={INPUT_LIMITS.exclusions * 60} placeholder={"acme.com\nGlobex"} value={form.exclusions} onChange={(e) => setForm({ ...form, exclusions: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} disabled={busy} />
                 </Field>
                 {error && <Notice>{error}</Notice>}
                 <div className="flex flex-col items-center gap-3 pt-2">
@@ -383,11 +450,11 @@ export default function ProspectResearchClient() {
                   return (
                     <div key={k} className={meta.long ? "sm:col-span-2" : ""}>
                       <dt className="text-xs font-bold uppercase tracking-widest" style={{ color: MUTED }}>
-                        {editing ? <label htmlFor={`p-${k}`}>{meta.label}</label> : meta.label}
+                        {editing ? <label htmlFor={`p-${k}`}>{meta.label} <span style={{ color: GOLD_TEXT }} aria-hidden="true">*</span></label> : meta.label}
                       </dt>
                       <dd className="mt-1">
                         {editing ? (
-                          <input id={`p-${k}`} type="text" maxLength={INPUT_LIMITS.profileField} value={profile[k]} onChange={(e) => setProfile({ ...profile, [k]: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} />
+                          <input id={`p-${k}`} type="text" required aria-invalid={!profile[k].trim()} maxLength={INPUT_LIMITS.profileField} value={profile[k]} onChange={(e) => setProfile({ ...profile, [k]: e.target.value })} className={fieldClass} style={{ borderColor: BORDER }} />
                         ) : (
                           <span className="text-base" style={{ color: INK }}>{profile[k] || <span style={{ color: MUTED }}>{copy.ProspectResearchClient_s08.t04}</span>}</span>
                         )}
@@ -408,7 +475,7 @@ export default function ProspectResearchClient() {
             </Card>
             {error && <div className="mt-6"><Notice>{error}</Notice></div>}
             <div className="mt-8 flex flex-col items-center gap-3">
-              <button type="button" onClick={startResearch} disabled={busy} className="btn-dark inline-flex min-h-[48px] w-full items-center justify-center gap-2 px-8 py-3.5 text-base disabled:opacity-70 sm:w-auto">{copy.ProspectResearchClient_s08.t07}<ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <button type="button" onClick={() => startResearch()} disabled={busy} className="btn-dark inline-flex min-h-[48px] w-full items-center justify-center gap-2 px-8 py-3.5 text-base disabled:opacity-70 sm:w-auto">{copy.ProspectResearchClient_s08.t07}<ArrowRight className="h-4 w-4" aria-hidden="true" />
               </button>
               <p className="text-center text-sm" style={{ color: MUTED }}>{copy.ProspectResearchClient_s08.t08}</p>
               <button type="button" onClick={startOver} className="inline-flex min-h-[44px] items-center text-sm font-bold underline underline-offset-4" style={{ color: GOLD_TEXT }}>{copy.ProspectResearchClient_s08.t09}</button>

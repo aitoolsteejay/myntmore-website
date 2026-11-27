@@ -38,12 +38,24 @@ export function validateInputs(body: Record<string, unknown>): { ok: true; input
   if (offer.length < 10) return { ok: false, error: "Say what you sell in a sentence, at least 10 characters." };
   if (offer.length > INPUT_LIMITS.offer) return { ok: false, error: `Keep what you sell under ${INPUT_LIMITS.offer} characters.` };
   const audience = str(body.audience, INPUT_LIMITS.audience + 1);
+  if (audience.length < 3) return { ok: false, error: "Say who you sell to: industry, company size or regions." };
   if (audience.length > INPUT_LIMITS.audience) return { ok: false, error: `Keep who you sell to under ${INPUT_LIMITS.audience} characters.` };
-  const location = str(body.location, INPUT_LIMITS.location).replace(/[`<>{}]/g, "");
+  const location = cleanLocation(body.location);
+  if (!location) return { ok: false, error: "Enter a location, for example India, Dubai or United Kingdom." };
   const rawExclusions = typeof body.exclusions === "string" ? body.exclusions.split(/\n|,/) : Array.isArray(body.exclusions) ? body.exclusions : [];
-  const exclusions = rawExclusions.map((x) => str(x, INPUT_LIMITS.exclusionLine)).filter(Boolean);
+  const listed = rawExclusions.map((x) => str(x, INPUT_LIMITS.exclusionLine)).filter(Boolean);
+  if (!listed.length) return { ok: false, error: "List the companies to leave out, or write \"None\"." };
+  // "None" (or similar) is a valid answer to a required field, not a company to exclude.
+  const exclusions = listed.filter((x) => !NO_EXCLUSIONS.test(x));
   if (exclusions.length > INPUT_LIMITS.exclusions) return { ok: false, error: `List up to ${INPUT_LIMITS.exclusions} companies to exclude.` };
-  return { ok: true, inputs: { website, offer, audience, exclusions, ...(location ? { location } : {}) } };
+  return { ok: true, inputs: { website, offer, audience, location, exclusions } };
+}
+
+const NO_EXCLUSIONS = /^(none|no|nil|na|n\/a|-+|nothing|no one|nobody)\.?$/i;
+
+/** A location typed by the visitor, trimmed and stripped of characters that could break a prompt. Empty when missing. */
+export function cleanLocation(value: unknown): string {
+  return str(value, INPUT_LIMITS.location).replace(/[`<>{}]/g, "").trim();
 }
 
 export const PROFILE_KEYS = ["companyName", "offer", "industries", "companySize", "regions", "buyerRole", "investArea", "hiringRoles", "competitors"] as const;
